@@ -1,0 +1,93 @@
+package br.com.tamadrum.caffetasters.dao;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+import br.com.caelum.vraptor.ioc.Component;
+import br.com.tamadrum.caffetasters.modelo.Flavor;
+
+@Component
+public class FlavorDAO {
+
+	public FlavorDAO() {
+		
+	}
+	
+	public void saveOrUpdate(Flavor flavor) {
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("CaffeTasters");
+		EntityManager manager = factory.createEntityManager();
+		
+		manager.getTransaction().begin();
+		if ( flavor.getId() == null ) {			
+			manager.persist(flavor);
+		} else {			
+			manager.merge(flavor);
+		}
+		manager.getTransaction().commit();
+			
+		manager.close();
+		factory.close();
+	}
+	
+	public void deleteId(Flavor flavor, Long id) {
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("CaffeTasters");		
+		EntityManager manager = factory.createEntityManager();
+		
+		flavor = manager.find(Flavor.class, id);
+
+		manager.getTransaction().begin();
+		manager.remove(flavor);
+		manager.getTransaction().commit();
+		
+		manager.close();
+		factory.close();
+	}
+	
+	public Flavor getFlavorId(Flavor flavor) {
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("CaffeTasters");		
+		EntityManager manager = factory.createEntityManager();
+		
+		flavor = manager.find(Flavor.class, flavor.getId());
+		
+		manager.close();
+		factory.close();
+		
+		return flavor;
+	}
+	
+	public List<Flavor> getFlavors() {
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("CaffeTasters");
+		EntityManager manager = factory.createEntityManager();
+
+		Query query = manager.createQuery("select f from Flavor as f");
+		    
+		@SuppressWarnings("unchecked")
+		List<Flavor> lista = query.getResultList();
+
+		manager.close();
+		factory.close();
+		    
+		return lista;
+	}
+	
+	public List<Flavor> getFlavorPorNome (Flavor flavor) {
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("CaffeTasters");
+		EntityManager manager = factory.createEntityManager();
+
+		Query query = manager.createQuery("select f from Flavor as f where f.nome = :paramNome");
+		query.setParameter("paramNome", flavor.getNome());
+		    
+		@SuppressWarnings("unchecked")
+		List<Flavor> lista = query.getResultList();
+
+		manager.close();
+		factory.close();
+		    
+		return lista;
+	}
+	
+}

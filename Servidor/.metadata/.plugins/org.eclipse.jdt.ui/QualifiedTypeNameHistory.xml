@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="br.com.caelum.vraptor.ioc.Component"/>
+<fullyQualifiedTypeName name="javax.persistence.Temporal"/>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="javax.persistence.Id"/>
+<fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
+<fullyQualifiedTypeName name="br.com.caelum.vraptor.Resource"/>
+<fullyQualifiedTypeName name="br.com.caelum.vraptor.Path"/>
+<fullyQualifiedTypeName name="br.com.caelum.vraptor.view.Results"/>
+<fullyQualifiedTypeName name="br.com.caelum.vraptor.ioc.SessionScoped"/>
+<fullyQualifiedTypeName name="br.com.tamadrum.caffetasters.modelo.Usuario"/>
+<fullyQualifiedTypeName name="org.hibernate.tool.hbm2ddl.SchemaExport"/>
+<fullyQualifiedTypeName name="org.hibernate.service.ServiceRegistry"/>
+<fullyQualifiedTypeName name="org.hibernate.MappingException"/>
+<fullyQualifiedTypeName name="org.hibernate.Session"/>
+<fullyQualifiedTypeName name="br.com.tamadrum.caffetasters.util.HibernateUtil"/>
+<fullyQualifiedTypeName name="javax.persistence.Table"/>
+<fullyQualifiedTypeName name="javax.persistence.Persistence"/>
+<fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
+<fullyQualifiedTypeName name="javax.persistence.Query"/>
+<fullyQualifiedTypeName name="br.com.tamadrum.caffetasters.modelo.Flavor"/>
+<fullyQualifiedTypeName name="javax.persistence.EntityManagerFactory"/>
+<fullyQualifiedTypeName name="br.com.caelum.vraptor.Result"/>
+<fullyQualifiedTypeName name="br.com.tamadrum.caffetasters.dao.FlavorDAO"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,69 @@
+package br.com.tamadrum.caffetasters.dao;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+import org.hibernate.Session;
+
+import br.com.caelum.vraptor.ioc.Component;
+import br.com.tamadrum.caffetasters.modelo.Flavor;
+
+@Component
+public class FlavorDAO {
+
+	public FlavorDAO() {
+		
+	}
+	
+	public void saveOrUpdate(Flavor flavor) {
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("flavor");
+		
+		EntityManager manager = factory.createEntityManager();
+		
+		if ( flavor.getId() == null ) {			
+			manager.getTransaction().begin();
+			manager.persist(flavor);
+			manager.getTransaction().commit();
+		} else {			
+			manager.getTransaction().begin();
+			manager.merge(flavor);
+			manager.getTransaction().commit();
+		}
+			
+		manager.close();
+		factory.close();
+	}
+	
+	public void deleteId(Flavor flavor, Long id) {
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("flavor");
+		
+		EntityManager manager = factory.createEntityManager();
+		flavor = manager.find(Flavor.class, id);
+
+				manager.getTransaction().begin();
+				manager.remove(flavor);
+				manager.getTransaction().commit();
+	}
+	
+	public List<Flavor> getFlavors() {
+		EntityManagerFactory factory = Persistence.
+		        createEntityManagerFactory("flavor");
+		      EntityManager manager = factory.createEntityManager();
+
+		    Query query = manager
+		        .createQuery("select t from Tarefa as t "+
+		          "where t.finalizado = :paramFinalizado");
+		    query.setParameter("paramFinalizado", true);
+		    
+		    List<Flavor> lista = query.getResultList();
+
+		    manager.close();
+		    
+		    return lista;
+	}
+	
+}

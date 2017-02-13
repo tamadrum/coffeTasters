@@ -1,0 +1,27 @@
+package br.com.tamadrum.caffetasters;
+
+import br.com.caelum.vraptor.Resource;
+import br.com.caelum.vraptor.Result;
+import br.com.caelum.vraptor.view.Results;
+import br.com.tamadrum.caffetasters.modelo.Flavor;
+
+@Resource
+public class FlavorController {
+	
+	private Result result;
+
+	public FlavorController(Result result) {
+		this.result = result;
+		
+	}
+	
+	public void addFlavor(Flavor flavor){
+		result.use(Results.json()).from(flavor).serialize();
+	}
+	
+	public void getFlavor() {
+		Flavor flavor = new Flavor();
+		result.use(Results.json()).from(flavor).serialize();
+	}
+
+}

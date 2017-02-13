@@ -1,0 +1,12 @@
+<!DOCTYPE html5>
+
+<html>
+<head>
+<title>Caffe Tasters</title>
+</head>
+<body>
+<h1>Caffe Tasters</h1>
+<br/>
+Quantidade cadastrada: ${quantidade}
+</body>
+</html>

@@ -1,0 +1,132 @@
+package br.com.tamadrum.caffetasters.dao;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import org.hibernate.Session;
+
+import br.com.caelum.vraptor.ioc.Component;
+import br.com.tamadrum.caffetasters.modelo.Flavor;
+
+@Component
+public class FlavorDAO {
+
+	private Session session;
+	
+	public FlavorDAO() {
+		Flavor flavor;
+		
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("flavor");
+		
+		EntityManager manager = factory.createEntityManager();
+		
+		manager.getTransaction().begin();
+		manager.persist(flavor);
+		manager.getTransaction().commit();
+		
+		manager.close();
+		factory.close();
+	}
+	
+	public void saveOrUpdate(Flavor flavor) {
+		session.beginTransaction();
+		session.save(flavor);
+		session.getTransaction().commit();
+	}
+	
+	public void delete(Flavor flavor) {
+		session.beginTransaction();
+		session.delete(flavor);
+		session.getTransaction().commit();
+	}
+	
+	public List<Flavor> getFlavors() {
+		return session.createCriteria(Flavor.class).list();
+	}
+	
+	public void a () {
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("tarefas");
+		EntityManager manager = factory.createEntityManager();
+
+		Tarefa encontrada = manager.find(Tarefa.class, 1L);
+
+		System.out.println(encontrada.getDescricao());
+		
+		
+		
+		EntityManager manager = //abrir um EntityManager
+				Tarefa encontrada = manager.find(Tarefa.class, 1L);
+
+				manager.getTransaction().begin();
+				manager.remove(encontrada);
+				manager.getTransaction().commit();
+				
+				
+				
+				Tarefa tarefa = new Tarefa();
+				tarefa.setId(2); //esse id já existe no banco
+				tarefa.setDescricao("Estudar JPA e Hibernate");
+				tarefa.setFinalizado(false);
+				tarefa.setDataFinalizacao(null);
+
+				EntityManager manager = //abrir um EntityManager
+
+				manager.getTransaction().begin();
+				manager.merge(tarefa);
+				manager.getTransaction().commit();
+				
+				
+				
+				
+				
+				
+				EntityManager manager = //abrir um EntityManager
+						List<Tarefa> lista = manager
+						  .createQuery("select t from Tarefa as t where t.finalizado = false")
+						  .getResultList();
+
+						for (Tarefa tarefa : lista) {
+						  System.out.println(tarefa.getDescricao());
+						}
+						
+						
+						
+						
+						
+						EntityManager manager = //abrir um EntityManager
+
+								Query query = manager
+								    .createQuery("select t from Tarefa as t "+
+								        "where t.finalizado = :paramFinalizado");
+								query.setParameter("paramFinalizado", false);
+
+								List<Tarefa> lista = query.getResultList();
+								
+								
+								
+								
+								
+								EntityManagerFactory factory = Persistence.
+								        createEntityManagerFactory("tarefas");
+								      EntityManager manager = factory.createEntityManager();
+
+								    //cuidado, use o import javax.persistence.Query
+								    Query query = manager
+								        .createQuery("select t from Tarefa as t "+
+								          "where t.finalizado = :paramFinalizado");
+								    query.setParameter("paramFinalizado", true);
+								    
+								    List<Tarefa> lista = query.getResultList();
+
+								    for (Tarefa t : lista) {
+								      System.out.println(t.getDescricao());
+								    }
+
+								    manager.close();
+				
+	}
+	
+}

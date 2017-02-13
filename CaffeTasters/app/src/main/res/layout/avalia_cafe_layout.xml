@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/layout_notes"
+        android:id="@+id/cabecalho"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:id="@+id/linearLayout1"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:text="Nome: "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView22"
+                android:textStyle="normal|bold"
+                android:textSize="14sp" />
+
+            <TextView
+                android:text="Jacques Vabre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView21"
+                android:layout_weight="4"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout2"
+            android:layout_below="@+id/linearLayout1"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1">
+
+            <TextView
+                android:text="Origem: "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView20"
+                android:textStyle="normal|bold"
+                android:textSize="14sp" />
+
+            <TextView
+                android:text="França"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView19"
+                android:layout_weight="4"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout3"
+            android:layout_below="@+id/linearLayout2"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1">
+
+            <TextView
+                android:text="Roaster: "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView24"
+                android:textStyle="normal|bold"
+                android:textSize="14sp" />
+
+            <TextView
+                android:text="Jacques"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView23"
+                android:layout_weight="1"
+                android:textSize="14sp" />
+
+            <TextView
+                android:text="Producer: "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView20"
+                android:textStyle="normal|bold"
+                android:textSize="14sp" />
+
+            <TextView
+                android:text="Vabre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView19"
+                android:layout_weight="1"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout4"
+            android:layout_below="@+id/linearLayout3"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1">
+
+            <TextView
+                android:text="Roast Date: "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView24"
+                android:textStyle="normal|bold"
+                android:textSize="14sp" />
+
+            <TextView
+                android:text="26/11/2016"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView23"
+                android:layout_weight="1"
+                android:textSize="14sp" />
+
+            <TextView
+                android:text="Sampled: "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView20"
+                android:textStyle="normal|bold"
+                android:textSize="14sp" />
+
+            <TextView
+                android:text="26/11/2016"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView19"
+                android:layout_weight="1"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout5"
+            android:layout_below="@+id/linearLayout4"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1">
+
+            <TextView
+                android:text="Beverage: "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView24"
+                android:textStyle="normal|bold"
+                android:textSize="14sp" />
+
+            <TextView
+                android:text="Frio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView23"
+                android:layout_weight="1"
+                android:textSize="14sp" />
+
+            <TextView
+                android:text="Price: "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView20"
+                android:textStyle="normal|bold"
+                android:textSize="14sp" />
+
+            <TextView
+                android:text="R$ 25,70"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView19"
+                android:layout_weight="1"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cabecalho"
+        android:layout_alignStart="@+id/cabecalho"
+        android:background="@android:color/white"
+        android:padding="5dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/comentarios">
+
+        <TextView
+            android:text="Avaliação Geral"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView29"
+            android:textStyle="normal|bold"
+            android:textSize="14sp" />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBar2"
+            style="@android:style/Widget.Material.SeekBar" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:text=":-)"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/button3"
+                android:textSize="12sp" />
+
+            <TextView
+                android:text="2000"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/textView11"
+                android:textSize="24sp"
+                android:textAlignment="center"
+                android:gravity="center_vertical|center_horizontal" />
+
+            <Button
+                android:text=":-("
+                android:layout_width="43dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/button5"
+                android:textSize="12sp" />
+
+            <Button
+                android:text="Comentários"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button4"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:text="Tasting Wheel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView28"
+            android:textStyle="normal|bold"
+            android:textSize="14sp"
+            android:layout_below="@+id/flavor"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="71dp" />
+
+        <br.com.tamadrum.caffetasters.componente.FlavorWheel
+            android:id="@+id/flavorWheel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|center_horizontal" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,36 @@
+package br.com.tamadrum.caffetasters.dao;
+
+import java.util.List;
+
+import org.hibernate.Session;
+
+import br.com.caelum.vraptor.ioc.Component;
+import br.com.tamadrum.caffetasters.modelo.Flavor;
+import br.com.tamadrum.caffetasters.util.HibernateUtil;
+
+@Component
+public class FlavorDAO {
+
+	private Session session;
+	
+	public FlavorDAO(HibernateUtil hibernateUtil) {
+		session = hibernateUtil.getSession();
+	}
+	
+	public void saveOrUpdate(Flavor flavor) {
+		session.beginTransaction();
+		session.save(flavor);
+		session.getTransaction().commit();
+	}
+	
+	public void delete(Flavor flavor) {
+		session.beginTransaction();
+		session.delete(flavor);
+		session.getTransaction().commit();
+	}
+	
+	public List<Flavor> getFlavors() {
+		return session.createCriteria(Flavor.class).list();
+	}
+	
+}

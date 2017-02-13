@@ -1,0 +1,8 @@
+package snippet;
+
+public class Snippet {
+	public static void main(String[] args) {
+		jdbc:hsqldb:file:/Users/ettoreluglio/Downloads/Eloy - Caffe/DB/caffetasters
+	}
+}
+

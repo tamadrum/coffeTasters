@@ -1,0 +1,25 @@
+package br.com.tamadrum.caffetasters;
+
+import br.com.caelum.vraptor.Path;
+import br.com.caelum.vraptor.Resource;
+import br.com.caelum.vraptor.Result;
+import br.com.tamadrum.caffetasters.dao.FlavorDAO;
+import br.com.tamadrum.caffetasters.util.HibernateUtil;
+
+@Resource
+public class IndexController {
+
+	private Result result;
+	private FlavorDAO flavorDAO;
+
+	public IndexController(FlavorDAO flavorDAO, Result result) {
+		this.flavorDAO = flavorDAO;
+		this.result = result;
+	}
+	
+	@Path("/")
+	public void index() {
+		flavorDAO.
+	}
+	
+}

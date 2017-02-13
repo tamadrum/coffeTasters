@@ -1,0 +1,5 @@
+Sincronizar tudo com o servidor, mas quando?
+
+Quem cadastra os cafes?
+
+QRCode para ler as embalagens do café e cadastrar para degustação. :-)

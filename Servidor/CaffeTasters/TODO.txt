@@ -1,0 +1,9 @@
+Cadastro de Usuarios
+
+Receber as avaliações
+Devolver avaliações
+Devolver média de avaliações
+Devolver Lista de produtos
+Devolver Informações do cliente
+
+Login via facebook, app
