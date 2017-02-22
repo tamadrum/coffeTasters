@@ -56,6 +56,11 @@
 		16B1CCC21E5D950900681A4E /* CoffeeTastersIOS */ = {
 			isa = PBXGroup;
 			children = (
+				16B1CCDC1E5D959600681A4E /* images */,
+				16B1CCDB1E5D957000681A4E /* controllers */,
+				16B1CCDA1E5D956700681A4E /* views */,
+				16B1CCD91E5D956200681A4E /* dao */,
+				16B1CCD81E5D955D00681A4E /* modelo */,
 				16B1CCC31E5D950900681A4E /* AppDelegate.swift */,
 				16B1CCC51E5D950900681A4E /* ViewController.swift */,
 				16B1CCC71E5D950900681A4E /* Main.storyboard */,
@@ -65,6 +70,41 @@
 				16B1CCCA1E5D950900681A4E /* CoffeeTastersIOS.xcdatamodeld */,
 			);
 			path = CoffeeTastersIOS;
+			sourceTree = "<group>";
+		};
+		16B1CCD81E5D955D00681A4E /* modelo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = modelo;
+			sourceTree = "<group>";
+		};
+		16B1CCD91E5D956200681A4E /* dao */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = dao;
+			sourceTree = "<group>";
+		};
+		16B1CCDA1E5D956700681A4E /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		16B1CCDB1E5D957000681A4E /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		16B1CCDC1E5D959600681A4E /* images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
