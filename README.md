@@ -1,3 +1,3 @@
-# coffeTasters
+# coffeeTasters
 
-Projeto do Eloy
+Projeto do Eloy e Ricardo
