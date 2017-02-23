@@ -11,6 +11,16 @@
 		1607218A1E5F6E2100FF3C00 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160721861E5F6E2100FF3C00 /* FBSDKCoreKit.framework */; };
 		1607218B1E5F6E2100FF3C00 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160721871E5F6E2100FF3C00 /* FBSDKLoginKit.framework */; };
 		1607218C1E5F6E2100FF3C00 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160721881E5F6E2100FF3C00 /* FBSDKShareKit.framework */; };
+		160721931E5F7EA200FF3C00 /* Flavor.m in Sources */ = {isa = PBXBuildFile; fileRef = 160721901E5F7EA200FF3C00 /* Flavor.m */; };
+		160721941E5F7EA200FF3C00 /* WheelFlavor.m in Sources */ = {isa = PBXBuildFile; fileRef = 160721921E5F7EA200FF3C00 /* WheelFlavor.m */; };
+		160721961E5F7F5400FF3C00 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160721951E5F7F5400FF3C00 /* Usuario.swift */; };
+		160721981E5F7F7300FF3C00 /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160721971E5F7F7300FF3C00 /* Cafe.swift */; };
+		1607219A1E5F7F8F00FF3C00 /* Avaliacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160721991E5F7F8F00FF3C00 /* Avaliacao.swift */; };
+		1607219C1E5F7F9600FF3C00 /* Preparo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1607219B1E5F7F9600FF3C00 /* Preparo.swift */; };
+		1607219E1E5F7F9C00FF3C00 /* Pedido.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1607219D1E5F7F9C00FF3C00 /* Pedido.swift */; };
+		160721A01E5F7FA700FF3C00 /* Produto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1607219F1E5F7FA700FF3C00 /* Produto.swift */; };
+		160721A21E5F86E500FF3C00 /* Passo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160721A11E5F86E500FF3C00 /* Passo.swift */; };
+		160721A41E5F884A00FF3C00 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160721A31E5F884A00FF3C00 /* Item.swift */; };
 		16B1CCC41E5D950900681A4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B1CCC31E5D950900681A4E /* AppDelegate.swift */; };
 		16B1CCC61E5D950900681A4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B1CCC51E5D950900681A4E /* ViewController.swift */; };
 		16B1CCC91E5D950900681A4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16B1CCC71E5D950900681A4E /* Main.storyboard */; };
@@ -41,6 +51,19 @@
 		160721861E5F6E2100FF3C00 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = CoffeeTastersIOS/framework/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		160721871E5F6E2100FF3C00 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = CoffeeTastersIOS/framework/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		160721881E5F6E2100FF3C00 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = CoffeeTastersIOS/framework/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		1607218E1E5F7EA100FF3C00 /* CoffeeTastersIOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoffeeTastersIOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		1607218F1E5F7EA200FF3C00 /* Flavor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Flavor.h; path = old/Flavor.h; sourceTree = "<group>"; };
+		160721901E5F7EA200FF3C00 /* Flavor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Flavor.m; path = old/Flavor.m; sourceTree = "<group>"; };
+		160721911E5F7EA200FF3C00 /* WheelFlavor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WheelFlavor.h; path = old/WheelFlavor.h; sourceTree = "<group>"; };
+		160721921E5F7EA200FF3C00 /* WheelFlavor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WheelFlavor.m; path = old/WheelFlavor.m; sourceTree = "<group>"; };
+		160721951E5F7F5400FF3C00 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		160721971E5F7F7300FF3C00 /* Cafe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
+		160721991E5F7F8F00FF3C00 /* Avaliacao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avaliacao.swift; sourceTree = "<group>"; };
+		1607219B1E5F7F9600FF3C00 /* Preparo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preparo.swift; sourceTree = "<group>"; };
+		1607219D1E5F7F9C00FF3C00 /* Pedido.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pedido.swift; sourceTree = "<group>"; };
+		1607219F1E5F7FA700FF3C00 /* Produto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Produto.swift; sourceTree = "<group>"; };
+		160721A11E5F86E500FF3C00 /* Passo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Passo.swift; sourceTree = "<group>"; };
+		160721A31E5F884A00FF3C00 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		16B1CCC01E5D950900681A4E /* CoffeeTastersIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeTastersIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16B1CCC31E5D950900681A4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16B1CCC51E5D950900681A4E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +124,18 @@
 			name = util;
 			sourceTree = "<group>";
 		};
+		1607218D1E5F7E5F00FF3C00 /* wheelflavor */ = {
+			isa = PBXGroup;
+			children = (
+				1607218F1E5F7EA200FF3C00 /* Flavor.h */,
+				160721901E5F7EA200FF3C00 /* Flavor.m */,
+				160721911E5F7EA200FF3C00 /* WheelFlavor.h */,
+				160721921E5F7EA200FF3C00 /* WheelFlavor.m */,
+				1607218E1E5F7EA100FF3C00 /* CoffeeTastersIOS-Bridging-Header.h */,
+			);
+			name = wheelflavor;
+			sourceTree = "<group>";
+		};
 		168C42481E5E0167002911AF /* mockFolder */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +163,7 @@
 		16B1CCC21E5D950900681A4E /* CoffeeTastersIOS */ = {
 			isa = PBXGroup;
 			children = (
+				1607218D1E5F7E5F00FF3C00 /* wheelflavor */,
 				160721831E5F6DB200FF3C00 /* util */,
 				168C42481E5E0167002911AF /* mockFolder */,
 				16B1CCDC1E5D959600681A4E /* images */,
@@ -148,6 +184,14 @@
 		16B1CCD81E5D955D00681A4E /* modelo */ = {
 			isa = PBXGroup;
 			children = (
+				160721951E5F7F5400FF3C00 /* Usuario.swift */,
+				160721971E5F7F7300FF3C00 /* Cafe.swift */,
+				160721991E5F7F8F00FF3C00 /* Avaliacao.swift */,
+				1607219B1E5F7F9600FF3C00 /* Preparo.swift */,
+				1607219D1E5F7F9C00FF3C00 /* Pedido.swift */,
+				1607219F1E5F7FA700FF3C00 /* Produto.swift */,
+				160721A11E5F86E500FF3C00 /* Passo.swift */,
+				160721A31E5F884A00FF3C00 /* Item.swift */,
 			);
 			name = modelo;
 			sourceTree = "<group>";
@@ -222,6 +266,7 @@
 				TargetAttributes = {
 					16B1CCBF1E5D950900681A4E = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -265,21 +310,31 @@
 				16B1CCC61E5D950900681A4E /* ViewController.swift in Sources */,
 				334243911E5F4C440001938F /* ConfiguracoesViewController.swift in Sources */,
 				334243991E5F4CA10001938F /* ProdutosViewController.swift in Sources */,
+				1607219C1E5F7F9600FF3C00 /* Preparo.swift in Sources */,
 				3342439B1E5F4CB50001938F /* AvaliacoesViewController.swift in Sources */,
 				3342438D1E5F4B520001938F /* CadastroViewController.swift in Sources */,
 				3342439F1E5F4CE00001938F /* AvaliacaoViewController.swift in Sources */,
 				334243931E5F4C590001938F /* MeusDadosViewController.swift in Sources */,
 				334243971E5F4C8C0001938F /* OfertasViewController.swift in Sources */,
 				334243A31E5F4D0F0001938F /* DetalhesViewController.swift in Sources */,
+				160721A41E5F884A00FF3C00 /* Item.swift in Sources */,
+				160721961E5F7F5400FF3C00 /* Usuario.swift in Sources */,
 				3342439D1E5F4CC90001938F /* BuscaViewController.swift in Sources */,
 				16B1CCCC1E5D950900681A4E /* CoffeeTastersIOS.xcdatamodeld in Sources */,
+				1607219A1E5F7F8F00FF3C00 /* Avaliacao.swift in Sources */,
+				160721931E5F7EA200FF3C00 /* Flavor.m in Sources */,
 				334243951E5F4C770001938F /* PedidosViewController.swift in Sources */,
 				334243A71E5F4D6D0001938F /* MetodoDePreparoViewController.swift in Sources */,
+				1607219E1E5F7F9C00FF3C00 /* Pedido.swift in Sources */,
 				16B1CCC41E5D950900681A4E /* AppDelegate.swift in Sources */,
+				160721941E5F7EA200FF3C00 /* WheelFlavor.m in Sources */,
+				160721A21E5F86E500FF3C00 /* Passo.swift in Sources */,
 				334243A51E5F4D520001938F /* MapaViewController.swift in Sources */,
 				334243891E5F00540001938F /* AnimationViewController.swift in Sources */,
 				3342438F1E5F4C210001938F /* PerfilViewController.swift in Sources */,
+				160721981E5F7F7300FF3C00 /* Cafe.swift in Sources */,
 				334243A91E5F4D8C0001938F /* ComprarViewController.swift in Sources */,
+				160721A01E5F7FA700FF3C00 /* Produto.swift in Sources */,
 				334243A11E5F4CFB0001938F /* FlavorViewController.swift in Sources */,
 				3342438B1E5F4AA20001938F /* LoginViewController.swift in Sources */,
 			);
@@ -402,6 +457,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -412,6 +468,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.luglio.CoffeeTastersIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CoffeeTastersIOS/CoffeeTastersIOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -420,6 +478,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -430,6 +489,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.luglio.CoffeeTastersIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CoffeeTastersIOS/CoffeeTastersIOS-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
