@@ -37,6 +37,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		168C42481E5E0167002911AF /* mockFolder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = mockFolder;
+			sourceTree = "<group>";
+		};
 		16B1CCB71E5D950900681A4E = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +63,7 @@
 		16B1CCC21E5D950900681A4E /* CoffeeTastersIOS */ = {
 			isa = PBXGroup;
 			children = (
+				168C42481E5E0167002911AF /* mockFolder */,
 				16B1CCDC1E5D959600681A4E /* images */,
 				16B1CCDB1E5D957000681A4E /* controllers */,
 				16B1CCDA1E5D956700681A4E /* views */,
@@ -341,6 +349,7 @@
 				16B1CCD71E5D950900681A4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
