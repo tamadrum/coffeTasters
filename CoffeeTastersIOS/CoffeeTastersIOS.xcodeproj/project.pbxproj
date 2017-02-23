@@ -14,6 +14,22 @@
 		16B1CCCE1E5D950900681A4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16B1CCCD1E5D950900681A4E /* Assets.xcassets */; };
 		16B1CCD11E5D950900681A4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16B1CCCF1E5D950900681A4E /* LaunchScreen.storyboard */; };
 		334243891E5F00540001938F /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334243881E5F00540001938F /* AnimationViewController.swift */; };
+		3342438B1E5F4AA20001938F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3342438A1E5F4AA20001938F /* LoginViewController.swift */; };
+		3342438D1E5F4B520001938F /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3342438C1E5F4B520001938F /* CadastroViewController.swift */; };
+		3342438F1E5F4C210001938F /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3342438E1E5F4C210001938F /* PerfilViewController.swift */; };
+		334243911E5F4C440001938F /* ConfiguracoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334243901E5F4C440001938F /* ConfiguracoesViewController.swift */; };
+		334243931E5F4C590001938F /* MeusDadosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334243921E5F4C590001938F /* MeusDadosViewController.swift */; };
+		334243951E5F4C770001938F /* PedidosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334243941E5F4C770001938F /* PedidosViewController.swift */; };
+		334243971E5F4C8C0001938F /* OfertasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334243961E5F4C8C0001938F /* OfertasViewController.swift */; };
+		334243991E5F4CA10001938F /* ProdutosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334243981E5F4CA10001938F /* ProdutosViewController.swift */; };
+		3342439B1E5F4CB50001938F /* AvaliacoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3342439A1E5F4CB50001938F /* AvaliacoesViewController.swift */; };
+		3342439D1E5F4CC90001938F /* BuscaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3342439C1E5F4CC90001938F /* BuscaViewController.swift */; };
+		3342439F1E5F4CE00001938F /* AvaliacaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3342439E1E5F4CE00001938F /* AvaliacaoViewController.swift */; };
+		334243A11E5F4CFB0001938F /* FlavorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334243A01E5F4CFB0001938F /* FlavorViewController.swift */; };
+		334243A31E5F4D0F0001938F /* DetalhesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334243A21E5F4D0F0001938F /* DetalhesViewController.swift */; };
+		334243A51E5F4D520001938F /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334243A41E5F4D520001938F /* MapaViewController.swift */; };
+		334243A71E5F4D6D0001938F /* MetodoDePreparoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334243A61E5F4D6D0001938F /* MetodoDePreparoViewController.swift */; };
+		334243A91E5F4D8C0001938F /* ComprarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334243A81E5F4D8C0001938F /* ComprarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +42,22 @@
 		16B1CCD01E5D950900681A4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16B1CCD21E5D950900681A4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		334243881E5F00540001938F /* AnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
+		3342438A1E5F4AA20001938F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3342438C1E5F4B520001938F /* CadastroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
+		3342438E1E5F4C210001938F /* PerfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
+		334243901E5F4C440001938F /* ConfiguracoesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfiguracoesViewController.swift; sourceTree = "<group>"; };
+		334243921E5F4C590001938F /* MeusDadosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeusDadosViewController.swift; sourceTree = "<group>"; };
+		334243941E5F4C770001938F /* PedidosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedidosViewController.swift; sourceTree = "<group>"; };
+		334243961E5F4C8C0001938F /* OfertasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfertasViewController.swift; sourceTree = "<group>"; };
+		334243981E5F4CA10001938F /* ProdutosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProdutosViewController.swift; sourceTree = "<group>"; };
+		3342439A1E5F4CB50001938F /* AvaliacoesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvaliacoesViewController.swift; sourceTree = "<group>"; };
+		3342439C1E5F4CC90001938F /* BuscaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuscaViewController.swift; sourceTree = "<group>"; };
+		3342439E1E5F4CE00001938F /* AvaliacaoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvaliacaoViewController.swift; sourceTree = "<group>"; };
+		334243A01E5F4CFB0001938F /* FlavorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlavorViewController.swift; sourceTree = "<group>"; };
+		334243A21E5F4D0F0001938F /* DetalhesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalhesViewController.swift; sourceTree = "<group>"; };
+		334243A41E5F4D520001938F /* MapaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
+		334243A61E5F4D6D0001938F /* MetodoDePreparoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetodoDePreparoViewController.swift; sourceTree = "<group>"; };
+		334243A81E5F4D8C0001938F /* ComprarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComprarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +100,6 @@
 				168C42481E5E0167002911AF /* mockFolder */,
 				16B1CCDC1E5D959600681A4E /* images */,
 				16B1CCDB1E5D957000681A4E /* controllers */,
-				16B1CCDA1E5D956700681A4E /* views */,
 				16B1CCD91E5D956200681A4E /* dao */,
 				16B1CCD81E5D955D00681A4E /* modelo */,
 				16B1CCC31E5D950900681A4E /* AppDelegate.swift */,
@@ -96,17 +127,26 @@
 			name = dao;
 			sourceTree = "<group>";
 		};
-		16B1CCDA1E5D956700681A4E /* views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = views;
-			sourceTree = "<group>";
-		};
 		16B1CCDB1E5D957000681A4E /* controllers */ = {
 			isa = PBXGroup;
 			children = (
 				334243881E5F00540001938F /* AnimationViewController.swift */,
+				3342438A1E5F4AA20001938F /* LoginViewController.swift */,
+				3342438C1E5F4B520001938F /* CadastroViewController.swift */,
+				3342438E1E5F4C210001938F /* PerfilViewController.swift */,
+				334243901E5F4C440001938F /* ConfiguracoesViewController.swift */,
+				334243921E5F4C590001938F /* MeusDadosViewController.swift */,
+				334243941E5F4C770001938F /* PedidosViewController.swift */,
+				334243961E5F4C8C0001938F /* OfertasViewController.swift */,
+				334243981E5F4CA10001938F /* ProdutosViewController.swift */,
+				3342439A1E5F4CB50001938F /* AvaliacoesViewController.swift */,
+				3342439C1E5F4CC90001938F /* BuscaViewController.swift */,
+				3342439E1E5F4CE00001938F /* AvaliacaoViewController.swift */,
+				334243A01E5F4CFB0001938F /* FlavorViewController.swift */,
+				334243A21E5F4D0F0001938F /* DetalhesViewController.swift */,
+				334243A41E5F4D520001938F /* MapaViewController.swift */,
+				334243A61E5F4D6D0001938F /* MetodoDePreparoViewController.swift */,
+				334243A81E5F4D8C0001938F /* ComprarViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -192,9 +232,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				16B1CCC61E5D950900681A4E /* ViewController.swift in Sources */,
+				334243911E5F4C440001938F /* ConfiguracoesViewController.swift in Sources */,
+				334243991E5F4CA10001938F /* ProdutosViewController.swift in Sources */,
+				3342439B1E5F4CB50001938F /* AvaliacoesViewController.swift in Sources */,
+				3342438D1E5F4B520001938F /* CadastroViewController.swift in Sources */,
+				3342439F1E5F4CE00001938F /* AvaliacaoViewController.swift in Sources */,
+				334243931E5F4C590001938F /* MeusDadosViewController.swift in Sources */,
+				334243971E5F4C8C0001938F /* OfertasViewController.swift in Sources */,
+				334243A31E5F4D0F0001938F /* DetalhesViewController.swift in Sources */,
+				3342439D1E5F4CC90001938F /* BuscaViewController.swift in Sources */,
 				16B1CCCC1E5D950900681A4E /* CoffeeTastersIOS.xcdatamodeld in Sources */,
+				334243951E5F4C770001938F /* PedidosViewController.swift in Sources */,
+				334243A71E5F4D6D0001938F /* MetodoDePreparoViewController.swift in Sources */,
 				16B1CCC41E5D950900681A4E /* AppDelegate.swift in Sources */,
+				334243A51E5F4D520001938F /* MapaViewController.swift in Sources */,
 				334243891E5F00540001938F /* AnimationViewController.swift in Sources */,
+				3342438F1E5F4C210001938F /* PerfilViewController.swift in Sources */,
+				334243A91E5F4D8C0001938F /* ComprarViewController.swift in Sources */,
+				334243A11E5F4CFB0001938F /* FlavorViewController.swift in Sources */,
+				3342438B1E5F4AA20001938F /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +372,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P5NJ75969Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = CoffeeTastersIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.luglio.CoffeeTastersIOS;
@@ -329,6 +389,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P5NJ75969Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = CoffeeTastersIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.luglio.CoffeeTastersIOS;

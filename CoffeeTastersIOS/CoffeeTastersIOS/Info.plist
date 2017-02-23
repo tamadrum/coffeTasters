@@ -34,5 +34,27 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>fb123663028120164</string>
+            </array>
+        </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>123663028120164</string>
+    <key>FacebookDisplayName</key>
+    <string>Coff­e­T­a­s­ters</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>fbapi</string>
+        <string>fb-messenger-api</string>
+        <string>fbauth2</string>
+        <string>fbshareextension</string>
+    </array>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>A mesma imagem do seu perfil do Facebook será exibida em seu perfil do CoffeeTasters</string>
 </dict>
 </plist>

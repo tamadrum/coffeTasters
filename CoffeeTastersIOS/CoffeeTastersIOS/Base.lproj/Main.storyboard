@@ -36,10 +36,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="kxh-It-y6k">
             <objects>
-                <viewController id="QkV-GD-ZdN" sceneMemberID="viewController">
+                <viewController id="QkV-GD-ZdN" customClass="LoginViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="T9w-FA-JdQ"/>
                         <viewControllerLayoutGuide type="bottom" id="h5Y-Q4-jRF"/>
@@ -114,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="1093.5999999999999" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Cadastro View Controller-->
         <scene sceneID="Isc-kY-4XC">
             <objects>
-                <viewController id="Uec-et-8HQ" sceneMemberID="viewController">
+                <viewController id="Uec-et-8HQ" customClass="CadastroViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Dt7-If-bNL"/>
                         <viewControllerLayoutGuide type="bottom" id="MoF-e8-N2h"/>
@@ -204,10 +204,10 @@
             </objects>
             <point key="canvasLocation" x="1093.5999999999999" y="876.61169415292363"/>
         </scene>
-        <!--View Controller-->
+        <!--Configuracoes View Controller-->
         <scene sceneID="N4K-HQ-g9Q">
             <objects>
-                <viewController id="tTr-Vz-70A" sceneMemberID="viewController">
+                <viewController id="tTr-Vz-70A" customClass="ConfiguracoesViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1QB-HL-Gfe"/>
                         <viewControllerLayoutGuide type="bottom" id="Khr-TJ-me4"/>
@@ -237,6 +237,10 @@
         <scene sceneID="TSC-04-28t">
             <objects>
                 <viewController id="22J-eQ-Oz7" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OXe-qt-UkX"/>
+                        <viewControllerLayoutGuide type="bottom" id="xep-Gf-ait"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="HgR-Pk-afa">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="93"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -263,10 +267,10 @@
             </objects>
             <point key="canvasLocation" x="2922" y="-299"/>
         </scene>
-        <!--View Controller-->
+        <!--Meus Dados View Controller-->
         <scene sceneID="BwT-QT-Qym">
             <objects>
-                <viewController id="ke8-gE-0cm" sceneMemberID="viewController">
+                <viewController id="ke8-gE-0cm" customClass="MeusDadosViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BW0-rs-gGD"/>
                         <viewControllerLayoutGuide type="bottom" id="jWX-nz-H5r"/>
@@ -292,10 +296,10 @@
             </objects>
             <point key="canvasLocation" x="3924" y="-481"/>
         </scene>
-        <!--View Controller-->
+        <!--Pedidos View Controller-->
         <scene sceneID="otw-Tk-qKT">
             <objects>
-                <viewController id="y96-2n-gZt" sceneMemberID="viewController">
+                <viewController id="y96-2n-gZt" customClass="PedidosViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fck-17-yn6"/>
                         <viewControllerLayoutGuide type="bottom" id="yPw-cr-uy2"/>
@@ -321,10 +325,10 @@
             </objects>
             <point key="canvasLocation" x="4825" y="-422"/>
         </scene>
-        <!--View Controller-->
+        <!--Flavor View Controller-->
         <scene sceneID="F5S-UP-Nez">
             <objects>
-                <viewController id="KnS-ov-fOY" sceneMemberID="viewController">
+                <viewController id="KnS-ov-fOY" customClass="FlavorViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e9Z-SG-k62"/>
                         <viewControllerLayoutGuide type="bottom" id="qzm-W9-sc2"/>
@@ -527,10 +531,10 @@
             </objects>
             <point key="canvasLocation" x="-191.19999999999999" y="1709.5952023988007"/>
         </scene>
-        <!--View Controller-->
+        <!--Avaliacao View Controller-->
         <scene sceneID="Fud-u2-RxG">
             <objects>
-                <viewController id="w01-hi-URB" sceneMemberID="viewController">
+                <viewController id="w01-hi-URB" customClass="AvaliacaoViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NYx-al-b4S"/>
                         <viewControllerLayoutGuide type="bottom" id="PUk-ri-ZtC"/>
@@ -591,10 +595,10 @@
             </objects>
             <point key="canvasLocation" x="1708" y="1710.4947526236883"/>
         </scene>
-        <!--View Controller-->
+        <!--Detalhes View Controller-->
         <scene sceneID="b4J-6X-U73">
             <objects>
-                <viewController id="PoW-oS-YGF" sceneMemberID="viewController">
+                <viewController id="PoW-oS-YGF" customClass="DetalhesViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7N4-1D-rWb"/>
                         <viewControllerLayoutGuide type="bottom" id="Ymr-tR-s8n"/>
@@ -694,10 +698,10 @@
             </objects>
             <point key="canvasLocation" x="2833" y="1728"/>
         </scene>
-        <!--View Controller-->
+        <!--Metodo De Preparo View Controller-->
         <scene sceneID="x1P-8h-Ghf">
             <objects>
-                <viewController id="0YL-eo-SWq" sceneMemberID="viewController">
+                <viewController id="0YL-eo-SWq" customClass="MetodoDePreparoViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pn9-pn-ga6"/>
                         <viewControllerLayoutGuide type="bottom" id="HsX-ah-QZd"/>
@@ -723,10 +727,10 @@
             </objects>
             <point key="canvasLocation" x="1910" y="2475"/>
         </scene>
-        <!--View Controller-->
+        <!--Comprar View Controller-->
         <scene sceneID="Xta-oN-d3N">
             <objects>
-                <viewController id="HTz-qd-fqT" sceneMemberID="viewController">
+                <viewController id="HTz-qd-fqT" customClass="ComprarViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ELJ-NC-Nb1"/>
                         <viewControllerLayoutGuide type="bottom" id="1PW-Vy-wmI"/>
@@ -752,10 +756,10 @@
             </objects>
             <point key="canvasLocation" x="2833" y="2474"/>
         </scene>
-        <!--View Controller-->
+        <!--Mapa View Controller-->
         <scene sceneID="D2L-c4-Pg6">
             <objects>
-                <viewController id="fYV-bV-pzD" sceneMemberID="viewController">
+                <viewController id="fYV-bV-pzD" customClass="MapaViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Coj-g6-KNX"/>
                         <viewControllerLayoutGuide type="bottom" id="a7C-Bb-ucS"/>
@@ -785,6 +789,10 @@
         <scene sceneID="vdf-BM-8yz">
             <objects>
                 <viewController id="gAa-br-aD3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fjU-P9-50T"/>
+                        <viewControllerLayoutGuide type="bottom" id="lia-DD-YX4"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="h70-PO-SyB">
                         <rect key="frame" x="0.0" y="0.0" width="101" height="93"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -814,7 +822,7 @@
         <!--Avaliações-->
         <scene sceneID="PRD-RI-hXC">
             <objects>
-                <viewController id="SiX-4n-3aL" sceneMemberID="viewController">
+                <viewController id="SiX-4n-3aL" customClass="AvaliacoesViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kZX-3v-8Iw"/>
                         <viewControllerLayoutGuide type="bottom" id="YHf-Uy-X7M"/>
@@ -850,7 +858,7 @@
         <!--Busca-->
         <scene sceneID="o0o-SB-gPI">
             <objects>
-                <viewController id="StP-dz-369" sceneMemberID="viewController">
+                <viewController id="StP-dz-369" customClass="BuscaViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JeT-0t-tfi"/>
                         <viewControllerLayoutGuide type="bottom" id="cOU-Bq-545"/>
@@ -986,10 +994,10 @@
             </objects>
             <point key="canvasLocation" x="2832.8000000000002" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Ofertas View Controller-->
         <scene sceneID="chq-GK-WRA">
             <objects>
-                <viewController id="9Ga-Te-fh8" sceneMemberID="viewController">
+                <viewController id="9Ga-Te-fh8" customClass="OfertasViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hx8-EE-l2O"/>
                         <viewControllerLayoutGuide type="bottom" id="6JJ-6E-SVA"/>
@@ -1015,10 +1023,10 @@
             </objects>
             <point key="canvasLocation" x="3849" y="303"/>
         </scene>
-        <!--View Controller-->
+        <!--Produtos View Controller-->
         <scene sceneID="vvW-2X-6oa">
             <objects>
-                <viewController id="su0-pv-NDZ" sceneMemberID="viewController">
+                <viewController id="su0-pv-NDZ" customClass="ProdutosViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VmO-z2-CA1"/>
                         <viewControllerLayoutGuide type="bottom" id="fHM-f2-BiJ"/>
@@ -1067,6 +1075,10 @@
         <scene sceneID="El5-Xh-GJA">
             <objects>
                 <viewController id="WHd-i4-TS8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LaH-uB-Acj"/>
+                        <viewControllerLayoutGuide type="bottom" id="9xg-9c-TWs"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="isA-w7-MR2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1081,6 +1093,10 @@
         <scene sceneID="7Zn-cF-yiR">
             <objects>
                 <viewController id="S9w-vH-eEQ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vtg-dE-wie"/>
+                        <viewControllerLayoutGuide type="bottom" id="sre-ml-WIj"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="L3x-XZ-tbx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="116"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1089,6 +1105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Knd-iv-QwG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="916" y="1830"/>
         </scene>
     </scenes>
 </document>
