@@ -23,6 +23,8 @@
 		1691A8C21E5FDDB700FC5085 /* Flavor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691A8C11E5FDDB700FC5085 /* Flavor.swift */; };
 		1691A8C81E60563500FC5085 /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691A8C71E60563500FC5085 /* CosmosDistrib.swift */; };
 		1691A8CA1E60B66800FC5085 /* EsqueciMinhaSenhaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691A8C91E60B66800FC5085 /* EsqueciMinhaSenhaViewController.swift */; };
+		1691A8CC1E60D71C00FC5085 /* Dao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691A8CB1E60D71C00FC5085 /* Dao.swift */; };
+		1691A8D01E60F6C500FC5085 /* config.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1691A8CF1E60F6C500FC5085 /* config.jpg */; };
 		16B1CCC41E5D950900681A4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B1CCC31E5D950900681A4E /* AppDelegate.swift */; };
 		16B1CCC91E5D950900681A4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16B1CCC71E5D950900681A4E /* Main.storyboard */; };
 		16B1CCCC1E5D950900681A4E /* CoffeeTastersIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 16B1CCCA1E5D950900681A4E /* CoffeeTastersIOS.xcdatamodeld */; };
@@ -64,6 +66,8 @@
 		1691A8C11E5FDDB700FC5085 /* Flavor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flavor.swift; sourceTree = "<group>"; };
 		1691A8C71E60563500FC5085 /* CosmosDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
 		1691A8C91E60B66800FC5085 /* EsqueciMinhaSenhaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EsqueciMinhaSenhaViewController.swift; sourceTree = "<group>"; };
+		1691A8CB1E60D71C00FC5085 /* Dao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dao.swift; sourceTree = "<group>"; };
+		1691A8CF1E60F6C500FC5085 /* config.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = config.jpg; path = ../../../../Desktop/config.jpg; sourceTree = "<group>"; };
 		16B1CCC01E5D950900681A4E /* CoffeeTastersIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeTastersIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16B1CCC31E5D950900681A4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16B1CCC81E5D950900681A4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -195,6 +199,7 @@
 		16B1CCD91E5D956200681A4E /* dao */ = {
 			isa = PBXGroup;
 			children = (
+				1691A8CB1E60D71C00FC5085 /* Dao.swift */,
 			);
 			name = dao;
 			sourceTree = "<group>";
@@ -227,6 +232,7 @@
 		16B1CCDC1E5D959600681A4E /* images */ = {
 			isa = PBXGroup;
 			children = (
+				1691A8CF1E60F6C500FC5085 /* config.jpg */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -294,6 +300,7 @@
 				16B1CCD11E5D950900681A4E /* LaunchScreen.storyboard in Resources */,
 				16B1CCCE1E5D950900681A4E /* Assets.xcassets in Resources */,
 				16B1CCC91E5D950900681A4E /* Main.storyboard in Resources */,
+				1691A8D01E60F6C500FC5085 /* config.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +335,7 @@
 				160721A21E5F86E500FF3C00 /* Passo.swift in Sources */,
 				334243A51E5F4D520001938F /* MapaViewController.swift in Sources */,
 				334243891E5F00540001938F /* AnimationViewController.swift in Sources */,
+				1691A8CC1E60D71C00FC5085 /* Dao.swift in Sources */,
 				3342438F1E5F4C210001938F /* PerfilViewController.swift in Sources */,
 				160721981E5F7F7300FF3C00 /* Cafe.swift in Sources */,
 				334243A91E5F4D8C0001938F /* ComprarViewController.swift in Sources */,

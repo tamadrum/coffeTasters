@@ -10,16 +10,26 @@ import UIKit
 
 class MeusDadosViewController:UIViewController{
     @IBOutlet var nomeTextField:UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var cpfTextField: UITextField!
-    @IBOutlet weak var senhaTextField: UITextField!
-    @IBOutlet weak var repitaTextField: UITextField!
-    @IBOutlet weak var nomeCartaoTextField: UITextField!
-    @IBOutlet weak var numeroCartaoTextField: UITextField!
-    @IBOutlet weak var validadeCartaoTextField: UITextField!
-    @IBOutlet weak var tipoCartaoTextField: UITextField!
+    @IBOutlet var emailTextField: UITextField!
+    @IBOutlet var cpfTextField: UITextField!
+    @IBOutlet var senhaTextField: UITextField!
+    @IBOutlet var repitaTextField: UITextField!
+    @IBOutlet var nomeCartaoTextField: UITextField!
+    @IBOutlet var numeroCartaoTextField: UITextField!
+    @IBOutlet var validadeCartaoTextField: UITextField!
+    @IBOutlet var tipoCartaoTextField: UITextField!
+    
+    var usuario = Dao().load()
+    
+    convenience init() {
+        self.init()
+//        nomeTextField.text = usuario.nome
+//        emailTextField.text = usuario.email
+        
+    }
     
     @IBAction func salvar(_ sender: Any) {
+//        Dao().save(usuario)
     }
 
 }

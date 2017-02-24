@@ -1181,7 +1181,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Zp-NO-1ge">
-                                <rect key="frame" x="16" y="72" width="208" height="106"/>
+                                <rect key="frame" x="16" y="72" width="154" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GOt-zY-rTB">
@@ -1222,10 +1222,10 @@
                                     <segue destination="9Ga-Te-fh8" kind="show" id="ucH-oL-lTG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLQ-Ee-Qty">
-                                <rect key="frame" x="329" y="72" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLQ-Ee-Qty">
+                                <rect key="frame" x="304" y="72" width="55" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="C"/>
+                                <state key="normal" title="C" image="config.jpg"/>
                                 <connections>
                                     <segue destination="tTr-Vz-70A" kind="show" id="VnN-jc-3Y5"/>
                                 </connections>
@@ -1238,10 +1238,29 @@
                                     <segue destination="su0-pv-NDZ" kind="show" id="onR-DW-sKH"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Asdrubal da Silva" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYD-tA-n2c">
+                                <rect key="frame" x="182" y="122" width="177" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="asdrubal@provedor.com.br" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNX-M8-25s">
+                                <rect key="frame" x="182" y="151" width="177" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Perfil do Usuário" id="eQS-aJ-f1c"/>
+                    <connections>
+                        <outlet property="emailUsuario" destination="gNX-M8-25s" id="pdD-XM-VfB"/>
+                        <outlet property="imgPerfil" destination="3Zp-NO-1ge" id="Vae-1U-wkO"/>
+                        <outlet property="nomeUsuario" destination="fYD-tA-n2c" id="gtE-uz-zMq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="40Y-Kj-gDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1468,6 +1487,9 @@
             <point key="canvasLocation" x="4711.1999999999998" y="937.78110944527748"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="config.jpg" width="42" height="42"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="CZJ-hp-t5a"/>
         <segue reference="NWZ-8U-o7l"/>
