@@ -6,8 +6,11 @@
 //  Copyright © 2017 Luglio. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class BuscaViewController:ViewController{
+class BuscaViewController:UIViewController, UITableViewDelegate {
+    
+    @IBOutlet var tableView: UITableView?
+    
     
 }

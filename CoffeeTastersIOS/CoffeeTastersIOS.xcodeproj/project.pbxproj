@@ -21,6 +21,7 @@
 		160721A41E5F884A00FF3C00 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160721A31E5F884A00FF3C00 /* Item.swift */; };
 		1691A8C01E5FC86B00FC5085 /* WheelFlavor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691A8BF1E5FC86B00FC5085 /* WheelFlavor.swift */; };
 		1691A8C21E5FDDB700FC5085 /* Flavor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691A8C11E5FDDB700FC5085 /* Flavor.swift */; };
+		1691A8C81E60563500FC5085 /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691A8C71E60563500FC5085 /* CosmosDistrib.swift */; };
 		16B1CCC41E5D950900681A4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B1CCC31E5D950900681A4E /* AppDelegate.swift */; };
 		16B1CCC61E5D950900681A4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B1CCC51E5D950900681A4E /* ViewController.swift */; };
 		16B1CCC91E5D950900681A4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16B1CCC71E5D950900681A4E /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		160721A31E5F884A00FF3C00 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		1691A8BF1E5FC86B00FC5085 /* WheelFlavor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelFlavor.swift; sourceTree = "<group>"; };
 		1691A8C11E5FDDB700FC5085 /* Flavor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flavor.swift; sourceTree = "<group>"; };
+		1691A8C71E60563500FC5085 /* CosmosDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
 		16B1CCC01E5D950900681A4E /* CoffeeTastersIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeTastersIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16B1CCC31E5D950900681A4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16B1CCC51E5D950900681A4E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		160721831E5F6DB200FF3C00 /* util */ = {
 			isa = PBXGroup;
 			children = (
+				1691A8C71E60563500FC5085 /* CosmosDistrib.swift */,
 			);
 			name = util;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				160721A41E5F884A00FF3C00 /* Item.swift in Sources */,
 				160721961E5F7F5400FF3C00 /* Usuario.swift in Sources */,
 				3342439D1E5F4CC90001938F /* BuscaViewController.swift in Sources */,
+				1691A8C81E60563500FC5085 /* CosmosDistrib.swift in Sources */,
 				16B1CCCC1E5D950900681A4E /* CoffeeTastersIOS.xcdatamodeld in Sources */,
 				1607219A1E5F7F8F00FF3C00 /* Avaliacao.swift in Sources */,
 				334243951E5F4C770001938F /* PedidosViewController.swift in Sources */,

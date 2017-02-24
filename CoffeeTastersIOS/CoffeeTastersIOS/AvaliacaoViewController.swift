@@ -6,8 +6,8 @@
 //  Copyright © 2017 Luglio. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class AvaliacaoViewController:ViewController{
+class AvaliacaoViewController:UIViewController{
     
 }

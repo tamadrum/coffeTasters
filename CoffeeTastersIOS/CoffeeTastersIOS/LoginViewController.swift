@@ -7,10 +7,9 @@
 //
 
 import UIKit
-
 import FBSDKLoginKit
 
-class LoginViewController:ViewController{
+class LoginViewController:UIViewController{
     
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var senhaTextField: UITextField!

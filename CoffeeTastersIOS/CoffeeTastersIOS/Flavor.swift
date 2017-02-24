@@ -21,8 +21,9 @@ class Flavor {
     var caramelo: Int = 0
     var defumado: Int = 0
     var amargo: Int = 0
-    var apetitoso: Int = 0
+    var herbal: Int = 0
     var encorpado: Int = 0
-    var limpo: Int = 0
-    var retrogosto: Int = 0
+    var cereais: Int = 0
+    var nozes: Int = 0
+
 }
