@@ -21,7 +21,9 @@ class LoginViewController:UIViewController{
     override func viewDidLoad() {
         let loginButton = FBSDKLoginButton()
         loginButton.readPermissions = ["public_profile", "email"]
-        loginButton.center = view.center
+        var posicao:CGPoint = view.center
+        posicao.y += 200
+        loginButton.center = posicao
         view.addSubview(loginButton)
     }
     

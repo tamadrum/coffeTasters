@@ -22,8 +22,8 @@
 		1691A8C01E5FC86B00FC5085 /* WheelFlavor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691A8BF1E5FC86B00FC5085 /* WheelFlavor.swift */; };
 		1691A8C21E5FDDB700FC5085 /* Flavor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691A8C11E5FDDB700FC5085 /* Flavor.swift */; };
 		1691A8C81E60563500FC5085 /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691A8C71E60563500FC5085 /* CosmosDistrib.swift */; };
+		1691A8CA1E60B66800FC5085 /* EsqueciMinhaSenhaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691A8C91E60B66800FC5085 /* EsqueciMinhaSenhaViewController.swift */; };
 		16B1CCC41E5D950900681A4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B1CCC31E5D950900681A4E /* AppDelegate.swift */; };
-		16B1CCC61E5D950900681A4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B1CCC51E5D950900681A4E /* ViewController.swift */; };
 		16B1CCC91E5D950900681A4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16B1CCC71E5D950900681A4E /* Main.storyboard */; };
 		16B1CCCC1E5D950900681A4E /* CoffeeTastersIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 16B1CCCA1E5D950900681A4E /* CoffeeTastersIOS.xcdatamodeld */; };
 		16B1CCCE1E5D950900681A4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16B1CCCD1E5D950900681A4E /* Assets.xcassets */; };
@@ -63,9 +63,9 @@
 		1691A8BF1E5FC86B00FC5085 /* WheelFlavor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelFlavor.swift; sourceTree = "<group>"; };
 		1691A8C11E5FDDB700FC5085 /* Flavor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flavor.swift; sourceTree = "<group>"; };
 		1691A8C71E60563500FC5085 /* CosmosDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
+		1691A8C91E60B66800FC5085 /* EsqueciMinhaSenhaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EsqueciMinhaSenhaViewController.swift; sourceTree = "<group>"; };
 		16B1CCC01E5D950900681A4E /* CoffeeTastersIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeTastersIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16B1CCC31E5D950900681A4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		16B1CCC51E5D950900681A4E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		16B1CCC81E5D950900681A4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16B1CCCB1E5D950900681A4E /* CoffeeTastersIOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoffeeTastersIOS.xcdatamodel; sourceTree = "<group>"; };
 		16B1CCCD1E5D950900681A4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -167,7 +167,6 @@
 				16B1CCD91E5D956200681A4E /* dao */,
 				16B1CCD81E5D955D00681A4E /* modelo */,
 				16B1CCC31E5D950900681A4E /* AppDelegate.swift */,
-				16B1CCC51E5D950900681A4E /* ViewController.swift */,
 				16B1CCC71E5D950900681A4E /* Main.storyboard */,
 				16B1CCCD1E5D950900681A4E /* Assets.xcassets */,
 				16B1CCCF1E5D950900681A4E /* LaunchScreen.storyboard */,
@@ -220,6 +219,7 @@
 				334243A41E5F4D520001938F /* MapaViewController.swift */,
 				334243A61E5F4D6D0001938F /* MetodoDePreparoViewController.swift */,
 				334243A81E5F4D8C0001938F /* ComprarViewController.swift */,
+				1691A8C91E60B66800FC5085 /* EsqueciMinhaSenhaViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -304,7 +304,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16B1CCC61E5D950900681A4E /* ViewController.swift in Sources */,
 				334243911E5F4C440001938F /* ConfiguracoesViewController.swift in Sources */,
 				334243991E5F4CA10001938F /* ProdutosViewController.swift in Sources */,
 				1607219C1E5F7F9600FF3C00 /* Preparo.swift in Sources */,
@@ -314,6 +313,7 @@
 				334243931E5F4C590001938F /* MeusDadosViewController.swift in Sources */,
 				334243971E5F4C8C0001938F /* OfertasViewController.swift in Sources */,
 				334243A31E5F4D0F0001938F /* DetalhesViewController.swift in Sources */,
+				1691A8CA1E60B66800FC5085 /* EsqueciMinhaSenhaViewController.swift in Sources */,
 				160721A41E5F884A00FF3C00 /* Item.swift in Sources */,
 				160721961E5F7F5400FF3C00 /* Usuario.swift in Sources */,
 				3342439D1E5F4CC90001938F /* BuscaViewController.swift in Sources */,
