@@ -35,5 +35,11 @@ class PerfilViewController:UIViewController{
         task.resume()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "meusDados") {
+            let view = segue.destination as! MeusDadosViewController
+            view.carregaUsuario(usuario)
+        }
+    }
     
 }

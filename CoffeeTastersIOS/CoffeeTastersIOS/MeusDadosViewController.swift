@@ -19,17 +19,37 @@ class MeusDadosViewController:UIViewController{
     @IBOutlet var validadeCartaoTextField: UITextField!
     @IBOutlet var tipoCartaoTextField: UITextField!
     
-    var usuario = Dao().load()
+    var usuario = Usuario()
     
-    convenience init() {
-        self.init()
-//        nomeTextField.text = usuario.nome
-//        emailTextField.text = usuario.email
-        
+    func carregaUsuario(_ usuario: Usuario) {
+        self.usuario = usuario
+    }
+    
+    override func viewDidLoad() {
+        self.nomeTextField?.text = usuario.nome
+        self.emailTextField?.text = usuario.email
+        self.cpfTextField?.text = usuario.cpf
+        self.nomeCartaoTextField?.text = usuario.nomeCartao
+        self.numeroCartaoTextField?.text = usuario.numeroCartao
+        self.validadeCartaoTextField?.text = usuario.validadeCartao
+        self.tipoCartaoTextField?.text = usuario.tipoCartao
     }
     
     @IBAction func salvar(_ sender: Any) {
-//        Dao().save(usuario)
+            if let nome = nomeTextField.text { usuario.nome = nome }
+            if let email = emailTextField.text { usuario.email = email }
+            if let cpf = cpfTextField.text { usuario.cpf = cpf }
+            if let senha = senhaTextField.text { usuario.senha = senha }
+            if let nomeCartao = nomeCartaoTextField.text { usuario.nomeCartao = nomeCartao }
+            if let numeroCartao = numeroCartaoTextField.text { usuario.numeroCartao = numeroCartao }
+            if let validadeCartaoTextField = validadeCartaoTextField.text { usuario.validadeCartao = validadeCartaoTextField }
+            if let tipoCartao = tipoCartaoTextField.text { usuario.tipoCartao = tipoCartao }
+            
+            Dao().save(usuario)
+    
+        if let navigator = navigationController {
+            navigator.popViewController(animated: true)
+        }
     }
 
 }
