@@ -38,7 +38,11 @@ class MeusDadosViewController:UIViewController{
     @IBAction func salvar(_ sender: Any) {
             if let nome = nomeTextField.text { usuario.nome = nome }
             if let email = emailTextField.text { usuario.email = email }
-            if let cpf = cpfTextField.text { usuario.cpf = cpf }
+            if let cpf = cpfTextField.text {
+                if cpf.isCPF() {
+                    usuario.cpf = cpf
+                }
+            }
             if let senha = senhaTextField.text { usuario.senha = senha }
             if let nomeCartao = nomeCartaoTextField.text { usuario.nomeCartao = nomeCartao }
             if let numeroCartao = numeroCartaoTextField.text { usuario.numeroCartao = numeroCartao }
@@ -51,5 +55,5 @@ class MeusDadosViewController:UIViewController{
             navigator.popViewController(animated: true)
         }
     }
-
+    
 }
