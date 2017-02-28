@@ -15,17 +15,38 @@ class WheelFlavor: UIView {
     var flavorTorrador:Flavor = Flavor()
     var flavorMedia:Flavor = Flavor()
     var flavorUsuario:Flavor = Flavor()
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        desenhar()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        desenhar()
+    }
+    
+    convenience init() {
+        self.init(frame: CGRect.zero)
+        
+        desenhar()
+    }
+
+    func desenhar() {
+        print("1")
+        let frame = bounds
         let centro = CGPoint(x: self.bounds.width/2, y: self.bounds.height/2)
         var raio:Int = Int(centro.y/2)
         if ( centro.x > centro.y ) {
             raio = Int(centro.x/2)
         }
         
+        print("2")
+        
         if let context = UIGraphicsGetCurrentContext() {
+            print("3")
             context.setLineWidth(CGFloat(0.5))
             context.setStrokeColor(UIColor.black.cgColor)
             
@@ -48,23 +69,23 @@ class WheelFlavor: UIView {
             escreveTexto(texto: "Frutas Cítricas", centro:centro, raio:raio, angulo:315)
             escreveTexto(texto: "Frutas Vermelhas", centro:centro, raio:raio, angulo:337.5)
             
-//            desenhaImagem(imagem: "Salgado.png", context: context, centro: centro, raio: raio, angulo: 0)
-//            desenhaImagem(imagem: "Salgado.png", context: context, centro:centro, raio:raio, angulo:0)
-//            desenhaImagem(imagem: "Especiarias.png", context: context, centro:centro, raio:raio, angulo:22.5)
-//            desenhaImagem(imagem: "Floral.png", context: context, centro:centro, raio:raio, angulo:45)
-//            desenhaImagem(imagem: "Azedo.png", context: context, centro:centro, raio:raio, angulo:67.5)
-//            desenhaImagem(imagem: "Doce.png", context: context, centro:centro, raio:raio, angulo:90)
-//            desenhaImagem(imagem: "Nozes.png", context: context, centro:centro, raio:raio, angulo:112.5)
-//            desenhaImagem(imagem: "Cereais.png", context: context, centro:centro, raio:raio, angulo:135)
-//            desenhaImagem(imagem: "Encorpado.png", context: context, centro:centro, raio:raio, angulo:157.5)
-//            desenhaImagem(imagem: "Herbal.png", context: context, centro:centro, raio:raio, angulo:180)
-//            desenhaImagem(imagem: "Amargo.png", context: context, centro:centro, raio:raio, angulo:202.5)
-//            desenhaImagem(imagem: "Defumado.png", context: context, centro:centro, raio:raio, angulo:225)
-//            desenhaImagem(imagem: "Caramelo.png", context: context, centro:centro, raio:raio, angulo:247.5)
-//            desenhaImagem(imagem: "Chocolate.png", context: context, centro:centro, raio:raio, angulo:270)
-//            desenhaImagem(imagem: "Frutas com Caroço.png", context: context, centro:centro, raio:raio, angulo:292.5)
-//            desenhaImagem(imagem: "Frutas Cítricas.png", context: context, centro:centro, raio:raio, angulo:315)
-//            desenhaImagem(imagem: "Frutas Vermelhas.png", context: context, centro:centro, raio:raio, angulo:337.5)
+            //            desenhaImagem(imagem: "Salgado.png", context: context, centro: centro, raio: raio, angulo: 0)
+            //            desenhaImagem(imagem: "Salgado.png", context: context, centro:centro, raio:raio, angulo:0)
+            //            desenhaImagem(imagem: "Especiarias.png", context: context, centro:centro, raio:raio, angulo:22.5)
+            //            desenhaImagem(imagem: "Floral.png", context: context, centro:centro, raio:raio, angulo:45)
+            //            desenhaImagem(imagem: "Azedo.png", context: context, centro:centro, raio:raio, angulo:67.5)
+            //            desenhaImagem(imagem: "Doce.png", context: context, centro:centro, raio:raio, angulo:90)
+            //            desenhaImagem(imagem: "Nozes.png", context: context, centro:centro, raio:raio, angulo:112.5)
+            //            desenhaImagem(imagem: "Cereais.png", context: context, centro:centro, raio:raio, angulo:135)
+            //            desenhaImagem(imagem: "Encorpado.png", context: context, centro:centro, raio:raio, angulo:157.5)
+            //            desenhaImagem(imagem: "Herbal.png", context: context, centro:centro, raio:raio, angulo:180)
+            //            desenhaImagem(imagem: "Amargo.png", context: context, centro:centro, raio:raio, angulo:202.5)
+            //            desenhaImagem(imagem: "Defumado.png", context: context, centro:centro, raio:raio, angulo:225)
+            //            desenhaImagem(imagem: "Caramelo.png", context: context, centro:centro, raio:raio, angulo:247.5)
+            //            desenhaImagem(imagem: "Chocolate.png", context: context, centro:centro, raio:raio, angulo:270)
+            //            desenhaImagem(imagem: "Frutas com Caroço.png", context: context, centro:centro, raio:raio, angulo:292.5)
+            //            desenhaImagem(imagem: "Frutas Cítricas.png", context: context, centro:centro, raio:raio, angulo:315)
+            //            desenhaImagem(imagem: "Frutas Vermelhas.png", context: context, centro:centro, raio:raio, angulo:337.5)
             
             desenhaRoda(context: context, canvas:frame, centro:centro, raio:raio)
             desenhaCirculosPequenos(context: context, canvas:frame, centro:centro, raio:raio)
@@ -73,17 +94,8 @@ class WheelFlavor: UIView {
             desenhaGrafico(context: context, canvas:frame, centro:centro, raio:raio, flavor:flavorUsuario, cor: UIColor.black)
             desenhaGrafico(context: context, canvas:frame, centro:centro, raio:raio, flavor:flavorMedia, cor: UIColor.blue)
             desenhaGrafico(context: context, canvas:frame, centro:centro, raio:raio, flavor:flavorTorrador, cor: UIColor.brown)
-            
         }
 
-    }
-    
-    convenience init() {
-        self.init(frame: CGRect.zero)
-    }
-    
-    required init(coder aDecoder: NSCoder) {
-        fatalError("This class does not support NSCoding")
     }
     
     func getCoordenadas(centro: CGPoint, raio: Int, angulo: Double) -> CGPoint {

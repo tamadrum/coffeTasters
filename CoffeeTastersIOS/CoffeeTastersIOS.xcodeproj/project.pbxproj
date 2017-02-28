@@ -33,6 +33,7 @@
 		16B1CCCC1E5D950900681A4E /* CoffeeTastersIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 16B1CCCA1E5D950900681A4E /* CoffeeTastersIOS.xcdatamodeld */; };
 		16B1CCCE1E5D950900681A4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16B1CCCD1E5D950900681A4E /* Assets.xcassets */; };
 		16B1CCD11E5D950900681A4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16B1CCCF1E5D950900681A4E /* LaunchScreen.storyboard */; };
+		16B9BD901E64FD6300D615AE /* cafe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16B9BD8F1E64FD6300D615AE /* cafe.jpg */; };
 		16CB28341E6220C2001E4E3B /* config.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16CB28331E6220C2001E4E3B /* config.jpg */; };
 		16CB283A1E622B3B001E4E3B /* String+isCPF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB28391E622B3B001E4E3B /* String+isCPF.swift */; };
 		16CB283C1E622D62001E4E3B /* String+toMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB283B1E622D62001E4E3B /* String+toMD5.swift */; };
@@ -85,6 +86,7 @@
 		16B1CCCD1E5D950900681A4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16B1CCD01E5D950900681A4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16B1CCD21E5D950900681A4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16B9BD8F1E64FD6300D615AE /* cafe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cafe.jpg; sourceTree = "<group>"; };
 		16CB28331E6220C2001E4E3B /* config.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = config.jpg; path = imgs/config.jpg; sourceTree = "<group>"; };
 		16CB28391E622B3B001E4E3B /* String+isCPF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+isCPF.swift"; sourceTree = "<group>"; };
 		16CB283B1E622D62001E4E3B /* String+toMD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+toMD5.swift"; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 		16B1CCDC1E5D959600681A4E /* images */ = {
 			isa = PBXGroup;
 			children = (
+				16B9BD8F1E64FD6300D615AE /* cafe.jpg */,
 				1645FE051E62F5680002C1B6 /* starryStars_half@2x.png */,
 				1645FE061E62F5680002C1B6 /* starryStars_off@2x.png */,
 				1645FE071E62F5680002C1B6 /* starryStars_on@2x.png */,
@@ -331,6 +334,7 @@
 				16B1CCCE1E5D950900681A4E /* Assets.xcassets in Resources */,
 				1645FE091E62F5680002C1B6 /* starryStars_off@2x.png in Resources */,
 				16B1CCC91E5D950900681A4E /* Main.storyboard in Resources */,
+				16B9BD901E64FD6300D615AE /* cafe.jpg in Resources */,
 				16CB28341E6220C2001E4E3B /* config.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
