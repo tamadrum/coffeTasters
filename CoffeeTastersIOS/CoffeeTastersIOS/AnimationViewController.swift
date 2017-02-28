@@ -10,4 +10,8 @@ import UIKit
 
 class AnimationViewController: UIViewController {
 
+    override func viewDidLoad() {
+        
+    }
+    
 }

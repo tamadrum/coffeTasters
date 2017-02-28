@@ -24,7 +24,6 @@ class LoginViewController:UIViewController, FBSDKLoginButtonDelegate{
     var usuario:Usuario = Dao().load()
     
     override func viewDidLoad() {
-        
         var posicao:CGPoint = view.center
         
         posicao.y += 200

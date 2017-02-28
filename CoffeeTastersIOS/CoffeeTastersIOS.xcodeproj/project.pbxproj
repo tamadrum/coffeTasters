@@ -25,6 +25,7 @@
 		1645FE091E62F5680002C1B6 /* starryStars_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1645FE061E62F5680002C1B6 /* starryStars_off@2x.png */; };
 		1645FE0A1E62F5680002C1B6 /* starryStars_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1645FE071E62F5680002C1B6 /* starryStars_on@2x.png */; };
 		166BA4411E659EB300739A41 /* Configuracoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166BA4401E659EB300739A41 /* Configuracoes.swift */; };
+		166BA4441E65B8D300739A41 /* SyncUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166BA4431E65B8D300739A41 /* SyncUtil.swift */; };
 		1691A8C01E5FC86B00FC5085 /* WheelFlavor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691A8BF1E5FC86B00FC5085 /* WheelFlavor.swift */; };
 		1691A8C21E5FDDB700FC5085 /* Flavor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691A8C11E5FDDB700FC5085 /* Flavor.swift */; };
 		1691A8CA1E60B66800FC5085 /* EsqueciMinhaSenhaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691A8C91E60B66800FC5085 /* EsqueciMinhaSenhaViewController.swift */; };
@@ -77,6 +78,7 @@
 		1645FE061E62F5680002C1B6 /* starryStars_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "starryStars_off@2x.png"; sourceTree = "<group>"; };
 		1645FE071E62F5680002C1B6 /* starryStars_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "starryStars_on@2x.png"; sourceTree = "<group>"; };
 		166BA4401E659EB300739A41 /* Configuracoes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuracoes.swift; sourceTree = "<group>"; };
+		166BA4431E65B8D300739A41 /* SyncUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncUtil.swift; sourceTree = "<group>"; };
 		1691A8BF1E5FC86B00FC5085 /* WheelFlavor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelFlavor.swift; sourceTree = "<group>"; };
 		1691A8C11E5FDDB700FC5085 /* Flavor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flavor.swift; sourceTree = "<group>"; };
 		1691A8C91E60B66800FC5085 /* EsqueciMinhaSenhaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EsqueciMinhaSenhaViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,14 @@
 			name = wheelflavor;
 			sourceTree = "<group>";
 		};
+		166BA4421E65B8C700739A41 /* sync */ = {
+			isa = PBXGroup;
+			children = (
+				166BA4431E65B8D300739A41 /* SyncUtil.swift */,
+			);
+			name = sync;
+			sourceTree = "<group>";
+		};
 		168C42481E5E0167002911AF /* mockFolder */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +191,7 @@
 		16B1CCC21E5D950900681A4E /* CoffeeTastersIOS */ = {
 			isa = PBXGroup;
 			children = (
+				166BA4421E65B8C700739A41 /* sync */,
 				16CB28381E622B1F001E4E3B /* extensions */,
 				1607218D1E5F7E5F00FF3C00 /* wheelflavor */,
 				160721831E5F6DB200FF3C00 /* util */,
@@ -376,6 +387,7 @@
 				160721A21E5F86E500FF3C00 /* Passo.swift in Sources */,
 				334243A51E5F4D520001938F /* MapaViewController.swift in Sources */,
 				334243891E5F00540001938F /* AnimationViewController.swift in Sources */,
+				166BA4441E65B8D300739A41 /* SyncUtil.swift in Sources */,
 				1691A8CC1E60D71C00FC5085 /* Dao.swift in Sources */,
 				3342438F1E5F4C210001938F /* PerfilViewController.swift in Sources */,
 				160721981E5F7F7300FF3C00 /* Cafe.swift in Sources */,
