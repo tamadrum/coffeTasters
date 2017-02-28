@@ -19,34 +19,29 @@ class WheelFlavor: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        desenhar()
+//        desenhar()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        desenhar()
+//        desenhar()
     }
     
     convenience init() {
         self.init(frame: CGRect.zero)
         
-        desenhar()
+//        desenhar()
     }
 
-    func desenhar() {
-        print("1")
-        let frame = bounds
+    override func draw(_ rect: CGRect) {
         let centro = CGPoint(x: self.bounds.width/2, y: self.bounds.height/2)
         var raio:Int = Int(centro.y/2)
         if ( centro.x > centro.y ) {
             raio = Int(centro.x/2)
         }
-        
-        print("2")
-        
+    
         if let context = UIGraphicsGetCurrentContext() {
-            print("3")
             context.setLineWidth(CGFloat(0.5))
             context.setStrokeColor(UIColor.black.cgColor)
             
