@@ -333,13 +333,17 @@
                     <navigationItem key="navigationItem" title="Configurações" id="UjO-Ow-7hJ">
                         <barButtonItem key="rightBarButtonItem" title="Salvar" id="JfA-6c-SNo">
                             <connections>
-                                <action selector="salvar:" destination="tTr-Vz-70A" id="2ei-V4-UmR"/>
+                                <action selector="salvar:" destination="tTr-Vz-70A" id="jhP-0z-May"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="corMedia" destination="99w-CM-m9G" id="gAc-Te-Ymv"/>
+                        <outlet property="corTorrador" destination="hew-45-DjJ" id="3eu-GC-F6L"/>
+                        <outlet property="corUsuario" destination="99w-CM-m9G" id="lzN-8O-YvY"/>
                         <outlet property="cpfTextField" destination="gUk-Q1-7gr" id="pl6-BE-QmH"/>
                         <outlet property="emailTextField" destination="qa5-ZV-jzx" id="Nbq-gt-rO0"/>
+                        <outlet property="isNightMode" destination="dmC-My-VBc" id="NNr-1O-3U4"/>
                         <outlet property="nomeCartaoTextField" destination="2er-Mk-rw8" id="cNk-gI-Rvj"/>
                         <outlet property="nomeTextField" destination="lGv-WK-2eI" id="TaX-c5-Fj0"/>
                         <outlet property="numeroCartaoTextField" destination="dAV-Xd-O6E" id="rtv-l7-bIk"/>
@@ -591,7 +595,7 @@
             </objects>
             <point key="canvasLocation" x="7948" y="161"/>
         </scene>
-        <!--Flavor View Controller-->
+        <!--Roda de Sabores-->
         <scene sceneID="F5S-UP-Nez">
             <objects>
                 <viewController id="KnS-ov-fOY" customClass="FlavorViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -603,16 +607,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xjK-cE-5I3">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Roda de sabores" id="MPN-G0-zPV">
-                                        <barButtonItem key="leftBarButtonItem" title="Voltar" id="FfG-Ou-dMY"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="6A9-L9-hO8"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Doce" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJZ-Ap-PVv">
                                 <rect key="frame" x="16" y="74" width="41" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -792,6 +786,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Roda de Sabores" id="dkT-03-Ujd">
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="Gkj-EZ-eg9"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="amargoSlider" destination="b16-85-70e" id="VUl-P5-iZb"/>
                         <outlet property="azedoSlider" destination="udW-rj-Vqd" id="7Pw-x4-E9a"/>
@@ -813,9 +810,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pX-8F-rC2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6588" y="1709.5952023988007"/>
+            <point key="canvasLocation" x="6473" y="1710"/>
         </scene>
-        <!--Avaliacao View Controller-->
+        <!--Avaliando-->
         <scene sceneID="Fud-u2-RxG">
             <objects>
                 <viewController id="w01-hi-URB" customClass="AvaliacaoViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -857,17 +854,28 @@
                                 <state key="normal" title="Compartilhar"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kb8-a6-mdr">
-                                <rect key="frame" x="147" y="580" width="80" height="30"/>
+                                <rect key="frame" x="77" y="580" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Média geral"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mer-3G-7ox">
+                                <rect key="frame" x="192" y="580" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Roda"/>
+                                <connections>
+                                    <segue destination="KnS-ov-fOY" kind="show" id="ezr-iG-w5h"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Avaliando" id="7Iy-A7-swg">
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="Urn-b1-fAv"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VyX-zT-7hI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4711.1999999999998" y="1709.5952023988007"/>
+            <point key="canvasLocation" x="4710" y="1710"/>
         </scene>
         <!--Café X-->
         <scene sceneID="b4J-6X-U73">
@@ -886,7 +894,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Avaliar"/>
                                 <connections>
-                                    <segue destination="w01-hi-URB" kind="show" id="mn3-Wr-MZS"/>
+                                    <segue destination="w01-hi-URB" kind="show" id="veX-X7-hMk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AET-H6-GOv">
@@ -894,7 +902,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Preparo"/>
                                 <connections>
-                                    <segue destination="0YL-eo-SWq" kind="show" id="vId-OA-QBi"/>
+                                    <segue destination="0YL-eo-SWq" kind="show" id="LmD-7n-YfT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbv-N8-jeu">
@@ -955,7 +963,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Mapa"/>
                                 <connections>
-                                    <segue destination="fYV-bV-pzD" kind="show" id="Nqj-V2-mpf"/>
+                                    <segue destination="fYV-bV-pzD" kind="show" id="amb-Cq-rBl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -967,7 +975,7 @@
             </objects>
             <point key="canvasLocation" x="3911.1999999999998" y="1709.5952023988007"/>
         </scene>
-        <!--Metodo De Preparo View Controller-->
+        <!--Preparo-->
         <scene sceneID="x1P-8h-Ghf">
             <objects>
                 <viewController id="0YL-eo-SWq" customClass="MetodoDePreparoViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -980,10 +988,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Preparo" id="UNO-0A-2qP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9yk-d0-EMu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3732" y="2480"/>
+            <point key="canvasLocation" x="3911" y="2454"/>
         </scene>
         <!--Comprar Café-->
         <scene sceneID="Xta-oN-d3N">
@@ -1002,9 +1011,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YL4-EH-pTI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4671" y="2480"/>
+            <point key="canvasLocation" x="4710" y="2454"/>
         </scene>
-        <!--Mapa View Controller-->
+        <!--Mapa-->
         <scene sceneID="D2L-c4-Pg6">
             <objects>
                 <viewController id="fYV-bV-pzD" customClass="MapaViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -1017,10 +1026,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Mapa" id="7Pf-DH-SXK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gsq-Yw-v7s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2972" y="2480"/>
+            <point key="canvasLocation" x="2972" y="2454"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="vdf-BM-8yz">
@@ -1387,7 +1397,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kF9-4a-F1M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5648.8000000000002" y="1928.1859070464768"/>
+            <point key="canvasLocation" x="5650" y="1958"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="7Zn-cF-yiR">
@@ -1439,7 +1449,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Knd-iv-QwG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5648.8000000000002" y="1461.7691154422789"/>
+            <point key="canvasLocation" x="5650" y="1462"/>
         </scene>
         <!--Perfil-->
         <scene sceneID="bUG-Aq-nSd">

@@ -9,6 +9,19 @@
 import Foundation
 
 class Dao {
+    
+    func save(_ configuracoes: Configuracoes) {
+        NSKeyedArchiver.archiveRootObject(configuracoes, toFile: getArchive(for:"configuracoes"))
+    }
+    
+    func load() -> Configuracoes {
+        if let loaded = NSKeyedUnarchiver.unarchiveObject(withFile: getArchive(for:"configuracoes")) {
+            let configuracoes = loaded as! Configuracoes
+            return configuracoes
+        }
+        return Configuracoes()
+    }
+    
     func save (_ usuario: Usuario) {
         NSKeyedArchiver.archiveRootObject(usuario, toFile: getArchive(for:"usuario"))
     }
