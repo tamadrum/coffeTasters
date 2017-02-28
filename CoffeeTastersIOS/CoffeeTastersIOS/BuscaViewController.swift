@@ -8,20 +8,38 @@
 
 import UIKit
 
-class BuscaViewController:UIViewController, UITableViewDelegate, UITableViewDataSource {
+class BuscaViewController:UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet var tableView:UITableView?
+    @IBOutlet weak var campoBusca: UISearchBar!
+    
+    var searchActive : Bool = false
+    var data = ["San Francisco","New York","San Jose","Chicago","Los Angeles","Austin","Seattle"]
+    var filtered:[String] = []
+    
+    override func viewDidLoad() {
+        tableView?.delegate = self
+        tableView?.dataSource = self
+        campoBusca.delegate = self
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        if(searchActive) {
+            return filtered.count
+        }
+        return data.count;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let row = indexPath.row
         let cell = UITableViewCell(style:UITableViewCellStyle.default, reuseIdentifier: nil)
-        cell.textLabel!.text = "Adicione um café \(row)"
-
-        return cell
+        
+        if(searchActive){
+            cell.textLabel?.text = filtered[indexPath.row]
+        } else {
+            cell.textLabel?.text = data[indexPath.row];
+        }
+        
+        return cell;
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -36,5 +54,41 @@ class BuscaViewController:UIViewController, UITableViewDelegate, UITableViewData
         self.navigationController?.pushViewController(vc, animated: true);
         
     }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchActive = true;
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        filtered = data.filter({ (text) -> Bool in
+            let tmp: String = text as String
+            if tmp.range(of: searchText) != nil {
+                return true
+            }
+            else {
+                return false
+            }
+        })
+        if(filtered.count == 0){
+            searchActive = false;
+        } else {
+            searchActive = true;
+        }
+        self.tableView?.reloadData()
+    }
+
 
 }

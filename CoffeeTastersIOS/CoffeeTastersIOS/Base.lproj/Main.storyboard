@@ -1124,6 +1124,9 @@
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="StP-dz-369" id="hLM-VY-8X8"/>
+                                </connections>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1131,6 +1134,7 @@
                     <navigationItem key="navigationItem" title="Busca" id="qYG-D3-UaU"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="campoBusca" destination="Nl8-Ij-CtX" id="w1O-dN-tIG"/>
                         <outlet property="searchDisplayController" destination="fgI-RG-rGE" id="r5Y-mR-E94"/>
                         <outlet property="tableView" destination="SyC-ld-ru2" id="jtn-Kr-C8p"/>
                     </connections>
