@@ -10,8 +10,4 @@ import UIKit
 
 class CustomCell: UITableViewCell {
     
-    @IBOutlet weak var titulo: UILabel!
-    
-    @IBOutlet weak var imagem: UIImageView!
-    
 }

@@ -36,13 +36,11 @@ class ProdutosViewController:UIViewController, UITableViewDataSource, UITableVie
     // Funcionalidades da Tabela
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let row = indexPath.row
-        let cell = UITableViewCell(style:UITableViewCellStyle.default, reuseIdentifier: nil)
-        cell.textLabel!.text = "linha de texto \(row)"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "header", for: indexPath) as! CustomCell
         
         return cell
     }
@@ -53,6 +51,10 @@ class ProdutosViewController:UIViewController, UITableViewDataSource, UITableVie
         if cell != nil {
             print("Linha Selecionada:  \(indexPath.row)")
         }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 130
     }
     
 }

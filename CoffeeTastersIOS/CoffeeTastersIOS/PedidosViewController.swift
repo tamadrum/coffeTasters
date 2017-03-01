@@ -38,11 +38,14 @@ class PedidosViewController:UIViewController, UITableViewDataSource, UITableView
         return 3
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomCell
-        //let cell = UITableViewCell(style:UITableViewCellStyle.default, reuseIdentifier: nil) as! CustomCell
-        cell.titulo.text = "Linha \(indexPath.row)"
-        cell.imagem.image = #imageLiteral(resourceName: "config.jpg")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "header", for: indexPath) as! CustomCell
+        
+        
         
         return cell
     }
