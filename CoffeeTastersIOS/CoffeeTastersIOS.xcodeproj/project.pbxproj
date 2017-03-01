@@ -41,6 +41,8 @@
 		16CB283A1E622B3B001E4E3B /* String+isCPF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB28391E622B3B001E4E3B /* String+isCPF.swift */; };
 		16CB283C1E622D62001E4E3B /* String+toMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB283B1E622D62001E4E3B /* String+toMD5.swift */; };
 		16EC3BBE1E6720BC008BD23B /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC3BBD1E6720BC008BD23B /* CustomCell.swift */; };
+		16EC3BC01E674F90008BD23B /* CarrinhoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC3BBF1E674F90008BD23B /* CarrinhoViewController.swift */; };
+		16EC3BC21E674FC9008BD23B /* FinalizarCompraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC3BC11E674FC9008BD23B /* FinalizarCompraViewController.swift */; };
 		334243891E5F00540001938F /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334243881E5F00540001938F /* AnimationViewController.swift */; };
 		3342438B1E5F4AA20001938F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3342438A1E5F4AA20001938F /* LoginViewController.swift */; };
 		3342438D1E5F4B520001938F /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3342438C1E5F4B520001938F /* CadastroViewController.swift */; };
@@ -57,7 +59,6 @@
 		334243A31E5F4D0F0001938F /* DetalhesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334243A21E5F4D0F0001938F /* DetalhesViewController.swift */; };
 		334243A51E5F4D520001938F /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334243A41E5F4D520001938F /* MapaViewController.swift */; };
 		334243A71E5F4D6D0001938F /* MetodoDePreparoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334243A61E5F4D6D0001938F /* MetodoDePreparoViewController.swift */; };
-		334243A91E5F4D8C0001938F /* ComprarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334243A81E5F4D8C0001938F /* ComprarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,8 @@
 		16CB28391E622B3B001E4E3B /* String+isCPF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+isCPF.swift"; sourceTree = "<group>"; };
 		16CB283B1E622D62001E4E3B /* String+toMD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+toMD5.swift"; sourceTree = "<group>"; };
 		16EC3BBD1E6720BC008BD23B /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		16EC3BBF1E674F90008BD23B /* CarrinhoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarrinhoViewController.swift; sourceTree = "<group>"; };
+		16EC3BC11E674FC9008BD23B /* FinalizarCompraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalizarCompraViewController.swift; sourceTree = "<group>"; };
 		334243881E5F00540001938F /* AnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		3342438A1E5F4AA20001938F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3342438C1E5F4B520001938F /* CadastroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
@@ -114,7 +117,6 @@
 		334243A21E5F4D0F0001938F /* DetalhesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalhesViewController.swift; sourceTree = "<group>"; };
 		334243A41E5F4D520001938F /* MapaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
 		334243A61E5F4D6D0001938F /* MetodoDePreparoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetodoDePreparoViewController.swift; sourceTree = "<group>"; };
-		334243A81E5F4D8C0001938F /* ComprarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComprarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,8 +262,9 @@
 				334243A21E5F4D0F0001938F /* DetalhesViewController.swift */,
 				334243A41E5F4D520001938F /* MapaViewController.swift */,
 				334243A61E5F4D6D0001938F /* MetodoDePreparoViewController.swift */,
-				334243A81E5F4D8C0001938F /* ComprarViewController.swift */,
 				1691A8C91E60B66800FC5085 /* EsqueciMinhaSenhaViewController.swift */,
+				16EC3BBF1E674F90008BD23B /* CarrinhoViewController.swift */,
+				16EC3BC11E674FC9008BD23B /* FinalizarCompraViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				1691A8CA1E60B66800FC5085 /* EsqueciMinhaSenhaViewController.swift in Sources */,
 				1618384E1E66DDFC00D4F438 /* BusyAlert.swift in Sources */,
 				160721A41E5F884A00FF3C00 /* Item.swift in Sources */,
+				16EC3BC01E674F90008BD23B /* CarrinhoViewController.swift in Sources */,
 				160721961E5F7F5400FF3C00 /* Usuario.swift in Sources */,
 				3342439D1E5F4CC90001938F /* BuscaViewController.swift in Sources */,
 				16B1CCCC1E5D950900681A4E /* CoffeeTastersIOS.xcdatamodeld in Sources */,
@@ -404,10 +408,10 @@
 				334243A51E5F4D520001938F /* MapaViewController.swift in Sources */,
 				334243891E5F00540001938F /* AnimationViewController.swift in Sources */,
 				166BA4441E65B8D300739A41 /* SyncUtil.swift in Sources */,
+				16EC3BC21E674FC9008BD23B /* FinalizarCompraViewController.swift in Sources */,
 				1691A8CC1E60D71C00FC5085 /* Dao.swift in Sources */,
 				3342438F1E5F4C210001938F /* PerfilViewController.swift in Sources */,
 				160721981E5F7F7300FF3C00 /* Cafe.swift in Sources */,
-				334243A91E5F4D8C0001938F /* ComprarViewController.swift in Sources */,
 				160721A01E5F7FA700FF3C00 /* Produto.swift in Sources */,
 				1691A8C21E5FDDB700FC5085 /* Flavor.swift in Sources */,
 				334243A11E5F4CFB0001938F /* FlavorViewController.swift in Sources */,
