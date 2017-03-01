@@ -14,13 +14,15 @@ class BuscaViewController:UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var campoBusca: UISearchBar!
     
     var searchActive : Bool = false
-    var data = ["San Francisco","New York","San Jose","Chicago","Los Angeles","Austin","Seattle"]
-    var filtered:[String] = []
+    var data:Array<Cafe> = []
+    var filtered:Array<Cafe> = []
     
     override func viewDidLoad() {
         tableView?.delegate = self
         tableView?.dataSource = self
         campoBusca.delegate = self
+        
+        data = CafeDao().getListaCafe()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,13 +36,16 @@ class BuscaViewController:UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "header", for: indexPath)
         
         if(searchActive){
-            cell.textLabel?.text = filtered[indexPath.row]
+            print("filtered")
+            cell.textLabel?.text = filtered[indexPath.row].nome
+            cell.detailTextLabel?.text = filtered[indexPath.row].descricao
+//            cell.imageView?.image = UIImage(named: filtered[indexPath.row].descricao)
         } else {
-            cell.textLabel?.text = data[indexPath.row];
+            print("data")
+            cell.textLabel?.text = data[indexPath.row].nome
+            cell.detailTextLabel?.text = data[indexPath.row].descricao
+//            cell.imageView?.image = UIImage(named: data[indexPath.row].imagem)
         }
-        
-        cell.detailTextLabel?.text = "Delicious!"
-        //cell.imageView?.image = UIImage(named: )
         
         return cell
     }
@@ -76,15 +81,17 @@ class BuscaViewController:UIViewController, UITableViewDelegate, UITableViewData
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        filtered = data.filter({ (text) -> Bool in
-            let tmp: String = text as String
-            if tmp.range(of: searchText) != nil {
+        filtered = data.filter({ (cafe) -> Bool in
+            if cafe.nome.range(of: searchText) != nil {
+                print("buscando bom")
                 return true
             }
             else {
+                print("buscando ruim")
                 return false
             }
         })
+        
         if(filtered.count == 0){
             searchActive = false;
         } else {

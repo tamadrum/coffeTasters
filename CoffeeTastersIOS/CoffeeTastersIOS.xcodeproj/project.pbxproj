@@ -43,6 +43,9 @@
 		16EC3BBE1E6720BC008BD23B /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC3BBD1E6720BC008BD23B /* CustomCell.swift */; };
 		16EC3BC01E674F90008BD23B /* CarrinhoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC3BBF1E674F90008BD23B /* CarrinhoViewController.swift */; };
 		16EC3BC21E674FC9008BD23B /* FinalizarCompraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC3BC11E674FC9008BD23B /* FinalizarCompraViewController.swift */; };
+		16EC3BC41E675C0B008BD23B /* ProdutoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC3BC31E675C0B008BD23B /* ProdutoDao.swift */; };
+		16EC3BC61E675C14008BD23B /* CafeDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC3BC51E675C14008BD23B /* CafeDao.swift */; };
+		16EC3BC81E675C20008BD23B /* PedidoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC3BC71E675C20008BD23B /* PedidoDao.swift */; };
 		334243891E5F00540001938F /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334243881E5F00540001938F /* AnimationViewController.swift */; };
 		3342438B1E5F4AA20001938F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3342438A1E5F4AA20001938F /* LoginViewController.swift */; };
 		3342438D1E5F4B520001938F /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3342438C1E5F4B520001938F /* CadastroViewController.swift */; };
@@ -74,6 +77,7 @@
 		1607219F1E5F7FA700FF3C00 /* Produto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Produto.swift; sourceTree = "<group>"; };
 		160721A11E5F86E500FF3C00 /* Passo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Passo.swift; sourceTree = "<group>"; };
 		160721A31E5F884A00FF3C00 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		16149FB51E67603600A455BF /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		1618384D1E66DDFC00D4F438 /* BusyAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusyAlert.swift; sourceTree = "<group>"; };
 		163728681E624585009CB0DA /* String+isRG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+isRG.swift"; sourceTree = "<group>"; };
 		1645FE021E62F4D90002C1B6 /* StarryStars.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarryStars.h; sourceTree = "<group>"; };
@@ -101,6 +105,9 @@
 		16EC3BBD1E6720BC008BD23B /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		16EC3BBF1E674F90008BD23B /* CarrinhoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarrinhoViewController.swift; sourceTree = "<group>"; };
 		16EC3BC11E674FC9008BD23B /* FinalizarCompraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalizarCompraViewController.swift; sourceTree = "<group>"; };
+		16EC3BC31E675C0B008BD23B /* ProdutoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProdutoDao.swift; sourceTree = "<group>"; };
+		16EC3BC51E675C14008BD23B /* CafeDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CafeDao.swift; sourceTree = "<group>"; };
+		16EC3BC71E675C20008BD23B /* PedidoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedidoDao.swift; sourceTree = "<group>"; };
 		334243881E5F00540001938F /* AnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		3342438A1E5F4AA20001938F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3342438C1E5F4B520001938F /* CadastroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
@@ -214,6 +221,7 @@
 				16B1CCCF1E5D950900681A4E /* LaunchScreen.storyboard */,
 				16B1CCD21E5D950900681A4E /* Info.plist */,
 				16B1CCCA1E5D950900681A4E /* CoffeeTastersIOS.xcdatamodeld */,
+				16149FB51E67603600A455BF /* MyPlayground.playground */,
 			);
 			path = CoffeeTastersIOS;
 			sourceTree = "<group>";
@@ -239,6 +247,9 @@
 			isa = PBXGroup;
 			children = (
 				1691A8CB1E60D71C00FC5085 /* Dao.swift */,
+				16EC3BC31E675C0B008BD23B /* ProdutoDao.swift */,
+				16EC3BC51E675C14008BD23B /* CafeDao.swift */,
+				16EC3BC71E675C20008BD23B /* PedidoDao.swift */,
 			);
 			name = dao;
 			sourceTree = "<group>";
@@ -378,11 +389,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				334243911E5F4C440001938F /* ConfiguracoesViewController.swift in Sources */,
+				16EC3BC41E675C0B008BD23B /* ProdutoDao.swift in Sources */,
 				16EC3BBE1E6720BC008BD23B /* CustomCell.swift in Sources */,
 				334243991E5F4CA10001938F /* ProdutosViewController.swift in Sources */,
 				1607219C1E5F7F9600FF3C00 /* Preparo.swift in Sources */,
 				1645FE041E62F4FF0002C1B6 /* RatingView.swift in Sources */,
 				3342439B1E5F4CB50001938F /* AvaliacoesViewController.swift in Sources */,
+				16EC3BC61E675C14008BD23B /* CafeDao.swift in Sources */,
 				3342438D1E5F4B520001938F /* CadastroViewController.swift in Sources */,
 				166BA4411E659EB300739A41 /* Configuracoes.swift in Sources */,
 				3342439F1E5F4CE00001938F /* AvaliacaoViewController.swift in Sources */,
@@ -413,6 +426,7 @@
 				3342438F1E5F4C210001938F /* PerfilViewController.swift in Sources */,
 				160721981E5F7F7300FF3C00 /* Cafe.swift in Sources */,
 				160721A01E5F7FA700FF3C00 /* Produto.swift in Sources */,
+				16EC3BC81E675C20008BD23B /* PedidoDao.swift in Sources */,
 				1691A8C21E5FDDB700FC5085 /* Flavor.swift in Sources */,
 				334243A11E5F4CFB0001938F /* FlavorViewController.swift in Sources */,
 				163728691E624585009CB0DA /* String+isRG.swift in Sources */,

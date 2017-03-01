@@ -17,5 +17,6 @@ class Cafe {
     var dataTorra: Date = Date()
     var dataColheita: Date = Date()
     var flavor: Flavor = Flavor()
-    
+    var descricao: String = ""
+    var imagem: String = ""
 }
