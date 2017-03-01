@@ -11,6 +11,8 @@ import UIKit
 class ProdutosViewController:UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet var tableView:UITableView?
+    
+    var data = Array<Produto>()
 
     override func viewDidLoad() {
         let busyAlertController: BusyAlert = {
@@ -28,6 +30,9 @@ class ProdutosViewController:UIViewController, UITableViewDataSource, UITableVie
             },
             finish: { (dados: Any) in
                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
+                    
+                    self.data = ProdutoDao().getProdutos(comOferta: false)
+                    self.tableView?.reloadData()
                     busyAlertController.dismiss()
                 })
             })
@@ -36,11 +41,12 @@ class ProdutosViewController:UIViewController, UITableViewDataSource, UITableVie
     // Funcionalidades da Tabela
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "header", for: indexPath) as! CustomCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "header", for: indexPath)
+        cell.textLabel?.text = data[indexPath.row].nome
         
         return cell
     }

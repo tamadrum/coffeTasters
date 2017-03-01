@@ -12,6 +12,8 @@ class PedidosViewController:UIViewController, UITableViewDataSource, UITableView
     
     @IBOutlet var tableView:UITableView?
     
+    var data = Array<Pedido>()
+    
     override func viewDidLoad() {
         let busyAlertController: BusyAlert = {
             let busyAlert = BusyAlert(title: "Carregando...", message: "\n\nAguarde por favor!", presentingViewController: self)
@@ -28,6 +30,10 @@ class PedidosViewController:UIViewController, UITableViewDataSource, UITableView
         },
                                 finish: { (dados: Any) in
                                     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
+                                        
+                                        self.data = PedidoDao().getListaPedidos()
+                                        self.tableView?.reloadData()
+                                        
                                         busyAlertController.dismiss()
                                     })
         })
@@ -35,7 +41,7 @@ class PedidosViewController:UIViewController, UITableViewDataSource, UITableView
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -44,8 +50,7 @@ class PedidosViewController:UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "header", for: indexPath) as! CustomCell
-        
-        
+        cell.textLabel?.text = "\(data[indexPath.row].numero)"
         
         return cell
     }
