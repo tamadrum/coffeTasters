@@ -40,6 +40,7 @@
 		16CB28341E6220C2001E4E3B /* config.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16CB28331E6220C2001E4E3B /* config.jpg */; };
 		16CB283A1E622B3B001E4E3B /* String+isCPF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB28391E622B3B001E4E3B /* String+isCPF.swift */; };
 		16CB283C1E622D62001E4E3B /* String+toMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB283B1E622D62001E4E3B /* String+toMD5.swift */; };
+		16EC3BBE1E6720BC008BD23B /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC3BBD1E6720BC008BD23B /* CustomCell.swift */; };
 		334243891E5F00540001938F /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334243881E5F00540001938F /* AnimationViewController.swift */; };
 		3342438B1E5F4AA20001938F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3342438A1E5F4AA20001938F /* LoginViewController.swift */; };
 		3342438D1E5F4B520001938F /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3342438C1E5F4B520001938F /* CadastroViewController.swift */; };
@@ -96,6 +97,7 @@
 		16CB28331E6220C2001E4E3B /* config.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = config.jpg; path = imgs/config.jpg; sourceTree = "<group>"; };
 		16CB28391E622B3B001E4E3B /* String+isCPF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+isCPF.swift"; sourceTree = "<group>"; };
 		16CB283B1E622D62001E4E3B /* String+toMD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+toMD5.swift"; sourceTree = "<group>"; };
+		16EC3BBD1E6720BC008BD23B /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		334243881E5F00540001938F /* AnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		3342438A1E5F4AA20001938F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3342438C1E5F4B520001938F /* CadastroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 		16B1CCC21E5D950900681A4E /* CoffeeTastersIOS */ = {
 			isa = PBXGroup;
 			children = (
+				16EC3BBC1E6720A8008BD23B /* views */,
 				166BA4421E65B8C700739A41 /* sync */,
 				16CB28381E622B1F001E4E3B /* extensions */,
 				1607218D1E5F7E5F00FF3C00 /* wheelflavor */,
@@ -285,6 +288,14 @@
 			name = extensions;
 			sourceTree = "<group>";
 		};
+		16EC3BBC1E6720A8008BD23B /* views */ = {
+			isa = PBXGroup;
+			children = (
+				16EC3BBD1E6720BC008BD23B /* CustomCell.swift */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -364,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				334243911E5F4C440001938F /* ConfiguracoesViewController.swift in Sources */,
+				16EC3BBE1E6720BC008BD23B /* CustomCell.swift in Sources */,
 				334243991E5F4CA10001938F /* ProdutosViewController.swift in Sources */,
 				1607219C1E5F7F9600FF3C00 /* Preparo.swift in Sources */,
 				1645FE041E62F4FF0002C1B6 /* RatingView.swift in Sources */,

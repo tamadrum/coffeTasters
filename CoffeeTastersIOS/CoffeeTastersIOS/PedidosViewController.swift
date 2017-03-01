@@ -35,13 +35,14 @@ class PedidosViewController:UIViewController, UITableViewDataSource, UITableView
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let row = indexPath.row
-        let cell = UITableViewCell(style:UITableViewCellStyle.default, reuseIdentifier: nil)
-        cell.textLabel!.text = "linha de texto \(row)"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomCell
+        //let cell = UITableViewCell(style:UITableViewCellStyle.default, reuseIdentifier: nil) as! CustomCell
+        cell.titulo.text = "Linha \(indexPath.row)"
+        cell.imagem.image = #imageLiteral(resourceName: "config.jpg")
         
         return cell
     }

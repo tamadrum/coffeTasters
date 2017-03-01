@@ -14,8 +14,8 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="AnimationViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="Msm-L0-KOU"/>
+                        <viewControllerLayoutGuide type="bottom" id="N91-uj-bMM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -26,7 +26,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="QkV-GD-ZdN" kind="show" id="n27-go-2UU"/>
+                                    <segue destination="QkV-GD-ZdN" kind="presentation" id="n27-go-2UU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -42,8 +42,8 @@
             <objects>
                 <viewController id="QkV-GD-ZdN" customClass="LoginViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="T9w-FA-JdQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="h5Y-Q4-jRF"/>
+                        <viewControllerLayoutGuide type="top" id="5yg-2m-zqo"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Ma-58-hJs"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YFq-sS-e6n">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -86,7 +86,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Registrar"/>
                                 <connections>
-                                    <segue destination="Uec-et-8HQ" kind="show" id="Nsr-V7-FIU"/>
+                                    <segue destination="Uec-et-8HQ" kind="presentation" id="Nsr-V7-FIU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbe-1G-J1z">
@@ -94,7 +94,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Entrar"/>
                                 <connections>
-                                    <segue destination="PhK-kM-XHY" kind="show" id="CZJ-hp-t5a"/>
+                                    <segue destination="PhK-kM-XHY" kind="presentation" id="CZJ-hp-t5a"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAd-tq-UzY">
@@ -102,7 +102,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Esqueci minha senha"/>
                                 <connections>
-                                    <segue destination="l6m-rm-0jC" kind="show" id="lTX-qV-WNh"/>
+                                    <segue destination="l6m-rm-0jC" kind="presentation" id="lTX-qV-WNh"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t7t-4O-hX1">
@@ -131,8 +131,8 @@
             <objects>
                 <viewController id="l6m-rm-0jC" customClass="EsqueciMinhaSenhaViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2jL-hD-YYx"/>
-                        <viewControllerLayoutGuide type="bottom" id="Qxb-Cu-wOX"/>
+                        <viewControllerLayoutGuide type="top" id="flg-zl-nvX"/>
+                        <viewControllerLayoutGuide type="bottom" id="mbt-VZ-ct7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="H2a-Wm-9bl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -142,15 +142,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sj9-5z-5HE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1062" y="938"/>
+            <point key="canvasLocation" x="1062" y="938.00000000000011"/>
         </scene>
         <!--Registrar-->
         <scene sceneID="Isc-kY-4XC">
             <objects>
                 <viewController id="Uec-et-8HQ" customClass="CadastroViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Dt7-If-bNL"/>
-                        <viewControllerLayoutGuide type="bottom" id="MoF-e8-N2h"/>
+                        <viewControllerLayoutGuide type="top" id="eH4-EB-Iqg"/>
+                        <viewControllerLayoutGuide type="bottom" id="rnn-1S-zG7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bRI-yW-4Yi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -217,7 +217,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Voltar"/>
                                 <connections>
-                                    <segue destination="QkV-GD-ZdN" kind="show" id="NWZ-8U-o7l"/>
+                                    <segue destination="QkV-GD-ZdN" kind="presentation" id="NWZ-8U-o7l"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X63-Er-HMp">
@@ -225,7 +225,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Salvar"/>
                                 <connections>
-                                    <segue destination="PhK-kM-XHY" kind="show" id="UoZ-DH-AWz"/>
+                                    <segue destination="PhK-kM-XHY" kind="presentation" id="UoZ-DH-AWz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -237,15 +237,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sjz-R7-wUU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2033" y="938"/>
+            <point key="canvasLocation" x="2033" y="938.00000000000011"/>
         </scene>
         <!--Configurações-->
         <scene sceneID="N4K-HQ-g9Q">
             <objects>
                 <viewController id="tTr-Vz-70A" customClass="ConfiguracoesViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1QB-HL-Gfe"/>
-                        <viewControllerLayoutGuide type="bottom" id="Khr-TJ-me4"/>
+                        <viewControllerLayoutGuide type="top" id="0pP-Sq-IrW"/>
+                        <viewControllerLayoutGuide type="bottom" id="gH7-lK-fxG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LYB-ta-SDJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -362,8 +362,8 @@
             <objects>
                 <viewController id="ke8-gE-0cm" customClass="MeusDadosViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="rk5-U7-h50"/>
-                        <viewControllerLayoutGuide type="bottom" id="N24-S8-iF8"/>
+                        <viewControllerLayoutGuide type="top" id="3cn-3C-hYF"/>
+                        <viewControllerLayoutGuide type="bottom" id="pzb-xu-GS8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="wGv-PJ-hZq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -533,17 +533,45 @@
             <objects>
                 <viewController id="y96-2n-gZt" customClass="PedidosViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Fck-17-yn6"/>
-                        <viewControllerLayoutGuide type="bottom" id="yPw-cr-uy2"/>
+                        <viewControllerLayoutGuide type="top" id="Yl6-ra-QRt"/>
+                        <viewControllerLayoutGuide type="bottom" id="SXa-tZ-5V2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LCh-IR-HwE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ePA-I5-iIP">
-                                <rect key="frame" x="0.0" y="72" width="375" height="546"/>
+                            <tableView clipsSubviews="YES" contentMode="center" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ePA-I5-iIP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="center" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="70" id="YWQ-cS-eHg" customClass="CustomCell" customModule="CoffeeTastersIOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YWQ-cS-eHg" id="fpe-X1-ikm">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s3A-XT-eGG">
+                                                    <rect key="frame" x="197" y="0.0" width="154" height="61"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBa-v2-Ufu">
+                                                    <rect key="frame" x="51" y="24" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imagem" destination="s3A-XT-eGG" id="Cwm-gR-spY"/>
+                                            <outlet property="titulo" destination="oBa-v2-Ufu" id="cSp-ir-NtE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
                                 <connections>
                                     <outlet property="dataSource" destination="y96-2n-gZt" id="qj9-7P-gO6"/>
                                     <outlet property="delegate" destination="y96-2n-gZt" id="p7E-ZJ-Fm5"/>
@@ -559,15 +587,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HUs-zR-HWm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7783" y="161"/>
+            <point key="canvasLocation" x="7781.6000000000004" y="160.56971514242881"/>
         </scene>
         <!--Roda de Sabores-->
         <scene sceneID="F5S-UP-Nez">
             <objects>
                 <viewController id="KnS-ov-fOY" customClass="FlavorViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="e9Z-SG-k62"/>
-                        <viewControllerLayoutGuide type="bottom" id="qzm-W9-sc2"/>
+                        <viewControllerLayoutGuide type="top" id="BJ3-Vy-KHK"/>
+                        <viewControllerLayoutGuide type="bottom" id="xyN-s3-Cge"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KQD-cu-rAd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -776,15 +804,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pX-8F-rC2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8649" y="937"/>
+            <point key="canvasLocation" x="8649" y="937.00000000000011"/>
         </scene>
         <!--Avaliando-->
         <scene sceneID="Fud-u2-RxG">
             <objects>
                 <viewController id="w01-hi-URB" customClass="AvaliacaoViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="NYx-al-b4S"/>
-                        <viewControllerLayoutGuide type="bottom" id="PUk-ri-ZtC"/>
+                        <viewControllerLayoutGuide type="top" id="c1H-TU-pa4"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Nw-6c-ziS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jlZ-tB-MmL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -841,15 +869,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VyX-zT-7hI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6630" y="938"/>
+            <point key="canvasLocation" x="6630" y="938.00000000000011"/>
         </scene>
         <!--Café X-->
         <scene sceneID="b4J-6X-U73">
             <objects>
                 <viewController storyboardIdentifier="detalhesCafe" id="PoW-oS-YGF" customClass="DetalhesViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="7N4-1D-rWb"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ymr-tR-s8n"/>
+                        <viewControllerLayoutGuide type="top" id="ggx-dX-jtU"/>
+                        <viewControllerLayoutGuide type="bottom" id="bTt-03-FNR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="F9k-Hi-QJc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -946,8 +974,8 @@
             <objects>
                 <viewController id="0YL-eo-SWq" customClass="MetodoDePreparoViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Pn9-pn-ga6"/>
-                        <viewControllerLayoutGuide type="bottom" id="HsX-ah-QZd"/>
+                        <viewControllerLayoutGuide type="top" id="F7Q-Bi-AHU"/>
+                        <viewControllerLayoutGuide type="bottom" id="FIE-4e-uT1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6nj-uA-OOx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -965,8 +993,8 @@
             <objects>
                 <viewController id="HTz-qd-fqT" customClass="ComprarViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ELJ-NC-Nb1"/>
-                        <viewControllerLayoutGuide type="bottom" id="1PW-Vy-wmI"/>
+                        <viewControllerLayoutGuide type="top" id="aN5-mz-q4O"/>
+                        <viewControllerLayoutGuide type="bottom" id="REu-tj-0Z9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VLC-tA-htS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -984,8 +1012,8 @@
             <objects>
                 <viewController id="fYV-bV-pzD" customClass="MapaViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Coj-g6-KNX"/>
-                        <viewControllerLayoutGuide type="bottom" id="a7C-Bb-ucS"/>
+                        <viewControllerLayoutGuide type="top" id="SFM-5v-zJU"/>
+                        <viewControllerLayoutGuide type="bottom" id="DkA-iB-d7e"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="oHc-OQ-ekL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -1003,8 +1031,8 @@
             <objects>
                 <viewController id="SiX-4n-3aL" customClass="AvaliacoesViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="kZX-3v-8Iw"/>
-                        <viewControllerLayoutGuide type="bottom" id="YHf-Uy-X7M"/>
+                        <viewControllerLayoutGuide type="top" id="a63-QP-9oa"/>
+                        <viewControllerLayoutGuide type="bottom" id="AIe-yb-M5K"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2Cm-bf-Gsl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -1036,8 +1064,8 @@
             <objects>
                 <viewController id="StP-dz-369" customClass="BuscaViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="JeT-0t-tfi"/>
-                        <viewControllerLayoutGuide type="bottom" id="cOU-Bq-545"/>
+                        <viewControllerLayoutGuide type="top" id="AXv-dQ-bTH"/>
+                        <viewControllerLayoutGuide type="bottom" id="aTW-5I-QRy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CEp-ds-6WS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -1089,15 +1117,15 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="5650.3999999999996" y="937.78110944527748"/>
+            <point key="canvasLocation" x="5650.4000000000005" y="937.78110944527748"/>
         </scene>
         <!--Perfil do Usuário-->
         <scene sceneID="6tb-2T-ann">
             <objects>
                 <viewController id="qJ5-6h-umW" customClass="PerfilViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="rMJ-IW-dDK"/>
-                        <viewControllerLayoutGuide type="bottom" id="u1R-ge-cxY"/>
+                        <viewControllerLayoutGuide type="top" id="69y-og-gtY"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tnw-FT-F0f"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="E0m-hF-8f2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -1210,8 +1238,8 @@
             <objects>
                 <viewController id="9Ga-Te-fh8" customClass="OfertasViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hx8-EE-l2O"/>
-                        <viewControllerLayoutGuide type="bottom" id="6JJ-6E-SVA"/>
+                        <viewControllerLayoutGuide type="top" id="pf3-rW-bXe"/>
+                        <viewControllerLayoutGuide type="bottom" id="43d-28-l2M"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="wUD-qa-Gga">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -1242,8 +1270,8 @@
             <objects>
                 <viewController id="su0-pv-NDZ" customClass="ProdutosViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xmO-Eg-rJj"/>
-                        <viewControllerLayoutGuide type="bottom" id="bAH-PW-LHP"/>
+                        <viewControllerLayoutGuide type="top" id="2xa-aH-GYC"/>
+                        <viewControllerLayoutGuide type="bottom" id="tq1-fR-Lse"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9Ob-C3-u01">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -1294,8 +1322,8 @@
             <objects>
                 <viewController id="WHd-i4-TS8" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="LaH-uB-Acj"/>
-                        <viewControllerLayoutGuide type="bottom" id="9xg-9c-TWs"/>
+                        <viewControllerLayoutGuide type="top" id="8ae-WO-35H"/>
+                        <viewControllerLayoutGuide type="bottom" id="BM7-HW-sNH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="isA-w7-MR2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
@@ -1349,15 +1377,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kF9-4a-F1M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7543" y="1186"/>
+            <point key="canvasLocation" x="7147" y="1187"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="7Zn-cF-yiR">
             <objects>
                 <viewController id="S9w-vH-eEQ" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="vtg-dE-wie"/>
-                        <viewControllerLayoutGuide type="bottom" id="sre-ml-WIj"/>
+                        <viewControllerLayoutGuide type="top" id="11c-Rb-P4K"/>
+                        <viewControllerLayoutGuide type="bottom" id="Stc-jb-Nhg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="L3x-XZ-tbx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="116"/>
@@ -1401,7 +1429,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Knd-iv-QwG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7543" y="690"/>
+            <point key="canvasLocation" x="7147" y="713"/>
         </scene>
         <!--Perfil-->
         <scene sceneID="bUG-Aq-nSd">
@@ -1487,7 +1515,7 @@
         <image name="starryStars_on.png" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CZJ-hp-t5a"/>
         <segue reference="n27-go-2UU"/>
+        <segue reference="UoZ-DH-AWz"/>
     </inferredMetricsTieBreakers>
 </document>
