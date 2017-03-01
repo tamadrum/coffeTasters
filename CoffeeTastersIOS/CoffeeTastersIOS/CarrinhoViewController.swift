@@ -12,10 +12,12 @@ class CarrinhoViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet var tableView:UITableView?
     
+    var data:[String] = ["la", "lala", "lalala"]
+    
     // Funcionalidades da Tabela
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 0 ? 1 : 2
+        return section == 0 ? 1 : data.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -35,11 +37,27 @@ class CarrinhoViewController: UIViewController, UITableViewDelegate, UITableView
         
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
+            data.remove(at: 2)
+            tableView.reloadData()
+        }
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         
         if cell != nil {
             print("Linha Selecionada:  \(indexPath.row)")
+            
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
+            data.remove(at: 2)
+            tableView.reloadData()
         }
     }
 
