@@ -19,6 +19,15 @@
 		160721A01E5F7FA700FF3C00 /* Produto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1607219F1E5F7FA700FF3C00 /* Produto.swift */; };
 		160721A21E5F86E500FF3C00 /* Passo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160721A11E5F86E500FF3C00 /* Passo.swift */; };
 		160721A41E5F884A00FF3C00 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160721A31E5F884A00FF3C00 /* Item.swift */; };
+		16149FB71E6785E300A455BF /* CarrinhoCustomViewCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16149FB61E6785E300A455BF /* CarrinhoCustomViewCellItem.swift */; };
+		16149FB91E67866900A455BF /* ProdutosCustomViewCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16149FB81E67866900A455BF /* ProdutosCustomViewCellHeader.swift */; };
+		16149FBB1E67867500A455BF /* ProdutosCustomViewCellDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16149FBA1E67867500A455BF /* ProdutosCustomViewCellDetails.swift */; };
+		16149FBD1E67868500A455BF /* OfertasCustomViewCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16149FBC1E67868500A455BF /* OfertasCustomViewCellHeader.swift */; };
+		16149FBF1E67868D00A455BF /* OfertasCustomViewCellDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16149FBE1E67868D00A455BF /* OfertasCustomViewCellDetails.swift */; };
+		16149FC11E6786A000A455BF /* PedidosCustomViewCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16149FC01E6786A000A455BF /* PedidosCustomViewCellHeader.swift */; };
+		16149FC31E6786A600A455BF /* PedidosCustomViewCellDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16149FC21E6786A600A455BF /* PedidosCustomViewCellDetails.swift */; };
+		16149FC51E6786B100A455BF /* AvaliacoesCustomViewCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16149FC41E6786B100A455BF /* AvaliacoesCustomViewCellHeader.swift */; };
+		16149FC71E6786C500A455BF /* AvaliacoesCustomViewCellDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16149FC61E6786C500A455BF /* AvaliacoesCustomViewCellDetails.swift */; };
 		1618384E1E66DDFC00D4F438 /* BusyAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1618384D1E66DDFC00D4F438 /* BusyAlert.swift */; };
 		163728691E624585009CB0DA /* String+isRG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163728681E624585009CB0DA /* String+isRG.swift */; };
 		1645FE041E62F4FF0002C1B6 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1645FE031E62F4FF0002C1B6 /* RatingView.swift */; };
@@ -77,7 +86,15 @@
 		1607219F1E5F7FA700FF3C00 /* Produto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Produto.swift; sourceTree = "<group>"; };
 		160721A11E5F86E500FF3C00 /* Passo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Passo.swift; sourceTree = "<group>"; };
 		160721A31E5F884A00FF3C00 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		16149FB51E67603600A455BF /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		16149FB61E6785E300A455BF /* CarrinhoCustomViewCellItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarrinhoCustomViewCellItem.swift; sourceTree = "<group>"; };
+		16149FB81E67866900A455BF /* ProdutosCustomViewCellHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProdutosCustomViewCellHeader.swift; sourceTree = "<group>"; };
+		16149FBA1E67867500A455BF /* ProdutosCustomViewCellDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProdutosCustomViewCellDetails.swift; sourceTree = "<group>"; };
+		16149FBC1E67868500A455BF /* OfertasCustomViewCellHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfertasCustomViewCellHeader.swift; sourceTree = "<group>"; };
+		16149FBE1E67868D00A455BF /* OfertasCustomViewCellDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfertasCustomViewCellDetails.swift; sourceTree = "<group>"; };
+		16149FC01E6786A000A455BF /* PedidosCustomViewCellHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedidosCustomViewCellHeader.swift; sourceTree = "<group>"; };
+		16149FC21E6786A600A455BF /* PedidosCustomViewCellDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedidosCustomViewCellDetails.swift; sourceTree = "<group>"; };
+		16149FC41E6786B100A455BF /* AvaliacoesCustomViewCellHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvaliacoesCustomViewCellHeader.swift; sourceTree = "<group>"; };
+		16149FC61E6786C500A455BF /* AvaliacoesCustomViewCellDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvaliacoesCustomViewCellDetails.swift; sourceTree = "<group>"; };
 		1618384D1E66DDFC00D4F438 /* BusyAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusyAlert.swift; sourceTree = "<group>"; };
 		163728681E624585009CB0DA /* String+isRG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+isRG.swift"; sourceTree = "<group>"; };
 		1645FE021E62F4D90002C1B6 /* StarryStars.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarryStars.h; sourceTree = "<group>"; };
@@ -221,7 +238,6 @@
 				16B1CCCF1E5D950900681A4E /* LaunchScreen.storyboard */,
 				16B1CCD21E5D950900681A4E /* Info.plist */,
 				16B1CCCA1E5D950900681A4E /* CoffeeTastersIOS.xcdatamodeld */,
-				16149FB51E67603600A455BF /* MyPlayground.playground */,
 			);
 			path = CoffeeTastersIOS;
 			sourceTree = "<group>";
@@ -306,6 +322,15 @@
 			isa = PBXGroup;
 			children = (
 				16EC3BBD1E6720BC008BD23B /* CustomCell.swift */,
+				16149FB61E6785E300A455BF /* CarrinhoCustomViewCellItem.swift */,
+				16149FB81E67866900A455BF /* ProdutosCustomViewCellHeader.swift */,
+				16149FBA1E67867500A455BF /* ProdutosCustomViewCellDetails.swift */,
+				16149FBC1E67868500A455BF /* OfertasCustomViewCellHeader.swift */,
+				16149FBE1E67868D00A455BF /* OfertasCustomViewCellDetails.swift */,
+				16149FC01E6786A000A455BF /* PedidosCustomViewCellHeader.swift */,
+				16149FC21E6786A600A455BF /* PedidosCustomViewCellDetails.swift */,
+				16149FC41E6786B100A455BF /* AvaliacoesCustomViewCellHeader.swift */,
+				16149FC61E6786C500A455BF /* AvaliacoesCustomViewCellDetails.swift */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -388,24 +413,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16149FC71E6786C500A455BF /* AvaliacoesCustomViewCellDetails.swift in Sources */,
+				16149FB91E67866900A455BF /* ProdutosCustomViewCellHeader.swift in Sources */,
 				334243911E5F4C440001938F /* ConfiguracoesViewController.swift in Sources */,
 				16EC3BC41E675C0B008BD23B /* ProdutoDao.swift in Sources */,
 				16EC3BBE1E6720BC008BD23B /* CustomCell.swift in Sources */,
 				334243991E5F4CA10001938F /* ProdutosViewController.swift in Sources */,
 				1607219C1E5F7F9600FF3C00 /* Preparo.swift in Sources */,
+				16149FBB1E67867500A455BF /* ProdutosCustomViewCellDetails.swift in Sources */,
 				1645FE041E62F4FF0002C1B6 /* RatingView.swift in Sources */,
 				3342439B1E5F4CB50001938F /* AvaliacoesViewController.swift in Sources */,
 				16EC3BC61E675C14008BD23B /* CafeDao.swift in Sources */,
 				3342438D1E5F4B520001938F /* CadastroViewController.swift in Sources */,
 				166BA4411E659EB300739A41 /* Configuracoes.swift in Sources */,
 				3342439F1E5F4CE00001938F /* AvaliacaoViewController.swift in Sources */,
+				16149FC51E6786B100A455BF /* AvaliacoesCustomViewCellHeader.swift in Sources */,
 				334243931E5F4C590001938F /* MeusDadosViewController.swift in Sources */,
 				16CB283A1E622B3B001E4E3B /* String+isCPF.swift in Sources */,
 				334243971E5F4C8C0001938F /* OfertasViewController.swift in Sources */,
 				334243A31E5F4D0F0001938F /* DetalhesViewController.swift in Sources */,
+				16149FBF1E67868D00A455BF /* OfertasCustomViewCellDetails.swift in Sources */,
 				1691A8CA1E60B66800FC5085 /* EsqueciMinhaSenhaViewController.swift in Sources */,
 				1618384E1E66DDFC00D4F438 /* BusyAlert.swift in Sources */,
 				160721A41E5F884A00FF3C00 /* Item.swift in Sources */,
+				16149FBD1E67868500A455BF /* OfertasCustomViewCellHeader.swift in Sources */,
 				16EC3BC01E674F90008BD23B /* CarrinhoViewController.swift in Sources */,
 				160721961E5F7F5400FF3C00 /* Usuario.swift in Sources */,
 				3342439D1E5F4CC90001938F /* BuscaViewController.swift in Sources */,
@@ -420,15 +451,18 @@
 				160721A21E5F86E500FF3C00 /* Passo.swift in Sources */,
 				334243A51E5F4D520001938F /* MapaViewController.swift in Sources */,
 				334243891E5F00540001938F /* AnimationViewController.swift in Sources */,
+				16149FB71E6785E300A455BF /* CarrinhoCustomViewCellItem.swift in Sources */,
 				166BA4441E65B8D300739A41 /* SyncUtil.swift in Sources */,
 				16EC3BC21E674FC9008BD23B /* FinalizarCompraViewController.swift in Sources */,
 				1691A8CC1E60D71C00FC5085 /* Dao.swift in Sources */,
+				16149FC11E6786A000A455BF /* PedidosCustomViewCellHeader.swift in Sources */,
 				3342438F1E5F4C210001938F /* PerfilViewController.swift in Sources */,
 				160721981E5F7F7300FF3C00 /* Cafe.swift in Sources */,
 				160721A01E5F7FA700FF3C00 /* Produto.swift in Sources */,
 				16EC3BC81E675C20008BD23B /* PedidoDao.swift in Sources */,
 				1691A8C21E5FDDB700FC5085 /* Flavor.swift in Sources */,
 				334243A11E5F4CFB0001938F /* FlavorViewController.swift in Sources */,
+				16149FC31E6786A600A455BF /* PedidosCustomViewCellDetails.swift in Sources */,
 				163728691E624585009CB0DA /* String+isRG.swift in Sources */,
 				3342438B1E5F4AA20001938F /* LoginViewController.swift in Sources */,
 			);
