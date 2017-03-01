@@ -850,7 +850,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pX-8F-rC2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8649" y="937.00000000000011"/>
+            <point key="canvasLocation" x="7582" y="938"/>
         </scene>
         <!--Avaliando-->
         <scene sceneID="Fud-u2-RxG">
@@ -997,22 +997,6 @@
                                     <segue destination="w01-hi-URB" kind="show" id="veX-X7-hMk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AET-H6-GOv">
-                                <rect key="frame" x="207" y="72" width="54" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Preparo"/>
-                                <connections>
-                                    <segue destination="0YL-eo-SWq" kind="show" id="LmD-7n-YfT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbv-N8-jeu">
-                                <rect key="frame" x="299" y="72" width="60" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Comprar"/>
-                                <connections>
-                                    <segue destination="HTz-qd-fqT" kind="show" id="INh-nW-gLc"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cafe.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rYN-0C-uY0">
                                 <rect key="frame" x="16" y="110" width="85" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1059,11 +1043,19 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qta-lo-sfJ">
-                                <rect key="frame" x="109" y="72" width="38" height="30"/>
+                                <rect key="frame" x="321" y="72" width="38" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Mapa"/>
                                 <connections>
                                     <segue destination="fYV-bV-pzD" kind="show" id="amb-Cq-rBl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AET-H6-GOv">
+                                <rect key="frame" x="160" y="72" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Preparo"/>
+                                <connections>
+                                    <segue destination="0YL-eo-SWq" kind="show" id="LmD-7n-YfT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1093,25 +1085,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9yk-d0-EMu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7542" y="1710"/>
-        </scene>
-        <!--Comprar Café-->
-        <scene sceneID="Xta-oN-d3N">
-            <objects>
-                <viewController id="HTz-qd-fqT" customClass="ComprarViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="aN5-mz-q4O"/>
-                        <viewControllerLayoutGuide type="bottom" id="REu-tj-0Z9"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="VLC-tA-htS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Comprar Café" id="eAo-KN-0i5"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YL4-EH-pTI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="8686" y="1710"/>
         </scene>
         <!--Mapa-->
         <scene sceneID="D2L-c4-Pg6">
@@ -1148,6 +1121,79 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="header" rowHeight="110" id="M9b-Aw-EcH" customClass="CustomCell" customModule="CoffeeTastersIOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="110"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M9b-Aw-EcH" id="8Ag-Wc-Rrg">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="109"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Café Pelé" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIf-IE-Rag">
+                                                    <rect key="frame" x="8" y="8" width="241" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20 fev 2017" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1uP-un-BQo">
+                                                    <rect key="frame" x="257" y="8" width="110" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Solúvel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQC-df-0cT">
+                                                    <rect key="frame" x="8" y="32" width="359" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ge5-gE-iO8" customClass="RatingView" customModule="CoffeeTastersIOS" customModuleProvider="target">
+                                                    <rect key="frame" x="9" y="61" width="358" height="37"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                                            <integer key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="offImage" value="starryStars_off.png"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="onImage" value="starryStars_on.png"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="halfImage" value="starryStars_half.png"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                            <real key="value" value="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="halfStarsAllowed" value="NO"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="details" rowHeight="324" id="9ZI-G0-Bzg">
+                                        <rect key="frame" x="0.0" y="138" width="375" height="324"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9ZI-G0-Bzg" id="QwG-bS-K5N">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="323"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="T87-3H-D70">
+                                                    <rect key="frame" x="8" y="8" width="359" height="80"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5fE-gU-LrR" customClass="WheelFlavor" customModule="CoffeeTastersIOS" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="96" width="359" height="219"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="SiX-4n-3aL" id="0dM-4B-eOu"/>
                                     <outlet property="delegate" destination="SiX-4n-3aL" id="Taz-FW-mhJ"/>
@@ -1181,6 +1227,36 @@
                                 <rect key="frame" x="0.0" y="116" width="375" height="502"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="header" textLabel="V5h-Hw-IYK" detailTextLabel="lVa-Mu-wAR" imageView="Xyn-8Y-YHr" style="IBUITableViewCellStyleSubtitle" id="Y9f-OK-T8q">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y9f-OK-T8q" id="X1U-MA-5eu">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V5h-Hw-IYK">
+                                                    <rect key="frame" x="76" y="4" width="34" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lVa-Mu-wAR">
+                                                    <rect key="frame" x="76" y="25" width="44" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="cafe.jpg" id="Xyn-8Y-YHr">
+                                                    <rect key="frame" x="15" y="0.0" width="46" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="StP-dz-369" id="x84-BY-fBY"/>
                                     <outlet property="delegate" destination="StP-dz-369" id="lsx-8A-Clh"/>
@@ -1323,6 +1399,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mG6-bj-Ij4">
+                                <rect key="frame" x="60" y="482" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Carrinho"/>
+                                <connections>
+                                    <segue destination="5Hd-Jh-7S7" kind="show" id="xaX-7D-cAP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1370,6 +1454,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hRA-hG-SLq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6906" y="161"/>
+        </scene>
+        <!--Carrinho-->
+        <scene sceneID="Rrc-vs-5Df">
+            <objects>
+                <viewController id="5Hd-Jh-7S7" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B1d-Fh-bcI"/>
+                        <viewControllerLayoutGuide type="bottom" id="iS2-yB-3xd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U38-In-yXF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Carrinho" id="S7E-MN-cWs">
+                        <barButtonItem key="rightBarButtonItem" title="Finalizar" id="Xze-Lj-l1c">
+                            <connections>
+                                <segue destination="9jD-lg-vsv" kind="show" id="4kc-U4-JjU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xje-48-2EZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5543" y="-510"/>
+        </scene>
+        <!--Finalizar Compra-->
+        <scene sceneID="Qz5-U7-0T8">
+            <objects>
+                <viewController id="9jD-lg-vsv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Bo-jP-NYh"/>
+                        <viewControllerLayoutGuide type="bottom" id="vFW-kk-7Aa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YJx-2L-dx0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Finalizar Compra" id="ueD-EL-Hu9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kb1-Ro-flF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6406" y="-510"/>
         </scene>
         <!--Produtos-->
         <scene sceneID="vvW-2X-6oa">

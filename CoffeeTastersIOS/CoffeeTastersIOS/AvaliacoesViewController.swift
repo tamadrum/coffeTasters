@@ -38,10 +38,12 @@ class AvaliacoesViewController:UIViewController, UITableViewDataSource, UITableV
         return 1
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 110
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let row = indexPath.row
-        let cell = UITableViewCell(style:UITableViewCellStyle.default, reuseIdentifier: nil)
-        cell.textLabel!.text = "Adicione um café \(row)"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "header", for: indexPath) as! CustomCell
         
         let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(mostraDetalhes))
         cell.addGestureRecognizer(longPressRecognizer)

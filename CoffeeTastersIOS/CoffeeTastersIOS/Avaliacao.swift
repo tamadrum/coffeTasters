@@ -9,6 +9,7 @@
 import Foundation
 
 class Avaliacao {
+    var cafe: Cafe = Cafe()
     var data: Date = Date()
     var gostou: Int = 0
     var flavor: Flavor = Flavor()

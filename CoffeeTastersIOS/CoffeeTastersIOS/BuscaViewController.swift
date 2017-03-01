@@ -31,7 +31,7 @@ class BuscaViewController:UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style:UITableViewCellStyle.default, reuseIdentifier: nil)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "header", for: indexPath)
         
         if(searchActive){
             cell.textLabel?.text = filtered[indexPath.row]
@@ -39,7 +39,10 @@ class BuscaViewController:UIViewController, UITableViewDelegate, UITableViewData
             cell.textLabel?.text = data[indexPath.row];
         }
         
-        return cell;
+        cell.detailTextLabel?.text = "Delicious!"
+        //cell.imageView?.image = UIImage(named: )
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
