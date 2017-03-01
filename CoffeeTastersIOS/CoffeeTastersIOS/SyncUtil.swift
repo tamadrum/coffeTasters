@@ -12,9 +12,7 @@ class SyncUtil {
     
     var TableData:Array<String> = Array<String>()
     
-//    get_data_from_url("http://www.kaleidosblog.com/tutorial/tutorial.json")
-    
-    func get_data_from_url(url:String) {
+    func getDadosFrom(url: String, trataJson: @escaping (_ result: Data) -> String, finish: @escaping (_ dados: Any) -> Void){
         guard let url2 = URL(string: url) else {
             print("Error: cannot create URL")
             return
@@ -25,13 +23,13 @@ class SyncUtil {
         let session = URLSession(configuration: config)
         
         let task = session.dataTask(with: urlRequest2 as URLRequest, completionHandler: { (data, response, error) in
-            self.extract_json(jsonData: data!)
+            let retorno = trataJson(data!)
+            finish(dados: retorno)
         })
         task.resume()
-
     }
 
-    func extract_json(jsonData:Data){
+    func extract_json(jsonData:Data) -> String {
         let json = try? JSONSerialization.jsonObject(with: jsonData, options: [])
             if let countries_list = json as? Array<Any> {
                 for i in 0 ..< countries_list.count {
@@ -49,6 +47,7 @@ class SyncUtil {
             //self.tableView.reloadData()
             return
         })
+        return ""
     }
         
 }

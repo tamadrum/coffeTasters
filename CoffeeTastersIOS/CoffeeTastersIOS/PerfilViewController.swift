@@ -16,6 +16,9 @@ class PerfilViewController:UIViewController{
     
     var usuario:Usuario = Dao().load()
     
+    @IBOutlet weak var qtdAvaliacoes: UILabel!
+    @IBOutlet weak var qtdCafes: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
