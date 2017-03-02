@@ -669,6 +669,11 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.57335692644119263" green="0.38117468357086182" blue="0.088170252740383148" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="numero" destination="Cbs-rn-5PL" id="hT6-AA-UYs"/>
+                                            <outlet property="status" destination="HVU-CI-NUt" id="0tZ-HI-q6U"/>
+                                            <outlet property="valor" destination="fgX-fF-T38" id="tuR-Mr-hJD"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="center" selectionStyle="default" indentationWidth="10" reuseIdentifier="details" rowHeight="44" id="NEm-lv-UWv" userLabel="details" customClass="PedidosCustomViewCellDetails" customModule="CoffeeTastersIOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="128" width="375" height="44"/>
@@ -701,6 +706,11 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.75429433584213257" green="0.55812245607376099" blue="0.071776129305362701" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="nome" destination="oZa-1p-mNP" id="Vw5-VF-VjS"/>
+                                            <outlet property="quantidade" destination="WQr-Uz-FNx" id="Yvr-Xz-kHF"/>
+                                            <outlet property="valor" destination="5bf-jh-sjH" id="ws1-gd-TPD"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -1689,6 +1699,13 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imagem" destination="Jc3-mA-OVe" id="hbg-PM-Mda"/>
+                                            <outlet property="nome" destination="Opn-3m-Opm" id="wI7-9B-hzr"/>
+                                            <outlet property="tipo" destination="uG6-PV-83h" id="yIO-Ok-opI"/>
+                                            <outlet property="valor" destination="x7Q-4X-6Pq" id="Jnd-1c-bIA"/>
+                                            <outlet property="valorOferta" destination="Lhy-hm-vfP" id="Jt5-k0-X4h"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="details" rowHeight="130" id="lQU-6O-mSt" customClass="OfertasCustomViewCellDetails" customModule="CoffeeTastersIOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="158" width="375" height="130"/>
@@ -1707,6 +1724,9 @@
                                                 </textView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descricao" destination="e6J-uq-6EQ" id="DRz-nc-STq"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -1928,6 +1948,13 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="btnComprar" destination="rFu-vj-soe" id="Frc-28-poD"/>
+                                            <outlet property="imagem" destination="PTT-JD-GZT" id="DHQ-kO-hRY"/>
+                                            <outlet property="nome" destination="YP6-8X-ivY" id="zGw-AI-D1i"/>
+                                            <outlet property="tipo" destination="XRl-7o-X3h" id="eks-LO-wMZ"/>
+                                            <outlet property="valor" destination="E3d-Wg-8kq" id="Ggp-jD-tTw"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="details" rowHeight="130" id="IVU-7R-6ob" customClass="ProdutosCustomViewCellDetails" customModule="CoffeeTastersIOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="158" width="375" height="130"/>
@@ -1946,6 +1973,9 @@
                                                 </textView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descricao" destination="wLn-b2-opP" id="1ec-ex-sfP"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

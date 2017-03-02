@@ -37,10 +37,24 @@ class OfertasViewController:Acordeao {
         
         if isParentCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: parentCellIdentifier , for: indexPath) as! OfertasCustomViewCellHeader
+            
+            let prod = dataSource[indexPath.row].item as! Produto
+            
+            cell.nome?.text = prod.nome
+            cell.tipo?.text = prod.tipo
+            cell.valor?.text = "R$ \(prod.preco)"
+            cell.valorOferta?.text = "R$ \(prod.precoOferta)"
+            cell.imagem? = (UIImage(contentsOfFile: "config.jpg"))!
+            
             return cell
         }
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: childCellIdentifier, for: indexPath) as! OfertasCustomViewCellDetails
+            
+            let prod = dataSource[indexPath.row].item as! Produto
+            
+            cell.descricao?.text = prod.descricao
+            
             return cell
         }
     }
