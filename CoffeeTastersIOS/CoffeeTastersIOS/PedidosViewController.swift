@@ -49,7 +49,8 @@ class PedidosViewController:UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "header", for: indexPath) as! CustomCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "header", for: indexPath)
+        
         cell.textLabel?.text = "\(data[indexPath.row].numero)"
         
         return cell

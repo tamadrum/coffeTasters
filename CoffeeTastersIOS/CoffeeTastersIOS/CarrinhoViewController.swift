@@ -26,11 +26,11 @@ class CarrinhoViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "header", for: indexPath) as! CustomCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "header", for: indexPath)
             
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "itens", for: indexPath) as! CustomCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "itens", for: indexPath)
             
             return cell
         }
