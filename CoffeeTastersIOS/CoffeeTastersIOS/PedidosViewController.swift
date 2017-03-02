@@ -8,59 +8,40 @@
 
 import UIKit
 
-class PedidosViewController:UIViewController, UITableViewDataSource, UITableViewDelegate{
+class PedidosViewController:Acordeao {
     
     @IBOutlet var tableView:UITableView?
     
-    var data = Array<Pedido>()
-    
     override func viewDidLoad() {
-        let busyAlertController: BusyAlert = {
-            let busyAlert = BusyAlert(title: "Carregando...", message: "\n\nAguarde por favor!", presentingViewController: self)
-            return busyAlert
-        }()
+        tableView?.tableFooterView = UIView()
         
-        busyAlertController.display()
+        var items = Array<Parent>()
         
-        SyncUtil().getDadosFrom(url: "http://www.kaleidosblog.com/tutorial/tutorial.json",
-                                trataJson: { (result: Data) in
-                                    let r = SyncUtil().extract_json(jsonData: result)
-                                    print("got back: \(r)")
-                                    return ""
-        },
-                                finish: { (dados: Any) in
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
-                                        
-                                        self.data = PedidoDao().getListaPedidos()
-                                        self.tableView?.reloadData()
-                                        
-                                        busyAlertController.dismiss()
-                                    })
-        })
-    }
-
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        for l in PedidoDao().getListaPedidos() {
+            items.append(Parent(state: .collapsed, item: l))
+        }
+        
+        self.parentCellIdentifier = "header"
+        self.childCellIdentifier = "details"
+        self.heightParent = 100
+        self.heightChild = 44
+        self.dataSource = items
+        self.numberOfCellsExpanded = .one
+        self.total = self.dataSource.count
+        
+        self.tableView?.reloadData()
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "header", for: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let (_, isParentCell, _) = self.findParent(indexPath.row)
         
-        cell.textLabel?.text = "\(data[indexPath.row].numero)"
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
-        
-        if cell != nil {
-            print("Linha Selecionada:  \(indexPath.row)")
+        if isParentCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: parentCellIdentifier , for: indexPath) as! PedidosCustomViewCellHeader
+            return cell
+        }
+        else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: childCellIdentifier, for: indexPath) as! PedidosCustomViewCellDetails
+            return cell
         }
     }
     
