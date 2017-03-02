@@ -37,10 +37,23 @@ class PedidosViewController:Acordeao {
         
         if isParentCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: parentCellIdentifier , for: indexPath) as! PedidosCustomViewCellHeader
+            
+            let ped = dataSource[indexPath.row].item as! Pedido
+            
+            cell.numero?.text = "\(ped.numero)"
+            cell.status?.text = ped.status
+            cell.valor?.text = "R$ \(ped.valorTotal)"
+            
             return cell
-        }
-        else {
+        } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: childCellIdentifier, for: indexPath) as! PedidosCustomViewCellDetails
+            
+            let ped = dataSource[indexPath.row-1].item as! Pedido
+            
+            cell.quantidade?.text = "\(ped.items[0].quantidade)"
+            cell.nome?.text = ped.items[0].produto.nome
+            cell.valor?.text = "R$ \(ped.items[0].produto.preco)"
+            
             return cell
         }
     }

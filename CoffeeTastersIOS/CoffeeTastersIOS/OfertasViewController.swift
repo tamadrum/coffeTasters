@@ -44,19 +44,25 @@ class OfertasViewController:Acordeao {
             cell.tipo?.text = prod.tipo
             cell.valor?.text = "R$ \(prod.preco)"
             cell.valorOferta?.text = "R$ \(prod.precoOferta)"
-            cell.imagem? = (UIImage(contentsOfFile: "config.jpg"))!
+            cell.imagem?.image = #imageLiteral(resourceName: "cafe.jpg")
+            
+            cell.btnComprar.addTarget(self, action: #selector(comprar), for: .touchUpInside)
             
             return cell
         }
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: childCellIdentifier, for: indexPath) as! OfertasCustomViewCellDetails
             
-            let prod = dataSource[indexPath.row].item as! Produto
+            let prod = dataSource[indexPath.row-1].item as! Produto
             
             cell.descricao?.text = prod.descricao
             
             return cell
         }
+    }
+    
+    func comprar() {
+        ComprarAlertViewController(controller: self).show()
     }
     
 }

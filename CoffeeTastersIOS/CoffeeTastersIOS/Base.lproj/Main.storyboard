@@ -1700,6 +1700,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="btnComprar" destination="094-1r-t6L" id="aia-xj-s9w"/>
                                             <outlet property="imagem" destination="Jc3-mA-OVe" id="hbg-PM-Mda"/>
                                             <outlet property="nome" destination="Opn-3m-Opm" id="wI7-9B-hzr"/>
                                             <outlet property="tipo" destination="uG6-PV-83h" id="yIO-Ok-opI"/>

@@ -16,4 +16,5 @@ class OfertasCustomViewCellHeader: UITableViewCell {
     @IBOutlet weak var imagem: UIImageView!
     @IBOutlet var valorOferta: UILabel?
     
+    @IBOutlet weak var btnComprar: UIButton!
 }

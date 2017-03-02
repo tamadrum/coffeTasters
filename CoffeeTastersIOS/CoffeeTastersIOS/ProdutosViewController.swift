@@ -37,12 +37,31 @@ class ProdutosViewController:Acordeao{
         
         if isParentCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: parentCellIdentifier , for: indexPath) as! ProdutosCustomViewCellHeader
+            
+            let prod = dataSource[indexPath.row].item as! Produto
+            
+            cell.nome?.text = prod.nome
+            cell.tipo?.text = prod.tipo
+            cell.valor?.text = "R$ \(prod.preco)"
+            cell.imagem?.image = #imageLiteral(resourceName: "config.jpg")
+            
+            cell.btnComprar.addTarget(self, action: #selector(comprar), for: .touchUpInside)
+            
             return cell
         }
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: childCellIdentifier, for: indexPath) as! ProdutosCustomViewCellDetails
+            
+            let prod = dataSource[indexPath.row-1].item as! Produto
+            
+            cell.descricao?.text = prod.descricao
+            
             return cell
         }
+    }
+    
+    func comprar() {
+        ComprarAlertViewController(controller: self).show()
     }
     
 }

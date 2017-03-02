@@ -68,7 +68,6 @@ class AvaliacoesViewController:Acordeao {
                     cell.data.text = a.data.description
                     //cell.gostei.stars.count =
                     
-                
                 return cell
             }
             else {
