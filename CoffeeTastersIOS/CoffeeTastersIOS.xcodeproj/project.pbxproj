@@ -28,6 +28,7 @@
 		16149FC31E6786A600A455BF /* PedidosCustomViewCellDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16149FC21E6786A600A455BF /* PedidosCustomViewCellDetails.swift */; };
 		16149FC51E6786B100A455BF /* AvaliacoesCustomViewCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16149FC41E6786B100A455BF /* AvaliacoesCustomViewCellHeader.swift */; };
 		16149FC71E6786C500A455BF /* AvaliacoesCustomViewCellDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16149FC61E6786C500A455BF /* AvaliacoesCustomViewCellDetails.swift */; };
+		16149FD41E67AA6E00A455BF /* AvaliacoesDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16149FD31E67AA6E00A455BF /* AvaliacoesDao.swift */; };
 		1618384E1E66DDFC00D4F438 /* BusyAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1618384D1E66DDFC00D4F438 /* BusyAlert.swift */; };
 		163728691E624585009CB0DA /* String+isRG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163728681E624585009CB0DA /* String+isRG.swift */; };
 		1645FE041E62F4FF0002C1B6 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1645FE031E62F4FF0002C1B6 /* RatingView.swift */; };
@@ -95,6 +96,7 @@
 		16149FC21E6786A600A455BF /* PedidosCustomViewCellDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedidosCustomViewCellDetails.swift; sourceTree = "<group>"; };
 		16149FC41E6786B100A455BF /* AvaliacoesCustomViewCellHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvaliacoesCustomViewCellHeader.swift; sourceTree = "<group>"; };
 		16149FC61E6786C500A455BF /* AvaliacoesCustomViewCellDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvaliacoesCustomViewCellDetails.swift; sourceTree = "<group>"; };
+		16149FD31E67AA6E00A455BF /* AvaliacoesDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvaliacoesDao.swift; sourceTree = "<group>"; };
 		1618384D1E66DDFC00D4F438 /* BusyAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusyAlert.swift; sourceTree = "<group>"; };
 		163728681E624585009CB0DA /* String+isRG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+isRG.swift"; sourceTree = "<group>"; };
 		1645FE021E62F4D90002C1B6 /* StarryStars.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarryStars.h; sourceTree = "<group>"; };
@@ -222,7 +224,7 @@
 		16B1CCC21E5D950900681A4E /* CoffeeTastersIOS */ = {
 			isa = PBXGroup;
 			children = (
-				16EC3BBC1E6720A8008BD23B /* views */,
+				16EC3BBC1E6720A8008BD23B /* customViews */,
 				166BA4421E65B8C700739A41 /* sync */,
 				16CB28381E622B1F001E4E3B /* extensions */,
 				1607218D1E5F7E5F00FF3C00 /* wheelflavor */,
@@ -266,6 +268,7 @@
 				16EC3BC31E675C0B008BD23B /* ProdutoDao.swift */,
 				16EC3BC51E675C14008BD23B /* CafeDao.swift */,
 				16EC3BC71E675C20008BD23B /* PedidoDao.swift */,
+				16149FD31E67AA6E00A455BF /* AvaliacoesDao.swift */,
 			);
 			name = dao;
 			sourceTree = "<group>";
@@ -318,7 +321,7 @@
 			name = extensions;
 			sourceTree = "<group>";
 		};
-		16EC3BBC1E6720A8008BD23B /* views */ = {
+		16EC3BBC1E6720A8008BD23B /* customViews */ = {
 			isa = PBXGroup;
 			children = (
 				16EC3BBD1E6720BC008BD23B /* CustomCell.swift */,
@@ -332,7 +335,7 @@
 				16149FC41E6786B100A455BF /* AvaliacoesCustomViewCellHeader.swift */,
 				16149FC61E6786C500A455BF /* AvaliacoesCustomViewCellDetails.swift */,
 			);
-			name = views;
+			name = customViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,6 +437,7 @@
 				334243A31E5F4D0F0001938F /* DetalhesViewController.swift in Sources */,
 				16149FBF1E67868D00A455BF /* OfertasCustomViewCellDetails.swift in Sources */,
 				1691A8CA1E60B66800FC5085 /* EsqueciMinhaSenhaViewController.swift in Sources */,
+				16149FD41E67AA6E00A455BF /* AvaliacoesDao.swift in Sources */,
 				1618384E1E66DDFC00D4F438 /* BusyAlert.swift in Sources */,
 				160721A41E5F884A00FF3C00 /* Item.swift in Sources */,
 				16149FBD1E67868500A455BF /* OfertasCustomViewCellHeader.swift in Sources */,

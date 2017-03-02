@@ -11,5 +11,5 @@ import UIKit
 class AvaliacoesCustomViewCellDetails: UITableViewCell {
 
     @IBOutlet var descricao: UITextView?
-    
+    @IBOutlet weak var flavor: WheelFlavor!
 }

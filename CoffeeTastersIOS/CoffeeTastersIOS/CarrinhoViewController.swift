@@ -37,27 +37,11 @@ class CarrinhoViewController: UIViewController, UITableViewDelegate, UITableView
         
     }
     
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == UITableViewCellEditingStyle.delete {
-            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
-            data.remove(at: 2)
-            tableView.reloadData()
-        }
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         
         if cell != nil {
             print("Linha Selecionada:  \(indexPath.row)")
-            
-            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
-            data.remove(at: 2)
-            tableView.reloadData()
         }
     }
 
