@@ -13,6 +13,7 @@ class Avaliacao {
     var data: Date = Date()
     var gostou: Int = 0
     var flavor: Flavor = Flavor()
+    var flavorMedia: Flavor = Flavor()
     var obs: String = ""
     var metodoPreparo: String = ""
     

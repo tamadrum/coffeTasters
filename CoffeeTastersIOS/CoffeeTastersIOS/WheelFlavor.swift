@@ -86,9 +86,9 @@ class WheelFlavor: UIView {
             desenhaCirculosPequenos(context: context, canvas:frame, centro:centro, raio:raio)
             context.strokePath()
             
-            desenhaGrafico(context: context, canvas:frame, centro:centro, raio:raio, flavor:flavorUsuario, cor: UIColor.black)
+            desenhaGrafico(context: context, canvas:frame, centro:centro, raio:raio, flavor:flavorUsuario, cor: UIColor.red)
             desenhaGrafico(context: context, canvas:frame, centro:centro, raio:raio, flavor:flavorMedia, cor: UIColor.blue)
-            desenhaGrafico(context: context, canvas:frame, centro:centro, raio:raio, flavor:flavorTorrador, cor: UIColor.brown)
+            desenhaGrafico(context: context, canvas:frame, centro:centro, raio:raio, flavor:flavorTorrador, cor: UIColor.green)
         }
 
     }

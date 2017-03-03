@@ -71,6 +71,24 @@ class AvaliacoesDao {
         a.flavor.nozes = 5
         a.flavor.salgado = 5
         
+        a.flavorMedia = Flavor()
+        a.flavorMedia.amargo = 2
+        a.flavorMedia.azedo = 1
+        a.flavorMedia.caramelo = 3
+        a.flavorMedia.cereais = 3
+        a.flavorMedia.chocolate = 5
+        a.flavorMedia.defumado = 5
+        a.flavorMedia.doce = 7
+        a.flavorMedia.encorpado = 7
+        a.flavorMedia.especiarias = 8
+        a.flavorMedia.floral = 9
+        a.flavorMedia.frutasCaroco = 8
+        a.flavorMedia.frutasCitrico = 9
+        a.flavorMedia.frutasVermelhas = 4
+        a.flavorMedia.herbal = 4
+        a.flavorMedia.nozes = 3
+        a.flavorMedia.salgado = 3
+        
         avaliacoes.append(a)
         
         return avaliacoes

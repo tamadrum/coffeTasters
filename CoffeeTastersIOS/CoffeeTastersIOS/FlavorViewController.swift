@@ -8,42 +8,36 @@
 
 import UIKit
 
-class FlavorViewController:UIViewController{
+class FlavorViewController:UIViewController, UITabBarDelegate, UITableViewDataSource {
     
-    @IBOutlet var doceSlider: UISlider!
-    @IBOutlet var azedoSlider: UISlider!
-    @IBOutlet var floralSlider: UISlider!
-    @IBOutlet var especiariasSlider: UISlider!
-    @IBOutlet var salgadoSlider: UISlider!
-    @IBOutlet var frutasVermelhasSlider: UISlider!
-    @IBOutlet var frutasCitricoSlider: UISlider!
-    @IBOutlet var frutasCarocoSlider: UISlider!
-    @IBOutlet var chocolateSlider: UISlider!
-    @IBOutlet var carameloSlider: UISlider!
-    @IBOutlet var defumadoSlider: UISlider!
-    @IBOutlet var amargoSlider: UISlider!
-    @IBOutlet var herbalSlider: UISlider!
-    @IBOutlet var encorpadoSlider: UISlider!
-    @IBOutlet var cereaisSlider: UISlider!
-    @IBOutlet var nozesSlider: UISlider!
-
-    override func viewDidLoad() {
-        doceSlider.setThumbImage(UIImage(named: "config.jpg")!, for: .normal)
-        azedoSlider.setThumbImage(UIImage(named: "config.jpg")!, for: .normal)
-        floralSlider.setThumbImage(UIImage(named: "config.jpg")!, for: .normal)
-        especiariasSlider.setThumbImage(UIImage(named: "config.jpg")!, for: .normal)
-        salgadoSlider.setThumbImage(UIImage(named: "config.jpg")!, for: .normal)
-        frutasVermelhasSlider.setThumbImage(UIImage(named: "config.jpg")!, for: .normal)
-        frutasCitricoSlider.setThumbImage(UIImage(named: "config.jpg")!, for: .normal)
-        frutasCarocoSlider.setThumbImage(UIImage(named: "config.jpg")!, for: .normal)
-        chocolateSlider.setThumbImage(UIImage(named: "config.jpg")!, for: .normal)
-        carameloSlider.setThumbImage(UIImage(named: "config.jpg")!, for: .normal)
-        defumadoSlider.setThumbImage(UIImage(named: "config.jpg")!, for: .normal)
-        amargoSlider.setThumbImage(UIImage(named: "config.jpg")!, for: .normal)
-        herbalSlider.setThumbImage(UIImage(named: "config.jpg")!, for: .normal)
-        encorpadoSlider.setThumbImage(UIImage(named: "config.jpg")!, for: .normal)
-        cereaisSlider.setThumbImage(UIImage(named: "config.jpg")!, for: .normal)
-        nozesSlider.setThumbImage(UIImage(named: "config.jpg")!, for: .normal)
+    @IBOutlet weak var tableView: UITableView!
+    
+    var labels = ["Doce", "Azedo", "Floral", "Especiarias", "Salgado", "Frutas Vermelhas", "Frutas Cítricas", "Frutas Caroço", "Chocolate", "Caramelo", "Defumado", "Amargo", "Herbal", "Encorpado", "Cereais", "Nozes"]
+    
+    var valores = [1, 3, 9, 1, 5, 4, 3, 5, 6, 7, 6, 1, 9, 8, 9, 3]
+    
+    @IBAction func salvar(_ sender: Any) {
+        
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return labels.count
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "celula", for: indexPath) as! FlavorCustomViewCell
+        
+        cell.flavor?.text = labels[indexPath.row]
+        
+        cell.valor?.value = Float(valores[indexPath.row])
+        
+        cell.valor?.setThumbImage(UIImage(named: "config.jpg")!, for: .normal)
+        
+        return cell
     }
     
 }

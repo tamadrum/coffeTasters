@@ -77,6 +77,7 @@ class AvaliacoesViewController:Acordeao {
                 cell.descricao?.text = a.obs
                 cell.flavor.flavorUsuario = a.flavor
                 cell.flavor.flavorTorrador = a.cafe.flavor
+                cell.flavor.flavorMedia = a.flavorMedia
                 cell.flavor.updateConstraints()
                 
                 let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(mostraDetalhes))
