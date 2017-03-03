@@ -20,14 +20,14 @@ class MapaViewController:UIViewController{
     
     func setLocation(latitude: Double, longitude: Double) {
         let local = CLLocation(latitude: latitude, longitude: longitude)
-        centerMapOnLocation(location: local)
+       // centerMapOnLocation(location: local)
         
-        let pino = Pino(title: "Marco Polo",
-                        subtitle: "Gelateria e Cafés",
-                        tipo: "Cafeteria",
-                        coordinate: CLLocationCoordinate2D(latitude: 21.283921, longitude: -157.831661))
-        
-        mapa.addAnnotation(pino)
+//        let pino = Pino(title: "Marco Polo",
+//                        subtitle: "Gelateria e Cafés",
+//                        tipo: "Cafeteria",
+//                        coordinate: CLLocationCoordinate2D(latitude: 21.283921, longitude: -157.831661))
+//        
+//        mapa.addAnnotation(pino)
     }
     
     func checkLocationAuthorizationStatus() {
