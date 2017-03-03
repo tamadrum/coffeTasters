@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E175b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,21 +23,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dob-SO-r69">
-                                <rect key="frame" x="164" y="318" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="QkV-GD-ZdN" kind="presentation" id="n27-go-2UU"/>
-                                </connections>
-                            </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="cnf-QD-7xP">
+                                <rect key="frame" x="126" y="314.5" width="122" height="38"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cnf-QD-7xP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Bu-zd-fI5"/>
+                            <constraint firstItem="cnf-QD-7xP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sWh-pm-btJ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="cnf-QD-7xP" id="xcb-ZA-7Dg"/>
+                        <segue destination="QkV-GD-ZdN" kind="show" identifier="telaLogin" id="Gyi-Nv-NGD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1062" y="161"/>
+            <point key="canvasLocation" x="1061.5999999999999" y="160.56971514242881"/>
         </scene>
         <!--Tela de Login-->
         <scene sceneID="kxh-It-y6k">
@@ -2092,6 +2095,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1.png" width="122" height="38"/>
         <image name="cafe.jpg" width="505" height="470"/>
         <image name="config.jpg" width="42" height="42"/>
         <image name="starryStars_half.png" width="35" height="35"/>
@@ -2099,7 +2103,7 @@
         <image name="starryStars_on.png" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UoZ-DH-AWz"/>
-        <segue reference="NWZ-8U-o7l"/>
+        <segue reference="CZJ-hp-t5a"/>
+        <segue reference="Gyi-Nv-NGD"/>
     </inferredMetricsTieBreakers>
 </document>
