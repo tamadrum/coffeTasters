@@ -922,15 +922,27 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pB8-9q-wWm">
                                 <rect key="frame" x="0.0" y="311" width="375" height="44"/>
                                 <items>
-                                    <barButtonItem title="Torrador" id="ABv-ud-o6h"/>
-                                    <barButtonItem title="Media Geral" id="60u-CB-Dgf"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="hSb-xT-iM4"/>
-                                    <barButtonItem title="Roda" id="sST-RP-uzB">
+                                    <barButtonItem title="Torrador" id="ABv-ud-o6h">
                                         <connections>
-                                            <segue destination="KnS-ov-fOY" kind="show" id="RSG-WB-pC8"/>
+                                            <action selector="mostraTorrador:" destination="w01-hi-URB" id="ere-ce-9Z6"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Compartilhar" id="l9e-4P-Niu"/>
+                                    <barButtonItem title="Média" id="60u-CB-Dgf">
+                                        <connections>
+                                            <action selector="mostraMedia:" destination="w01-hi-URB" id="hQO-Se-fpa"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Roda" id="sST-RP-uzB">
+                                        <connections>
+                                            <segue destination="KnS-ov-fOY" kind="show" identifier="telaRoda" id="RSG-WB-pC8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="hSb-xT-iM4"/>
+                                    <barButtonItem title="Compartilhar" id="l9e-4P-Niu">
+                                        <connections>
+                                            <action selector="share:" destination="w01-hi-URB" id="jMo-BZ-Xxc"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ej3-C5-k4V">
@@ -939,7 +951,6 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Ej3-C5-k4V" secondAttribute="height" multiplier="58:11" id="z33-LM-AJA"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -987,8 +998,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Avaliando" id="7Iy-A7-swg">
-                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="Urn-b1-fAv"/>
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="Urn-b1-fAv">
+                            <connections>
+                                <action selector="salvar:" destination="w01-hi-URB" id="tIg-R1-xH1"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="comentarioTextView" destination="Ej3-C5-k4V" id="2t5-9n-p6j"/>
+                        <outlet property="gostouRatingView" destination="P3a-Kj-6e7" id="9ax-Wh-46G"/>
+                        <outlet property="nomeTextField" destination="I4h-Nb-amb" id="hya-DR-J5U"/>
+                        <outlet property="produtorTextField" destination="C1C-Zr-evi" id="3pA-Ah-KBd"/>
+                        <outlet property="rodaWheelFlavor" destination="gFQ-ZO-LTk" id="6za-dY-ywF"/>
+                        <outlet property="torradorTextField" destination="Zhw-0v-KGe" id="Dsx-cc-a7E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VyX-zT-7hI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -997,7 +1020,7 @@
         <!--Café X-->
         <scene sceneID="b4J-6X-U73">
             <objects>
-                <viewController storyboardIdentifier="detalhesCafe" id="PoW-oS-YGF" customClass="DetalhesViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detalhesCafe" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PoW-oS-YGF" customClass="DetalhesViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ggx-dX-jtU"/>
                         <viewControllerLayoutGuide type="bottom" id="bTt-03-FNR"/>
@@ -1010,7 +1033,7 @@
                                 <rect key="frame" x="10" y="72" width="46" height="30"/>
                                 <state key="normal" title="Avaliar"/>
                                 <connections>
-                                    <segue destination="w01-hi-URB" kind="show" id="veX-X7-hMk"/>
+                                    <segue destination="w01-hi-URB" kind="show" identifier="telaAvalia" id="veX-X7-hMk"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="cafe.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rYN-0C-uY0">
@@ -1054,14 +1077,14 @@
                                 <rect key="frame" x="311" y="72" width="38" height="30"/>
                                 <state key="normal" title="Mapa"/>
                                 <connections>
-                                    <segue destination="fYV-bV-pzD" kind="show" id="amb-Cq-rBl"/>
+                                    <segue destination="fYV-bV-pzD" kind="show" identifier="telaMapa" id="amb-Cq-rBl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AET-H6-GOv">
                                 <rect key="frame" x="160.5" y="72" width="54" height="30"/>
                                 <state key="normal" title="Preparo"/>
                                 <connections>
-                                    <segue destination="0YL-eo-SWq" kind="show" id="LmD-7n-YfT"/>
+                                    <segue destination="0YL-eo-SWq" kind="show" identifier="telaPreparo" id="LmD-7n-YfT"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VAB-uJ-7gW">
@@ -1104,6 +1127,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Café X" id="t07-bh-5V5"/>
+                    <connections>
+                        <outlet property="descricaoTextView" destination="VAB-uJ-7gW" id="Tb4-jc-v1q"/>
+                        <outlet property="produtorLabel" destination="zbz-UW-aO6" id="B85-Fg-v0I"/>
+                        <outlet property="rodaWheelFlavor" destination="hhk-T3-itq" id="84M-nP-oRh"/>
+                        <outlet property="torradorLabel" destination="Tl1-tt-S5M" id="Ihb-mG-6my"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9s1-9f-DbI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

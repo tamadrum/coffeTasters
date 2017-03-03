@@ -19,4 +19,6 @@ class Cafe {
     var flavor: Flavor = Flavor()
     var descricao: String = ""
     var imagem: String = ""
+    var latitude: Double = 0.0
+    var longitude: Double = 0.0
 }
