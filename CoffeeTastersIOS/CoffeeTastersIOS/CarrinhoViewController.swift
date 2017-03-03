@@ -41,7 +41,7 @@ class CarrinhoViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = tableView.cellForRow(at: indexPath)
         
         if cell != nil {
-            print("Linha Selecionada:  \(indexPath.row)")
+            print("Linha Selecionada:  \(indexPath.row) e section: \(indexPath.section)")
         }
     }
 
