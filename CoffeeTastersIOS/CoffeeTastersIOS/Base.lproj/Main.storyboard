@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E175b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1114,16 +1114,6 @@
                                     <segue destination="fYV-bV-pzD" kind="show" identifier="telaMapa" id="amb-Cq-rBl"/>
                                 </connections>
                             </button>
-<<<<<<< HEAD
-=======
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AET-H6-GOv">
-                                <rect key="frame" x="160.5" y="72" width="54" height="30"/>
-                                <state key="normal" title="Preparo"/>
-                                <connections>
-                                    <segue destination="0YL-eo-SWq" kind="show" identifier="telaPreparo" id="LmD-7n-YfT"/>
-                                </connections>
-                            </button>
->>>>>>> 552899cae59549175f2159494f67476027ffb42c
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VAB-uJ-7gW">
                                 <rect key="frame" x="10" y="208" width="300" height="110"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1135,7 +1125,7 @@
                                 <rect key="frame" x="134" y="72" width="54" height="30"/>
                                 <state key="normal" title="Preparo"/>
                                 <connections>
-                                    <segue destination="0YL-eo-SWq" kind="show" id="LmD-7n-YfT"/>
+                                    <segue destination="0YL-eo-SWq" kind="show" identifier="telaPreparo" id="LmD-7n-YfT"/>
                                 </connections>
                             </button>
                         </subviews>
