@@ -11,9 +11,9 @@ import Foundation
 import FBSDKLoginKit
 import FBSDKShareKit
 import FBSDKCoreKit
-import MessageUI
 
-class LoginViewController:UIViewController, FBSDKLoginButtonDelegate,MFMailComposeViewControllerDelegate {
+
+class LoginViewController:UIViewController, FBSDKLoginButtonDelegate {
     
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var senhaTextField: UITextField!
@@ -22,31 +22,37 @@ class LoginViewController:UIViewController, FBSDKLoginButtonDelegate,MFMailCompo
     @IBOutlet var registrar: UIButton!
     @IBOutlet var entrar: UIButton!
     
-    var usuario:Usuario = Dao().load()
+    var usuario:Usuario = Usuario()
     
     override func viewDidLoad() {
-        var posicao:CGPoint = view.center
-        
-        posicao.y += 200
+        usuario = Dao().load()
         
         if (FBSDKAccessToken.current() != nil) {
             returnUserData()
-            if let navigation = navigationController {
-                navigation.pushViewController(PerfilViewController(), animated: true)
-            }
-        } else {}
-            let loginButton : FBSDKLoginButton = FBSDKLoginButton()
-            
-            loginButton.center = posicao
-            loginButton.readPermissions = ["public_profile", "email", "user_friends"]
-            loginButton.delegate = self
-            
-            self.view.addSubview(loginButton)
-        //}
+            self.performSegue(withIdentifier: "telaPerfil", sender: self)
+        }
+        
+        
+        let loginButton : FBSDKLoginButton = FBSDKLoginButton()
+        var posicao:CGPoint = view.center
+        posicao.y += 200
+        loginButton.center = posicao
+        loginButton.readPermissions = ["public_profile", "email", "user_friends"]
+        loginButton.delegate = self
+        self.view.addSubview(loginButton)
     }
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
-        print("User Logged In")
+        
+        if let userToken = result.token {
+            //EAABweIrc6mQBADqZAR3ACeLrN2ROD3YZCpRKklhhVjS6XRpdoJloH0hNF8nmeV8mKq1VJzvui9dIuBuiFZAMJft8ZCnEC70uyMxVGI4JUBzGZBwD5BjkBZADz6pCbLW7CZCZCRGhDa9XRze8CIPiZAfgqKeDBjlgSivgIT9htt9BnO7SSWl6gMSCnZAGR2grxZArPBCHZC8bZCJB75GT1lEoxpES5FH5UXnWdJwIZD
+            let token:FBSDKAccessToken = userToken
+            print(token)
+            //print token id and user id
+            print("Facebook TOKEN IS \(FBSDKAccessToken.current().tokenString)")
+            print("Facebook USER ID IS \(FBSDKAccessToken.current().userID)")
+            
+        }
         
         if ((error) != nil) {
             
@@ -54,12 +60,17 @@ class LoginViewController:UIViewController, FBSDKLoginButtonDelegate,MFMailCompo
             
         } else {
             if result.grantedPermissions.contains("email") {
+                print("Facebook email autorizado")
             }
+            
+            returnUserData()
+            
+            self.performSegue(withIdentifier: "telaPerfil", sender: self)
         }
     }
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
-        print("User Logged Out")
+        print("Facebook User Logged Out")
     }
     
     func returnUserData() {
@@ -67,54 +78,28 @@ class LoginViewController:UIViewController, FBSDKLoginButtonDelegate,MFMailCompo
         graphRequest.start(completionHandler: { (connection, result, error) -> Void in
             
             if ((error) != nil) {
-                print("Error: \(error)")
+                print("Facebook Error: \(error)")
             } else {
                 if let user = result as? [String:Any] {
-                    print("fetched user: \(user)")
-                    if let id = user["id"] { self.usuario.perfilPic = "http://graph.facebook.com/\(id)/picture?type=large" }
-                    if let nome = user["name"] { self.usuario.nome = nome as! String }
-                    if let email = user["email"] { self.usuario.email = email as! String }
+                    print("Facebook fetched user: \(user)")
+                    if let id = user["id"] {
+                        self.usuario.perfilPic = "http://graph.facebook.com/\(id)/picture?type=large"
+                        print("Facebook guardei id: \(id)")
+                    }
+                    if let nome = user["name"] {
+                        self.usuario.nome = nome as! String
+                        print("Facebook guardei nome: \(nome)")
+                    }
+                    if let email = user["email"] {
+                        self.usuario.email = email as! String
+                        print("Facebook guardei email: \(email)")
+                    }
+                    
                     Dao().save(self.usuario)
                 }
             }
         })
     }
     
-    @IBAction func sendEmailButtonTapped(sender: AnyObject) {
-        let mailComposeViewController = configuredMailComposeViewController()
-        if MFMailComposeViewController.canSendMail() {
-            self.present(mailComposeViewController, animated: true, completion: nil)
-        } else {
-            self.showSendMailErrorAlert()
-        }
-    }
-    
-    func configuredMailComposeViewController() -> MFMailComposeViewController {
-        let mailComposerVC = MFMailComposeViewController()
-        mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
         
-        mailComposerVC.setToRecipients(["contato@coffeetasters.com.br"])
-        mailComposerVC.setSubject("Esqueci minha senha...")
-        mailComposerVC.setMessageBody("E agora?", isHTML: false)
-        
-        return mailComposerVC
-    }
-    
-    func showSendMailErrorAlert() {
-        let erroEmail = UIAlertController(title: "Impossível mandar email", message: "Você não tem um gerenciador de email configurado!", preferredStyle: UIAlertControllerStyle.alert)
-        
-        let acao = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil)
-        erroEmail.addAction(acao)
-        
-        self.present(erroEmail, animated: true, completion: nil)
-        
-    }
-    
-    // MARK: MFMailComposeViewControllerDelegate
-    
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        controller.dismiss(animated: true, completion: nil)
-        
-    }
-    
 }

@@ -137,6 +137,7 @@
 		16CB28331E6220C2001E4E3B /* config.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = config.jpg; path = imgs/config.jpg; sourceTree = "<group>"; };
 		16CB28391E622B3B001E4E3B /* String+isCPF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+isCPF.swift"; sourceTree = "<group>"; };
 		16CB283B1E622D62001E4E3B /* String+toMD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+toMD5.swift"; sourceTree = "<group>"; };
+		16EB43B01E69B8EB0073C58A /* CoffeeTastersIOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoffeeTastersIOS.entitlements; sourceTree = "<group>"; };
 		16EC3BBF1E674F90008BD23B /* CarrinhoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarrinhoViewController.swift; sourceTree = "<group>"; };
 		16EC3BC11E674FC9008BD23B /* FinalizarCompraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalizarCompraViewController.swift; sourceTree = "<group>"; };
 		16EC3BC31E675C0B008BD23B /* ProdutoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProdutoDao.swift; sourceTree = "<group>"; };
@@ -248,6 +249,7 @@
 		16B1CCC21E5D950900681A4E /* CoffeeTastersIOS */ = {
 			isa = PBXGroup;
 			children = (
+				16EB43B01E69B8EB0073C58A /* CoffeeTastersIOS.entitlements */,
 				1613A0C41E689E1B00E9DE65 /* mapa */,
 				16EC3BBC1E6720A8008BD23B /* customViews */,
 				166BA4421E65B8C700739A41 /* sync */,
@@ -398,8 +400,14 @@
 				TargetAttributes = {
 					16B1CCBF1E5D950900681A4E = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 6J39ANGJ92;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -626,7 +634,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_ENTITLEMENTS = CoffeeTastersIOS/CoffeeTastersIOS.entitlements;
+				DEVELOPMENT_TEAM = 6J39ANGJ92;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -647,7 +656,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_ENTITLEMENTS = CoffeeTastersIOS/CoffeeTastersIOS.entitlements;
+				DEVELOPMENT_TEAM = 6J39ANGJ92;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
