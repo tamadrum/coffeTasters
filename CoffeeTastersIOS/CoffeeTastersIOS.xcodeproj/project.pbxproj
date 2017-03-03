@@ -47,7 +47,6 @@
 		1691A8CA1E60B66800FC5085 /* EsqueciMinhaSenhaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691A8C91E60B66800FC5085 /* EsqueciMinhaSenhaViewController.swift */; };
 		1691A8CC1E60D71C00FC5085 /* Dao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691A8CB1E60D71C00FC5085 /* Dao.swift */; };
 		16B1CCC41E5D950900681A4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B1CCC31E5D950900681A4E /* AppDelegate.swift */; };
-		16B1CCC91E5D950900681A4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16B1CCC71E5D950900681A4E /* Main.storyboard */; };
 		16B1CCCC1E5D950900681A4E /* CoffeeTastersIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 16B1CCCA1E5D950900681A4E /* CoffeeTastersIOS.xcdatamodeld */; };
 		16B1CCCE1E5D950900681A4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16B1CCCD1E5D950900681A4E /* Assets.xcassets */; };
 		16B1CCD11E5D950900681A4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16B1CCCF1E5D950900681A4E /* LaunchScreen.storyboard */; };
@@ -57,6 +56,7 @@
 		16CB28341E6220C2001E4E3B /* config.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16CB28331E6220C2001E4E3B /* config.jpg */; };
 		16CB283A1E622B3B001E4E3B /* String+isCPF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB28391E622B3B001E4E3B /* String+isCPF.swift */; };
 		16CB283C1E622D62001E4E3B /* String+toMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB283B1E622D62001E4E3B /* String+toMD5.swift */; };
+		16EB43B31E69CE440073C58A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16EB43B11E69CE440073C58A /* Main.storyboard */; };
 		16EC3BC01E674F90008BD23B /* CarrinhoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC3BBF1E674F90008BD23B /* CarrinhoViewController.swift */; };
 		16EC3BC21E674FC9008BD23B /* FinalizarCompraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC3BC11E674FC9008BD23B /* FinalizarCompraViewController.swift */; };
 		16EC3BC41E675C0B008BD23B /* ProdutoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC3BC31E675C0B008BD23B /* ProdutoDao.swift */; };
@@ -143,7 +143,6 @@
 		1691A8CB1E60D71C00FC5085 /* Dao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dao.swift; sourceTree = "<group>"; };
 		16B1CCC01E5D950900681A4E /* CoffeeTastersIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeTastersIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16B1CCC31E5D950900681A4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		16B1CCC81E5D950900681A4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16B1CCCB1E5D950900681A4E /* CoffeeTastersIOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoffeeTastersIOS.xcdatamodel; sourceTree = "<group>"; };
 		16B1CCCD1E5D950900681A4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16B1CCD01E5D950900681A4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -155,6 +154,7 @@
 		16CB28391E622B3B001E4E3B /* String+isCPF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+isCPF.swift"; sourceTree = "<group>"; };
 		16CB283B1E622D62001E4E3B /* String+toMD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+toMD5.swift"; sourceTree = "<group>"; };
 		16EB43B01E69B8EB0073C58A /* CoffeeTastersIOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoffeeTastersIOS.entitlements; sourceTree = "<group>"; };
+		16EB43B21E69CE440073C58A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CoffeeTastersIOS/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16EC3BBF1E674F90008BD23B /* CarrinhoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarrinhoViewController.swift; sourceTree = "<group>"; };
 		16EC3BC11E674FC9008BD23B /* FinalizarCompraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalizarCompraViewController.swift; sourceTree = "<group>"; };
 		16EC3BC31E675C0B008BD23B /* ProdutoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProdutoDao.swift; sourceTree = "<group>"; };
@@ -283,11 +283,8 @@
 		16B1CCC21E5D950900681A4E /* CoffeeTastersIOS */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				16EB43B01E69B8EB0073C58A /* CoffeeTastersIOS.entitlements */,
-=======
 				33FD18951E6990E7009FCF73 /* metodosPreparo */,
->>>>>>> 34304565a326646107a460a70eb76daa48aec177
 				1613A0C41E689E1B00E9DE65 /* mapa */,
 				16EC3BBC1E6720A8008BD23B /* customViews */,
 				166BA4421E65B8C700739A41 /* sync */,
@@ -299,7 +296,7 @@
 				16B1CCD91E5D956200681A4E /* dao */,
 				16B1CCD81E5D955D00681A4E /* modelo */,
 				16B1CCC31E5D950900681A4E /* AppDelegate.swift */,
-				16B1CCC71E5D950900681A4E /* Main.storyboard */,
+				16EB43B11E69CE440073C58A /* Main.storyboard */,
 				16B1CCCD1E5D950900681A4E /* Assets.xcassets */,
 				16B1CCCF1E5D950900681A4E /* LaunchScreen.storyboard */,
 				16B1CCD21E5D950900681A4E /* Info.plist */,
@@ -502,6 +499,7 @@
 				33FD18B11E69ACA1009FCF73 /* coffee_press_4.png in Resources */,
 				33FD188D1E68C565009FCF73 /* 1.png in Resources */,
 				1645FE081E62F5680002C1B6 /* starryStars_half@2x.png in Resources */,
+				16EB43B31E69CE440073C58A /* Main.storyboard in Resources */,
 				33FD18A01E699F29009FCF73 /* preparo-2.png in Resources */,
 				33FD18AF1E69ACA1009FCF73 /* coffee_press_2.png in Resources */,
 				33FD188E1E68C565009FCF73 /* 2.png in Resources */,
@@ -517,7 +515,6 @@
 				33FD18A31E699F29009FCF73 /* preparo-5.png in Resources */,
 				16B1CCCE1E5D950900681A4E /* Assets.xcassets in Resources */,
 				1645FE091E62F5680002C1B6 /* starryStars_off@2x.png in Resources */,
-				16B1CCC91E5D950900681A4E /* Main.storyboard in Resources */,
 				16B9BD901E64FD6300D615AE /* cafe.jpg in Resources */,
 				33FD18B51E69ACA1009FCF73 /* pour_over_cone_3.png in Resources */,
 				33FD18B41E69ACA1009FCF73 /* pour_over_cone_2.png in Resources */,
@@ -598,20 +595,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		16B1CCC71E5D950900681A4E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				16B1CCC81E5D950900681A4E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		16B1CCCF1E5D950900681A4E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				16B1CCD01E5D950900681A4E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		16EB43B11E69CE440073C58A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16EB43B21E69CE440073C58A /* Base */,
+			);
+			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -10,30 +10,30 @@ import UIKit
 
 class PerfilViewController:UIViewController{
     
-    @IBOutlet weak var imgPerfil: UIImageView!
-    @IBOutlet weak var nomeUsuario: UILabel!
-    @IBOutlet weak var emailUsuario: UILabel!
+    @IBOutlet weak var imgPerfil: UIImageView?
+    @IBOutlet weak var nomeUsuario: UILabel?
+    @IBOutlet weak var emailUsuario: UILabel?
+
+    @IBOutlet weak var qtdAvaliacoes: UILabel?
+    @IBOutlet weak var qtdCafes: UILabel?
     
-    var usuario:Usuario = Dao().load()
-    
-    @IBOutlet weak var qtdAvaliacoes: UILabel!
-    @IBOutlet weak var qtdCafes: UILabel!
+    var u: Usuario = Dao().load()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        nomeUsuario.text = usuario.nome
-        emailUsuario.text = usuario.email
+        nomeUsuario?.text = u.nome
+        emailUsuario?.text = u.email
         
-        if let url = URL(string:usuario.perfilPic) {
-            let task = URLSession.shared.dataTask(with: url) { data, response, error in
-                guard let data = data, error == nil else { return }
-                
-                DispatchQueue.main.sync() {
-                    self.imgPerfil.image = UIImage(data: data)
-                }
-            }
-            task.resume()
+        if let url = URL(string:u.perfilPic) {
+             let task = URLSession.shared.dataTask(with: url) { data, response, error in
+                 guard let data = data, error == nil else { return }
+                    
+             DispatchQueue.main.sync() {
+                     self.imgPerfil?.image = UIImage(data: data)
+                 }
+             }
+             task.resume()
         }
     
     }
@@ -41,7 +41,7 @@ class PerfilViewController:UIViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "meusDados") {
             let view = segue.destination as! MeusDadosViewController
-            view.carregaUsuario(usuario)
+            view.carregaUsuario(u)
         }
     }
     

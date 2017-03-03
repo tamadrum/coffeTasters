@@ -9,44 +9,23 @@
 import UIKit
 import MessageUI
 
-class EsqueciMinhaSenhaViewController: UIViewController, MFMailComposeViewControllerDelegate {
+class EsqueciMinhaSenhaViewController: UIViewController {
     
-    @IBAction func sendEmailButtonTapped(sender: AnyObject) {
-        let mailComposeViewController = configuredMailComposeViewController()
-        if MFMailComposeViewController.canSendMail() {
-            self.present(mailComposeViewController, animated: true, completion: nil)
-        } else {
-            self.showSendMailErrorAlert()
-        }
-    }
+    @IBOutlet weak var emailCadastrado: UITextField!
     
-    func configuredMailComposeViewController() -> MFMailComposeViewController {
-        let mailComposerVC = MFMailComposeViewController()
-        mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
+    @IBAction func enviarEmail(_ sender: Any) {
+        // Mandar a informacao para o servidor devolver o email de recovery da senha
         
-        mailComposerVC.setToRecipients(["contato@coffeetasters.com.br"])
-        mailComposerVC.setSubject("Esqueci minha senha...")
-        mailComposerVC.setMessageBody("E agora?", isHTML: false)
+        let alerta = UIAlertController(title: "Recuperando a senha..", message: "Em  breve você receberá um email para refazer a sua senha!", preferredStyle: .alert)
         
-        return mailComposerVC
-    }
-    
-    func showSendMailErrorAlert() {
-        let erroEmail = UIAlertController(title: "Impossível mandar email", message: "Você não tem um gerenciador de email configurado!", preferredStyle: UIAlertControllerStyle.alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: {(alert: UIAlertAction!) in
+            self.performSegue(withIdentifier: "telaLogin", sender: self)
+        })
+        alerta.addAction(ok)
         
-        let acao = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil)
-        erroEmail.addAction(acao)
+        self.present(alerta, animated: true, completion: nil)
         
-        self.present(erroEmail, animated: true, completion: nil)
         
     }
-    
-    // MARK: MFMailComposeViewControllerDelegate
-    
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        controller.dismiss(animated: true, completion: nil)
-        
-    }
-
     
 }
