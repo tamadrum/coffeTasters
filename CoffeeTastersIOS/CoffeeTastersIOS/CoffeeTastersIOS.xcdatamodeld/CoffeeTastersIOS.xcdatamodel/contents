@@ -1,4 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="15G1217" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CDAvaliacao" representedClassName="CDAvaliacao" syncable="YES" codeGenerationType="class">
+        <attribute name="data" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="gostou" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="metodoPreparo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="obs" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cafe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDCafe" syncable="YES"/>
+        <relationship name="flavor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDFlavor" syncable="YES"/>
+        <relationship name="flavorMedia" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDFlavor" syncable="YES"/>
+    </entity>
+    <entity name="CDCafe" representedClassName="CDCafe" syncable="YES" codeGenerationType="class">
+        <attribute name="dataColheita" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dataTorra" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="descricao" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imagem" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="origem" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="produtor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="torrador" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="flavorTorrador" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDFlavor" syncable="YES"/>
+    </entity>
+    <entity name="CDFlavor" representedClassName="CDFlavor" syncable="YES" codeGenerationType="class">
+        <attribute name="amargo" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="azedo" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="caramelo" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="cereais" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="chocolate" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="defumado" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="doce" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="encorpado" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="especiarias" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="floral" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="frutasCaroco" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="frutasCitricas" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="frutasVermelhas" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="herbal" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="nozes" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="salgado" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CDFlavor" positionX="-495" positionY="-249" width="128" height="283"/>
+        <element name="CDAvaliacao" positionX="-164" positionY="-234" width="128" height="148"/>
+        <element name="CDCafe" positionX="-164" positionY="-54" width="128" height="178"/>
+    </elements>
 </model>
