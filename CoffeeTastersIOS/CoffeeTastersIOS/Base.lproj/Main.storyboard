@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E175b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,18 +23,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="cnf-QD-7xP">
-                                <rect key="frame" x="126" y="314.5" width="122" height="38"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="coffee_press_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="V9F-b4-vew">
+                                <rect key="frame" x="169" y="302" width="37" height="63"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.32119497656822205" green="0.10463712364435196" blue="0.065586768090724945" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="cnf-QD-7xP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Bu-zd-fI5"/>
-                            <constraint firstItem="cnf-QD-7xP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sWh-pm-btJ"/>
+                            <constraint firstItem="V9F-b4-vew" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HZo-m7-TEn"/>
+                            <constraint firstItem="V9F-b4-vew" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jbP-U3-hgD"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="cnf-QD-7xP" id="xcb-ZA-7Dg"/>
+                        <outlet property="loadingImageView" destination="V9F-b4-vew" id="g9e-Fv-ZQV"/>
                         <segue destination="QkV-GD-ZdN" kind="show" identifier="telaLogin" id="Gyi-Nv-NGD"/>
                     </connections>
                 </viewController>
@@ -1084,13 +1084,52 @@
                     <view key="view" contentMode="scaleToFill" id="6nj-uA-OOx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IFY-jS-TTm">
+                                <rect key="frame" x="16" y="140" width="343" height="302"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="IFY-jS-TTm" secondAttribute="height" multiplier="343:302" id="3VO-Gy-MnI"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hVd-cf-atD">
+                                <rect key="frame" x="16" y="450" width="343" height="197"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BC7-60-L9B">
+                                <rect key="frame" x="84" y="72" width="207" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="" image="pour_over_cone_1.png"/>
+                                    <segment title="" image="coffee_press_1.png"/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IFY-jS-TTm" firstAttribute="top" secondItem="F7Q-Bi-AHU" secondAttribute="bottom" constant="76" id="2bO-Bh-rCe"/>
+                            <constraint firstItem="hVd-cf-atD" firstAttribute="trailing" secondItem="6nj-uA-OOx" secondAttribute="trailingMargin" id="Ffn-Fa-suq"/>
+                            <constraint firstItem="IFY-jS-TTm" firstAttribute="leading" secondItem="6nj-uA-OOx" secondAttribute="leadingMargin" id="Wie-p3-iJH"/>
+                            <constraint firstItem="hVd-cf-atD" firstAttribute="top" secondItem="IFY-jS-TTm" secondAttribute="bottom" constant="8" id="c6J-d4-JSF"/>
+                            <constraint firstItem="IFY-jS-TTm" firstAttribute="trailing" secondItem="6nj-uA-OOx" secondAttribute="trailingMargin" id="iUN-1c-r3N"/>
+                            <constraint firstItem="hVd-cf-atD" firstAttribute="leading" secondItem="6nj-uA-OOx" secondAttribute="leadingMargin" id="v62-Zd-o3l"/>
+                            <constraint firstAttribute="bottom" secondItem="hVd-cf-atD" secondAttribute="bottom" constant="20" symbolic="YES" id="yjk-TX-ApC"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Preparo" id="UNO-0A-2qP"/>
+                    <connections>
+                        <outlet property="descricaoTextView" destination="hVd-cf-atD" id="LK8-c9-wWn"/>
+                        <outlet property="imageView" destination="IFY-jS-TTm" id="0QU-HR-oDu"/>
+                        <outlet property="menuModos" destination="BC7-60-L9B" id="LWD-Xh-mQN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9yk-d0-EMu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7542" y="1710"/>
+            <point key="canvasLocation" x="7541.6000000000004" y="1709.5952023988007"/>
         </scene>
         <!--Mapa-->
         <scene sceneID="D2L-c4-Pg6">
@@ -1965,10 +2004,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1.png" width="122" height="38"/>
         <image name="cafe.jpg" width="505" height="470"/>
+        <image name="coffee_press_1.png" width="37" height="63"/>
         <image name="config.jpg" width="42" height="42"/>
         <image name="icon.png" width="109" height="105"/>
+        <image name="pour_over_cone_1.png" width="37" height="63"/>
         <image name="starryStars_half.png" width="35" height="35"/>
         <image name="starryStars_off.png" width="35" height="35"/>
         <image name="starryStars_on.png" width="35" height="35"/>
