@@ -80,6 +80,23 @@
 		33FD188D1E68C565009FCF73 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 33FD188A1E68C565009FCF73 /* 1.png */; };
 		33FD188E1E68C565009FCF73 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 33FD188B1E68C565009FCF73 /* 2.png */; };
 		33FD188F1E68C565009FCF73 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 33FD188C1E68C565009FCF73 /* 3.png */; };
+		33FD18971E699120009FCF73 /* MetodosPreparo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FD18961E699120009FCF73 /* MetodosPreparo.swift */; };
+		33FD18991E6999EA009FCF73 /* PreparaDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FD18981E6999EA009FCF73 /* PreparaDao.swift */; };
+		33FD189F1E699F29009FCF73 /* preparo-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 33FD189A1E699F29009FCF73 /* preparo-1.png */; };
+		33FD18A01E699F29009FCF73 /* preparo-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 33FD189B1E699F29009FCF73 /* preparo-2.png */; };
+		33FD18A11E699F29009FCF73 /* preparo-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 33FD189C1E699F29009FCF73 /* preparo-3.png */; };
+		33FD18A21E699F29009FCF73 /* preparo-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 33FD189D1E699F29009FCF73 /* preparo-4.png */; };
+		33FD18A31E699F29009FCF73 /* preparo-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 33FD189E1E699F29009FCF73 /* preparo-5.png */; };
+		33FD18AE1E69ACA1009FCF73 /* coffee_press_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 33FD18A41E69ACA1009FCF73 /* coffee_press_1.png */; };
+		33FD18AF1E69ACA1009FCF73 /* coffee_press_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 33FD18A51E69ACA1009FCF73 /* coffee_press_2.png */; };
+		33FD18B01E69ACA1009FCF73 /* coffee_press_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 33FD18A61E69ACA1009FCF73 /* coffee_press_3.png */; };
+		33FD18B11E69ACA1009FCF73 /* coffee_press_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 33FD18A71E69ACA1009FCF73 /* coffee_press_4.png */; };
+		33FD18B21E69ACA1009FCF73 /* coffee_press_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 33FD18A81E69ACA1009FCF73 /* coffee_press_5.png */; };
+		33FD18B31E69ACA1009FCF73 /* pour_over_cone_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 33FD18A91E69ACA1009FCF73 /* pour_over_cone_1.png */; };
+		33FD18B41E69ACA1009FCF73 /* pour_over_cone_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 33FD18AA1E69ACA1009FCF73 /* pour_over_cone_2.png */; };
+		33FD18B51E69ACA1009FCF73 /* pour_over_cone_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 33FD18AB1E69ACA1009FCF73 /* pour_over_cone_3.png */; };
+		33FD18B61E69ACA1009FCF73 /* pour_over_cone_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 33FD18AC1E69ACA1009FCF73 /* pour_over_cone_4.png */; };
+		33FD18B71E69ACA1009FCF73 /* pour_over_cone_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 33FD18AD1E69ACA1009FCF73 /* pour_over_cone_5.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -159,6 +176,23 @@
 		33FD188A1E68C565009FCF73 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.png; path = imgs/1.png; sourceTree = "<group>"; };
 		33FD188B1E68C565009FCF73 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2.png; path = imgs/2.png; sourceTree = "<group>"; };
 		33FD188C1E68C565009FCF73 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 3.png; path = imgs/3.png; sourceTree = "<group>"; };
+		33FD18961E699120009FCF73 /* MetodosPreparo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetodosPreparo.swift; sourceTree = "<group>"; };
+		33FD18981E6999EA009FCF73 /* PreparaDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreparaDao.swift; sourceTree = "<group>"; };
+		33FD189A1E699F29009FCF73 /* preparo-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "preparo-1.png"; path = "imgs/preparo-1.png"; sourceTree = "<group>"; };
+		33FD189B1E699F29009FCF73 /* preparo-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "preparo-2.png"; path = "imgs/preparo-2.png"; sourceTree = "<group>"; };
+		33FD189C1E699F29009FCF73 /* preparo-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "preparo-3.png"; path = "imgs/preparo-3.png"; sourceTree = "<group>"; };
+		33FD189D1E699F29009FCF73 /* preparo-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "preparo-4.png"; path = "imgs/preparo-4.png"; sourceTree = "<group>"; };
+		33FD189E1E699F29009FCF73 /* preparo-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "preparo-5.png"; path = "imgs/preparo-5.png"; sourceTree = "<group>"; };
+		33FD18A41E69ACA1009FCF73 /* coffee_press_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = coffee_press_1.png; path = imgs/coffee_press_1.png; sourceTree = "<group>"; };
+		33FD18A51E69ACA1009FCF73 /* coffee_press_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = coffee_press_2.png; path = imgs/coffee_press_2.png; sourceTree = "<group>"; };
+		33FD18A61E69ACA1009FCF73 /* coffee_press_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = coffee_press_3.png; path = imgs/coffee_press_3.png; sourceTree = "<group>"; };
+		33FD18A71E69ACA1009FCF73 /* coffee_press_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = coffee_press_4.png; path = imgs/coffee_press_4.png; sourceTree = "<group>"; };
+		33FD18A81E69ACA1009FCF73 /* coffee_press_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = coffee_press_5.png; path = imgs/coffee_press_5.png; sourceTree = "<group>"; };
+		33FD18A91E69ACA1009FCF73 /* pour_over_cone_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pour_over_cone_1.png; path = imgs/pour_over_cone_1.png; sourceTree = "<group>"; };
+		33FD18AA1E69ACA1009FCF73 /* pour_over_cone_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pour_over_cone_2.png; path = imgs/pour_over_cone_2.png; sourceTree = "<group>"; };
+		33FD18AB1E69ACA1009FCF73 /* pour_over_cone_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pour_over_cone_3.png; path = imgs/pour_over_cone_3.png; sourceTree = "<group>"; };
+		33FD18AC1E69ACA1009FCF73 /* pour_over_cone_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pour_over_cone_4.png; path = imgs/pour_over_cone_4.png; sourceTree = "<group>"; };
+		33FD18AD1E69ACA1009FCF73 /* pour_over_cone_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pour_over_cone_5.png; path = imgs/pour_over_cone_5.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +286,7 @@
 		16B1CCC21E5D950900681A4E /* CoffeeTastersIOS */ = {
 			isa = PBXGroup;
 			children = (
+				33FD18951E6990E7009FCF73 /* metodosPreparo */,
 				1613A0C41E689E1B00E9DE65 /* mapa */,
 				16EC3BBC1E6720A8008BD23B /* customViews */,
 				166BA4421E65B8C700739A41 /* sync */,
@@ -298,6 +333,7 @@
 				16EC3BC51E675C14008BD23B /* CafeDao.swift */,
 				16EC3BC71E675C20008BD23B /* PedidoDao.swift */,
 				16149FD31E67AA6E00A455BF /* AvaliacoesDao.swift */,
+				33FD18981E6999EA009FCF73 /* PreparaDao.swift */,
 			);
 			name = dao;
 			sourceTree = "<group>";
@@ -331,6 +367,21 @@
 		16B1CCDC1E5D959600681A4E /* images */ = {
 			isa = PBXGroup;
 			children = (
+				33FD18A41E69ACA1009FCF73 /* coffee_press_1.png */,
+				33FD18A51E69ACA1009FCF73 /* coffee_press_2.png */,
+				33FD18A61E69ACA1009FCF73 /* coffee_press_3.png */,
+				33FD18A71E69ACA1009FCF73 /* coffee_press_4.png */,
+				33FD18A81E69ACA1009FCF73 /* coffee_press_5.png */,
+				33FD18A91E69ACA1009FCF73 /* pour_over_cone_1.png */,
+				33FD18AA1E69ACA1009FCF73 /* pour_over_cone_2.png */,
+				33FD18AB1E69ACA1009FCF73 /* pour_over_cone_3.png */,
+				33FD18AC1E69ACA1009FCF73 /* pour_over_cone_4.png */,
+				33FD18AD1E69ACA1009FCF73 /* pour_over_cone_5.png */,
+				33FD189A1E699F29009FCF73 /* preparo-1.png */,
+				33FD189B1E699F29009FCF73 /* preparo-2.png */,
+				33FD189C1E699F29009FCF73 /* preparo-3.png */,
+				33FD189D1E699F29009FCF73 /* preparo-4.png */,
+				33FD189E1E699F29009FCF73 /* preparo-5.png */,
 				33FD188A1E68C565009FCF73 /* 1.png */,
 				33FD188B1E68C565009FCF73 /* 2.png */,
 				33FD188C1E68C565009FCF73 /* 3.png */,
@@ -369,6 +420,14 @@
 				1643CBB51E68CB77008D7872 /* FlavorCustomViewCell.swift */,
 			);
 			name = customViews;
+			sourceTree = "<group>";
+		};
+		33FD18951E6990E7009FCF73 /* metodosPreparo */ = {
+			isa = PBXGroup;
+			children = (
+				33FD18961E699120009FCF73 /* MetodosPreparo.swift */,
+			);
+			name = metodosPreparo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,18 +490,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33FD18B71E69ACA1009FCF73 /* pour_over_cone_5.png in Resources */,
 				16C92A0D1E698A3C00BC8150 /* icon.png in Resources */,
 				33FD188F1E68C565009FCF73 /* 3.png in Resources */,
+				33FD18B11E69ACA1009FCF73 /* coffee_press_4.png in Resources */,
 				33FD188D1E68C565009FCF73 /* 1.png in Resources */,
 				1645FE081E62F5680002C1B6 /* starryStars_half@2x.png in Resources */,
+				33FD18A01E699F29009FCF73 /* preparo-2.png in Resources */,
+				33FD18AF1E69ACA1009FCF73 /* coffee_press_2.png in Resources */,
 				33FD188E1E68C565009FCF73 /* 2.png in Resources */,
 				16B1CCD11E5D950900681A4E /* LaunchScreen.storyboard in Resources */,
+				33FD189F1E699F29009FCF73 /* preparo-1.png in Resources */,
+				33FD18A11E699F29009FCF73 /* preparo-3.png in Resources */,
+				33FD18B31E69ACA1009FCF73 /* pour_over_cone_1.png in Resources */,
 				1645FE0A1E62F5680002C1B6 /* starryStars_on@2x.png in Resources */,
+				33FD18A21E699F29009FCF73 /* preparo-4.png in Resources */,
+				33FD18B21E69ACA1009FCF73 /* coffee_press_5.png in Resources */,
+				33FD18B61E69ACA1009FCF73 /* pour_over_cone_4.png in Resources */,
+				33FD18AE1E69ACA1009FCF73 /* coffee_press_1.png in Resources */,
+				33FD18A31E699F29009FCF73 /* preparo-5.png in Resources */,
 				16B1CCCE1E5D950900681A4E /* Assets.xcassets in Resources */,
 				1645FE091E62F5680002C1B6 /* starryStars_off@2x.png in Resources */,
 				16B1CCC91E5D950900681A4E /* Main.storyboard in Resources */,
 				16B9BD901E64FD6300D615AE /* cafe.jpg in Resources */,
+				33FD18B51E69ACA1009FCF73 /* pour_over_cone_3.png in Resources */,
+				33FD18B41E69ACA1009FCF73 /* pour_over_cone_2.png in Resources */,
 				16CB28341E6220C2001E4E3B /* config.jpg in Resources */,
+				33FD18B01E69ACA1009FCF73 /* coffee_press_3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +557,7 @@
 				160721961E5F7F5400FF3C00 /* Usuario.swift in Sources */,
 				3342439D1E5F4CC90001938F /* BuscaViewController.swift in Sources */,
 				1643CBB61E68CB77008D7872 /* FlavorCustomViewCell.swift in Sources */,
+				33FD18991E6999EA009FCF73 /* PreparaDao.swift in Sources */,
 				16B1CCCC1E5D950900681A4E /* CoffeeTastersIOS.xcdatamodeld in Sources */,
 				1607219A1E5F7F8F00FF3C00 /* Avaliacao.swift in Sources */,
 				334243951E5F4C770001938F /* PedidosViewController.swift in Sources */,
@@ -498,6 +573,7 @@
 				166BA4441E65B8D300739A41 /* SyncUtil.swift in Sources */,
 				16EC3BC21E674FC9008BD23B /* FinalizarCompraViewController.swift in Sources */,
 				1691A8CC1E60D71C00FC5085 /* Dao.swift in Sources */,
+				33FD18971E699120009FCF73 /* MetodosPreparo.swift in Sources */,
 				16149FC11E6786A000A455BF /* PedidosCustomViewCellHeader.swift in Sources */,
 				1613A0C31E689C0700E9DE65 /* Pino.swift in Sources */,
 				3342438F1E5F4C210001938F /* PerfilViewController.swift in Sources */,

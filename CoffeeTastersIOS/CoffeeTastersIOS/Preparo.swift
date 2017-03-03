@@ -10,4 +10,23 @@ import Foundation
 
 class Preparo {
     var passos:Array<Passo> =  []
+    
+    init(passos: Array<Passo>) {
+    
+        self.passos = passos
+        
+    
+    }
+    
+    func proximoPasso() {
+    
+        
+    }
+    
+    func anteriorPasso() {
+    
+        
+    }
+    
+    
 }
