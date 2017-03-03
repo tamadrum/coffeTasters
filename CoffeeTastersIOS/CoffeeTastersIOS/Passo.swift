@@ -6,7 +6,7 @@
 //  Copyright © 2017 Luglio. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Passo {
     var imagens: [String]
@@ -25,9 +25,18 @@ class Passo {
         
     }
     
-    func proximaImagem() {
+    func getImagens() -> Array<UIImage> {
+        
+        var retorno: [UIImage]! = []
+        
+        for s in self.imagens {
+            retorno.append(UIImage(named: s)!)
+        }
+        
+        return retorno
         
     }
+    
     
     
     
