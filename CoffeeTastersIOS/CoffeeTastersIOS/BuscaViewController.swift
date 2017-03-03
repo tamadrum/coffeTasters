@@ -36,12 +36,10 @@ class BuscaViewController:UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "header", for: indexPath)
         
         if(searchActive){
-            print("filtered")
             cell.textLabel?.text = filtered[indexPath.row].nome
             cell.detailTextLabel?.text = filtered[indexPath.row].descricao
 //            cell.imageView?.image = UIImage(named: filtered[indexPath.row].descricao)
         } else {
-            print("data")
             cell.textLabel?.text = data[indexPath.row].nome
             cell.detailTextLabel?.text = data[indexPath.row].descricao
 //            cell.imageView?.image = UIImage(named: data[indexPath.row].imagem)
@@ -51,15 +49,16 @@ class BuscaViewController:UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
-        
-        if cell != nil {
-            print("Linha Selecionada:  \(indexPath.row)")
+        //let cell = tableView.cellForRow(at: indexPath)
+
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "detalhesCafe") as! DetalhesViewController
+        if(searchActive){
+            vc.cafeAvaliado = filtered[indexPath.row]
+        } else {
+            vc.cafeAvaliado = data[indexPath.row]
         }
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil);
-        let vc = storyboard.instantiateViewController(withIdentifier: "detalhesCafe") ;
-        self.navigationController?.pushViewController(vc, animated: true);
+        self.navigationController?.pushViewController(vc, animated: true)
         
     }
     

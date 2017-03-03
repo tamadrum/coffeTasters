@@ -18,6 +18,18 @@ class MapaViewController:UIViewController{
     
     var locationManager = CLLocationManager()
     
+    func setLocation(latitude: Double, longitude: Double) {
+        let local = CLLocation(latitude: latitude, longitude: longitude)
+        centerMapOnLocation(location: local)
+        
+        let pino = Pino(title: "Marco Polo",
+                        subtitle: "Gelateria e Cafés",
+                        tipo: "Cafeteria",
+                        coordinate: CLLocationCoordinate2D(latitude: 21.283921, longitude: -157.831661))
+        
+        mapa.addAnnotation(pino)
+    }
+    
     func checkLocationAuthorizationStatus() {
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
             mapa.showsUserLocation = true
@@ -38,15 +50,7 @@ class MapaViewController:UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         centerMapOnLocation(location: initialLocation)
-        
-        let pino = Pino(title: "Marco Polo",
-                        subtitle: "Gelateria e Cafés",
-                        tipo: "Cafeteria",
-                        coordinate: CLLocationCoordinate2D(latitude: 21.283921, longitude: -157.831661))
-        
-        mapa.addAnnotation(pino)
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {

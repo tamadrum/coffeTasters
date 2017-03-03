@@ -35,7 +35,7 @@ class AvaliacoesViewController:Acordeao {
                                         
                                         var items = Array<Parent>()
                                         
-                                        for a in AvaliacoesDao().getAvaliacoes() {
+                                        for a in AvaliacoesDao().getLista() {
                                             items.append(Parent(state: .collapsed, item: a))
                                         }
                                         

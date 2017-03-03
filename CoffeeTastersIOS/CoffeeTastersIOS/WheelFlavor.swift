@@ -12,27 +12,9 @@ import CoreGraphics
 
 class WheelFlavor: UIView {
     
-    var flavorTorrador:Flavor = Flavor()
-    var flavorMedia:Flavor = Flavor()
-    var flavorUsuario:Flavor = Flavor()
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-//        desenhar()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
-//        desenhar()
-    }
-    
-    convenience init() {
-        self.init(frame: CGRect.zero)
-        
-//        desenhar()
-    }
+    var flavorTorrador:Flavor?
+    var flavorMedia:Flavor?
+    var flavorUsuario:Flavor?
 
     override func draw(_ rect: CGRect) {
         let centro = CGPoint(x: self.bounds.width/2, y: self.bounds.height/2)
@@ -86,9 +68,15 @@ class WheelFlavor: UIView {
             desenhaCirculosPequenos(context: context, canvas:frame, centro:centro, raio:raio)
             context.strokePath()
             
-            desenhaGrafico(context: context, canvas:frame, centro:centro, raio:raio, flavor:flavorUsuario, cor: UIColor.red)
-            desenhaGrafico(context: context, canvas:frame, centro:centro, raio:raio, flavor:flavorMedia, cor: UIColor.blue)
-            desenhaGrafico(context: context, canvas:frame, centro:centro, raio:raio, flavor:flavorTorrador, cor: UIColor.green)
+            if let flavor = flavorTorrador {
+                desenhaGrafico(context: context, canvas:frame, centro:centro, raio:raio, flavor:flavor, cor: UIColor.red)
+            }
+            if let flavor = flavorMedia {
+                desenhaGrafico(context: context, canvas:frame, centro:centro, raio:raio, flavor:flavor, cor: UIColor.blue)
+            }
+            if let flavor = flavorUsuario {
+                desenhaGrafico(context: context, canvas:frame, centro:centro, raio:raio, flavor:flavor, cor: UIColor.green)
+            }
         }
 
     }

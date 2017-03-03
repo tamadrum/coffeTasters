@@ -7,138 +7,65 @@
 //
 
 import Foundation
+import CoreData
+import UIKit
 
 class AvaliacoesDao {
-    func getAvaliacoes() -> Array<Avaliacao> {
-        var avaliacoes = Array<Avaliacao>()
-        
-        let a = Avaliacao()
-        
-        let calendario = Calendar.current
-        let data = DateComponents(year: 2030, month: 10, day: 20)
-        
-        a.obs = "Eu gostei muito do café"
-        a.data = calendario.date(from: data)!
-        a.gostou = 2
-        a.metodoPreparo = "Solúvel"
-        let dataDaColheita = DateComponents(year: 2020, month: 4, day: 10)
-        let dataDaTorra = DateComponents(year: 2030, month: 10, day: 20)
-        
-        let cafe = Cafe()
-        cafe.dataColheita = calendario.date(from: dataDaColheita)!
-        cafe.dataTorra = calendario.date(from: dataDaTorra)!
-        cafe.nome = "Café Pelé"
-        cafe.origem = "Afeganistão"
-        cafe.produtor = "Asdrubal"
-        cafe.torrador = "Epaminondas"
-        cafe.descricao = "dfjks JKS SLKJg fzsjgdf lJKSGHDc zsbdjhvg zskjdf ljBSDfj gas,db jg"
-        cafe.imagem = "cafe.jpg"
-        cafe.flavor = Flavor()
-        cafe.flavor.amargo = 4
-        cafe.flavor.azedo = 1
-        cafe.flavor.caramelo = 8
-        cafe.flavor.cereais = 9
-        cafe.flavor.chocolate = 2
-        cafe.flavor.defumado = 3
-        cafe.flavor.doce = 3
-        cafe.flavor.encorpado = 5
-        cafe.flavor.especiarias = 5
-        cafe.flavor.floral = 6
-        cafe.flavor.frutasCaroco = 5
-        cafe.flavor.frutasCitrico = 9
-        cafe.flavor.frutasVermelhas = 10
-        cafe.flavor.herbal = 1
-        cafe.flavor.nozes = 1
-        cafe.flavor.salgado = 5
-        
-        a.cafe = cafe
-        
-        a.flavor = Flavor()
-        a.flavor.amargo = 5
-        a.flavor.azedo = 5
-        a.flavor.caramelo = 5
-        a.flavor.cereais = 5
-        a.flavor.chocolate = 5
-        a.flavor.defumado = 5
-        a.flavor.doce = 5
-        a.flavor.encorpado = 5
-        a.flavor.especiarias = 5
-        a.flavor.floral = 5
-        a.flavor.frutasCaroco = 5
-        a.flavor.frutasCitrico = 5
-        a.flavor.frutasVermelhas = 5
-        a.flavor.herbal = 5
-        a.flavor.nozes = 5
-        a.flavor.salgado = 5
-        
-        a.flavorMedia = Flavor()
-        a.flavorMedia.amargo = 2
-        a.flavorMedia.azedo = 1
-        a.flavorMedia.caramelo = 3
-        a.flavorMedia.cereais = 3
-        a.flavorMedia.chocolate = 5
-        a.flavorMedia.defumado = 5
-        a.flavorMedia.doce = 7
-        a.flavorMedia.encorpado = 7
-        a.flavorMedia.especiarias = 8
-        a.flavorMedia.floral = 9
-        a.flavorMedia.frutasCaroco = 8
-        a.flavorMedia.frutasCitrico = 9
-        a.flavorMedia.frutasVermelhas = 4
-        a.flavorMedia.herbal = 4
-        a.flavorMedia.nozes = 3
-        a.flavorMedia.salgado = 3
-        
-        avaliacoes.append(a)
-        
-        return avaliacoes
+    
+    var managedContext: NSManagedObjectContext?
+    
+    init() {
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            managedContext = appDelegate.persistentContainer.viewContext
+        }
     }
     
+    func getLista() -> Array<Avaliacao> {
+        var retorno = Array<Avaliacao>()
+        
+        var avaliacoes: [NSManagedObject] = []
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "CDAvaliacao")
+        
+        do {
+            avaliacoes = try managedContext!.fetch(fetchRequest)
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        
+        for obj in avaliacoes {
+            let a = Avaliacao()
+            
+            a.gostou = obj.value(forKeyPath: "gostou") as! Int
+            a.cafe = obj.mutableSetValue(forKey: "cafe").allObjects.first as! Cafe
+            a.data = obj.value(forKey: "data") as! Date
+            a.flavor = obj.mutableSetValue(forKey: "cafe").allObjects.first as! Flavor
+            a.flavorMedia = obj.mutableSetValue(forKey: "cafe").allObjects.first as! Flavor
+            a.metodoPreparo = obj.value(forKey: "metodoPreparo") as! String
+            a.obs = obj.value(forKey: "obs") as! String
+            
+            retorno.append(a)
+        }
+        
+        return retorno
+    }
     
-    
-    
-    
-    
-    
-    
-    
-    
-//    
-//    var people: [NSManagedObject] = []
-//    // como usar : person.value(forKeyPath: "name") as? String
-//    
-//    func load () {
-//        let managedContext = appDelegate.persistentContainer.viewContext
-//        
-//        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Person")
-//        
-//        do {
-//            people = try managedContext.fetch(fetchRequest)
-//        } catch let error as NSError {
-//            print("Could not fetch. \(error), \(error.userInfo)")
-//        }
-//    }
-//    
-//    func save(name: String) {
-//        
-//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-//            return
-//        }
-//        
-//        let managedContext = appDelegate.persistentContainer.viewContext
-//        
-//        let entity = NSEntityDescription.entity(forEntityName: "Person", in: managedContext)!
-//        
-//        let person = NSManagedObject(entity: entity, insertInto: managedContext)
-//        
-//        person.setValue(name, forKeyPath: "name")
-//        
-//        do {
-//            try managedContext.save()
-//            people.append(person)
-//        } catch let error as NSError {
-//            print("Could not save. \(error), \(error.userInfo)")
-//        }
-//    }
+    func save(_ data: Avaliacao) {
+        let entity = NSEntityDescription.entity(forEntityName: "CDAvaliacao", in: managedContext!)!
+        let avaliacao = NSManagedObject(entity: entity, insertInto: managedContext)
+        
+        avaliacao.setValue(data.gostou, forKey: "gostou")
+        avaliacao.setValue(NSSet(object: data.cafe), forKey: "cafe")
+        avaliacao.setValue(data.data, forKeyPath: "data")
+        avaliacao.setValue(NSSet(object: data.flavor), forKey: "flavor")
+        avaliacao.setValue(NSSet(object: data.flavorMedia), forKey: "flavorMedia")
+        avaliacao.setValue(data.metodoPreparo, forKey: "metodoPreparo")
+        avaliacao.setValue(data.obs, forKey: "obs")
+        
+        do {
+            try managedContext?.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
     
 }
