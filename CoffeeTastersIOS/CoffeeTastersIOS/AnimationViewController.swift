@@ -28,11 +28,11 @@ class AnimationViewController: UIViewController {
         
         var animatedImage: UIImage!
         
-        animatedImage = UIImage.animatedImage(with: images, duration: 1.0)
+        animatedImage = UIImage.animatedImage(with: images, duration: 0.5)
         
         imageView.image = animatedImage
         
-        _ = Timer.scheduledTimer(timeInterval: 8.0, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
+        _ = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
         
     }
     

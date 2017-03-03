@@ -8,17 +8,17 @@
 
 import UIKit
 
-class PedidosViewController:Acordeao {
+class PedidosViewController:AcordeaoPedido {
     
     @IBOutlet var tableView:UITableView?
     
     override func viewDidLoad() {
         tableView?.tableFooterView = UIView()
         
-        var items = Array<Parent>()
+        var items = Array<ParentPedido>()
         
         for l in PedidoDao().getListaPedidos() {
-            items.append(Parent(state: .collapsed, item: l))
+            items.append(ParentPedido(state: .collapsed, item: l))
         }
         
         self.parentCellIdentifier = "header"
@@ -33,12 +33,17 @@ class PedidosViewController:Acordeao {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let (_, isParentCell, _) = self.findParent(indexPath.row)
+        let (parent, isParentCell, actualPosition) = self.findParent(indexPath.row)
+        
+//        print("Parent: \(parent) isParentCell: \(isParentCell) posicao: \(actualPosition)")
+//        
+//        return tableView.dequeueReusableCell(withIdentifier: parentCellIdentifier , for: indexPath)
+//        
         
         if isParentCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: parentCellIdentifier , for: indexPath) as! PedidosCustomViewCellHeader
             
-            let ped = dataSource[indexPath.row].item as! Pedido
+            let ped = self.dataSource[parent].item //[indexPath.row - actualPosition - 1]
             
             cell.numero?.text = "\(ped.numero)"
             cell.status?.text = ped.status
@@ -47,12 +52,12 @@ class PedidosViewController:Acordeao {
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: childCellIdentifier, for: indexPath) as! PedidosCustomViewCellDetails
+
+            let item = dataSource[parent].item.items[indexPath.row - actualPosition - 1]
             
-            let ped = dataSource[indexPath.row-1].item as! Pedido
-            
-            cell.quantidade?.text = "\(ped.items[0].quantidade)"
-            cell.nome?.text = ped.items[0].produto.nome
-            cell.valor?.text = "R$ \(ped.items[0].produto.preco)"
+            cell.quantidade?.text = "\(item.quantidade)"
+            cell.nome?.text = item.produto.nome
+            cell.valor?.text = "R$ \(item.produto.preco)"
             
             return cell
         }
