@@ -8,26 +8,59 @@
 
 import UIKit
 import MapKit
+import Contacts
 
-class MapaViewController:UIViewController{
+class Pino: NSObject, MKAnnotation {
+    let title: String?
+    let locationName: String?
+    let subtitle: String?
+    let coordinate: CLLocationCoordinate2D
+    
+    init(title: String, locationName: String, subtitle: String, coordinate: CLLocationCoordinate2D) {
+        self.title = title
+        self.locationName = locationName
+        self.subtitle = subtitle
+        self.coordinate = coordinate
+        
+        super.init()
+    }
+    
+    func mapItem() -> MKMapItem {
+        let addressDictionary = [String(CNPostalAddressStreetKey): subtitle]
+        let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: addressDictionary)
+        
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = title
+        
+        return mapItem
+    }
+    
+    func pinColor() -> UIColor  {
+        if let location = locationName {
+            switch location {
+            case "Barista":
+                return .green
+            case "Cafeteria":
+                return .purple
+            default:
+                return .red
+            }
+        }
+        return .red
+    }
+}
+
+class MapaViewController:UIViewController, MKMapViewDelegate{
     
     @IBOutlet weak var mapa: MKMapView!
     
     let initialLocation = CLLocation(latitude: -23.548064, longitude: -46.5708517)
-    let regionRadius: CLLocationDistance = 1000
+    let regionRadius: CLLocationDistance = 500
     
     var locationManager = CLLocationManager()
     
     func setLocation(latitude: Double, longitude: Double) {
-        let local = CLLocation(latitude: latitude, longitude: longitude)
-       // centerMapOnLocation(location: local)
         
-//        let pino = Pino(title: "Marco Polo",
-//                        subtitle: "Gelateria e Cafés",
-//                        tipo: "Cafeteria",
-//                        coordinate: CLLocationCoordinate2D(latitude: 21.283921, longitude: -157.831661))
-//        
-//        mapa.addAnnotation(pino)
     }
     
     func checkLocationAuthorizationStatus() {
@@ -50,7 +83,20 @@ class MapaViewController:UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         centerMapOnLocation(location: initialLocation)
+        
+        let pino = Pino(title: "Marco Polo",
+                              locationName: "Caferetia",
+                              subtitle: "Gelateria & Caffè",
+                              coordinate: CLLocationCoordinate2D(latitude: -23.548064, longitude: -46.5708517))
+        
+        mapa.addAnnotation(pino)
+    }
+    
+    func comprarItem(){
+        let alertComprar = ComprarAlertViewController(controller: navigationController!)
+        alertComprar.show("Comprando...", message: "Vamos gastar")
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
