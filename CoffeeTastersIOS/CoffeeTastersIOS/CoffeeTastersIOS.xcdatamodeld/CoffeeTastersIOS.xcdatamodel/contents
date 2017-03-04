@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="15G1217" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="CDAvaliacao" representedClassName="Avaliacao" syncable="YES" codeGenerationType="class">
+        <attribute name="barista" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="data" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="gostou" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="localPreparo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="metodoPreparo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="obs" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="cafe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDCafe" syncable="YES"/>
@@ -10,15 +12,22 @@
         <relationship name="flavorMedia" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDFlavor" syncable="YES"/>
     </entity>
     <entity name="CDCafe" representedClassName="Cafe" syncable="YES" codeGenerationType="class">
+        <attribute name="altitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="cidade" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dataColheita" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="dataTorra" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="descricao" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="estado" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="imagem" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="origem" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pais" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="produtor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="regiao" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="safra" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="tipo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="torrador" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="flavorTorrador" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDFlavor" syncable="YES"/>
     </entity>
@@ -41,8 +50,8 @@
         <attribute name="salgado" optional="YES" attributeType="Integer 32" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="CDAvaliacao" positionX="-164" positionY="-234" width="128" height="150"/>
-        <element name="CDCafe" positionX="-164" positionY="-54" width="128" height="210"/>
+        <element name="CDAvaliacao" positionX="-164" positionY="-234" width="128" height="180"/>
+        <element name="CDCafe" positionX="-164" positionY="-54" width="128" height="315"/>
         <element name="CDFlavor" positionX="-495" positionY="-249" width="128" height="285"/>
     </elements>
 </model>

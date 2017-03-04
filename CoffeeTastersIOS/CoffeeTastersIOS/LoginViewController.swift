@@ -32,7 +32,6 @@ class LoginViewController:UIViewController, FBSDKLoginButtonDelegate {
             self.performSegue(withIdentifier: "telaPerfil", sender: self)
         }
         
-        
         let loginButton : FBSDKLoginButton = FBSDKLoginButton()
         var posicao:CGPoint = view.center
         posicao.y += 200
@@ -40,6 +39,21 @@ class LoginViewController:UIViewController, FBSDKLoginButtonDelegate {
         loginButton.readPermissions = ["public_profile", "email", "user_friends"]
         loginButton.delegate = self
         self.view.addSubview(loginButton)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if !usuario.viuOEULA {
+            
+            let alerta = UIAlertController(title: "EULA", message: "LEIA", preferredStyle: .alert)
+            
+            let ok = UIAlertAction(title: "OK", style: .default, handler: {(alert: UIAlertAction!) in
+                self.usuario.viuOEULA = true
+                Dao().save(self.usuario)
+            })
+            alerta.addAction(ok)
+            
+            self.present(alerta, animated: true, completion: nil)
+        }
     }
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {

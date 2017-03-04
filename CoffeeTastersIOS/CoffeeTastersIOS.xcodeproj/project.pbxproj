@@ -15,8 +15,6 @@
 		1607219C1E5F7F9600FF3C00 /* Preparo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1607219B1E5F7F9600FF3C00 /* Preparo.swift */; };
 		1607219E1E5F7F9C00FF3C00 /* Pedido.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1607219D1E5F7F9C00FF3C00 /* Pedido.swift */; };
 		160721A01E5F7FA700FF3C00 /* Produto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1607219F1E5F7FA700FF3C00 /* Produto.swift */; };
-		160721A21E5F86E500FF3C00 /* Passo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160721A11E5F86E500FF3C00 /* Passo.swift */; };
-		160721A41E5F884A00FF3C00 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160721A31E5F884A00FF3C00 /* Item.swift */; };
 		1613A0BE1E68997F00E9DE65 /* Acordeao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1613A0BC1E68997F00E9DE65 /* Acordeao.swift */; };
 		1613A0BF1E68997F00E9DE65 /* ComprarAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1613A0BD1E68997F00E9DE65 /* ComprarAlertViewController.swift */; };
 		1613A0C11E6899B200E9DE65 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1613A0C01E6899B200E9DE65 /* MapKit.framework */; };
@@ -54,8 +52,8 @@
 		16CB283A1E622B3B001E4E3B /* String+isCPF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB28391E622B3B001E4E3B /* String+isCPF.swift */; };
 		16CB283C1E622D62001E4E3B /* String+toMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB283B1E622D62001E4E3B /* String+toMD5.swift */; };
 		16EB43B31E69CE440073C58A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16EB43B11E69CE440073C58A /* Main.storyboard */; };
-		16EB43B51E6A53660073C58A /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EB43B41E6A53660073C58A /* DataController.swift */; };
 		16EB43B91E6A5C630073C58A /* FlavorDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EB43B81E6A5C630073C58A /* FlavorDao.swift */; };
+		16EB43BB1E6A75730073C58A /* EULA.txt in Resources */ = {isa = PBXBuildFile; fileRef = 16EB43BA1E6A75730073C58A /* EULA.txt */; };
 		16EC3BC01E674F90008BD23B /* CarrinhoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC3BBF1E674F90008BD23B /* CarrinhoViewController.swift */; };
 		16EC3BC21E674FC9008BD23B /* FinalizarCompraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC3BC11E674FC9008BD23B /* FinalizarCompraViewController.swift */; };
 		16EC3BC41E675C0B008BD23B /* ProdutoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC3BC31E675C0B008BD23B /* ProdutoDao.swift */; };
@@ -108,8 +106,6 @@
 		1607219B1E5F7F9600FF3C00 /* Preparo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preparo.swift; sourceTree = "<group>"; };
 		1607219D1E5F7F9C00FF3C00 /* Pedido.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pedido.swift; sourceTree = "<group>"; };
 		1607219F1E5F7FA700FF3C00 /* Produto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Produto.swift; sourceTree = "<group>"; };
-		160721A11E5F86E500FF3C00 /* Passo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Passo.swift; sourceTree = "<group>"; };
-		160721A31E5F884A00FF3C00 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		1613A0BC1E68997F00E9DE65 /* Acordeao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Acordeao.swift; sourceTree = "<group>"; };
 		1613A0BD1E68997F00E9DE65 /* ComprarAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComprarAlertViewController.swift; sourceTree = "<group>"; };
 		1613A0C01E6899B200E9DE65 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -151,8 +147,8 @@
 		16CB283B1E622D62001E4E3B /* String+toMD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+toMD5.swift"; sourceTree = "<group>"; };
 		16EB43B01E69B8EB0073C58A /* CoffeeTastersIOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoffeeTastersIOS.entitlements; sourceTree = "<group>"; };
 		16EB43B21E69CE440073C58A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CoffeeTastersIOS/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		16EB43B41E6A53660073C58A /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		16EB43B81E6A5C630073C58A /* FlavorDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlavorDao.swift; sourceTree = "<group>"; };
+		16EB43BA1E6A75730073C58A /* EULA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EULA.txt; sourceTree = "<group>"; };
 		16EC3BBF1E674F90008BD23B /* CarrinhoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarrinhoViewController.swift; sourceTree = "<group>"; };
 		16EC3BC11E674FC9008BD23B /* FinalizarCompraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalizarCompraViewController.swift; sourceTree = "<group>"; };
 		16EC3BC31E675C0B008BD23B /* ProdutoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProdutoDao.swift; sourceTree = "<group>"; };
@@ -227,12 +223,14 @@
 		160721831E5F6DB200FF3C00 /* util */ = {
 			isa = PBXGroup;
 			children = (
+				166BA4431E65B8D300739A41 /* SyncUtil.swift */,
+				1613A0C21E689C0700E9DE65 /* Pino.swift */,
+				1613A0BD1E68997F00E9DE65 /* ComprarAlertViewController.swift */,
 				1613A0BC1E68997F00E9DE65 /* Acordeao.swift */,
 				1645FE021E62F4D90002C1B6 /* StarryStars.h */,
 				1645FE031E62F4FF0002C1B6 /* RatingView.swift */,
 				1618384D1E66DDFC00D4F438 /* BusyAlert.swift */,
 				16C92A0E1E698B1300BC8150 /* AcordeaoPedido.swift */,
-				16EB43B41E6A53660073C58A /* DataController.swift */,
 			);
 			name = util;
 			sourceTree = "<group>";
@@ -243,22 +241,6 @@
 				1691A8BF1E5FC86B00FC5085 /* WheelFlavor.swift */,
 			);
 			name = wheelflavor;
-			sourceTree = "<group>";
-		};
-		1613A0C41E689E1B00E9DE65 /* mapa */ = {
-			isa = PBXGroup;
-			children = (
-				1613A0C21E689C0700E9DE65 /* Pino.swift */,
-			);
-			name = mapa;
-			sourceTree = "<group>";
-		};
-		166BA4421E65B8C700739A41 /* sync */ = {
-			isa = PBXGroup;
-			children = (
-				166BA4431E65B8D300739A41 /* SyncUtil.swift */,
-			);
-			name = sync;
 			sourceTree = "<group>";
 		};
 		16B1CCB71E5D950900681A4E = {
@@ -283,10 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				16EB43B01E69B8EB0073C58A /* CoffeeTastersIOS.entitlements */,
-				33FD18951E6990E7009FCF73 /* metodosPreparo */,
-				1613A0C41E689E1B00E9DE65 /* mapa */,
 				16EC3BBC1E6720A8008BD23B /* customViews */,
-				166BA4421E65B8C700739A41 /* sync */,
 				16CB28381E622B1F001E4E3B /* extensions */,
 				1607218D1E5F7E5F00FF3C00 /* wheelflavor */,
 				160721831E5F6DB200FF3C00 /* util */,
@@ -300,6 +279,7 @@
 				16B1CCCF1E5D950900681A4E /* LaunchScreen.storyboard */,
 				16B1CCD21E5D950900681A4E /* Info.plist */,
 				16B1CCCA1E5D950900681A4E /* CoffeeTastersIOS.xcdatamodeld */,
+				16EB43BA1E6A75730073C58A /* EULA.txt */,
 			);
 			path = CoffeeTastersIOS;
 			sourceTree = "<group>";
@@ -307,12 +287,11 @@
 		16B1CCD81E5D955D00681A4E /* modelo */ = {
 			isa = PBXGroup;
 			children = (
+				33FD18961E699120009FCF73 /* MetodosPreparo.swift */,
 				160721951E5F7F5400FF3C00 /* Usuario.swift */,
 				1607219B1E5F7F9600FF3C00 /* Preparo.swift */,
 				1607219D1E5F7F9C00FF3C00 /* Pedido.swift */,
 				1607219F1E5F7FA700FF3C00 /* Produto.swift */,
-				160721A11E5F86E500FF3C00 /* Passo.swift */,
-				160721A31E5F884A00FF3C00 /* Item.swift */,
 				166BA4401E659EB300739A41 /* Configuracoes.swift */,
 			);
 			name = modelo;
@@ -401,7 +380,6 @@
 		16EC3BBC1E6720A8008BD23B /* customViews */ = {
 			isa = PBXGroup;
 			children = (
-				1613A0BD1E68997F00E9DE65 /* ComprarAlertViewController.swift */,
 				16149FB61E6785E300A455BF /* CarrinhoCustomViewCellItem.swift */,
 				16149FB81E67866900A455BF /* ProdutosCustomViewCellHeader.swift */,
 				16149FBA1E67867500A455BF /* ProdutosCustomViewCellDetails.swift */,
@@ -414,14 +392,6 @@
 				1643CBB51E68CB77008D7872 /* FlavorCustomViewCell.swift */,
 			);
 			name = customViews;
-			sourceTree = "<group>";
-		};
-		33FD18951E6990E7009FCF73 /* metodosPreparo */ = {
-			isa = PBXGroup;
-			children = (
-				33FD18961E699120009FCF73 /* MetodosPreparo.swift */,
-			);
-			name = metodosPreparo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -495,6 +465,7 @@
 				33FD188F1E68C565009FCF73 /* 3.png in Resources */,
 				33FD18B11E69ACA1009FCF73 /* coffee_press_4.png in Resources */,
 				33FD188D1E68C565009FCF73 /* 1.png in Resources */,
+				16EB43BB1E6A75730073C58A /* EULA.txt in Resources */,
 				1645FE081E62F5680002C1B6 /* starryStars_half@2x.png in Resources */,
 				16EB43B31E69CE440073C58A /* Main.storyboard in Resources */,
 				33FD18A01E699F29009FCF73 /* preparo-2.png in Resources */,
@@ -552,8 +523,6 @@
 				1691A8CA1E60B66800FC5085 /* EsqueciMinhaSenhaViewController.swift in Sources */,
 				16149FD41E67AA6E00A455BF /* AvaliacoesDao.swift in Sources */,
 				1618384E1E66DDFC00D4F438 /* BusyAlert.swift in Sources */,
-				16EB43B51E6A53660073C58A /* DataController.swift in Sources */,
-				160721A41E5F884A00FF3C00 /* Item.swift in Sources */,
 				16149FBD1E67868500A455BF /* OfertasCustomViewCellHeader.swift in Sources */,
 				16EB43B91E6A5C630073C58A /* FlavorDao.swift in Sources */,
 				16EC3BC01E674F90008BD23B /* CarrinhoViewController.swift in Sources */,
@@ -568,7 +537,6 @@
 				16B1CCC41E5D950900681A4E /* AppDelegate.swift in Sources */,
 				1691A8C01E5FC86B00FC5085 /* WheelFlavor.swift in Sources */,
 				16CB283C1E622D62001E4E3B /* String+toMD5.swift in Sources */,
-				160721A21E5F86E500FF3C00 /* Passo.swift in Sources */,
 				334243A51E5F4D520001938F /* MapaViewController.swift in Sources */,
 				334243891E5F00540001938F /* AnimationViewController.swift in Sources */,
 				16149FB71E6785E300A455BF /* CarrinhoCustomViewCellItem.swift in Sources */,

@@ -8,6 +8,11 @@
 
 import Foundation
 
+class Item {
+    var produto: Produto = Produto()
+    var quantidade: Int = 0
+}
+
 class Pedido {
     var data: Date = Date()
     var numero: Int = 0

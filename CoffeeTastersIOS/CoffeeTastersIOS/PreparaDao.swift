@@ -44,11 +44,7 @@ class PreparaDao {
         preparos.append(coado)
         preparos.append(prensa)
         
-        
         return preparos
-        
-
-    
     }
 
 }

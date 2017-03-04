@@ -7,6 +7,34 @@
 //
 
 import Foundation
+import UIKit
+
+class Passo {
+    var imagens: [String]
+    var descricao: String
+    var indice: Int?
+    var tempo: Int?
+    var tipo: String?
+    
+    init(indice: Int, tipo: String, tempo: Int, imagens: [String], descricao: String) {
+        self.indice = indice
+        self.tipo = tipo
+        self.tempo = tempo
+        self.imagens = imagens
+        self.descricao = descricao
+    }
+    
+    func getImagens() -> Array<UIImage> {
+        var retorno: [UIImage]! = []
+        
+        for s in self.imagens {
+            retorno.append(UIImage(named: s)!)
+        }
+        
+        return retorno
+    }
+    
+}
 
 class Preparo {
     var passos:Array<Passo>?

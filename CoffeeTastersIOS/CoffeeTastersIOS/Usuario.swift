@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Usuario: NSObject, NSCoding {
     
@@ -19,6 +20,7 @@ class Usuario: NSObject, NSCoding {
     var tipoCartao: String
     var validadeCartao: String
     var cpf: String
+    var viuOEULA: Bool
     
     func encode(with aCoder: NSCoder) {
         aCoder.encode(nome, forKey:"nome")
@@ -30,6 +32,7 @@ class Usuario: NSObject, NSCoding {
         aCoder.encode(tipoCartao, forKey:"tipoCartao")
         aCoder.encode(validadeCartao, forKey:"validadeCartao")
         aCoder.encode(cpf, forKey:"cpf")
+        aCoder.encode(viuOEULA, forKey:"viuOEULA")
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -42,18 +45,20 @@ class Usuario: NSObject, NSCoding {
         tipoCartao = aDecoder.decodeObject(forKey:"tipoCartao") as! String
         validadeCartao = aDecoder.decodeObject(forKey:"validadeCartao") as! String
         cpf = aDecoder.decodeObject(forKey:"cpf") as! String
+        viuOEULA = aDecoder.decodeBool(forKey: "viuOEULA")
     }
     
     override init () {
-        nome = "";
-        email = "";
-        senha = "";
-        perfilPic = "";
-        numeroCartao = "";
-        nomeCartao = "";
-        tipoCartao = "";
-        validadeCartao = "";
-        cpf = "";
+        nome = ""
+        email = ""
+        senha = ""
+        perfilPic = ""
+        numeroCartao = ""
+        nomeCartao = ""
+        tipoCartao = ""
+        validadeCartao = ""
+        cpf = ""
+        viuOEULA = false
     }
     
 }
