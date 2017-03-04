@@ -63,9 +63,9 @@ class AvaliacoesViewController:Acordeao {
                 let cell = tableView.dequeueReusableCell(withIdentifier: parentCellIdentifier , for: indexPath) as! AvaliacoesCustomViewCellHeader
                 
                 let a = self.dataSource[indexPath.row].item as! Avaliacao
-                    cell.nome?.text = a.cafe.nome
+                    cell.nome?.text = a.cafe?.nome
                     cell.tipo.text = a.metodoPreparo
-                    cell.data.text = a.data.description
+                    cell.data.text = a.data?.description
                     //cell.gostei.stars.count =
                     
                 return cell
@@ -76,7 +76,7 @@ class AvaliacoesViewController:Acordeao {
                 let a = self.dataSource[indexPath.row-1].item as! Avaliacao
                 cell.descricao?.text = a.obs
                 cell.flavor.flavorUsuario = a.flavor
-                cell.flavor.flavorTorrador = a.cafe.flavor
+                cell.flavor.flavorTorrador = a.cafe?.flavorTorrador
                 cell.flavor.flavorMedia = a.flavorMedia
                 cell.flavor.updateConstraints()
                 

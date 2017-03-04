@@ -34,12 +34,7 @@ class PedidosViewController:AcordeaoPedido {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let (parent, isParentCell, actualPosition) = self.findParent(indexPath.row)
-        
-//        print("Parent: \(parent) isParentCell: \(isParentCell) posicao: \(actualPosition)")
-//        
-//        return tableView.dequeueReusableCell(withIdentifier: parentCellIdentifier , for: indexPath)
-//        
-        
+ 
         if isParentCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: parentCellIdentifier , for: indexPath) as! PedidosCustomViewCellHeader
             

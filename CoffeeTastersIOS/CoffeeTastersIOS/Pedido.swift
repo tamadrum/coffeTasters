@@ -9,8 +9,8 @@
 import Foundation
 
 class Pedido {
+    var data: Date = Date()
     var numero: Int = 0
-//    var usuario: Usuario = Usuario()
     var items:Array<Item> = []
     var status: String = ""
     var valorTotal: Double = 0.0

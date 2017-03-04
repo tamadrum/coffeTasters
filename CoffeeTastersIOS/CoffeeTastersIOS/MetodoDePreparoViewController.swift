@@ -17,7 +17,7 @@ class MetodoDePreparoViewController:UIViewController {
     @IBAction func proximoPasso(_ sender: Any) {
         
         indice += 1
-        if indice >= metodoPreparo[menuModos.selectedSegmentIndex].passos.count {
+        if indice >= (metodoPreparo[menuModos.selectedSegmentIndex].passos?.count)! {
             indice = 0
         }
         atualizaPasso()
@@ -27,7 +27,7 @@ class MetodoDePreparoViewController:UIViewController {
         
         indice -= 1
         if indice < 0 {
-            indice = metodoPreparo[menuModos.selectedSegmentIndex].passos.count - 1
+            indice = (metodoPreparo[menuModos.selectedSegmentIndex].passos?.count)! - 1
         }
         atualizaPasso()
         
@@ -57,14 +57,14 @@ class MetodoDePreparoViewController:UIViewController {
     
     func atualizaPasso() {
     
-        let images = metodoPreparo[menuModos.selectedSegmentIndex].passos[indice].getImagens()
+        let images = metodoPreparo[menuModos.selectedSegmentIndex].passos?[indice].getImagens()
         
         var animatedImage: UIImage!
-        animatedImage = UIImage.animatedImage(with: images, duration: 0.5)
+        animatedImage = UIImage.animatedImage(with: images!, duration: 0.5)
         imageView.image = animatedImage
         
-        descricaoTextView.text = metodoPreparo[menuModos.selectedSegmentIndex].passos[indice].descricao
-        modoPreparoLabel.text = metodoPreparo[menuModos.selectedSegmentIndex].passos[indice].tipo
+        descricaoTextView.text = metodoPreparo[menuModos.selectedSegmentIndex].passos?[indice].descricao
+        modoPreparoLabel.text = metodoPreparo[menuModos.selectedSegmentIndex].passos?[indice].tipo
     }
     
     

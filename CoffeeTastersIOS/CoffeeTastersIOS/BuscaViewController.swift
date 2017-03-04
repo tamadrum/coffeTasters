@@ -81,7 +81,7 @@ class BuscaViewController:UIViewController, UITableViewDelegate, UITableViewData
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         filtered = data.filter({ (cafe) -> Bool in
-            if cafe.nome.range(of: searchText) != nil {
+            if cafe.nome?.range(of: searchText) != nil {
                 print("buscando bom")
                 return true
             }

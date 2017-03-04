@@ -26,14 +26,15 @@ class DetalhesViewController:UIViewController{
         torradorLabel?.text = cafeAvaliado?.torrador
         produtorLabel?.text = cafeAvaliado?.produtor
         descricaoTextView?.text = cafeAvaliado?.descricao
-        rodaWheelFlavor?.flavorTorrador = cafeAvaliado?.flavor
+        rodaWheelFlavor?.flavorTorrador = cafeAvaliado?.flavorTorrador
         rodaWheelFlavor?.setNeedsDisplay()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "telaAvalia") {
             let view = segue.destination as! AvaliacaoViewController
-            view.cafeAvaliado = cafeAvaliado
+            view.cafeAvaliado(cafeAvaliado!)
+            //view.avaliacao.cafe = cafeAvaliado!
         }
         if(segue.identifier == "telaMapa") {
             let view = segue.destination as! MapaViewController

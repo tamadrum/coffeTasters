@@ -12,8 +12,6 @@
 		1607218B1E5F6E2100FF3C00 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160721871E5F6E2100FF3C00 /* FBSDKLoginKit.framework */; };
 		1607218C1E5F6E2100FF3C00 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160721881E5F6E2100FF3C00 /* FBSDKShareKit.framework */; };
 		160721961E5F7F5400FF3C00 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160721951E5F7F5400FF3C00 /* Usuario.swift */; };
-		160721981E5F7F7300FF3C00 /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160721971E5F7F7300FF3C00 /* Cafe.swift */; };
-		1607219A1E5F7F8F00FF3C00 /* Avaliacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160721991E5F7F8F00FF3C00 /* Avaliacao.swift */; };
 		1607219C1E5F7F9600FF3C00 /* Preparo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1607219B1E5F7F9600FF3C00 /* Preparo.swift */; };
 		1607219E1E5F7F9C00FF3C00 /* Pedido.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1607219D1E5F7F9C00FF3C00 /* Pedido.swift */; };
 		160721A01E5F7FA700FF3C00 /* Produto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1607219F1E5F7FA700FF3C00 /* Produto.swift */; };
@@ -43,7 +41,6 @@
 		166BA4411E659EB300739A41 /* Configuracoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166BA4401E659EB300739A41 /* Configuracoes.swift */; };
 		166BA4441E65B8D300739A41 /* SyncUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166BA4431E65B8D300739A41 /* SyncUtil.swift */; };
 		1691A8C01E5FC86B00FC5085 /* WheelFlavor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691A8BF1E5FC86B00FC5085 /* WheelFlavor.swift */; };
-		1691A8C21E5FDDB700FC5085 /* Flavor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691A8C11E5FDDB700FC5085 /* Flavor.swift */; };
 		1691A8CA1E60B66800FC5085 /* EsqueciMinhaSenhaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691A8C91E60B66800FC5085 /* EsqueciMinhaSenhaViewController.swift */; };
 		1691A8CC1E60D71C00FC5085 /* Dao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691A8CB1E60D71C00FC5085 /* Dao.swift */; };
 		16B1CCC41E5D950900681A4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B1CCC31E5D950900681A4E /* AppDelegate.swift */; };
@@ -57,6 +54,8 @@
 		16CB283A1E622B3B001E4E3B /* String+isCPF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB28391E622B3B001E4E3B /* String+isCPF.swift */; };
 		16CB283C1E622D62001E4E3B /* String+toMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB283B1E622D62001E4E3B /* String+toMD5.swift */; };
 		16EB43B31E69CE440073C58A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16EB43B11E69CE440073C58A /* Main.storyboard */; };
+		16EB43B51E6A53660073C58A /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EB43B41E6A53660073C58A /* DataController.swift */; };
+		16EB43B91E6A5C630073C58A /* FlavorDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EB43B81E6A5C630073C58A /* FlavorDao.swift */; };
 		16EC3BC01E674F90008BD23B /* CarrinhoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC3BBF1E674F90008BD23B /* CarrinhoViewController.swift */; };
 		16EC3BC21E674FC9008BD23B /* FinalizarCompraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC3BC11E674FC9008BD23B /* FinalizarCompraViewController.swift */; };
 		16EC3BC41E675C0B008BD23B /* ProdutoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC3BC31E675C0B008BD23B /* ProdutoDao.swift */; };
@@ -106,8 +105,6 @@
 		160721871E5F6E2100FF3C00 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = CoffeeTastersIOS/framework/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		160721881E5F6E2100FF3C00 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = CoffeeTastersIOS/framework/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		160721951E5F7F5400FF3C00 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
-		160721971E5F7F7300FF3C00 /* Cafe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
-		160721991E5F7F8F00FF3C00 /* Avaliacao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avaliacao.swift; sourceTree = "<group>"; };
 		1607219B1E5F7F9600FF3C00 /* Preparo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preparo.swift; sourceTree = "<group>"; };
 		1607219D1E5F7F9C00FF3C00 /* Pedido.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pedido.swift; sourceTree = "<group>"; };
 		1607219F1E5F7FA700FF3C00 /* Produto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Produto.swift; sourceTree = "<group>"; };
@@ -138,7 +135,6 @@
 		166BA4401E659EB300739A41 /* Configuracoes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuracoes.swift; sourceTree = "<group>"; };
 		166BA4431E65B8D300739A41 /* SyncUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncUtil.swift; sourceTree = "<group>"; };
 		1691A8BF1E5FC86B00FC5085 /* WheelFlavor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelFlavor.swift; sourceTree = "<group>"; };
-		1691A8C11E5FDDB700FC5085 /* Flavor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flavor.swift; sourceTree = "<group>"; };
 		1691A8C91E60B66800FC5085 /* EsqueciMinhaSenhaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EsqueciMinhaSenhaViewController.swift; sourceTree = "<group>"; };
 		1691A8CB1E60D71C00FC5085 /* Dao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dao.swift; sourceTree = "<group>"; };
 		16B1CCC01E5D950900681A4E /* CoffeeTastersIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeTastersIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +151,8 @@
 		16CB283B1E622D62001E4E3B /* String+toMD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+toMD5.swift"; sourceTree = "<group>"; };
 		16EB43B01E69B8EB0073C58A /* CoffeeTastersIOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoffeeTastersIOS.entitlements; sourceTree = "<group>"; };
 		16EB43B21E69CE440073C58A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CoffeeTastersIOS/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		16EB43B41E6A53660073C58A /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		16EB43B81E6A5C630073C58A /* FlavorDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlavorDao.swift; sourceTree = "<group>"; };
 		16EC3BBF1E674F90008BD23B /* CarrinhoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarrinhoViewController.swift; sourceTree = "<group>"; };
 		16EC3BC11E674FC9008BD23B /* FinalizarCompraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalizarCompraViewController.swift; sourceTree = "<group>"; };
 		16EC3BC31E675C0B008BD23B /* ProdutoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProdutoDao.swift; sourceTree = "<group>"; };
@@ -234,6 +232,7 @@
 				1645FE031E62F4FF0002C1B6 /* RatingView.swift */,
 				1618384D1E66DDFC00D4F438 /* BusyAlert.swift */,
 				16C92A0E1E698B1300BC8150 /* AcordeaoPedido.swift */,
+				16EB43B41E6A53660073C58A /* DataController.swift */,
 			);
 			name = util;
 			sourceTree = "<group>";
@@ -309,14 +308,11 @@
 			isa = PBXGroup;
 			children = (
 				160721951E5F7F5400FF3C00 /* Usuario.swift */,
-				160721971E5F7F7300FF3C00 /* Cafe.swift */,
-				160721991E5F7F8F00FF3C00 /* Avaliacao.swift */,
 				1607219B1E5F7F9600FF3C00 /* Preparo.swift */,
 				1607219D1E5F7F9C00FF3C00 /* Pedido.swift */,
 				1607219F1E5F7FA700FF3C00 /* Produto.swift */,
 				160721A11E5F86E500FF3C00 /* Passo.swift */,
 				160721A31E5F884A00FF3C00 /* Item.swift */,
-				1691A8C11E5FDDB700FC5085 /* Flavor.swift */,
 				166BA4401E659EB300739A41 /* Configuracoes.swift */,
 			);
 			name = modelo;
@@ -331,6 +327,7 @@
 				16EC3BC71E675C20008BD23B /* PedidoDao.swift */,
 				16149FD31E67AA6E00A455BF /* AvaliacoesDao.swift */,
 				33FD18981E6999EA009FCF73 /* PreparaDao.swift */,
+				16EB43B81E6A5C630073C58A /* FlavorDao.swift */,
 			);
 			name = dao;
 			sourceTree = "<group>";
@@ -555,15 +552,16 @@
 				1691A8CA1E60B66800FC5085 /* EsqueciMinhaSenhaViewController.swift in Sources */,
 				16149FD41E67AA6E00A455BF /* AvaliacoesDao.swift in Sources */,
 				1618384E1E66DDFC00D4F438 /* BusyAlert.swift in Sources */,
+				16EB43B51E6A53660073C58A /* DataController.swift in Sources */,
 				160721A41E5F884A00FF3C00 /* Item.swift in Sources */,
 				16149FBD1E67868500A455BF /* OfertasCustomViewCellHeader.swift in Sources */,
+				16EB43B91E6A5C630073C58A /* FlavorDao.swift in Sources */,
 				16EC3BC01E674F90008BD23B /* CarrinhoViewController.swift in Sources */,
 				160721961E5F7F5400FF3C00 /* Usuario.swift in Sources */,
 				3342439D1E5F4CC90001938F /* BuscaViewController.swift in Sources */,
 				1643CBB61E68CB77008D7872 /* FlavorCustomViewCell.swift in Sources */,
 				33FD18991E6999EA009FCF73 /* PreparaDao.swift in Sources */,
 				16B1CCCC1E5D950900681A4E /* CoffeeTastersIOS.xcdatamodeld in Sources */,
-				1607219A1E5F7F8F00FF3C00 /* Avaliacao.swift in Sources */,
 				334243951E5F4C770001938F /* PedidosViewController.swift in Sources */,
 				334243A71E5F4D6D0001938F /* MetodoDePreparoViewController.swift in Sources */,
 				1607219E1E5F7F9C00FF3C00 /* Pedido.swift in Sources */,
@@ -581,10 +579,8 @@
 				16149FC11E6786A000A455BF /* PedidosCustomViewCellHeader.swift in Sources */,
 				1613A0C31E689C0700E9DE65 /* Pino.swift in Sources */,
 				3342438F1E5F4C210001938F /* PerfilViewController.swift in Sources */,
-				160721981E5F7F7300FF3C00 /* Cafe.swift in Sources */,
 				160721A01E5F7FA700FF3C00 /* Produto.swift in Sources */,
 				16EC3BC81E675C20008BD23B /* PedidoDao.swift in Sources */,
-				1691A8C21E5FDDB700FC5085 /* Flavor.swift in Sources */,
 				334243A11E5F4CFB0001938F /* FlavorViewController.swift in Sources */,
 				16149FC31E6786A600A455BF /* PedidosCustomViewCellDetails.swift in Sources */,
 				163728691E624585009CB0DA /* String+isRG.swift in Sources */,

@@ -20,47 +20,24 @@ class AvaliacoesDao {
         }
     }
     
-    func getLista() -> Array<Avaliacao> {
-        var retorno = Array<Avaliacao>()
+    func getLista() -> [Avaliacao] {
+        var retorno:[Avaliacao] = []
         
-        var avaliacoes: [NSManagedObject] = []
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "CDAvaliacao")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "CDAvaliacao")
         
         do {
-            avaliacoes = try managedContext!.fetch(fetchRequest)
+            retorno = try managedContext?.fetch(fetchRequest) as! [Avaliacao]
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
-        
-        for obj in avaliacoes {
-            let a = Avaliacao()
-            
-            a.gostou = obj.value(forKeyPath: "gostou") as! Int
-            a.cafe = obj.mutableSetValue(forKey: "cafe").allObjects.first as! Cafe
-            a.data = obj.value(forKey: "data") as! Date
-            a.flavor = obj.mutableSetValue(forKey: "cafe").allObjects.first as! Flavor
-            a.flavorMedia = obj.mutableSetValue(forKey: "cafe").allObjects.first as! Flavor
-            a.metodoPreparo = obj.value(forKey: "metodoPreparo") as! String
-            a.obs = obj.value(forKey: "obs") as! String
-            
-            retorno.append(a)
-        }
-        
         return retorno
     }
     
-    func save(_ data: Avaliacao) {
-        let entity = NSEntityDescription.entity(forEntityName: "CDAvaliacao", in: managedContext!)!
-        let avaliacao = NSManagedObject(entity: entity, insertInto: managedContext)
-        
-        avaliacao.setValue(data.gostou, forKey: "gostou")
-        avaliacao.setValue(NSSet(object: data.cafe), forKey: "cafe")
-        avaliacao.setValue(data.data, forKeyPath: "data")
-        avaliacao.setValue(NSSet(object: data.flavor), forKey: "flavor")
-        avaliacao.setValue(NSSet(object: data.flavorMedia), forKey: "flavorMedia")
-        avaliacao.setValue(data.metodoPreparo, forKey: "metodoPreparo")
-        avaliacao.setValue(data.obs, forKey: "obs")
-        
+    func newAvaliacao() -> Avaliacao {
+        return NSEntityDescription.insertNewObject(forEntityName: "CDAvaliacao", into: managedContext!) as! Avaliacao
+    }
+
+    func save() {
         do {
             try managedContext?.save()
         } catch let error as NSError {

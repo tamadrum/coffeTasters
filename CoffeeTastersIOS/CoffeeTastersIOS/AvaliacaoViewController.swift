@@ -8,6 +8,8 @@
 
 import UIKit
 import Foundation
+import FBSDKShareKit
+import Social
 
 class AvaliacaoViewController:UIViewController, UpdateFlavorUsuario {
     
@@ -18,24 +20,29 @@ class AvaliacaoViewController:UIViewController, UpdateFlavorUsuario {
     @IBOutlet weak var gostouRatingView: RatingView?
     @IBOutlet weak var rodaWheelFlavor: WheelFlavor?
 
-    var cafeAvaliado: Cafe?
-    var avaliacao = Avaliacao()
+    var avaliacao: Avaliacao!
     
     func cafeAvaliado(_ cafe: Cafe) {
-        self.cafeAvaliado = cafe
+        avaliacao = AvaliacoesDao().newAvaliacao()
+        self.avaliacao.cafe = cafe
+        
+        avaliacao.flavor = FlavorDao().newFlavor()
+        avaliacao.flavor?.doce = 0
+        avaliacao.flavorMedia = FlavorDao().newFlavor()
+        avaliacao.flavorMedia?.doce = 0
     }
     
     override func viewDidLoad() {
-        self.nomeTextField?.text = cafeAvaliado?.nome
-        self.torradorTextField?.text = cafeAvaliado?.torrador
-        self.produtorTextField?.text = cafeAvaliado?.produtor
+        self.nomeTextField?.text = self.avaliacao.cafe?.nome
+        self.torradorTextField?.text = self.avaliacao.cafe?.torrador
+        self.produtorTextField?.text = self.avaliacao.cafe?.produtor
     }
 
     @IBAction func mostraTorrador(_ sender: Any) {
         if rodaWheelFlavor?.flavorTorrador == nil {
-            rodaWheelFlavor?.flavorTorrador = cafeAvaliado?.flavor
+            rodaWheelFlavor?.flavorTorrador = self.avaliacao.cafe?.flavorTorrador
         } else {
-            rodaWheelFlavor?.flavorTorrador = Flavor()
+            rodaWheelFlavor?.flavorTorrador = nil
         }
         rodaWheelFlavor?.setNeedsDisplay()
     }
@@ -44,22 +51,35 @@ class AvaliacaoViewController:UIViewController, UpdateFlavorUsuario {
         if rodaWheelFlavor?.flavorMedia == nil {
             rodaWheelFlavor?.flavorMedia = avaliacao.flavorMedia
         } else {
-            rodaWheelFlavor?.flavorMedia = Flavor()
+            rodaWheelFlavor?.flavorMedia = nil
         }
         rodaWheelFlavor?.setNeedsDisplay()
     }
     
     @IBAction func share(_ sender: Any) {
+        let vc = SLComposeViewController(forServiceType:SLServiceTypeFacebook)
+        //vc.add(image: UIImage(named: "config")!)
+        vc?.add(URL(string: "http://www.example.com/"))
+        vc?.setInitialText("Initial text here.")
+        self.present(vc!, animated: true, completion: nil)
     }
     
     @IBAction func salvar(_ sender: Any) {
+        avaliacao.gostou = Int16((gostouRatingView?.rating)!)
+        avaliacao.obs = (comentarioTextView?.text)!
+        
+        AvaliacoesDao().save()
+        
+        if let navigation = navigationController {
+            navigation.popViewController(animated: true)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if ( segue.identifier == "telaRoda" ) {
             let view = segue.destination as! FlavorViewController
-            view.flavor = avaliacao.flavor
             view.delegate = self
+            view.flavor = avaliacao.flavor
         }
     }
     
