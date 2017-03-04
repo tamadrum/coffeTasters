@@ -28,6 +28,8 @@ class DetalhesViewController:UIViewController{
         descricaoTextView?.text = cafeAvaliado?.descricao
         rodaWheelFlavor?.flavorTorrador = cafeAvaliado?.flavorTorrador
         rodaWheelFlavor?.setNeedsDisplay()
+        
+        self.navigationItem.title = cafeAvaliado?.nome
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
