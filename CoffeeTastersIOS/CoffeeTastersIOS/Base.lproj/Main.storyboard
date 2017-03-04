@@ -1429,7 +1429,7 @@
         <!--Busca-->
         <scene sceneID="o0o-SB-gPI">
             <objects>
-                <viewController id="StP-dz-369" customClass="BuscaViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="StP-dz-369" customClass="BuscaViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AXv-dQ-bTH"/>
                         <viewControllerLayoutGuide type="bottom" id="aTW-5I-QRy"/>
