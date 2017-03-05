@@ -62,6 +62,7 @@ class Usuario: NSObject, NSCoding {
     }
     
     func save () {
+        print("Salvando usuario con nome: \(nome) - \(email)")
         NSKeyedArchiver.archiveRootObject(self, toFile: getArchive(for:"usuario"))
     }
     
