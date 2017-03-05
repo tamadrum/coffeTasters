@@ -408,7 +408,7 @@
 				TargetAttributes = {
 					16B1CCBF1E5D950900681A4E = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 6J39ANGJ92;
+						DevelopmentTeam = P5NJ75969Q;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -652,7 +652,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CoffeeTastersIOS/CoffeeTastersIOS.entitlements;
-				DEVELOPMENT_TEAM = 6J39ANGJ92;
+				DEVELOPMENT_TEAM = P5NJ75969Q;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -660,7 +660,7 @@
 				);
 				INFOPLIST_FILE = CoffeeTastersIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.luglio.CoffeeTastersIOS;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.2luglio.CoffeeTastersIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -675,7 +675,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CoffeeTastersIOS/CoffeeTastersIOS.entitlements;
-				DEVELOPMENT_TEAM = 6J39ANGJ92;
+				DEVELOPMENT_TEAM = P5NJ75969Q;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -683,7 +683,7 @@
 				);
 				INFOPLIST_FILE = CoffeeTastersIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.luglio.CoffeeTastersIOS;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.2luglio.CoffeeTastersIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
