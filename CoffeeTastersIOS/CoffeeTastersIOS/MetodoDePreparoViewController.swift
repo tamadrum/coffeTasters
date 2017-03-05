@@ -15,7 +15,7 @@ class MetodoDePreparoViewController:UIViewController {
     @IBOutlet var descricaoTextView: UITextView!
     @IBOutlet var menuModos: UISegmentedControl!
     
-    var preparos: [Preparo] = []
+    var preparos = PreparaDao().getPreparo()
     var indice = 0
     
     @IBAction func proximoPasso(_ sender: Any) {
@@ -36,18 +36,22 @@ class MetodoDePreparoViewController:UIViewController {
 
     override func viewDidLoad() {
         menuModos.removeAllSegments()
-        menuModos.frame = CGRect(x: menuModos.frame.origin.x,y: menuModos.frame.origin.y, width: menuModos.frame.size.width,height: 50)
         
         for i in 0..<preparos.count {
+            print("Adicionei \(i)" )
             menuModos.insertSegment(with: UIImage(named: preparos[i].imagem!), at: i, animated: true)
         }
         
+        menuModos.frame = CGRect(x: menuModos.frame.origin.x,y: menuModos.frame.origin.y, width: menuModos.frame.size.width,height: 50)
+
         menuModos.addTarget(self, action: #selector(atualizaPasso), for: .valueChanged)
-        
+        menuModos.selectedSegmentIndex = 0;
         atualizaPasso()
     }
     
     func atualizaPasso() {
+        print(menuModos.selectedSegmentIndex)
+        
         let preparo = preparos[menuModos.selectedSegmentIndex]
         let passos = preparo.passo?.allObjects as! [Passo]
         let imagesString = passos[indice].imagens

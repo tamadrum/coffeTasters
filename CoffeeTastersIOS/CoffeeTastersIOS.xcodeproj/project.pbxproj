@@ -73,7 +73,7 @@
 		33FD188D1E68C565009FCF73 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 33FD188A1E68C565009FCF73 /* 1.png */; };
 		33FD188E1E68C565009FCF73 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 33FD188B1E68C565009FCF73 /* 2.png */; };
 		33FD188F1E68C565009FCF73 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 33FD188C1E68C565009FCF73 /* 3.png */; };
-		33FD18991E6999EA009FCF73 /* PreparaDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FD18981E6999EA009FCF73 /* PreparaDao.swift */; };
+		33FD18991E6999EA009FCF73 /* PreparoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FD18981E6999EA009FCF73 /* PreparoDao.swift */; };
 		33FD189F1E699F29009FCF73 /* preparo-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 33FD189A1E699F29009FCF73 /* preparo-1.png */; };
 		33FD18A01E699F29009FCF73 /* preparo-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 33FD189B1E699F29009FCF73 /* preparo-2.png */; };
 		33FD18A11E699F29009FCF73 /* preparo-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 33FD189C1E699F29009FCF73 /* preparo-3.png */; };
@@ -162,7 +162,7 @@
 		33FD188A1E68C565009FCF73 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.png; path = imgs/1.png; sourceTree = "<group>"; };
 		33FD188B1E68C565009FCF73 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2.png; path = imgs/2.png; sourceTree = "<group>"; };
 		33FD188C1E68C565009FCF73 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 3.png; path = imgs/3.png; sourceTree = "<group>"; };
-		33FD18981E6999EA009FCF73 /* PreparaDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreparaDao.swift; sourceTree = "<group>"; };
+		33FD18981E6999EA009FCF73 /* PreparoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreparoDao.swift; sourceTree = "<group>"; };
 		33FD189A1E699F29009FCF73 /* preparo-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "preparo-1.png"; path = "imgs/preparo-1.png"; sourceTree = "<group>"; };
 		33FD189B1E699F29009FCF73 /* preparo-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "preparo-2.png"; path = "imgs/preparo-2.png"; sourceTree = "<group>"; };
 		33FD189C1E699F29009FCF73 /* preparo-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "preparo-3.png"; path = "imgs/preparo-3.png"; sourceTree = "<group>"; };
@@ -287,7 +287,7 @@
 				16EC3BC51E675C14008BD23B /* CafeDao.swift */,
 				16EC3BC71E675C20008BD23B /* PedidoDao.swift */,
 				16149FD31E67AA6E00A455BF /* AvaliacoesDao.swift */,
-				33FD18981E6999EA009FCF73 /* PreparaDao.swift */,
+				33FD18981E6999EA009FCF73 /* PreparoDao.swift */,
 				16EB43B81E6A5C630073C58A /* FlavorDao.swift */,
 			);
 			name = dao;
@@ -510,7 +510,7 @@
 				160721961E5F7F5400FF3C00 /* Usuario.swift in Sources */,
 				3342439D1E5F4CC90001938F /* BuscaViewController.swift in Sources */,
 				1643CBB61E68CB77008D7872 /* FlavorCustomViewCell.swift in Sources */,
-				33FD18991E6999EA009FCF73 /* PreparaDao.swift in Sources */,
+				33FD18991E6999EA009FCF73 /* PreparoDao.swift in Sources */,
 				16B1CCCC1E5D950900681A4E /* CoffeeTastersIOS.xcdatamodeld in Sources */,
 				334243951E5F4C770001938F /* PedidosViewController.swift in Sources */,
 				334243A71E5F4D6D0001938F /* MetodoDePreparoViewController.swift in Sources */,
