@@ -32,11 +32,29 @@ class Configuracoes:NSObject, NSCoding  {
         torrador = aDecoder.decodeObject(forKey:"torrador") as! UIColor
         media = aDecoder.decodeObject(forKey:"media") as! UIColor
         usuario = aDecoder.decodeObject(forKey:"usuario") as! UIColor
-        
-        if let nm = aDecoder.decodeObject(forKey:"nightMode") {
-            nightMode = nm as! Bool
-        } else {
-            nightMode = false
+        nightMode = aDecoder.decodeBool(forKey: "nightMode")
+    }
+    
+    func save() {
+        NSKeyedArchiver.archiveRootObject(self, toFile: getArchive(for:"configuracoes"))
+    }
+    
+    func load() {
+        if let loaded = NSKeyedUnarchiver.unarchiveObject(withFile: getArchive(for:"configuracoes")) {
+            let configuracoes = loaded as! Configuracoes
+            
+            self.torrador = configuracoes.torrador
+            self.media = configuracoes.media
+            self.usuario = configuracoes.usuario
+            self.nightMode = configuracoes.nightMode
         }
+    }
+    
+    func getArchive(for resource: String) -> String {
+        let usersDirs = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+        let dir = usersDirs[0]
+        
+        let archive = "\(dir)/coffeetasters-\(resource).dados"
+        return archive
     }
 }

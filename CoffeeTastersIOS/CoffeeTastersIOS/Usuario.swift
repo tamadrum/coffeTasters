@@ -61,4 +61,33 @@ class Usuario: NSObject, NSCoding {
         viuOEULA = false
     }
     
+    func save () {
+        NSKeyedArchiver.archiveRootObject(self, toFile: getArchive(for:"usuario"))
+    }
+    
+    func load() {
+        if let loaded = NSKeyedUnarchiver.unarchiveObject(withFile: getArchive(for:"usuario")) {
+            let usuario = loaded as! Usuario
+            
+            self.nome = usuario.nome
+            self.email = usuario.email
+            self.senha = usuario.senha
+            self.perfilPic = usuario.perfilPic
+            self.numeroCartao = usuario.numeroCartao
+            self.nomeCartao = usuario.nomeCartao
+            self.tipoCartao = usuario.tipoCartao
+            self.validadeCartao = usuario.validadeCartao
+            self.cpf = usuario.cpf
+            self.viuOEULA = usuario.viuOEULA
+        }
+    }
+    
+    func getArchive(for resource: String) -> String {
+        let usersDirs = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+        let dir = usersDirs[0]
+        
+        let archive = "\(dir)/coffeetasters-\(resource).dados"
+        return archive
+    }
+    
 }

@@ -36,28 +36,28 @@ class AcordeaoPedido: UIViewController, UITableViewDataSource, UITableViewDelega
         self.dataSource[parent].state = .expanded
         var insertPos = index + 1
             
-        let indexPaths = (0..<currentSubItems.count).map { _ -> IndexPath in
+        let indexPaths = (0..<(currentSubItems?.count)!).map { _ -> IndexPath in
             let indexPath = IndexPath(row: insertPos, section: 0)
             insertPos += 1
             return indexPath
         }
         tableView.insertRows(at: indexPaths, with: UITableViewRowAnimation.fade)
         
-        total += currentSubItems.count
+        total += (currentSubItems?.count)!
     }
     
     open func collapseSubItemsAtIndex(tableView: UITableView, index : Int, parent: Int) {
         var indexPaths = [IndexPath]()
-        let numberOfChilds = self.dataSource[parent].item.items.count
+        let numberOfChilds = self.dataSource[parent].item.items?.count
         self.dataSource[parent].state = .collapsed
         
-        guard index + 1 <= index + numberOfChilds else { return }
+        guard index + 1 <= index + numberOfChilds! else { return }
         
-        indexPaths = (index + 1...index + numberOfChilds).map { IndexPath(row: $0, section: 0)}
+        indexPaths = (index + 1...index + numberOfChilds!).map { IndexPath(row: $0, section: 0)}
         
         tableView.deleteRows(at: indexPaths, with: UITableViewRowAnimation.fade)
         
-        self.total -= numberOfChilds
+        self.total -= numberOfChilds!
     }
     
     open func updateCells(tableView: UITableView, parent: Int, index: Int) {
@@ -80,7 +80,7 @@ class AcordeaoPedido: UIViewController, UITableViewDataSource, UITableViewDelega
                     
                     // cell tapped is below of previously expanded, then we need to update the index to expand.
                     if parent > parentOfCellExpanded {
-                        let newIndex = index - self.dataSource[parentOfCellExpanded].item.items.count
+                        let newIndex = index - (self.dataSource[parentOfCellExpanded].item.items?.count)!
                         self.expandItemAtIndex(tableView: tableView, index:newIndex, parent: parent)
                         self.lastCellExpanded = (newIndex, parent)
                     }
@@ -110,7 +110,7 @@ class AcordeaoPedido: UIViewController, UITableViewDataSource, UITableViewDelega
             
             switch (item.state) {
             case .expanded:
-                position += item.item.items.count + 1
+                position += (item.item.items?.count)! + 1
             case .collapsed:
                 position += 1
             }
@@ -128,7 +128,7 @@ class AcordeaoPedido: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         
         item = self.dataSource[parent - 1]
-        return (parent - 1, position == index, position - item.item.items.count - 1)
+        return (parent - 1, position == index, position - item.item.items!.count - 1)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

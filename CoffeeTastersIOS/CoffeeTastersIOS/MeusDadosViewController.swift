@@ -49,7 +49,7 @@ class MeusDadosViewController:UIViewController{
             if let validadeCartaoTextField = validadeCartaoTextField.text { usuario.validadeCartao = validadeCartaoTextField }
             if let tipoCartao = tipoCartaoTextField.text { usuario.tipoCartao = tipoCartao }
             
-            Dao().save(usuario)
+            usuario.save()
     
         if let navigator = navigationController {
             navigator.popViewController(animated: true)

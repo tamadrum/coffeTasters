@@ -17,11 +17,13 @@ class PerfilViewController:UIViewController{
     @IBOutlet weak var qtdAvaliacoes: UILabel?
     @IBOutlet weak var qtdCafes: UILabel?
     
-    var u: Usuario = Dao().load()
+    let u = Usuario()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        u.load()
+        
         nomeUsuario?.text = u.nome
         emailUsuario?.text = u.email
         
@@ -41,7 +43,7 @@ class PerfilViewController:UIViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "meusDados") {
             let view = segue.destination as! MeusDadosViewController
-            view.carregaUsuario(u)
+            view.carregaUsuario(Usuario())
         }
     }
     

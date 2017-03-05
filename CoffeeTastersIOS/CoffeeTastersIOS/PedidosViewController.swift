@@ -47,12 +47,14 @@ class PedidosViewController:AcordeaoPedido {
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: childCellIdentifier, for: indexPath) as! PedidosCustomViewCellDetails
-
-            let item = dataSource[parent].item.items[indexPath.row - actualPosition - 1]
+            
+            let items = dataSource[parent].item.items?.allObjects as! [Item]
+            
+            let item = items[indexPath.row - actualPosition - 1]
             
             cell.quantidade?.text = "\(item.quantidade)"
-            cell.nome?.text = item.produto.nome
-            cell.valor?.text = "R$ \(item.produto.preco)"
+            cell.nome?.text = item.produto?.nome
+            cell.valor?.text = "R$ \(item.produto?.preco)"
             
             return cell
         }

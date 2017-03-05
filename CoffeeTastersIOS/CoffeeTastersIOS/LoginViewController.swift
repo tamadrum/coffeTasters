@@ -25,7 +25,7 @@ class LoginViewController:UIViewController, FBSDKLoginButtonDelegate {
     var usuario:Usuario = Usuario()
     
     override func viewDidLoad() {
-        usuario = Dao().load()
+        usuario.load()
         
         if (FBSDKAccessToken.current() != nil) {
             returnUserData()
@@ -48,7 +48,7 @@ class LoginViewController:UIViewController, FBSDKLoginButtonDelegate {
             
             let ok = UIAlertAction(title: "OK", style: .default, handler: {(alert: UIAlertAction!) in
                 self.usuario.viuOEULA = true
-                Dao().save(self.usuario)
+                self.usuario.save()
             })
             alerta.addAction(ok)
             
@@ -109,7 +109,7 @@ class LoginViewController:UIViewController, FBSDKLoginButtonDelegate {
                         print("Facebook guardei email: \(email)")
                     }
                     
-                    Dao().save(self.usuario)
+                    self.usuario.save()
                 }
             }
         })

@@ -9,42 +9,50 @@
 import Foundation
 
 class PreparaDao {
+    
+    func getPreparo() -> [Preparo] {
+            let passos = NSSet()
+            
+            let passo1 = Passo()
+            passo1.indice = 1
+            passo1.tempo = 5
+            passo1.imagens = ["preparo-1", "preparo-2", "preparo-3", "preparo-4", "preparo-5"]
+            passo1.descricao = "Moer os grãos"
 
-    func getPreparo() -> Array<Preparo> {
-    
-        var passosCoado = Array<Passo>()
+            let passo2 = Passo()
+            passo2.indice = 2
+            passo2.tempo = 5
+            passo2.imagens = ["preparo-1", "preparo-2", "preparo-3", "preparo-4", "preparo-5"]
+            passo2.descricao = "Colocar o pó no coador"
+            
+            let passo3 = Passo()
+            passo3.indice = 3
+            passo3.tempo = 5
+            passo3.imagens = ["preparo-1", "preparo-2", "preparo-3", "preparo-4", "preparo-5"]
+            passo3.descricao = "Jogar agua e esperar"
+            
+            let passo4 = Passo()
+            passo4.indice = 4
+            passo4.tempo = 5
+            passo4.imagens = ["preparo-1", "preparo-2", "preparo-3", "preparo-4", "preparo-5"]
+            passo4.descricao = "Colocar na garrafa térmica"
+            
+            passos.adding(passo1)
+            passos.adding(passo2)
+            passos.adding(passo3)
+            passos.adding(passo4)
         
-        let passoCoado1 = Passo(indice: 1, tipo: "Coado", tempo: 5, imagens: ["preparo-1", "preparo-2", "preparo-3", "preparo-4", "preparo-5"], descricao: "Moer os grãos")
-        let passoCoado2 = Passo(indice: 2, tipo: "Coado", tempo: 5, imagens: ["preparo-1", "preparo-2", "preparo-3", "preparo-4", "preparo-5"], descricao: "Colocar o pó no coador")
-        let passoCoado3 = Passo(indice: 3, tipo: "Coado", tempo: 5, imagens: ["preparo-1", "preparo-2", "preparo-3", "preparo-4", "preparo-5"], descricao: "Jogar agua e esperar")
-        let passoCoado4 = Passo(indice: 4, tipo: "Coado", tempo: 5, imagens: ["preparo-1", "preparo-2", "preparo-3", "preparo-4", "preparo-5"], descricao: "Colocar na garrafa térmica")
+        let preparo1 = Preparo()
+        preparo1.nome = "Coado"
+        preparo1.imagem = "coffee_press_1.png"
+        preparo1.passo = passos
         
-        passosCoado.append(passoCoado1)
-        passosCoado.append(passoCoado2)
-        passosCoado.append(passoCoado3)
-        passosCoado.append(passoCoado4)
-        
-        let coado = Preparo(passos: passosCoado)
-    
-        var passosPrensa = Array<Passo>()
-        
-        let passoPrensa1 = Passo(indice: 1, tipo: "Prensa", tempo: 5, imagens: ["preparo-1", "preparo-2", "preparo-3", "preparo-4", "preparo-5"], descricao: "Moer os grãos para a prensa")
-        let passoPrensa2 = Passo(indice: 2, tipo: "Prensa", tempo: 5, imagens: ["preparo-1", "preparo-2", "preparo-3", "preparo-4", "preparo-5"], descricao: "Colocar o pó no coador para a prensa")
-        let passoPrensa3 = Passo(indice: 3, tipo: "Prensa", tempo: 5, imagens: ["preparo-1", "preparo-2", "preparo-3", "preparo-4", "preparo-5"], descricao: "Jogar agua e esperar para a prensa")
-        let passoPrensa4 = Passo(indice: 4, tipo: "Prensa", tempo: 5, imagens: ["preparo-1", "preparo-2", "preparo-3", "preparo-4", "preparo-5"], descricao: "Colocar na garrafa térmica para a prensa")
-        
-        passosPrensa.append(passoPrensa1)
-        passosPrensa.append(passoPrensa2)
-        passosPrensa.append(passoPrensa3)
-        passosPrensa.append(passoPrensa4)
-        
-        let prensa = Preparo(passos: passosPrensa)
-        
-        var preparos:Array<Preparo> = []
-        preparos.append(coado)
-        preparos.append(prensa)
-        
-        return preparos
+        let preparo2 = Preparo()
+        preparo2.nome = "Prensa Francesa"
+        preparo2.imagem = "pour_over_cone_1.png"
+        preparo2.passo = passos
+     
+        return [preparo1, preparo2]
     }
 
 }

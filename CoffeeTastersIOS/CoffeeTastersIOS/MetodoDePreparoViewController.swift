@@ -14,57 +14,55 @@ class MetodoDePreparoViewController:UIViewController {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var descricaoTextView: UITextView!
     @IBOutlet var menuModos: UISegmentedControl!
+    
+    var preparos: [Preparo] = []
+    var indice = 0
+    
     @IBAction func proximoPasso(_ sender: Any) {
-        
         indice += 1
-        if indice >= (metodoPreparo[menuModos.selectedSegmentIndex].passos?.count)! {
+        if indice >= (preparos[menuModos.selectedSegmentIndex].passo?.count)! {
             indice = 0
         }
         atualizaPasso()
-        
     }
+    
     @IBAction func anteriorPasso(_ sender: Any) {
-        
         indice -= 1
         if indice < 0 {
-            indice = (metodoPreparo[menuModos.selectedSegmentIndex].passos?.count)! - 1
+            indice = (preparos[menuModos.selectedSegmentIndex].passo?.count)! - 1
         }
         atualizaPasso()
-        
     }
-    
-    var metodoPreparo = PreparaDao().getPreparo()
-    var indice = 0
-    
-    
+
     override func viewDidLoad() {
-        
+        menuModos.removeAllSegments()
         menuModos.frame = CGRect(x: menuModos.frame.origin.x,y: menuModos.frame.origin.y, width: menuModos.frame.size.width,height: 50)
         
-        menuModos.addTarget(self, action: #selector(changeModo), for: .valueChanged)
+        for i in 0..<preparos.count {
+            menuModos.insertSegment(with: UIImage(named: preparos[i].imagem!), at: i, animated: true)
+        }
+        
+        menuModos.addTarget(self, action: #selector(atualizaPasso), for: .valueChanged)
         
         atualizaPasso()
-        
-    }
-    
-    func changeModo() {
-    
-        print(menuModos.selectedSegmentIndex)
-        atualizaPasso()
-        
-        
     }
     
     func atualizaPasso() {
-    
-        let images = metodoPreparo[menuModos.selectedSegmentIndex].passos?[indice].getImagens()
+        let preparo = preparos[menuModos.selectedSegmentIndex]
+        let passos = preparo.passo?.allObjects as! [Passo]
+        let imagesString = passos[indice].imagens
+        var images:[UIImage] = []
+        
+        for s in imagesString! {
+            images.append(UIImage(named: s as! String)!)
+        }
         
         var animatedImage: UIImage!
-        animatedImage = UIImage.animatedImage(with: images!, duration: 0.5)
+        animatedImage = UIImage.animatedImage(with: images, duration: 0.5)
         imageView.image = animatedImage
         
-        descricaoTextView.text = metodoPreparo[menuModos.selectedSegmentIndex].passos?[indice].descricao
-        modoPreparoLabel.text = metodoPreparo[menuModos.selectedSegmentIndex].passos?[indice].tipo
+        descricaoTextView.text = passos[indice].descricao
+        modoPreparoLabel.text = preparo.nome
     }
     
     
