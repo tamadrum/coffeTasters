@@ -35,8 +35,7 @@ class PedidoDao {
         ped1.numero = 101010
         ped1.status = "Em processamento..."
         ped1.valorTotal = 100
-        ped1.items = NSSet()
-        
+ 
         let item1 = newItem()
         item1.quantidade = 2
         item1.produto = ProdutoDao().newProduto()
@@ -56,8 +55,8 @@ class PedidoDao {
         item2.produto?.oferta = false
         item2.produto?.descricao = "Descrição do Café"
         
-        ped1.items?.adding(item1)
-        ped1.items?.adding(item2)
+        ped1.addToItems(item1)
+        ped1.addToItems(item2)
         
         pedidos.append(ped1)
         
@@ -86,8 +85,9 @@ class PedidoDao {
         item4.produto?.oferta = false
         item4.produto?.descricao = "Descrição do Café"
         
-        ped2.items?.adding(item3)
-        ped2.items?.adding(item4)
+        ped2.addToItems(item3)
+        ped2.addToItems(item4)
+
         
         pedidos.append(ped2)
         

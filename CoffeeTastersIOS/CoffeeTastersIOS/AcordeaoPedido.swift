@@ -32,18 +32,22 @@ class AcordeaoPedido: UIViewController, UITableViewDataSource, UITableViewDelega
     var lastCellExpanded : (Int, Int)!
     
     open func expandItemAtIndex(tableView: UITableView, index : Int, parent: Int) {
-        let currentSubItems = self.dataSource[parent].item.items
+        let pedido = self.dataSource[parent].item
+        let items = pedido.items?.allObjects as! [Item]
+        
+        let currentSubItems = items.count
         self.dataSource[parent].state = .expanded
         var insertPos = index + 1
             
-        let indexPaths = (0..<(currentSubItems?.count)!).map { _ -> IndexPath in
+        let indexPaths = (0..<currentSubItems).map { _ -> IndexPath in
             let indexPath = IndexPath(row: insertPos, section: 0)
             insertPos += 1
             return indexPath
         }
         tableView.insertRows(at: indexPaths, with: UITableViewRowAnimation.fade)
         
-        total += (currentSubItems?.count)!
+        total += currentSubItems
+        print("ACD Expandindo: \(currentSubItems)")
     }
     
     open func collapseSubItemsAtIndex(tableView: UITableView, index : Int, parent: Int) {
@@ -58,6 +62,7 @@ class AcordeaoPedido: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.deleteRows(at: indexPaths, with: UITableViewRowAnimation.fade)
         
         self.total -= numberOfChilds!
+        print("ACD Colapsando: \(numberOfChilds!)")
     }
     
     open func updateCells(tableView: UITableView, parent: Int, index: Int) {

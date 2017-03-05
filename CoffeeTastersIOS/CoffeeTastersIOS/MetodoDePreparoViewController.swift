@@ -50,8 +50,6 @@ class MetodoDePreparoViewController:UIViewController {
     }
     
     func atualizaPasso() {
-        print(menuModos.selectedSegmentIndex)
-        
         let preparo = preparos[menuModos.selectedSegmentIndex]
         let passos = preparo.passo?.allObjects as! [Passo]
         let imagesString = passos[indice].imagens
