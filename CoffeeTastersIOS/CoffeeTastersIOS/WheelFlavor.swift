@@ -68,15 +68,31 @@ class WheelFlavor: UIView {
             desenhaCirculosPequenos(context: context, canvas:frame, centro:centro, raio:raio)
             context.strokePath()
             
+            if let flavor = flavorUsuario {
+                desenhaGraficoPreenchido(context: context, canvas:frame, centro:centro, raio:raio, flavor:flavor, cores:
+                    [hexStringToUIColor(hex: "5E3A17"),
+                     hexStringToUIColor(hex: "BE8E3D"),
+                     hexStringToUIColor(hex: "9C8A33"),
+                     hexStringToUIColor(hex: "C5B742"),
+                     hexStringToUIColor(hex: "BC6337"),
+                     hexStringToUIColor(hex: "D7925B"),
+                     hexStringToUIColor(hex: "ECC56E"),
+                     hexStringToUIColor(hex: "E7CB9B"),
+                     hexStringToUIColor(hex: "3287A5"),
+                     hexStringToUIColor(hex: "8DB7A5"),
+                     hexStringToUIColor(hex: "703B52"),
+                     hexStringToUIColor(hex: "945A72"),
+                     hexStringToUIColor(hex: "422718"),
+                     hexStringToUIColor(hex: "9C8A33"),
+                     hexStringToUIColor(hex: "C5B742"),
+                     hexStringToUIColor(hex: "BC6337")])
+                //desenhaGrafico(context: context, canvas:frame, centro:centro, raio:raio, flavor:flavor, cor: UIColor.black)
+            }
             if let flavor = flavorTorrador {
                 desenhaGrafico(context: context, canvas:frame, centro:centro, raio:raio, flavor:flavor, cor: UIColor.red)
             }
             if let flavor = flavorMedia {
                 desenhaGrafico(context: context, canvas:frame, centro:centro, raio:raio, flavor:flavor, cor: UIColor.blue)
-            }
-            if let flavor = flavorUsuario {
-                //desenhaGraficoPreenchido(context: context, canvas:frame, centro:centro, raio:raio, flavor:flavor, cor: UIColor.green)
-                desenhaGrafico(context: context, canvas:frame, centro:centro, raio:raio, flavor:flavor, cor: UIColor.black)
             }
         }
 
@@ -149,16 +165,15 @@ class WheelFlavor: UIView {
         }
     }
 
-    func desenhaGraficoPreenchido (context: CGContext, canvas: CGRect, centro: CGPoint, raio: Int, flavor: Flavor, cor: UIColor) {
+    func desenhaGraficoPreenchido (context: CGContext, canvas: CGRect, centro: CGPoint, raio: Int, flavor: Flavor, cores: [UIColor]) {
         context.setLineWidth(2.0)
-        context.setStrokeColor(cor.cgColor)
         
         let doce1 = getCoordenadas(centro: centro, raio: Int(flavor.doce)*raio/10,  angulo:90)
         let doce2 = getCoordenadas(centro: centro, raio: Int(flavor.doce)*raio/10,  angulo:67.5)
         context.move(to: centro)
         context.addLine(to: doce1)
         context.addLine(to: doce2)
-        context.setFillColor(UIColor.blue.cgColor)
+        context.setFillColor(cores[0].cgColor)
         context.fillPath()
         
         let azedo1 = getCoordenadas(centro: centro, raio:Int(flavor.azedo)*raio/10, angulo:67.5)
@@ -166,7 +181,7 @@ class WheelFlavor: UIView {
         context.move(to: centro)
         context.addLine(to: azedo1)
         context.addLine(to: azedo2)
-        context.setFillColor(UIColor.red.cgColor)
+        context.setFillColor(cores[1].cgColor)
         context.fillPath()
        
         let floral1 = getCoordenadas(centro: centro, raio:Int(flavor.floral)*raio/10, angulo:45)
@@ -174,7 +189,7 @@ class WheelFlavor: UIView {
         context.move(to: centro)
         context.addLine(to: floral1)
         context.addLine(to: floral2)
-        context.setFillColor(UIColor.green.cgColor)
+        context.setFillColor(cores[2].cgColor)
         context.fillPath()
         
         let especiarias1 = getCoordenadas(centro: centro, raio:Int(flavor.especiarias)*raio/10, angulo:22.5)
@@ -182,7 +197,7 @@ class WheelFlavor: UIView {
         context.move(to: centro)
         context.addLine(to: especiarias1)
         context.addLine(to: especiarias2)
-        context.setFillColor(UIColor.cyan.cgColor)
+        context.setFillColor(cores[3].cgColor)
         context.fillPath()
         
         let salgado1 = getCoordenadas(centro: centro, raio:Int(flavor.salgado)*raio/10, angulo:0)
@@ -190,7 +205,7 @@ class WheelFlavor: UIView {
         context.move(to: centro)
         context.addLine(to: salgado1)
         context.addLine(to: salgado2)
-        context.setFillColor(UIColor.yellow.cgColor)
+        context.setFillColor(cores[4].cgColor)
         context.fillPath()
         
         let frutasVermelhas1 = getCoordenadas(centro: centro, raio:Int(flavor.frutasVermelhas)*raio/10, angulo:337.5)
@@ -198,7 +213,7 @@ class WheelFlavor: UIView {
         context.move(to: centro)
         context.addLine(to: frutasVermelhas1)
         context.addLine(to: frutasVermelhas2)
-        context.setFillColor(UIColor.magenta.cgColor)
+        context.setFillColor(cores[5].cgColor)
         context.fillPath()
         
         let frutasCitrico1 = getCoordenadas(centro: centro, raio:Int(flavor.frutasCitricas)*raio/10, angulo:315)
@@ -206,7 +221,7 @@ class WheelFlavor: UIView {
         context.move(to: centro)
         context.addLine(to: frutasCitrico1)
         context.addLine(to: frutasCitrico2)
-        context.setFillColor(UIColor.brown.cgColor)
+        context.setFillColor(cores[6].cgColor)
         context.fillPath()
         
         let frutasCaroco1 = getCoordenadas(centro: centro, raio:Int(flavor.frutasCaroco)*raio/10, angulo:292.5)
@@ -214,7 +229,7 @@ class WheelFlavor: UIView {
         context.move(to: centro)
         context.addLine(to: frutasCaroco1)
         context.addLine(to: frutasCaroco2)
-        context.setFillColor(UIColor.black.cgColor)
+        context.setFillColor(cores[7].cgColor)
         context.fillPath()
         
         let chocolate1 = getCoordenadas(centro: centro, raio:Int(flavor.chocolate)*raio/10, angulo:270)
@@ -222,7 +237,7 @@ class WheelFlavor: UIView {
         context.move(to: centro)
         context.addLine(to: chocolate1)
         context.addLine(to: chocolate2)
-        context.setFillColor(UIColor.purple.cgColor)
+        context.setFillColor(cores[8].cgColor)
         context.fillPath()
         
         let caramelo1 = getCoordenadas(centro: centro, raio:Int(flavor.caramelo)*raio/10, angulo:247.5)
@@ -230,7 +245,7 @@ class WheelFlavor: UIView {
         context.move(to: centro)
         context.addLine(to: caramelo1)
         context.addLine(to: caramelo2)
-        context.setFillColor(UIColor.white.cgColor)
+        context.setFillColor(cores[9].cgColor)
         context.fillPath()
         
         let defumado1 = getCoordenadas(centro: centro, raio:Int(flavor.defumado)*raio/10, angulo:225)
@@ -238,7 +253,7 @@ class WheelFlavor: UIView {
         context.move(to: centro)
         context.addLine(to: defumado1)
         context.addLine(to: defumado2)
-        context.setFillColor(UIColor.orange.cgColor)
+        context.setFillColor(cores[10].cgColor)
         context.fillPath()
         
         let amargo1 = getCoordenadas(centro: centro, raio:Int(flavor.amargo)*raio/10, angulo:202.5)
@@ -246,7 +261,7 @@ class WheelFlavor: UIView {
         context.move(to: centro)
         context.addLine(to: amargo1)
         context.addLine(to: amargo2)
-        context.setFillColor(UIColor.red.cgColor)
+        context.setFillColor(cores[11].cgColor)
         context.fillPath()
         
         let herbal1 = getCoordenadas(centro: centro, raio:Int(flavor.herbal)*raio/10, angulo:180)
@@ -254,7 +269,7 @@ class WheelFlavor: UIView {
         context.move(to: centro)
         context.addLine(to: herbal1)
         context.addLine(to: herbal2)
-        context.setFillColor(UIColor.blue.cgColor)
+        context.setFillColor(cores[12].cgColor)
         context.fillPath()
         
         let encorpado1 = getCoordenadas(centro: centro, raio:Int(flavor.encorpado)*raio/10, angulo:157.5)
@@ -262,7 +277,7 @@ class WheelFlavor: UIView {
         context.move(to: centro)
         context.addLine(to: encorpado1)
         context.addLine(to: encorpado2)
-        context.setFillColor(UIColor.green.cgColor)
+        context.setFillColor(cores[13].cgColor)
         context.fillPath()
         
         let cereais1 = getCoordenadas(centro: centro, raio:Int(flavor.cereais)*raio/10, angulo:135)
@@ -270,15 +285,15 @@ class WheelFlavor: UIView {
         context.move(to: centro)
         context.addLine(to: cereais1)
         context.addLine(to: cereais2)
-        context.setFillColor(UIColor.purple.cgColor)
+        context.setFillColor(cores[14].cgColor)
         context.fillPath()
         
         let nozes1 = getCoordenadas(centro: centro, raio:Int(flavor.nozes)*raio/10, angulo:112.5)
-        let nozes2 = getCoordenadas(centro: centro, raio:Int(flavor.nozes)*raio/10, angulo:135)
+        let nozes2 = getCoordenadas(centro: centro, raio:Int(flavor.nozes)*raio/10, angulo:90)
         context.move(to: centro)
         context.addLine(to: nozes1)
         context.addLine(to: nozes2)
-        context.setFillColor(UIColor.cyan.cgColor)
+        context.setFillColor(cores[15].cgColor)
         context.fillPath()
     }
     
@@ -322,6 +337,28 @@ class WheelFlavor: UIView {
         context.addLine(to: doce)
         context.strokePath()
         
+    }
+    
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+        
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+        
+        if ((cString.characters.count) != 6) {
+            return UIColor.gray
+        }
+        
+        var rgbValue:UInt32 = 0
+        Scanner(string: cString).scanHexInt32(&rgbValue)
+        
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(0.8)
+        )
     }
 
 }
