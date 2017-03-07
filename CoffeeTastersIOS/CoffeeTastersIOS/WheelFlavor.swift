@@ -46,7 +46,6 @@ class WheelFlavor: UIView {
             escreveTexto(texto: "Frutas Cítricas", centro:centro, raio:raio, angulo:315)
             escreveTexto(texto: "Frutas Vermelhas", centro:centro, raio:raio, angulo:337.5)
             
-            //            desenhaImagem(imagem: "Salgado.png", context: context, centro: centro, raio: raio, angulo: 0)
             //            desenhaImagem(imagem: "Salgado.png", context: context, centro:centro, raio:raio, angulo:0)
             //            desenhaImagem(imagem: "Especiarias.png", context: context, centro:centro, raio:raio, angulo:22.5)
             //            desenhaImagem(imagem: "Floral.png", context: context, centro:centro, raio:raio, angulo:45)
@@ -68,25 +67,25 @@ class WheelFlavor: UIView {
             desenhaCirculosPequenos(context: context, canvas:frame, centro:centro, raio:raio)
             context.strokePath()
             
+            let cores = [hexStringToUIColor(hex: "5E3A17"),
+                         self.hexStringToUIColor(hex: "BE8E3D"),
+                         self.hexStringToUIColor(hex: "9C8A33"),
+                         self.hexStringToUIColor(hex: "C5B742"),
+                         self.hexStringToUIColor(hex: "BC6337"),
+                         self.hexStringToUIColor(hex: "D7925B"),
+                         self.hexStringToUIColor(hex: "ECC56E"),
+                         self.hexStringToUIColor(hex: "E7CB9B"),
+                         self.hexStringToUIColor(hex: "3287A5"),
+                         self.hexStringToUIColor(hex: "8DB7A5"),
+                         self.hexStringToUIColor(hex: "703B52"),
+                         self.hexStringToUIColor(hex: "945A72"),
+                         self.hexStringToUIColor(hex: "422718"),
+                         self.hexStringToUIColor(hex: "9C8A33"),
+                         self.hexStringToUIColor(hex: "C5B742"),
+                         self.hexStringToUIColor(hex: "BC6337")]
+            
             if let flavor = flavorUsuario {
-                desenhaGraficoPreenchido(context: context, canvas:frame, centro:centro, raio:raio, flavor:flavor, cores:
-                    [hexStringToUIColor(hex: "5E3A17"),
-                     hexStringToUIColor(hex: "BE8E3D"),
-                     hexStringToUIColor(hex: "9C8A33"),
-                     hexStringToUIColor(hex: "C5B742"),
-                     hexStringToUIColor(hex: "BC6337"),
-                     hexStringToUIColor(hex: "D7925B"),
-                     hexStringToUIColor(hex: "ECC56E"),
-                     hexStringToUIColor(hex: "E7CB9B"),
-                     hexStringToUIColor(hex: "3287A5"),
-                     hexStringToUIColor(hex: "8DB7A5"),
-                     hexStringToUIColor(hex: "703B52"),
-                     hexStringToUIColor(hex: "945A72"),
-                     hexStringToUIColor(hex: "422718"),
-                     hexStringToUIColor(hex: "9C8A33"),
-                     hexStringToUIColor(hex: "C5B742"),
-                     hexStringToUIColor(hex: "BC6337")])
-                //desenhaGrafico(context: context, canvas:frame, centro:centro, raio:raio, flavor:flavor, cor: UIColor.black)
+                desenhaGraficoPreenchido(context: context, canvas:frame, centro:centro, raio:raio, flavor:flavor, cores: cores)
             }
             if let flavor = flavorTorrador {
                 desenhaGrafico(context: context, canvas:frame, centro:centro, raio:raio, flavor:flavor, cor: UIColor.red)

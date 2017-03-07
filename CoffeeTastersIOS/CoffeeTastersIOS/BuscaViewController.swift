@@ -22,7 +22,14 @@ class BuscaViewController:UIViewController, UITableViewDelegate, UITableViewData
         tableView?.dataSource = self
         campoBusca.delegate = self
         
+        let maisCafe = UIBarButtonItem(title: "+", style: .plain, target: self, action: #selector(adicionaCafe))
+        navigationItem.rightBarButtonItem = maisCafe
+        
         data = CafeDao().getListaCafe()
+    }
+
+    func adicionaCafe () {
+        print("Mais uma tela pra adicionar cafe...")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -82,11 +89,9 @@ class BuscaViewController:UIViewController, UITableViewDelegate, UITableViewData
         
         filtered = data.filter({ (cafe) -> Bool in
             if cafe.nome?.range(of: searchText) != nil {
-                print("buscando bom")
                 return true
             }
             else {
-                print("buscando ruim")
                 return false
             }
         })

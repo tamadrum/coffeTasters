@@ -27,18 +27,6 @@ class CafeDao {
     func getListaCafe( ) -> [Cafe] {
         var retorno: [Cafe] = []
         
-        let calendario = NSCalendar.current
-        
-        let dataDaColheita = NSDateComponents()
-        dataDaColheita.day = 10
-        dataDaColheita.month = 10
-        dataDaColheita.year = 2017
-        
-        let dataDaTorra = NSDateComponents()
-        dataDaTorra.day = 5
-        dataDaTorra.month = 5
-        dataDaTorra.year = 2017
-        
         var data = ["Café Camacho", "Puro Sabor", "Café União", "Café 262", "Bedê", "Piloão de Minas",
                     "Uno", "Bom Despacho", "Café Jardim", "Caboclo", "Café Maratá", "Café Brasileiro", "Qualitá", "Café Bom Jesus", "Seleto", "3 Corações", "Café Fort",
                     "Café do Ponto", "Café Pimpinela", "Café Pelé", "Melitta", "Pilão"]
@@ -48,15 +36,17 @@ class CafeDao {
         for s in data {
             let cafe = newCafe()
             
-            cafe.dataColheita = calendario.date(from: dataDaColheita as DateComponents)! as NSDate?
-            cafe.dataTorra = calendario.date(from: dataDaTorra as DateComponents)! as NSDate?
-            
             cafe.nome = s
             cafe.origem = "Brasil"
             cafe.produtor = "Asdrubal"
             cafe.torrador = "Epaminondas"
             cafe.descricao = "Alguma coisa do Café..."
             cafe.imagem = "cafe.jpg"
+            cafe.cidade = "Pato de Minas"
+            cafe.estado = "MG"
+            cafe.pais = "Brasil"
+            cafe.altitude = 200
+            cafe.tipo = "Arábico"
             cafe.flavorTorrador = FlavorDao().newFlavor()
             cafe.flavorTorrador?.amargo = 1
             cafe.flavorTorrador?.azedo = 5

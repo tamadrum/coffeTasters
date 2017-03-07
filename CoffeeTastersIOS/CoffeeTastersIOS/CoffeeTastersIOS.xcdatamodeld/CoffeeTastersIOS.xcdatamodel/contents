@@ -3,6 +3,8 @@
     <entity name="CDAvaliacao" representedClassName="Avaliacao" syncable="YES" codeGenerationType="class">
         <attribute name="barista" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="data" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dataColheita" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dataTorra" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="gostou" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="localPreparo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="metodoPreparo" optional="YES" attributeType="String" syncable="YES"/>
@@ -14,8 +16,6 @@
     <entity name="CDCafe" representedClassName="Cafe" syncable="YES" codeGenerationType="class">
         <attribute name="altitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="cidade" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="dataColheita" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="dataTorra" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="descricao" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="estado" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="imagem" optional="YES" attributeType="String" syncable="YES"/>
@@ -83,14 +83,14 @@
         <attribute name="tipo" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="CDAvaliacao" positionX="-164" positionY="-234" width="128" height="180"/>
-        <element name="CDCafe" positionX="-164" positionY="-54" width="128" height="315"/>
+        <element name="CDAvaliacao" positionX="-164" positionY="-234" width="128" height="210"/>
+        <element name="CDCafe" positionX="-164" positionY="-54" width="128" height="285"/>
         <element name="CDFlavor" positionX="-495" positionY="-249" width="128" height="285"/>
         <element name="CDImagens" positionX="-279" positionY="-54" width="128" height="60"/>
         <element name="CDItem" positionX="-315" positionY="-90" width="128" height="75"/>
         <element name="CDPasso" positionX="-297" positionY="-72" width="128" height="105"/>
         <element name="CDPedido" positionX="-306" positionY="-81" width="128" height="120"/>
-        <element name="CDProduto" positionX="-324" positionY="-99" width="128" height="135"/>
         <element name="CDPreparo" positionX="-270" positionY="-45" width="128" height="90"/>
+        <element name="CDProduto" positionX="-324" positionY="-99" width="128" height="135"/>
     </elements>
 </model>

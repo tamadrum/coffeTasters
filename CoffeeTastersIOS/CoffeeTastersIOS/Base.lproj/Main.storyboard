@@ -73,7 +73,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senha:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZU-a5-Cq4">
-                                <rect key="frame" x="133.5" y="238" width="53" height="21"/>
+                                <rect key="frame" x="134" y="238" width="53" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -85,7 +85,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAd-tq-UzY">
-                                <rect key="frame" x="87.5" y="305" width="145" height="30"/>
+                                <rect key="frame" x="88" y="305" width="145" height="30"/>
                                 <state key="normal" title="Esqueci minha senha"/>
                                 <connections>
                                     <segue destination="l6m-rm-0jC" kind="presentation" id="lTX-qV-WNh"/>
@@ -714,7 +714,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 20,00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgX-fF-T38">
-                                                    <rect key="frame" x="237" y="66" width="75" height="21"/>
+                                                    <rect key="frame" x="292" y="66" width="75" height="21"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -755,13 +755,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Café Pelé" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZa-1p-mNP">
-                                                    <rect key="frame" x="59" y="11" width="166" height="21"/>
+                                                    <rect key="frame" x="59" y="11" width="221" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 2,00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bf-jh-sjH">
-                                                    <rect key="frame" x="233" y="11" width="79" height="21"/>
+                                                    <rect key="frame" x="288" y="11" width="79" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="79" id="NAn-8x-7iS"/>
                                                     </constraints>
@@ -1078,108 +1078,171 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hI8-nQ-f6b">
-                                <rect key="frame" x="10" y="72" width="46" height="30"/>
-                                <state key="normal" title="Avaliar"/>
-                                <connections>
-                                    <segue destination="w01-hi-URB" kind="show" identifier="telaAvalia" id="veX-X7-hMk"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="cafe.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rYN-0C-uY0">
-                                <rect key="frame" x="10" y="118" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="1wZ-xr-ZyK"/>
-                                    <constraint firstAttribute="width" constant="80" id="c2p-gh-PjN"/>
-                                    <constraint firstAttribute="width" secondItem="rYN-0C-uY0" secondAttribute="height" multiplier="1:1" id="owr-yQ-STd"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Torrador:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1uP-mj-YIf">
-                                <rect key="frame" x="97" y="114" width="69" height="18"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Epaminondas Roqueanronsoln" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tl1-tt-S5M">
-                                <rect key="frame" x="96" y="135" width="208" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Produtor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvs-Gk-mQC">
-                                <rect key="frame" x="96" y="160" width="71" height="18"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Epaminondas Roqueanronsoln" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbz-UW-aO6">
-                                <rect key="frame" x="96" y="182" width="208" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhk-T3-itq" customClass="WheelFlavor" customModule="CoffeeTastersIOS" customModuleProvider="target">
-                                <rect key="frame" x="16" y="342" width="288" height="209"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="hhk-T3-itq" secondAttribute="height" multiplier="288:209" id="jef-sD-9J7"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qta-lo-sfJ">
-                                <rect key="frame" x="272" y="72" width="38" height="30"/>
-                                <state key="normal" title="Mapa"/>
-                                <connections>
-                                    <segue destination="fYV-bV-pzD" kind="show" identifier="telaMapa" id="amb-Cq-rBl"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VAB-uJ-7gW">
-                                <rect key="frame" x="10" y="208" width="300" height="110"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AET-H6-GOv">
-                                <rect key="frame" x="134" y="72" width="54" height="30"/>
-                                <state key="normal" title="Preparo"/>
-                                <connections>
-                                    <segue destination="0YL-eo-SWq" kind="show" identifier="telaPreparo" id="LmD-7n-YfT"/>
-                                </connections>
-                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hSU-bE-iOQ">
+                                <rect key="frame" x="0.0" y="60" width="320" height="508"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" fixedFrame="YES" image="cafe.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cMc-KU-5ID">
+                                        <rect key="frame" x="8" y="-50" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Torrador:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ro-ix-YTG">
+                                        <rect key="frame" x="96" y="-50" width="69" height="18"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Epaminondas Roqueanronsoln" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQx-Ho-hhW">
+                                        <rect key="frame" x="96" y="-24" width="216" height="18"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Produtor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXR-Dg-ehH">
+                                        <rect key="frame" x="96" y="2" width="71" height="18"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Epaminondas Roqueanronsoln" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKT-8B-CGD">
+                                        <rect key="frame" x="96" y="28" width="216" height="18"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brasil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVM-PC-4xd">
+                                        <rect key="frame" x="8" y="54" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Passo de Minas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cV6-ZF-YbN">
+                                        <rect key="frame" x="104" y="54" width="113" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MG" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDg-8a-Ep3">
+                                        <rect key="frame" x="258" y="54" width="53" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Região: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vc7-N9-IYi">
+                                        <rect key="frame" x="8" y="83" width="62" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Montanhosa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rc4-CZ-TOm">
+                                        <rect key="frame" x="75" y="83" width="236" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tipo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMw-55-gt9">
+                                        <rect key="frame" x="8" y="112" width="39" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Arábico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMN-Pf-hKJ">
+                                        <rect key="frame" x="55" y="110" width="110" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="200m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyz-YJ-Rhh">
+                                        <rect key="frame" x="248" y="112" width="63" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Safra:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAi-vc-eB0">
+                                        <rect key="frame" x="8" y="141" width="45" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Colhida manualmente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCd-3p-QJW">
+                                        <rect key="frame" x="65" y="141" width="246" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yy6-pY-cBp">
+                                        <rect key="frame" x="10" y="170" width="302" height="110"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </mapView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="noT-IU-9JW" customClass="WheelFlavor" customModule="CoffeeTastersIOS" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="288" width="302" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oyn-W0-FC0">
+                                        <rect key="frame" x="10" y="356" width="302" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AET-H6-GOv">
+                                        <rect key="frame" x="258" y="-56" width="54" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Preparo"/>
+                                        <connections>
+                                            <segue destination="0YL-eo-SWq" kind="show" identifier="telaPreparo" id="LmD-7n-YfT"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Altitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Yd-QJ-Gmx">
+                                        <rect key="frame" x="172" y="112" width="64" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="1uP-mj-YIf" firstAttribute="leading" secondItem="rYN-0C-uY0" secondAttribute="trailing" constant="7" id="2L0-66-xRx"/>
-                            <constraint firstItem="hI8-nQ-f6b" firstAttribute="top" secondItem="ggx-dX-jtU" secondAttribute="bottom" constant="8" id="3Po-wN-Rix"/>
-                            <constraint firstItem="zbz-UW-aO6" firstAttribute="top" secondItem="gvs-Gk-mQC" secondAttribute="bottom" constant="4" id="4cQ-4r-lx6"/>
-                            <constraint firstItem="gvs-Gk-mQC" firstAttribute="leading" secondItem="rYN-0C-uY0" secondAttribute="trailing" constant="6" id="7Sf-tf-tP0"/>
-                            <constraint firstItem="hhk-T3-itq" firstAttribute="trailing" secondItem="F9k-Hi-QJc" secondAttribute="trailingMargin" id="B7G-ZW-rlY"/>
-                            <constraint firstItem="hI8-nQ-f6b" firstAttribute="leading" secondItem="F9k-Hi-QJc" secondAttribute="leadingMargin" constant="-6" id="EmD-M3-CAl"/>
-                            <constraint firstAttribute="trailing" secondItem="VAB-uJ-7gW" secondAttribute="trailing" constant="10" id="GDC-FU-hCY"/>
-                            <constraint firstItem="AET-H6-GOv" firstAttribute="centerX" secondItem="F9k-Hi-QJc" secondAttribute="centerX" constant="1" id="GdK-b2-Vjb"/>
-                            <constraint firstItem="Tl1-tt-S5M" firstAttribute="leading" secondItem="rYN-0C-uY0" secondAttribute="trailing" constant="6" id="Hp4-k3-KiQ"/>
-                            <constraint firstItem="VAB-uJ-7gW" firstAttribute="leading" secondItem="F9k-Hi-QJc" secondAttribute="leading" constant="10" id="KSb-gC-bbb"/>
-                            <constraint firstItem="VAB-uJ-7gW" firstAttribute="top" secondItem="zbz-UW-aO6" secondAttribute="bottom" constant="8" id="Q3d-fi-GY7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Qta-lo-sfJ" secondAttribute="trailing" constant="-6" id="Sm8-NE-slu"/>
-                            <constraint firstItem="bTt-03-FNR" firstAttribute="top" secondItem="hhk-T3-itq" secondAttribute="bottom" constant="17" id="TRU-56-Zqi"/>
-                            <constraint firstItem="1uP-mj-YIf" firstAttribute="top" secondItem="AET-H6-GOv" secondAttribute="bottom" constant="12" id="ToP-ff-deR"/>
-                            <constraint firstItem="AET-H6-GOv" firstAttribute="top" secondItem="ggx-dX-jtU" secondAttribute="bottom" constant="8" id="Ubt-qa-bJl"/>
-                            <constraint firstItem="hhk-T3-itq" firstAttribute="leading" secondItem="F9k-Hi-QJc" secondAttribute="leadingMargin" id="V9Y-Mj-Plh"/>
-                            <constraint firstItem="rYN-0C-uY0" firstAttribute="leading" secondItem="F9k-Hi-QJc" secondAttribute="leading" constant="10" id="WEO-bd-k1O"/>
-                            <constraint firstItem="Tl1-tt-S5M" firstAttribute="top" secondItem="1uP-mj-YIf" secondAttribute="bottom" constant="3" id="WEz-yq-aRQ"/>
-                            <constraint firstItem="Qta-lo-sfJ" firstAttribute="top" secondItem="ggx-dX-jtU" secondAttribute="bottom" constant="8" id="YRx-9Q-VGp"/>
-                            <constraint firstItem="AET-H6-GOv" firstAttribute="top" secondItem="ggx-dX-jtU" secondAttribute="bottom" constant="8" id="a1P-Da-91f"/>
-                            <constraint firstItem="rYN-0C-uY0" firstAttribute="top" secondItem="hI8-nQ-f6b" secondAttribute="bottom" constant="16" id="owa-sS-2GM"/>
-                            <constraint firstItem="gvs-Gk-mQC" firstAttribute="top" secondItem="Tl1-tt-S5M" secondAttribute="bottom" constant="7" id="uZ4-9c-6rF"/>
-                            <constraint firstItem="hhk-T3-itq" firstAttribute="top" secondItem="VAB-uJ-7gW" secondAttribute="bottom" constant="24" id="ufR-tn-nPF"/>
-                            <constraint firstItem="zbz-UW-aO6" firstAttribute="leading" secondItem="rYN-0C-uY0" secondAttribute="trailing" constant="6" id="x6F-zm-lJF"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Café X" id="t07-bh-5V5"/>
+                    <navigationItem key="navigationItem" title="Café X" id="t07-bh-5V5">
+                        <barButtonItem key="rightBarButtonItem" title="Avaliar" id="YLc-MQ-5Mk">
+                            <connections>
+                                <segue destination="w01-hi-URB" kind="show" identifier="telaAvalia" id="apQ-4J-1Ug"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="descricaoTextView" destination="VAB-uJ-7gW" id="Tb4-jc-v1q"/>
-                        <outlet property="produtorLabel" destination="zbz-UW-aO6" id="B85-Fg-v0I"/>
-                        <outlet property="rodaWheelFlavor" destination="hhk-T3-itq" id="84M-nP-oRh"/>
-                        <outlet property="torradorLabel" destination="Tl1-tt-S5M" id="Ihb-mG-6my"/>
+                        <outlet property="altitudeLabel" destination="Cyz-YJ-Rhh" id="MYu-rt-EOq"/>
+                        <outlet property="cidadeLabel" destination="cV6-ZF-YbN" id="Bjo-RE-7Ap"/>
+                        <outlet property="descricaoTextView" destination="oyn-W0-FC0" id="D6z-2y-O8N"/>
+                        <outlet property="estadoLabel" destination="SDg-8a-Ep3" id="QX1-nX-Fj9"/>
+                        <outlet property="imageImage" destination="cMc-KU-5ID" id="6ve-79-sfg"/>
+                        <outlet property="mapaMapView" destination="yy6-pY-cBp" id="oxZ-hv-49A"/>
+                        <outlet property="paisLabel" destination="mVM-PC-4xd" id="gT8-Ru-GCz"/>
+                        <outlet property="produtorLabel" destination="YKT-8B-CGD" id="VMc-JD-ga0"/>
+                        <outlet property="regiaoLabel" destination="Rc4-CZ-TOm" id="n2N-lM-af3"/>
+                        <outlet property="rodaWheelFlavor" destination="noT-IU-9JW" id="6zG-FY-A5d"/>
+                        <outlet property="safraLabel" destination="dCd-3p-QJW" id="5Vt-iQ-3nf"/>
+                        <outlet property="scroll" destination="hSU-bE-iOQ" id="Buq-eT-D1y"/>
+                        <outlet property="tipoLabel" destination="VMN-Pf-hKJ" id="ezN-EA-Mmn"/>
+                        <outlet property="torradorLabel" destination="bQx-Ho-hhW" id="RrQ-5n-FcG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9s1-9f-DbI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1270,40 +1333,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9yk-d0-EMu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7541.25" y="1709.1549295774648"/>
-        </scene>
-        <!--Mapa-->
-        <scene sceneID="D2L-c4-Pg6">
-            <objects>
-                <viewController id="fYV-bV-pzD" customClass="MapaViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SFM-5v-zJU"/>
-                        <viewControllerLayoutGuide type="bottom" id="DkA-iB-d7e"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="oHc-OQ-ekL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1y9-vP-4Kn">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                            </mapView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="1y9-vP-4Kn" secondAttribute="trailing" id="2K3-sh-gEY"/>
-                            <constraint firstItem="1y9-vP-4Kn" firstAttribute="leading" secondItem="oHc-OQ-ekL" secondAttribute="leading" id="Oir-QJ-fs2"/>
-                            <constraint firstItem="1y9-vP-4Kn" firstAttribute="bottom" secondItem="DkA-iB-d7e" secondAttribute="top" id="Olb-Cd-N9B"/>
-                            <constraint firstItem="1y9-vP-4Kn" firstAttribute="top" secondItem="SFM-5v-zJU" secondAttribute="bottom" id="uCm-6d-FwS"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Mapa" id="7Pf-DH-SXK"/>
-                    <connections>
-                        <outlet property="mapa" destination="1y9-vP-4Kn" id="Gwo-nC-oZc"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gsq-Yw-v7s" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6629.6000000000004" y="1709.5952023988007"/>
+            <point key="canvasLocation" x="6626" y="1709"/>
         </scene>
         <!--Avaliações-->
         <scene sceneID="PRD-RI-hXC">
@@ -1706,14 +1736,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cafe.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Jc3-mA-OVe">
-                                                    <rect key="frame" x="200" y="8" width="112" height="79"/>
+                                                    <rect key="frame" x="255" y="8" width="112" height="79"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="79" id="0Rt-te-Tw4"/>
                                                         <constraint firstAttribute="width" constant="112" id="UYf-6D-ry0"/>
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="094-1r-t6L">
-                                                    <rect key="frame" x="252" y="95" width="60" height="30"/>
+                                                    <rect key="frame" x="307" y="95" width="60" height="30"/>
                                                     <state key="normal" title="Comprar"/>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 20,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7Q-4X-6Pq">
@@ -1723,7 +1753,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 20,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhy-hm-vfP">
-                                                    <rect key="frame" x="125" y="99" width="70" height="21"/>
+                                                    <rect key="frame" x="152.5" y="99" width="70" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -1763,7 +1793,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="e6J-uq-6EQ">
-                                                    <rect key="frame" x="8" y="8" width="304" height="113"/>
+                                                    <rect key="frame" x="8" y="8" width="359" height="113"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1850,7 +1880,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preço" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xtl-WX-rzz">
-                                                    <rect key="frame" x="212" y="11" width="103" height="21"/>
+                                                    <rect key="frame" x="267" y="11" width="103" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="103" id="rWe-PP-9Wc"/>
                                                     </constraints>
@@ -1859,7 +1889,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do Produto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Slz-ad-e9x">
-                                                    <rect key="frame" x="59" y="11" width="145" height="21"/>
+                                                    <rect key="frame" x="59" y="11" width="200" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1893,7 +1923,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$2,00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dyf-RF-40E">
-                                                    <rect key="frame" x="212" y="11" width="100" height="21"/>
+                                                    <rect key="frame" x="267" y="11" width="100" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="bdM-Q0-VrX"/>
                                                     </constraints>
@@ -1902,7 +1932,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Café Pelé" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ta-Sj-zvf">
-                                                    <rect key="frame" x="59" y="11" width="145" height="21"/>
+                                                    <rect key="frame" x="59" y="11" width="200" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1968,7 +1998,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pagando..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFB-Ur-RsO">
-                                <rect key="frame" x="119" y="273.5" width="82" height="21"/>
+                                <rect key="frame" x="119" y="274" width="82" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2010,13 +2040,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Café Pelé" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YP6-8X-ivY">
-                                                    <rect key="frame" x="8" y="8" width="91.5" height="24"/>
+                                                    <rect key="frame" x="8" y="8" width="92" height="24"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Café Solúvel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRl-7o-X3h">
-                                                    <rect key="frame" x="8" y="37" width="95.5" height="21"/>
+                                                    <rect key="frame" x="8" y="37" width="96" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -2065,7 +2095,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wLn-b2-opP">
-                                                    <rect key="frame" x="8" y="8" width="304" height="113"/>
+                                                    <rect key="frame" x="8" y="8" width="359" height="113"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>

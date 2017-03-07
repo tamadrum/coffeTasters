@@ -21,6 +21,26 @@ class AvaliacaoViewController:UIViewController, UpdateFlavorUsuario {
     @IBOutlet weak var rodaWheelFlavor: WheelFlavor?
 
     var avaliacao: Avaliacao!
+
+    
+//    
+//    let calendario = NSCalendar.current
+//    
+//    let dataDaColheita = NSDateComponents()
+//    dataDaColheita.day = 10
+//    dataDaColheita.month = 10
+//    dataDaColheita.year = 2017
+//    
+//    let dataDaTorra = NSDateComponents()
+//    dataDaTorra.day = 5
+//    dataDaTorra.month = 5
+//    dataDaTorra.year = 2017
+//    
+//    cafe.dataColheita = calendario.date(from: dataDaColheita as DateComponents)! as NSDate?
+//    cafe.dataTorra = calendario.date(from: dataDaTorra as DateComponents)! as NSDate?
+    
+    
+    
     
     func cafeAvaliado(_ cafe: Cafe) {
         avaliacao = AvaliacoesDao().newAvaliacao()
