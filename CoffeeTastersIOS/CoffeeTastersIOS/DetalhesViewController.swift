@@ -80,25 +80,15 @@ class DetalhesViewController:UIViewController, MKMapViewDelegate{
     override func viewDidLoad() {
         self.navigationItem.title = cafeAvaliado?.nome
         
-//        torradorLabel?.text = cafeAvaliado?.torrador
-//        produtorLabel?.text = cafeAvaliado?.produtor
-//        paisLabel?.text = cafeAvaliado?.pais
-//        cidadeLabel?.text = cafeAvaliado?.cidade
-//        estadoLabel?.text = cafeAvaliado?.estado
-//        tipoLabel?.text = cafeAvaliado?.tipo
-//        altitudeLabel?.text = "\((cafeAvaliado?.altitude)!)"
-//        safraLabel?.text = "\(cafeAvaliado?.safra)"
-
         torradorLabel?.text = cafeAvaliado?.torrador
         produtorLabel?.text = cafeAvaliado?.produtor
-        paisLabel?.text = "Brasil"
-        cidadeLabel?.text = "São Paulo"
-        estadoLabel?.text = "SP"
-        tipoLabel?.text = "Arábico"
-        altitudeLabel?.text = "870m"
-        safraLabel?.text = "Colhida manualmente"
+        paisLabel?.text = cafeAvaliado?.pais
+        cidadeLabel?.text = cafeAvaliado?.cidade
+        estadoLabel?.text = cafeAvaliado?.estado
+        tipoLabel?.text = cafeAvaliado?.tipo
+        altitudeLabel?.text = "\((cafeAvaliado?.altitude)!)"
+        safraLabel?.text = "\(cafeAvaliado?.safra)"
 
-        
         centerMapOnLocation(location: initialLocation)
         
         let pino = Pino(title: "Marco Polo",
@@ -107,12 +97,6 @@ class DetalhesViewController:UIViewController, MKMapViewDelegate{
                         coordinate: CLLocationCoordinate2D(latitude: -23.548064, longitude: -46.5708517))
         
         mapaMapView?.addAnnotation(pino)
-        
-//        var pos = (rodaWheelFlavor?.frame.origin.x)!
-//        
-//        rodaWheelFlavor?.flavorUsuario = cafeAvaliado?.flavorTorrador
-//        rodaWheelFlavor?.setNeedsDisplay()
-//        rodaWheelFlavor?.frame = CGRect(x: pos, y: (rodaWheelFlavor?.frame.origin.y)!, width: (rodaWheelFlavor?.frame.width)!, height: (rodaWheelFlavor?.frame.width)!)
         
     }
     
