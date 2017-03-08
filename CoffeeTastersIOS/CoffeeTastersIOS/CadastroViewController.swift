@@ -27,39 +27,31 @@ class CadastroViewController:UIViewController{
     
     @IBAction func btnSalvar(_ sender: Any) {
         if ( senhaTextField?.text == "" || repeteSenhaTextField?.text == "" || nomeTextField?.text == "" || emailTextField?.text == "") {
-            let alertController = UIAlertController(title: "Erro!", message: "Nunhum dos campos podem ser vazios...", preferredStyle: .alert)
-            
-            let saveAction = UIAlertAction(title: "OK", style: .cancel, handler: {
-                alert -> Void in
-                
-            })
-            
-            alertController.addAction(saveAction)
-            
-            self.present(alertController, animated: true, completion: nil)
+            mostraAlerta("Erro!", mensagem: "Nenhum dos campos podem ser vazios...")
         } else {
             if  senhaTextField?.text != repeteSenhaTextField?.text {
-                let alertController = UIAlertController(title: "Erro!", message: "A senha e a repeticão devem ser iguais...", preferredStyle: .alert)
-            
-                let saveAction = UIAlertAction(title: "OK", style: .cancel, handler: {
-                alert -> Void in
-                
-                })
-
-                alertController.addAction(saveAction)
-            
-                self.present(alertController, animated: true, completion: nil)
+                mostraAlerta("Erro!", mensagem: "A senha e a repeticão devem ser iguais...")
             } else {
                 let usuario = Usuario()
-            
                 usuario.nome = (nomeTextField?.text)!
                 usuario.email = (emailTextField?.text)!
                 usuario.senha = (senhaTextField?.text)!
-            
                 usuario.save()
             
                 self.performSegue(withIdentifier: "telaPerfilPosRegistro", sender: self)
             }
         }
+    }
+    
+    func mostraAlerta(_ title: String, mensagem: String) {
+        let alertController = UIAlertController(title: title, message: mensagem, preferredStyle: .alert)
+        
+        let saveAction = UIAlertAction(title: "OK", style: .cancel, handler: {
+            alert -> Void in
+            
+        })
+        
+        alertController.addAction(saveAction)
+        self.present(alertController, animated: true, completion: nil)
     }
 }

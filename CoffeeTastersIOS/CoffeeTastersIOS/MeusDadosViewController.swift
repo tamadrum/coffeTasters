@@ -30,7 +30,7 @@ class MeusDadosViewController:UIViewController{
         self.emailTextField?.text = usuario.email
         self.cpfTextField?.text = usuario.cpf
         self.nomeCartaoTextField?.text = usuario.nomeCartao
-        self.numeroCartaoTextField?.text = usuario.numeroCartao
+        self.numeroCartaoTextField?.text = mostraAsteriscos(usuario.numeroCartao)
         self.validadeCartaoTextField?.text = usuario.validadeCartao
         self.tipoCartaoTextField?.text = usuario.tipoCartao
     }
@@ -54,6 +54,17 @@ class MeusDadosViewController:UIViewController{
         if let navigator = navigationController {
             navigator.popViewController(animated: true)
         }
+    }
+    
+    func mostraAsteriscos(_ texto: String) -> String {
+        //if ( texto.characters.count == 12 ) {
+            let start = texto.index(texto.startIndex, offsetBy: 4)
+            let end = texto.index(texto.endIndex, offsetBy: -4)
+            let range = start..<end
+            
+            return "****\(texto.substring(with: range))****"
+        //}
+        //return ""
     }
     
 }
