@@ -293,7 +293,8 @@
                                 <rect key="frame" x="203" y="430" width="43" height="30"/>
                                 <state key="normal" title="Salvar"/>
                                 <connections>
-                                    <segue destination="PhK-kM-XHY" kind="presentation" id="UoZ-DH-AWz"/>
+                                    <action selector="btnSalvar:" destination="Uec-et-8HQ" eventType="touchUpInside" id="w0A-KF-Rx3"/>
+                                    <segue destination="PhK-kM-XHY" kind="presentation" identifier="telaPerfilPosRegistro" id="UoZ-DH-AWz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -328,10 +329,16 @@
                     <navigationItem key="navigationItem" title="Registrar" id="3NF-Mx-ZNa">
                         <barButtonItem key="rightBarButtonItem" title="Salvar" id="zqm-nt-p4W"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="o2I-J7-XKh" id="ZIe-Dn-eIA"/>
+                        <outlet property="nomeTextField" destination="SgN-a9-pry" id="Lwy-7T-teB"/>
+                        <outlet property="repeteSenhaTextField" destination="Ww4-Ge-LUX" id="U95-vv-aeI"/>
+                        <outlet property="senhaTextField" destination="cUR-ci-yV0" id="Sky-mb-pDO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sjz-R7-wUU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2033" y="938.00000000000011"/>
+            <point key="canvasLocation" x="1866" y="937"/>
         </scene>
         <!--Configurações-->
         <scene sceneID="N4K-HQ-g9Q">
@@ -2461,7 +2468,7 @@
         <image name="starryStars_on.png" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CZJ-hp-t5a"/>
-        <segue reference="cpr-EY-SSl"/>
+        <segue reference="UoZ-DH-AWz"/>
+        <segue reference="NWZ-8U-o7l"/>
     </inferredMetricsTieBreakers>
 </document>
