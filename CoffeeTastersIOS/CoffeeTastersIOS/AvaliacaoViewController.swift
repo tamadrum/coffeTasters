@@ -13,15 +13,16 @@ import Social
 
 class AvaliacaoViewController:UIViewController, UpdateFlavorUsuario {
     
-    @IBOutlet weak var nomeTextField: UITextField?
-    @IBOutlet weak var torradorTextField: UITextField?
-    @IBOutlet weak var produtorTextField: UITextField?
-    @IBOutlet weak var comentarioTextView: UITextView?
     @IBOutlet weak var gostouRatingView: RatingView?
     @IBOutlet weak var rodaWheelFlavor: WheelFlavor?
 
     var avaliacao: Avaliacao!
 
+    @IBOutlet weak var nomeLabel: UILabel!
+    @IBOutlet weak var torradorLabel: UILabel!
+    @IBOutlet weak var produtorLabel: UILabel!
+    
+    var toggleComentario: Bool?
     
 //    
 //    let calendario = NSCalendar.current
@@ -53,9 +54,9 @@ class AvaliacaoViewController:UIViewController, UpdateFlavorUsuario {
     }
     
     override func viewDidLoad() {
-        self.nomeTextField?.text = self.avaliacao.cafe?.nome
-        self.torradorTextField?.text = self.avaliacao.cafe?.torrador
-        self.produtorTextField?.text = self.avaliacao.cafe?.produtor
+        self.nomeLabel?.text = self.avaliacao.cafe?.nome
+        self.torradorLabel?.text = self.avaliacao.cafe?.torrador
+        self.produtorLabel?.text = self.avaliacao.cafe?.produtor
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -93,13 +94,16 @@ class AvaliacaoViewController:UIViewController, UpdateFlavorUsuario {
     
     @IBAction func salvar(_ sender: Any) {
         avaliacao.gostou = Int16((gostouRatingView?.rating)!)
-        avaliacao.obs = (comentarioTextView?.text)!
+//        avaliacao.obs = (comentarioTextView?.text)!
         
         AvaliacoesDao().save()
         
         if let navigation = navigationController {
             navigation.popViewController(animated: true)
         }
+    }
+    @IBAction func toggleNotal(_ sender: Any) {
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

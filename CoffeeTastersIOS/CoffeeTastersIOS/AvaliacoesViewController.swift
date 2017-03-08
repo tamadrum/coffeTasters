@@ -78,11 +78,15 @@ class AvaliacoesViewController:Acordeao {
                 let cell = tableView.dequeueReusableCell(withIdentifier: parentCellIdentifier , for: indexPath) as! AvaliacoesCustomViewCellHeader
                 
                 let a = self.dataSource[actualPosition].item as! Avaliacao
-                    cell.nome?.text = a.cafe?.nome
-                    cell.tipo.text = a.metodoPreparo
-                    cell.data.text = a.data?.description
-                    //cell.gostei.stars.count =
-                    
+                cell.nome?.text = a.cafe?.nome
+                cell.tipo.text = a.metodoPreparo
+                cell.data.text = a.data?.description
+                //cell.gostei.stars.count =
+                
+                
+                let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(mostraDetalhes))
+                cell.addGestureRecognizer(longPressRecognizer)
+                
                 return cell
             }
             else {
@@ -94,9 +98,6 @@ class AvaliacoesViewController:Acordeao {
                 cell.flavor.flavorTorrador = a.cafe?.flavorTorrador
                 cell.flavor.flavorMedia = a.flavorMedia
                 cell.flavor.updateConstraints()
-                
-                let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(mostraDetalhes))
-                cell.addGestureRecognizer(longPressRecognizer)
                 
                 return cell
             }
