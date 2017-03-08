@@ -45,4 +45,9 @@ class AvaliacoesDao {
         }
     }
     
+    func delete(_ avaliacao: Avaliacao) {
+        managedContext?.delete(avaliacao)
+        save()
+    }
+    
 }

@@ -29,45 +29,45 @@ class WheelFlavor: UIView {
             
             desenhaLinhas(context: context, canvas:frame, centro:centro, raio:raio)
             
-            escreveTexto(texto: "Salgado", centro:centro, raio:raio, angulo:0)
-            escreveTexto(texto: "Especiarias", centro:centro, raio:raio, angulo:22.5)
-            escreveTexto(texto: "Floral", centro:centro, raio:raio, angulo:45)
-            escreveTexto(texto: "Azedo", centro:centro, raio:raio, angulo:67.5)
-            escreveTexto(texto: "Doce", centro:centro, raio:raio, angulo:90)
-            escreveTexto(texto: "Nozes", centro:centro, raio:raio, angulo:112.5)
-            escreveTexto(texto: "Cereais", centro:centro, raio:raio, angulo:135)
-            escreveTexto(texto: "Encorpado", centro:centro, raio:raio, angulo:157.5)
-            escreveTexto(texto: "Herbal", centro:centro, raio:raio, angulo:180)
-            escreveTexto(texto: "Amargo", centro:centro, raio:raio, angulo:202.5)
-            escreveTexto(texto: "Defumado", centro:centro, raio:raio, angulo:225)
-            escreveTexto(texto: "Caramelo", centro:centro, raio:raio, angulo:247.5)
-            escreveTexto(texto: "Chocolate", centro:centro, raio:raio, angulo:270)
-            escreveTexto(texto: "Frutas com Caroço", centro:centro, raio:raio, angulo:292.5)
-            escreveTexto(texto: "Frutas Cítricas", centro:centro, raio:raio, angulo:315)
-            escreveTexto(texto: "Frutas Vermelhas", centro:centro, raio:raio, angulo:337.5)
+//            escreveTexto(texto: "Salgado", centro:centro, raio:raio, angulo:0)
+//            escreveTexto(texto: "Especiarias", centro:centro, raio:raio, angulo:22.5)
+//            escreveTexto(texto: "Floral", centro:centro, raio:raio, angulo:45)
+//            escreveTexto(texto: "Azedo", centro:centro, raio:raio, angulo:67.5)
+//            escreveTexto(texto: "Doce", centro:centro, raio:raio, angulo:90)
+//            escreveTexto(texto: "Nozes", centro:centro, raio:raio, angulo:112.5)
+//            escreveTexto(texto: "Cereais", centro:centro, raio:raio, angulo:135)
+//            escreveTexto(texto: "Encorpado", centro:centro, raio:raio, angulo:157.5)
+//            escreveTexto(texto: "Herbal", centro:centro, raio:raio, angulo:180)
+//            escreveTexto(texto: "Amargo", centro:centro, raio:raio, angulo:202.5)
+//            escreveTexto(texto: "Defumado", centro:centro, raio:raio, angulo:225)
+//            escreveTexto(texto: "Caramelo", centro:centro, raio:raio, angulo:247.5)
+//            escreveTexto(texto: "Chocolate", centro:centro, raio:raio, angulo:270)
+//            escreveTexto(texto: "Frutas com Caroço", centro:centro, raio:raio, angulo:292.5)
+//            escreveTexto(texto: "Frutas Cítricas", centro:centro, raio:raio, angulo:315)
+//            escreveTexto(texto: "Frutas Vermelhas", centro:centro, raio:raio, angulo:337.5)
             
-            //            desenhaImagem(imagem: "Salgado.png", context: context, centro:centro, raio:raio, angulo:0)
-            //            desenhaImagem(imagem: "Especiarias.png", context: context, centro:centro, raio:raio, angulo:22.5)
-            //            desenhaImagem(imagem: "Floral.png", context: context, centro:centro, raio:raio, angulo:45)
-            //            desenhaImagem(imagem: "Azedo.png", context: context, centro:centro, raio:raio, angulo:67.5)
-            //            desenhaImagem(imagem: "Doce.png", context: context, centro:centro, raio:raio, angulo:90)
-            //            desenhaImagem(imagem: "Nozes.png", context: context, centro:centro, raio:raio, angulo:112.5)
-            //            desenhaImagem(imagem: "Cereais.png", context: context, centro:centro, raio:raio, angulo:135)
-            //            desenhaImagem(imagem: "Encorpado.png", context: context, centro:centro, raio:raio, angulo:157.5)
-            //            desenhaImagem(imagem: "Herbal.png", context: context, centro:centro, raio:raio, angulo:180)
-            //            desenhaImagem(imagem: "Amargo.png", context: context, centro:centro, raio:raio, angulo:202.5)
-            //            desenhaImagem(imagem: "Defumado.png", context: context, centro:centro, raio:raio, angulo:225)
-            //            desenhaImagem(imagem: "Caramelo.png", context: context, centro:centro, raio:raio, angulo:247.5)
-            //            desenhaImagem(imagem: "Chocolate.png", context: context, centro:centro, raio:raio, angulo:270)
-            //            desenhaImagem(imagem: "Frutas com Caroço.png", context: context, centro:centro, raio:raio, angulo:292.5)
-            //            desenhaImagem(imagem: "Frutas Cítricas.png", context: context, centro:centro, raio:raio, angulo:315)
-            //            desenhaImagem(imagem: "Frutas Vermelhas.png", context: context, centro:centro, raio:raio, angulo:337.5)
+            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:11.25)
+            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:33.75)
+            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:56.25)
+            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:78.75)
+            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:101.25)
+            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:123.75)
+            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:146.25)
+            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:168.75)
+            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:191.25)
+            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:213.75)
+            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:236.25)
+            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:258.75)
+            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:281.25)
+            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:303.75)
+            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:326.25)
+            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:348.75)
             
             desenhaRoda(context: context, canvas:frame, centro:centro, raio:raio)
             desenhaCirculosPequenos(context: context, canvas:frame, centro:centro, raio:raio)
             context.strokePath()
             
-            let cores = [hexStringToUIColor(hex: "5E3A17"),
+            let cores = [self.hexStringToUIColor(hex: "5E3A17"),
                          self.hexStringToUIColor(hex: "BE8E3D"),
                          self.hexStringToUIColor(hex: "9C8A33"),
                          self.hexStringToUIColor(hex: "C5B742"),
@@ -153,9 +153,11 @@ class WheelFlavor: UIView {
     }
     
     func desenhaImagem(imagem: String, context: CGContext, centro: CGPoint, raio: Int, angulo: Double){
+        var novoCentro = centro
+        novoCentro.y += 20
         if let imageUI = UIImage(named:imagem) {
             if let image = imageUI.cgImage {
-                let ponto = getCoordenadas(centro: centro, raio: raio, angulo: angulo)
+                let ponto = getCoordenadas(centro: novoCentro, raio: raio, angulo: angulo)
                 
                 let rect = CGRect(x: ponto.x - CGFloat(image.width/2), y: ponto.y - CGFloat(image.height), width: CGFloat(image.width), height: CGFloat(image.height))
                 

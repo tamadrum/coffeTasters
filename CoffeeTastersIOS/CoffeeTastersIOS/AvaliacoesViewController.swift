@@ -54,8 +54,23 @@ class AvaliacoesViewController:Acordeao {
         })
         
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            
+            AvaliacoesDao().delete(self.dataSource[indexPath.row].item as! Avaliacao)
+            
+            var items = Array<Parent>()
+            for a in AvaliacoesDao().getLista() {
+                items.append(Parent(state: .collapsed, item: a))
+            }
+            self.dataSource = items
+            self.self.total = self.dataSource.count
 
-
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let (_, isParentCell, _) = self.findParent(indexPath.row)
             

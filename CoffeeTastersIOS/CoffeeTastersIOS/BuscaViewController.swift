@@ -8,10 +8,15 @@
 
 import UIKit
 
-class BuscaViewController:UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+protocol AtualizaTabela{
+    func atualizaTabela()
+}
+
+class BuscaViewController:UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, AtualizaTabela {
     
     @IBOutlet var tableView:UITableView?
     @IBOutlet weak var campoBusca: UISearchBar!
+    var delegate:AtualizaTabela?
     
     var searchActive : Bool = false
     var data:Array<Cafe> = []
@@ -25,11 +30,19 @@ class BuscaViewController:UIViewController, UITableViewDelegate, UITableViewData
         let maisCafe = UIBarButtonItem(title: "+", style: .plain, target: self, action: #selector(adicionaCafe))
         navigationItem.rightBarButtonItem = maisCafe
         
+        data = CafeDao().getLista() //Cafe()
+    }
+    
+    func atualizaTabela(){
         data = CafeDao().getListaCafe()
+        
+        tableView?.reloadData()
     }
 
     func adicionaCafe () {
-        print("Mais uma tela pra adicionar cafe...")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "telaAdicionaCafe")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

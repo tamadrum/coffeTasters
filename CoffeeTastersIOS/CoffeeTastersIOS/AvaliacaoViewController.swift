@@ -56,6 +56,13 @@ class AvaliacaoViewController:UIViewController, UpdateFlavorUsuario {
         self.nomeTextField?.text = self.avaliacao.cafe?.nome
         self.torradorTextField?.text = self.avaliacao.cafe?.torrador
         self.produtorTextField?.text = self.avaliacao.cafe?.produtor
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     @IBAction func mostraTorrador(_ sender: Any) {

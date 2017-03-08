@@ -102,7 +102,7 @@ class DetalhesViewController:UIViewController, MKMapViewDelegate{
         
         var pos = (rodaWheelFlavor?.frame.origin.x)!
         
-        rodaWheelFlavor?.flavorTorrador = cafeAvaliado?.flavorTorrador
+        rodaWheelFlavor?.flavorUsuario = cafeAvaliado?.flavorTorrador
         rodaWheelFlavor?.setNeedsDisplay()
         rodaWheelFlavor?.frame = CGRect(x: pos, y: (rodaWheelFlavor?.frame.origin.y)!, width: (rodaWheelFlavor?.frame.width)!, height: (rodaWheelFlavor?.frame.width)!)
         
