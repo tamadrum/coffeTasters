@@ -15,7 +15,9 @@ class WheelFlavor: UIView {
     var flavorTorrador:Flavor?
     var flavorMedia:Flavor?
     var flavorUsuario:Flavor?
-
+    
+    var images:[CGRect] = []
+    
     override func draw(_ rect: CGRect) {
         let centro = CGPoint(x: self.bounds.width/2, y: self.bounds.height/2)
         var raio:Int = Int(centro.y/2)
@@ -46,22 +48,24 @@ class WheelFlavor: UIView {
 //            escreveTexto(texto: "Frutas Cítricas", centro:centro, raio:raio, angulo:315)
 //            escreveTexto(texto: "Frutas Vermelhas", centro:centro, raio:raio, angulo:337.5)
             
-            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:11.25)
-            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:33.75)
-            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:56.25)
-            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:78.75)
-            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:101.25)
-            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:123.75)
-            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:146.25)
-            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:168.75)
-            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:191.25)
-            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:213.75)
-            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:236.25)
-            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:258.75)
-            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:281.25)
-            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:303.75)
-            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:326.25)
-            desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:348.75)
+            images = [
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:11.25),
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:33.75),
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:56.25),
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:78.75),
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:101.25),
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:123.75),
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:146.25),
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:168.75),
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:191.25),
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:213.75),
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:236.25),
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:258.75),
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:281.25),
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:303.75),
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:326.25),
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:348.75)
+            ]
             
             desenhaRoda(context: context, canvas:frame, centro:centro, raio:raio)
             desenhaCirculosPequenos(context: context, canvas:frame, centro:centro, raio:raio)
@@ -97,6 +101,26 @@ class WheelFlavor: UIView {
 
     }
     
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first {
+            let currentPoint = touch.location(in: self)
+            
+            for i in 0...15 {
+                let imagem = images[i]
+                
+                if (currentPoint.x) < imagem.origin.x + imagem.width
+                    && (currentPoint.x) > imagem.origin.x &&
+                    (currentPoint.y) < imagem.height + imagem.origin.y
+                    && (currentPoint.y) > imagem.origin.y {
+                    
+                    print("\(i) - [\(currentPoint.x),\(currentPoint.y)]")
+//                    mostraAlertaDaPosicao(i)
+                    break
+                }
+            }
+        }
+    }
+
     func getCoordenadas(centro: CGPoint, raio: Int, angulo: Double) -> CGPoint {
         let x = centro.x + (CGFloat) (cos(angulo*M_PI/180.0)*Double(raio))
         let y = centro.y - (CGFloat) (sin(angulo*M_PI/180.0)*Double(raio))
@@ -152,7 +176,7 @@ class WheelFlavor: UIView {
         myString.draw(in: textRect, withAttributes: attributes)
     }
     
-    func desenhaImagem(imagem: String, context: CGContext, centro: CGPoint, raio: Int, angulo: Double){
+    func desenhaImagem(imagem: String, context: CGContext, centro: CGPoint, raio: Int, angulo: Double) -> CGRect {
         var novoCentro = centro
         novoCentro.y += 20
         if let imageUI = UIImage(named:imagem) {
@@ -162,8 +186,10 @@ class WheelFlavor: UIView {
                 let rect = CGRect(x: ponto.x - CGFloat(image.width/2), y: ponto.y - CGFloat(image.height), width: CGFloat(image.width), height: CGFloat(image.height))
                 
                 context.draw(image, in: rect)
+                return rect
             }
         }
+        return CGRect.zero
     }
 
     func desenhaGraficoPreenchido (context: CGContext, canvas: CGRect, centro: CGPoint, raio: Int, flavor: Flavor, cores: [UIColor]) {
