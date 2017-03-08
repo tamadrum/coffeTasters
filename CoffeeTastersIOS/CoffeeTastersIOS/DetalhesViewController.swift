@@ -72,8 +72,6 @@ class DetalhesViewController:UIViewController, MKMapViewDelegate{
     @IBOutlet var descricaoTextView: UITextView?
     @IBOutlet var rodaWheelFlavor: WheelFlavor?
     
-    @IBOutlet weak var scroll: UIScrollView!
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         checkLocationAuthorizationStatus()
@@ -82,14 +80,24 @@ class DetalhesViewController:UIViewController, MKMapViewDelegate{
     override func viewDidLoad() {
         self.navigationItem.title = cafeAvaliado?.nome
         
+//        torradorLabel?.text = cafeAvaliado?.torrador
+//        produtorLabel?.text = cafeAvaliado?.produtor
+//        paisLabel?.text = cafeAvaliado?.pais
+//        cidadeLabel?.text = cafeAvaliado?.cidade
+//        estadoLabel?.text = cafeAvaliado?.estado
+//        tipoLabel?.text = cafeAvaliado?.tipo
+//        altitudeLabel?.text = "\((cafeAvaliado?.altitude)!)"
+//        safraLabel?.text = "\(cafeAvaliado?.safra)"
+
         torradorLabel?.text = cafeAvaliado?.torrador
         produtorLabel?.text = cafeAvaliado?.produtor
-        paisLabel?.text = cafeAvaliado?.pais
-        cidadeLabel?.text = cafeAvaliado?.cidade
-        estadoLabel?.text = cafeAvaliado?.estado
-        tipoLabel?.text = cafeAvaliado?.tipo
-        altitudeLabel?.text = "\((cafeAvaliado?.altitude)!)"
-        safraLabel?.text = "\(cafeAvaliado?.safra)"
+        paisLabel?.text = "Brasil"
+        cidadeLabel?.text = "São Paulo"
+        estadoLabel?.text = "SP"
+        tipoLabel?.text = "Arábico"
+        altitudeLabel?.text = "870m"
+        safraLabel?.text = "Colhida manualmente"
+
         
         centerMapOnLocation(location: initialLocation)
         
@@ -100,20 +108,12 @@ class DetalhesViewController:UIViewController, MKMapViewDelegate{
         
         mapaMapView?.addAnnotation(pino)
         
-        var pos = (rodaWheelFlavor?.frame.origin.x)!
+//        var pos = (rodaWheelFlavor?.frame.origin.x)!
+//        
+//        rodaWheelFlavor?.flavorUsuario = cafeAvaliado?.flavorTorrador
+//        rodaWheelFlavor?.setNeedsDisplay()
+//        rodaWheelFlavor?.frame = CGRect(x: pos, y: (rodaWheelFlavor?.frame.origin.y)!, width: (rodaWheelFlavor?.frame.width)!, height: (rodaWheelFlavor?.frame.width)!)
         
-        rodaWheelFlavor?.flavorUsuario = cafeAvaliado?.flavorTorrador
-        rodaWheelFlavor?.setNeedsDisplay()
-        rodaWheelFlavor?.frame = CGRect(x: pos, y: (rodaWheelFlavor?.frame.origin.y)!, width: (rodaWheelFlavor?.frame.width)!, height: (rodaWheelFlavor?.frame.width)!)
-        
-        pos += (rodaWheelFlavor?.frame.origin.y)!+(rodaWheelFlavor?.frame.width)!+10
-        
-        descricaoTextView?.text = cafeAvaliado?.descricao
-        descricaoTextView?.frame = CGRect (x: (descricaoTextView?.frame.origin.x)!, y: pos ,width: (descricaoTextView?.frame.width)!, height:100)
-
-        pos += 150
-        
-        scroll.contentSize = CGSize(width: 320, height: pos)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
