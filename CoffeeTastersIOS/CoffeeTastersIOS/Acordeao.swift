@@ -19,6 +19,7 @@ public enum NumberOfCellExpanded {
     case several
 }
 
+/// Item do Acordeao de um filho só
 public struct Parent {
     var state: State
     var item: AnyObject
@@ -33,6 +34,7 @@ public func != (lhs: (Int, Int), rhs: (Int, Int)) -> Bool {
     return lhs.0 != rhs.0 && rhs.1 != lhs.1
 }
 
+/// Classe filha de UIViewController e implementa UITableViewDelegate e UITableViewDataSource para fazer o efeito de acordeao nas listas que tem somente **UM** filho
 class Acordeao: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     open var total = 0
@@ -45,6 +47,14 @@ class Acordeao: UIViewController, UITableViewDataSource, UITableViewDelegate {
     let NoCellExpanded = (-1, -1)
     var lastCellExpanded : (Int, Int)!
     
+    /**
+     Expande o Item adicionando linhas à tableView
+     
+     - Parameter tableView: A lista
+     - Parameter index: Posicao que será inserido na lista
+     - Parameter parent: Posicao do ITEM completo
+     
+     */
     open func expandItemAtIndex(tableView: UITableView, index : Int, parent: Int) {
         self.dataSource[parent].state = .expanded
         var insertPos = index + 1
@@ -59,6 +69,14 @@ class Acordeao: UIViewController, UITableViewDataSource, UITableViewDelegate {
         self.total += 1
     }
     
+    /**
+     Colapsa o Item removendo linhas da tableView
+     
+     - Parameter tableView: A lista
+     - Parameter index: Posicao que será inserido na lista
+     - Parameter parent: Posicao do ITEM completo
+     
+     */
     open func collapseSubItemsAtIndex(tableView: UITableView, index : Int, parent: Int) {
         var indexPaths = [IndexPath]()
         let numberOfChilds = 1
@@ -73,6 +91,14 @@ class Acordeao: UIViewController, UITableViewDataSource, UITableViewDelegate {
         self.total -= numberOfChilds
     }
     
+    /**
+     Atualiza as células com relação a colapsar e expandir
+     
+     - Parameter tableView: A lista
+     - Parameter index: Posicao que será inserido na lista
+     - Parameter parent: Posicao do ITEM completo
+     
+     */
     open func updateCells(tableView: UITableView, parent: Int, index: Int) {
         
         switch (self.dataSource[parent].state) {
@@ -110,6 +136,13 @@ class Acordeao: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    /**
+     Acha o item no delegate
+     
+     - Parameter index: posicao na tabela
+     - Returns posicao do item, se é o header ou o details e a posicao atual na lista, caso seja um child
+     
+     */
     open func findParent(_ index : Int) -> (parent: Int, isParentCell: Bool, actualPosition: Int) {
         
         var position = 0, parent = 0

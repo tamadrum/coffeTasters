@@ -15,10 +15,10 @@ class PedidosViewController:AcordeaoPedido {
     override func viewDidLoad() {
         tableView?.tableFooterView = UIView()
         
-        var items = Array<ParentPedido>()
+        var items = Array<Parent>()
         
         for l in PedidoDao().getListaPedidos() {
-            items.append(ParentPedido(state: .collapsed, item: l))
+            items.append(Parent(state: .collapsed, item: l))
         }
         
         self.parentCellIdentifier = "header"
@@ -38,7 +38,7 @@ class PedidosViewController:AcordeaoPedido {
         if isParentCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: parentCellIdentifier , for: indexPath) as! PedidosCustomViewCellHeader
             
-            let pedido = self.dataSource[parent].item
+            let pedido = self.dataSource[parent].item as! Pedido
 
             cell.numero?.text = "\(pedido.numero)"
             cell.status?.text = pedido.status
@@ -48,7 +48,7 @@ class PedidosViewController:AcordeaoPedido {
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: childCellIdentifier, for: indexPath) as! PedidosCustomViewCellDetails
             
-            let pedido = self.dataSource[parent].item
+            let pedido = self.dataSource[parent].item as! Pedido
             let items = pedido.items?.allObjects as! [Item]
             let item = items[indexPath.row - actualPosition - 1]
             
