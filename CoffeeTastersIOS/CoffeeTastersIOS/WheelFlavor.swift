@@ -129,6 +129,8 @@ class WheelFlavor: UIView {
      Este método devolve a coordenada baseada no centro da tela, no raio e no angulo para onde aponta
      
      ## Important Notes ##
+     Os angulos internos tem que ser em radianos, daí a conversão feita internamente no código
+     
      - Parameter centro: O centro da tela para iniciar o calculo
      - Parameter raio: A distancia do centro para se desenhar
      - Parameter angulo: O angulo para onde ele aponta
@@ -144,7 +146,6 @@ class WheelFlavor: UIView {
     /**
      Desenha pequenos círculos nas junções das linhas e circulos grandes
      
-     ## Important Notes ##
      - Parameter context: Recebe o canvas para desenhar
      - Parameter centro: O centro da tela para iniciar o calculo
      - Parameter raio: A distancia do centro para se desenhar
@@ -163,7 +164,6 @@ class WheelFlavor: UIView {
     /**
      Desenha as linas que dividem a tela para cada sabor
      
-     ## Important Notes ##
      - Parameter context: Recebe o canvas para desenhar
      - Parameter centro: O centro da tela para iniciar o calculo
      - Parameter raio: A distancia do centro para se desenhar
@@ -180,7 +180,6 @@ class WheelFlavor: UIView {
     /**
      Desenha a roda e as divisões menores
      
-     ## Important Notes ##
      - Parameter context: Recebe o canvas para desenhar
      - Parameter centro: O centro da tela para iniciar o calculo
      - Parameter raio: A distancia do centro para se desenhar
@@ -199,7 +198,6 @@ class WheelFlavor: UIView {
     /**
      Escreve o texto na tela referente ao sabor
      
-     ## Important Notes ##
      - Parameter texto: O texto a ser impresso
      - Parameter centro: O centro da tela para iniciar o calculo
      - Parameter raio: A distancia do centro para se desenhar
@@ -229,7 +227,6 @@ class WheelFlavor: UIView {
     /**
      Escreve o texto na tela referente ao sabor
      
-     ## Important Notes ##
      - Parameter imagem: A imagem a ser desenhada
      - Parameter context: Recebe o canvas para desenhar
      - Parameter centro: O centro da tela para iniciar o calculo
@@ -257,7 +254,6 @@ class WheelFlavor: UIView {
     /**
      Desenha o gráfico preenchido com os sabores do usuário/torrador/média geral
      
-     ## Important Notes ##
      - Parameter context: Recebe o canvas para desenhar
      - Parameter centro: O centro da tela para iniciar o calculo
      - Parameter raio: A distancia do centro para se desenhar
@@ -400,7 +396,6 @@ class WheelFlavor: UIView {
     /**
      Desenha o gráfico sem preenchimento com os sabores do usuário/torrador/média geral
      
-     ## Important Notes ##
      - Parameter context: Recebe o canvas para desenhar
      - Parameter centro: O centro da tela para iniciar o calculo
      - Parameter raio: A distancia do centro para se desenhar
@@ -453,7 +448,6 @@ class WheelFlavor: UIView {
     /**
      Transforma a cor hexadecimal em UIColor
      
-     ## Important Notes ##
      - Parameter hex: Recebe a cor em hexadecimal
      - Returns: UIColor cor segundo o ios
      
