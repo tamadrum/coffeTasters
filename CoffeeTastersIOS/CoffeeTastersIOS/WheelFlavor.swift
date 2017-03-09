@@ -10,10 +10,14 @@ import Foundation
 import UIKit
 import CoreGraphics
 
+/// Roda de sabores customizada para esta aplicação
 class WheelFlavor: UIView {
     
+    /// **flavorTorrador** é a variavel que conterá a roda de sabores que o torrador fez para o café
     var flavorTorrador:Flavor?
+    /// **flavorMédia** é a variavel que conterá a roda de sabores que a média geral avaliou
     var flavorMedia:Flavor?
+    /// **flavorUsuario** é a variavel que conterá a roda de sabores que o usuário preencheu
     var flavorUsuario:Flavor?
     
     var images:[CGRect] = []
@@ -29,7 +33,7 @@ class WheelFlavor: UIView {
             context.setLineWidth(CGFloat(0.5))
             context.setStrokeColor(UIColor.black.cgColor)
             
-            desenhaLinhas(context: context, canvas:frame, centro:centro, raio:raio)
+            desenhaLinhas(context: context, centro:centro, raio:raio)
             
 //            escreveTexto(texto: "Salgado", centro:centro, raio:raio, angulo:0)
 //            escreveTexto(texto: "Especiarias", centro:centro, raio:raio, angulo:22.5)
@@ -67,8 +71,8 @@ class WheelFlavor: UIView {
                 desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:348.75)
             ]
             
-            desenhaRoda(context: context, canvas:frame, centro:centro, raio:raio)
-            desenhaCirculosPequenos(context: context, canvas:frame, centro:centro, raio:raio)
+            desenhaRoda(context: context, centro:centro, raio:raio)
+            desenhaCirculosPequenos(context: context, centro:centro, raio:raio)
             context.strokePath()
             
             let cores = [self.hexStringToUIColor(hex: "5E3A17"),
@@ -89,13 +93,13 @@ class WheelFlavor: UIView {
                          self.hexStringToUIColor(hex: "BC6337")]
             
             if let flavor = flavorUsuario {
-                desenhaGraficoPreenchido(context: context, canvas:frame, centro:centro, raio:raio, flavor:flavor, cores: cores)
+                desenhaGraficoPreenchido(context: context, centro:centro, raio:raio, flavor:flavor, cores: cores)
             }
             if let flavor = flavorTorrador {
-                desenhaGrafico(context: context, canvas:frame, centro:centro, raio:raio, flavor:flavor, cor: UIColor.red)
+                desenhaGrafico(context: context, centro:centro, raio:raio, flavor:flavor, cor: UIColor.red)
             }
             if let flavor = flavorMedia {
-                desenhaGrafico(context: context, canvas:frame, centro:centro, raio:raio, flavor:flavor, cor: UIColor.blue)
+                desenhaGrafico(context: context, centro:centro, raio:raio, flavor:flavor, cor: UIColor.blue)
             }
         }
 
@@ -121,13 +125,32 @@ class WheelFlavor: UIView {
         }
     }
 
+    /**
+     Este método devolve a coordenada baseada no centro da tela, no raio e no angulo para onde aponta
+     
+     ## Important Notes ##
+     - Parameter centro: O centro da tela para iniciar o calculo
+     - Parameter raio: A distancia do centro para se desenhar
+     - Parameter angulo: O angulo para onde ele aponta
+     - Returns: CGPoint para desenhar/escrever
+     
+     */
     func getCoordenadas(centro: CGPoint, raio: Int, angulo: Double) -> CGPoint {
         let x = centro.x + (CGFloat) (cos(angulo*M_PI/180.0)*Double(raio))
         let y = centro.y - (CGFloat) (sin(angulo*M_PI/180.0)*Double(raio))
         return CGPoint(x:x, y:y)
     }
     
-    func desenhaCirculosPequenos(context: CGContext, canvas: CGRect, centro: CGPoint, raio: Int) {
+    /**
+     Desenha pequenos círculos nas junções das linhas e circulos grandes
+     
+     ## Important Notes ##
+     - Parameter context: Recebe o canvas para desenhar
+     - Parameter centro: O centro da tela para iniciar o calculo
+     - Parameter raio: A distancia do centro para se desenhar
+     
+     */
+    func desenhaCirculosPequenos(context: CGContext, centro: CGPoint, raio: Int) {
         for i in stride(from: 0, to: raio, by: raio/5) {
             for j in stride(from: 0, to: 360, by: 22.5) {
                 let p = getCoordenadas(centro: centro, raio: i, angulo: j);
@@ -137,7 +160,16 @@ class WheelFlavor: UIView {
         }
     }
     
-    func desenhaLinhas(context: CGContext, canvas: CGRect, centro: CGPoint, raio: Int) {
+    /**
+     Desenha as linas que dividem a tela para cada sabor
+     
+     ## Important Notes ##
+     - Parameter context: Recebe o canvas para desenhar
+     - Parameter centro: O centro da tela para iniciar o calculo
+     - Parameter raio: A distancia do centro para se desenhar
+     
+     */
+    func desenhaLinhas(context: CGContext, centro: CGPoint, raio: Int) {
         for i in stride(from: 0, to: 360, by: 22.5) {
             let p = getCoordenadas(centro: centro, raio: raio, angulo: i)
             context.move(to: centro)
@@ -145,17 +177,35 @@ class WheelFlavor: UIView {
         }
     }
     
-    func desenhaRoda(context: CGContext, canvas: CGRect, centro: CGPoint, raio: Int) {
+    /**
+     Desenha a roda e as divisões menores
+     
+     ## Important Notes ##
+     - Parameter context: Recebe o canvas para desenhar
+     - Parameter centro: O centro da tela para iniciar o calculo
+     - Parameter raio: A distancia do centro para se desenhar
+     
+     */
+    func desenhaRoda(context: CGContext, centro: CGPoint, raio: Int) {
         let passo = CGFloat(raio/5)
         
         context.addEllipse(in: CGRect(x: centro.x-passo*5, y: centro.y-passo*5, width: passo*10, height: passo*10))
-        
         context.addEllipse(in: CGRect(x: centro.x-passo*4, y: centro.y-passo*4, width: passo*8,  height: passo*8))
         context.addEllipse(in: CGRect(x: centro.x-passo*3, y: centro.y-passo*3, width: passo*6,  height: passo*6))
         context.addEllipse(in: CGRect(x: centro.x-passo*2, y: centro.y-passo*2, width: passo*4,  height: passo*4))
         context.addEllipse(in: CGRect(x: centro.x-passo,   y: centro.y-passo,   width: passo*2,  height: passo*2))
     }
     
+    /**
+     Escreve o texto na tela referente ao sabor
+     
+     ## Important Notes ##
+     - Parameter texto: O texto a ser impresso
+     - Parameter centro: O centro da tela para iniciar o calculo
+     - Parameter raio: A distancia do centro para se desenhar
+     - Parameter angulo: O angulo para onde ele aponta
+     
+     */
     func escreveTexto(texto: String, centro: CGPoint, raio: Int, angulo: Double){
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineBreakMode = .byTruncatingTail
@@ -176,6 +226,18 @@ class WheelFlavor: UIView {
         myString.draw(in: textRect, withAttributes: attributes)
     }
     
+    /**
+     Escreve o texto na tela referente ao sabor
+     
+     ## Important Notes ##
+     - Parameter imagem: A imagem a ser desenhada
+     - Parameter context: Recebe o canvas para desenhar
+     - Parameter centro: O centro da tela para iniciar o calculo
+     - Parameter raio: A distancia do centro para se desenhar
+     - Parameter angulo: O angulo para onde ele aponta
+     - Returns: CGRect para interceptar o clique na UIVIew
+     
+     */
     func desenhaImagem(imagem: String, context: CGContext, centro: CGPoint, raio: Int, angulo: Double) -> CGRect {
         var novoCentro = centro
         novoCentro.y += 20
@@ -192,7 +254,18 @@ class WheelFlavor: UIView {
         return CGRect.zero
     }
 
-    func desenhaGraficoPreenchido (context: CGContext, canvas: CGRect, centro: CGPoint, raio: Int, flavor: Flavor, cores: [UIColor]) {
+    /**
+     Desenha o gráfico preenchido com os sabores do usuário/torrador/média geral
+     
+     ## Important Notes ##
+     - Parameter context: Recebe o canvas para desenhar
+     - Parameter centro: O centro da tela para iniciar o calculo
+     - Parameter raio: A distancia do centro para se desenhar
+     - Parameter flavor: Objeto contendo a avaliação
+     - Parameter cores: Array de cores a serem usadas no sistema de impressão
+     
+     */
+    func desenhaGraficoPreenchido (context: CGContext, centro: CGPoint, raio: Int, flavor: Flavor, cores: [UIColor]) {
         context.setLineWidth(2.0)
         
         let doce1 = getCoordenadas(centro: centro, raio: Int(flavor.doce)*raio/10,  angulo:90)
@@ -324,7 +397,18 @@ class WheelFlavor: UIView {
         context.fillPath()
     }
     
-    func desenhaGrafico (context: CGContext, canvas: CGRect, centro: CGPoint, raio: Int, flavor: Flavor, cor: UIColor) {
+    /**
+     Desenha o gráfico sem preenchimento com os sabores do usuário/torrador/média geral
+     
+     ## Important Notes ##
+     - Parameter context: Recebe o canvas para desenhar
+     - Parameter centro: O centro da tela para iniciar o calculo
+     - Parameter raio: A distancia do centro para se desenhar
+     - Parameter flavor: Objeto contendo a avaliação
+     - Parameter cor: A cor de impressão da avaliação da roda
+     
+     */
+    func desenhaGrafico (context: CGContext, centro: CGPoint, raio: Int, flavor: Flavor, cor: UIColor) {
         context.setLineWidth(2.0)
         context.setStrokeColor(cor.cgColor)
         context.setFillColor(UIColor.blue.cgColor)
@@ -366,6 +450,14 @@ class WheelFlavor: UIView {
         
     }
     
+    /**
+     Transforma a cor hexadecimal em UIColor
+     
+     ## Important Notes ##
+     - Parameter hex: Recebe a cor em hexadecimal
+     - Returns: UIColor cor segundo o ios
+     
+     */
     func hexStringToUIColor (hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         

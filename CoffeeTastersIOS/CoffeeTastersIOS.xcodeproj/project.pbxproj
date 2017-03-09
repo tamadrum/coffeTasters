@@ -36,7 +36,6 @@
 		166BA4441E65B8D300739A41 /* SyncUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166BA4431E65B8D300739A41 /* SyncUtil.swift */; };
 		1691A8C01E5FC86B00FC5085 /* WheelFlavor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691A8BF1E5FC86B00FC5085 /* WheelFlavor.swift */; };
 		1691A8CA1E60B66800FC5085 /* EsqueciMinhaSenhaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691A8C91E60B66800FC5085 /* EsqueciMinhaSenhaViewController.swift */; };
-		169550741E6CBD1A0009E54A /* WheelFlavorOriginal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169550731E6CBD1A0009E54A /* WheelFlavorOriginal.swift */; };
 		16A756981E6ED18A00BD91FC /* AdicionaCafeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A756971E6ED18A00BD91FC /* AdicionaCafeViewController.swift */; };
 		16A7569A1E6F8FEF00BD91FC /* cereais.png in Resources */ = {isa = PBXBuildFile; fileRef = 16A756991E6F8FEF00BD91FC /* cereais.png */; };
 		16B1CCC41E5D950900681A4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B1CCC31E5D950900681A4E /* AppDelegate.swift */; };
@@ -124,7 +123,6 @@
 		166BA4431E65B8D300739A41 /* SyncUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncUtil.swift; sourceTree = "<group>"; };
 		1691A8BF1E5FC86B00FC5085 /* WheelFlavor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelFlavor.swift; sourceTree = "<group>"; };
 		1691A8C91E60B66800FC5085 /* EsqueciMinhaSenhaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EsqueciMinhaSenhaViewController.swift; sourceTree = "<group>"; };
-		169550731E6CBD1A0009E54A /* WheelFlavorOriginal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelFlavorOriginal.swift; sourceTree = "<group>"; };
 		16A756971E6ED18A00BD91FC /* AdicionaCafeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdicionaCafeViewController.swift; sourceTree = "<group>"; };
 		16A756991E6F8FEF00BD91FC /* cereais.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cereais.png; sourceTree = "<group>"; };
 		16B1CCC01E5D950900681A4E /* CoffeeTastersIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeTastersIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -230,7 +228,6 @@
 			isa = PBXGroup;
 			children = (
 				1691A8BF1E5FC86B00FC5085 /* WheelFlavor.swift */,
-				169550731E6CBD1A0009E54A /* WheelFlavorOriginal.swift */,
 			);
 			name = wheelflavor;
 			sourceTree = "<group>";
@@ -499,7 +496,6 @@
 				1645FE041E62F4FF0002C1B6 /* RatingView.swift in Sources */,
 				3342439B1E5F4CB50001938F /* AvaliacoesViewController.swift in Sources */,
 				16EC3BC61E675C14008BD23B /* CafeDao.swift in Sources */,
-				169550741E6CBD1A0009E54A /* WheelFlavorOriginal.swift in Sources */,
 				3342438D1E5F4B520001938F /* CadastroViewController.swift in Sources */,
 				166BA4411E659EB300739A41 /* Configuracoes.swift in Sources */,
 				3342439F1E5F4CE00001938F /* AvaliacaoViewController.swift in Sources */,
