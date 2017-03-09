@@ -107,6 +107,10 @@ class DetalhesViewController:UIViewController, MKMapViewDelegate{
         }
     }
     
+    @IBAction func comprarCafe(_ sender: Any) {
+        ComprarAlertViewController(controller: self).show("Comprar \((cafeAvaliado?.nome)!)", message: "Confirme a quantidade que deseja adicionar ao carrinho...")
+    }
+    
     // Coisas do Mapa
     
     let initialLocation = CLLocation(latitude: -23.548064, longitude: -46.5708517)

@@ -9,16 +9,6 @@
 import Foundation
 import UIKit
 
-//public struct ParentPedido {
-//    var state: State
-//    var item: Pedido
-//    
-//    init(state: State, item: Pedido) {
-//        self.state = state
-//        self.item = item
-//    }
-//}
-
 class AcordeaoPedido: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     open var total = 0

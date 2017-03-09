@@ -10,16 +10,20 @@ import Foundation
 import UIKit
 
 public enum State {
+    /// Acordeao Fechado
     case collapsed
+    /// Acordeao Aberto
     case expanded
 }
 
 public enum NumberOfCellExpanded {
+    /// Um expandido por vez
     case one
+    /// Todos podem ser expandidos
     case several
 }
 
-/// Item do Acordeao de um filho só
+/// Item do Acordeao
 public struct Parent {
     var state: State
     var item: AnyObject

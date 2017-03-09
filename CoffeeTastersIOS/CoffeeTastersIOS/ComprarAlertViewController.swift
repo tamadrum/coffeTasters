@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// Alerta para mandar comprar o produto
 class ComprarAlertViewController {
     
     let controller:UIViewController
@@ -17,6 +18,13 @@ class ComprarAlertViewController {
         self.controller = controller
     }
     
+    /**
+     Acha o item no delegate
+     
+     - Parameter titulo: Titulo da mensagem
+     - Parameter message: Mensagem que será exibida
+     
+     */
     func show(_ title:String = "Titulo", message:String = "Mensagem") {
 
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
