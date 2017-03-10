@@ -26,7 +26,7 @@ class AvaliacoesViewController:Acordeao {
         
         SyncUtil().getDadosFrom(url: "http://www.kaleidosblog.com/tutorial/tutorial.json",
                                 trataJson: { (result: Data) in
-                                    let r = SyncUtil().extract_json(jsonData: result)
+                                    _ = SyncUtil().extract_json(jsonData: result)
                                     //print("got back: \(r)")
                                     return ""
         },
