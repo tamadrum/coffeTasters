@@ -57,14 +57,14 @@ class MeusDadosViewController:UIViewController{
     }
     
     func mostraAsteriscos(_ texto: String) -> String {
-        //if ( texto.characters.count == 12 ) {
+        if ( texto.characters.count == 12 ) {
             let start = texto.index(texto.startIndex, offsetBy: 4)
             let end = texto.index(texto.endIndex, offsetBy: -4)
             let range = start..<end
             
             return "****\(texto.substring(with: range))****"
-        //}
-        //return ""
+        }
+        return ""
     }
     
 }

@@ -11,19 +11,27 @@ import UIKit
 class CarrinhoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var tableView:UITableView?
+    @IBOutlet weak var qtdItensLabel: UILabel!
+    @IBOutlet weak var valorTotalLabel: UILabel!
     
     var carrinho: Carrinho?
-    var items: [Item]? = nil
     
     override func viewDidLoad() {
         carrinho = CarrinhoDao().getCarrinho()
-        items = carrinho?.items?.allObjects as? [Item]
+        
+        qtdItensLabel.text = "\((carrinho?.items?.count)!)"
+        
+        var total = 0.0
+        for i in (carrinho?.items!.allObjects as! [Item]) {
+            total += (i.produto?.preco)! * Double(i.quantidade)
+        }
+        valorTotalLabel.text = "R$ \(total)"
     }
     
     // Funcionalidades da Tabela
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 0 ? 1 : items!.count
+        return section == 0 ? 1 : (carrinho?.items?.count)!
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -38,9 +46,13 @@ class CarrinhoViewController: UIViewController, UITableViewDelegate, UITableView
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "itens", for: indexPath) as! CarrinhoCustomViewCellItem
             
-            cell.nome?.text = items?[0].produto?.nome
-            cell.quantidade?.text = "\(items?[0].quantidade)"
-            cell.valor?.text = "R$ "
+            let items = carrinho?.items!.allObjects as! [Item]
+            
+            let valorDoItem = (items[indexPath.row].produto?.preco)!*Double((items[indexPath.row].quantidade))
+            
+            cell.nome?.text = items[indexPath.row].produto?.nome
+            cell.quantidade?.text = "\(items[indexPath.row].quantidade)"
+            cell.valor?.text = "R$ \(valorDoItem)"
             
             return cell
         }

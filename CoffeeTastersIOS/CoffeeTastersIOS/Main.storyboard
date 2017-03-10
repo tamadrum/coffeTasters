@@ -2161,7 +2161,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="center" selectionStyle="default" indentationWidth="10" reuseIdentifier="itens" rowHeight="44" id="P46-Cg-UBw" customClass="CustomCell" customModule="CoffeeTastersIOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="center" selectionStyle="default" indentationWidth="10" reuseIdentifier="itens" rowHeight="44" id="P46-Cg-UBw" customClass="CarrinhoCustomViewCellItem" customModule="CoffeeTastersIOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P46-Cg-UBw" id="TDi-fZ-i9r">
@@ -2233,7 +2233,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="qtdItensLabel" destination="0K4-A4-Zq6" id="UYN-BJ-pB0"/>
                         <outlet property="tableView" destination="08o-Wh-449" id="OcP-jp-iIf"/>
+                        <outlet property="valorTotalLabel" destination="5KX-ky-Ahf" id="Fva-mp-d4a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xje-48-2EZ" userLabel="First Responder" sceneMemberID="firstResponder"/>

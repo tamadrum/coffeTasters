@@ -21,7 +21,7 @@ class CafeDao {
     }
     
     func newCafe() -> Cafe {
-        return NSEntityDescription.insertNewObject(forEntityName: "CDCafe", into: managedContext!) as! Cafe
+        return Cafe(context: managedContext!)
     }
     
     func getListaCafe( ) -> [Cafe] {

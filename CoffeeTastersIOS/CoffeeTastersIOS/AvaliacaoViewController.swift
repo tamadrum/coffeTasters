@@ -69,7 +69,9 @@ class AvaliacaoViewController:UIViewController, UpdateFlavorUsuario {
     
     func sairSemSalvar () {
         print("saindo sem salvar")
-        avaliacao = nil
+        
+        AvaliacoesDao().managedContext?.reset()
+        
         if let navigation = navigationController {
             navigation.popViewController(animated: true)
         }

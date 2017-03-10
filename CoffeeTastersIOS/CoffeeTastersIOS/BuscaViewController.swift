@@ -30,7 +30,7 @@ class BuscaViewController:UIViewController, UITableViewDelegate, UITableViewData
         let maisCafe = UIBarButtonItem(title: "+", style: .plain, target: self, action: #selector(adicionaCafe))
         navigationItem.rightBarButtonItem = maisCafe
         
-        data = CafeDao().getLista() //Cafe()
+        data = CafeDao().getListaCafe()
     }
     
     func atualizaTabela(){

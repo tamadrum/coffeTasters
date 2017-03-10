@@ -19,10 +19,11 @@ class ComprarAlertViewController {
     }
     
     /**
-     Acha o item no delegate
+     Motra amensagem e adiciona no carrinho de compras com a quantidade
      
      - Parameter titulo: Titulo da mensagem
      - Parameter message: Mensagem que será exibida
+     - Parameter produto: O produto que o cliente deseja comprar
      
      */
     func show(_ title:String = "Titulo", message:String = "Mensagem", produto: Produto) {

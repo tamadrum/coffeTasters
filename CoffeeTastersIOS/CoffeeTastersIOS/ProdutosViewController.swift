@@ -11,6 +11,7 @@ import UIKit
 class ProdutosViewController:Acordeao{
     
     @IBOutlet var tableView:UITableView?
+    var prod: Produto?
     
     override func viewDidLoad() {
         tableView?.tableFooterView = UIView()
@@ -38,11 +39,11 @@ class ProdutosViewController:Acordeao{
         if isParentCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: parentCellIdentifier , for: indexPath) as! ProdutosCustomViewCellHeader
             
-            let prod = dataSource[indexPath.row].item as! Produto
+            prod = dataSource[indexPath.row].item as! Produto
             
-            cell.nome?.text = prod.nome
-            cell.tipo?.text = prod.tipo
-            cell.valor?.text = "R$ \(prod.preco)"
+            cell.nome?.text = prod?.nome
+            cell.tipo?.text = prod?.tipo
+            cell.valor?.text = "R$ \((prod?.preco)!)"
             cell.imagem?.image = #imageLiteral(resourceName: "config.jpg")
             
             cell.btnComprar.addTarget(self, action: #selector(comprar), for: .touchUpInside)
@@ -61,7 +62,7 @@ class ProdutosViewController:Acordeao{
     }
     
     func comprar() {
-        //ComprarAlertViewController(controller: self).show()
+        ComprarAlertViewController(controller: self).show("Comprar", message: "Selecione a quantidade que deseja colocar no carrinho...", produto: prod!)
     }
     
 }
