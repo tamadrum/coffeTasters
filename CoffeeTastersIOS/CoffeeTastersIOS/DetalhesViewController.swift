@@ -86,7 +86,7 @@ class DetalhesViewController:UIViewController, MKMapViewDelegate{
         cidadeLabel?.text = cafeAvaliado?.cidade
         estadoLabel?.text = cafeAvaliado?.estado
         tipoLabel?.text = cafeAvaliado?.tipo
-        altitudeLabel?.text = "\((cafeAvaliado?.altitude)!)"
+        altitudeLabel?.text = "\(cafeAvaliado?.altitude)"
         safraLabel?.text = "\(cafeAvaliado?.safra)"
 
         centerMapOnLocation(location: initialLocation)
@@ -108,7 +108,7 @@ class DetalhesViewController:UIViewController, MKMapViewDelegate{
     }
     
     @IBAction func comprarCafe(_ sender: Any) {
-        ComprarAlertViewController(controller: self).show("Comprar \((cafeAvaliado?.nome)!)", message: "Confirme a quantidade que deseja adicionar ao carrinho...")
+        //ComprarAlertViewController(controller: self).show("Comprar \((cafeAvaliado?.nome)!)", message: "Confirme a quantidade que deseja adicionar ao carrinho...")
     }
     
     // Coisas do Mapa

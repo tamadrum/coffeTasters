@@ -29,6 +29,7 @@ class PreparaDao {
     }
     
     func getPreparo() -> [Preparo] {
+        /// Inicio do preparo1
         let preparo1 = newPreparo()
         preparo1.nome = "Coado"
         preparo1.imagem = "coffee_press_1.png"
@@ -61,6 +62,7 @@ class PreparaDao {
         passo4.descricao = "Colocar na garrafa térmica"
         preparo1.addToPasso(passo1)
         
+        /// Inicio do preparo2
         let preparo2 = newPreparo()
         preparo2.nome = "Prensa Francesa"
         preparo2.imagem = "pour_over_cone_1.png"

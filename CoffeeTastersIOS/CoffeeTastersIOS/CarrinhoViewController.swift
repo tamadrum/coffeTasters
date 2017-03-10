@@ -12,12 +12,18 @@ class CarrinhoViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet var tableView:UITableView?
     
-    var data:[String] = ["la", "lala", "lalala"]
+    var carrinho: Carrinho?
+    var items: [Item]? = nil
+    
+    override func viewDidLoad() {
+        carrinho = CarrinhoDao().getCarrinho()
+        items = carrinho?.items?.allObjects as? [Item]
+    }
     
     // Funcionalidades da Tabela
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 0 ? 1 : data.count
+        return section == 0 ? 1 : items!.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -30,7 +36,11 @@ class CarrinhoViewController: UIViewController, UITableViewDelegate, UITableView
             
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "itens", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "itens", for: indexPath) as! CarrinhoCustomViewCellItem
+            
+            cell.nome?.text = items?[0].produto?.nome
+            cell.quantidade?.text = "\(items?[0].quantidade)"
+            cell.valor?.text = "R$ "
             
             return cell
         }

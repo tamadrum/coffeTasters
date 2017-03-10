@@ -12,6 +12,9 @@
 		1607218B1E5F6E2100FF3C00 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160721871E5F6E2100FF3C00 /* FBSDKLoginKit.framework */; };
 		1607218C1E5F6E2100FF3C00 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160721881E5F6E2100FF3C00 /* FBSDKShareKit.framework */; };
 		160721961E5F7F5400FF3C00 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160721951E5F7F5400FF3C00 /* Usuario.swift */; };
+		160C66CF1E730734004190B7 /* CarrinhoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160C66CE1E730734004190B7 /* CarrinhoDao.swift */; };
+		160C66D11E731126004190B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 160C66D01E731126004190B7 /* Main.storyboard */; };
+		160C66D31E734F8E004190B7 /* ItemDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160C66D21E734F8E004190B7 /* ItemDao.swift */; };
 		1613A0BE1E68997F00E9DE65 /* Acordeao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1613A0BC1E68997F00E9DE65 /* Acordeao.swift */; };
 		1613A0BF1E68997F00E9DE65 /* ComprarAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1613A0BD1E68997F00E9DE65 /* ComprarAlertViewController.swift */; };
 		1613A0C11E6899B200E9DE65 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1613A0C01E6899B200E9DE65 /* MapKit.framework */; };
@@ -48,7 +51,6 @@
 		16CB28341E6220C2001E4E3B /* config.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16CB28331E6220C2001E4E3B /* config.jpg */; };
 		16CB283A1E622B3B001E4E3B /* String+isCPF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB28391E622B3B001E4E3B /* String+isCPF.swift */; };
 		16CB283C1E622D62001E4E3B /* String+toMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB283B1E622D62001E4E3B /* String+toMD5.swift */; };
-		16EB43B31E69CE440073C58A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16EB43B11E69CE440073C58A /* Main.storyboard */; };
 		16EB43B91E6A5C630073C58A /* FlavorDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EB43B81E6A5C630073C58A /* FlavorDao.swift */; };
 		16EB43BB1E6A75730073C58A /* EULA.txt in Resources */ = {isa = PBXBuildFile; fileRef = 16EB43BA1E6A75730073C58A /* EULA.txt */; };
 		16EC3BC01E674F90008BD23B /* CarrinhoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC3BBF1E674F90008BD23B /* CarrinhoViewController.swift */; };
@@ -98,6 +100,9 @@
 		160721871E5F6E2100FF3C00 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = CoffeeTastersIOS/framework/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		160721881E5F6E2100FF3C00 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = CoffeeTastersIOS/framework/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		160721951E5F7F5400FF3C00 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		160C66CE1E730734004190B7 /* CarrinhoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarrinhoDao.swift; sourceTree = "<group>"; };
+		160C66D01E731126004190B7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		160C66D21E734F8E004190B7 /* ItemDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDao.swift; sourceTree = "<group>"; };
 		1613A0BC1E68997F00E9DE65 /* Acordeao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Acordeao.swift; sourceTree = "<group>"; };
 		1613A0BD1E68997F00E9DE65 /* ComprarAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComprarAlertViewController.swift; sourceTree = "<group>"; };
 		1613A0C01E6899B200E9DE65 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -138,7 +143,6 @@
 		16CB28391E622B3B001E4E3B /* String+isCPF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+isCPF.swift"; sourceTree = "<group>"; };
 		16CB283B1E622D62001E4E3B /* String+toMD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+toMD5.swift"; sourceTree = "<group>"; };
 		16EB43B01E69B8EB0073C58A /* CoffeeTastersIOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoffeeTastersIOS.entitlements; sourceTree = "<group>"; };
-		16EB43B21E69CE440073C58A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CoffeeTastersIOS/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16EB43B81E6A5C630073C58A /* FlavorDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlavorDao.swift; sourceTree = "<group>"; };
 		16EB43BA1E6A75730073C58A /* EULA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EULA.txt; sourceTree = "<group>"; };
 		16EC3BBF1E674F90008BD23B /* CarrinhoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarrinhoViewController.swift; sourceTree = "<group>"; };
@@ -263,7 +267,7 @@
 				16B1CCD91E5D956200681A4E /* dao */,
 				16B1CCD81E5D955D00681A4E /* configuracoes */,
 				16B1CCC31E5D950900681A4E /* AppDelegate.swift */,
-				16EB43B11E69CE440073C58A /* Main.storyboard */,
+				160C66D01E731126004190B7 /* Main.storyboard */,
 				16B1CCCD1E5D950900681A4E /* Assets.xcassets */,
 				16B1CCCF1E5D950900681A4E /* LaunchScreen.storyboard */,
 				16B1CCD21E5D950900681A4E /* Info.plist */,
@@ -291,6 +295,8 @@
 				16149FD31E67AA6E00A455BF /* AvaliacoesDao.swift */,
 				33FD18981E6999EA009FCF73 /* PreparoDao.swift */,
 				16EB43B81E6A5C630073C58A /* FlavorDao.swift */,
+				160C66CE1E730734004190B7 /* CarrinhoDao.swift */,
+				160C66D21E734F8E004190B7 /* ItemDao.swift */,
 			);
 			name = dao;
 			sourceTree = "<group>";
@@ -453,7 +459,6 @@
 				16EB43BB1E6A75730073C58A /* EULA.txt in Resources */,
 				16A7569A1E6F8FEF00BD91FC /* cereais.png in Resources */,
 				1645FE081E62F5680002C1B6 /* starryStars_half@2x.png in Resources */,
-				16EB43B31E69CE440073C58A /* Main.storyboard in Resources */,
 				33FD18A01E699F29009FCF73 /* preparo-2.png in Resources */,
 				33FD18AF1E69ACA1009FCF73 /* coffee_press_2.png in Resources */,
 				33FD188E1E68C565009FCF73 /* 2.png in Resources */,
@@ -470,6 +475,7 @@
 				16B1CCCE1E5D950900681A4E /* Assets.xcassets in Resources */,
 				1645FE091E62F5680002C1B6 /* starryStars_off@2x.png in Resources */,
 				16B9BD901E64FD6300D615AE /* cafe.jpg in Resources */,
+				160C66D11E731126004190B7 /* Main.storyboard in Resources */,
 				33FD18B51E69ACA1009FCF73 /* pour_over_cone_3.png in Resources */,
 				33FD18B41E69ACA1009FCF73 /* pour_over_cone_2.png in Resources */,
 				16CB28341E6220C2001E4E3B /* config.jpg in Resources */,
@@ -506,6 +512,7 @@
 				334243971E5F4C8C0001938F /* OfertasViewController.swift in Sources */,
 				334243A31E5F4D0F0001938F /* DetalhesViewController.swift in Sources */,
 				16149FBF1E67868D00A455BF /* OfertasCustomViewCellDetails.swift in Sources */,
+				160C66CF1E730734004190B7 /* CarrinhoDao.swift in Sources */,
 				1691A8CA1E60B66800FC5085 /* EsqueciMinhaSenhaViewController.swift in Sources */,
 				16149FD41E67AA6E00A455BF /* AvaliacoesDao.swift in Sources */,
 				1618384E1E66DDFC00D4F438 /* BusyAlert.swift in Sources */,
@@ -515,6 +522,7 @@
 				160721961E5F7F5400FF3C00 /* Usuario.swift in Sources */,
 				3342439D1E5F4CC90001938F /* BuscaViewController.swift in Sources */,
 				1643CBB61E68CB77008D7872 /* FlavorCustomViewCell.swift in Sources */,
+				160C66D31E734F8E004190B7 /* ItemDao.swift in Sources */,
 				33FD18991E6999EA009FCF73 /* PreparoDao.swift in Sources */,
 				16B1CCCC1E5D950900681A4E /* CoffeeTastersIOS.xcdatamodeld in Sources */,
 				334243951E5F4C770001938F /* PedidosViewController.swift in Sources */,
@@ -545,15 +553,6 @@
 				16B1CCD01E5D950900681A4E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		16EB43B11E69CE440073C58A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				16EB43B21E69CE440073C58A /* Base */,
-			);
-			name = Main.storyboard;
-			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

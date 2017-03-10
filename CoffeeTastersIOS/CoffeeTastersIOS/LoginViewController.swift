@@ -33,6 +33,16 @@ class LoginViewController:UIViewController, FBSDKLoginButtonDelegate {
         loginButton.readPermissions = ["public_profile", "email", "user_friends"]
         loginButton.delegate = self
         self.view.addSubview(loginButton)
+        
+        if (FBSDKAccessToken.current() != nil) {
+            print("Facebook O token nao estava vazio!!! \(FBSDKAccessToken.current())")
+            returnUserData()
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let perfil = storyboard.instantiateViewController(withIdentifier: "PerfilController") as! PerfilViewController
+            self.present(perfil, animated: true, completion: nil)
+            
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,15 +58,7 @@ class LoginViewController:UIViewController, FBSDKLoginButtonDelegate {
             
             self.present(alerta, animated: true, completion: nil)
         } else {
-            if (FBSDKAccessToken.current() != nil) {
-                print("Facebook O token nao estava vazio!!! \(FBSDKAccessToken.current())")
-                returnUserData()
-                
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let perfil = storyboard.instantiateViewController(withIdentifier: "PerfilController") as! PerfilViewController
-                self.present(perfil, animated: true, completion: nil)
-                
-            }
+            
         }
         
     }

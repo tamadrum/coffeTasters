@@ -24,10 +24,6 @@ class PedidoDao {
         return NSEntityDescription.insertNewObject(forEntityName: "CDPedido", into: managedContext!) as! Pedido
     }
     
-    func newItem() -> Item {
-        return NSEntityDescription.insertNewObject(forEntityName: "CDItem", into: managedContext!) as! Item
-    }
-    
     func getListaPedidos () -> [Pedido] {
         var pedidos:[Pedido] = []
         
@@ -36,7 +32,7 @@ class PedidoDao {
         ped1.status = "Em processamento..."
         ped1.valorTotal = 100
  
-        let item1 = newItem()
+        let item1 = ItemDao().newItem()
         item1.quantidade = 2
         item1.produto = ProdutoDao().newProduto()
         item1.produto?.nome = "Café Pelé"
@@ -46,7 +42,7 @@ class PedidoDao {
         item1.produto?.precoOferta = 9
         item1.produto?.descricao = "Descrição do Café"
         
-        let item2 = newItem()
+        let item2 = ItemDao().newItem()
         item2.quantidade = 3
         item2.produto = ProdutoDao().newProduto()
         item2.produto?.nome = "Café Pilão"
@@ -66,7 +62,7 @@ class PedidoDao {
         ped2.valorTotal = 100
         ped2.items = NSSet()
         
-        let item3 = newItem()
+        let item3 = ItemDao().newItem()
         item3.quantidade = 2
         item3.produto = ProdutoDao().newProduto()
         item3.produto?.nome = "Café 3 Corações"
@@ -76,7 +72,7 @@ class PedidoDao {
         item3.produto?.precoOferta = 9
         item3.produto?.descricao = "Descrição do Café"
         
-        let item4 = newItem()
+        let item4 = ItemDao().newItem()
         item4.quantidade = 3
         item4.produto = ProdutoDao().newProduto()
         item4.produto?.nome = "Café Illy"

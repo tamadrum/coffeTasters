@@ -25,7 +25,7 @@ class ComprarAlertViewController {
      - Parameter message: Mensagem que será exibida
      
      */
-    func show(_ title:String = "Titulo", message:String = "Mensagem") {
+    func show(_ title:String = "Titulo", message:String = "Mensagem", produto: Produto) {
 
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
@@ -34,13 +34,21 @@ class ComprarAlertViewController {
             
             let firstTextField = alertController.textFields![0] as UITextField
             
-            print("firstName \(firstTextField.text!)")
+            let qtd = Int(firstTextField.text!)!
+            
+            let item = ItemDao().newItem()
+            item.quantidade = Int32(qtd)
+            item.produto = produto
+            
+            let carrinho = CarrinhoDao().getCarrinho()
+            carrinho.addToItems(item)
+            carrinho.valorTotal += produto.preco * Double(qtd)
+            
+            CarrinhoDao().save()
+        
         })
         
-        let cancelAction = UIAlertAction(title: "Cancelar", style: .default, handler: {
-            (action : UIAlertAction!) -> Void in
-            
-        })
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .default, handler: nil)
 
         alertController.addTextField { (textField : UITextField!) -> Void in
             textField.placeholder = "Digite a quantidade..."

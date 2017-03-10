@@ -61,7 +61,7 @@ class ProdutosViewController:Acordeao{
     }
     
     func comprar() {
-        ComprarAlertViewController(controller: self).show()
+        //ComprarAlertViewController(controller: self).show()
     }
     
 }

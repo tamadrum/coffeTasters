@@ -45,6 +45,7 @@ class AvaliacaoViewController:UIViewController, UpdateFlavorUsuario {
     
     func cafeAvaliado(_ cafe: Cafe) {
         avaliacao = AvaliacoesDao().newAvaliacao()
+        
         self.avaliacao.cafe = cafe
         
         avaliacao.flavor = FlavorDao().newFlavor()
@@ -60,6 +61,18 @@ class AvaliacaoViewController:UIViewController, UpdateFlavorUsuario {
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
+        
+        let cancelar = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(sairSemSalvar))
+        navigationItem.leftBarButtonItem = cancelar
+        
+    }
+    
+    func sairSemSalvar () {
+        print("saindo sem salvar")
+        avaliacao = nil
+        if let navigation = navigationController {
+            navigation.popViewController(animated: true)
+        }
     }
     
     func dismissKeyboard() {

@@ -31,6 +31,11 @@
         <attribute name="torrador" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="flavorTorrador" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDFlavor" syncable="YES"/>
     </entity>
+    <entity name="CDCarrinho" representedClassName="Carrinho" syncable="YES" codeGenerationType="class">
+        <attribute name="data" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="valorTotal" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDItem" syncable="YES"/>
+    </entity>
     <entity name="CDFlavor" representedClassName="Flavor" syncable="YES" codeGenerationType="class">
         <attribute name="amargo" optional="YES" attributeType="Integer 32" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="azedo" optional="YES" attributeType="Integer 32" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -92,5 +97,6 @@
         <element name="CDPedido" positionX="-306" positionY="-81" width="128" height="120"/>
         <element name="CDPreparo" positionX="-270" positionY="-45" width="128" height="90"/>
         <element name="CDProduto" positionX="-324" positionY="-99" width="128" height="135"/>
+        <element name="CDCarrinho" positionX="-315" positionY="-99" width="128" height="90"/>
     </elements>
 </model>
