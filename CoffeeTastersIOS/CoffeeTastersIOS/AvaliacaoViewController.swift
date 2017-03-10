@@ -120,6 +120,32 @@ class AvaliacaoViewController:UIViewController, UpdateFlavorUsuario {
     
     @IBAction func toggleNotal(_ sender: Any) {
         
+        let alert = UIAlertController(title: "Notas",
+                                      message: "Adicionar uma observação a sua avaliação",
+                                      preferredStyle: .alert)
+        // Submit button
+        let submitAction = UIAlertAction(title: "Adicionar", style: .default, handler: { (action) -> Void in
+            // Get 1st TextField's text
+            let textField = alert.textFields![0]
+            print(textField.text!)
+            self.avaliacao.obs = textField.text
+        })
+        // Cancel button
+        let cancel = UIAlertAction(title: "Cancelar", style: .destructive, handler: { (action) -> Void in })
+        // Add 1 textField and customize it
+        alert.addTextField { (textField: UITextField) in
+           // textField.keyboardAppearance = .dark
+            textField.keyboardType = .default
+            textField.autocorrectionType = .default
+            textField.placeholder = "Digite suas observações aqui"
+            textField.clearButtonMode = .whileEditing
+        }
+        
+        // Add action buttons and present the Alert
+        alert.addAction(submitAction)
+        alert.addAction(cancel)
+        present(alert, animated: true, completion: nil)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
