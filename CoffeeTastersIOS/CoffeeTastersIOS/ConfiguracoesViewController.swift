@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FBSDKLoginKit
 
 class ConfiguracoesViewController:UIViewController{
 
@@ -40,4 +41,10 @@ class ConfiguracoesViewController:UIViewController{
             navigator.popViewController(animated: true)
         }
     }
+    
+    @IBAction func sair(_ sender: Any) {
+        FBSDKLoginManager().logOut()
+        exit(0)
+    }
+    
 }

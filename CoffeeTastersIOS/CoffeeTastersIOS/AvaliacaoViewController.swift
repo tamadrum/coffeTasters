@@ -102,6 +102,7 @@ class AvaliacaoViewController:UIViewController, UpdateFlavorUsuario {
             navigation.popViewController(animated: true)
         }
     }
+    
     @IBAction func toggleNotal(_ sender: Any) {
         
     }

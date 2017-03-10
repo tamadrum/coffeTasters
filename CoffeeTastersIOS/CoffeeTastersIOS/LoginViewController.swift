@@ -12,7 +12,6 @@ import FBSDKLoginKit
 import FBSDKShareKit
 import FBSDKCoreKit
 
-
 class LoginViewController:UIViewController, FBSDKLoginButtonDelegate {
     
     @IBOutlet var emailTextField: UITextField!
@@ -26,11 +25,6 @@ class LoginViewController:UIViewController, FBSDKLoginButtonDelegate {
     
     override func viewDidLoad() {
         usuario.load()
-        
-        if (FBSDKAccessToken.current() != nil) {
-            returnUserData()
-            self.performSegue(withIdentifier: "telaPerfil", sender: self)
-        }
         
         let loginButton : FBSDKLoginButton = FBSDKLoginButton()
         var posicao:CGPoint = view.center
@@ -53,13 +47,23 @@ class LoginViewController:UIViewController, FBSDKLoginButtonDelegate {
             alerta.addAction(ok)
             
             self.present(alerta, animated: true, completion: nil)
+        } else {
+            if (FBSDKAccessToken.current() != nil) {
+                print("Facebook O token nao estava vazio!!! \(FBSDKAccessToken.current())")
+                returnUserData()
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let perfil = storyboard.instantiateViewController(withIdentifier: "PerfilController") as! PerfilViewController
+                self.present(perfil, animated: true, completion: nil)
+                
+            }
         }
+        
     }
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         
         if let userToken = result.token {
-            //EAABweIrc6mQBADqZAR3ACeLrN2ROD3YZCpRKklhhVjS6XRpdoJloH0hNF8nmeV8mKq1VJzvui9dIuBuiFZAMJft8ZCnEC70uyMxVGI4JUBzGZBwD5BjkBZADz6pCbLW7CZCZCRGhDa9XRze8CIPiZAfgqKeDBjlgSivgIT9htt9BnO7SSWl6gMSCnZAGR2grxZArPBCHZC8bZCJB75GT1lEoxpES5FH5UXnWdJwIZD
             let token:FBSDKAccessToken = userToken
             print(token)
             //print token id and user id
@@ -78,6 +82,7 @@ class LoginViewController:UIViewController, FBSDKLoginButtonDelegate {
             }
             
             returnUserData()
+            print("Facebook autenticou pelo botao")
             
             self.performSegue(withIdentifier: "telaPerfil", sender: self)
         }
