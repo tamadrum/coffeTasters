@@ -17,6 +17,10 @@ class CarrinhoViewController: UIViewController, UITableViewDelegate, UITableView
     var carrinho: Carrinho?
     
     override func viewDidLoad() {
+        recarrega()
+    }
+    
+    func recarrega () {
         carrinho = CarrinhoDao().getCarrinho()
         
         qtdItensLabel.text = "\((carrinho?.items?.count)!)"
@@ -36,6 +40,18 @@ class CarrinhoViewController: UIViewController, UITableViewDelegate, UITableView
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            
+            var items = (carrinho?.items?.allObjects as! [Item])
+            carrinho?.removeFromItems(items[indexPath.row])
+            
+            recarrega()
+            
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
