@@ -43,7 +43,8 @@ class CarrinhoViewController: UIViewController, UITableViewDelegate, UITableView
             let cell = tableView.dequeueReusableCell(withIdentifier: "header", for: indexPath)
             
             return cell
-        } else {
+        }
+        if indexPath.section == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "itens", for: indexPath) as! CarrinhoCustomViewCellItem
             
             let items = carrinho?.items!.allObjects as! [Item]
@@ -51,12 +52,13 @@ class CarrinhoViewController: UIViewController, UITableViewDelegate, UITableView
             let valorDoItem = (items[indexPath.row].produto?.preco)!*Double((items[indexPath.row].quantidade))
             
             cell.nome?.text = items[indexPath.row].produto?.nome
+            
             cell.quantidade?.text = "\(items[indexPath.row].quantidade)"
             cell.valor?.text = "R$ \(valorDoItem)"
             
             return cell
         }
-        
+        return tableView.dequeueReusableCell(withIdentifier: "header", for: indexPath)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
