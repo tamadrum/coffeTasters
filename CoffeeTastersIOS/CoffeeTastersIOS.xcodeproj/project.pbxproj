@@ -114,7 +114,7 @@
 		1618384D1E66DDFC00D4F438 /* BusyAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusyAlert.swift; sourceTree = "<group>"; };
 		163728681E624585009CB0DA /* String+isRG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+isRG.swift"; sourceTree = "<group>"; };
 		1643CBB51E68CB77008D7872 /* FlavorCustomViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlavorCustomViewCell.swift; sourceTree = "<group>"; };
-		1645FE021E62F4D90002C1B6 /* StarryStars.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarryStars.h; sourceTree = "<group>"; };
+		1645FE021E62F4D90002C1B6 /* CoffeeTasters-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoffeeTasters-Bridging-Header.h"; sourceTree = "<group>"; };
 		1645FE031E62F4FF0002C1B6 /* RatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		1645FE051E62F5680002C1B6 /* starryStars_half@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "starryStars_half@2x.png"; sourceTree = "<group>"; };
 		1645FE061E62F5680002C1B6 /* starryStars_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "starryStars_off@2x.png"; sourceTree = "<group>"; };
@@ -216,7 +216,7 @@
 				166BA4431E65B8D300739A41 /* SyncUtil.swift */,
 				1613A0BD1E68997F00E9DE65 /* ComprarAlertViewController.swift */,
 				1613A0BC1E68997F00E9DE65 /* Acordeao.swift */,
-				1645FE021E62F4D90002C1B6 /* StarryStars.h */,
+				1645FE021E62F4D90002C1B6 /* CoffeeTasters-Bridging-Header.h */,
 				1645FE031E62F4FF0002C1B6 /* RatingView.swift */,
 				1618384D1E66DDFC00D4F438 /* BusyAlert.swift */,
 				16C92A0E1E698B1300BC8150 /* AcordeaoPedido.swift */,
@@ -667,6 +667,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.2luglio.CoffeeTastersIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "CoffeeTastersIOS/CoffeeTasters-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
