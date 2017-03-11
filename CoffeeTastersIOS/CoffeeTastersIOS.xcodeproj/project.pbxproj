@@ -15,6 +15,8 @@
 		160C66CF1E730734004190B7 /* CarrinhoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160C66CE1E730734004190B7 /* CarrinhoDao.swift */; };
 		160C66D11E731126004190B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 160C66D01E731126004190B7 /* Main.storyboard */; };
 		160C66D31E734F8E004190B7 /* ItemDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160C66D21E734F8E004190B7 /* ItemDao.swift */; };
+		160C66D51E738390004190B7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160C66D41E738390004190B7 /* AVFoundation.framework */; };
+		160C66D71E7383F6004190B7 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160C66D61E7383F6004190B7 /* QRCodeViewController.swift */; };
 		1613A0BE1E68997F00E9DE65 /* Acordeao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1613A0BC1E68997F00E9DE65 /* Acordeao.swift */; };
 		1613A0BF1E68997F00E9DE65 /* ComprarAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1613A0BD1E68997F00E9DE65 /* ComprarAlertViewController.swift */; };
 		1613A0C11E6899B200E9DE65 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1613A0C01E6899B200E9DE65 /* MapKit.framework */; };
@@ -103,6 +105,8 @@
 		160C66CE1E730734004190B7 /* CarrinhoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarrinhoDao.swift; sourceTree = "<group>"; };
 		160C66D01E731126004190B7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		160C66D21E734F8E004190B7 /* ItemDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDao.swift; sourceTree = "<group>"; };
+		160C66D41E738390004190B7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		160C66D61E7383F6004190B7 /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 		1613A0BC1E68997F00E9DE65 /* Acordeao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Acordeao.swift; sourceTree = "<group>"; };
 		1613A0BD1E68997F00E9DE65 /* ComprarAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComprarAlertViewController.swift; sourceTree = "<group>"; };
 		1613A0C01E6899B200E9DE65 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -191,6 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				160C66D51E738390004190B7 /* AVFoundation.framework in Frameworks */,
 				1613A0C11E6899B200E9DE65 /* MapKit.framework in Frameworks */,
 				160721891E5F6E2100FF3C00 /* Bolts.framework in Frameworks */,
 				1607218A1E5F6E2100FF3C00 /* FBSDKCoreKit.framework in Frameworks */,
@@ -205,6 +210,7 @@
 		1607217A1E5F67B100FF3C00 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				160C66D41E738390004190B7 /* AVFoundation.framework */,
 				1613A0C01E6899B200E9DE65 /* MapKit.framework */,
 				160721851E5F6E2100FF3C00 /* Bolts.framework */,
 				160721861E5F6E2100FF3C00 /* FBSDKCoreKit.framework */,
@@ -323,6 +329,7 @@
 				16EC3BBF1E674F90008BD23B /* CarrinhoViewController.swift */,
 				16EC3BC11E674FC9008BD23B /* FinalizarCompraViewController.swift */,
 				16A756971E6ED18A00BD91FC /* AdicionaCafeViewController.swift */,
+				160C66D61E7383F6004190B7 /* QRCodeViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -492,6 +499,7 @@
 			files = (
 				16149FC71E6786C500A455BF /* AvaliacoesCustomViewCellDetails.swift in Sources */,
 				16149FB91E67866900A455BF /* ProdutosCustomViewCellHeader.swift in Sources */,
+				160C66D71E7383F6004190B7 /* QRCodeViewController.swift in Sources */,
 				334243911E5F4C440001938F /* ConfiguracoesViewController.swift in Sources */,
 				16EC3BC41E675C0B008BD23B /* ProdutoDao.swift in Sources */,
 				1613A0BF1E68997F00E9DE65 /* ComprarAlertViewController.swift in Sources */,

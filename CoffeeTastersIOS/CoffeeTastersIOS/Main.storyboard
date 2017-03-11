@@ -1833,6 +1833,24 @@
             </objects>
             <point key="canvasLocation" x="6063.75" y="936.97183098591552"/>
         </scene>
+        <!--Code View Controller-->
+        <scene sceneID="fwp-Kh-QnZ">
+            <objects>
+                <viewController id="7ys-v4-x18" customClass="QRCodeViewController" customModule="CoffeeTastersIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XE0-91-uAo"/>
+                        <viewControllerLayoutGuide type="bottom" id="P37-EF-Qmr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jEv-ey-ZHu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tj4-Zh-5vc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5396" y="-511"/>
+        </scene>
         <!--Perfil do Usuário-->
         <scene sceneID="6tb-2T-ann">
             <objects>
@@ -1950,6 +1968,9 @@
                                 <rect key="frame" x="16" y="350" width="136" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Buscar por QRCode"/>
+                                <connections>
+                                    <segue destination="7ys-v4-x18" kind="show" id="7oA-Nd-xr2"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMy-mH-E6Z">
                                 <rect key="frame" x="150" y="225" width="11" height="21"/>
@@ -1972,7 +1993,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="40Y-Kj-gDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4710" y="160.56338028169014"/>
+            <point key="canvasLocation" x="4577" y="161"/>
         </scene>
         <!--Ofertas-->
         <scene sceneID="chq-GK-WRA">
