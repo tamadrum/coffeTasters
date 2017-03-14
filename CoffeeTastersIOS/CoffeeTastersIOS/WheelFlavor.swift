@@ -33,7 +33,7 @@ class WheelFlavor: UIView {
             context.setLineWidth(CGFloat(0.5))
             context.setStrokeColor(UIColor.black.cgColor)
             
-            desenhaLinhas(context: context, centro:centro, raio:raio)
+            //desenhaLinhas(context: context, centro:centro, raio:raio)
             
 //            escreveTexto(texto: "Salgado", centro:centro, raio:raio, angulo:0)
 //            escreveTexto(texto: "Especiarias", centro:centro, raio:raio, angulo:22.5)
@@ -53,26 +53,26 @@ class WheelFlavor: UIView {
 //            escreveTexto(texto: "Frutas Vermelhas", centro:centro, raio:raio, angulo:337.5)
             
             images = [
-                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:11.25),
-                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:33.75),
-                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:56.25),
-                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:78.75),
-                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:101.25),
-                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:123.75),
-                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:146.25),
-                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:168.75),
-                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:191.25),
-                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:213.75),
-                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:236.25),
-                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:258.75),
-                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:281.25),
-                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:303.75),
-                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:326.25),
-                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:348.75)
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:11.25), // doce
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:33.75), // azedo
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:56.25), // floral
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:78.75), // especiarias
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:101.25), // salgado
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:123.75), // frutasVermelhas
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:146.25), // frutasCitricas
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:168.75), // frutasCaroco
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:191.25), // chocolate
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:213.75), // caramelo
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:236.25), // defumado
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:258.75), // amargo
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:281.25), // herbal
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:303.75), // encorpado
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:326.25), // cereais
+                desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:348.75), // nozes
             ]
             
             desenhaRoda(context: context, centro:centro, raio:raio)
-            desenhaCirculosPequenos(context: context, centro:centro, raio:raio)
+            //desenhaCirculosPequenos(context: context, centro:centro, raio:raio)
             context.strokePath()
             
             let cores = [self.hexStringToUIColor(hex: "5E3A17"),
@@ -189,10 +189,10 @@ class WheelFlavor: UIView {
         let passo = CGFloat(raio/5)
         
         context.addEllipse(in: CGRect(x: centro.x-passo*5, y: centro.y-passo*5, width: passo*10, height: passo*10))
-        context.addEllipse(in: CGRect(x: centro.x-passo*4, y: centro.y-passo*4, width: passo*8,  height: passo*8))
-        context.addEllipse(in: CGRect(x: centro.x-passo*3, y: centro.y-passo*3, width: passo*6,  height: passo*6))
-        context.addEllipse(in: CGRect(x: centro.x-passo*2, y: centro.y-passo*2, width: passo*4,  height: passo*4))
-        context.addEllipse(in: CGRect(x: centro.x-passo,   y: centro.y-passo,   width: passo*2,  height: passo*2))
+//        context.addEllipse(in: CGRect(x: centro.x-passo*4, y: centro.y-passo*4, width: passo*8,  height: passo*8))
+//        context.addEllipse(in: CGRect(x: centro.x-passo*3, y: centro.y-passo*3, width: passo*6,  height: passo*6))
+//        context.addEllipse(in: CGRect(x: centro.x-passo*2, y: centro.y-passo*2, width: passo*4,  height: passo*4))
+//        context.addEllipse(in: CGRect(x: centro.x-passo,   y: centro.y-passo,   width: passo*2,  height: passo*2))
     }
     
     /**
@@ -264,15 +264,15 @@ class WheelFlavor: UIView {
     func desenhaGraficoPreenchido (context: CGContext, centro: CGPoint, raio: Int, flavor: Flavor, cores: [UIColor]) {
         context.setLineWidth(2.0)
         
-        let doce1 = getCoordenadas(centro: centro, raio: Int(flavor.doce)*raio/10,  angulo:90)
-        let doce2 = getCoordenadas(centro: centro, raio: Int(flavor.doce)*raio/10,  angulo:67.5)
+        let doce1 = getCoordenadas(centro: centro, raio: Int(flavor.doce)*raio/10,  angulo:0)
+        let doce2 = getCoordenadas(centro: centro, raio: Int(flavor.doce)*raio/10,  angulo:22.5)
         context.move(to: centro)
         context.addLine(to: doce1)
         context.addLine(to: doce2)
         context.setFillColor(cores[0].cgColor)
         context.fillPath()
         
-        let azedo1 = getCoordenadas(centro: centro, raio:Int(flavor.azedo)*raio/10, angulo:67.5)
+        let azedo1 = getCoordenadas(centro: centro, raio:Int(flavor.azedo)*raio/10, angulo:22.5)
         let azedo2 = getCoordenadas(centro: centro, raio:Int(flavor.azedo)*raio/10, angulo:45)
         context.move(to: centro)
         context.addLine(to: azedo1)
@@ -281,62 +281,62 @@ class WheelFlavor: UIView {
         context.fillPath()
        
         let floral1 = getCoordenadas(centro: centro, raio:Int(flavor.floral)*raio/10, angulo:45)
-        let floral2 = getCoordenadas(centro: centro, raio:Int(flavor.floral)*raio/10, angulo:22.5)
+        let floral2 = getCoordenadas(centro: centro, raio:Int(flavor.floral)*raio/10, angulo:67.5)
         context.move(to: centro)
         context.addLine(to: floral1)
         context.addLine(to: floral2)
         context.setFillColor(cores[2].cgColor)
         context.fillPath()
         
-        let especiarias1 = getCoordenadas(centro: centro, raio:Int(flavor.especiarias)*raio/10, angulo:22.5)
-        let especiarias2 = getCoordenadas(centro: centro, raio:Int(flavor.especiarias)*raio/10, angulo:0)
+        let especiarias1 = getCoordenadas(centro: centro, raio:Int(flavor.especiarias)*raio/10, angulo:67.5)
+        let especiarias2 = getCoordenadas(centro: centro, raio:Int(flavor.especiarias)*raio/10, angulo:90)
         context.move(to: centro)
         context.addLine(to: especiarias1)
         context.addLine(to: especiarias2)
         context.setFillColor(cores[3].cgColor)
         context.fillPath()
         
-        let salgado1 = getCoordenadas(centro: centro, raio:Int(flavor.salgado)*raio/10, angulo:0)
-        let salgado2 = getCoordenadas(centro: centro, raio:Int(flavor.salgado)*raio/10, angulo:337.5)
+        let salgado1 = getCoordenadas(centro: centro, raio:Int(flavor.salgado)*raio/10, angulo:90)
+        let salgado2 = getCoordenadas(centro: centro, raio:Int(flavor.salgado)*raio/10, angulo:112.5)
         context.move(to: centro)
         context.addLine(to: salgado1)
         context.addLine(to: salgado2)
         context.setFillColor(cores[4].cgColor)
         context.fillPath()
         
-        let frutasVermelhas1 = getCoordenadas(centro: centro, raio:Int(flavor.frutasVermelhas)*raio/10, angulo:337.5)
-        let frutasVermelhas2 = getCoordenadas(centro: centro, raio:Int(flavor.frutasVermelhas)*raio/10, angulo:315)
+        let frutasVermelhas1 = getCoordenadas(centro: centro, raio:Int(flavor.frutasVermelhas)*raio/10, angulo:112.5)
+        let frutasVermelhas2 = getCoordenadas(centro: centro, raio:Int(flavor.frutasVermelhas)*raio/10, angulo:135)
         context.move(to: centro)
         context.addLine(to: frutasVermelhas1)
         context.addLine(to: frutasVermelhas2)
         context.setFillColor(cores[5].cgColor)
         context.fillPath()
         
-        let frutasCitrico1 = getCoordenadas(centro: centro, raio:Int(flavor.frutasCitricas)*raio/10, angulo:315)
-        let frutasCitrico2 = getCoordenadas(centro: centro, raio:Int(flavor.frutasCitricas)*raio/10, angulo:292.5)
+        let frutasCitrico1 = getCoordenadas(centro: centro, raio:Int(flavor.frutasCitricas)*raio/10, angulo:135)
+        let frutasCitrico2 = getCoordenadas(centro: centro, raio:Int(flavor.frutasCitricas)*raio/10, angulo:157.5)
         context.move(to: centro)
         context.addLine(to: frutasCitrico1)
         context.addLine(to: frutasCitrico2)
         context.setFillColor(cores[6].cgColor)
         context.fillPath()
         
-        let frutasCaroco1 = getCoordenadas(centro: centro, raio:Int(flavor.frutasCaroco)*raio/10, angulo:292.5)
-        let frutasCaroco2 = getCoordenadas(centro: centro, raio:Int(flavor.frutasCaroco)*raio/10, angulo:270)
+        let frutasCaroco1 = getCoordenadas(centro: centro, raio:Int(flavor.frutasCaroco)*raio/10, angulo:157.5)
+        let frutasCaroco2 = getCoordenadas(centro: centro, raio:Int(flavor.frutasCaroco)*raio/10, angulo:180)
         context.move(to: centro)
         context.addLine(to: frutasCaroco1)
         context.addLine(to: frutasCaroco2)
         context.setFillColor(cores[7].cgColor)
         context.fillPath()
         
-        let chocolate1 = getCoordenadas(centro: centro, raio:Int(flavor.chocolate)*raio/10, angulo:270)
-        let chocolate2 = getCoordenadas(centro: centro, raio:Int(flavor.chocolate)*raio/10, angulo:247.5)
+        let chocolate1 = getCoordenadas(centro: centro, raio:Int(flavor.chocolate)*raio/10, angulo:180)
+        let chocolate2 = getCoordenadas(centro: centro, raio:Int(flavor.chocolate)*raio/10, angulo:202.5)
         context.move(to: centro)
         context.addLine(to: chocolate1)
         context.addLine(to: chocolate2)
         context.setFillColor(cores[8].cgColor)
         context.fillPath()
         
-        let caramelo1 = getCoordenadas(centro: centro, raio:Int(flavor.caramelo)*raio/10, angulo:247.5)
+        let caramelo1 = getCoordenadas(centro: centro, raio:Int(flavor.caramelo)*raio/10, angulo:202.5)
         let caramelo2 = getCoordenadas(centro: centro, raio:Int(flavor.caramelo)*raio/10, angulo:225)
         context.move(to: centro)
         context.addLine(to: caramelo1)
@@ -345,47 +345,47 @@ class WheelFlavor: UIView {
         context.fillPath()
         
         let defumado1 = getCoordenadas(centro: centro, raio:Int(flavor.defumado)*raio/10, angulo:225)
-        let defumado2 = getCoordenadas(centro: centro, raio:Int(flavor.defumado)*raio/10, angulo:202.5)
+        let defumado2 = getCoordenadas(centro: centro, raio:Int(flavor.defumado)*raio/10, angulo:247.5)
         context.move(to: centro)
         context.addLine(to: defumado1)
         context.addLine(to: defumado2)
         context.setFillColor(cores[10].cgColor)
         context.fillPath()
         
-        let amargo1 = getCoordenadas(centro: centro, raio:Int(flavor.amargo)*raio/10, angulo:202.5)
-        let amargo2 = getCoordenadas(centro: centro, raio:Int(flavor.amargo)*raio/10, angulo:180)
+        let amargo1 = getCoordenadas(centro: centro, raio:Int(flavor.amargo)*raio/10, angulo:247.5)
+        let amargo2 = getCoordenadas(centro: centro, raio:Int(flavor.amargo)*raio/10, angulo:270)
         context.move(to: centro)
         context.addLine(to: amargo1)
         context.addLine(to: amargo2)
         context.setFillColor(cores[11].cgColor)
         context.fillPath()
         
-        let herbal1 = getCoordenadas(centro: centro, raio:Int(flavor.herbal)*raio/10, angulo:180)
-        let herbal2 = getCoordenadas(centro: centro, raio:Int(flavor.herbal)*raio/10, angulo:157.5)
+        let herbal1 = getCoordenadas(centro: centro, raio:Int(flavor.herbal)*raio/10, angulo:270)
+        let herbal2 = getCoordenadas(centro: centro, raio:Int(flavor.herbal)*raio/10, angulo:292.5)
         context.move(to: centro)
         context.addLine(to: herbal1)
         context.addLine(to: herbal2)
         context.setFillColor(cores[12].cgColor)
         context.fillPath()
         
-        let encorpado1 = getCoordenadas(centro: centro, raio:Int(flavor.encorpado)*raio/10, angulo:157.5)
-        let encorpado2 = getCoordenadas(centro: centro, raio:Int(flavor.encorpado)*raio/10, angulo:135)
+        let encorpado1 = getCoordenadas(centro: centro, raio:Int(flavor.encorpado)*raio/10, angulo:292.5)
+        let encorpado2 = getCoordenadas(centro: centro, raio:Int(flavor.encorpado)*raio/10, angulo:315)
         context.move(to: centro)
         context.addLine(to: encorpado1)
         context.addLine(to: encorpado2)
         context.setFillColor(cores[13].cgColor)
         context.fillPath()
         
-        let cereais1 = getCoordenadas(centro: centro, raio:Int(flavor.cereais)*raio/10, angulo:135)
-        let cereais2 = getCoordenadas(centro: centro, raio:Int(flavor.cereais)*raio/10, angulo:112.5)
+        let cereais1 = getCoordenadas(centro: centro, raio:Int(flavor.cereais)*raio/10, angulo:315)
+        let cereais2 = getCoordenadas(centro: centro, raio:Int(flavor.cereais)*raio/10, angulo:337)
         context.move(to: centro)
         context.addLine(to: cereais1)
         context.addLine(to: cereais2)
         context.setFillColor(cores[14].cgColor)
         context.fillPath()
         
-        let nozes1 = getCoordenadas(centro: centro, raio:Int(flavor.nozes)*raio/10, angulo:112.5)
-        let nozes2 = getCoordenadas(centro: centro, raio:Int(flavor.nozes)*raio/10, angulo:90)
+        let nozes1 = getCoordenadas(centro: centro, raio:Int(flavor.nozes)*raio/10, angulo:337)
+        let nozes2 = getCoordenadas(centro: centro, raio:Int(flavor.nozes)*raio/10, angulo:360)
         context.move(to: centro)
         context.addLine(to: nozes1)
         context.addLine(to: nozes2)
@@ -407,22 +407,23 @@ class WheelFlavor: UIView {
         context.setLineWidth(2.0)
         context.setStrokeColor(cor.cgColor)
         context.setFillColor(UIColor.blue.cgColor)
-        let doce = getCoordenadas(centro: centro, raio: Int(flavor.doce)*raio/10,  angulo:90)
-        let azedo = getCoordenadas(centro: centro, raio:Int(flavor.azedo)*raio/10, angulo:67.5)
-        let floral = getCoordenadas(centro: centro, raio:Int(flavor.floral)*raio/10, angulo:45)
-        let especiarias = getCoordenadas(centro: centro, raio:Int(flavor.especiarias)*raio/10, angulo:22.5)
-        let salgado = getCoordenadas(centro: centro, raio:Int(flavor.salgado)*raio/10, angulo:0)
-        let frutasVermelhas = getCoordenadas(centro: centro, raio:Int(flavor.frutasVermelhas)*raio/10, angulo:337.5)
-        let frutasCitrico = getCoordenadas(centro: centro, raio:Int(flavor.frutasCitricas)*raio/10, angulo:315)
-        let frutasCaroco = getCoordenadas(centro: centro, raio:Int(flavor.frutasCaroco)*raio/10, angulo:292.5)
-        let chocolate = getCoordenadas(centro: centro, raio:Int(flavor.chocolate)*raio/10, angulo:270)
-        let caramelo = getCoordenadas(centro: centro, raio:Int(flavor.caramelo)*raio/10, angulo:247.5)
-        let defumado = getCoordenadas(centro: centro, raio:Int(flavor.defumado)*raio/10, angulo:225)
-        let amargo = getCoordenadas(centro: centro, raio:Int(flavor.amargo)*raio/10, angulo:202.5)
-        let herbal = getCoordenadas(centro: centro, raio:Int(flavor.herbal)*raio/10, angulo:180)
-        let encorpado = getCoordenadas(centro: centro, raio:Int(flavor.encorpado)*raio/10, angulo:157.5)
-        let cereais = getCoordenadas(centro: centro, raio:Int(flavor.cereais)*raio/10, angulo:135)
-        let nozes = getCoordenadas(centro: centro, raio:Int(flavor.nozes)*raio/10, angulo:112.5)
+        
+        let doce = getCoordenadas(centro: centro, raio:Int(flavor.doce)*raio/10, angulo:11.25)
+        let azedo = getCoordenadas(centro: centro, raio:Int(flavor.azedo)*raio/10, angulo:33.75)
+        let floral = getCoordenadas(centro: centro, raio:Int(flavor.floral)*raio/10, angulo:56.25)
+        let especiarias = getCoordenadas(centro: centro, raio:Int(flavor.especiarias)*raio/10, angulo:78.75)
+        let salgado = getCoordenadas(centro: centro, raio: Int(flavor.salgado)*raio/10,  angulo:101.25)
+        let frutasVermelhas = getCoordenadas(centro: centro, raio:Int(flavor.frutasVermelhas)*raio/10, angulo:123.75)
+        let frutasCitricas = getCoordenadas(centro: centro, raio:Int(flavor.frutasCitricas)*raio/10, angulo:146.25)
+        let frutasCaroco = getCoordenadas(centro: centro, raio:Int(flavor.frutasCaroco)*raio/10, angulo:168.75)
+        let chocolate = getCoordenadas(centro: centro, raio:Int(flavor.chocolate)*raio/10, angulo:191.25)
+        let caramelo = getCoordenadas(centro: centro, raio:Int(flavor.caramelo)*raio/10, angulo:213.75)
+        let defumado = getCoordenadas(centro: centro, raio:Int(flavor.defumado)*raio/10, angulo:236.25)
+        let amargo = getCoordenadas(centro: centro, raio:Int(flavor.amargo)*raio/10, angulo:258.75)
+        let herbal = getCoordenadas(centro: centro, raio:Int(flavor.herbal)*raio/10, angulo:281.25)
+        let encorpado = getCoordenadas(centro: centro, raio:Int(flavor.encorpado)*raio/10, angulo:303.75)
+        let cereais = getCoordenadas(centro: centro, raio:Int(flavor.cereais)*raio/10, angulo:326.25)
+        let nozes = getCoordenadas(centro: centro, raio:Int(flavor.nozes)*raio/10, angulo:348.75)
         
         context.move(to: doce)
         context.addLine(to: azedo)
@@ -430,7 +431,7 @@ class WheelFlavor: UIView {
         context.addLine(to: especiarias)
         context.addLine(to: salgado)
         context.addLine(to: frutasVermelhas)
-        context.addLine(to: frutasCitrico)
+        context.addLine(to: frutasCitricas)
         context.addLine(to: frutasCaroco)
         context.addLine(to: chocolate)
         context.addLine(to: caramelo)

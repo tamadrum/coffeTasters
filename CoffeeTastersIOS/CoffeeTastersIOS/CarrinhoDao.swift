@@ -39,6 +39,10 @@ class CarrinhoDao {
         return NSEntityDescription.insertNewObject(forEntityName: "CDCarrinho", into: managedContext!) as! Carrinho
     }
     
+    func removeItem(_ item: Item) {
+        managedContext?.delete(item)
+    }
+    
     func save() {
         do {
             try managedContext?.save()

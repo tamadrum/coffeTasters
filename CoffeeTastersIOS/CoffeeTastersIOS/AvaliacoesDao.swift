@@ -46,6 +46,8 @@ class AvaliacoesDao {
     }
     
     func delete(_ avaliacao: Avaliacao) {
+        managedContext?.delete(avaliacao.flavor!)
+        managedContext?.delete(avaliacao.flavorMedia!)
         managedContext?.delete(avaliacao)
         save()
     }

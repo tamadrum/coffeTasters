@@ -88,6 +88,8 @@ class DetalhesViewController:UIViewController, MKMapViewDelegate{
         tipoLabel?.text = cafeAvaliado?.tipo
         altitudeLabel?.text = "\(cafeAvaliado?.altitude)"
         safraLabel?.text = "\(cafeAvaliado?.safra)"
+        
+        rodaWheelFlavor?.flavorUsuario = cafeAvaliado?.flavorTorrador
 
         centerMapOnLocation(location: initialLocation)
         

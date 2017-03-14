@@ -34,12 +34,12 @@ class ProdutosViewController:Acordeao{
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let (_, isParentCell, _) = self.findParent(indexPath.row)
+        let (parent, isParentCell, _) = self.findParent(indexPath.row)
         
         if isParentCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: parentCellIdentifier , for: indexPath) as! ProdutosCustomViewCellHeader
             
-            prod = dataSource[indexPath.row].item as! Produto
+            prod = dataSource[parent].item as? Produto
             
             cell.nome?.text = prod?.nome
             cell.tipo?.text = prod?.tipo
@@ -53,9 +53,9 @@ class ProdutosViewController:Acordeao{
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: childCellIdentifier, for: indexPath) as! ProdutosCustomViewCellDetails
             
-            let prod = dataSource[indexPath.row-1].item as! Produto
+            let prod = dataSource[parent].item as? Produto
             
-            cell.descricao?.text = prod.descricao
+            cell.descricao?.text = prod?.descricao
             
             return cell
         }

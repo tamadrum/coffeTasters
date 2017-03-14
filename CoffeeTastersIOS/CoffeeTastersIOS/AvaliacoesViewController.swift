@@ -72,12 +72,12 @@ class AvaliacoesViewController:Acordeao {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let (_, isParentCell, actualPosition) = self.findParent(indexPath.row)
+            let (parent, isParentCell, _) = self.findParent(indexPath.row)
             
             if isParentCell {
                 let cell = tableView.dequeueReusableCell(withIdentifier: parentCellIdentifier , for: indexPath) as! AvaliacoesCustomViewCellHeader
                 
-                let a = self.dataSource[actualPosition].item as! Avaliacao
+                let a = self.dataSource[parent].item as! Avaliacao
                 cell.nome?.text = a.cafe?.nome
                 cell.tipo.text = a.metodoPreparo
                 cell.data.text = a.data?.description
@@ -92,7 +92,7 @@ class AvaliacoesViewController:Acordeao {
             else {
                 let cell = tableView.dequeueReusableCell(withIdentifier: childCellIdentifier, for: indexPath) as! AvaliacoesCustomViewCellDetails
                 
-                let a = self.dataSource[indexPath.row-1].item as! Avaliacao
+                let a = self.dataSource[parent].item as! Avaliacao
                 cell.descricao?.text = a.obs
                 cell.flavor.flavorUsuario = a.flavor
                 cell.flavor.flavorTorrador = a.cafe?.flavorTorrador
