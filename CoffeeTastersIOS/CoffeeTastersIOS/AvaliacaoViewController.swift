@@ -49,9 +49,23 @@ class AvaliacaoViewController:UIViewController, UpdateFlavorUsuario {
         self.avaliacao.cafe = cafe
         
         avaliacao.flavor = FlavorDao().newFlavor()
-        avaliacao.flavor?.doce = 0
         avaliacao.flavorMedia = FlavorDao().newFlavor()
-        avaliacao.flavorMedia?.doce = 0
+        avaliacao.flavorMedia?.doce = 5
+        avaliacao.flavorMedia?.azedo = 10
+        avaliacao.flavorMedia?.floral = 5
+        avaliacao.flavorMedia?.especiarias = 10
+        avaliacao.flavorMedia?.salgado = 5
+        avaliacao.flavorMedia?.frutasVermelhas = 10
+        avaliacao.flavorMedia?.frutasCitricas = 5
+        avaliacao.flavorMedia?.frutasCaroco = 10
+        avaliacao.flavorMedia?.chocolate = 5
+        avaliacao.flavorMedia?.caramelo = 10
+        avaliacao.flavorMedia?.defumado = 5
+        avaliacao.flavorMedia?.amargo = 10
+        avaliacao.flavorMedia?.herbal = 5
+        avaliacao.flavorMedia?.encorpado = 10
+        avaliacao.flavorMedia?.cereais = 5
+        avaliacao.flavorMedia?.nozes = 10
     }
     
     override func viewDidLoad() {
