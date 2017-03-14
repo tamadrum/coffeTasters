@@ -11,8 +11,9 @@ import Foundation
 import FBSDKLoginKit
 import FBSDKShareKit
 import FBSDKCoreKit
+import WebKit
 
-class LoginViewController:UIViewController, FBSDKLoginButtonDelegate {
+class LoginViewController:UIViewController, FBSDKLoginButtonDelegate, UIWebViewDelegate {
     
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var senhaTextField: UITextField!
@@ -48,8 +49,27 @@ class LoginViewController:UIViewController, FBSDKLoginButtonDelegate {
     override func viewWillAppear(_ animated: Bool) {
         if !usuario.viuOEULA {
             
-            let alerta = UIAlertController(title: "EULA", message: "LEIA", preferredStyle: .alert)
+            let alerta = UIAlertController(title: "EULA", message: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", preferredStyle: .alert)
             
+            let web = UIWebView(frame: CGRect(x:12.0, y:45.0, width:240.0, height:300.0))
+            web.delegate = self
+            
+            
+            var text = ""
+            if let path = Bundle.main.path(forResource: "EULA", ofType: "txt") {
+                do {
+                    let data = try String(contentsOfFile: path, encoding: .utf8)
+                    let myStrings = data.components(separatedBy: .newlines)
+                    text = myStrings.joined(separator: ", ")
+                } catch {
+                    print(error)
+                }
+            }
+            
+            web.loadHTMLString(text, baseURL: nil)
+            
+            alerta.view.addSubview(web)
+
             let ok = UIAlertAction(title: "OK", style: .default, handler: {(alert: UIAlertAction!) in
                 self.usuario.viuOEULA = true
                 self.usuario.save()

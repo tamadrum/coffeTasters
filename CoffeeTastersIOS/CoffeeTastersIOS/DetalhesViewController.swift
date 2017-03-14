@@ -110,7 +110,7 @@ class DetalhesViewController:UIViewController, MKMapViewDelegate{
     }
     
     @IBAction func comprarCafe(_ sender: Any) {
-        //ComprarAlertViewController(controller: self).show("Comprar \((cafeAvaliado?.nome)!)", message: "Confirme a quantidade que deseja adicionar ao carrinho...")
+       // ComprarAlertViewController(controller: self).show("Comprar \((cafeAvaliado?.nome)!)", message: "Confirme a quantidade que deseja adicionar ao carrinho...")
     }
     
     // Coisas do Mapa
