@@ -25,7 +25,19 @@ class AnimationViewController: UIViewController {
         
         loadingImageView.image = animatedImage
         
-        _ = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
+        SyncUtil().getDadosFrom(url: "http://www.kaleidosblog.com/tutorial/tutorial.json",
+                                trataJson: { (result: Data) in
+                                    _ = SyncUtil().extract_json(jsonData: result)
+                                    //print("got back: \(r)")
+                                    return ""
+        },
+                                finish: { (dados: Any) in
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                                        self.timeToMoveOn()
+                                    })
+        })
+//        
+//        _ = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
     }
     
     func timeToMoveOn() {

@@ -44,7 +44,7 @@ class QRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
         captureMetadataOutput.metadataObjectTypes = [AVMetadataObjectTypeQRCode]
         
-        do {
+//        do {
             // Initialize the video preview layer and add it as a sublayer to the viewPreview view's layer.
             videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
             videoPreviewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
@@ -60,9 +60,9 @@ class QRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
                 view.addSubview(qrCodeFrameView)
                 view.bringSubview(toFront: qrCodeFrameView)
             }
-        } catch {
-            print (error)
-        }
+//        } catch {
+//            print (error)
+//        }
         
         // Start video capture.
         captureSession?.startRunning()
@@ -93,6 +93,12 @@ class QRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             if metadataObj.stringValue != nil {
 //                messageLabel.text = metadataObj.stringValue
                 print("QRCODE \(metadataObj.stringValue)")
+                
+                var data = CafeDao().getListaCafe()
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "detalhesCafe") as! DetalhesViewController
+                vc.cafeAvaliado = data[0]
+                self.navigationController?.pushViewController(vc, animated: true)
             }
         }
     }
