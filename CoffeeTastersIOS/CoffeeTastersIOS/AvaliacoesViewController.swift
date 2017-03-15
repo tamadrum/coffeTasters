@@ -24,15 +24,15 @@ class AvaliacoesViewController:Acordeao {
         
         busyAlertController.display()
         
-        SyncUtil().getDadosFrom(url: "http://www.kaleidosblog.com/tutorial/tutorial.json",
-                                trataJson: { (result: Data) in
-                                    _ = SyncUtil().extract_json(jsonData: result)
-                                    //print("got back: \(r)")
-                                    return ""
-        },
-                                finish: { (dados: Any) in
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
-                                        
+//        SyncUtil().getDadosFrom(url: "http://www.kaleidosblog.com/tutorial/tutorial.json",
+//                                trataJson: { (result: Data) in
+//                                    _ = SyncUtil().extract_json(jsonData: result)
+//                                    //print("got back: \(r)")
+//                                    return ""
+//        },
+//                                finish: { (dados: Any) in
+//                                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+        
                                         var items = Array<Parent>()
                                         
                                         for a in AvaliacoesDao().getLista() {
@@ -50,8 +50,8 @@ class AvaliacoesViewController:Acordeao {
                                         self.tableView?.reloadData()
                                         
                                         busyAlertController.dismiss()
-                                    })
-        })
+//                                    })
+//        })
         
     }
     

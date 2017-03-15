@@ -54,7 +54,6 @@ class LoginViewController:UIViewController, FBSDKLoginButtonDelegate, UIWebViewD
             let web = UIWebView(frame: CGRect(x:12.0, y:45.0, width:240.0, height:300.0))
             web.delegate = self
             
-            
             var text = ""
             if let path = Bundle.main.path(forResource: "EULA", ofType: "txt") {
                 do {
