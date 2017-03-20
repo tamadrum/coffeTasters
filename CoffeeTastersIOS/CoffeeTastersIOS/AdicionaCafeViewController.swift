@@ -52,9 +52,10 @@ class AdicionaCafeViewController: UIViewController, UITextFieldDelegate {
     
     func salvarCafe () {
         
-        let cafe = CafeDao().newCafe()
+        let dao = Dao<Cafe>(banco: "CDCafe")
+        let cafe:Cafe = dao.new()
+
         cafe.nome = nomeTextField.text
-        
         cafe.origem = origemTextField.text
         cafe.pais = paisTextField.text
         cafe.cidade = cidadeTextField.text
@@ -65,7 +66,7 @@ class AdicionaCafeViewController: UIViewController, UITextFieldDelegate {
         cafe.tipo = tipoTextField.text
         //cafe.safra = safraTextField.text
         
-        CafeDao().save()
+        dao.save()
         
         delegate?.atualizaTabela()
         
@@ -99,7 +100,6 @@ class AdicionaCafeViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
-    
     
     func keyboardWillShow(notification: NSNotification) {
         

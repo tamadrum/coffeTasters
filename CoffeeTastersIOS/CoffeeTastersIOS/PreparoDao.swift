@@ -10,52 +10,42 @@ import Foundation
 import CoreData
 import UIKit
 
-class PreparaDao {
+class PreparaDao: Dao<Preparo> {
     
-    var managedContext: NSManagedObjectContext?
-    
-    init() {
-        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
-            managedContext = appDelegate.persistentContainer.viewContext
-        }
-    }
-    
-    func newPreparo() -> Preparo {
-        return NSEntityDescription.insertNewObject(forEntityName: "CDPreparo", into: managedContext!) as! Preparo
-    }
-    
-    func newPasso() -> Passo {
-        return NSEntityDescription.insertNewObject(forEntityName: "CDPasso", into: managedContext!) as! Passo
+    convenience init() {
+        self.init(banco: "CDPreparo")
     }
     
     func getPreparo() -> [Preparo] {
+        let passoDao = Dao<Passo>(banco: "CDPasso")
+        
         /// Inicio do preparo1
-        let preparo1 = newPreparo()
+        let preparo1 = new()
         preparo1.nome = "Coado"
         preparo1.imagem = "coffee_press_1.png"
         
-        let passo1 = newPasso()
+        let passo1 = passoDao.new()
         passo1.indice = 1
         passo1.tempo = 5
         passo1.addToImagens(NSSet(array:["preparo-1", "preparo-2", "preparo-3", "preparo-4", "preparo-5"]))
         passo1.descricao = "Moer os grãos"
         preparo1.addToPasso(passo1)
 
-        let passo2 = newPasso()
+        let passo2 = passoDao.new()
         passo2.indice = 2
         passo2.tempo = 5
         passo2.addToImagens(NSSet(array:["preparo-1", "preparo-2", "preparo-3", "preparo-4", "preparo-5"]))
         passo2.descricao = "Colocar o pó no coador"
         preparo1.addToPasso(passo2)
         
-        let passo3 = newPasso()
+        let passo3 = passoDao.new()
         passo3.indice = 3
         passo3.tempo = 5
         passo3.addToImagens(NSSet(array:["preparo-1", "preparo-2", "preparo-3", "preparo-4", "preparo-5"]))
         passo3.descricao = "Jogar agua e esperar"
         preparo1.addToPasso(passo3)
             
-        let passo4 = newPasso()
+        let passo4 = passoDao.new()
         passo4.indice = 4
         passo4.tempo = 5
         passo4.addToImagens(NSSet(array:["preparo-1", "preparo-2", "preparo-3", "preparo-4", "preparo-5"]))
@@ -63,32 +53,32 @@ class PreparaDao {
         preparo1.addToPasso(passo1)
         
         /// Inicio do preparo2
-        let preparo2 = newPreparo()
+        let preparo2 = new()
         preparo2.nome = "Prensa Francesa"
         preparo2.imagem = "pour_over_cone_1.png"
         
-        let passo5 = newPasso()
+        let passo5 = passoDao.new()
         passo5.indice = 1
         passo5.tempo = 5
         passo5.addToImagens(NSSet(array:["preparo-1", "preparo-2", "preparo-3", "preparo-4", "preparo-5"]))
         passo5.descricao = "Moer os grãos"
         preparo2.addToPasso(passo5)
         
-        let passo6 = newPasso()
+        let passo6 = passoDao.new()
         passo6.indice = 2
         passo6.tempo = 5
         passo6.addToImagens(NSSet(array:["preparo-1", "preparo-2", "preparo-3", "preparo-4", "preparo-5"]))
         passo6.descricao = "Colocar o pó no coador"
         preparo2.addToPasso(passo6)
         
-        let passo7 = newPasso()
+        let passo7 = passoDao.new()
         passo7.indice = 3
         passo7.tempo = 5
         passo7.addToImagens(NSSet(array:["preparo-1", "preparo-2", "preparo-3", "preparo-4", "preparo-5"]))
         passo7.descricao = "Jogar agua e esperar"
         preparo2.addToPasso(passo7)
         
-        let passo8 = newPasso()
+        let passo8 = passoDao.new()
         passo8.indice = 4
         passo8.tempo = 5
         passo8.addToImagens(NSSet(array:["preparo-1", "preparo-2", "preparo-3", "preparo-4", "preparo-5"]))

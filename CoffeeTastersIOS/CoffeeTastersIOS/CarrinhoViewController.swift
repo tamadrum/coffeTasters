@@ -47,7 +47,7 @@ class CarrinhoViewController: UIViewController, UITableViewDelegate, UITableView
             
             var items = (carrinho?.items?.allObjects as! [Item])
             carrinho?.removeFromItems(items[indexPath.row])
-            CarrinhoDao().removeItem(items[indexPath.row])
+            CarrinhoDao().delete(items[indexPath.row])
             CarrinhoDao().save()
             
             recarrega()

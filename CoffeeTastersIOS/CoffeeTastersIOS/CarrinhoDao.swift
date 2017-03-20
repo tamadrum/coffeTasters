@@ -10,19 +10,23 @@ import Foundation
 import UIKit
 import CoreData
 
-class CarrinhoDao {
-    
-    var managedContext: NSManagedObjectContext?
-    
-    init() {
-        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
-            managedContext = appDelegate.persistentContainer.viewContext
-        }
+class CarrinhoDao:Dao<Carrinho> {
+
+    convenience init() {
+        self.init(banco: "CDCarrinho")
     }
+    
+//    var managedContext: NSManagedObjectContext?
+//    
+//    init() {
+//        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+//            managedContext = appDelegate.persistentContainer.viewContext
+//        }
+//    }
     
     func getCarrinho () -> Carrinho {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
-        let entityDescription = NSEntityDescription.entity(forEntityName: "CDCarrinho", in: managedContext!)
+        let entityDescription = NSEntityDescription.entity(forEntityName: banco, in: managedContext!)
         
         fetchRequest.entity = entityDescription
         
@@ -36,18 +40,18 @@ class CarrinhoDao {
             let fetchError = error as NSError
             print(fetchError)
         }
-        return NSEntityDescription.insertNewObject(forEntityName: "CDCarrinho", into: managedContext!) as! Carrinho
+        return NSEntityDescription.insertNewObject(forEntityName: banco, into: managedContext!) as! Carrinho
     }
     
-    func removeItem(_ item: Item) {
-        managedContext?.delete(item)
-    }
-    
-    func save() {
-        do {
-            try managedContext?.save()
-        } catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
-        }
-    }
+//    func removeItem(_ item: Item) {
+//        managedContext?.delete(item)
+//    }
+
+//    func save() {
+//        do {
+//            try managedContext?.save()
+//        } catch let error as NSError {
+//            print("Could not save. \(error), \(error.userInfo)")
+//        }
+//    }
 }

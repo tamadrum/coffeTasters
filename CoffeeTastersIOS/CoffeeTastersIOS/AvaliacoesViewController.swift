@@ -35,7 +35,7 @@ class AvaliacoesViewController:Acordeao {
         
                                         var items = Array<Parent>()
                                         
-                                        for a in AvaliacoesDao().getLista() {
+                                        for a:Avaliacao in AvaliacoesDao().list() {
                                             items.append(Parent(state: .collapsed, item: a))
                                         }
                                         
@@ -61,7 +61,7 @@ class AvaliacoesViewController:Acordeao {
             AvaliacoesDao().delete(self.dataSource[indexPath.row].item as! Avaliacao)
             
             var items = Array<Parent>()
-            for a in AvaliacoesDao().getLista() {
+            for a:Avaliacao in AvaliacoesDao().list() {
                 items.append(Parent(state: .collapsed, item: a))
             }
             self.dataSource = items

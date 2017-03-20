@@ -14,7 +14,6 @@
 		160721961E5F7F5400FF3C00 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160721951E5F7F5400FF3C00 /* Usuario.swift */; };
 		160C66CF1E730734004190B7 /* CarrinhoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160C66CE1E730734004190B7 /* CarrinhoDao.swift */; };
 		160C66D11E731126004190B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 160C66D01E731126004190B7 /* Main.storyboard */; };
-		160C66D31E734F8E004190B7 /* ItemDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160C66D21E734F8E004190B7 /* ItemDao.swift */; };
 		160C66D51E738390004190B7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160C66D41E738390004190B7 /* AVFoundation.framework */; };
 		160C66D71E7383F6004190B7 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160C66D61E7383F6004190B7 /* QRCodeViewController.swift */; };
 		1613A0BE1E68997F00E9DE65 /* Acordeao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1613A0BC1E68997F00E9DE65 /* Acordeao.swift */; };
@@ -53,13 +52,12 @@
 		16CB28341E6220C2001E4E3B /* config.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16CB28331E6220C2001E4E3B /* config.jpg */; };
 		16CB283A1E622B3B001E4E3B /* String+isCPF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB28391E622B3B001E4E3B /* String+isCPF.swift */; };
 		16CB283C1E622D62001E4E3B /* String+toMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB283B1E622D62001E4E3B /* String+toMD5.swift */; };
-		16EB43B91E6A5C630073C58A /* FlavorDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EB43B81E6A5C630073C58A /* FlavorDao.swift */; };
 		16EB43BB1E6A75730073C58A /* EULA.txt in Resources */ = {isa = PBXBuildFile; fileRef = 16EB43BA1E6A75730073C58A /* EULA.txt */; };
 		16EC3BC01E674F90008BD23B /* CarrinhoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC3BBF1E674F90008BD23B /* CarrinhoViewController.swift */; };
 		16EC3BC21E674FC9008BD23B /* FinalizarCompraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC3BC11E674FC9008BD23B /* FinalizarCompraViewController.swift */; };
 		16EC3BC41E675C0B008BD23B /* ProdutoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC3BC31E675C0B008BD23B /* ProdutoDao.swift */; };
-		16EC3BC61E675C14008BD23B /* CafeDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC3BC51E675C14008BD23B /* CafeDao.swift */; };
 		16EC3BC81E675C20008BD23B /* PedidoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC3BC71E675C20008BD23B /* PedidoDao.swift */; };
+		16FCD1411E7F497800E333E4 /* Dao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FCD1401E7F497800E333E4 /* Dao.swift */; };
 		334243891E5F00540001938F /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334243881E5F00540001938F /* AnimationViewController.swift */; };
 		3342438B1E5F4AA20001938F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3342438A1E5F4AA20001938F /* LoginViewController.swift */; };
 		3342438D1E5F4B520001938F /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3342438C1E5F4B520001938F /* CadastroViewController.swift */; };
@@ -104,7 +102,6 @@
 		160721951E5F7F5400FF3C00 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		160C66CE1E730734004190B7 /* CarrinhoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarrinhoDao.swift; sourceTree = "<group>"; };
 		160C66D01E731126004190B7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		160C66D21E734F8E004190B7 /* ItemDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDao.swift; sourceTree = "<group>"; };
 		160C66D41E738390004190B7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		160C66D61E7383F6004190B7 /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 		1613A0BC1E68997F00E9DE65 /* Acordeao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Acordeao.swift; sourceTree = "<group>"; };
@@ -147,13 +144,12 @@
 		16CB28391E622B3B001E4E3B /* String+isCPF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+isCPF.swift"; sourceTree = "<group>"; };
 		16CB283B1E622D62001E4E3B /* String+toMD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+toMD5.swift"; sourceTree = "<group>"; };
 		16EB43B01E69B8EB0073C58A /* CoffeeTastersIOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoffeeTastersIOS.entitlements; sourceTree = "<group>"; };
-		16EB43B81E6A5C630073C58A /* FlavorDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlavorDao.swift; sourceTree = "<group>"; };
 		16EB43BA1E6A75730073C58A /* EULA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EULA.txt; sourceTree = "<group>"; };
 		16EC3BBF1E674F90008BD23B /* CarrinhoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarrinhoViewController.swift; sourceTree = "<group>"; };
 		16EC3BC11E674FC9008BD23B /* FinalizarCompraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalizarCompraViewController.swift; sourceTree = "<group>"; };
 		16EC3BC31E675C0B008BD23B /* ProdutoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProdutoDao.swift; sourceTree = "<group>"; };
-		16EC3BC51E675C14008BD23B /* CafeDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CafeDao.swift; sourceTree = "<group>"; };
 		16EC3BC71E675C20008BD23B /* PedidoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedidoDao.swift; sourceTree = "<group>"; };
+		16FCD1401E7F497800E333E4 /* Dao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dao.swift; sourceTree = "<group>"; };
 		334243881E5F00540001938F /* AnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		3342438A1E5F4AA20001938F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3342438C1E5F4B520001938F /* CadastroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
@@ -296,13 +292,11 @@
 			isa = PBXGroup;
 			children = (
 				16EC3BC31E675C0B008BD23B /* ProdutoDao.swift */,
-				16EC3BC51E675C14008BD23B /* CafeDao.swift */,
 				16EC3BC71E675C20008BD23B /* PedidoDao.swift */,
 				16149FD31E67AA6E00A455BF /* AvaliacoesDao.swift */,
 				33FD18981E6999EA009FCF73 /* PreparoDao.swift */,
-				16EB43B81E6A5C630073C58A /* FlavorDao.swift */,
 				160C66CE1E730734004190B7 /* CarrinhoDao.swift */,
-				160C66D21E734F8E004190B7 /* ItemDao.swift */,
+				16FCD1401E7F497800E333E4 /* Dao.swift */,
 			);
 			name = dao;
 			sourceTree = "<group>";
@@ -509,7 +503,6 @@
 				16149FBB1E67867500A455BF /* ProdutosCustomViewCellDetails.swift in Sources */,
 				1645FE041E62F4FF0002C1B6 /* RatingView.swift in Sources */,
 				3342439B1E5F4CB50001938F /* AvaliacoesViewController.swift in Sources */,
-				16EC3BC61E675C14008BD23B /* CafeDao.swift in Sources */,
 				3342438D1E5F4B520001938F /* CadastroViewController.swift in Sources */,
 				166BA4411E659EB300739A41 /* Configuracoes.swift in Sources */,
 				3342439F1E5F4CE00001938F /* AvaliacaoViewController.swift in Sources */,
@@ -525,12 +518,10 @@
 				16149FD41E67AA6E00A455BF /* AvaliacoesDao.swift in Sources */,
 				1618384E1E66DDFC00D4F438 /* BusyAlert.swift in Sources */,
 				16149FBD1E67868500A455BF /* OfertasCustomViewCellHeader.swift in Sources */,
-				16EB43B91E6A5C630073C58A /* FlavorDao.swift in Sources */,
 				16EC3BC01E674F90008BD23B /* CarrinhoViewController.swift in Sources */,
 				160721961E5F7F5400FF3C00 /* Usuario.swift in Sources */,
 				3342439D1E5F4CC90001938F /* BuscaViewController.swift in Sources */,
 				1643CBB61E68CB77008D7872 /* FlavorCustomViewCell.swift in Sources */,
-				160C66D31E734F8E004190B7 /* ItemDao.swift in Sources */,
 				33FD18991E6999EA009FCF73 /* PreparoDao.swift in Sources */,
 				16B1CCCC1E5D950900681A4E /* CoffeeTastersIOS.xcdatamodeld in Sources */,
 				334243951E5F4C770001938F /* PedidosViewController.swift in Sources */,
@@ -548,6 +539,7 @@
 				334243A11E5F4CFB0001938F /* FlavorViewController.swift in Sources */,
 				16149FC31E6786A600A455BF /* PedidosCustomViewCellDetails.swift in Sources */,
 				163728691E624585009CB0DA /* String+isRG.swift in Sources */,
+				16FCD1411E7F497800E333E4 /* Dao.swift in Sources */,
 				3342438B1E5F4AA20001938F /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -44,12 +44,12 @@ class AvaliacaoViewController:UIViewController, UpdateFlavorUsuario {
     
     
     func cafeAvaliado(_ cafe: Cafe) {
-        avaliacao = AvaliacoesDao().newAvaliacao()
+        avaliacao = AvaliacoesDao().new()
         
         self.avaliacao.cafe = cafe
         
-        avaliacao.flavor = FlavorDao().newFlavor()
-        avaliacao.flavorMedia = FlavorDao().newFlavor()
+        avaliacao.flavor = Dao<Flavor>(banco: "CDFlavor").new()
+        avaliacao.flavorMedia = Dao<Flavor>(banco: "CDFlavor").new()
         avaliacao.flavorMedia?.doce = 5
         avaliacao.flavorMedia?.azedo = 10
         avaliacao.flavorMedia?.floral = 5

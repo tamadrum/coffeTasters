@@ -30,18 +30,19 @@ class BuscaViewController:UIViewController, UITableViewDelegate, UITableViewData
         let maisCafe = UIBarButtonItem(title: "+", style: .plain, target: self, action: #selector(adicionaCafe))
         navigationItem.rightBarButtonItem = maisCafe
         
-        data = CafeDao().getListaCafe()
+        data = Dao<Cafe>(banco: "CDCafe").list()
+        tableView?.reloadData()
     }
     
     func atualizaTabela(){
-        data = CafeDao().getListaCafe()
-        
+        data = Dao<Cafe>(banco: "CDCafe").list()
         tableView?.reloadData()
     }
 
     func adicionaCafe () {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "telaAdicionaCafe")
+        let vc = storyboard.instantiateViewController(withIdentifier: "telaAdicionaCafe") as! AdicionaCafeViewController
+        vc.delegate = self
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
