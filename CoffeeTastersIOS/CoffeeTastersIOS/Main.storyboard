@@ -901,7 +901,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Roda de Sabores" id="dkT-03-Ujd">
-                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="Gkj-EZ-eg9">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Gkj-EZ-eg9">
                             <connections>
                                 <action selector="salvar:" destination="KnS-ov-fOY" id="WJD-IH-cck"/>
                             </connections>
@@ -1121,8 +1121,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Avaliando" id="7Iy-A7-swg">
-                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="wJ6-6w-Upk"/>
-                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="Urn-b1-fAv">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="wJ6-6w-Upk"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Urn-b1-fAv">
                             <connections>
                                 <action selector="salvar:" destination="w01-hi-URB" id="tIg-R1-xH1"/>
                             </connections>
