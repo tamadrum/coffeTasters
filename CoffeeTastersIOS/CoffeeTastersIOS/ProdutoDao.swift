@@ -12,10 +12,6 @@ import CoreData
 
 class ProdutoDao:Dao<Produto> {
     
-    convenience init() {
-        self.init(banco: "CDProduto")
-    }
-
     func getProdutos (comOferta: Bool) -> Array<Produto> {
         var produtos = Array<Produto>()
         

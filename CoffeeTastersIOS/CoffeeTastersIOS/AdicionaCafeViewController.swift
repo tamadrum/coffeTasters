@@ -52,7 +52,7 @@ class AdicionaCafeViewController: UIViewController, UITextFieldDelegate {
     
     func salvarCafe () {
         
-        let dao = Dao<Cafe>(banco: "CDCafe")
+        let dao = Dao<Cafe>()
         let cafe:Cafe = dao.new()
 
         cafe.nome = nomeTextField.text

@@ -94,7 +94,7 @@ class QRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
 //                messageLabel.text = metadataObj.stringValue
                 print("QRCODE \(metadataObj.stringValue)")
                 
-                var data:[Cafe] = Dao<Cafe>(banco: "CDCafe").list()
+                var data:[Cafe] = Dao<Cafe>().list()
                 
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc = storyboard.instantiateViewController(withIdentifier: "detalhesCafe") as! DetalhesViewController

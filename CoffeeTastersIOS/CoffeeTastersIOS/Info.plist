@@ -3,7 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>NSCameraUsageDescription</key>
-	<string>We need to access your camera for scanning QR code</string>
+	<string>Precisamos ter acesso ao sistema de captura de imagem...</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Precisamos ter acesso ao sistema de mapas...</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

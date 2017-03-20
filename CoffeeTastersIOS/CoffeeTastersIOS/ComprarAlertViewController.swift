@@ -37,7 +37,7 @@ class ComprarAlertViewController {
             
             let qtd = Int(firstTextField.text!)!
             
-            let item = Dao<Item>(banco: "CDItem").new()
+            let item = Dao<Item>().new()
             item.quantidade = Int32(qtd)
             item.produto = produto
             

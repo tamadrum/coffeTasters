@@ -12,13 +12,9 @@ import CoreData
 
 class PedidoDao:Dao<Pedido> {
     
-    convenience init() {
-        self.init(banco: "CDPedido")
-    }
-    
     func getListaPedidos () -> [Pedido] {
         
-        let itemDao = Dao<Item>(banco: "CDItem")
+        let itemDao = Dao<Item>()
         
         var pedidos:[Pedido] = []
         

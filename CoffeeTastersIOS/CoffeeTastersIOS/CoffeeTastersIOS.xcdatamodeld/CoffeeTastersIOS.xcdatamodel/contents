@@ -54,7 +54,7 @@
         <attribute name="nozes" optional="YES" attributeType="Integer 32" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="salgado" optional="YES" attributeType="Integer 32" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
-    <entity name="CDImagens" representedClassName="CDImagens" syncable="YES" codeGenerationType="class">
+    <entity name="CDImagens" representedClassName="Imagens" syncable="YES" codeGenerationType="class">
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="CDItem" representedClassName="Item" syncable="YES" codeGenerationType="class">
@@ -90,6 +90,7 @@
     <elements>
         <element name="CDAvaliacao" positionX="-164" positionY="-234" width="128" height="210"/>
         <element name="CDCafe" positionX="-164" positionY="-54" width="128" height="285"/>
+        <element name="CDCarrinho" positionX="-315" positionY="-99" width="128" height="90"/>
         <element name="CDFlavor" positionX="-495" positionY="-249" width="128" height="285"/>
         <element name="CDImagens" positionX="-279" positionY="-54" width="128" height="60"/>
         <element name="CDItem" positionX="-315" positionY="-90" width="128" height="75"/>
@@ -97,6 +98,5 @@
         <element name="CDPedido" positionX="-306" positionY="-81" width="128" height="120"/>
         <element name="CDPreparo" positionX="-270" positionY="-45" width="128" height="90"/>
         <element name="CDProduto" positionX="-324" positionY="-99" width="128" height="135"/>
-        <element name="CDCarrinho" positionX="-315" positionY="-99" width="128" height="90"/>
     </elements>
 </model>

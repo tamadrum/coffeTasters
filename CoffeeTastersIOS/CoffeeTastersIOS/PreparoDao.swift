@@ -12,12 +12,8 @@ import UIKit
 
 class PreparaDao: Dao<Preparo> {
     
-    convenience init() {
-        self.init(banco: "CDPreparo")
-    }
-    
     func getPreparo() -> [Preparo] {
-        let passoDao = Dao<Passo>(banco: "CDPasso")
+        let passoDao = Dao<Passo>()
         
         /// Inicio do preparo1
         let preparo1 = new()

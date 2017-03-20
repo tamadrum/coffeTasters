@@ -12,13 +12,9 @@ import CoreData
 
 class CarrinhoDao:Dao<Carrinho> {
 
-    convenience init() {
-        self.init(banco: "CDCarrinho")
-    }
-     
     func getCarrinho () -> Carrinho {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
-        let entityDescription = NSEntityDescription.entity(forEntityName: banco, in: managedContext!)
+        let entityDescription = NSEntityDescription.entity(forEntityName: banco!, in: managedContext!)
         
         fetchRequest.entity = entityDescription
         
@@ -32,7 +28,7 @@ class CarrinhoDao:Dao<Carrinho> {
             let fetchError = error as NSError
             print(fetchError)
         }
-        return NSEntityDescription.insertNewObject(forEntityName: banco, into: managedContext!) as! Carrinho
+        return NSEntityDescription.insertNewObject(forEntityName: banco!, into: managedContext!) as! Carrinho
     }
 
 }
