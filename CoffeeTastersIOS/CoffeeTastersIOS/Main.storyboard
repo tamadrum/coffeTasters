@@ -935,19 +935,41 @@
                                 <rect key="frame" x="0.0" y="144" width="320" height="128"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zOU-wb-rAj">
-                                        <rect key="frame" x="8" y="4" width="304" height="120"/>
+                                        <rect key="frame" x="8" y="4" width="304" height="87"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06h-Lv-zSv">
+                                        <rect key="frame" x="272" y="94" width="40" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="Salvar"/>
+                                        <connections>
+                                            <action selector="salvarNota:" destination="w01-hi-URB" eventType="touchUpInside" id="yfi-jy-c8y"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1VU-f5-qUJ">
+                                        <rect key="frame" x="8" y="94" width="58" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="Cancelar"/>
+                                        <connections>
+                                            <action selector="cancelarNota:" destination="w01-hi-URB" eventType="touchUpInside" id="uzB-t4-bpa"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="06h-Lv-zSv" secondAttribute="trailing" constant="8" id="2uI-X9-sLn"/>
                                     <constraint firstItem="zOU-wb-rAj" firstAttribute="top" secondItem="92f-Dk-Fcc" secondAttribute="top" constant="4" id="69e-wR-pO3"/>
+                                    <constraint firstItem="1VU-f5-qUJ" firstAttribute="leading" secondItem="92f-Dk-Fcc" secondAttribute="leading" constant="8" id="Adc-DD-0ya"/>
                                     <constraint firstItem="zOU-wb-rAj" firstAttribute="leading" secondItem="92f-Dk-Fcc" secondAttribute="leading" constant="8" id="HPJ-t2-moG"/>
                                     <constraint firstAttribute="trailing" secondItem="zOU-wb-rAj" secondAttribute="trailing" constant="8" id="HWc-Na-JTK"/>
-                                    <constraint firstAttribute="bottom" secondItem="zOU-wb-rAj" secondAttribute="bottom" constant="4" id="gNk-Y2-4uR"/>
+                                    <constraint firstAttribute="bottom" secondItem="06h-Lv-zSv" secondAttribute="bottom" constant="4" id="L3j-q9-xb7"/>
+                                    <constraint firstItem="1VU-f5-qUJ" firstAttribute="top" secondItem="zOU-wb-rAj" secondAttribute="bottom" constant="3" id="ZIM-mZ-fv5"/>
+                                    <constraint firstItem="06h-Lv-zSv" firstAttribute="top" secondItem="zOU-wb-rAj" secondAttribute="bottom" constant="3" id="dp3-mU-Y7X"/>
+                                    <constraint firstAttribute="bottom" secondItem="zOU-wb-rAj" secondAttribute="bottom" constant="37" id="gNk-Y2-4uR"/>
+                                    <constraint firstAttribute="bottom" secondItem="1VU-f5-qUJ" secondAttribute="bottom" constant="4" id="iOi-jj-CC7"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YfH-L9-lBi">
