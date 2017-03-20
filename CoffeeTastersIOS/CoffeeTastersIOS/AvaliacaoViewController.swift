@@ -28,6 +28,26 @@ class AvaliacaoViewController:UIViewController, UpdateFlavorUsuario {
     @IBOutlet var auxView: UIView!
     @IBOutlet var notasTextView: UITextView!
     
+    @IBAction func cancelarNota(_ sender: Any) {
+        
+        UIView.animate(withDuration: 0.5, animations: {
+            self.notasView.frame.origin.y = self.notasView.frame.origin.y - self.notasView.frame.size.height
+            
+        })
+        notasTextView.text = self.avaliacao.obs
+        toggleComentario = false
+        
+    }
+    @IBAction func salvarNota(_ sender: Any) {
+        
+        UIView.animate(withDuration: 0.5, animations: {
+            self.notasView.frame.origin.y = self.notasView.frame.origin.y - self.notasView.frame.size.height
+        })
+        self.avaliacao.obs = notasTextView.text
+        toggleComentario = false
+        
+    }
+    
 //    
 //    let calendario = NSCalendar.current
 //    
@@ -137,61 +157,24 @@ class AvaliacaoViewController:UIViewController, UpdateFlavorUsuario {
     
     @IBAction func toggleNotal(_ sender: Any) {
         
-//        let alert = UIAlertController(title: "Notas",
-//                                      message: "Adicionar uma observação a sua avaliação",
-//                                      preferredStyle: .alert)
-//        
-//        let submitAction = UIAlertAction(title: "Adicionar", style: .default, handler: { (action) -> Void in
-//            
-//            let textField = alert.textFields![0]
-//            
-//            self.avaliacao.obs = (textField.text)!
-//            
-//            self.avaliacao.obs = textField.text
-//        })
-//        
-//        let cancel = UIAlertAction(title: "Cancelar", style: .destructive, handler: { (action) -> Void in })
-//        
-//        alert.addTextField { (textField: UITextField) in
-//            textField.keyboardType = .default
-//            textField.autocorrectionType = .default
-//            textField.placeholder = "Digite suas observações aqui"
-//            textField.clearButtonMode = .whileEditing
-//            textField.text = self.avaliacao.obs
-//        }
-//        
-//        
-//        alert.addAction(submitAction)
-//        alert.addAction(cancel)
-//        
-//        present(alert, animated: true, completion: nil)
 
         if toggleComentario == false {
             
             UIView.animate(withDuration: 0.5, animations: {
-                // self.ratingDetailsView.frame.origin.y = self.totalRating.frame.origin.y - self.totalRating.frame.size.height + self.ratingDetailsView.frame.size.height/2
                 self.notasView.frame.origin.y = self.auxView.frame.origin.y + self.auxView.frame.size.height
-                
-                
             })
-            notasTextView.text = self.avaliacao.obs
+            
             toggleComentario = true
             
         } else {
             
             UIView.animate(withDuration: 0.5, animations: {
-                //self.ratingDetailsView.frame.origin.y = self.totalRating.frame.origin.y - self.totalRating.frame.size.height - self.ratingDetailsView.frame.size.height/2
-                //self.ratingDetailsView.frame.origin.y = self.auxView.frame.origin.y - self.ratingDetailsView.frame.size.height/2
                 self.notasView.frame.origin.y = self.notasView.frame.origin.y - self.notasView.frame.size.height
-                
             })
-            self.avaliacao.obs = notasTextView.text
+            
             toggleComentario = false
             
         }
-
-    
-    
     
     }
     
