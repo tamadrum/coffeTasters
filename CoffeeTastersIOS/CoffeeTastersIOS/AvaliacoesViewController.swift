@@ -35,7 +35,7 @@ class AvaliacoesViewController:Acordeao {
         
                                         var items = Array<Parent>()
                                         
-                                        for a:Avaliacao in AvaliacoesDao().list() {
+                                        for a:Avaliacao in Dao<Avaliacao>(banco: "CDAvaliacao").list() {
                                             items.append(Parent(state: .collapsed, item: a))
                                         }
                                         
@@ -58,10 +58,10 @@ class AvaliacoesViewController:Acordeao {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCellEditingStyle.delete {
             
-            AvaliacoesDao().delete(self.dataSource[indexPath.row].item as! Avaliacao)
+            Dao<Avaliacao>(banco: "CDAvaliacao").delete(self.dataSource[indexPath.row].item as! Avaliacao)
             
             var items = Array<Parent>()
-            for a:Avaliacao in AvaliacoesDao().list() {
+            for a:Avaliacao in Dao<Avaliacao>(banco: "CDAvaliacao").list() {
                 items.append(Parent(state: .collapsed, item: a))
             }
             self.dataSource = items

@@ -19,8 +19,8 @@ class BuscaViewController:UIViewController, UITableViewDelegate, UITableViewData
     var delegate:AtualizaTabela?
     
     var searchActive : Bool = false
-    var data:Array<Cafe> = []
-    var filtered:Array<Cafe> = []
+    var data:[Cafe] = []
+    var filtered:[Cafe] = []
     
     override func viewDidLoad() {
         tableView?.delegate = self

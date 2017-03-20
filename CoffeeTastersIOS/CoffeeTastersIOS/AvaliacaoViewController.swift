@@ -48,7 +48,7 @@ class AvaliacaoViewController:UIViewController, UpdateFlavorUsuario {
     
     
     func cafeAvaliado(_ cafe: Cafe) {
-        avaliacao = AvaliacoesDao().new()
+        avaliacao = Dao<Avaliacao>(banco: "CDAvaliacao").new()
         
         self.avaliacao.cafe = cafe
         
@@ -88,7 +88,7 @@ class AvaliacaoViewController:UIViewController, UpdateFlavorUsuario {
     func sairSemSalvar () {
         print("saindo sem salvar")
         
-        AvaliacoesDao().managedContext?.reset()
+        Dao<Avaliacao>(banco: "CDAvaliacao").reset()
         
         if let navigation = navigationController {
             navigation.popViewController(animated: true)
@@ -128,7 +128,7 @@ class AvaliacaoViewController:UIViewController, UpdateFlavorUsuario {
     @IBAction func salvar(_ sender: Any) {
         avaliacao.gostou = Int16((gostouRatingView?.rating)!)
         
-        AvaliacoesDao().save()
+        Dao<Avaliacao>(banco: "CDAvaliacao").save()
         
         if let navigation = navigationController {
             navigation.popViewController(animated: true)

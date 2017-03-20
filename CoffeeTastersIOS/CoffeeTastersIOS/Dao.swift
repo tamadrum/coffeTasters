@@ -45,6 +45,10 @@ class Dao<T> {
     func delete(_ obj: NSManagedObject) {
         managedContext?.delete(obj)
     }
+    
+    func reset () {
+        managedContext?.reset()
+    }
 
     func save() {
         do {
