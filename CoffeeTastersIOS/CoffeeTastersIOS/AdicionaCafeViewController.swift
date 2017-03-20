@@ -120,10 +120,8 @@ class AdicionaCafeViewController: UIViewController, UITextFieldDelegate {
     
     func keyboardWillHide(notification: NSNotification) {
         if (self.viewWasMoved) {
-//            if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-                self.view.frame.origin.y = 0 //+= keyboardSize.height
-                self.viewWasMoved = false
-//            }
+            self.view.frame.origin.y = 0 //+= keyboardSize.height
+            self.viewWasMoved = false
         }
     }
     

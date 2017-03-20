@@ -36,8 +36,10 @@ class AvaliacaoViewController:UIViewController, UpdateFlavorUsuario {
         })
         notasTextView.text = self.avaliacao.obs
         toggleComentario = false
+        dismissKeyboard()
         
     }
+    
     @IBAction func salvarNota(_ sender: Any) {
         
         UIView.animate(withDuration: 0.5, animations: {
@@ -45,6 +47,7 @@ class AvaliacaoViewController:UIViewController, UpdateFlavorUsuario {
         })
         self.avaliacao.obs = notasTextView.text
         toggleComentario = false
+        dismissKeyboard()
         
     }
     
@@ -103,6 +106,19 @@ class AvaliacaoViewController:UIViewController, UpdateFlavorUsuario {
         let cancelar = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(sairSemSalvar))
         navigationItem.leftBarButtonItem = cancelar
         
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue
+        self.view.frame.origin.y -= keyboardSize!.height
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue
+        self.view.frame.origin.y += keyboardSize!.height
     }
     
     func sairSemSalvar () {
