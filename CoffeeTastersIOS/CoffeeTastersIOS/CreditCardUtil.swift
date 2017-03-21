@@ -11,6 +11,20 @@ import UIKit
 /// Classe para testar algumas informações do cartão de crédito
 class CreditCardUtil {
     
+    public struct TiposDeCartao {
+        static let CARTEBLANCHE = #imageLiteral(resourceName: "erro.jpg")
+        static let DISCOVER = #imageLiteral(resourceName: "erro.jpg")
+        static let ENROUTE = #imageLiteral(resourceName: "erro.jpg")
+        
+        static let VISA = #imageLiteral(resourceName: "visa.png")
+        static let AMERICANEXPRESS = #imageLiteral(resourceName: "americanexpress.png")
+        static let DINERSCLUB = #imageLiteral(resourceName: "dinersclub.png")
+        static let JCB = #imageLiteral(resourceName: "jcb.png")
+        static let MASTERCARD = #imageLiteral(resourceName: "mastercard.png")
+        static let INVALIDO = #imageLiteral(resourceName: "erro.jpg")
+        static let PEQUENO = #imageLiteral(resourceName: "erro.jpg")
+    }
+    
     /**
      Este método devolve o tipo do cartão de crédito
      
@@ -30,50 +44,50 @@ class CreditCardUtil {
      - Returns nome da bandeira do cartão de crédito
      
      */
-    func creditCardType (_ numero: String) -> String {
+    func creditCardType (_ numero: String) -> UIImage {
         let num = numero.replacingOccurrences(of: ".", with: "").replacingOccurrences(of: "-", with: "")
         
         if num.characters.count < 14 {
-            return "Comprimento Inválido"
+            return CreditCardUtil.TiposDeCartao.PEQUENO
         }
         
         let inicio2 = Int(num.substring(with: num.index(num.startIndex, offsetBy: 0)..<num.index(num.startIndex, offsetBy: 2)))!
         
         switch (inicio2){
         case 34, 37:
-            return "American Express"
+            return CreditCardUtil.TiposDeCartao.AMERICANEXPRESS
         case 36:
-            return "Diners Club"
+            return CreditCardUtil.TiposDeCartao.DINERSCLUB
         case 38:
-            return "Carte Blanche"
+            return CreditCardUtil.TiposDeCartao.CARTEBLANCHE
         case 51 , 52, 53, 54, 55:
-            return "Master Card"
+            return CreditCardUtil.TiposDeCartao.MASTERCARD
         default:
             let inicio4 = Int(num.substring(with: num.index(num.startIndex, offsetBy: 0)..<num.index(num.startIndex, offsetBy: 4)))!
             
             switch (inicio4) {
             case 2014, 2149:
-                return "EnRoute"
+                return CreditCardUtil.TiposDeCartao.ENROUTE
             case 2131, 1800:
-                return "JCB"
+                return CreditCardUtil.TiposDeCartao.JCB
             case 6011:
-                return "Discover"
+                return CreditCardUtil.TiposDeCartao.DISCOVER
             default:
                 let inicio3 = Int(num.substring(with: num.index(num.startIndex, offsetBy: 0)..<num.index(num.startIndex, offsetBy: 3)))!
                 
                 switch (inicio3) {
                 case 300, 301, 302, 303, 304, 305:
-                    return "American Diners Club"
+                    return CreditCardUtil.TiposDeCartao.DINERSCLUB
                 default:
                     let inicio1 = Int(num.substring(with: num.index(num.startIndex, offsetBy: 0)..<num.index(num.startIndex, offsetBy: 1)))!
                     
                     switch (inicio1) {
                     case 3:
-                        return "JCB"
+                        return CreditCardUtil.TiposDeCartao.JCB
                     case 4:
-                        return "Visa"
+                        return CreditCardUtil.TiposDeCartao.VISA
                     default:
-                        return "Número Inválido"
+                        return CreditCardUtil.TiposDeCartao.INVALIDO
                     }
                 }
             }

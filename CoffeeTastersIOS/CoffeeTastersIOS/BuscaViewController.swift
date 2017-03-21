@@ -27,7 +27,7 @@ class BuscaViewController:UIViewController, UITableViewDelegate, UITableViewData
         tableView?.dataSource = self
         campoBusca.delegate = self
         
-        let maisCafe = UIBarButtonItem(title: "+", style: .plain, target: self, action: #selector(adicionaCafe))
+        let maisCafe = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(adicionaCafe))
         navigationItem.rightBarButtonItem = maisCafe
         
         data = Dao<Cafe>().list()

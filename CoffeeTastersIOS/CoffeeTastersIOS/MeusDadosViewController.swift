@@ -17,7 +17,7 @@ class MeusDadosViewController:UIViewController{
     @IBOutlet var nomeCartaoTextField: UITextField!
     @IBOutlet var numeroCartaoTextField: UITextField!
     @IBOutlet var validadeCartaoTextField: UITextField!
-    @IBOutlet var tipoCartaoTextField: UITextField!
+    @IBOutlet weak var tipoCartaoImagem: UIImageView!
     
     var usuario = Usuario()
     
@@ -32,7 +32,8 @@ class MeusDadosViewController:UIViewController{
         self.nomeCartaoTextField?.text = usuario.nomeCartao
         self.numeroCartaoTextField?.text = mostraAsteriscos(usuario.numeroCartao)
         self.validadeCartaoTextField?.text = usuario.validadeCartao
-        self.tipoCartaoTextField?.text = usuario.tipoCartao
+        
+        tipoCartaoImagem.image = CreditCardUtil().creditCardType(usuario.numeroCartao)
     }
     
     @IBAction func salvar(_ sender: Any) {
@@ -47,7 +48,6 @@ class MeusDadosViewController:UIViewController{
             if let nomeCartao = nomeCartaoTextField.text { usuario.nomeCartao = nomeCartao }
             if let numeroCartao = numeroCartaoTextField.text { usuario.numeroCartao = numeroCartao }
             if let validadeCartaoTextField = validadeCartaoTextField.text { usuario.validadeCartao = validadeCartaoTextField }
-            if let tipoCartao = tipoCartaoTextField.text { usuario.tipoCartao = tipoCartao }
             
             usuario.save()
     
@@ -57,14 +57,21 @@ class MeusDadosViewController:UIViewController{
     }
     
     func mostraAsteriscos(_ texto: String) -> String {
-        if ( texto.characters.count == 12 ) {
-            let start = texto.index(texto.startIndex, offsetBy: 4)
-            let end = texto.index(texto.endIndex, offsetBy: -4)
-            let range = start..<end
+        if ( texto.characters.count > 14 ) {
+            let start1 = texto.index(texto.startIndex, offsetBy: 0)
+            let end1 = texto.index(texto.startIndex, offsetBy: 4)
+            let range1 = start1..<end1
             
-            return "****\(texto.substring(with: range))****"
+            let start2 = texto.index(texto.endIndex, offsetBy: -8)
+            let end2 = texto.index(texto.endIndex, offsetBy: -4)
+            let range2 = start2..<end2
+            
+            return "\(texto.substring(with: range1))********\(texto.substring(with: range2))"
         }
         return ""
     }
     
+    @IBAction func escreveuNumero(_ sender: UITextField) {
+        tipoCartaoImagem.image = CreditCardUtil().creditCardType(sender.text!)
+    }
 }

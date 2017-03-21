@@ -30,5 +30,28 @@ class CarrinhoDao:Dao<Carrinho> {
         }
         return NSEntityDescription.insertNewObject(forEntityName: banco!, into: managedContext!) as! Carrinho
     }
+    
+    func getValorCarrinho() -> Double {
+        var total = 0.0
+        
+        let carrinho = getCarrinho()
+        
+        for item in carrinho.items! {
+            let i = item as! Item
+            total += (i.produto?.preco)! * Double(i.quantidade)
+        }
+        
+        return total
+    }
+    
+    func zeraCarrinho() {
+        let carrinho = getCarrinho()
+        let itemDao = Dao<Item>()
+        
+        for item in carrinho.items! {
+            carrinho.removeFromItems(item as! Item)
+            itemDao.delete(item as! NSManagedObject)
+        }
+    }
 
 }
