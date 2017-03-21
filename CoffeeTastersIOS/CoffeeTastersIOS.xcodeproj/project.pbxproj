@@ -35,6 +35,7 @@
 		1645FE081E62F5680002C1B6 /* starryStars_half@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1645FE051E62F5680002C1B6 /* starryStars_half@2x.png */; };
 		1645FE091E62F5680002C1B6 /* starryStars_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1645FE061E62F5680002C1B6 /* starryStars_off@2x.png */; };
 		1645FE0A1E62F5680002C1B6 /* starryStars_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1645FE071E62F5680002C1B6 /* starryStars_on@2x.png */; };
+		165646CB1E8149380034112C /* CreditCardUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165646CA1E8149380034112C /* CreditCardUtil.swift */; };
 		166BA4411E659EB300739A41 /* Configuracoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166BA4401E659EB300739A41 /* Configuracoes.swift */; };
 		166BA4441E65B8D300739A41 /* SyncUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166BA4431E65B8D300739A41 /* SyncUtil.swift */; };
 		1691A8C01E5FC86B00FC5085 /* WheelFlavor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691A8BF1E5FC86B00FC5085 /* WheelFlavor.swift */; };
@@ -123,6 +124,7 @@
 		1645FE051E62F5680002C1B6 /* starryStars_half@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "starryStars_half@2x.png"; sourceTree = "<group>"; };
 		1645FE061E62F5680002C1B6 /* starryStars_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "starryStars_off@2x.png"; sourceTree = "<group>"; };
 		1645FE071E62F5680002C1B6 /* starryStars_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "starryStars_on@2x.png"; sourceTree = "<group>"; };
+		165646CA1E8149380034112C /* CreditCardUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardUtil.swift; sourceTree = "<group>"; };
 		166BA4401E659EB300739A41 /* Configuracoes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuracoes.swift; sourceTree = "<group>"; };
 		166BA4431E65B8D300739A41 /* SyncUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncUtil.swift; sourceTree = "<group>"; };
 		1691A8BF1E5FC86B00FC5085 /* WheelFlavor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelFlavor.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				1645FE031E62F4FF0002C1B6 /* RatingView.swift */,
 				1618384D1E66DDFC00D4F438 /* BusyAlert.swift */,
 				16C92A0E1E698B1300BC8150 /* AcordeaoPedido.swift */,
+				165646CA1E8149380034112C /* CreditCardUtil.swift */,
 			);
 			name = util;
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 				16EC3BC41E675C0B008BD23B /* ProdutoDao.swift in Sources */,
 				1613A0BF1E68997F00E9DE65 /* ComprarAlertViewController.swift in Sources */,
 				334243991E5F4CA10001938F /* ProdutosViewController.swift in Sources */,
+				165646CB1E8149380034112C /* CreditCardUtil.swift in Sources */,
 				1613A0BE1E68997F00E9DE65 /* Acordeao.swift in Sources */,
 				16C92A0F1E698B1300BC8150 /* AcordeaoPedido.swift in Sources */,
 				16149FBB1E67867500A455BF /* ProdutosCustomViewCellDetails.swift in Sources */,
