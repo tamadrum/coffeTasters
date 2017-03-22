@@ -11,7 +11,7 @@ import UIKit
 import CoreGraphics
 
 /// Roda de sabores customizada para esta aplicação
-class WheelFlavor: UIView {
+@IBDesignable class WheelFlavor: UIView {
     
     /// **flavorTorrador** é a variavel que conterá a roda de sabores que o torrador fez para o café
     var flavorTorrador:Flavor?
@@ -21,6 +21,24 @@ class WheelFlavor: UIView {
     var flavorUsuario:Flavor?
     
     var images:[CGRect] = []
+    
+    /// Array de cores para a roda dos sabores
+    let cores = [WheelFlavor.hexStringToUIColor(hex: "5E3A17"),
+                 WheelFlavor.hexStringToUIColor(hex: "BE8E3D"),
+                 WheelFlavor.hexStringToUIColor(hex: "9C8A33"),
+                 WheelFlavor.hexStringToUIColor(hex: "C5B742"),
+                 WheelFlavor.hexStringToUIColor(hex: "BC6337"),
+                 WheelFlavor.hexStringToUIColor(hex: "D7925B"),
+                 WheelFlavor.hexStringToUIColor(hex: "ECC56E"),
+                 WheelFlavor.hexStringToUIColor(hex: "E7CB9B"),
+                 WheelFlavor.hexStringToUIColor(hex: "3287A5"),
+                 WheelFlavor.hexStringToUIColor(hex: "8DB7A5"),
+                 WheelFlavor.hexStringToUIColor(hex: "703B52"),
+                 WheelFlavor.hexStringToUIColor(hex: "945A72"),
+                 WheelFlavor.hexStringToUIColor(hex: "422718"),
+                 WheelFlavor.hexStringToUIColor(hex: "9C8A33"),
+                 WheelFlavor.hexStringToUIColor(hex: "C5B742"),
+                 WheelFlavor.hexStringToUIColor(hex: "BC6337")]
     
     override func draw(_ rect: CGRect) {
         let centro = CGPoint(x: self.bounds.width/2, y: self.bounds.height/2)
@@ -32,25 +50,6 @@ class WheelFlavor: UIView {
         if let context = UIGraphicsGetCurrentContext() {
             context.setLineWidth(CGFloat(0.5))
             context.setStrokeColor(UIColor.black.cgColor)
-            
-            //desenhaLinhas(context: context, centro:centro, raio:raio)
-            
-//            escreveTexto(texto: "Salgado", centro:centro, raio:raio, angulo:0)
-//            escreveTexto(texto: "Especiarias", centro:centro, raio:raio, angulo:22.5)
-//            escreveTexto(texto: "Floral", centro:centro, raio:raio, angulo:45)
-//            escreveTexto(texto: "Azedo", centro:centro, raio:raio, angulo:67.5)
-//            escreveTexto(texto: "Doce", centro:centro, raio:raio, angulo:90)
-//            escreveTexto(texto: "Nozes", centro:centro, raio:raio, angulo:112.5)
-//            escreveTexto(texto: "Cereais", centro:centro, raio:raio, angulo:135)
-//            escreveTexto(texto: "Encorpado", centro:centro, raio:raio, angulo:157.5)
-//            escreveTexto(texto: "Herbal", centro:centro, raio:raio, angulo:180)
-//            escreveTexto(texto: "Amargo", centro:centro, raio:raio, angulo:202.5)
-//            escreveTexto(texto: "Defumado", centro:centro, raio:raio, angulo:225)
-//            escreveTexto(texto: "Caramelo", centro:centro, raio:raio, angulo:247.5)
-//            escreveTexto(texto: "Chocolate", centro:centro, raio:raio, angulo:270)
-//            escreveTexto(texto: "Frutas com Caroço", centro:centro, raio:raio, angulo:292.5)
-//            escreveTexto(texto: "Frutas Cítricas", centro:centro, raio:raio, angulo:315)
-//            escreveTexto(texto: "Frutas Vermelhas", centro:centro, raio:raio, angulo:337.5)
             
             images = [
                 desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:11.25), // doce
@@ -70,27 +69,10 @@ class WheelFlavor: UIView {
                 desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:326.25), // cereais
                 desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:348.75), // nozes
             ]
-            
+
             desenhaRoda(context: context, centro:centro, raio:raio)
-            //desenhaCirculosPequenos(context: context, centro:centro, raio:raio)
+
             context.strokePath()
-            
-            let cores = [self.hexStringToUIColor(hex: "5E3A17"),
-                         self.hexStringToUIColor(hex: "BE8E3D"),
-                         self.hexStringToUIColor(hex: "9C8A33"),
-                         self.hexStringToUIColor(hex: "C5B742"),
-                         self.hexStringToUIColor(hex: "BC6337"),
-                         self.hexStringToUIColor(hex: "D7925B"),
-                         self.hexStringToUIColor(hex: "ECC56E"),
-                         self.hexStringToUIColor(hex: "E7CB9B"),
-                         self.hexStringToUIColor(hex: "3287A5"),
-                         self.hexStringToUIColor(hex: "8DB7A5"),
-                         self.hexStringToUIColor(hex: "703B52"),
-                         self.hexStringToUIColor(hex: "945A72"),
-                         self.hexStringToUIColor(hex: "422718"),
-                         self.hexStringToUIColor(hex: "9C8A33"),
-                         self.hexStringToUIColor(hex: "C5B742"),
-                         self.hexStringToUIColor(hex: "BC6337")]
             
             if let flavor = flavorUsuario {
                 desenhaGraficoPreenchido(context: context, centro:centro, raio:raio, flavor:flavor, cores: cores)
@@ -453,7 +435,7 @@ class WheelFlavor: UIView {
      - Returns: UIColor cor segundo o ios
      
      */
-    func hexStringToUIColor (hex:String) -> UIColor {
+    static func hexStringToUIColor (hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         
         if (cString.hasPrefix("#")) {
