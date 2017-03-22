@@ -16,49 +16,56 @@ class AvaliacoesViewController:Acordeao {
     override func viewWillAppear(_ animated: Bool) {
         self.lastCellExpanded = NoCellExpanded
         tableView?.tableFooterView = UIView()
+
+        let syncUtil = SyncUtil()
         
-        let busyAlertController: BusyAlert = {
-            let busyAlert = BusyAlert(title: "Carregando...", message: "\n\nAguarde por favor!", presentingViewController: self)
-            return busyAlert
-        }()
+        syncUtil.criaAlerta(title: "Aguarde o carregamento...", message: "\n\n", presentingViewController: self) {
+            // Faz algo quando dá cancel
+        }
         
-        busyAlertController.display()
-        
-//        SyncUtil().getDadosFrom(url: "http://www.kaleidosblog.com/tutorial/tutorial.json",
-//                                trataJson: { (result: Data) in
-//                                    _ = SyncUtil().extract_json(jsonData: result)
-//                                    //print("got back: \(r)")
-//                                    return ""
-//        },
-//                                finish: { (dados: Any) in
-//                                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
-        
-                                        var items = Array<Parent>()
-                                        
-                                        for a:Avaliacao in Dao<Avaliacao>().list() {
-                                            items.append(Parent(state: .collapsed, item: a))
-                                        }
-                                        
-                                        self.parentCellIdentifier = "header"
-                                        self.childCellIdentifier = "details"
-                                        self.heightParent = 130
-                                        self.heightChild = 400
-                                        self.self.dataSource = items
-                                        self.self.numberOfCellsExpanded = .one
-                                        self.self.total = self.dataSource.count
-                                        
-                                        self.tableView?.reloadData()
-                                        
-                                        busyAlertController.dismiss()
-//                                    })
-//        })
-        
+        syncUtil.display {
+            syncUtil.getDadosFrom(url: "http://www.kaleidosblog.com/tutorial/tutorial.json", trataJson: { (result:Data) in
+                // Trata o Json
+                let resposta = syncUtil.trataJson(jsonData: result)
+                return "\(resposta)"
+            }, finish: {
+                (dados: Any) in
+                // Faz algo com o resultado do tratamento
+                var items = Array<Parent>()
+                
+                for a:Avaliacao in Dao<Avaliacao>().list() {
+                    items.append(Parent(state: .collapsed, item: a))
+                }
+                
+                self.parentCellIdentifier = "header"
+                self.childCellIdentifier = "details"
+                self.heightParent = 130
+                self.heightChild = 400
+                self.self.dataSource = items
+                self.self.numberOfCellsExpanded = .one
+                self.self.total = self.dataSource.count
+                
+                self.tableView?.reloadData()
+                
+                syncUtil.dismiss()
+            }, onError: {
+                () in
+                // Fal algo quando dá erro
+                syncUtil.dismiss()
+            })
+        }
+
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCellEditingStyle.delete {
             
-            Dao<Avaliacao>().delete(self.dataSource[indexPath.row].item as! Avaliacao)
+            let avaliacao = self.dataSource[indexPath.row].item as! Avaliacao
+            
+            if avaliacao.cafe != nil { Dao<Cafe>().delete(avaliacao.cafe!) }
+            if avaliacao.flavor != nil { Dao<Flavor>().delete(avaliacao.flavor!) }
+            if avaliacao.flavorMedia != nil { Dao<Flavor>().delete(avaliacao.flavorMedia!) }
+            Dao<Avaliacao>().delete(avaliacao)
             
             var items = Array<Parent>()
             for a:Avaliacao in Dao<Avaliacao>().list() {

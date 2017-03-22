@@ -10,8 +10,6 @@ import Foundation
 
 class SyncUtil {
     
-//    var TableData:Array<String> = Array<String>()
-    
     func getDadosFrom(url: String, trataJson: @escaping (_ result: Data) -> String, finish: @escaping (_ dados: Any) -> Void, onError: @escaping () -> Void){
         
         guard let url2 = URL(string: url) else {
@@ -38,50 +36,61 @@ class SyncUtil {
         task.resume()
     }
 
-    func extract_json(jsonData:Data) -> String {
-//        let json = try? JSONSerialization.jsonObject(with: jsonData, options: [])
-//            if let countries_list = json as? Array<Any> {
-//                for i in 0 ..< countries_list.count {
-//                    if let country_obj = countries_list[i] as? NSDictionary {
-//                        if let country_name = country_obj["country"] as? String {
-//                            if let country_code = country_obj["code"] as? String {
-//                                TableData.append(country_name + " [" + country_code + "]")
-//                                print("\(country_name) [\(country_code)]")
-//                            }
-//                        }
-//                    }
-//                }
-//            }
+    func trataJson(jsonData:Data) -> String {
+        let json = try? JSONSerialization.jsonObject(with: jsonData, options: [])
+            if let countries_list = json as? Array<Any> {
+                for i in 0 ..< countries_list.count {
+                    if let country_obj = countries_list[i] as? NSDictionary {
+                        if let country_name = country_obj["country"] as? String {
+                            if let country_code = country_obj["code"] as? String {
+                                print("\(country_name) [\(country_code)]")
+                            }
+                        }
+                    }
+                }
+            }
         DispatchQueue.main.async(execute: {
-            //self.tableView.reloadData()
             return
         })
-        return ""
+        return jsonData.description
     }
     
+    var busyAlertController: UIAlertController?
+    var presentingViewController: UIViewController?
+    var activityIndicator: UIActivityIndicatorView?
     
-    //    override func viewDidLoad() {
-    //        let busyAlertController: BusyAlert = {
-    //            let busyAlert = BusyAlert(title: "Carregando...", message: "\n\nAguarde por favor!", presentingViewController: self)
-    //            return busyAlert
-    //        }()
-    //
-    //        busyAlertController.display()
-    //
-    //        SyncUtil().getDadosFrom(url: "http://www.kaleidosblog.com/tutorial/tutorial.json",
-    //                                trataJson: { (result: Data) in
-    //                                    let r = SyncUtil().extract_json(jsonData: result)
-    //                                    print("got back: \(r)")
-    //                                    return ""
-    //        },
-    //                                finish: { (dados: Any) in
-    //                                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
-    //
-    //                                        self.data = ProdutoDao().getProdutos(comOferta: false)
-    //                                        self.tableView?.reloadData()
-    //                                        busyAlertController.dismiss()
-    //                                    })
-    //        })
-    //    }
+    func criaAlerta (title:String, message:String, presentingViewController: UIViewController, onCancel: @escaping () -> Void) {
+        busyAlertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+                busyAlertController!.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: "Cancel Button"), style: UIAlertActionStyle.cancel, handler:{(alert: UIAlertAction!) in
+                    onCancel()
+                }))
         
+        self.presentingViewController = presentingViewController
+        
+        activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
+        
+        busyAlertController!.view.addSubview(activityIndicator!)
+    }
+    
+    func display(toDo: @escaping () -> Void) {
+        DispatchQueue.main.async(execute: {
+            self.presentingViewController!.present(self.busyAlertController!, animated: true, completion: {
+                self.activityIndicator!.translatesAutoresizingMaskIntoConstraints = false
+                
+                self.busyAlertController!.view.addConstraint(NSLayoutConstraint(item: self.activityIndicator!, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: self.busyAlertController!.view, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0))
+                
+                self.busyAlertController!.view.addConstraint(NSLayoutConstraint(item: self.activityIndicator!, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: self.busyAlertController!.view, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: 0))
+                
+                self.activityIndicator!.startAnimating()
+                
+                toDo()
+            })
+        })
+    }
+    
+    func dismiss() {
+        DispatchQueue.main.async(execute: {
+            self.busyAlertController?.dismiss(animated: true, completion: nil)
+        })
+    }
 }

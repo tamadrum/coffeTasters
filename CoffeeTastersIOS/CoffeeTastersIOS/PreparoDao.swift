@@ -23,28 +23,28 @@ class PreparaDao: Dao<Preparo> {
         let passo1 = passoDao.new()
         passo1.indice = 1
         passo1.tempo = 5
-        passo1.addToImagens(NSSet(array:["preparo-1", "preparo-2", "preparo-3", "preparo-4", "preparo-5"]))
+        passo1.addToImagens(NSSet(array:["preparo-1"]))
         passo1.descricao = "Moer os grãos"
         preparo1.addToPasso(passo1)
 
         let passo2 = passoDao.new()
         passo2.indice = 2
         passo2.tempo = 5
-        passo2.addToImagens(NSSet(array:["preparo-1", "preparo-2", "preparo-3", "preparo-4", "preparo-5"]))
+        passo2.addToImagens(NSSet(array:["preparo-2"]))
         passo2.descricao = "Colocar o pó no coador"
         preparo1.addToPasso(passo2)
         
         let passo3 = passoDao.new()
         passo3.indice = 3
         passo3.tempo = 5
-        passo3.addToImagens(NSSet(array:["preparo-1", "preparo-2", "preparo-3", "preparo-4", "preparo-5"]))
+        passo3.addToImagens(NSSet(array:["preparo-3"]))
         passo3.descricao = "Jogar agua e esperar"
         preparo1.addToPasso(passo3)
             
         let passo4 = passoDao.new()
         passo4.indice = 4
         passo4.tempo = 5
-        passo4.addToImagens(NSSet(array:["preparo-1", "preparo-2", "preparo-3", "preparo-4", "preparo-5"]))
+        passo4.addToImagens(NSSet(array:["preparo-4"]))
         passo4.descricao = "Colocar na garrafa térmica"
         preparo1.addToPasso(passo1)
         

@@ -25,24 +25,7 @@ class AnimationViewController: UIViewController {
         
         loadingImageView.image = animatedImage
         
-        SyncUtil().getDadosFrom(url: "http://www.kaleidosblog.com/tutorial/tutorial.json",
-                                trataJson: { (result: Data) in
-                                    let r = SyncUtil().extract_json(jsonData: result)
-                                    print("got back: \(r)")
-                                    return ""
-        },
-                                finish: { (dados: Any) in
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
-                                        self.timeToMoveOn()
-                                    })
-        },
-                                onError: { () in
-                                    print("Deu erro no download do json")
-                                    self.timeToMoveOn()
-                                    
-        })
-        
-//        _ = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
+        _ = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
     }
     
     func timeToMoveOn() {
