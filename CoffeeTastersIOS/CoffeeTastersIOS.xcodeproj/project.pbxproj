@@ -28,6 +28,7 @@
 		16149FC31E6786A600A455BF /* PedidosCustomViewCellDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16149FC21E6786A600A455BF /* PedidosCustomViewCellDetails.swift */; };
 		16149FC51E6786B100A455BF /* AvaliacoesCustomViewCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16149FC41E6786B100A455BF /* AvaliacoesCustomViewCellHeader.swift */; };
 		16149FC71E6786C500A455BF /* AvaliacoesCustomViewCellDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16149FC61E6786C500A455BF /* AvaliacoesCustomViewCellDetails.swift */; };
+		1620EF391E82B6DB00AE83D6 /* CafeDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1620EF381E82B6DB00AE83D6 /* CafeDao.swift */; };
 		163728691E624585009CB0DA /* String+isRG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163728681E624585009CB0DA /* String+isRG.swift */; };
 		1643CBB61E68CB77008D7872 /* FlavorCustomViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1643CBB51E68CB77008D7872 /* FlavorCustomViewCell.swift */; };
 		1645FE041E62F4FF0002C1B6 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1645FE031E62F4FF0002C1B6 /* RatingView.swift */; };
@@ -123,6 +124,7 @@
 		16149FC21E6786A600A455BF /* PedidosCustomViewCellDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedidosCustomViewCellDetails.swift; sourceTree = "<group>"; };
 		16149FC41E6786B100A455BF /* AvaliacoesCustomViewCellHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvaliacoesCustomViewCellHeader.swift; sourceTree = "<group>"; };
 		16149FC61E6786C500A455BF /* AvaliacoesCustomViewCellDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvaliacoesCustomViewCellDetails.swift; sourceTree = "<group>"; };
+		1620EF381E82B6DB00AE83D6 /* CafeDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CafeDao.swift; sourceTree = "<group>"; };
 		163728681E624585009CB0DA /* String+isRG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+isRG.swift"; sourceTree = "<group>"; };
 		1643CBB51E68CB77008D7872 /* FlavorCustomViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlavorCustomViewCell.swift; sourceTree = "<group>"; };
 		1645FE021E62F4D90002C1B6 /* CoffeeTasters-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoffeeTasters-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 				33FD18981E6999EA009FCF73 /* PreparoDao.swift */,
 				160C66CE1E730734004190B7 /* CarrinhoDao.swift */,
 				16FCD1401E7F497800E333E4 /* Dao.swift */,
+				1620EF381E82B6DB00AE83D6 /* CafeDao.swift */,
 			);
 			name = dao;
 			sourceTree = "<group>";
@@ -561,6 +564,7 @@
 				16149FB71E6785E300A455BF /* CarrinhoCustomViewCellItem.swift in Sources */,
 				166BA4441E65B8D300739A41 /* SyncUtil.swift in Sources */,
 				16EC3BC21E674FC9008BD23B /* FinalizarCompraViewController.swift in Sources */,
+				1620EF391E82B6DB00AE83D6 /* CafeDao.swift in Sources */,
 				16149FC11E6786A000A455BF /* PedidosCustomViewCellHeader.swift in Sources */,
 				3342438F1E5F4C210001938F /* PerfilViewController.swift in Sources */,
 				16EC3BC81E675C20008BD23B /* PedidoDao.swift in Sources */,
