@@ -13,14 +13,17 @@ class AvaliacoesViewController:Acordeao {
     
     @IBOutlet var tableView:UITableView?
     
-    override func viewDidAppear(_ animated: Bool)  {
-        self.lastCellExpanded = NoCellExpanded
+    override func viewWillAppear(_ animated: Bool)  {
+        super.viewDidAppear(animated)
         
+        self.lastCellExpanded = NoCellExpanded
+        tableView?.tableFooterView = UIView()
 
         let syncUtil = SyncUtil()
         
         syncUtil.criaAlerta(title: "Aguarde o carregamento...", message: "\n\n", presentingViewController: self) {
             // Faz algo quando dá cancel
+            syncUtil.dismiss()
         }
         
         syncUtil.display {
@@ -55,6 +58,10 @@ class AvaliacoesViewController:Acordeao {
             })
         }
 
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        self.tableView?.reloadData()
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
