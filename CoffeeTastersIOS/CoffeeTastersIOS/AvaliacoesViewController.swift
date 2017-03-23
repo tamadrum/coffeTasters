@@ -13,9 +13,9 @@ class AvaliacoesViewController:Acordeao {
     
     @IBOutlet var tableView:UITableView?
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool)  {
         self.lastCellExpanded = NoCellExpanded
-        tableView?.tableFooterView = UIView()
+        
 
         let syncUtil = SyncUtil()
         

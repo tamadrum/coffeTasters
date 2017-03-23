@@ -13,11 +13,14 @@ class AnimationViewController: UIViewController {
     @IBOutlet var loadingImageView: UIImageView!
 
     override func viewDidLoad() {
-        let images:[UIImage] = [UIImage(named: "coffee_press_1")!,
-                      UIImage(named: "coffee_press_2")!,
-                      UIImage(named: "coffee_press_3")!,
-                      UIImage(named: "coffee_press_4")!,
-                      UIImage(named: "coffee_press_5")!]
+        
+        let images:[UIImage] = [#imageLiteral(resourceName: "coffee_press_1"),
+                      #imageLiteral(resourceName: "coffee_press_2"),
+                      #imageLiteral(resourceName: "coffee_press_3"),
+                      #imageLiteral(resourceName: "coffee_press_4"),
+                      #imageLiteral(resourceName: "coffee_press_5")]
+       
+        
         
         var animatedImage: UIImage!
         

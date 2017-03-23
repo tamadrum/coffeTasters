@@ -44,7 +44,7 @@ class ProdutosViewController:Acordeao{
             cell.nome?.text = prod?.nome
             cell.tipo?.text = prod?.tipo
             cell.valor?.text = "R$ \((prod?.preco)!)"
-            cell.imagem?.image = #imageLiteral(resourceName: "config.jpg")
+            cell.imagem?.image = #imageLiteral(resourceName: "cafe")
             
             cell.btnComprar.addTarget(self, action: #selector(comprar), for: .touchUpInside)
             
