@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -924,9 +925,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFQ-ZO-LTk" customClass="WheelFlavor" customModule="CoffeeTastersIOS" customModuleProvider="target">
-                                <rect key="frame" x="10" y="272" width="300" height="240"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gFQ-ZO-LTk" customClass="WheelFlavor" customModule="CoffeeTastersIOS" customModuleProvider="target">
+                                <rect key="frame" x="10" y="272" width="300" height="276"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="mastercard.png"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="92f-Dk-Fcc">
                                 <rect key="frame" x="0.0" y="144" width="320" height="128"/>
@@ -1085,7 +1089,7 @@
                             <constraint firstItem="sv5-6l-xWz" firstAttribute="leading" secondItem="jlZ-tB-MmL" secondAttribute="leadingMargin" constant="-6" id="Eyo-nX-2Xs"/>
                             <constraint firstItem="emV-sJ-tSY" firstAttribute="leading" secondItem="vpD-yA-c79" secondAttribute="trailing" constant="8" id="J9E-hF-KXo"/>
                             <constraint firstItem="gFQ-ZO-LTk" firstAttribute="top" secondItem="pB8-9q-wWm" secondAttribute="bottom" id="KhN-gc-uUw"/>
-                            <constraint firstItem="2Nw-6c-ziS" firstAttribute="top" secondItem="gFQ-ZO-LTk" secondAttribute="bottom" constant="56" id="LjI-En-ps2"/>
+                            <constraint firstItem="2Nw-6c-ziS" firstAttribute="top" secondItem="gFQ-ZO-LTk" secondAttribute="baseline" constant="56" id="LjI-En-ps2"/>
                             <constraint firstAttribute="trailing" secondItem="pB8-9q-wWm" secondAttribute="trailing" id="NFn-lF-eEm"/>
                             <constraint firstItem="gFQ-ZO-LTk" firstAttribute="leading" secondItem="jlZ-tB-MmL" secondAttribute="leading" constant="10" id="Qzo-cf-h8e"/>
                             <constraint firstItem="emV-sJ-tSY" firstAttribute="top" secondItem="c1H-TU-pa4" secondAttribute="bottom" constant="8" id="RH6-ew-NJP"/>
@@ -2675,6 +2679,7 @@
         <image name="config.jpg" width="42" height="42"/>
         <image name="erro.jpg" width="80" height="50"/>
         <image name="icon.png" width="109" height="105"/>
+        <image name="mastercard.png" width="80" height="50"/>
         <image name="pour_over_cone_1.png" width="37" height="63"/>
         <image name="starryStars_half.png" width="35" height="35"/>
         <image name="starryStars_off.png" width="35" height="35"/>

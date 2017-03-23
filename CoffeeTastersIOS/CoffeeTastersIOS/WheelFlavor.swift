@@ -13,32 +13,35 @@ import CoreGraphics
 /// Roda de sabores customizada para esta aplicação
 @IBDesignable class WheelFlavor: UIView {
     
+    /// Mostra alerta de opcao clicada
+    var mostraAlerta: Bool = false
+    var sabores = ["doce", "azedo", "floral", "especiarias", "salgado", "frutas vermelhas", "frucas cítricas", "frutas com caroço", "chocolate", "caramelo", "defumado", "amargo", "herbal", "encorpado", "cereais", "nozes"]
+    var indiceSabores: Int = 0
     /// **flavorTorrador** é a variavel que conterá a roda de sabores que o torrador fez para o café
     var flavorTorrador:Flavor?
     /// **flavorMédia** é a variavel que conterá a roda de sabores que a média geral avaliou
     var flavorMedia:Flavor?
     /// **flavorUsuario** é a variavel que conterá a roda de sabores que o usuário preencheu
     var flavorUsuario:Flavor?
-    
+    // Rects referente a onde as imagens se encontram em ordem
     var images:[CGRect] = []
-    
     /// Array de cores para a roda dos sabores
-    let cores = [WheelFlavor.hexStringToUIColor(hex: "5E3A17"),
-                 WheelFlavor.hexStringToUIColor(hex: "BE8E3D"),
-                 WheelFlavor.hexStringToUIColor(hex: "9C8A33"),
-                 WheelFlavor.hexStringToUIColor(hex: "C5B742"),
-                 WheelFlavor.hexStringToUIColor(hex: "BC6337"),
-                 WheelFlavor.hexStringToUIColor(hex: "D7925B"),
-                 WheelFlavor.hexStringToUIColor(hex: "ECC56E"),
-                 WheelFlavor.hexStringToUIColor(hex: "E7CB9B"),
-                 WheelFlavor.hexStringToUIColor(hex: "3287A5"),
-                 WheelFlavor.hexStringToUIColor(hex: "8DB7A5"),
-                 WheelFlavor.hexStringToUIColor(hex: "703B52"),
-                 WheelFlavor.hexStringToUIColor(hex: "945A72"),
-                 WheelFlavor.hexStringToUIColor(hex: "422718"),
-                 WheelFlavor.hexStringToUIColor(hex: "9C8A33"),
-                 WheelFlavor.hexStringToUIColor(hex: "C5B742"),
-                 WheelFlavor.hexStringToUIColor(hex: "BC6337")]
+    let cores = [WheelFlavor.hexStringToUIColor(hex: "5E3A17"), // doce
+                 WheelFlavor.hexStringToUIColor(hex: "BE8E3D"), // azedo
+                 WheelFlavor.hexStringToUIColor(hex: "9C8A33"), // floral
+                 WheelFlavor.hexStringToUIColor(hex: "C5B742"), // especiarias
+                 WheelFlavor.hexStringToUIColor(hex: "BC6337"), // salgado
+                 WheelFlavor.hexStringToUIColor(hex: "D7925B"), // frutasVermelhas
+                 WheelFlavor.hexStringToUIColor(hex: "ECC56E"), // frutasCítricas
+                 WheelFlavor.hexStringToUIColor(hex: "E7CB9B"), // frutasCaroco
+                 WheelFlavor.hexStringToUIColor(hex: "3287A5"), // chocolate
+                 WheelFlavor.hexStringToUIColor(hex: "8DB7A5"), // caramelo
+                 WheelFlavor.hexStringToUIColor(hex: "703B52"), // defumado
+                 WheelFlavor.hexStringToUIColor(hex: "945A72"), // amargo
+                 WheelFlavor.hexStringToUIColor(hex: "422718"), // herbal
+                 WheelFlavor.hexStringToUIColor(hex: "9C8A33"), // encorpado
+                 WheelFlavor.hexStringToUIColor(hex: "C5B742"), // cereais
+                 WheelFlavor.hexStringToUIColor(hex: "BC6337")] // nozes
     
     override func draw(_ rect: CGRect) {
         let centro = CGPoint(x: self.bounds.width/2, y: self.bounds.height/2)
@@ -46,6 +49,7 @@ import CoreGraphics
         if ( centro.x > centro.y ) {
             raio = Int(centro.x/2)
         }
+        self.isUserInteractionEnabled = true
     
         if let context = UIGraphicsGetCurrentContext() {
             context.setLineWidth(CGFloat(0.5))
@@ -69,7 +73,7 @@ import CoreGraphics
                 desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:326.25), // cereais
                 desenhaImagem(imagem: "cereais.png", context: context, centro:centro, raio:(raio+20), angulo:348.75), // nozes
             ]
-
+            
             desenhaRoda(context: context, centro:centro, raio:raio)
 
             context.strokePath()
@@ -83,8 +87,42 @@ import CoreGraphics
             if let flavor = flavorMedia {
                 desenhaGrafico(context: context, centro:centro, raio:raio, flavor:flavor, cor: UIColor.blue)
             }
+            
+            mostraAlerta(context: context, centro: centro)
         }
-
+    }
+    
+    func mostraAlerta (context: CGContext, centro: CGPoint) {
+        if ( mostraAlerta ) {
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.lineBreakMode = .byTruncatingTail
+            paragraphStyle.alignment = .center;
+            let font = UIFont(name: "Helvetica-Bold", size:20.0)
+            let attributes = [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.black, NSParagraphStyleAttributeName: paragraphStyle]
+            let myString: NSString = sabores[indiceSabores] as NSString
+            let size: CGSize = myString.size(attributes: attributes)
+            let textRect = CGRect(x: centro.x-size.width/2, y: centro.y-size.height/2, width: size.width, height: size.height);
+            
+            drawRoundRect(dimensoes: CGRect(x: centro.x-size.width/2 - 20, y: centro.y-size.height/2 - 10, width: size.width + 40, height: size.height + 20), cor: cores[indiceSabores].cgColor)
+            
+            myString.draw(in: textRect, withAttributes: attributes)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
+                self.mostraAlerta = false
+                self.setNeedsDisplay()
+            }
+        }
+    }
+    
+    func drawRoundRect(dimensoes: CGRect, cor: CGColor) {
+        let ctx: CGContext = UIGraphicsGetCurrentContext()!
+        ctx.saveGState()
+        let clipPath: CGPath = UIBezierPath(roundedRect: dimensoes, cornerRadius: 20).cgPath
+        ctx.addPath(clipPath)
+        ctx.setFillColor(cor)
+        ctx.closePath()
+        ctx.fillPath()
+        ctx.restoreGState()
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -99,12 +137,15 @@ import CoreGraphics
                     (currentPoint.y) < imagem.height + imagem.origin.y
                     && (currentPoint.y) > imagem.origin.y {
                     
-                    print("\(i) - [\(currentPoint.x),\(currentPoint.y)]")
-//                    mostraAlertaDaPosicao(i)
+                    //print("\(i) - [\(currentPoint.x),\(currentPoint.y)]")
+                    mostraAlerta = true
+                    indiceSabores = i
+                    self.setNeedsDisplay()
                     break
                 }
             }
         }
+        super.touchesBegan(touches, with: event)
     }
 
     /**
@@ -221,12 +262,13 @@ import CoreGraphics
         var novoCentro = centro
         novoCentro.y += 20
         if let imageUI = UIImage(named:imagem) {
-            if let image = imageUI.cgImage {
+            if let cgImage = imageUI.cgImage {
                 let ponto = getCoordenadas(centro: novoCentro, raio: raio, angulo: angulo)
                 
-                let rect = CGRect(x: ponto.x - CGFloat(image.width/2), y: ponto.y - CGFloat(image.height), width: CGFloat(image.width), height: CGFloat(image.height))
+                let rect = CGRect(x: ponto.x - CGFloat(cgImage.width/2), y: ponto.y - CGFloat(cgImage.height), width: CGFloat(cgImage.width), height: CGFloat(cgImage.height))
                 
-                context.draw(image, in: rect)
+                context.draw(cgImage, in: rect)
+                
                 return rect
             }
         }
