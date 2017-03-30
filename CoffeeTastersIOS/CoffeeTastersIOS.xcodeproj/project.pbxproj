@@ -47,6 +47,7 @@
 		16CB283A1E622B3B001E4E3B /* String+isCPF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB28391E622B3B001E4E3B /* String+isCPF.swift */; };
 		16CB283C1E622D62001E4E3B /* String+toMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB283B1E622D62001E4E3B /* String+toMD5.swift */; };
 		16EB43BB1E6A75730073C58A /* EULA.txt in Resources */ = {isa = PBXBuildFile; fileRef = 16EB43BA1E6A75730073C58A /* EULA.txt */; };
+		16EBC5D91E8BCF5600A87B2F /* PosDesign.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16EBC5D81E8BCF5600A87B2F /* PosDesign.storyboard */; };
 		16EC3BC01E674F90008BD23B /* CarrinhoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC3BBF1E674F90008BD23B /* CarrinhoViewController.swift */; };
 		16EC3BC21E674FC9008BD23B /* FinalizarCompraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC3BC11E674FC9008BD23B /* FinalizarCompraViewController.swift */; };
 		16EC3BC41E675C0B008BD23B /* ProdutoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EC3BC31E675C0B008BD23B /* ProdutoDao.swift */; };
@@ -115,6 +116,7 @@
 		16CB283B1E622D62001E4E3B /* String+toMD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+toMD5.swift"; sourceTree = "<group>"; };
 		16EB43B01E69B8EB0073C58A /* CoffeeTastersIOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoffeeTastersIOS.entitlements; sourceTree = "<group>"; };
 		16EB43BA1E6A75730073C58A /* EULA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EULA.txt; sourceTree = "<group>"; };
+		16EBC5D81E8BCF5600A87B2F /* PosDesign.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = PosDesign.storyboard; path = CoffeeTastersIOS/PosDesign.storyboard; sourceTree = "<group>"; };
 		16EC3BBF1E674F90008BD23B /* CarrinhoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarrinhoViewController.swift; sourceTree = "<group>"; };
 		16EC3BC11E674FC9008BD23B /* FinalizarCompraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalizarCompraViewController.swift; sourceTree = "<group>"; };
 		16EC3BC31E675C0B008BD23B /* ProdutoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProdutoDao.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 		16B1CCB71E5D950900681A4E = {
 			isa = PBXGroup;
 			children = (
+				16EBC5D81E8BCF5600A87B2F /* PosDesign.storyboard */,
 				16C92A0C1E698A3C00BC8150 /* icon.png */,
 				16B1CCC21E5D950900681A4E /* CoffeeTastersIOS */,
 				16B1CCC11E5D950900681A4E /* Products */,
@@ -373,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16C92A0D1E698A3C00BC8150 /* icon.png in Resources */,
+				16EBC5D91E8BCF5600A87B2F /* PosDesign.storyboard in Resources */,
 				16EB43BB1E6A75730073C58A /* EULA.txt in Resources */,
 				16B1CCD11E5D950900681A4E /* LaunchScreen.storyboard in Resources */,
 				16B1CCCE1E5D950900681A4E /* Assets.xcassets in Resources */,

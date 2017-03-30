@@ -66,16 +66,17 @@ class AvaliacoesViewController:Acordeao {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCellEditingStyle.delete {
-            
             let avaliacao = self.dataSource[indexPath.row].item as! Avaliacao
             
             if avaliacao.cafe != nil { Dao<Cafe>().delete(avaliacao.cafe!) }
             if avaliacao.flavor != nil { Dao<Flavor>().delete(avaliacao.flavor!) }
             if avaliacao.flavorMedia != nil { Dao<Flavor>().delete(avaliacao.flavorMedia!) }
-            Dao<Avaliacao>().delete(avaliacao)
+            let dao = Dao<Avaliacao>()
+            dao.delete(avaliacao)
+            dao.save()
             
             var items = Array<Parent>()
-            for a:Avaliacao in Dao<Avaliacao>().list() {
+            for a:Avaliacao in dao.list() {
                 items.append(Parent(state: .collapsed, item: a))
             }
             self.dataSource = items

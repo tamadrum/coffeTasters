@@ -11,12 +11,13 @@ import UIKit
 import CoreGraphics
 
 /// Roda de sabores customizada para esta aplicação
-@IBDesignable class WheelFlavor: UIView {
+class WheelFlavor: UIView {
     
     /// Mostra alerta de opcao clicada
     var mostraAlerta: Bool = false
-    var sabores = ["doce", "azedo", "floral", "especiarias", "salgado", "frutas vermelhas", "frucas cítricas", "frutas com caroço", "chocolate", "caramelo", "defumado", "amargo", "herbal", "encorpado", "cereais", "nozes"]
+    var sabores = ["doce", "azedo", "floral", "especiarias", "salgado", "frutas vermelhas", "cítricos", "frutas com caroço", "chocolate", "caramelo", "defumado", "amargo", "herbal", "encorpado", "cereais", "nozes"]
     var indiceSabores: Int = 0
+    
     /// **flavorTorrador** é a variavel que conterá a roda de sabores que o torrador fez para o café
     var flavorTorrador:Flavor?
     /// **flavorMédia** é a variavel que conterá a roda de sabores que a média geral avaliou
@@ -25,6 +26,7 @@ import CoreGraphics
     var flavorUsuario:Flavor?
     // Rects referente a onde as imagens se encontram em ordem
     var images:[CGRect] = []
+    
     /// Array de cores para a roda dos sabores
     let cores = [WheelFlavor.hexStringToUIColor(hex: "5E3A17"), // doce
                  WheelFlavor.hexStringToUIColor(hex: "BE8E3D"), // azedo
@@ -75,6 +77,8 @@ import CoreGraphics
             ]
             
             desenhaRoda(context: context, centro:centro, raio:raio)
+            //desenhaLinhas(context: context, centro: centro, raio: raio)
+            //desenhaCirculosPequenos(context: context, centro: centro, raio: raio)
 
             context.strokePath()
             
@@ -107,7 +111,7 @@ import CoreGraphics
             
             myString.draw(in: textRect, withAttributes: attributes)
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) {
                 self.mostraAlerta = false
                 self.setNeedsDisplay()
             }
@@ -212,10 +216,12 @@ import CoreGraphics
         let passo = CGFloat(raio/5)
         
         context.addEllipse(in: CGRect(x: centro.x-passo*5, y: centro.y-passo*5, width: passo*10, height: passo*10))
-//        context.addEllipse(in: CGRect(x: centro.x-passo*4, y: centro.y-passo*4, width: passo*8,  height: passo*8))
-//        context.addEllipse(in: CGRect(x: centro.x-passo*3, y: centro.y-passo*3, width: passo*6,  height: passo*6))
-//        context.addEllipse(in: CGRect(x: centro.x-passo*2, y: centro.y-passo*2, width: passo*4,  height: passo*4))
-//        context.addEllipse(in: CGRect(x: centro.x-passo,   y: centro.y-passo,   width: passo*2,  height: passo*2))
+        
+        
+        //context.addEllipse(in: CGRect(x: centro.x-passo*4, y: centro.y-passo*4, width: passo*8,  height: passo*8))
+        //context.addEllipse(in: CGRect(x: centro.x-passo*3, y: centro.y-passo*3, width: passo*6,  height: passo*6))
+        //context.addEllipse(in: CGRect(x: centro.x-passo*2, y: centro.y-passo*2, width: passo*4,  height: passo*4))
+        //context.addEllipse(in: CGRect(x: centro.x-passo,   y: centro.y-passo,   width: passo*2,  height: passo*2))
     }
     
     /**

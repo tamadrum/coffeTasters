@@ -1,0 +1,464 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16EBC5E71E8C66CB00A87B2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EBC5E61E8C66CB00A87B2F /* AppDelegate.swift */; };
+		16EBC5E91E8C66CB00A87B2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EBC5E81E8C66CB00A87B2F /* ViewController.swift */; };
+		16EBC5EF1E8C66CB00A87B2F /* CoffeeTasters.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 16EBC5ED1E8C66CB00A87B2F /* CoffeeTasters.xcdatamodeld */; };
+		16EBC5F41E8C66CB00A87B2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16EBC5F21E8C66CB00A87B2F /* LaunchScreen.storyboard */; };
+		16EBC5FF1E8C66CB00A87B2F /* CoffeeTastersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EBC5FE1E8C66CB00A87B2F /* CoffeeTastersTests.swift */; };
+		16EBC60A1E8C670B00A87B2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16EBC6091E8C670B00A87B2F /* Main.storyboard */; };
+		16EBC60C1E8C67AD00A87B2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16EBC60B1E8C67AD00A87B2F /* Assets.xcassets */; };
+		16EBC60E1E8C694F00A87B2F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EBC60D1E8C694F00A87B2F /* SplashViewController.swift */; };
+		16EBC6111E8C74E000A87B2F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EBC6101E8C74E000A87B2F /* LoginViewController.swift */; };
+		16EBC6131E8C792B00A87B2F /* MeusDadosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EBC6121E8C792B00A87B2F /* MeusDadosViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		16EBC5FB1E8C66CB00A87B2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16EBC5DB1E8C66CB00A87B2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16EBC5E21E8C66CB00A87B2F;
+			remoteInfo = CoffeeTasters;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		16EBC5E31E8C66CB00A87B2F /* CoffeeTasters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeTasters.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16EBC5E61E8C66CB00A87B2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		16EBC5E81E8C66CB00A87B2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		16EBC5EE1E8C66CB00A87B2F /* CoffeeTasters.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoffeeTasters.xcdatamodel; sourceTree = "<group>"; };
+		16EBC5F31E8C66CB00A87B2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		16EBC5F51E8C66CB00A87B2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16EBC5FA1E8C66CB00A87B2F /* CoffeeTastersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeTastersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16EBC5FE1E8C66CB00A87B2F /* CoffeeTastersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTastersTests.swift; sourceTree = "<group>"; };
+		16EBC6001E8C66CB00A87B2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16EBC6091E8C670B00A87B2F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
+		16EBC60B1E8C67AD00A87B2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		16EBC60D1E8C694F00A87B2F /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashViewController.swift; path = controller/SplashViewController.swift; sourceTree = "<group>"; };
+		16EBC6101E8C74E000A87B2F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = controller/LoginViewController.swift; sourceTree = "<group>"; };
+		16EBC6121E8C792B00A87B2F /* MeusDadosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeusDadosViewController.swift; path = controller/MeusDadosViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16EBC5E01E8C66CB00A87B2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16EBC5F71E8C66CB00A87B2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16EBC5DA1E8C66CB00A87B2F = {
+			isa = PBXGroup;
+			children = (
+				16EBC5E51E8C66CB00A87B2F /* CoffeeTasters */,
+				16EBC5FD1E8C66CB00A87B2F /* CoffeeTastersTests */,
+				16EBC5E41E8C66CB00A87B2F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		16EBC5E41E8C66CB00A87B2F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16EBC5E31E8C66CB00A87B2F /* CoffeeTasters.app */,
+				16EBC5FA1E8C66CB00A87B2F /* CoffeeTastersTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		16EBC5E51E8C66CB00A87B2F /* CoffeeTasters */ = {
+			isa = PBXGroup;
+			children = (
+				16EBC6141E8C819B00A87B2F /* custom */,
+				16EBC60F1E8C695500A87B2F /* controller */,
+				16EBC5E61E8C66CB00A87B2F /* AppDelegate.swift */,
+				16EBC5E81E8C66CB00A87B2F /* ViewController.swift */,
+				16EBC6091E8C670B00A87B2F /* Main.storyboard */,
+				16EBC5F21E8C66CB00A87B2F /* LaunchScreen.storyboard */,
+				16EBC60B1E8C67AD00A87B2F /* Assets.xcassets */,
+				16EBC5F51E8C66CB00A87B2F /* Info.plist */,
+				16EBC5ED1E8C66CB00A87B2F /* CoffeeTasters.xcdatamodeld */,
+			);
+			path = CoffeeTasters;
+			sourceTree = "<group>";
+		};
+		16EBC5FD1E8C66CB00A87B2F /* CoffeeTastersTests */ = {
+			isa = PBXGroup;
+			children = (
+				16EBC5FE1E8C66CB00A87B2F /* CoffeeTastersTests.swift */,
+				16EBC6001E8C66CB00A87B2F /* Info.plist */,
+			);
+			path = CoffeeTastersTests;
+			sourceTree = "<group>";
+		};
+		16EBC60F1E8C695500A87B2F /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				16EBC60D1E8C694F00A87B2F /* SplashViewController.swift */,
+				16EBC6101E8C74E000A87B2F /* LoginViewController.swift */,
+				16EBC6121E8C792B00A87B2F /* MeusDadosViewController.swift */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		16EBC6141E8C819B00A87B2F /* custom */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = custom;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		16EBC5E21E8C66CB00A87B2F /* CoffeeTasters */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16EBC6031E8C66CB00A87B2F /* Build configuration list for PBXNativeTarget "CoffeeTasters" */;
+			buildPhases = (
+				16EBC5DF1E8C66CB00A87B2F /* Sources */,
+				16EBC5E01E8C66CB00A87B2F /* Frameworks */,
+				16EBC5E11E8C66CB00A87B2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoffeeTasters;
+			productName = CoffeeTasters;
+			productReference = 16EBC5E31E8C66CB00A87B2F /* CoffeeTasters.app */;
+			productType = "com.apple.product-type.application";
+		};
+		16EBC5F91E8C66CB00A87B2F /* CoffeeTastersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16EBC6061E8C66CB00A87B2F /* Build configuration list for PBXNativeTarget "CoffeeTastersTests" */;
+			buildPhases = (
+				16EBC5F61E8C66CB00A87B2F /* Sources */,
+				16EBC5F71E8C66CB00A87B2F /* Frameworks */,
+				16EBC5F81E8C66CB00A87B2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16EBC5FC1E8C66CB00A87B2F /* PBXTargetDependency */,
+			);
+			name = CoffeeTastersTests;
+			productName = CoffeeTastersTests;
+			productReference = 16EBC5FA1E8C66CB00A87B2F /* CoffeeTastersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		16EBC5DB1E8C66CB00A87B2F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Tamadrum;
+				TargetAttributes = {
+					16EBC5E21E8C66CB00A87B2F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = P5NJ75969Q;
+						ProvisioningStyle = Automatic;
+					};
+					16EBC5F91E8C66CB00A87B2F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = P5NJ75969Q;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 16EBC5E21E8C66CB00A87B2F;
+					};
+				};
+			};
+			buildConfigurationList = 16EBC5DE1E8C66CB00A87B2F /* Build configuration list for PBXProject "CoffeeTasters" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 16EBC5DA1E8C66CB00A87B2F;
+			productRefGroup = 16EBC5E41E8C66CB00A87B2F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				16EBC5E21E8C66CB00A87B2F /* CoffeeTasters */,
+				16EBC5F91E8C66CB00A87B2F /* CoffeeTastersTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		16EBC5E11E8C66CB00A87B2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16EBC5F41E8C66CB00A87B2F /* LaunchScreen.storyboard in Resources */,
+				16EBC60C1E8C67AD00A87B2F /* Assets.xcassets in Resources */,
+				16EBC60A1E8C670B00A87B2F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16EBC5F81E8C66CB00A87B2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16EBC5DF1E8C66CB00A87B2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16EBC6131E8C792B00A87B2F /* MeusDadosViewController.swift in Sources */,
+				16EBC5EF1E8C66CB00A87B2F /* CoffeeTasters.xcdatamodeld in Sources */,
+				16EBC5E91E8C66CB00A87B2F /* ViewController.swift in Sources */,
+				16EBC5E71E8C66CB00A87B2F /* AppDelegate.swift in Sources */,
+				16EBC6111E8C74E000A87B2F /* LoginViewController.swift in Sources */,
+				16EBC60E1E8C694F00A87B2F /* SplashViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16EBC5F61E8C66CB00A87B2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16EBC5FF1E8C66CB00A87B2F /* CoffeeTastersTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		16EBC5FC1E8C66CB00A87B2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16EBC5E21E8C66CB00A87B2F /* CoffeeTasters */;
+			targetProxy = 16EBC5FB1E8C66CB00A87B2F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		16EBC5F21E8C66CB00A87B2F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16EBC5F31E8C66CB00A87B2F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		16EBC6011E8C66CB00A87B2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		16EBC6021E8C66CB00A87B2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		16EBC6041E8C66CB00A87B2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = P5NJ75969Q;
+				INFOPLIST_FILE = CoffeeTasters/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.2luglios.CoffeeTasters;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		16EBC6051E8C66CB00A87B2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = P5NJ75969Q;
+				INFOPLIST_FILE = CoffeeTasters/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.2luglios.CoffeeTasters;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		16EBC6071E8C66CB00A87B2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = P5NJ75969Q;
+				INFOPLIST_FILE = CoffeeTastersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.2luglios.CoffeeTastersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoffeeTasters.app/CoffeeTasters";
+			};
+			name = Debug;
+		};
+		16EBC6081E8C66CB00A87B2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = P5NJ75969Q;
+				INFOPLIST_FILE = CoffeeTastersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.2luglios.CoffeeTastersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoffeeTasters.app/CoffeeTasters";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16EBC5DE1E8C66CB00A87B2F /* Build configuration list for PBXProject "CoffeeTasters" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16EBC6011E8C66CB00A87B2F /* Debug */,
+				16EBC6021E8C66CB00A87B2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16EBC6031E8C66CB00A87B2F /* Build configuration list for PBXNativeTarget "CoffeeTasters" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16EBC6041E8C66CB00A87B2F /* Debug */,
+				16EBC6051E8C66CB00A87B2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		16EBC6061E8C66CB00A87B2F /* Build configuration list for PBXNativeTarget "CoffeeTastersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16EBC6071E8C66CB00A87B2F /* Debug */,
+				16EBC6081E8C66CB00A87B2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		16EBC5ED1E8C66CB00A87B2F /* CoffeeTasters.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				16EBC5EE1E8C66CB00A87B2F /* CoffeeTasters.xcdatamodel */,
+			);
+			currentVersion = 16EBC5EE1E8C66CB00A87B2F /* CoffeeTasters.xcdatamodel */;
+			path = CoffeeTasters.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 16EBC5DB1E8C66CB00A87B2F /* Project object */;
+}
