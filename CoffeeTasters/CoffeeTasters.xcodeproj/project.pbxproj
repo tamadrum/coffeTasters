@@ -7,16 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1607E16C1E908790008DF3C9 /* ImageSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1607E16B1E908790008DF3C9 /* ImageSlider.swift */; };
+		1614EE2E1E8E5E1C00C44F11 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1614EE2D1E8E5E1C00C44F11 /* CadastroViewController.swift */; };
+		1614EE301E8E5E3100C44F11 /* EsqueciSenhaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1614EE2F1E8E5E3100C44F11 /* EsqueciSenhaViewController.swift */; };
+		1614EE321E8E5E5A00C44F11 /* OfertasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1614EE311E8E5E5A00C44F11 /* OfertasViewController.swift */; };
+		1614EE341E8E5E6C00C44F11 /* PedidosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1614EE331E8E5E6C00C44F11 /* PedidosViewController.swift */; };
+		1614EE361E8E5E8A00C44F11 /* AssinaturasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1614EE351E8E5E8A00C44F11 /* AssinaturasViewController.swift */; };
+		1614EE381E8E5EA500C44F11 /* CafeListViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1614EE371E8E5EA500C44F11 /* CafeListViewControler.swift */; };
+		1614EE3A1E8E5EB600C44F11 /* CafeteriaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1614EE391E8E5EB600C44F11 /* CafeteriaListViewController.swift */; };
+		1614EE3C1E8E5EE300C44F11 /* AvaliacoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1614EE3B1E8E5EE300C44F11 /* AvaliacoesViewController.swift */; };
+		1614EE3E1E8E5EF800C44F11 /* PreparoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1614EE3D1E8E5EF800C44F11 /* PreparoViewController.swift */; };
+		1614EE401E8E5F0A00C44F11 /* CarrinhoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1614EE3F1E8E5F0A00C44F11 /* CarrinhoViewController.swift */; };
+		1614EE421E8E5F1F00C44F11 /* NotificacoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1614EE411E8E5F1F00C44F11 /* NotificacoesViewController.swift */; };
+		1614EE441E8E5F3800C44F11 /* AvaliacaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1614EE431E8E5F3800C44F11 /* AvaliacaoViewController.swift */; };
+		1614EE461E8E5F8400C44F11 /* FinalizarCompraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1614EE451E8E5F8400C44F11 /* FinalizarCompraViewController.swift */; };
+		1690A1C51E8EB6610039BDC1 /* RoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690A1C41E8EB6610039BDC1 /* RoundImage.swift */; };
+		1690A1C81E8F17980039BDC1 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690A1C71E8F17980039BDC1 /* Usuario.swift */; };
+		1690A1CF1E8F2ABD0039BDC1 /* WheelFlavor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690A1CE1E8F2ABD0039BDC1 /* WheelFlavor.swift */; };
+		1690A1D11E8F2AE50039BDC1 /* Dao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690A1D01E8F2AE50039BDC1 /* Dao.swift */; };
+		1690A1D31E8F2D5B0039BDC1 /* DetalhesCafeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690A1D21E8F2D5B0039BDC1 /* DetalhesCafeController.swift */; };
+		1690A1D71E8FE9EC0039BDC1 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690A1D61E8FE9EC0039BDC1 /* RatingView.swift */; };
+		16E67A2D1E911A25005EE82E /* CafeDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A2C1E911A25005EE82E /* CafeDao.swift */; };
+		16E67A2F1E911A34005EE82E /* CarrinhoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A2E1E911A34005EE82E /* CarrinhoDao.swift */; };
+		16E67A331E911B42005EE82E /* String+isCPF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A301E911B42005EE82E /* String+isCPF.swift */; };
+		16E67A341E911B42005EE82E /* String+isRG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A311E911B42005EE82E /* String+isRG.swift */; };
+		16E67A351E911B42005EE82E /* String+toMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A321E911B42005EE82E /* String+toMD5.swift */; };
+		16E67A371E911B7B005EE82E /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A361E911B7B005EE82E /* QRCodeViewController.swift */; };
+		16E67A3D1E912D44005EE82E /* EULA.txt in Resources */ = {isa = PBXBuildFile; fileRef = 16E67A3C1E912D44005EE82E /* EULA.txt */; };
+		16E67A3F1E912E22005EE82E /* PreparoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A3E1E912E22005EE82E /* PreparoDao.swift */; };
+		16E67A411E912E71005EE82E /* PedidoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A401E912E71005EE82E /* PedidoDao.swift */; };
+		16E67A431E912EDC005EE82E /* OfertaDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A421E912EDC005EE82E /* OfertaDao.swift */; };
+		16E67A4E1E912F92005EE82E /* ComprarAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A4B1E912F92005EE82E /* ComprarAlertViewController.swift */; };
+		16E67A4F1E912F92005EE82E /* CreditCardUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A4C1E912F92005EE82E /* CreditCardUtil.swift */; };
+		16E67A501E912F92005EE82E /* SyncUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A4D1E912F92005EE82E /* SyncUtil.swift */; };
+		16E67A521E9130E2005EE82E /* OfertaCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A511E9130E2005EE82E /* OfertaCustomCell.swift */; };
+		16E67A541E9130F6005EE82E /* CafeCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A531E9130F6005EE82E /* CafeCustomCell.swift */; };
+		16E67A561E913105005EE82E /* CafeteriaCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A551E913105005EE82E /* CafeteriaCustomCell.swift */; };
+		16E67A581E913122005EE82E /* PedidoCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A571E913122005EE82E /* PedidoCustomCell.swift */; };
+		16E67A5A1E913141005EE82E /* AvaliacaoCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A591E913141005EE82E /* AvaliacaoCustomCell.swift */; };
+		16E67A5C1E913173005EE82E /* CarrinhoItemCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A5B1E913173005EE82E /* CarrinhoItemCustomCell.swift */; };
+		16E67A5E1E913195005EE82E /* NotificacaoCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A5D1E913195005EE82E /* NotificacaoCustomCell.swift */; };
+		16E67A601E913757005EE82E /* BuscaResultCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A5F1E913757005EE82E /* BuscaResultCustomCell.swift */; };
 		16EBC5E71E8C66CB00A87B2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EBC5E61E8C66CB00A87B2F /* AppDelegate.swift */; };
-		16EBC5E91E8C66CB00A87B2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EBC5E81E8C66CB00A87B2F /* ViewController.swift */; };
 		16EBC5EF1E8C66CB00A87B2F /* CoffeeTasters.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 16EBC5ED1E8C66CB00A87B2F /* CoffeeTasters.xcdatamodeld */; };
 		16EBC5F41E8C66CB00A87B2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16EBC5F21E8C66CB00A87B2F /* LaunchScreen.storyboard */; };
 		16EBC5FF1E8C66CB00A87B2F /* CoffeeTastersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EBC5FE1E8C66CB00A87B2F /* CoffeeTastersTests.swift */; };
-		16EBC60A1E8C670B00A87B2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16EBC6091E8C670B00A87B2F /* Main.storyboard */; };
 		16EBC60C1E8C67AD00A87B2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16EBC60B1E8C67AD00A87B2F /* Assets.xcassets */; };
 		16EBC60E1E8C694F00A87B2F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EBC60D1E8C694F00A87B2F /* SplashViewController.swift */; };
 		16EBC6111E8C74E000A87B2F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EBC6101E8C74E000A87B2F /* LoginViewController.swift */; };
 		16EBC6131E8C792B00A87B2F /* MeusDadosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EBC6121E8C792B00A87B2F /* MeusDadosViewController.swift */; };
+		16EBC6181E8D095600A87B2F /* BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EBC6171E8D095600A87B2F /* BorderButton.swift */; };
+		16EBC61D1E8DC1CE00A87B2F /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16EBC61C1E8DC1CE00A87B2F /* Storyboard.storyboard */; };
+		16EBC61F1E8DCE4500A87B2F /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EBC61E1E8DCE4500A87B2F /* PerfilViewController.swift */; };
+		3DF85D4743E04601298C5E5A /* Pods_CoffeeTastersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81EAE3088C0DF0DAE48DD2D /* Pods_CoffeeTastersTests.framework */; };
+		6A4C5791A0102BEB6F8AD023 /* Pods_CoffeeTasters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDF74E399BC5587736D962D /* Pods_CoffeeTasters.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,20 +74,69 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1607E16B1E908790008DF3C9 /* ImageSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageSlider.swift; path = custom/ImageSlider.swift; sourceTree = "<group>"; };
+		1614EE2D1E8E5E1C00C44F11 /* CadastroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CadastroViewController.swift; path = controller/CadastroViewController.swift; sourceTree = "<group>"; };
+		1614EE2F1E8E5E3100C44F11 /* EsqueciSenhaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EsqueciSenhaViewController.swift; path = controller/EsqueciSenhaViewController.swift; sourceTree = "<group>"; };
+		1614EE311E8E5E5A00C44F11 /* OfertasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OfertasViewController.swift; path = controller/OfertasViewController.swift; sourceTree = "<group>"; };
+		1614EE331E8E5E6C00C44F11 /* PedidosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PedidosViewController.swift; path = controller/PedidosViewController.swift; sourceTree = "<group>"; };
+		1614EE351E8E5E8A00C44F11 /* AssinaturasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AssinaturasViewController.swift; path = controller/AssinaturasViewController.swift; sourceTree = "<group>"; };
+		1614EE371E8E5EA500C44F11 /* CafeListViewControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CafeListViewControler.swift; path = controller/CafeListViewControler.swift; sourceTree = "<group>"; };
+		1614EE391E8E5EB600C44F11 /* CafeteriaListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CafeteriaListViewController.swift; path = controller/CafeteriaListViewController.swift; sourceTree = "<group>"; };
+		1614EE3B1E8E5EE300C44F11 /* AvaliacoesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AvaliacoesViewController.swift; path = controller/AvaliacoesViewController.swift; sourceTree = "<group>"; };
+		1614EE3D1E8E5EF800C44F11 /* PreparoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreparoViewController.swift; path = controller/PreparoViewController.swift; sourceTree = "<group>"; };
+		1614EE3F1E8E5F0A00C44F11 /* CarrinhoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarrinhoViewController.swift; path = controller/CarrinhoViewController.swift; sourceTree = "<group>"; };
+		1614EE411E8E5F1F00C44F11 /* NotificacoesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificacoesViewController.swift; path = controller/NotificacoesViewController.swift; sourceTree = "<group>"; };
+		1614EE431E8E5F3800C44F11 /* AvaliacaoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AvaliacaoViewController.swift; path = controller/AvaliacaoViewController.swift; sourceTree = "<group>"; };
+		1614EE451E8E5F8400C44F11 /* FinalizarCompraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinalizarCompraViewController.swift; path = controller/FinalizarCompraViewController.swift; sourceTree = "<group>"; };
+		1690A1C41E8EB6610039BDC1 /* RoundImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundImage.swift; path = custom/RoundImage.swift; sourceTree = "<group>"; };
+		1690A1C71E8F17980039BDC1 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Usuario.swift; path = modelo/Usuario.swift; sourceTree = "<group>"; };
+		1690A1CE1E8F2ABD0039BDC1 /* WheelFlavor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WheelFlavor.swift; path = custom/WheelFlavor.swift; sourceTree = "<group>"; };
+		1690A1D01E8F2AE50039BDC1 /* Dao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dao.swift; path = dao/Dao.swift; sourceTree = "<group>"; };
+		1690A1D21E8F2D5B0039BDC1 /* DetalhesCafeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetalhesCafeController.swift; path = controller/DetalhesCafeController.swift; sourceTree = "<group>"; };
+		1690A1D61E8FE9EC0039BDC1 /* RatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RatingView.swift; path = custom/RatingView.swift; sourceTree = "<group>"; };
+		16E67A2C1E911A25005EE82E /* CafeDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CafeDao.swift; path = dao/CafeDao.swift; sourceTree = "<group>"; };
+		16E67A2E1E911A34005EE82E /* CarrinhoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarrinhoDao.swift; path = dao/CarrinhoDao.swift; sourceTree = "<group>"; };
+		16E67A301E911B42005EE82E /* String+isCPF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+isCPF.swift"; path = "extensions/String+isCPF.swift"; sourceTree = "<group>"; };
+		16E67A311E911B42005EE82E /* String+isRG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+isRG.swift"; path = "extensions/String+isRG.swift"; sourceTree = "<group>"; };
+		16E67A321E911B42005EE82E /* String+toMD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+toMD5.swift"; path = "extensions/String+toMD5.swift"; sourceTree = "<group>"; };
+		16E67A361E911B7B005EE82E /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QRCodeViewController.swift; path = controller/QRCodeViewController.swift; sourceTree = "<group>"; };
+		16E67A391E912B8F005EE82E /* CoffeeTasters-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoffeeTasters-Bridging-Header.h"; sourceTree = "<group>"; };
+		16E67A3C1E912D44005EE82E /* EULA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EULA.txt; sourceTree = "<group>"; };
+		16E67A3E1E912E22005EE82E /* PreparoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreparoDao.swift; path = dao/PreparoDao.swift; sourceTree = "<group>"; };
+		16E67A401E912E71005EE82E /* PedidoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PedidoDao.swift; path = dao/PedidoDao.swift; sourceTree = "<group>"; };
+		16E67A421E912EDC005EE82E /* OfertaDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OfertaDao.swift; path = dao/OfertaDao.swift; sourceTree = "<group>"; };
+		16E67A4B1E912F92005EE82E /* ComprarAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ComprarAlertViewController.swift; path = util/ComprarAlertViewController.swift; sourceTree = "<group>"; };
+		16E67A4C1E912F92005EE82E /* CreditCardUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreditCardUtil.swift; path = util/CreditCardUtil.swift; sourceTree = "<group>"; };
+		16E67A4D1E912F92005EE82E /* SyncUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SyncUtil.swift; path = util/SyncUtil.swift; sourceTree = "<group>"; };
+		16E67A511E9130E2005EE82E /* OfertaCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OfertaCustomCell.swift; path = custom/OfertaCustomCell.swift; sourceTree = "<group>"; };
+		16E67A531E9130F6005EE82E /* CafeCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CafeCustomCell.swift; path = custom/CafeCustomCell.swift; sourceTree = "<group>"; };
+		16E67A551E913105005EE82E /* CafeteriaCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CafeteriaCustomCell.swift; path = custom/CafeteriaCustomCell.swift; sourceTree = "<group>"; };
+		16E67A571E913122005EE82E /* PedidoCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PedidoCustomCell.swift; path = custom/PedidoCustomCell.swift; sourceTree = "<group>"; };
+		16E67A591E913141005EE82E /* AvaliacaoCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AvaliacaoCustomCell.swift; path = custom/AvaliacaoCustomCell.swift; sourceTree = "<group>"; };
+		16E67A5B1E913173005EE82E /* CarrinhoItemCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarrinhoItemCustomCell.swift; path = custom/CarrinhoItemCustomCell.swift; sourceTree = "<group>"; };
+		16E67A5D1E913195005EE82E /* NotificacaoCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificacaoCustomCell.swift; path = custom/NotificacaoCustomCell.swift; sourceTree = "<group>"; };
+		16E67A5F1E913757005EE82E /* BuscaResultCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BuscaResultCustomCell.swift; path = custom/BuscaResultCustomCell.swift; sourceTree = "<group>"; };
 		16EBC5E31E8C66CB00A87B2F /* CoffeeTasters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeTasters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16EBC5E61E8C66CB00A87B2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		16EBC5E81E8C66CB00A87B2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		16EBC5EE1E8C66CB00A87B2F /* CoffeeTasters.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoffeeTasters.xcdatamodel; sourceTree = "<group>"; };
 		16EBC5F31E8C66CB00A87B2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16EBC5F51E8C66CB00A87B2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16EBC5FA1E8C66CB00A87B2F /* CoffeeTastersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeTastersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16EBC5FE1E8C66CB00A87B2F /* CoffeeTastersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeTastersTests.swift; sourceTree = "<group>"; };
 		16EBC6001E8C66CB00A87B2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		16EBC6091E8C670B00A87B2F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 		16EBC60B1E8C67AD00A87B2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16EBC60D1E8C694F00A87B2F /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashViewController.swift; path = controller/SplashViewController.swift; sourceTree = "<group>"; };
 		16EBC6101E8C74E000A87B2F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = controller/LoginViewController.swift; sourceTree = "<group>"; };
 		16EBC6121E8C792B00A87B2F /* MeusDadosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeusDadosViewController.swift; path = controller/MeusDadosViewController.swift; sourceTree = "<group>"; };
+		16EBC6171E8D095600A87B2F /* BorderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BorderButton.swift; path = custom/BorderButton.swift; sourceTree = "<group>"; };
+		16EBC61C1E8DC1CE00A87B2F /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		16EBC61E1E8DCE4500A87B2F /* PerfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PerfilViewController.swift; path = controller/PerfilViewController.swift; sourceTree = "<group>"; };
+		21A0E0F3977AACBA390F9707 /* Pods-CoffeeTasters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeTasters.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeTasters/Pods-CoffeeTasters.release.xcconfig"; sourceTree = "<group>"; };
+		8CAEFF01AD10F0C0CA53EA4A /* Pods-CoffeeTasters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeTasters.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeTasters/Pods-CoffeeTasters.debug.xcconfig"; sourceTree = "<group>"; };
+		9CDF74E399BC5587736D962D /* Pods_CoffeeTasters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeTasters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B075BBB1483018F30170FCBE /* Pods-CoffeeTastersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeTastersTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeTastersTests/Pods-CoffeeTastersTests.release.xcconfig"; sourceTree = "<group>"; };
+		F7F67437C570B7B97DDE5203 /* Pods-CoffeeTastersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeTastersTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeTastersTests/Pods-CoffeeTastersTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F81EAE3088C0DF0DAE48DD2D /* Pods_CoffeeTastersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeTastersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A4C5791A0102BEB6F8AD023 /* Pods_CoffeeTasters.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,18 +152,60 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DF85D4743E04601298C5E5A /* Pods_CoffeeTastersTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1690A1C61E8F177E0039BDC1 /* modelo */ = {
+			isa = PBXGroup;
+			children = (
+				1690A1C71E8F17980039BDC1 /* Usuario.swift */,
+			);
+			name = modelo;
+			sourceTree = "<group>";
+		};
+		1690A1C91E8F1A980039BDC1 /* dao */ = {
+			isa = PBXGroup;
+			children = (
+				1690A1D01E8F2AE50039BDC1 /* Dao.swift */,
+				16E67A2C1E911A25005EE82E /* CafeDao.swift */,
+				16E67A2E1E911A34005EE82E /* CarrinhoDao.swift */,
+				16E67A3E1E912E22005EE82E /* PreparoDao.swift */,
+				16E67A401E912E71005EE82E /* PedidoDao.swift */,
+				16E67A421E912EDC005EE82E /* OfertaDao.swift */,
+			);
+			name = dao;
+			sourceTree = "<group>";
+		};
+		1690A1D41E8FE9940039BDC1 /* bridge */ = {
+			isa = PBXGroup;
+			children = (
+				16E67A391E912B8F005EE82E /* CoffeeTasters-Bridging-Header.h */,
+			);
+			name = bridge;
+			sourceTree = "<group>";
+		};
+		16E67A441E912F25005EE82E /* util */ = {
+			isa = PBXGroup;
+			children = (
+				16E67A4B1E912F92005EE82E /* ComprarAlertViewController.swift */,
+				16E67A4C1E912F92005EE82E /* CreditCardUtil.swift */,
+				16E67A4D1E912F92005EE82E /* SyncUtil.swift */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
 		16EBC5DA1E8C66CB00A87B2F = {
 			isa = PBXGroup;
 			children = (
 				16EBC5E51E8C66CB00A87B2F /* CoffeeTasters */,
 				16EBC5FD1E8C66CB00A87B2F /* CoffeeTastersTests */,
 				16EBC5E41E8C66CB00A87B2F /* Products */,
+				349684B0A55D29B8FC5E421A /* Pods */,
+				6101892D1C888BEFCBFBD897 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,15 +221,20 @@
 		16EBC5E51E8C66CB00A87B2F /* CoffeeTasters */ = {
 			isa = PBXGroup;
 			children = (
+				16E67A441E912F25005EE82E /* util */,
+				16E67A3C1E912D44005EE82E /* EULA.txt */,
+				1690A1D41E8FE9940039BDC1 /* bridge */,
+				1690A1C91E8F1A980039BDC1 /* dao */,
+				1690A1C61E8F177E0039BDC1 /* modelo */,
+				16EBC6191E8DB90A00A87B2F /* extensions */,
 				16EBC6141E8C819B00A87B2F /* custom */,
 				16EBC60F1E8C695500A87B2F /* controller */,
 				16EBC5E61E8C66CB00A87B2F /* AppDelegate.swift */,
-				16EBC5E81E8C66CB00A87B2F /* ViewController.swift */,
-				16EBC6091E8C670B00A87B2F /* Main.storyboard */,
 				16EBC5F21E8C66CB00A87B2F /* LaunchScreen.storyboard */,
 				16EBC60B1E8C67AD00A87B2F /* Assets.xcassets */,
 				16EBC5F51E8C66CB00A87B2F /* Info.plist */,
 				16EBC5ED1E8C66CB00A87B2F /* CoffeeTasters.xcdatamodeld */,
+				16EBC61C1E8DC1CE00A87B2F /* Storyboard.storyboard */,
 			);
 			path = CoffeeTasters;
 			sourceTree = "<group>";
@@ -110,9 +251,25 @@
 		16EBC60F1E8C695500A87B2F /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				16E67A361E911B7B005EE82E /* QRCodeViewController.swift */,
 				16EBC60D1E8C694F00A87B2F /* SplashViewController.swift */,
 				16EBC6101E8C74E000A87B2F /* LoginViewController.swift */,
 				16EBC6121E8C792B00A87B2F /* MeusDadosViewController.swift */,
+				16EBC61E1E8DCE4500A87B2F /* PerfilViewController.swift */,
+				1614EE2D1E8E5E1C00C44F11 /* CadastroViewController.swift */,
+				1614EE2F1E8E5E3100C44F11 /* EsqueciSenhaViewController.swift */,
+				1614EE311E8E5E5A00C44F11 /* OfertasViewController.swift */,
+				1614EE331E8E5E6C00C44F11 /* PedidosViewController.swift */,
+				1614EE351E8E5E8A00C44F11 /* AssinaturasViewController.swift */,
+				1614EE371E8E5EA500C44F11 /* CafeListViewControler.swift */,
+				1614EE391E8E5EB600C44F11 /* CafeteriaListViewController.swift */,
+				1614EE3B1E8E5EE300C44F11 /* AvaliacoesViewController.swift */,
+				1614EE3D1E8E5EF800C44F11 /* PreparoViewController.swift */,
+				1614EE3F1E8E5F0A00C44F11 /* CarrinhoViewController.swift */,
+				1614EE411E8E5F1F00C44F11 /* NotificacoesViewController.swift */,
+				1614EE431E8E5F3800C44F11 /* AvaliacaoViewController.swift */,
+				1614EE451E8E5F8400C44F11 /* FinalizarCompraViewController.swift */,
+				1690A1D21E8F2D5B0039BDC1 /* DetalhesCafeController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -120,8 +277,51 @@
 		16EBC6141E8C819B00A87B2F /* custom */ = {
 			isa = PBXGroup;
 			children = (
+				1690A1D61E8FE9EC0039BDC1 /* RatingView.swift */,
+				1690A1CE1E8F2ABD0039BDC1 /* WheelFlavor.swift */,
+				16EBC6171E8D095600A87B2F /* BorderButton.swift */,
+				1690A1C41E8EB6610039BDC1 /* RoundImage.swift */,
+				1607E16B1E908790008DF3C9 /* ImageSlider.swift */,
+				16E67A511E9130E2005EE82E /* OfertaCustomCell.swift */,
+				16E67A531E9130F6005EE82E /* CafeCustomCell.swift */,
+				16E67A551E913105005EE82E /* CafeteriaCustomCell.swift */,
+				16E67A571E913122005EE82E /* PedidoCustomCell.swift */,
+				16E67A591E913141005EE82E /* AvaliacaoCustomCell.swift */,
+				16E67A5B1E913173005EE82E /* CarrinhoItemCustomCell.swift */,
+				16E67A5D1E913195005EE82E /* NotificacaoCustomCell.swift */,
+				16E67A5F1E913757005EE82E /* BuscaResultCustomCell.swift */,
 			);
 			name = custom;
+			sourceTree = "<group>";
+		};
+		16EBC6191E8DB90A00A87B2F /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				16E67A301E911B42005EE82E /* String+isCPF.swift */,
+				16E67A311E911B42005EE82E /* String+isRG.swift */,
+				16E67A321E911B42005EE82E /* String+toMD5.swift */,
+			);
+			name = extensions;
+			sourceTree = "<group>";
+		};
+		349684B0A55D29B8FC5E421A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8CAEFF01AD10F0C0CA53EA4A /* Pods-CoffeeTasters.debug.xcconfig */,
+				21A0E0F3977AACBA390F9707 /* Pods-CoffeeTasters.release.xcconfig */,
+				F7F67437C570B7B97DDE5203 /* Pods-CoffeeTastersTests.debug.xcconfig */,
+				B075BBB1483018F30170FCBE /* Pods-CoffeeTastersTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6101892D1C888BEFCBFBD897 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9CDF74E399BC5587736D962D /* Pods_CoffeeTasters.framework */,
+				F81EAE3088C0DF0DAE48DD2D /* Pods_CoffeeTastersTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,9 +331,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 16EBC6031E8C66CB00A87B2F /* Build configuration list for PBXNativeTarget "CoffeeTasters" */;
 			buildPhases = (
+				B0D26AFC02593516DDCB4196 /* [CP] Check Pods Manifest.lock */,
 				16EBC5DF1E8C66CB00A87B2F /* Sources */,
 				16EBC5E01E8C66CB00A87B2F /* Frameworks */,
 				16EBC5E11E8C66CB00A87B2F /* Resources */,
+				0250C8AB79D5DB7E668A0025 /* [CP] Embed Pods Frameworks */,
+				DF1336FD5D2E48A834375B39 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -148,9 +351,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 16EBC6061E8C66CB00A87B2F /* Build configuration list for PBXNativeTarget "CoffeeTastersTests" */;
 			buildPhases = (
+				E65AF24C10D99CD16368B6C5 /* [CP] Check Pods Manifest.lock */,
 				16EBC5F61E8C66CB00A87B2F /* Sources */,
 				16EBC5F71E8C66CB00A87B2F /* Frameworks */,
 				16EBC5F81E8C66CB00A87B2F /* Resources */,
+				EDFDC7CD20311C0BF057A5BE /* [CP] Embed Pods Frameworks */,
+				8725F8F8789B40B2846BD216 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -175,6 +381,7 @@
 					16EBC5E21E8C66CB00A87B2F = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = P5NJ75969Q;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					16EBC5F91E8C66CB00A87B2F = {
@@ -210,8 +417,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				16EBC5F41E8C66CB00A87B2F /* LaunchScreen.storyboard in Resources */,
+				16E67A3D1E912D44005EE82E /* EULA.txt in Resources */,
+				16EBC61D1E8DC1CE00A87B2F /* Storyboard.storyboard in Resources */,
 				16EBC60C1E8C67AD00A87B2F /* Assets.xcassets in Resources */,
-				16EBC60A1E8C670B00A87B2F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,17 +432,151 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0250C8AB79D5DB7E668A0025 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoffeeTasters/Pods-CoffeeTasters-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8725F8F8789B40B2846BD216 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoffeeTastersTests/Pods-CoffeeTastersTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0D26AFC02593516DDCB4196 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DF1336FD5D2E48A834375B39 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoffeeTasters/Pods-CoffeeTasters-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E65AF24C10D99CD16368B6C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EDFDC7CD20311C0BF057A5BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoffeeTastersTests/Pods-CoffeeTastersTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		16EBC5DF1E8C66CB00A87B2F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1614EE401E8E5F0A00C44F11 /* CarrinhoViewController.swift in Sources */,
+				1614EE301E8E5E3100C44F11 /* EsqueciSenhaViewController.swift in Sources */,
+				1614EE3A1E8E5EB600C44F11 /* CafeteriaListViewController.swift in Sources */,
 				16EBC6131E8C792B00A87B2F /* MeusDadosViewController.swift in Sources */,
 				16EBC5EF1E8C66CB00A87B2F /* CoffeeTasters.xcdatamodeld in Sources */,
-				16EBC5E91E8C66CB00A87B2F /* ViewController.swift in Sources */,
+				1690A1D31E8F2D5B0039BDC1 /* DetalhesCafeController.swift in Sources */,
+				1614EE3E1E8E5EF800C44F11 /* PreparoViewController.swift in Sources */,
+				16E67A4E1E912F92005EE82E /* ComprarAlertViewController.swift in Sources */,
+				16E67A2D1E911A25005EE82E /* CafeDao.swift in Sources */,
+				16E67A501E912F92005EE82E /* SyncUtil.swift in Sources */,
+				1690A1D71E8FE9EC0039BDC1 /* RatingView.swift in Sources */,
+				16E67A581E913122005EE82E /* PedidoCustomCell.swift in Sources */,
+				16E67A4F1E912F92005EE82E /* CreditCardUtil.swift in Sources */,
+				1614EE2E1E8E5E1C00C44F11 /* CadastroViewController.swift in Sources */,
+				1690A1C81E8F17980039BDC1 /* Usuario.swift in Sources */,
+				16E67A601E913757005EE82E /* BuscaResultCustomCell.swift in Sources */,
+				1690A1D11E8F2AE50039BDC1 /* Dao.swift in Sources */,
+				1614EE361E8E5E8A00C44F11 /* AssinaturasViewController.swift in Sources */,
+				16EBC61F1E8DCE4500A87B2F /* PerfilViewController.swift in Sources */,
 				16EBC5E71E8C66CB00A87B2F /* AppDelegate.swift in Sources */,
+				1614EE441E8E5F3800C44F11 /* AvaliacaoViewController.swift in Sources */,
+				16E67A2F1E911A34005EE82E /* CarrinhoDao.swift in Sources */,
+				16EBC6181E8D095600A87B2F /* BorderButton.swift in Sources */,
+				1614EE461E8E5F8400C44F11 /* FinalizarCompraViewController.swift in Sources */,
+				16E67A431E912EDC005EE82E /* OfertaDao.swift in Sources */,
+				1607E16C1E908790008DF3C9 /* ImageSlider.swift in Sources */,
+				16E67A341E911B42005EE82E /* String+isRG.swift in Sources */,
+				1614EE381E8E5EA500C44F11 /* CafeListViewControler.swift in Sources */,
+				16E67A411E912E71005EE82E /* PedidoDao.swift in Sources */,
+				1614EE341E8E5E6C00C44F11 /* PedidosViewController.swift in Sources */,
+				1614EE321E8E5E5A00C44F11 /* OfertasViewController.swift in Sources */,
+				16E67A521E9130E2005EE82E /* OfertaCustomCell.swift in Sources */,
+				16E67A371E911B7B005EE82E /* QRCodeViewController.swift in Sources */,
+				16E67A5A1E913141005EE82E /* AvaliacaoCustomCell.swift in Sources */,
+				16E67A351E911B42005EE82E /* String+toMD5.swift in Sources */,
+				16E67A541E9130F6005EE82E /* CafeCustomCell.swift in Sources */,
+				16E67A3F1E912E22005EE82E /* PreparoDao.swift in Sources */,
+				1614EE3C1E8E5EE300C44F11 /* AvaliacoesViewController.swift in Sources */,
+				1690A1CF1E8F2ABD0039BDC1 /* WheelFlavor.swift in Sources */,
 				16EBC6111E8C74E000A87B2F /* LoginViewController.swift in Sources */,
+				1614EE421E8E5F1F00C44F11 /* NotificacoesViewController.swift in Sources */,
 				16EBC60E1E8C694F00A87B2F /* SplashViewController.swift in Sources */,
+				16E67A561E913105005EE82E /* CafeteriaCustomCell.swift in Sources */,
+				16E67A5C1E913173005EE82E /* CarrinhoItemCustomCell.swift in Sources */,
+				16E67A331E911B42005EE82E /* String+isCPF.swift in Sources */,
+				1690A1C51E8EB6610039BDC1 /* RoundImage.swift in Sources */,
+				16E67A5E1E913195005EE82E /* NotificacaoCustomCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,32 +705,40 @@
 		};
 		16EBC6041E8C66CB00A87B2F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CAEFF01AD10F0C0CA53EA4A /* Pods-CoffeeTasters.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = P5NJ75969Q;
 				INFOPLIST_FILE = CoffeeTasters/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.2luglios.CoffeeTasters;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CoffeeTasters/CoffeeTasters-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		16EBC6051E8C66CB00A87B2F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21A0E0F3977AACBA390F9707 /* Pods-CoffeeTasters.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = P5NJ75969Q;
 				INFOPLIST_FILE = CoffeeTasters/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.2luglios.CoffeeTasters;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CoffeeTasters/CoffeeTasters-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		16EBC6071E8C66CB00A87B2F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7F67437C570B7B97DDE5203 /* Pods-CoffeeTastersTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -404,6 +754,7 @@
 		};
 		16EBC6081E8C66CB00A87B2F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B075BBB1483018F30170FCBE /* Pods-CoffeeTastersTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -436,6 +787,7 @@
 				16EBC6051E8C66CB00A87B2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16EBC6061E8C66CB00A87B2F /* Build configuration list for PBXNativeTarget "CoffeeTastersTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +796,7 @@
 				16EBC6081E8C66CB00A87B2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

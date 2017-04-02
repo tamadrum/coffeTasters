@@ -1,4 +1,103 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="15G1217" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Avaliacao" representedClassName="Avaliacao" syncable="YES" codeGenerationType="class">
+        <attribute name="barista" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="data" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dataColheita" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dataTorra" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gostou" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="localPreparo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="metodoPreparo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="obs" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cafe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cafe" syncable="YES"/>
+        <relationship name="flavor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Flavor" syncable="YES"/>
+        <relationship name="flavorMedia" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Flavor" syncable="YES"/>
+    </entity>
+    <entity name="Cafe" representedClassName="Cafe" syncable="YES" codeGenerationType="class">
+        <attribute name="altitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="cidade" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="descricao" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ehBlend" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="estado" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imagem" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pais" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="produtor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="regiao" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="safra" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tipo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="torrador" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="flavorTorrador" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Flavor" syncable="YES"/>
+    </entity>
+    <entity name="Carrinho" representedClassName="Carrinho" syncable="YES" codeGenerationType="class">
+        <attribute name="data" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="valorTotal" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="itens" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" syncable="YES"/>
+    </entity>
+    <entity name="Flavor" representedClassName="Flavor" syncable="YES" codeGenerationType="class">
+        <attribute name="amargo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="azedo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="caramelo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="cereais" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="chocolate" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="defumado" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="doce" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="encorpado" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="especiarias" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="floral" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="frutasCaroco" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="frutasCitricas" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="frutasVermelhas" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="herbal" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="nozes" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="salgado" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Imagens" representedClassName="Imagens" syncable="YES" codeGenerationType="class">
+        <attribute name="nome" optional="YES" attributeType="Transformable" syncable="YES"/>
+    </entity>
+    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
+        <attribute name="promocao" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="quantidade" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="produto" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Produto" syncable="YES"/>
+    </entity>
+    <entity name="Passo" representedClassName="Passo" syncable="YES" codeGenerationType="class">
+        <attribute name="descricao" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="indice" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="tempo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="imagens" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Imagens" syncable="YES"/>
+    </entity>
+    <entity name="Pedido" representedClassName="Pedido" syncable="YES" codeGenerationType="class">
+        <attribute name="data" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="numero" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="valorTotal" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="itens" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" syncable="YES"/>
+    </entity>
+    <entity name="Preparo" representedClassName="Preparo" syncable="YES" codeGenerationType="class">
+        <attribute name="imagem" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="passo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Passo" syncable="YES"/>
+    </entity>
+    <entity name="Produto" representedClassName="Produto" syncable="YES" codeGenerationType="class">
+        <attribute name="descricao" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="oferta" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="preco" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="precoOferta" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="tipo" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Avaliacao" positionX="-63" positionY="-18" width="128" height="210"/>
+        <element name="Cafe" positionX="-54" positionY="-9" width="128" height="285"/>
+        <element name="Carrinho" positionX="-36" positionY="9" width="128" height="90"/>
+        <element name="Flavor" positionX="-18" positionY="27" width="128" height="285"/>
+        <element name="Imagens" positionX="0" positionY="45" width="128" height="60"/>
+        <element name="Item" positionX="18" positionY="63" width="128" height="90"/>
+        <element name="Passo" positionX="36" positionY="81" width="128" height="105"/>
+        <element name="Pedido" positionX="-9" positionY="36" width="128" height="120"/>
+        <element name="Preparo" positionX="0" positionY="45" width="128" height="90"/>
+        <element name="Produto" positionX="9" positionY="54" width="128" height="135"/>
+    </elements>
 </model>

@@ -1,0 +1,6 @@
+framework module Pods_CoffeeTasters {
+  umbrella header "Pods-CoffeeTasters-umbrella.h"
+
+  export *
+  module * { export * }
+}

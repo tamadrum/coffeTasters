@@ -24,11 +24,11 @@ class SplashViewController: UIViewController {
             self.logoImageView.alpha = 0.0
         })
         
-        Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
+        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
     }
     
     func timeToMoveOn() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "Storyboard", bundle: nil)
         let view = storyboard.instantiateViewController(withIdentifier: "loginScreen")
         print(storyboard)
         print(view)

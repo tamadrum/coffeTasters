@@ -11,22 +11,51 @@ import UIKit
 
 class MeusDadosViewController: UIViewController {
     
+    @IBOutlet weak var nomeTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var cpfTextField: UITextField!
+    @IBOutlet weak var senhaTextField: UITextField!
+    @IBOutlet weak var repitaTextField: UITextField!
+    @IBOutlet weak var nomeCartaoTextField: UITextField!
+    @IBOutlet weak var numeroCartaoTextField: UITextField!
+    @IBOutlet weak var validadeCartaoTextField: UITextField!
+    @IBOutlet weak var tipoCartaoImageView: UIImageView!
+    @IBOutlet weak var receberNotificacaoSegmentControl: UISegmentedControl!
     
-    @IBAction func back(_ sender: UIBarButtonItem) {
-        pop()
+    var usuario = Usuario()
+    
+    override func viewDidLoad() {
+        usuario.load()
+        
+        nomeTextField.text = usuario.nome
+        emailTextField.text = usuario.email
+        cpfTextField.text = usuario.cpf
+        senhaTextField.text = usuario.senha
+        nomeCartaoTextField.text = usuario.nomeCartao
+        numeroCartaoTextField.text = usuario.numeroCartao
+        validadeCartaoTextField.text = usuario.validadeCartao
+        receberNotificacaoSegmentControl.selectedSegmentIndex = usuario.querNotificacao ? 0 : 1
+        
     }
     
     @IBAction func salvar(_ sender: UIBarButtonItem) {
-        pop()
+        usuario.nome = nomeTextField.text!
+        usuario.email = emailTextField.text!
+        usuario.cpf = cpfTextField.text!
+        usuario.senha = senhaTextField.text!
+        usuario.nomeCartao = nomeCartaoTextField.text!
+        usuario.numeroCartao = numeroCartaoTextField.text!
+        usuario.validadeCartao = validadeCartaoTextField.text!
+        usuario.querNotificacao = receberNotificacaoSegmentControl.selectedSegmentIndex == 0 ? true : false
+        
+        usuario.save()
+        
+        if let nav = navigationController {
+            nav.popViewController(animated: true)
+        }
     }
     
-    func pop () {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let view = storyboard.instantiateViewController(withIdentifier: "tabPrincipal")
-        print(storyboard)
-        print(view)
-        
-        present(view, animated: true, completion: nil)
+    @IBAction func sairConta(_ sender: UIButton) {
     }
     
 }
