@@ -276,7 +276,7 @@
         <!--Detalhes-->
         <scene sceneID="0XO-eU-PsX">
             <objects>
-                <viewController id="Pnt-xa-7jn" customClass="DetalhesCafeController" customModule="CoffeeTasters" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detalhesCafe" id="Pnt-xa-7jn" customClass="DetalhesCafeController" customModule="CoffeeTasters" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kIX-Dv-F78"/>
                         <viewControllerLayoutGuide type="bottom" id="96X-5Q-t1T"/>
@@ -781,7 +781,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="FnP-AJ-esU" customClass="BuscaResultCustomCell" customModule="CoffeeTasters" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="celula" id="FnP-AJ-esU" customClass="BuscaResultCustomCell" customModule="CoffeeTasters" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="288" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FnP-AJ-esU" id="Epd-eY-gkF">
@@ -792,7 +792,7 @@
                                                     <rect key="frame" x="8" y="8" width="39" height="27"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0e-db-fAU">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0e-db-fAU">
                                                     <rect key="frame" x="55" y="11" width="225" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -807,13 +807,17 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="eot-f5-Bbz" id="VEK-r5-jGz"/>
+                                    <outlet property="delegate" destination="eot-f5-Bbz" id="Y5E-J5-G6Z"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.93858689069747925" green="0.81037360429763794" blue="0.72471803426742554" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Perfil" id="V01-Ku-qdy"/>
                     <connections>
-                        <outlet property="tableView" destination="GcZ-pT-Ox7" id="c1h-rk-yra"/>
+                        <outlet property="tableView" destination="GcZ-pT-Ox7" id="mEw-bi-EE6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uhS-Ju-ZyB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1991,7 +1995,7 @@
         <!--Avaliação-->
         <scene sceneID="6cj-FV-vDp">
             <objects>
-                <viewController id="ELa-ih-0rX" customClass="AvaliacaoViewController" customModule="CoffeeTasters" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="avaliacao" id="ELa-ih-0rX" customClass="AvaliacaoViewController" customModule="CoffeeTasters" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GdL-NM-F4e"/>
                         <viewControllerLayoutGuide type="bottom" id="nqL-Sj-pfk"/>

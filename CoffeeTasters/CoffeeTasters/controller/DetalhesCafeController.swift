@@ -29,6 +29,19 @@ class DetalhesCafeController: UIViewController {
     @IBOutlet weak var avaliacoesAntigasSegmentControl: UISegmentedControl!
     
     @IBAction func verMapa(_ sender: UIButton) {
+        let url = ("https://www.google.com.br/maps/@-23.5837048,-46.5731714,17z?hl=pt-BR").addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+        
+        if !UIApplication.shared.canOpenURL(URL(string: url)!) {
+            print("Não posso abrir... :-(")
+        } else {
+            UIApplication
+                .shared // Pode usar o canOpen também... mas tem que testar em todo o canto...
+                .open(URL(string: url)!, options: [:], completionHandler: {
+                    (x: Bool) in
+                    print("open url voltou com \(x)")
+                })
+        }
+        
     }
     
     @IBAction func comprarCafe(_ sender: Any) {
