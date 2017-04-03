@@ -13,7 +13,9 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var tableView: UITableView!
     
-    var itens = ["Café Pelé"]
+    var searchActive : Bool = false
+    var data:[Cafe] = []
+    var filtered:[Cafe] = []
     
     @IBAction func irParaAvaliacoes(_ sender: UIButton) {
         if tabBarController != nil {
@@ -24,16 +26,26 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // MARK: Ciclo de vida
     
     override func viewDidLoad() {
-        itens.sort()
-        itens.append("Adicionar um café...")
+        data = CafeDao().listar()
+        
+        //data.sort{}
+        //data.append("Adicionar um café...")
+        
+        tableView?.reloadData()
     }
     
     // MARK: Coisas da busca
     
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         UIView.animate(withDuration: 0.5, animations: {
             self.tableView.frame.origin.y = 108
         })
+        
+        searchActive = true;
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchActive = false;
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
@@ -41,6 +53,34 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
             self.tableView.frame.origin.y = -300
             searchBar.text = ""
         })
+        
+        searchActive = false;
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.tableView.frame.origin.y = 108
+        })
+        
+        filtered = data.filter({ (cafe) -> Bool in
+            if cafe.nome?.range(of: searchText) != nil {
+                return true
+            }
+            else {
+                return false
+            }
+        })
+        
+        if(filtered.count == 0){
+            searchActive = false;
+        } else {
+            searchActive = true;
+        }
+        self.tableView?.reloadData()
     }
     
     // MARK: Coisas da tabela
@@ -50,22 +90,41 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        if(searchActive) {
+            return filtered.count
+        }
+        return data.count;
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celula") as! BuscaResultCustomCell
-        cell.nome.text = itens[indexPath.row]
+        
+        if(searchActive){
+            cell.textLabel?.text = filtered[indexPath.row].nome
+            cell.detailTextLabel?.text = filtered[indexPath.row].descricao
+            //            cell.imageView?.image = UIImage(named: filtered[indexPath.row].descricao)
+        } else {
+            cell.textLabel?.text = data[indexPath.row].nome
+            cell.detailTextLabel?.text = data[indexPath.row].descricao
+            //            cell.imageView?.image = UIImage(named: data[indexPath.row].imagem)
+        }
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Storyboard", bundle: nil)
-        var view = storyboard.instantiateViewController(withIdentifier: "detalhesCafe")
+        let view = storyboard.instantiateViewController(withIdentifier: "detalhesCafe") as! DetalhesCafeController
         
-        if ( indexPath.row == itens.count-1 ) {
-            view = storyboard.instantiateViewController(withIdentifier: "avaliacao")
+        if(searchActive){
+            view.cafeAvaliado = filtered[indexPath.row]
+        } else {
+            view.cafeAvaliado = data[indexPath.row]
         }
+        
+//        if ( indexPath.row == data.count-1 ) {
+//            view = storyboard.instantiateViewController(withIdentifier: "avaliacao")
+//        }
         
         navigationController?.pushViewController(view, animated: true)
     }

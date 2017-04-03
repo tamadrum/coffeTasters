@@ -28,6 +28,8 @@ class DetalhesCafeController: UIViewController {
     @IBOutlet weak var torradorMediaSegmentControl: UISegmentedControl!
     @IBOutlet weak var avaliacoesAntigasSegmentControl: UISegmentedControl!
     
+    var cafeAvaliado: Cafe!
+    
     @IBAction func verMapa(_ sender: UIButton) {
         let url = ("https://www.google.com.br/maps/@-23.5837048,-46.5731714,17z?hl=pt-BR").addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
         

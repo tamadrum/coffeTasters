@@ -13,16 +13,7 @@ import CoreData
 class Dao<T> {
     
     var banco:String?
-    
-    lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "CoffeeTasters")
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            if let error = error as NSError? {
-                fatalError("Unresolved error \(error), \(error.userInfo)")
-            }
-        })
-        return container
-    }()
+    var managedContext: NSManagedObjectContext!
     
     init() {
         if type(of: T.self) == type(of: Avaliacao.self) {
@@ -47,11 +38,15 @@ class Dao<T> {
             banco = "Imagens"
         }
         
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            managedContext = appDelegate.persistentContainer.viewContext
+        }
+        
     }
     
     func new() -> T {
         return NSEntityDescription.insertNewObject(forEntityName: banco!,
-                                                   into: persistentContainer.viewContext) as! T
+                                                   into: managedContext) as! T
     }
     
     func list() -> [T] {
@@ -60,7 +55,7 @@ class Dao<T> {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: banco!)
         
         do {
-            retorno = try persistentContainer.viewContext.fetch(fetchRequest) as! [T]
+            retorno = try managedContext.fetch(fetchRequest) as! [T]
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
@@ -68,17 +63,17 @@ class Dao<T> {
     }
 
     func delete(_ obj: NSManagedObject) {
-        persistentContainer.viewContext.delete(obj)
+        managedContext.delete(obj)
     }
     
     func reset () {
-        persistentContainer.viewContext.reset()
+        managedContext.reset()
     }
     
     func save () {
-        if persistentContainer.viewContext.hasChanges {
+        if managedContext.hasChanges {
             do {
-                try persistentContainer.viewContext.save()
+                try managedContext.save()
             } catch {
                 let nserror = error as NSError
                 fatalError("Impossível salvar... \(nserror), \(nserror.userInfo)")

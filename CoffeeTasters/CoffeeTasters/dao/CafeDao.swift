@@ -21,24 +21,6 @@ class CafeDao: Dao<Cafe> {
         
         nomes.sort()
         
-        let flavor = Dao<Flavor>().new()
-        flavor.amargo = 10
-        flavor.azedo = 1
-        flavor.caramelo = 2
-        flavor.cereais = 3
-        flavor.chocolate = 4
-        flavor.defumado = 5
-        flavor.doce = 6
-        flavor.encorpado = 7
-        flavor.especiarias = 8
-        flavor.floral = 9
-        flavor.frutasCaroco = 10
-        flavor.frutasCitricas = 1
-        flavor.frutasVermelhas = 2
-        flavor.herbal = 3
-        flavor.nozes = 4
-        flavor.salgado = 5
-        
         for i in 1..<nomes.count {
             let c = new()
             c.nome = nomes[i]
@@ -52,6 +34,25 @@ class CafeDao: Dao<Cafe> {
             c.regiao = "montanhosa"
             c.tipo = "Arábico"
             c.safra = "20/02/2014"
+            
+            let flavor = Dao<Flavor>().new()
+            flavor.amargo = 10
+            flavor.azedo = 1
+            flavor.caramelo = 2
+            flavor.cereais = 3
+            flavor.chocolate = 4
+            flavor.defumado = 5
+            flavor.doce = 6
+            flavor.encorpado = 7
+            flavor.especiarias = 8
+            flavor.floral = 9
+            flavor.frutasCaroco = 10
+            flavor.frutasCitricas = 1
+            flavor.frutasVermelhas = 2
+            flavor.herbal = 3
+            flavor.nozes = 4
+            flavor.salgado = 5
+            
             c.flavorTorrador = flavor
             c.latitude = -23.548064
             c.longitude = -46.5708517
