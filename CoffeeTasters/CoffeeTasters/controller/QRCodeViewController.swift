@@ -98,7 +98,7 @@ class QRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
                 
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc = storyboard.instantiateViewController(withIdentifier: "detalhesCafe") as! DetalhesCafeController
-                //vc.cafeAvaliado = data[0]
+                vc.cafeAvaliado = data[0]
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }

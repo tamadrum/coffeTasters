@@ -28,7 +28,9 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         data = CafeDao().listar()
         
-        //data.sort{}
+        data.sort(by: {(cafe1, cafe2) -> Bool in
+            return cafe1.nome!<cafe2.nome!
+        })
         //data.append("Adicionar um café...")
         
         tableView?.reloadData()
@@ -37,10 +39,6 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // MARK: Coisas da busca
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        UIView.animate(withDuration: 0.5, animations: {
-            self.tableView.frame.origin.y = 108
-        })
-        
         searchActive = true;
     }
     
@@ -80,6 +78,7 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
         } else {
             searchActive = true;
         }
+        
         self.tableView?.reloadData()
     }
     
@@ -125,6 +124,10 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
 //        if ( indexPath.row == data.count-1 ) {
 //            view = storyboard.instantiateViewController(withIdentifier: "avaliacao")
 //        }
+        
+        UIView.animate(withDuration: 0.5, animations: {
+            self.tableView.frame.origin.y = -300
+        })
         
         navigationController?.pushViewController(view, animated: true)
     }

@@ -60,7 +60,7 @@ class WheelFlavor: UIView {
             images = [
                 desenhaImagem(#imageLiteral(resourceName: "cereais"), context: context, centro:centro, raio:(raio+20), angulo:11.25), // doce
                 desenhaImagem(#imageLiteral(resourceName: "cereais"), context: context, centro:centro, raio:(raio+20), angulo:33.75), // azedo
-                desenhaImagem(#imageLiteral(resourceName: "cereais"), context: context, centro:centro, raio:(raio+20), angulo:56.25), // floral
+                desenhaImagem(#imageLiteral(resourceName: "floral"), context: context, centro:centro, raio:(raio+20), angulo:56.25), // floral
                 desenhaImagem(#imageLiteral(resourceName: "cereais"), context: context, centro:centro, raio:(raio+20), angulo:78.75), // especiarias
                 desenhaImagem(#imageLiteral(resourceName: "cereais"), context: context, centro:centro, raio:(raio+20), angulo:101.25), // salgado
                 desenhaImagem(#imageLiteral(resourceName: "cereais"), context: context, centro:centro, raio:(raio+20), angulo:123.75), // frutasVermelhas
