@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import FacebookCore
+import FacebookLogin
 
 class MeusDadosViewController: UIViewController {
     
@@ -56,6 +58,7 @@ class MeusDadosViewController: UIViewController {
     }
     
     @IBAction func sairConta(_ sender: UIButton) {
+        LoginManager().logOut()
     }
     
 }

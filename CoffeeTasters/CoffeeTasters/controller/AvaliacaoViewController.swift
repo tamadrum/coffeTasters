@@ -42,4 +42,6 @@ class AvaliacaoViewController: UIViewController {
     @IBOutlet weak var comentariosTextView: UITextView!
     @IBOutlet weak var rating: RatingView!
     @IBOutlet weak var cafeBlendSegmentControl: UISegmentedControl!
+    
+    
 }
