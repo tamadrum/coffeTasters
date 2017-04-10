@@ -12,6 +12,7 @@ import UIKit
 class Usuario: NSObject, NSCoding {
     
     var nome: String
+    var sobrenome:String
     var email: String
     var senha: String
     var perfilImg: String
@@ -24,6 +25,7 @@ class Usuario: NSObject, NSCoding {
     
     func encode(with aCoder: NSCoder) {
         aCoder.encode(nome, forKey:"nome")
+        aCoder.encode(sobrenome, forKey:"sobrenome")
         aCoder.encode(email, forKey:"email")
         aCoder.encode(senha, forKey:"senha")
         aCoder.encode(perfilImg, forKey:"perfilImg")
@@ -37,6 +39,7 @@ class Usuario: NSObject, NSCoding {
     
     required init?(coder aDecoder: NSCoder) {
         nome = aDecoder.decodeObject(forKey:"nome") as! String
+        sobrenome = aDecoder.decodeObject(forKey:"sobrenome") as! String
         email = aDecoder.decodeObject(forKey:"email") as! String
         senha = aDecoder.decodeObject(forKey:"senha") as! String
         perfilImg = aDecoder.decodeObject(forKey:"perfilImg") as! String
@@ -50,6 +53,7 @@ class Usuario: NSObject, NSCoding {
     
     override init () {
         nome = ""
+        sobrenome = ""
         email = ""
         senha = ""
         perfilImg = ""
@@ -70,6 +74,7 @@ class Usuario: NSObject, NSCoding {
             let usuario = loaded as! Usuario
             
             self.nome = usuario.nome
+            self.sobrenome = usuario.sobrenome
             self.email = usuario.email
             self.senha = usuario.senha
             self.perfilImg = usuario.perfilImg

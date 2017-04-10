@@ -25,6 +25,8 @@ class SplashViewController: UIViewController {
         })
         
         Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
+        
+        Dao<Cafe>().inserirDadosIniciais()
     }
     
     func timeToMoveOn() {
