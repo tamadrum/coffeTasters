@@ -26,6 +26,8 @@ class LoginViewController: UIViewController, LoginButtonDelegate, UIWebViewDeleg
         
         usuario.load()
         
+        emailTextField.text = usuario.email
+        
         let loginButton = LoginButton(readPermissions: [ .publicProfile, .userFriends, .email ])
         var position = view.center
         position.y += 200
@@ -33,11 +35,9 @@ class LoginViewController: UIViewController, LoginButtonDelegate, UIWebViewDeleg
         loginButton.delegate = self
         view.addSubview(loginButton)
         
-        if let accessToken = AccessToken.current {
-            print("Vc já estava logado e seu id eh \(accessToken)")
+        if (AccessToken.current != nil) {
             fetchProfile()
         }
-        
         
     }
     
@@ -109,15 +109,26 @@ class LoginViewController: UIViewController, LoginButtonDelegate, UIWebViewDeleg
     func fetchProfile() {
         let parameters = ["fields": "email, first_name, last_name, picture.type(large)"]
         GraphRequest(graphPath: "/me", parameters: parameters).start({(request, result) in
-            print(result)
             
-            
-            
-            //            if let email = result["email"] as? String {
-            //
-            //            }
-            
-            
+            switch result {
+            case .success(let response):
+                if let responseDictionary = response.dictionaryValue {
+                    var l = responseDictionary["picture"] as! [String: Any]
+                    var m = l["data"] as! [String: Any]
+                    
+                    self.usuario.nome = "\(responseDictionary["first_name"]!) \(responseDictionary["last_name"]!)"
+                    self.usuario.email = responseDictionary["email"]! as! String
+                    self.usuario.perfilImg = m["url"]! as! String
+                    
+                    self.usuario.save()
+                    
+                    self.performSegue(withIdentifier: "segueEntrar", sender: nil)
+                }
+                break
+            case .failed(let error):
+                print("\(error.localizedDescription)")
+                break
+            }
         })
     }
     

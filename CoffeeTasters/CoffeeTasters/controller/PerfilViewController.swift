@@ -13,14 +13,19 @@ import AlamofireImage
 class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var imagemUsuario: UIImageView!
-    
-    
     var searchActive : Bool = false
     var data:[Cafe] = []
     var filtered:[Cafe] = []
     
     let usuario = Usuario()
+    
+    @IBOutlet weak var qtdAvaliacoes: UILabel!
+    @IBOutlet weak var qtdCafes: UILabel!
+    @IBOutlet weak var qtdCafeterias: UILabel!
+    @IBOutlet weak var nomeUsuario: UILabel!
+    @IBOutlet weak var sobrenomeUsuario: UILabel!
+    @IBOutlet weak var emailUsuario: UILabel!
+    @IBOutlet weak var imagemUsuario: UIImageView!
     
     @IBAction func irParaAvaliacoes(_ sender: UIButton) {
         if tabBarController != nil {
@@ -32,10 +37,18 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         usuario.load()
-        print("Perfil : \(usuario.perfilImg)")
-        imagemUsuario.af_setImage(withURL: URL(string: usuario.perfilImg)!)
         
-        data = CafeDao().listar()
+        //imagemUsuario.af_setImage(withURL: URL(string: usuario.perfilImg)!)
+        imagemUsuario.af_setImage(withURL: URL(string: "https://scontent.xx.fbcdn.net/v/t1.0-1/s200x200/260309_109093429183855_4105400_n.jpg?oh=431b0154e83c77097560bba9fa6f29d8&oe=5958F8AE")!)
+        nomeUsuario.text = usuario.nome
+        sobrenomeUsuario.text = usuario.nome
+        emailUsuario.text = usuario.email
+        
+        qtdCafeterias.text = "\(AvaliacaoDao().getListaCafeterias().count)"
+        qtdAvaliacoes.text = "\(AvaliacaoDao().count())"
+        
+        data = Dao<Cafe>().list()
+        qtdCafes.text = "\(data.count)"
         
         data.sort(by: {(cafe1, cafe2) -> Bool in
             return cafe1.nome!<cafe2.nome!

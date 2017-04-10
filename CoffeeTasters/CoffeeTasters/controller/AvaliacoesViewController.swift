@@ -11,6 +11,9 @@ import UIKit
 
 class AvaliacoesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet var tableView:UITableView?
+    var avaliacoes:[Avaliacao] = []
+    
     // MARK: Ciclo de vida
     
     override func viewDidLoad() {
@@ -20,7 +23,7 @@ class AvaliacoesViewController: UIViewController, UITableViewDelegate, UITableVi
     // MARK: Coisas de tabela
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return avaliacoes.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -28,9 +31,19 @@ class AvaliacoesViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "celula")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "celula") as! AvaliacaoCustomCell
         
-        return cell!
+        cell.nav = self.navigationController
+        
+        cell.imagem = (avaliacoes[indexPath.row].cafe?.imagem as! UIImage)
+        cell.comentario.text = avaliacoes[indexPath.row].obs
+        cell.flavor.flavorUsuario = avaliacoes[indexPath.row].flavor
+        cell.modoPrepado.text = avaliacoes[indexPath.row].metodoPreparo
+        cell.nomeCafe.text = avaliacoes[indexPath.row].cafe?.nome
+        cell.rating.rating = Float(avaliacoes[indexPath.row].gostou)
+        cell.safra.text = avaliacoes[indexPath.row].data
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

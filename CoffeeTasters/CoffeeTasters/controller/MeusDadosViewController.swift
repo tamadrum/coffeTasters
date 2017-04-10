@@ -58,7 +58,23 @@ class MeusDadosViewController: UIViewController {
     }
     
     @IBAction func sairConta(_ sender: UIButton) {
-        LoginManager().logOut()
+        let alerta = UIAlertController(title: "Logout...", message: "Deseja efetuar o logout?", preferredStyle: .alert)
+        alerta.addAction(UIAlertAction(title: "Sair", style: .default) {
+            (UIAlertAction) in
+        
+            LoginManager().logOut()
+            
+            exit(0)
+            
+        })
+        alerta.addAction(UIAlertAction(title: "Cancelar", style: .cancel) {
+            (UIAlertAction) in
+            
+        })
+            
+        if let nav = navigationController {
+            nav.present(alerta, animated: true, completion: nil)
+        }
     }
     
 }

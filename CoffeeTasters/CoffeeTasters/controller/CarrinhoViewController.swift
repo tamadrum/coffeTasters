@@ -44,14 +44,14 @@ class CarrinhoViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCellEditingStyle.delete {
             
-//            var items = (carrinho?.items?.allObjects as! [Item])
-//            carrinho?.removeFromItems(items[indexPath.row])
-//            CarrinhoDao().delete(items[indexPath.row])
-//            CarrinhoDao().save()
+            var itens = (carrinho?.itens?.allObjects as! [Item])
+            carrinho?.removeFromItens(itens[indexPath.row])
+            CarrinhoDao().delete(itens[indexPath.row])
+            CarrinhoDao().save()
             
-//            recarrega()
+            recarrega()
             
-//            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
         }
     }
     

@@ -11,16 +11,19 @@ import UIKit
 
 class CafeteriaListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var cafeterias:[String] = []
+    
     // MARK: Ciclo de vida
     
     override func viewDidLoad() {
-        
+        let dao = AvaliacaoDao()
+        cafeterias = dao.getListaCafeterias()
     }
     
     // MARK: Coisas de tabela
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return cafeterias.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -28,9 +31,12 @@ class CafeteriaListViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "celula")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "celula") as! CafeteriaCustomCell
         
-        return cell!
+        cell.imagemLogo.image = #imageLiteral(resourceName: "cafe")
+        cell.nome.text = cafeterias[indexPath.row]
+        
+        return cell
     }
     
     

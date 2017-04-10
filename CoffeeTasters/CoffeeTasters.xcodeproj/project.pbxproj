@@ -27,7 +27,6 @@
 		1690A1D11E8F2AE50039BDC1 /* Dao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690A1D01E8F2AE50039BDC1 /* Dao.swift */; };
 		1690A1D31E8F2D5B0039BDC1 /* DetalhesCafeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690A1D21E8F2D5B0039BDC1 /* DetalhesCafeController.swift */; };
 		1690A1D71E8FE9EC0039BDC1 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690A1D61E8FE9EC0039BDC1 /* RatingView.swift */; };
-		16E67A2D1E911A25005EE82E /* CafeDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A2C1E911A25005EE82E /* CafeDao.swift */; };
 		16E67A2F1E911A34005EE82E /* CarrinhoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A2E1E911A34005EE82E /* CarrinhoDao.swift */; };
 		16E67A331E911B42005EE82E /* String+isCPF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A301E911B42005EE82E /* String+isCPF.swift */; };
 		16E67A341E911B42005EE82E /* String+isRG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A311E911B42005EE82E /* String+isRG.swift */; };
@@ -35,8 +34,6 @@
 		16E67A371E911B7B005EE82E /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A361E911B7B005EE82E /* QRCodeViewController.swift */; };
 		16E67A3D1E912D44005EE82E /* EULA.txt in Resources */ = {isa = PBXBuildFile; fileRef = 16E67A3C1E912D44005EE82E /* EULA.txt */; };
 		16E67A3F1E912E22005EE82E /* PreparoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A3E1E912E22005EE82E /* PreparoDao.swift */; };
-		16E67A411E912E71005EE82E /* PedidoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A401E912E71005EE82E /* PedidoDao.swift */; };
-		16E67A431E912EDC005EE82E /* OfertaDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A421E912EDC005EE82E /* OfertaDao.swift */; };
 		16E67A4E1E912F92005EE82E /* ComprarAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A4B1E912F92005EE82E /* ComprarAlertViewController.swift */; };
 		16E67A4F1E912F92005EE82E /* CreditCardUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A4C1E912F92005EE82E /* CreditCardUtil.swift */; };
 		16E67A501E912F92005EE82E /* SyncUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A4D1E912F92005EE82E /* SyncUtil.swift */; };
@@ -59,6 +56,10 @@
 		16EBC6181E8D095600A87B2F /* BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EBC6171E8D095600A87B2F /* BorderButton.swift */; };
 		16EBC61D1E8DC1CE00A87B2F /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16EBC61C1E8DC1CE00A87B2F /* Storyboard.storyboard */; };
 		16EBC61F1E8DCE4500A87B2F /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EBC61E1E8DCE4500A87B2F /* PerfilViewController.swift */; };
+		16F5B2B11E9BA1F800E0D191 /* View2Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F5B2B01E9BA1F800E0D191 /* View2Image.swift */; };
+		16F5B2B31E9BABA600E0D191 /* Anotacoes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 16F5B2B21E9BABA600E0D191 /* Anotacoes.txt */; };
+		16F5B2B51E9BC3F900E0D191 /* AvaliacaoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F5B2B41E9BC3F900E0D191 /* AvaliacaoDao.swift */; };
+		16F5B2B71E9BF4A500E0D191 /* Notificacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F5B2B61E9BF4A500E0D191 /* Notificacao.swift */; };
 		3DF85D4743E04601298C5E5A /* Pods_CoffeeTastersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81EAE3088C0DF0DAE48DD2D /* Pods_CoffeeTastersTests.framework */; };
 		6A4C5791A0102BEB6F8AD023 /* Pods_CoffeeTasters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDF74E399BC5587736D962D /* Pods_CoffeeTasters.framework */; };
 /* End PBXBuildFile section */
@@ -94,7 +95,6 @@
 		1690A1D01E8F2AE50039BDC1 /* Dao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dao.swift; path = dao/Dao.swift; sourceTree = "<group>"; };
 		1690A1D21E8F2D5B0039BDC1 /* DetalhesCafeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetalhesCafeController.swift; path = controller/DetalhesCafeController.swift; sourceTree = "<group>"; };
 		1690A1D61E8FE9EC0039BDC1 /* RatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RatingView.swift; path = custom/RatingView.swift; sourceTree = "<group>"; };
-		16E67A2C1E911A25005EE82E /* CafeDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CafeDao.swift; path = dao/CafeDao.swift; sourceTree = "<group>"; };
 		16E67A2E1E911A34005EE82E /* CarrinhoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarrinhoDao.swift; path = dao/CarrinhoDao.swift; sourceTree = "<group>"; };
 		16E67A301E911B42005EE82E /* String+isCPF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+isCPF.swift"; path = "extensions/String+isCPF.swift"; sourceTree = "<group>"; };
 		16E67A311E911B42005EE82E /* String+isRG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+isRG.swift"; path = "extensions/String+isRG.swift"; sourceTree = "<group>"; };
@@ -103,8 +103,6 @@
 		16E67A391E912B8F005EE82E /* CoffeeTasters-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoffeeTasters-Bridging-Header.h"; sourceTree = "<group>"; };
 		16E67A3C1E912D44005EE82E /* EULA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EULA.txt; sourceTree = "<group>"; };
 		16E67A3E1E912E22005EE82E /* PreparoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreparoDao.swift; path = dao/PreparoDao.swift; sourceTree = "<group>"; };
-		16E67A401E912E71005EE82E /* PedidoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PedidoDao.swift; path = dao/PedidoDao.swift; sourceTree = "<group>"; };
-		16E67A421E912EDC005EE82E /* OfertaDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OfertaDao.swift; path = dao/OfertaDao.swift; sourceTree = "<group>"; };
 		16E67A4B1E912F92005EE82E /* ComprarAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ComprarAlertViewController.swift; path = util/ComprarAlertViewController.swift; sourceTree = "<group>"; };
 		16E67A4C1E912F92005EE82E /* CreditCardUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreditCardUtil.swift; path = util/CreditCardUtil.swift; sourceTree = "<group>"; };
 		16E67A4D1E912F92005EE82E /* SyncUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SyncUtil.swift; path = util/SyncUtil.swift; sourceTree = "<group>"; };
@@ -131,6 +129,10 @@
 		16EBC6171E8D095600A87B2F /* BorderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BorderButton.swift; path = custom/BorderButton.swift; sourceTree = "<group>"; };
 		16EBC61C1E8DC1CE00A87B2F /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		16EBC61E1E8DCE4500A87B2F /* PerfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PerfilViewController.swift; path = controller/PerfilViewController.swift; sourceTree = "<group>"; };
+		16F5B2B01E9BA1F800E0D191 /* View2Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = View2Image.swift; path = extensions/View2Image.swift; sourceTree = "<group>"; };
+		16F5B2B21E9BABA600E0D191 /* Anotacoes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Anotacoes.txt; sourceTree = "<group>"; };
+		16F5B2B41E9BC3F900E0D191 /* AvaliacaoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AvaliacaoDao.swift; path = dao/AvaliacaoDao.swift; sourceTree = "<group>"; };
+		16F5B2B61E9BF4A500E0D191 /* Notificacao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Notificacao.swift; path = modelo/Notificacao.swift; sourceTree = "<group>"; };
 		21A0E0F3977AACBA390F9707 /* Pods-CoffeeTasters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeTasters.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeTasters/Pods-CoffeeTasters.release.xcconfig"; sourceTree = "<group>"; };
 		8CAEFF01AD10F0C0CA53EA4A /* Pods-CoffeeTasters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeTasters.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeTasters/Pods-CoffeeTasters.debug.xcconfig"; sourceTree = "<group>"; };
 		9CDF74E399BC5587736D962D /* Pods_CoffeeTasters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeTasters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				1690A1C71E8F17980039BDC1 /* Usuario.swift */,
+				16F5B2B61E9BF4A500E0D191 /* Notificacao.swift */,
 			);
 			name = modelo;
 			sourceTree = "<group>";
@@ -171,11 +174,9 @@
 			isa = PBXGroup;
 			children = (
 				1690A1D01E8F2AE50039BDC1 /* Dao.swift */,
-				16E67A2C1E911A25005EE82E /* CafeDao.swift */,
 				16E67A2E1E911A34005EE82E /* CarrinhoDao.swift */,
 				16E67A3E1E912E22005EE82E /* PreparoDao.swift */,
-				16E67A401E912E71005EE82E /* PedidoDao.swift */,
-				16E67A421E912EDC005EE82E /* OfertaDao.swift */,
+				16F5B2B41E9BC3F900E0D191 /* AvaliacaoDao.swift */,
 			);
 			name = dao;
 			sourceTree = "<group>";
@@ -222,7 +223,6 @@
 			isa = PBXGroup;
 			children = (
 				16E67A441E912F25005EE82E /* util */,
-				16E67A3C1E912D44005EE82E /* EULA.txt */,
 				1690A1D41E8FE9940039BDC1 /* bridge */,
 				1690A1C91E8F1A980039BDC1 /* dao */,
 				1690A1C61E8F177E0039BDC1 /* modelo */,
@@ -235,6 +235,8 @@
 				16EBC5F51E8C66CB00A87B2F /* Info.plist */,
 				16EBC5ED1E8C66CB00A87B2F /* CoffeeTasters.xcdatamodeld */,
 				16EBC61C1E8DC1CE00A87B2F /* Storyboard.storyboard */,
+				16E67A3C1E912D44005EE82E /* EULA.txt */,
+				16F5B2B21E9BABA600E0D191 /* Anotacoes.txt */,
 			);
 			path = CoffeeTasters;
 			sourceTree = "<group>";
@@ -300,6 +302,7 @@
 				16E67A301E911B42005EE82E /* String+isCPF.swift */,
 				16E67A311E911B42005EE82E /* String+isRG.swift */,
 				16E67A321E911B42005EE82E /* String+toMD5.swift */,
+				16F5B2B01E9BA1F800E0D191 /* View2Image.swift */,
 			);
 			name = extensions;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16EBC5F41E8C66CB00A87B2F /* LaunchScreen.storyboard in Resources */,
+				16F5B2B31E9BABA600E0D191 /* Anotacoes.txt in Resources */,
 				16E67A3D1E912D44005EE82E /* EULA.txt in Resources */,
 				16EBC61D1E8DC1CE00A87B2F /* Storyboard.storyboard in Resources */,
 				16EBC60C1E8C67AD00A87B2F /* Assets.xcassets in Resources */,
@@ -537,10 +541,11 @@
 				16EBC5EF1E8C66CB00A87B2F /* CoffeeTasters.xcdatamodeld in Sources */,
 				1690A1D31E8F2D5B0039BDC1 /* DetalhesCafeController.swift in Sources */,
 				1614EE3E1E8E5EF800C44F11 /* PreparoViewController.swift in Sources */,
+				16F5B2B51E9BC3F900E0D191 /* AvaliacaoDao.swift in Sources */,
 				16E67A4E1E912F92005EE82E /* ComprarAlertViewController.swift in Sources */,
-				16E67A2D1E911A25005EE82E /* CafeDao.swift in Sources */,
 				16E67A501E912F92005EE82E /* SyncUtil.swift in Sources */,
 				1690A1D71E8FE9EC0039BDC1 /* RatingView.swift in Sources */,
+				16F5B2B11E9BA1F800E0D191 /* View2Image.swift in Sources */,
 				16E67A581E913122005EE82E /* PedidoCustomCell.swift in Sources */,
 				16E67A4F1E912F92005EE82E /* CreditCardUtil.swift in Sources */,
 				1614EE2E1E8E5E1C00C44F11 /* CadastroViewController.swift in Sources */,
@@ -554,14 +559,13 @@
 				16E67A2F1E911A34005EE82E /* CarrinhoDao.swift in Sources */,
 				16EBC6181E8D095600A87B2F /* BorderButton.swift in Sources */,
 				1614EE461E8E5F8400C44F11 /* FinalizarCompraViewController.swift in Sources */,
-				16E67A431E912EDC005EE82E /* OfertaDao.swift in Sources */,
 				1607E16C1E908790008DF3C9 /* ImageSlider.swift in Sources */,
 				16E67A341E911B42005EE82E /* String+isRG.swift in Sources */,
 				1614EE381E8E5EA500C44F11 /* CafeListViewControler.swift in Sources */,
-				16E67A411E912E71005EE82E /* PedidoDao.swift in Sources */,
 				1614EE341E8E5E6C00C44F11 /* PedidosViewController.swift in Sources */,
 				1614EE321E8E5E5A00C44F11 /* OfertasViewController.swift in Sources */,
 				16E67A521E9130E2005EE82E /* OfertaCustomCell.swift in Sources */,
+				16F5B2B71E9BF4A500E0D191 /* Notificacao.swift in Sources */,
 				16E67A371E911B7B005EE82E /* QRCodeViewController.swift in Sources */,
 				16E67A5A1E913141005EE82E /* AvaliacaoCustomCell.swift in Sources */,
 				16E67A351E911B42005EE82E /* String+toMD5.swift in Sources */,
