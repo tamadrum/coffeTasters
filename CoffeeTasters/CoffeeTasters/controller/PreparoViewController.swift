@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
 class PreparoViewController: UIViewController {
     
@@ -20,12 +21,13 @@ class PreparoViewController: UIViewController {
     
     var preparos = PreparoDao().getPreparo()
     var indice = 0
+    var timer = Timer()
+    var segundos: Int!
     
     override func viewDidLoad() {
         menuModos.removeAllSegments()
         
         for i in 0..<preparos.count {
-            print("Adicionei \(i)" )
             let nomeImagem = preparos[i].imagem as! UIImage?
             menuModos.insertSegment(with: nomeImagem, at: i, animated: true)
         }
@@ -38,17 +40,18 @@ class PreparoViewController: UIViewController {
     }
     
     @IBAction func tipoPreparo(_ sender: UISegmentedControl) {
+        indice = 0
         atualizaPasso()
     }
     
     func atualizaPasso() {
         let preparo = preparos[menuModos.selectedSegmentIndex]
-        let passos = preparo.passo as! [Passo]
+        let passos = preparo.passo?.allObjects as! [Passo]
         
         var images:[UIImage] = []
-        //for s in passos[indice].imagens! {
-        //    images.append(s as! UIImage)
-        //}
+        for s in passos[indice].imagens! {
+            images.append(s as! UIImage)
+        }
         
         var animatedImage: UIImage!
         animatedImage = UIImage.animatedImage(with: images, duration: 0.5)
@@ -56,16 +59,34 @@ class PreparoViewController: UIViewController {
         
         descricaoPreparo.text = passos[indice].descricao
         nomePreparoLabel.text = preparo.nome
-        viewTemporizador.isHidden = true
+        if ( passos[indice].tempo > 0 ) {
+            viewTemporizador.isHidden = false
+            segundos = Int(passos[indice].tempo)
+            tempo.text = timeString(segundos)
+        } else {
+            viewTemporizador.isHidden = true
+        }
 
     }
     
     @IBAction func startTemporizador(_ sender: UIButton) {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
+        
+    }
     
+    func updateTimer () {
+        if ( segundos > 0 ) {
+            segundos = segundos - 1
+        } else {
+            let systemSoundID: SystemSoundID = 1025
+            AudioServicesPlaySystemSound (systemSoundID)
+            timer.invalidate()
+        }
+        tempo.text = timeString(segundos)
     }
     
     @IBAction func stopTemporizador(_ sender: UIButton) {
-    
+        timer.invalidate()
     }
     
     @IBAction func proximo(_ sender: UIButton) {
@@ -73,6 +94,7 @@ class PreparoViewController: UIViewController {
         if indice >= (preparos[menuModos.selectedSegmentIndex].passo?.count)! {
             indice = 0
         }
+        timer.invalidate()
         atualizaPasso()
     }
     
@@ -81,7 +103,14 @@ class PreparoViewController: UIViewController {
         if indice < 0 {
             indice = (preparos[menuModos.selectedSegmentIndex].passo?.count)! - 1
         }
+        timer.invalidate()
         atualizaPasso()
+    }
+    
+    func timeString(_ tempo:Int)  -> String {
+        let minutes = tempo / 60
+        let seconds = tempo % 60
+        return String(format:"%02i:%02i", minutes, seconds)
     }
 
 }
