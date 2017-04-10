@@ -28,9 +28,11 @@ class AvaliacoesViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "celula")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "celula") as! AvaliacaoCustomCell
         
-        return cell!
+        cell.nav = self.navigationController
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

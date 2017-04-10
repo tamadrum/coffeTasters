@@ -59,6 +59,8 @@
 		16EBC6181E8D095600A87B2F /* BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EBC6171E8D095600A87B2F /* BorderButton.swift */; };
 		16EBC61D1E8DC1CE00A87B2F /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16EBC61C1E8DC1CE00A87B2F /* Storyboard.storyboard */; };
 		16EBC61F1E8DCE4500A87B2F /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EBC61E1E8DCE4500A87B2F /* PerfilViewController.swift */; };
+		16F5B2B11E9BA1F800E0D191 /* View2Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F5B2B01E9BA1F800E0D191 /* View2Image.swift */; };
+		16F5B2B31E9BABA600E0D191 /* Anotacoes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 16F5B2B21E9BABA600E0D191 /* Anotacoes.txt */; };
 		3DF85D4743E04601298C5E5A /* Pods_CoffeeTastersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81EAE3088C0DF0DAE48DD2D /* Pods_CoffeeTastersTests.framework */; };
 		6A4C5791A0102BEB6F8AD023 /* Pods_CoffeeTasters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDF74E399BC5587736D962D /* Pods_CoffeeTasters.framework */; };
 /* End PBXBuildFile section */
@@ -131,6 +133,8 @@
 		16EBC6171E8D095600A87B2F /* BorderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BorderButton.swift; path = custom/BorderButton.swift; sourceTree = "<group>"; };
 		16EBC61C1E8DC1CE00A87B2F /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		16EBC61E1E8DCE4500A87B2F /* PerfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PerfilViewController.swift; path = controller/PerfilViewController.swift; sourceTree = "<group>"; };
+		16F5B2B01E9BA1F800E0D191 /* View2Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = View2Image.swift; path = extensions/View2Image.swift; sourceTree = "<group>"; };
+		16F5B2B21E9BABA600E0D191 /* Anotacoes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Anotacoes.txt; sourceTree = "<group>"; };
 		21A0E0F3977AACBA390F9707 /* Pods-CoffeeTasters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeTasters.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeTasters/Pods-CoffeeTasters.release.xcconfig"; sourceTree = "<group>"; };
 		8CAEFF01AD10F0C0CA53EA4A /* Pods-CoffeeTasters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeTasters.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeTasters/Pods-CoffeeTasters.debug.xcconfig"; sourceTree = "<group>"; };
 		9CDF74E399BC5587736D962D /* Pods_CoffeeTasters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeTasters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -235,6 +239,7 @@
 				16EBC5F51E8C66CB00A87B2F /* Info.plist */,
 				16EBC5ED1E8C66CB00A87B2F /* CoffeeTasters.xcdatamodeld */,
 				16EBC61C1E8DC1CE00A87B2F /* Storyboard.storyboard */,
+				16F5B2B21E9BABA600E0D191 /* Anotacoes.txt */,
 			);
 			path = CoffeeTasters;
 			sourceTree = "<group>";
@@ -300,6 +305,7 @@
 				16E67A301E911B42005EE82E /* String+isCPF.swift */,
 				16E67A311E911B42005EE82E /* String+isRG.swift */,
 				16E67A321E911B42005EE82E /* String+toMD5.swift */,
+				16F5B2B01E9BA1F800E0D191 /* View2Image.swift */,
 			);
 			name = extensions;
 			sourceTree = "<group>";
@@ -417,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16EBC5F41E8C66CB00A87B2F /* LaunchScreen.storyboard in Resources */,
+				16F5B2B31E9BABA600E0D191 /* Anotacoes.txt in Resources */,
 				16E67A3D1E912D44005EE82E /* EULA.txt in Resources */,
 				16EBC61D1E8DC1CE00A87B2F /* Storyboard.storyboard in Resources */,
 				16EBC60C1E8C67AD00A87B2F /* Assets.xcassets in Resources */,
@@ -541,6 +548,7 @@
 				16E67A2D1E911A25005EE82E /* CafeDao.swift in Sources */,
 				16E67A501E912F92005EE82E /* SyncUtil.swift in Sources */,
 				1690A1D71E8FE9EC0039BDC1 /* RatingView.swift in Sources */,
+				16F5B2B11E9BA1F800E0D191 /* View2Image.swift in Sources */,
 				16E67A581E913122005EE82E /* PedidoCustomCell.swift in Sources */,
 				16E67A4F1E912F92005EE82E /* CreditCardUtil.swift in Sources */,
 				1614EE2E1E8E5E1C00C44F11 /* CadastroViewController.swift in Sources */,

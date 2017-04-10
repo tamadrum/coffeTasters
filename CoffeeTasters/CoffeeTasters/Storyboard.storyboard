@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4xS-dw-w2H">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4xS-dw-w2H">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -37,7 +37,7 @@
                                 </connections>
                             </segmentedControl>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r4z-wc-EIV">
-                                <rect key="frame" x="16" y="136" width="288" height="192"/>
+                                <rect key="frame" x="16" y="177" width="288" height="151"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="c8e-nD-4ot">
@@ -116,6 +116,13 @@
                                     <action selector="anterior:" destination="yp4-g8-qAH" eventType="touchUpInside" id="hxK-8r-81g"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4b5-h0-qUX">
+                                <rect key="frame" x="16" y="148" width="288" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -124,6 +131,7 @@
                         <outlet property="descricaoPreparo" destination="c8e-nD-4ot" id="7tE-om-KBr"/>
                         <outlet property="imagemPreparo" destination="r4z-wc-EIV" id="d1N-oh-cC8"/>
                         <outlet property="menuModos" destination="kMW-zG-Pcw" id="ktu-mp-S09"/>
+                        <outlet property="nomePreparoLabel" destination="4b5-h0-qUX" id="iBc-MD-lED"/>
                         <outlet property="tempo" destination="kvj-sL-J3R" id="Cxq-uM-36h"/>
                         <outlet property="viewTemporizador" destination="ELS-Dv-Fdw" id="LU4-Q5-CwC"/>
                     </connections>

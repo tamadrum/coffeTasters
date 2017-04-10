@@ -16,6 +16,7 @@ class PreparoViewController: UIViewController {
     @IBOutlet weak var tempo: UILabel!
     @IBOutlet weak var viewTemporizador: UIView!
     @IBOutlet weak var menuModos: UISegmentedControl!
+    @IBOutlet weak var nomePreparoLabel: UILabel!
     
     var preparos = PreparoDao().getPreparo()
     var indice = 0
@@ -42,7 +43,7 @@ class PreparoViewController: UIViewController {
     
     func atualizaPasso() {
         let preparo = preparos[menuModos.selectedSegmentIndex]
-        //let passos = preparo.passo as! [Passo]
+        let passos = preparo.passo as! [Passo]
         
         var images:[UIImage] = []
         //for s in passos[indice].imagens! {
@@ -53,8 +54,9 @@ class PreparoViewController: UIViewController {
         animatedImage = UIImage.animatedImage(with: images, duration: 0.5)
         imagemPreparo.image = animatedImage
         
-        //descricaoPreparo.text = passos[indice].descricao
-        title = preparo.nome
+        descricaoPreparo.text = passos[indice].descricao
+        nomePreparoLabel.text = preparo.nome
+        viewTemporizador.isHidden = true
 
     }
     
