@@ -69,7 +69,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MyX-Rr-bcD">
-                                <rect key="frame" x="120" y="407" width="81" height="20"/>
+                                <rect key="frame" x="135" y="407" width="51" height="27"/>
                                 <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="12"/>
                                 <state key="normal" title="ENTRAR">
                                     <color key="titleColor" red="0.2781490683555603" green="0.14739993214607239" blue="0.081067316234111786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -82,7 +82,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYw-DN-Iod">
-                                <rect key="frame" x="120" y="432" width="81" height="27"/>
+                                <rect key="frame" x="125" y="439" width="70" height="27"/>
                                 <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="12"/>
                                 <state key="normal" title="REGISTRAR">
                                     <color key="titleColor" red="0.2781490683555603" green="0.14739993214607239" blue="0.081067316234111786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -94,6 +94,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q0O-PZ-4CK">
                                 <rect key="frame" x="40" y="514" width="240" height="34"/>
                                 <color key="backgroundColor" red="1" green="0.96273018580000003" blue="0.76669806070000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Q0O-PZ-4CK" secondAttribute="height" multiplier="120:17" id="YAE-3r-Gka"/>
+                                </constraints>
                             </view>
                             <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="*******" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="ExF-Cs-p11">
                                 <rect key="frame" x="16" y="284" width="288" height="30"/>
@@ -105,19 +108,14 @@
                         <color key="backgroundColor" red="0.96582156419754028" green="0.96551388502120972" blue="0.86567187309265137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="IKD-Gg-1E0" firstAttribute="leading" secondItem="dRf-EG-NIY" secondAttribute="leading" id="1dD-LF-xaw"/>
-                            <constraint firstItem="Q0O-PZ-4CK" firstAttribute="top" secondItem="nYw-DN-Iod" secondAttribute="bottom" constant="55" id="ADJ-Wb-g7v"/>
                             <constraint firstItem="MyX-Rr-bcD" firstAttribute="top" secondItem="b6H-K7-eEI" secondAttribute="bottom" constant="51" id="Iwk-7t-F4D"/>
                             <constraint firstItem="5rX-Dy-jt2" firstAttribute="top" secondItem="Ym7-kV-xhN" secondAttribute="bottom" constant="27" id="JDZ-O6-YrK"/>
                             <constraint firstItem="nYw-DN-Iod" firstAttribute="top" secondItem="MyX-Rr-bcD" secondAttribute="bottom" constant="5" id="Kbs-lR-aDV"/>
                             <constraint firstItem="fHn-Q5-UtC" firstAttribute="top" secondItem="5rX-Dy-jt2" secondAttribute="bottom" constant="26" id="NCa-iq-U5Q"/>
-                            <constraint firstItem="MyX-Rr-bcD" firstAttribute="leading" secondItem="IKD-Gg-1E0" secondAttribute="trailing" constant="-200" id="PWf-L7-DPq"/>
                             <constraint firstItem="b6H-K7-eEI" firstAttribute="top" secondItem="ExF-Cs-p11" secondAttribute="bottom" constant="8" id="R38-Xg-rv4"/>
                             <constraint firstItem="b6H-K7-eEI" firstAttribute="leading" secondItem="dRf-EG-NIY" secondAttribute="leadingMargin" id="S64-t7-ceS"/>
-                            <constraint firstItem="Q0O-PZ-4CK" firstAttribute="top" secondItem="dRf-EG-NIY" secondAttribute="top" constant="514" id="SWr-eA-cke"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Q0O-PZ-4CK" secondAttribute="trailing" constant="24" id="SuC-4k-VZp"/>
-                            <constraint firstItem="Q0O-PZ-4CK" firstAttribute="top" secondItem="nYw-DN-Iod" secondAttribute="bottom" constant="55" id="Ufk-jJ-3cP"/>
                             <constraint firstItem="In2-eS-I4D" firstAttribute="top" secondItem="fHn-Q5-UtC" secondAttribute="bottom" constant="2" id="Uhe-9q-RXC"/>
-                            <constraint firstItem="nYw-DN-Iod" firstAttribute="leading" secondItem="IKD-Gg-1E0" secondAttribute="trailing" constant="-200" id="VgB-Kn-7YW"/>
+                            <constraint firstItem="Q0O-PZ-4CK" firstAttribute="centerX" secondItem="dRf-EG-NIY" secondAttribute="centerX" id="WxY-IB-3ub"/>
                             <constraint firstItem="Q0O-PZ-4CK" firstAttribute="centerX" secondItem="nYw-DN-Iod" secondAttribute="centerX" id="XAx-R2-vls"/>
                             <constraint firstItem="Q0O-PZ-4CK" firstAttribute="centerX" secondItem="MyX-Rr-bcD" secondAttribute="centerX" id="Xdf-PR-pQ5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5rX-Dy-jt2" secondAttribute="trailing" constant="24" id="YpO-qb-B0S"/>
@@ -127,7 +125,6 @@
                             <constraint firstItem="88U-Vo-s0h" firstAttribute="top" secondItem="IKD-Gg-1E0" secondAttribute="bottom" id="dYS-ZH-rWi"/>
                             <constraint firstItem="ExF-Cs-p11" firstAttribute="trailing" secondItem="dRf-EG-NIY" secondAttribute="trailingMargin" id="f2G-yI-WmX"/>
                             <constraint firstItem="tfh-zq-hV0" firstAttribute="top" secondItem="In2-eS-I4D" secondAttribute="bottom" constant="5" id="hjT-Vq-gOx"/>
-                            <constraint firstItem="Q0O-PZ-4CK" firstAttribute="leading" secondItem="dRf-EG-NIY" secondAttribute="leadingMargin" constant="24" id="hwy-9u-tSa"/>
                             <constraint firstItem="fHn-Q5-UtC" firstAttribute="leading" secondItem="dRf-EG-NIY" secondAttribute="leadingMargin" id="iBV-8h-ibQ"/>
                             <constraint firstItem="In2-eS-I4D" firstAttribute="trailing" secondItem="dRf-EG-NIY" secondAttribute="trailingMargin" id="kGM-37-xIj"/>
                             <constraint firstItem="In2-eS-I4D" firstAttribute="leading" secondItem="dRf-EG-NIY" secondAttribute="leadingMargin" id="kUb-3q-yNq"/>
@@ -138,6 +135,8 @@
                             <constraint firstAttribute="bottom" secondItem="Q0O-PZ-4CK" secondAttribute="bottom" constant="20" symbolic="YES" id="pcR-RA-dEw"/>
                             <constraint firstItem="tfh-zq-hV0" firstAttribute="leading" secondItem="dRf-EG-NIY" secondAttribute="leadingMargin" id="qnM-fR-ado"/>
                             <constraint firstItem="5rX-Dy-jt2" firstAttribute="leading" secondItem="dRf-EG-NIY" secondAttribute="leadingMargin" constant="24" id="wKw-Nn-Ny9"/>
+                            <constraint firstItem="MyX-Rr-bcD" firstAttribute="centerX" secondItem="dRf-EG-NIY" secondAttribute="centerX" id="ylA-Dm-MDN"/>
+                            <constraint firstItem="Q0O-PZ-4CK" firstAttribute="leading" secondItem="5rX-Dy-jt2" secondAttribute="leading" id="zrJ-iF-owG"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -190,9 +189,6 @@
                                 <state key="normal" title="VOLTAR">
                                     <color key="titleColor" red="0.2781490683555603" green="0.14739993214607239" blue="0.081067316234111786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="NJV-GV-z0C" kind="show" id="bUe-Ft-8Dt"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZo-Ws-PaR">
                                 <rect key="frame" x="135" y="486" width="49" height="27"/>
@@ -232,7 +228,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.96582156419999998" green="0.96551388500000002" blue="0.86567187310000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="huI-rd-UUl" firstAttribute="top" secondItem="M8x-GN-JP8" secondAttribute="bottom" constant="11" id="17n-3K-YrJ"/>
                             <constraint firstItem="b3a-FS-z45" firstAttribute="top" secondItem="KXr-TU-ghl" secondAttribute="bottom" constant="16" id="3LL-30-XgS"/>
