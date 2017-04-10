@@ -81,5 +81,16 @@ class Dao<T> {
         }
     }
 
+    func count() -> Int {
+        do {
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: banco!)
+            
+            let count = try managedContext.count(for: fetchRequest)
+            return count
+        } catch let error as NSError {
+            print("Error: \(error.localizedDescription)")
+            return 0
+        }
+    }
     
 }

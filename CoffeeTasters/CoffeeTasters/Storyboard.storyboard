@@ -910,7 +910,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Perfil" id="V01-Ku-qdy"/>
                     <connections>
+                        <outlet property="emailUsuario" destination="Qy0-Hc-dz5" id="hoj-En-Uxu"/>
                         <outlet property="imagemUsuario" destination="ClA-UF-JgY" id="SvW-0r-BI3"/>
+                        <outlet property="nomeUsuario" destination="B5i-VH-utc" id="o7G-Dh-gFH"/>
+                        <outlet property="qtdAvaliacoes" destination="pyg-NV-82c" id="kf9-br-3Yx"/>
+                        <outlet property="qtdCafes" destination="gGs-eo-0OU" id="Ww1-x9-kL2"/>
+                        <outlet property="qtdCafeterias" destination="bVs-iP-RPy" id="KH5-UO-dhW"/>
+                        <outlet property="sobrenomeUsuario" destination="xGC-Vn-0aC" id="q6J-WH-DG3"/>
                         <outlet property="tableView" destination="GcZ-pT-Ox7" id="mEw-bi-EE6"/>
                     </connections>
                 </viewController>

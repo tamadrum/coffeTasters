@@ -19,7 +19,3 @@ extension UIImage{
         
     }
 }
-
-//imgVV.image = UIImage.init(view: myView)
-//// Simple image object
-//let img =  UIImage.init(view: myView)

@@ -13,14 +13,19 @@ import AlamofireImage
 class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var imagemUsuario: UIImageView!
-    
-    
     var searchActive : Bool = false
     var data:[Cafe] = []
     var filtered:[Cafe] = []
     
     let usuario = Usuario()
+    
+    @IBOutlet weak var qtdAvaliacoes: UILabel!
+    @IBOutlet weak var qtdCafes: UILabel!
+    @IBOutlet weak var qtdCafeterias: UILabel!
+    @IBOutlet weak var nomeUsuario: UILabel!
+    @IBOutlet weak var sobrenomeUsuario: UILabel!
+    @IBOutlet weak var emailUsuario: UILabel!
+    @IBOutlet weak var imagemUsuario: UIImageView!
     
     @IBAction func irParaAvaliacoes(_ sender: UIButton) {
         if tabBarController != nil {
@@ -34,6 +39,13 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
         usuario.load()
         print("Perfil : \(usuario.perfilImg)")
         imagemUsuario.af_setImage(withURL: URL(string: usuario.perfilImg)!)
+        nomeUsuario.text = usuario.nome
+        sobrenomeUsuario.text = usuario.nome
+        emailUsuario.text = usuario.email
+        
+        qtdCafes.text = "\(Dao<Cafe>().count())"
+        qtdCafeterias.text = "\(AvaliacaoDao().getListaCafeterias().count)"
+        qtdAvaliacoes.text = "\(AvaliacaoDao().count())"
         
         data = CafeDao().listar()
         

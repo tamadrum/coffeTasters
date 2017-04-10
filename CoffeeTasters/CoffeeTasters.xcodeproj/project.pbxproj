@@ -61,6 +61,7 @@
 		16EBC61F1E8DCE4500A87B2F /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EBC61E1E8DCE4500A87B2F /* PerfilViewController.swift */; };
 		16F5B2B11E9BA1F800E0D191 /* View2Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F5B2B01E9BA1F800E0D191 /* View2Image.swift */; };
 		16F5B2B31E9BABA600E0D191 /* Anotacoes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 16F5B2B21E9BABA600E0D191 /* Anotacoes.txt */; };
+		16F5B2B51E9BC3F900E0D191 /* AvaliacaoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F5B2B41E9BC3F900E0D191 /* AvaliacaoDao.swift */; };
 		3DF85D4743E04601298C5E5A /* Pods_CoffeeTastersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81EAE3088C0DF0DAE48DD2D /* Pods_CoffeeTastersTests.framework */; };
 		6A4C5791A0102BEB6F8AD023 /* Pods_CoffeeTasters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDF74E399BC5587736D962D /* Pods_CoffeeTasters.framework */; };
 /* End PBXBuildFile section */
@@ -135,6 +136,7 @@
 		16EBC61E1E8DCE4500A87B2F /* PerfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PerfilViewController.swift; path = controller/PerfilViewController.swift; sourceTree = "<group>"; };
 		16F5B2B01E9BA1F800E0D191 /* View2Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = View2Image.swift; path = extensions/View2Image.swift; sourceTree = "<group>"; };
 		16F5B2B21E9BABA600E0D191 /* Anotacoes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Anotacoes.txt; sourceTree = "<group>"; };
+		16F5B2B41E9BC3F900E0D191 /* AvaliacaoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AvaliacaoDao.swift; path = dao/AvaliacaoDao.swift; sourceTree = "<group>"; };
 		21A0E0F3977AACBA390F9707 /* Pods-CoffeeTasters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeTasters.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeTasters/Pods-CoffeeTasters.release.xcconfig"; sourceTree = "<group>"; };
 		8CAEFF01AD10F0C0CA53EA4A /* Pods-CoffeeTasters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeTasters.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeTasters/Pods-CoffeeTasters.debug.xcconfig"; sourceTree = "<group>"; };
 		9CDF74E399BC5587736D962D /* Pods_CoffeeTasters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeTasters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,6 +182,7 @@
 				16E67A3E1E912E22005EE82E /* PreparoDao.swift */,
 				16E67A401E912E71005EE82E /* PedidoDao.swift */,
 				16E67A421E912EDC005EE82E /* OfertaDao.swift */,
+				16F5B2B41E9BC3F900E0D191 /* AvaliacaoDao.swift */,
 			);
 			name = dao;
 			sourceTree = "<group>";
@@ -226,7 +229,6 @@
 			isa = PBXGroup;
 			children = (
 				16E67A441E912F25005EE82E /* util */,
-				16E67A3C1E912D44005EE82E /* EULA.txt */,
 				1690A1D41E8FE9940039BDC1 /* bridge */,
 				1690A1C91E8F1A980039BDC1 /* dao */,
 				1690A1C61E8F177E0039BDC1 /* modelo */,
@@ -239,6 +241,7 @@
 				16EBC5F51E8C66CB00A87B2F /* Info.plist */,
 				16EBC5ED1E8C66CB00A87B2F /* CoffeeTasters.xcdatamodeld */,
 				16EBC61C1E8DC1CE00A87B2F /* Storyboard.storyboard */,
+				16E67A3C1E912D44005EE82E /* EULA.txt */,
 				16F5B2B21E9BABA600E0D191 /* Anotacoes.txt */,
 			);
 			path = CoffeeTasters;
@@ -544,6 +547,7 @@
 				16EBC5EF1E8C66CB00A87B2F /* CoffeeTasters.xcdatamodeld in Sources */,
 				1690A1D31E8F2D5B0039BDC1 /* DetalhesCafeController.swift in Sources */,
 				1614EE3E1E8E5EF800C44F11 /* PreparoViewController.swift in Sources */,
+				16F5B2B51E9BC3F900E0D191 /* AvaliacaoDao.swift in Sources */,
 				16E67A4E1E912F92005EE82E /* ComprarAlertViewController.swift in Sources */,
 				16E67A2D1E911A25005EE82E /* CafeDao.swift in Sources */,
 				16E67A501E912F92005EE82E /* SyncUtil.swift in Sources */,
