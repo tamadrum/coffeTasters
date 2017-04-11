@@ -94,13 +94,13 @@ class Dao<T> {
     }
     
     func inserirDadosIniciais () {
-        print("**************************")
-        print("inserindo dados iniciais")
-        print("**************************")
         let configuracoes = UserDefaults.standard
         let dadosInseridos = configuracoes.bool(forKey: "dados_inseridos")
         if !dadosInseridos {
             
+            print("**************************")
+            print("inserindo dados iniciais")
+            print("**************************")
             // Inserindo Produtos
                 
                 let prod1:Produto = Dao<Produto>().new()

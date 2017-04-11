@@ -42,4 +42,11 @@ class BorderButton: UIButton {
         }
     }
     
+    @IBInspectable var borderColor: UIColor? {
+        didSet {
+            layer.borderColor = borderColor?.cgColor
+            self.tintColor = borderColor
+        }
+    }
+    
 }
