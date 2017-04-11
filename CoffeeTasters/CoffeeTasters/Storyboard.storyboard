@@ -780,7 +780,7 @@
                                 <rect key="frame" x="245" y="115" width="59" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cafe" translatesAutoresizingMaskIntoConstraints="NO" id="g5A-Sn-KH1">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Grao" translatesAutoresizingMaskIntoConstraints="NO" id="g5A-Sn-KH1">
                                 <rect key="frame" x="160" y="219" width="32" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -823,7 +823,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cafe" translatesAutoresizingMaskIntoConstraints="NO" id="aMo-G1-Zyu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Espresso" translatesAutoresizingMaskIntoConstraints="NO" id="aMo-G1-Zyu">
                                 <rect key="frame" x="160" y="319" width="32" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -842,7 +842,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cafe" translatesAutoresizingMaskIntoConstraints="NO" id="WN9-Zn-90t">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cafeteria" translatesAutoresizingMaskIntoConstraints="NO" id="WN9-Zn-90t">
                                 <rect key="frame" x="160" y="419" width="32" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -2124,7 +2124,7 @@
         <scene sceneID="CCc-pW-qrZ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G6v-WD-Lni" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Carrinho" id="lgp-29-QgH"/>
+                    <tabBarItem key="tabBarItem" title="Carrinho" image="Carrinho" id="lgp-29-QgH"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="AKn-0a-QiF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -2678,27 +2678,31 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Cafeteria" width="101" height="79"/>
+        <image name="Carrinho" width="84" height="78"/>
+        <image name="Espresso" width="79" height="80"/>
+        <image name="Grao" width="76" height="54"/>
         <image name="SplashImg" width="375" height="693"/>
-        <image name="acido" width="48" height="48"/>
-        <image name="amargo" width="48" height="48"/>
+        <image name="acido" width="20" height="20"/>
+        <image name="amargo" width="20" height="20"/>
         <image name="bkgLR" width="390" height="707"/>
         <image name="cafe" width="80" height="80"/>
-        <image name="caramelo" width="48" height="48"/>
-        <image name="cereais" width="48" height="48"/>
-        <image name="chocolate" width="48" height="48"/>
-        <image name="citrico" width="48" height="48"/>
-        <image name="defumado" width="48" height="48"/>
-        <image name="doce" width="48" height="48"/>
-        <image name="encorpado" width="48" height="48"/>
-        <image name="especiarias" width="48" height="48"/>
-        <image name="floral" width="48" height="48"/>
-        <image name="frutasCaroco" width="48" height="48"/>
-        <image name="frutasVermelhas" width="48" height="48"/>
-        <image name="herbal" width="48" height="48"/>
+        <image name="caramelo" width="20" height="20"/>
+        <image name="cereais" width="20" height="20"/>
+        <image name="chocolate" width="20" height="20"/>
+        <image name="citrico" width="20" height="20"/>
+        <image name="defumado" width="20" height="20"/>
+        <image name="doce" width="20" height="20"/>
+        <image name="encorpado" width="20" height="20"/>
+        <image name="especiarias" width="20" height="20"/>
+        <image name="floral" width="20" height="20"/>
+        <image name="frutasCaroco" width="20" height="20"/>
+        <image name="frutasVermelhas" width="20" height="20"/>
+        <image name="herbal" width="20" height="20"/>
         <image name="logo" width="173" height="122"/>
-        <image name="nozes" width="48" height="48"/>
+        <image name="nozes" width="20" height="20"/>
         <image name="person" width="512" height="512"/>
-        <image name="salgado" width="48" height="48"/>
+        <image name="salgado" width="20" height="20"/>
         <image name="starryStars_half" width="35" height="35"/>
         <image name="starryStars_off" width="35" height="35"/>
         <image name="starryStars_on" width="35" height="35"/>
