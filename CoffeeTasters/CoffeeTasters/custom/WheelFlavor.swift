@@ -266,12 +266,12 @@ class WheelFlavor: UIView {
      */
     func desenhaImagem(_ imagem: UIImage, context: CGContext, centro: CGPoint, raio: Int, angulo: Double) -> CGRect {
         var novoCentro = centro
-        novoCentro.y += 20
+        novoCentro.y += 15
         
             if let cgImage = imagem.cgImage {
                 let ponto = getCoordenadas(centro: novoCentro, raio: raio, angulo: angulo)
                 
-                let rect = CGRect(x: ponto.x - CGFloat(cgImage.width/2), y: ponto.y - CGFloat(cgImage.height), width: CGFloat(cgImage.width), height: CGFloat(cgImage.height))
+                let rect = CGRect(x: ponto.x - CGFloat(cgImage.width/6), y: ponto.y - CGFloat(cgImage.height/3), width: CGFloat(cgImage.width/3), height: CGFloat(cgImage.height/3))
                 
                 context.draw(cgImage, in: rect)
                 
