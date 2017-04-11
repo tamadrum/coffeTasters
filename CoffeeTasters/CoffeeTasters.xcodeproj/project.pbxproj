@@ -89,6 +89,14 @@
 		1614EE411E8E5F1F00C44F11 /* NotificacoesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificacoesViewController.swift; path = controller/NotificacoesViewController.swift; sourceTree = "<group>"; };
 		1614EE431E8E5F3800C44F11 /* AvaliacaoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AvaliacaoViewController.swift; path = controller/AvaliacaoViewController.swift; sourceTree = "<group>"; };
 		1614EE451E8E5F8400C44F11 /* FinalizarCompraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinalizarCompraViewController.swift; path = controller/FinalizarCompraViewController.swift; sourceTree = "<group>"; };
+		167327811E9C4E1500786B8D /* Merriweather-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-Black.ttf"; path = "fonts/Merriweather-Black.ttf"; sourceTree = "<group>"; };
+		167327821E9C4E1500786B8D /* Merriweather-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-Bold.ttf"; path = "fonts/Merriweather-Bold.ttf"; sourceTree = "<group>"; };
+		167327831E9C4E1500786B8D /* Merriweather-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-BoldItalic.ttf"; path = "fonts/Merriweather-BoldItalic.ttf"; sourceTree = "<group>"; };
+		167327841E9C4E1500786B8D /* Merriweather-HeavyItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-HeavyItalic.ttf"; path = "fonts/Merriweather-HeavyItalic.ttf"; sourceTree = "<group>"; };
+		167327851E9C4E1500786B8D /* Merriweather-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-Italic.ttf"; path = "fonts/Merriweather-Italic.ttf"; sourceTree = "<group>"; };
+		167327861E9C4E1500786B8D /* Merriweather-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-Light.ttf"; path = "fonts/Merriweather-Light.ttf"; sourceTree = "<group>"; };
+		167327871E9C4E1500786B8D /* Merriweather-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-LightItalic.ttf"; path = "fonts/Merriweather-LightItalic.ttf"; sourceTree = "<group>"; };
+		167327881E9C4E1500786B8D /* Merriweather-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-Regular.ttf"; path = "fonts/Merriweather-Regular.ttf"; sourceTree = "<group>"; };
 		1690A1C41E8EB6610039BDC1 /* RoundImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundImage.swift; path = custom/RoundImage.swift; sourceTree = "<group>"; };
 		1690A1C71E8F17980039BDC1 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Usuario.swift; path = modelo/Usuario.swift; sourceTree = "<group>"; };
 		1690A1CE1E8F2ABD0039BDC1 /* WheelFlavor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WheelFlavor.swift; path = custom/WheelFlavor.swift; sourceTree = "<group>"; };
@@ -161,6 +169,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		167327801E9C4E0C00786B8D /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				167327811E9C4E1500786B8D /* Merriweather-Black.ttf */,
+				167327821E9C4E1500786B8D /* Merriweather-Bold.ttf */,
+				167327831E9C4E1500786B8D /* Merriweather-BoldItalic.ttf */,
+				167327841E9C4E1500786B8D /* Merriweather-HeavyItalic.ttf */,
+				167327851E9C4E1500786B8D /* Merriweather-Italic.ttf */,
+				167327861E9C4E1500786B8D /* Merriweather-Light.ttf */,
+				167327871E9C4E1500786B8D /* Merriweather-LightItalic.ttf */,
+				167327881E9C4E1500786B8D /* Merriweather-Regular.ttf */,
+			);
+			name = fonts;
+			sourceTree = "<group>";
+		};
 		1690A1C61E8F177E0039BDC1 /* modelo */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +245,7 @@
 		16EBC5E51E8C66CB00A87B2F /* CoffeeTasters */ = {
 			isa = PBXGroup;
 			children = (
+				167327801E9C4E0C00786B8D /* fonts */,
 				16E67A441E912F25005EE82E /* util */,
 				1690A1D41E8FE9940039BDC1 /* bridge */,
 				1690A1C91E8F1A980039BDC1 /* dao */,

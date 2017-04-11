@@ -9,3 +9,5 @@ Ordenar lista de cafés descendente por safra e nome
 Buscar Cafés???
 
 Aonde colocar o QRCode agora???
+
+Colocar as fontes no local certo das telas...

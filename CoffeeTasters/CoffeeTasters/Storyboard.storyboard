@@ -1377,7 +1377,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fundoCafe" translatesAutoresizingMaskIntoConstraints="NO" id="ko0-sm-cHV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bkgLR" translatesAutoresizingMaskIntoConstraints="NO" id="ko0-sm-cHV">
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1388,7 +1388,6 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="E-mail:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLj-tg-9tH">
                                 <rect key="frame" x="16" y="164" width="288" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1403,7 +1402,6 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Senha:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIB-pd-BPS">
                                 <rect key="frame" x="16" y="231" width="288" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1449,11 +1447,6 @@
                                     <segue destination="hev-yN-Trh" kind="show" id="yd0-0T-zCx"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KEL-kh-xGB">
-                                <rect key="frame" x="40" y="420" width="240" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPu-1j-eiw" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
                                 <rect key="frame" x="58" y="298" width="205" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1478,7 +1471,6 @@
                         <outlet property="emailTextField" destination="38F-5R-3Lg" id="sNg-eb-lvW"/>
                         <outlet property="logoImageView" destination="YN0-BH-h9o" id="E4U-Cg-DJ7"/>
                         <outlet property="senhaTextField" destination="j7o-aM-edT" id="TmT-ug-wR4"/>
-                        <outlet property="viewLogin" destination="KEL-kh-xGB" id="hSn-1i-U5e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ci3-hX-0ad" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1553,7 +1545,7 @@
                         <viewControllerLayoutGuide type="bottom" id="vLR-gt-X6c"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="EqG-B7-uq0" customClass="TPKeyboardAvoidingScrollView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0P-nT-W4t">
@@ -1720,6 +1712,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                <size key="value" width="320" height="600"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" title="Meus Dados" id="EoJ-OC-NaW">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="qXu-H6-Dkg">
@@ -1728,6 +1725,8 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="600"/>
                     <connections>
                         <outlet property="cpfTextField" destination="fep-fR-Tb8" id="97a-z6-Q3x"/>
                         <outlet property="emailTextField" destination="XIr-Kb-ue0" id="K0r-WP-Z3S"/>
@@ -1743,7 +1742,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pJZ-7m-AU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3322.5" y="-1988.0281690140846"/>
+            <point key="canvasLocation" x="-3396" y="-2237"/>
         </scene>
         <!--Ofertas-->
         <scene sceneID="JLZ-QB-nFn">
@@ -2169,7 +2168,7 @@
                                 <rect key="frame" x="188" y="598" width="118" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="cereais"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="doce"/>
                                 </userDefinedRuntimeAttributes>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Doce:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVz-aM-p2F">
@@ -2183,7 +2182,7 @@
                                 <rect key="frame" x="188" y="636" width="118" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="cereais"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="acido"/>
                                 </userDefinedRuntimeAttributes>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Azedo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hM-Gy-Shq">
@@ -2197,7 +2196,7 @@
                                 <rect key="frame" x="188" y="674" width="118" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="cereais"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="floral"/>
                                 </userDefinedRuntimeAttributes>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Floral:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hU-Kh-CGq">
@@ -2211,7 +2210,7 @@
                                 <rect key="frame" x="188" y="712" width="118" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="cereais"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="especiarias"/>
                                 </userDefinedRuntimeAttributes>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Especiarias:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCn-de-KK8">
@@ -2225,7 +2224,7 @@
                                 <rect key="frame" x="188" y="750" width="118" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="cereais"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="salgado"/>
                                 </userDefinedRuntimeAttributes>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Salgado:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ope-In-soe">
@@ -2239,7 +2238,7 @@
                                 <rect key="frame" x="188" y="788" width="118" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="cereais"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="frutasVermelhas"/>
                                 </userDefinedRuntimeAttributes>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Frutas Vermelhas:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovn-oB-nfG">
@@ -2253,7 +2252,7 @@
                                 <rect key="frame" x="188" y="826" width="118" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="cereais"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="citrico"/>
                                 </userDefinedRuntimeAttributes>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Frutas Cítricas:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFA-we-MWR">
@@ -2267,7 +2266,7 @@
                                 <rect key="frame" x="188" y="864" width="118" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="cereais"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="frutasCaroco"/>
                                 </userDefinedRuntimeAttributes>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Frutas com Caroço:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPi-bh-sY1">
@@ -2281,7 +2280,7 @@
                                 <rect key="frame" x="188" y="902" width="118" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="cereais"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="chocolate"/>
                                 </userDefinedRuntimeAttributes>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chocolate:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gr9-O5-hZF">
@@ -2295,7 +2294,7 @@
                                 <rect key="frame" x="188" y="940" width="118" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="cereais"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="caramelo"/>
                                 </userDefinedRuntimeAttributes>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Caramelo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fth-ve-GZd">
@@ -2309,7 +2308,7 @@
                                 <rect key="frame" x="188" y="978" width="118" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="cereais"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="defumado"/>
                                 </userDefinedRuntimeAttributes>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Defumado:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vI2-O3-7zG">
@@ -2323,7 +2322,7 @@
                                 <rect key="frame" x="188" y="1016" width="118" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="cereais"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="amargo"/>
                                 </userDefinedRuntimeAttributes>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Amargo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9N-Di-bhC">
@@ -2337,7 +2336,7 @@
                                 <rect key="frame" x="188" y="1054" width="118" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="cereais"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="herbal"/>
                                 </userDefinedRuntimeAttributes>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Herbal:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzY-qT-v1s">
@@ -2351,7 +2350,7 @@
                                 <rect key="frame" x="188" y="1092" width="118" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="cereais"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="encorpado"/>
                                 </userDefinedRuntimeAttributes>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Encorpado:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jid-Uj-uKn">
@@ -2379,7 +2378,7 @@
                                 <rect key="frame" x="188" y="1168" width="118" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="cereais"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="nozes"/>
                                 </userDefinedRuntimeAttributes>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nozes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWz-ME-FBh">
@@ -2624,11 +2623,26 @@
     </scenes>
     <resources>
         <image name="SplashImg" width="375" height="693"/>
+        <image name="acido" width="48" height="48"/>
+        <image name="amargo" width="48" height="48"/>
+        <image name="bkgLR" width="390" height="707"/>
         <image name="cafe" width="80" height="80"/>
-        <image name="cereais" width="40" height="38"/>
-        <image name="fundoCafe" width="320" height="548"/>
-        <image name="logo" width="268" height="193"/>
+        <image name="caramelo" width="48" height="48"/>
+        <image name="cereais" width="48" height="48"/>
+        <image name="chocolate" width="48" height="48"/>
+        <image name="citrico" width="48" height="48"/>
+        <image name="defumado" width="48" height="48"/>
+        <image name="doce" width="48" height="48"/>
+        <image name="encorpado" width="48" height="48"/>
+        <image name="especiarias" width="48" height="48"/>
+        <image name="floral" width="48" height="48"/>
+        <image name="frutasCaroco" width="48" height="48"/>
+        <image name="frutasVermelhas" width="48" height="48"/>
+        <image name="herbal" width="48" height="48"/>
+        <image name="logo" width="173" height="122"/>
+        <image name="nozes" width="48" height="48"/>
         <image name="person" width="512" height="512"/>
+        <image name="salgado" width="48" height="48"/>
         <image name="starryStars_half" width="35" height="35"/>
         <image name="starryStars_off" width="35" height="35"/>
         <image name="starryStars_on" width="35" height="35"/>

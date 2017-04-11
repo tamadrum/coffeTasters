@@ -58,22 +58,22 @@ class WheelFlavor: UIView {
             context.setStrokeColor(UIColor.black.cgColor)
             
             images = [
-                desenhaImagem(#imageLiteral(resourceName: "cereais"), context: context, centro:centro, raio:(raio+20), angulo:11.25), // doce
-                desenhaImagem(#imageLiteral(resourceName: "cereais"), context: context, centro:centro, raio:(raio+20), angulo:33.75), // azedo
+                desenhaImagem(#imageLiteral(resourceName: "doce"), context: context, centro:centro, raio:(raio+20), angulo:11.25), // doce
+                desenhaImagem(#imageLiteral(resourceName: "acido"), context: context, centro:centro, raio:(raio+20), angulo:33.75), // azedo
                 desenhaImagem(#imageLiteral(resourceName: "floral"), context: context, centro:centro, raio:(raio+20), angulo:56.25), // floral
-                desenhaImagem(#imageLiteral(resourceName: "cereais"), context: context, centro:centro, raio:(raio+20), angulo:78.75), // especiarias
-                desenhaImagem(#imageLiteral(resourceName: "cereais"), context: context, centro:centro, raio:(raio+20), angulo:101.25), // salgado
-                desenhaImagem(#imageLiteral(resourceName: "cereais"), context: context, centro:centro, raio:(raio+20), angulo:123.75), // frutasVermelhas
-                desenhaImagem(#imageLiteral(resourceName: "cereais"), context: context, centro:centro, raio:(raio+20), angulo:146.25), // frutasCitricas
-                desenhaImagem(#imageLiteral(resourceName: "cereais"), context: context, centro:centro, raio:(raio+20), angulo:168.75), // frutasCaroco
-                desenhaImagem(#imageLiteral(resourceName: "cereais"), context: context, centro:centro, raio:(raio+20), angulo:191.25), // chocolate
-                desenhaImagem(#imageLiteral(resourceName: "cereais"), context: context, centro:centro, raio:(raio+20), angulo:213.75), // caramelo
-                desenhaImagem(#imageLiteral(resourceName: "cereais"), context: context, centro:centro, raio:(raio+20), angulo:236.25), // defumado
-                desenhaImagem(#imageLiteral(resourceName: "cereais"), context: context, centro:centro, raio:(raio+20), angulo:258.75), // amargo
-                desenhaImagem(#imageLiteral(resourceName: "cereais"), context: context, centro:centro, raio:(raio+20), angulo:281.25), // herbal
-                desenhaImagem(#imageLiteral(resourceName: "cereais"), context: context, centro:centro, raio:(raio+20), angulo:303.75), // encorpado
+                desenhaImagem(#imageLiteral(resourceName: "especiarias"), context: context, centro:centro, raio:(raio+20), angulo:78.75), // especiarias
+                desenhaImagem(#imageLiteral(resourceName: "salgado"), context: context, centro:centro, raio:(raio+20), angulo:101.25), // salgado
+                desenhaImagem(#imageLiteral(resourceName: "frutasVermelhas"), context: context, centro:centro, raio:(raio+20), angulo:123.75), // frutasVermelhas
+                desenhaImagem(#imageLiteral(resourceName: "citrico"), context: context, centro:centro, raio:(raio+20), angulo:146.25), // frutasCitricas
+                desenhaImagem(#imageLiteral(resourceName: "frutasCaroco"), context: context, centro:centro, raio:(raio+20), angulo:168.75), // frutasCaroco
+                desenhaImagem(#imageLiteral(resourceName: "chocolate"), context: context, centro:centro, raio:(raio+20), angulo:191.25), // chocolate
+                desenhaImagem(#imageLiteral(resourceName: "caramelo"), context: context, centro:centro, raio:(raio+20), angulo:213.75), // caramelo
+                desenhaImagem(#imageLiteral(resourceName: "defumado"), context: context, centro:centro, raio:(raio+20), angulo:236.25), // defumado
+                desenhaImagem(#imageLiteral(resourceName: "amargo"), context: context, centro:centro, raio:(raio+20), angulo:258.75), // amargo
+                desenhaImagem(#imageLiteral(resourceName: "herbal"), context: context, centro:centro, raio:(raio+20), angulo:281.25), // herbal
+                desenhaImagem(#imageLiteral(resourceName: "encorpado"), context: context, centro:centro, raio:(raio+20), angulo:303.75), // encorpado
                 desenhaImagem(#imageLiteral(resourceName: "cereais"), context: context, centro:centro, raio:(raio+20), angulo:326.25), // cereais
-                desenhaImagem(#imageLiteral(resourceName: "cereais"), context: context, centro:centro, raio:(raio+20), angulo:348.75), // nozes
+                desenhaImagem(#imageLiteral(resourceName: "nozes"), context: context, centro:centro, raio:(raio+20), angulo:348.75), // nozes
             ]
             
             desenhaRoda(context: context, centro:centro, raio:raio)

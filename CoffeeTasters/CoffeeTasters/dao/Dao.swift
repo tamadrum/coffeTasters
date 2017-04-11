@@ -94,6 +94,9 @@ class Dao<T> {
     }
     
     func inserirDadosIniciais () {
+        print("**************************")
+        print("inserindo dados iniciais")
+        print("**************************")
         let configuracoes = UserDefaults.standard
         let dadosInseridos = configuracoes.bool(forKey: "dados_inseridos")
         if !dadosInseridos {

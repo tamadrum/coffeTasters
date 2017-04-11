@@ -18,8 +18,6 @@ class LoginViewController: UIViewController, LoginButtonDelegate, UIWebViewDeleg
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var senhaTextField: UITextField!
     
-    @IBOutlet weak var viewLogin: UIView!
-    
     var usuario:Usuario = Usuario()
     
     override func viewDidLoad() {
@@ -116,7 +114,8 @@ class LoginViewController: UIViewController, LoginButtonDelegate, UIWebViewDeleg
                     var l = responseDictionary["picture"] as! [String: Any]
                     var m = l["data"] as! [String: Any]
                     
-                    self.usuario.nome = "\(responseDictionary["first_name"]!) \(responseDictionary["last_name"]!)"
+                    self.usuario.nome = responseDictionary["first_name"]! as! String
+                    self.usuario.sobrenome = responseDictionary["last_name"]! as! String
                     self.usuario.email = responseDictionary["email"]! as! String
                     self.usuario.perfilImg = m["url"]! as! String
                     
