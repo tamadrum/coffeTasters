@@ -28,26 +28,30 @@ class WheelFlavor: UIView {
     var images:[CGRect] = []
     
     /// Array de cores para a roda dos sabores
-    let cores = [WheelFlavor.hexStringToUIColor(hex: "5E3A17"), // doce
-                 WheelFlavor.hexStringToUIColor(hex: "BE8E3D"), // azedo
-                 WheelFlavor.hexStringToUIColor(hex: "9C8A33"), // floral
-                 WheelFlavor.hexStringToUIColor(hex: "C5B742"), // especiarias
-                 WheelFlavor.hexStringToUIColor(hex: "BC6337"), // salgado
-                 WheelFlavor.hexStringToUIColor(hex: "D7925B"), // frutasVermelhas
-                 WheelFlavor.hexStringToUIColor(hex: "ECC56E"), // frutasCítricas
-                 WheelFlavor.hexStringToUIColor(hex: "E7CB9B"), // frutasCaroco
-                 WheelFlavor.hexStringToUIColor(hex: "3287A5"), // chocolate
-                 WheelFlavor.hexStringToUIColor(hex: "8DB7A5"), // caramelo
-                 WheelFlavor.hexStringToUIColor(hex: "703B52"), // defumado
-                 WheelFlavor.hexStringToUIColor(hex: "945A72"), // amargo
-                 WheelFlavor.hexStringToUIColor(hex: "422718"), // herbal
-                 WheelFlavor.hexStringToUIColor(hex: "9C8A33"), // encorpado
-                 WheelFlavor.hexStringToUIColor(hex: "C5B742"), // cereais
-                 WheelFlavor.hexStringToUIColor(hex: "BC6337")] // nozes
+    let cores = [
+        WheelFlavor.hexStringToUIColor(hex: "BD183D"), // doce
+        WheelFlavor.hexStringToUIColor(hex: "F4CE01"), // azedo
+        WheelFlavor.hexStringToUIColor(hex: "EA6164"), // floral
+        WheelFlavor.hexStringToUIColor(hex: "75833A"), // especiarias
+        WheelFlavor.hexStringToUIColor(hex: "008AC0"), // salgado
+        WheelFlavor.hexStringToUIColor(hex: "94386F"), // frutasVermelhas
+        WheelFlavor.hexStringToUIColor(hex: "FECF57"), // frutasCítricas
+        WheelFlavor.hexStringToUIColor(hex: "F37121"), // frutasCaroco
+        WheelFlavor.hexStringToUIColor(hex: "6A331C"), // chocolate
+        WheelFlavor.hexStringToUIColor(hex: "C78542"), // caramelo
+        WheelFlavor.hexStringToUIColor(hex: "665E4A"), // defumado
+        WheelFlavor.hexStringToUIColor(hex: "3D3C3E"), // amargo
+        WheelFlavor.hexStringToUIColor(hex: "5C9337"), // herbal
+        WheelFlavor.hexStringToUIColor(hex: "D14A28"), // encorpado
+        WheelFlavor.hexStringToUIColor(hex: "A8AC46"), // cereais
+        WheelFlavor.hexStringToUIColor(hex: "8B560E"), // nozes
+        ]
+
+    var raio: Int!
     
     override func draw(_ rect: CGRect) {
         let centro = CGPoint(x: self.bounds.width/2, y: self.bounds.height/2)
-        var raio:Int = Int(centro.y/2)
+        raio = Int(centro.y/2)
         if ( centro.x > centro.y ) {
             raio = Int(centro.x/2)
         }
@@ -111,10 +115,10 @@ class WheelFlavor: UIView {
             
             myString.draw(in: textRect, withAttributes: attributes)
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) {
-                self.mostraAlerta = false
-                self.setNeedsDisplay()
-            }
+//            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) {
+//                self.mostraAlerta = false
+//                self.setNeedsDisplay()
+//            }
         }
     }
     
@@ -132,6 +136,16 @@ class WheelFlavor: UIView {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
             let currentPoint = touch.location(in: self)
+            
+            // Clicou no meio, mosra recebe false
+            let centro = CGPoint(x: self.bounds.width/2, y: self.bounds.height/2)
+            let distancia = Int(sqrt(pow(currentPoint.x - centro.x, 2) + pow(currentPoint.y - centro.y, 2)))
+            
+            if ( distancia < raio ) {
+                mostraAlerta = false
+                setNeedsDisplay()
+                return
+            }
             
             for i in 0...15 {
                 let imagem = images[i]
@@ -266,10 +280,11 @@ class WheelFlavor: UIView {
      */
     func desenhaImagem(_ imagem: UIImage, context: CGContext, centro: CGPoint, raio: Int, angulo: Double) -> CGRect {
         var novoCentro = centro
-        novoCentro.y += 15
+        novoCentro.y += 20
+        let novoRaio = raio + 5
         
             if let cgImage = imagem.cgImage {
-                let ponto = getCoordenadas(centro: novoCentro, raio: raio, angulo: angulo)
+                let ponto = getCoordenadas(centro: novoCentro, raio: novoRaio, angulo: angulo)
                 
                 let rect = CGRect(x: ponto.x - CGFloat(cgImage.width/2), y: ponto.y - CGFloat(cgImage.height), width: CGFloat(cgImage.width), height: CGFloat(cgImage.height))
                 
