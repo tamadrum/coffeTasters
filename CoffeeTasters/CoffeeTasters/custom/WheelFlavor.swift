@@ -271,7 +271,7 @@ class WheelFlavor: UIView {
             if let cgImage = imagem.cgImage {
                 let ponto = getCoordenadas(centro: novoCentro, raio: raio, angulo: angulo)
                 
-                let rect = CGRect(x: ponto.x - CGFloat(cgImage.width/6), y: ponto.y - CGFloat(cgImage.height/3), width: CGFloat(cgImage.width/3), height: CGFloat(cgImage.height/3))
+                let rect = CGRect(x: ponto.x - CGFloat(cgImage.width/2), y: ponto.y - CGFloat(cgImage.height), width: CGFloat(cgImage.width), height: CGFloat(cgImage.height))
                 
                 context.draw(cgImage, in: rect)
                 
