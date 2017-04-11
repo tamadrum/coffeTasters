@@ -288,7 +288,8 @@ class WheelFlavor: UIView {
                 
                 let rect = CGRect(x: ponto.x - CGFloat(cgImage.width/2), y: ponto.y - CGFloat(cgImage.height), width: CGFloat(cgImage.width), height: CGFloat(cgImage.height))
                 
-                context.draw(cgImage, in: rect)
+                imagem.draw(in: rect)
+                //context.draw(cgImage, in: rect)
                 
                 return rect
             }

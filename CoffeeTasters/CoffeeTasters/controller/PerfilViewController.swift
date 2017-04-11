@@ -130,6 +130,8 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
             //            cell.imageView?.image = UIImage(named: data[indexPath.row].imagem)
         }
         
+        //cell.backgroundColor = .clear
+        
         return cell
     }
     
