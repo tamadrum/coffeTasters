@@ -98,7 +98,7 @@
                                     <constraint firstAttribute="width" secondItem="Q0O-PZ-4CK" secondAttribute="height" multiplier="120:17" id="YAE-3r-Gka"/>
                                 </constraints>
                             </view>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="*******" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="ExF-Cs-p11">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="******" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dhJ-Cs-5Oe">
                                 <rect key="frame" x="16" y="284" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="12"/>
@@ -109,10 +109,11 @@
                         <constraints>
                             <constraint firstItem="IKD-Gg-1E0" firstAttribute="leading" secondItem="dRf-EG-NIY" secondAttribute="leading" id="1dD-LF-xaw"/>
                             <constraint firstItem="MyX-Rr-bcD" firstAttribute="top" secondItem="b6H-K7-eEI" secondAttribute="bottom" constant="51" id="Iwk-7t-F4D"/>
+                            <constraint firstItem="b6H-K7-eEI" firstAttribute="top" secondItem="dhJ-Cs-5Oe" secondAttribute="bottom" constant="8" id="J0c-PT-tz9"/>
                             <constraint firstItem="5rX-Dy-jt2" firstAttribute="top" secondItem="Ym7-kV-xhN" secondAttribute="bottom" constant="27" id="JDZ-O6-YrK"/>
                             <constraint firstItem="nYw-DN-Iod" firstAttribute="top" secondItem="MyX-Rr-bcD" secondAttribute="bottom" constant="5" id="Kbs-lR-aDV"/>
                             <constraint firstItem="fHn-Q5-UtC" firstAttribute="top" secondItem="5rX-Dy-jt2" secondAttribute="bottom" constant="26" id="NCa-iq-U5Q"/>
-                            <constraint firstItem="b6H-K7-eEI" firstAttribute="top" secondItem="ExF-Cs-p11" secondAttribute="bottom" constant="8" id="R38-Xg-rv4"/>
+                            <constraint firstItem="dhJ-Cs-5Oe" firstAttribute="leading" secondItem="dRf-EG-NIY" secondAttribute="leadingMargin" id="O1e-3q-Z19"/>
                             <constraint firstItem="b6H-K7-eEI" firstAttribute="leading" secondItem="dRf-EG-NIY" secondAttribute="leadingMargin" id="S64-t7-ceS"/>
                             <constraint firstItem="In2-eS-I4D" firstAttribute="top" secondItem="fHn-Q5-UtC" secondAttribute="bottom" constant="2" id="Uhe-9q-RXC"/>
                             <constraint firstItem="Q0O-PZ-4CK" firstAttribute="centerX" secondItem="dRf-EG-NIY" secondAttribute="centerX" id="WxY-IB-3ub"/>
@@ -123,18 +124,17 @@
                             <constraint firstItem="fHn-Q5-UtC" firstAttribute="trailing" secondItem="dRf-EG-NIY" secondAttribute="trailingMargin" id="cQX-i7-dPk"/>
                             <constraint firstItem="tfh-zq-hV0" firstAttribute="trailing" secondItem="dRf-EG-NIY" secondAttribute="trailingMargin" id="ceb-vn-Eba"/>
                             <constraint firstItem="88U-Vo-s0h" firstAttribute="top" secondItem="IKD-Gg-1E0" secondAttribute="bottom" id="dYS-ZH-rWi"/>
-                            <constraint firstItem="ExF-Cs-p11" firstAttribute="trailing" secondItem="dRf-EG-NIY" secondAttribute="trailingMargin" id="f2G-yI-WmX"/>
                             <constraint firstItem="tfh-zq-hV0" firstAttribute="top" secondItem="In2-eS-I4D" secondAttribute="bottom" constant="5" id="hjT-Vq-gOx"/>
                             <constraint firstItem="fHn-Q5-UtC" firstAttribute="leading" secondItem="dRf-EG-NIY" secondAttribute="leadingMargin" id="iBV-8h-ibQ"/>
+                            <constraint firstItem="dhJ-Cs-5Oe" firstAttribute="trailing" secondItem="dRf-EG-NIY" secondAttribute="trailingMargin" id="in5-hC-z99"/>
                             <constraint firstItem="In2-eS-I4D" firstAttribute="trailing" secondItem="dRf-EG-NIY" secondAttribute="trailingMargin" id="kGM-37-xIj"/>
                             <constraint firstItem="In2-eS-I4D" firstAttribute="leading" secondItem="dRf-EG-NIY" secondAttribute="leadingMargin" id="kUb-3q-yNq"/>
                             <constraint firstItem="IKD-Gg-1E0" firstAttribute="top" secondItem="Ym7-kV-xhN" secondAttribute="bottom" id="kew-zL-7Eh"/>
-                            <constraint firstItem="ExF-Cs-p11" firstAttribute="top" secondItem="tfh-zq-hV0" secondAttribute="bottom" constant="2" id="lJQ-ot-dKt"/>
-                            <constraint firstItem="ExF-Cs-p11" firstAttribute="leading" secondItem="dRf-EG-NIY" secondAttribute="leadingMargin" id="mQ9-EL-6Rn"/>
                             <constraint firstAttribute="trailing" secondItem="IKD-Gg-1E0" secondAttribute="trailing" id="o5J-ce-Fzc"/>
                             <constraint firstAttribute="bottom" secondItem="Q0O-PZ-4CK" secondAttribute="bottom" constant="20" symbolic="YES" id="pcR-RA-dEw"/>
                             <constraint firstItem="tfh-zq-hV0" firstAttribute="leading" secondItem="dRf-EG-NIY" secondAttribute="leadingMargin" id="qnM-fR-ado"/>
                             <constraint firstItem="5rX-Dy-jt2" firstAttribute="leading" secondItem="dRf-EG-NIY" secondAttribute="leadingMargin" constant="24" id="wKw-Nn-Ny9"/>
+                            <constraint firstItem="dhJ-Cs-5Oe" firstAttribute="top" secondItem="tfh-zq-hV0" secondAttribute="bottom" constant="2" id="yJL-nb-7FN"/>
                             <constraint firstItem="MyX-Rr-bcD" firstAttribute="centerX" secondItem="dRf-EG-NIY" secondAttribute="centerX" id="ylA-Dm-MDN"/>
                             <constraint firstItem="Q0O-PZ-4CK" firstAttribute="leading" secondItem="5rX-Dy-jt2" secondAttribute="leading" id="zrJ-iF-owG"/>
                         </constraints>
@@ -286,40 +286,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Sps-h7-1Oz">
-                                <rect key="frame" x="16" y="28" width="288" height="153"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Se você esqueceu a sua senha, digite o seu email cadastrado que logo em seguida será encaminhado um email para criar uma nova senha do seu agrado.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bkgLR" translatesAutoresizingMaskIntoConstraints="NO" id="5da-ja-dfT">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" editable="NO" textAlignment="justified" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sps-h7-1Oz">
+                                <rect key="frame" x="16" y="187" width="288" height="79"/>
+                                <color key="backgroundColor" red="0.96582156419999998" green="0.96551388500000002" blue="0.86567187310000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="Whb-A2-zgS"/>
+                                </constraints>
+                                <string key="text">Se você esqueceu a sua senha, digite o seu email cadastrado que logo em seguida você receberá um email para criar uma nova senha.</string>
+                                <color key="textColor" red="0.2627450980392157" green="0.15294117647058825" blue="0.094117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email cadastrado" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nmz-Ks-cZA">
-                                <rect key="frame" x="16" y="269" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email cadastrado" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nmz-Ks-cZA">
+                                <rect key="frame" x="16" y="309" width="288" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="rFd-HX-Oot"/>
+                                </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="E-mail:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43q-h6-HlD">
-                                <rect key="frame" x="16" y="240" width="54" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43q-h6-HlD">
+                                <rect key="frame" x="16" y="280" width="288" height="21"/>
+                                <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="17"/>
+                                <color key="textColor" red="0.2627450980392157" green="0.15294117647058825" blue="0.094117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzR-ON-3Uu">
-                                <rect key="frame" x="262" y="307" width="42" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Enviar"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzR-ON-3Uu">
+                                <rect key="frame" x="256" y="347" width="48" height="27"/>
+                                <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="12"/>
+                                <state key="normal" title="ENVIAR">
+                                    <color key="titleColor" red="0.2781490683555603" green="0.14739993214607239" blue="0.081067316234111786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCf-L0-Vec">
-                                <rect key="frame" x="19" y="307" width="41" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Voltar"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCf-L0-Vec">
+                                <rect key="frame" x="19" y="347" width="50" height="27"/>
+                                <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="12"/>
+                                <state key="normal" title="VOLTAR">
+                                    <color key="titleColor" red="0.2781490683555603" green="0.14739993214607239" blue="0.081067316234111786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="e3w-R1-58W">
+                                <rect key="frame" x="46" y="32" width="229" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="e3w-R1-58W" secondAttribute="height" multiplier="15:8" id="xfZ-hh-LAo"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.96582156419999998" green="0.96551388500000002" blue="0.86567187310000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="mzR-ON-3Uu" secondAttribute="trailing" id="61m-5w-V55"/>
+                            <constraint firstItem="e3w-R1-58W" firstAttribute="top" secondItem="hlE-oZ-IQq" secondAttribute="bottom" constant="12" id="B60-BC-4Mj"/>
+                            <constraint firstItem="Sps-h7-1Oz" firstAttribute="trailing" secondItem="qbK-7g-b1W" secondAttribute="trailingMargin" id="Dm8-Vi-Fbg"/>
+                            <constraint firstItem="LCf-L0-Vec" firstAttribute="top" secondItem="Nmz-Ks-cZA" secondAttribute="bottom" constant="8" symbolic="YES" id="Ghu-8d-ZHH"/>
+                            <constraint firstItem="e3w-R1-58W" firstAttribute="centerX" secondItem="qbK-7g-b1W" secondAttribute="centerX" id="LaH-ae-8BD"/>
+                            <constraint firstAttribute="trailing" secondItem="5da-ja-dfT" secondAttribute="trailing" id="SHk-jf-dRg"/>
+                            <constraint firstItem="43q-h6-HlD" firstAttribute="trailing" secondItem="qbK-7g-b1W" secondAttribute="trailingMargin" id="TOu-Ke-8FD"/>
+                            <constraint firstItem="mzR-ON-3Uu" firstAttribute="top" secondItem="Nmz-Ks-cZA" secondAttribute="bottom" constant="8" symbolic="YES" id="WFy-bD-hev"/>
+                            <constraint firstItem="43q-h6-HlD" firstAttribute="top" secondItem="Sps-h7-1Oz" secondAttribute="bottom" constant="14" id="ZV8-OS-OIH"/>
+                            <constraint firstItem="Nmz-Ks-cZA" firstAttribute="trailing" secondItem="43q-h6-HlD" secondAttribute="trailing" id="Zxm-wy-j03"/>
+                            <constraint firstItem="Sps-h7-1Oz" firstAttribute="top" secondItem="hlE-oZ-IQq" secondAttribute="bottom" constant="167" id="bF8-Gz-Vfv"/>
+                            <constraint firstItem="Nmz-Ks-cZA" firstAttribute="top" secondItem="43q-h6-HlD" secondAttribute="bottom" constant="8" id="bvz-Dg-6jd"/>
+                            <constraint firstItem="Sps-h7-1Oz" firstAttribute="leading" secondItem="qbK-7g-b1W" secondAttribute="leadingMargin" id="fVk-IP-hoT"/>
+                            <constraint firstItem="xTc-v3-FJq" firstAttribute="top" secondItem="5da-ja-dfT" secondAttribute="bottom" id="lgy-xU-8J1"/>
+                            <constraint firstItem="LCf-L0-Vec" firstAttribute="leading" secondItem="qbK-7g-b1W" secondAttribute="leadingMargin" constant="3" id="mBP-Zw-TH9"/>
+                            <constraint firstItem="5da-ja-dfT" firstAttribute="leading" secondItem="qbK-7g-b1W" secondAttribute="leading" id="naR-O6-wIg"/>
+                            <constraint firstItem="43q-h6-HlD" firstAttribute="leading" secondItem="qbK-7g-b1W" secondAttribute="leadingMargin" id="ohr-2T-EjZ"/>
+                            <constraint firstItem="5da-ja-dfT" firstAttribute="top" secondItem="hlE-oZ-IQq" secondAttribute="bottom" id="pLr-Ds-zIs"/>
+                            <constraint firstItem="Nmz-Ks-cZA" firstAttribute="leading" secondItem="43q-h6-HlD" secondAttribute="leading" id="s00-8M-Cy7"/>
+                            <constraint firstItem="Nmz-Ks-cZA" firstAttribute="trailing" secondItem="mzR-ON-3Uu" secondAttribute="trailing" id="xdR-hP-SrX"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5mi-2m-3sP" userLabel="First Responder" sceneMemberID="firstResponder"/>
