@@ -106,9 +106,9 @@ class WheelFlavor: UIView {
             paragraphStyle.lineBreakMode = .byTruncatingTail
             paragraphStyle.alignment = .center;
             let font = UIFont(name: "Helvetica-Bold", size:20.0)
-            let attributes = [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.black, NSParagraphStyleAttributeName: paragraphStyle]
+            let attributes:[String:Any] = [NSFontAttributeName: font!, NSForegroundColorAttributeName: UIColor.black, NSParagraphStyleAttributeName: paragraphStyle]
             let myString: NSString = sabores[indiceSabores] as NSString
-            let size: CGSize = myString.size(attributes: attributes)
+            let size = myString.size(attributes: attributes)
             let textRect = CGRect(x: centro.x-size.width/2, y: centro.y-size.height/2, width: size.width, height: size.height);
             
             drawRoundRect(dimensoes: CGRect(x: centro.x-size.width/2 - 20, y: centro.y-size.height/2 - 10, width: size.width + 40, height: size.height + 20), cor: cores[indiceSabores].cgColor)
@@ -179,8 +179,8 @@ class WheelFlavor: UIView {
      
      */
     func getCoordenadas(centro: CGPoint, raio: Int, angulo: Double) -> CGPoint {
-        let x = centro.x + (CGFloat) (cos(angulo*M_PI/180.0)*Double(raio))
-        let y = centro.y - (CGFloat) (sin(angulo*M_PI/180.0)*Double(raio))
+        let x = centro.x + (CGFloat) (cos(angulo*Double.pi/180.0)*Double(raio))
+        let y = centro.y - (CGFloat) (sin(angulo*Double.pi/180.0)*Double(raio))
         return CGPoint(x:x, y:y)
     }
     
@@ -257,10 +257,10 @@ class WheelFlavor: UIView {
         let novoRaio = raio + 25
         let origem = getCoordenadas(centro: novoCentro, raio: novoRaio, angulo: angulo)
 
-        let attributes = [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.black, NSParagraphStyleAttributeName: paragraphStyle]
+        let attributes:[String:Any] = [NSFontAttributeName: font!, NSForegroundColorAttributeName: UIColor.black, NSParagraphStyleAttributeName: paragraphStyle]
         
         let myString: NSString = texto as NSString
-        let size: CGSize = myString.size(attributes: attributes)
+        let size = myString.size(attributes: attributes)
         
         let textRect = CGRect(x: origem.x, y: origem.y, width: size.width, height: size.height);
         

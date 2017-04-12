@@ -44,4 +44,55 @@ class AvaliacaoViewController: UIViewController {
     @IBOutlet weak var cafeBlendSegmentControl: UISegmentedControl!
     
     var cafeAvaliado: Cafe!
+    
+    override func viewDidLoad() {
+        nomeTextField.text = cafeAvaliado.nome
+        paisTextField.text = cafeAvaliado.pais
+        cidadeTextField.text = cafeAvaliado.cidade
+        estadoTextField.text = cafeAvaliado.estado
+        produtorTextField.text = cafeAvaliado.produtor
+        torradorTextField.text = cafeAvaliado.torrador
+        regiaoTextField.text = cafeAvaliado.regiao
+        tipoTextField.text = cafeAvaliado.tipo
+        safraTextField.text = cafeAvaliado.safra
+        cafeBlendSegmentControl.selectedSegmentIndex = 0
+    }
+    
+    @IBAction func salvarAvaliacao(_ sender: UIBarButtonItem) {
+        let dao = Dao<Avaliacao>()
+        
+        let avaliacao = dao.new()
+//        avaliacao.cafe = cafeAvaliado
+//        avaliacao.barista = baristaTextField.text
+//        avaliacao.data = "20/10/2017"
+//        avaliacao.dataColheita = "10/10/2017"
+//        avaliacao.dataTorra = "12/10/2017"
+//        avaliacao.flavor = Dao<Flavor>().new()
+//        avaliacao.flavor?.doce = Int32(doceSlider.value)
+//        avaliacao.flavor?.azedo = Int32(azedoSlider.value)
+//        avaliacao.flavor?.floral = Int32(floralSlider.value)
+//        avaliacao.flavor?.especiarias = Int32(especiariasSlider.value)
+//        avaliacao.flavor?.salgado = Int32(salgadoSlider.value)
+//        avaliacao.flavor?.frutasVermelhas = Int32(frutasVermelhasSlider.value)
+//        avaliacao.flavor?.frutasCitricas = Int32(frutasCitricasSlider.value)
+//        avaliacao.flavor?.frutasCaroco = Int32(frutasCarocoSlider.value)
+//        avaliacao.flavor?.chocolate = Int32(chocolateSlider.value)
+//        avaliacao.flavor?.caramelo = Int32(carameloSlider.value)
+//        avaliacao.flavor?.defumado = Int32(defumadoSlider.value)
+//        avaliacao.flavor?.amargo = Int32(amargoSlider.value)
+//        avaliacao.flavor?.herbal = Int32(herbalSlider.value)
+//        avaliacao.flavor?.encorpado = Int32(encorpadoSlider.value)
+//        avaliacao.flavor?.cereais = Int32(cereaisSlider.value)
+//        avaliacao.flavor?.nozes = Int32(nozesSlider.value)
+//        avaliacao.gostou = Int32(rating.rating)
+//        avaliacao.localPreparo = localPreparoTextField.text
+//        avaliacao.metodoPreparo = "\(metodoPreparoSegmentControl.selectedSegmentIndex)"
+//        avaliacao.obs = comentariosTextView.text
+        
+        dao.save()
+        
+        if let nav = navigationController {
+            nav.popToRootViewController(animated: true)
+        }
+    }
 }

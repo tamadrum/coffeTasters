@@ -1110,7 +1110,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Avaliações" id="wpN-x2-Agb">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="8le-S0-mVd">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="8le-S0-mVd">
                             <connections>
                                 <segue destination="ELa-ih-0rX" kind="show" id="nhJ-hT-vis"/>
                             </connections>
@@ -2773,7 +2773,11 @@
                         </userDefinedRuntimeAttributes>
                     </scrollView>
                     <navigationItem key="navigationItem" title="Avaliação" id="YHX-nd-kmY">
-                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="vDe-Id-w1B"/>
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="vDe-Id-w1B">
+                            <connections>
+                                <action selector="salvarAvaliacao:" destination="ELa-ih-0rX" id="3lT-YI-Idx"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="1550"/>

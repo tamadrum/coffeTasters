@@ -31,7 +31,21 @@ class DetalhesCafeController: UIViewController {
     var cafeAvaliado: Cafe!
     
     override func viewDidLoad() {
-
+        torradorLabel.text = cafeAvaliado.torrador
+        produtorLabel.text = cafeAvaliado.produtor
+        paisLabel.text = cafeAvaliado.pais
+        cidadeLabel.text = cafeAvaliado.cidade
+        estadoLabel.text = cafeAvaliado.estado
+        tipoCafeLabel.text = cafeAvaliado.tipo
+        alturaLabel.text = "\(cafeAvaliado.altitude)m"
+        safraLabel.text = cafeAvaliado.safra
+        comentarioTextView.text = cafeAvaliado.descricao
+        notaQuatroLabel.text = "10"
+        notaTresLabel.text = "20"
+        notaDoisLabel.text = "30"
+        notaUmLabel.text = "0"
+        rodaSabores.flavorUsuario = cafeAvaliado.flavorTorrador
+        
     }
     
     @IBAction func avaliacaoComCafePopulado() {
@@ -60,5 +74,6 @@ class DetalhesCafeController: UIViewController {
     }
     
     @IBAction func comprarCafe(_ sender: Any) {
+        
     }
 }
