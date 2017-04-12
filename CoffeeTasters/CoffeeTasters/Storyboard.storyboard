@@ -1681,6 +1681,9 @@
                                                 <color key="value" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="14D-6s-HV0" kind="show" identifier="segueEntrar" id="ohw-J7-Tlt"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDV-t4-cfH" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
                                         <rect key="frame" x="115" y="406" width="90" height="30"/>
