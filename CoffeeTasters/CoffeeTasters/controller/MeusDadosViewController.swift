@@ -11,8 +11,9 @@ import UIKit
 import FacebookCore
 import FacebookLogin
 
-class MeusDadosViewController: UIViewController {
+class MeusDadosViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet weak var imagem: RoundImage!
     @IBOutlet weak var nomeTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var cpfTextField: UITextField!
@@ -38,7 +39,54 @@ class MeusDadosViewController: UIViewController {
         validadeCartaoTextField.text = usuario.validadeCartao
         receberNotificacaoSegmentControl.selectedSegmentIndex = usuario.querNotificacao ? 0 : 1
         
+        let tapFoto = UITapGestureRecognizer(target: self, action: #selector(selecionaFoto))
+        imagem?.addGestureRecognizer(tapFoto)
+        imagem.isUserInteractionEnabled = true
+        
     }
+    
+    func selecionaFoto() {
+        let pickerController = UIImagePickerController()
+        pickerController.allowsEditing = true
+        pickerController.delegate = self
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            mostraPickerQuandoTemCamera(pickerController: pickerController){
+                self.present(pickerController, animated: true, completion: nil)
+            }
+        } else {
+            pickerController.sourceType = .photoLibrary
+            navigationController?.present(pickerController, animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            imagem?.image = image
+            picker.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    func mostraPickerQuandoTemCamera(pickerController: UIImagePickerController, mostrar: @escaping ()->Void) {
+        let alerta = UIAlertController(title: "Escolha a origem...", message: "", preferredStyle: .actionSheet)
+        
+        alerta.addAction(UIAlertAction(title: "Camera", style: .default) { action in
+            pickerController.sourceType = .camera
+            mostrar()
+        })
+        
+        alerta.addAction(UIAlertAction(title: "Biblioteca", style: .default) { action in
+            pickerController.sourceType = .photoLibrary
+            mostrar()
+        })
+        
+        alerta.addAction(UIAlertAction(title: "Cancelar", style: .cancel) { action in
+            alerta.dismiss(animated: true, completion: nil)
+        })
+        
+        self.present(alerta, animated: true, completion: nil)
+    }
+
     
     @IBAction func salvar(_ sender: UIBarButtonItem) {
         usuario.nome = nomeTextField.text!

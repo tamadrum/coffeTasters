@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -1192,9 +1193,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SplashImg" translatesAutoresizingMaskIntoConstraints="NO" id="VJC-fc-ixS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashImg" translatesAutoresizingMaskIntoConstraints="NO" id="VJC-fc-ixS">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="2uk-vn-leB">
                                 <rect key="frame" x="73.5" y="223" width="173" height="122"/>
@@ -1203,7 +1203,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2uk-vn-leB" firstAttribute="centerY" secondItem="pyi-hm-p3G" secondAttribute="centerY" id="7jN-QH-Gwb"/>
+                            <constraint firstAttribute="trailing" secondItem="VJC-fc-ixS" secondAttribute="trailing" id="d5W-YM-pfg"/>
+                            <constraint firstItem="VJC-fc-ixS" firstAttribute="leading" secondItem="pyi-hm-p3G" secondAttribute="leading" id="keA-fr-mvi"/>
                             <constraint firstItem="2uk-vn-leB" firstAttribute="centerX" secondItem="pyi-hm-p3G" secondAttribute="centerX" id="lhk-vA-fH4"/>
+                            <constraint firstItem="VJC-fc-ixS" firstAttribute="top" secondItem="pyi-hm-p3G" secondAttribute="top" id="p2g-bk-xqd"/>
+                            <constraint firstItem="cyF-kH-bA1" firstAttribute="top" secondItem="VJC-fc-ixS" secondAttribute="bottom" id="reG-4M-bso"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1222,76 +1226,46 @@
                         <viewControllerLayoutGuide type="top" id="K3E-4c-OIC"/>
                         <viewControllerLayoutGuide type="bottom" id="Azz-xj-oZK"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tsU-sv-XJ2" customClass="TPKeyboardAvoidingScrollView">
+                    <view key="view" contentMode="scaleToFill" id="tsU-sv-XJ2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bkgLR" translatesAutoresizingMaskIntoConstraints="NO" id="A8x-FE-p2j">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bkgLR" translatesAutoresizingMaskIntoConstraints="NO" id="A8x-FE-p2j">
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="s67-sL-25b">
-                                <rect key="frame" x="73.5" y="48" width="173" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="s67-sL-25b">
+                                <rect key="frame" x="73.5" y="48" width="173" height="122"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUc-2w-IgR">
-                                <rect key="frame" x="16" y="184" width="288" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUc-2w-IgR">
+                                <rect key="frame" x="16" y="184" width="288" height="22.5"/>
                                 <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                 <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CC8-oP-zYa">
-                                <rect key="frame" x="16" y="213" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="E-mail:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8J-Er-u0Z">
-                                <rect key="frame" x="16" y="251" width="288" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8J-Er-u0Z">
+                                <rect key="frame" x="16" y="251" width="288" height="22.5"/>
                                 <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                 <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xzz-vD-4TQ">
-                                <rect key="frame" x="16" y="280" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Senha:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88D-Hq-bV5">
-                                <rect key="frame" x="16" y="318" width="288" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senha:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88D-Hq-bV5">
+                                <rect key="frame" x="16" y="318" width="288" height="22.5"/>
                                 <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                 <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yK1-wK-gtN">
-                                <rect key="frame" x="16" y="347" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Repita a senha:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NdM-nu-iMF">
-                                <rect key="frame" x="16" y="385" width="288" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repita a senha:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NdM-nu-iMF">
+                                <rect key="frame" x="16" y="385" width="288" height="22.5"/>
                                 <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                 <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wwC-pT-Aib">
-                                <rect key="frame" x="16" y="414" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALG-pA-7jG" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
-                                <rect key="frame" x="115" y="452" width="90" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALG-pA-7jG" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
+                                <rect key="frame" x="115" y="454" width="90" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="1Lz-qq-YSB"/>
+                                    <constraint firstAttribute="height" constant="30" id="XRT-QX-SW8"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="12"/>
                                 <state key="normal" title="VOLTAR"/>
                                 <userDefinedRuntimeAttributes>
@@ -1310,9 +1284,12 @@
                                     <segue destination="jhy-0y-LRv" kind="show" id="abJ-yy-Opd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDA-nV-Ulo" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
-                                <rect key="frame" x="115" y="490" width="90" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDA-nV-Ulo" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
+                                <rect key="frame" x="115" y="495" width="90" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Hr5-Y1-i8Q"/>
+                                    <constraint firstAttribute="width" constant="90" id="fLS-lS-y2R"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="12"/>
                                 <state key="normal" title="SALVAR"/>
                                 <userDefinedRuntimeAttributes>
@@ -1331,18 +1308,69 @@
                                     <action selector="salvarCadastro:" destination="hev-yN-Trh" eventType="touchUpInside" id="Jhq-pG-UPv"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Je0-d1-Ck5">
+                                <rect key="frame" x="16" y="212" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hFk-Fl-3c3">
+                                <rect key="frame" x="16" y="281" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xUN-AP-YAn">
+                                <rect key="frame" x="16" y="347" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U0K-Ny-tb4">
+                                <rect key="frame" x="16" y="413" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="s67-sL-25b" firstAttribute="centerX" secondItem="tsU-sv-XJ2" secondAttribute="centerX" id="XLQ-RZ-HDs"/>
+                            <constraint firstItem="X8J-Er-u0Z" firstAttribute="trailing" secondItem="tsU-sv-XJ2" secondAttribute="trailingMargin" id="1Tw-aV-c0F"/>
+                            <constraint firstItem="A8x-FE-p2j" firstAttribute="top" secondItem="K3E-4c-OIC" secondAttribute="bottom" id="3Fl-gX-IRM"/>
+                            <constraint firstItem="mUc-2w-IgR" firstAttribute="top" secondItem="s67-sL-25b" secondAttribute="bottom" constant="14" id="3dJ-OY-BD5"/>
+                            <constraint firstItem="Je0-d1-Ck5" firstAttribute="trailing" secondItem="tsU-sv-XJ2" secondAttribute="trailingMargin" id="6he-y9-rhi"/>
+                            <constraint firstItem="xUN-AP-YAn" firstAttribute="top" secondItem="88D-Hq-bV5" secondAttribute="bottom" constant="6.5" id="A13-1a-rXM"/>
+                            <constraint firstItem="U0K-Ny-tb4" firstAttribute="top" secondItem="NdM-nu-iMF" secondAttribute="bottom" constant="5.5" id="AHA-DW-rQs"/>
+                            <constraint firstItem="Je0-d1-Ck5" firstAttribute="leading" secondItem="tsU-sv-XJ2" secondAttribute="leadingMargin" id="AIf-Ec-w86"/>
+                            <constraint firstItem="NdM-nu-iMF" firstAttribute="leading" secondItem="tsU-sv-XJ2" secondAttribute="leadingMargin" id="ARa-II-Y0E"/>
+                            <constraint firstItem="xUN-AP-YAn" firstAttribute="trailing" secondItem="tsU-sv-XJ2" secondAttribute="trailingMargin" id="BlY-Ty-eDS"/>
+                            <constraint firstItem="A8x-FE-p2j" firstAttribute="leading" secondItem="tsU-sv-XJ2" secondAttribute="leading" id="DbQ-kL-2Kl"/>
+                            <constraint firstItem="88D-Hq-bV5" firstAttribute="leading" secondItem="tsU-sv-XJ2" secondAttribute="leadingMargin" id="EcX-bg-TVA"/>
+                            <constraint firstItem="s67-sL-25b" firstAttribute="top" secondItem="K3E-4c-OIC" secondAttribute="bottom" constant="28" id="FPL-Pf-Oa3"/>
+                            <constraint firstItem="88D-Hq-bV5" firstAttribute="top" secondItem="hFk-Fl-3c3" secondAttribute="bottom" constant="7" id="Gi4-xD-2mV"/>
+                            <constraint firstItem="Azz-xj-oZK" firstAttribute="top" secondItem="A8x-FE-p2j" secondAttribute="bottom" id="Hrj-7C-6QJ"/>
+                            <constraint firstItem="hFk-Fl-3c3" firstAttribute="top" secondItem="X8J-Er-u0Z" secondAttribute="bottom" constant="7.5" id="I32-Ax-l5q"/>
+                            <constraint firstItem="s67-sL-25b" firstAttribute="centerX" secondItem="tsU-sv-XJ2" secondAttribute="centerX" id="JoI-55-rNx"/>
+                            <constraint firstItem="mUc-2w-IgR" firstAttribute="leading" secondItem="tsU-sv-XJ2" secondAttribute="leadingMargin" id="M2E-Xx-U3D"/>
+                            <constraint firstItem="X8J-Er-u0Z" firstAttribute="top" secondItem="Je0-d1-Ck5" secondAttribute="bottom" constant="9" id="S5Z-um-ONn"/>
+                            <constraint firstItem="ALG-pA-7jG" firstAttribute="top" secondItem="U0K-Ny-tb4" secondAttribute="bottom" constant="11" id="Sx0-YI-2tW"/>
+                            <constraint firstItem="hFk-Fl-3c3" firstAttribute="trailing" secondItem="tsU-sv-XJ2" secondAttribute="trailingMargin" id="V11-1e-6mf"/>
+                            <constraint firstItem="U0K-Ny-tb4" firstAttribute="leading" secondItem="tsU-sv-XJ2" secondAttribute="leadingMargin" id="Vkh-cG-6E2"/>
+                            <constraint firstItem="fDA-nV-Ulo" firstAttribute="centerX" secondItem="tsU-sv-XJ2" secondAttribute="centerX" id="VzQ-FS-Z0R"/>
+                            <constraint firstItem="fDA-nV-Ulo" firstAttribute="top" secondItem="ALG-pA-7jG" secondAttribute="bottom" constant="11" id="XoC-QZ-zgi"/>
+                            <constraint firstItem="ALG-pA-7jG" firstAttribute="centerX" secondItem="tsU-sv-XJ2" secondAttribute="centerX" id="Z2Q-wP-UBK"/>
+                            <constraint firstItem="X8J-Er-u0Z" firstAttribute="leading" secondItem="tsU-sv-XJ2" secondAttribute="leadingMargin" id="bzo-de-gfP"/>
+                            <constraint firstAttribute="trailing" secondItem="A8x-FE-p2j" secondAttribute="trailing" id="fpk-rn-Pne"/>
+                            <constraint firstItem="NdM-nu-iMF" firstAttribute="trailing" secondItem="tsU-sv-XJ2" secondAttribute="trailingMargin" id="gX5-a2-07v"/>
+                            <constraint firstItem="NdM-nu-iMF" firstAttribute="top" secondItem="xUN-AP-YAn" secondAttribute="bottom" constant="8" id="rX5-Eu-WxJ"/>
+                            <constraint firstItem="hFk-Fl-3c3" firstAttribute="leading" secondItem="tsU-sv-XJ2" secondAttribute="leadingMargin" id="t7J-Wn-NjZ"/>
+                            <constraint firstItem="88D-Hq-bV5" firstAttribute="trailing" secondItem="tsU-sv-XJ2" secondAttribute="trailingMargin" id="vZq-K7-7JS"/>
+                            <constraint firstItem="mUc-2w-IgR" firstAttribute="trailing" secondItem="tsU-sv-XJ2" secondAttribute="trailingMargin" id="wZB-KG-eXc"/>
+                            <constraint firstItem="Je0-d1-Ck5" firstAttribute="top" secondItem="mUc-2w-IgR" secondAttribute="bottom" constant="5.5" id="y2c-Kh-kj1"/>
+                            <constraint firstItem="U0K-Ny-tb4" firstAttribute="trailing" secondItem="tsU-sv-XJ2" secondAttribute="trailingMargin" id="ya8-Uy-XdQ"/>
+                            <constraint firstItem="xUN-AP-YAn" firstAttribute="leading" secondItem="tsU-sv-XJ2" secondAttribute="leadingMargin" id="z16-ja-ihv"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="emailTextField" destination="Xzz-vD-4TQ" id="xg2-fT-xBD"/>
-                        <outlet property="nomeTextField" destination="CC8-oP-zYa" id="SIP-2x-r8P"/>
-                        <outlet property="repitaSenhaTextField" destination="wwC-pT-Aib" id="iOS-1p-Bvg"/>
-                        <outlet property="senhaTextField" destination="yK1-wK-gtN" id="KUO-SQ-b67"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JYH-5e-TiR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1360,35 +1388,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bkgLR" translatesAutoresizingMaskIntoConstraints="NO" id="Jgw-Ia-AhO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bkgLR" translatesAutoresizingMaskIntoConstraints="NO" id="Jgw-Ia-AhO">
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="hoE-za-n2N">
-                                <rect key="frame" x="20" y="203" width="284" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="hoE-za-n2N">
+                                <rect key="frame" x="16" y="198" width="288" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Tva-Nd-0k4"/>
+                                    <constraint firstAttribute="width" constant="288" id="cuf-v6-j4W"/>
+                                </constraints>
                                 <string key="text">Se você esqueceu a sua senha, digite o seu email cadastrado que logo em seguida será encaminhado um email para criar uma nova senha do seu agrado.</string>
                                 <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="E-mail:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R0u-Ra-p85">
-                                <rect key="frame" x="20" y="323" width="284" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R0u-Ra-p85">
+                                <rect key="frame" x="16" y="323" width="288" height="22.5"/>
                                 <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                 <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wof-fj-iMc">
-                                <rect key="frame" x="16" y="352" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wof-fj-iMc">
+                                <rect key="frame" x="16" y="353.5" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yks-4w-uYg" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
-                                <rect key="frame" x="115" y="390" width="90" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yks-4w-uYg" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
+                                <rect key="frame" x="115" y="391.5" width="90" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="Zqb-ck-NFF"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="12"/>
                                 <state key="normal" title="VOLTAR"/>
                                 <userDefinedRuntimeAttributes>
@@ -1407,9 +1437,11 @@
                                     <segue destination="jhy-0y-LRv" kind="show" id="gMC-fS-FIo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBh-AW-oUM" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
-                                <rect key="frame" x="115" y="428" width="90" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBh-AW-oUM" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
+                                <rect key="frame" x="115" y="426.5" width="90" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="RRM-eW-Qbs"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="12"/>
                                 <state key="normal" title="ENVIAR"/>
                                 <userDefinedRuntimeAttributes>
@@ -1428,12 +1460,32 @@
                                     <action selector="enviarRecovery:" destination="Nxd-7k-OuF" eventType="touchUpInside" id="Bl1-fO-XKc"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="LVa-H1-5B6">
-                                <rect key="frame" x="74" y="51" width="173" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="LVa-H1-5B6">
+                                <rect key="frame" x="74" y="51" width="173" height="122"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nBh-AW-oUM" firstAttribute="top" secondItem="Yks-4w-uYg" secondAttribute="bottom" constant="8" id="0p7-eK-QbH"/>
+                            <constraint firstItem="hoE-za-n2N" firstAttribute="top" secondItem="LVa-H1-5B6" secondAttribute="bottom" constant="25" id="1wa-ii-j7h"/>
+                            <constraint firstItem="hoE-za-n2N" firstAttribute="trailing" secondItem="eJ5-gz-kyj" secondAttribute="trailingMargin" id="2wJ-CB-Rb7"/>
+                            <constraint firstItem="wof-fj-iMc" firstAttribute="top" secondItem="R0u-Ra-p85" secondAttribute="bottom" constant="8" id="A2v-6G-X4y"/>
+                            <constraint firstAttribute="trailing" secondItem="Jgw-Ia-AhO" secondAttribute="trailing" id="BSu-EJ-bwp"/>
+                            <constraint firstItem="wof-fj-iMc" firstAttribute="leading" secondItem="eJ5-gz-kyj" secondAttribute="leadingMargin" id="HUC-8w-7VM"/>
+                            <constraint firstItem="Jgw-Ia-AhO" firstAttribute="leading" secondItem="eJ5-gz-kyj" secondAttribute="leading" id="IT3-ep-F74"/>
+                            <constraint firstItem="nBh-AW-oUM" firstAttribute="centerX" secondItem="eJ5-gz-kyj" secondAttribute="centerX" id="J8I-n9-Fe2"/>
+                            <constraint firstItem="LVa-H1-5B6" firstAttribute="centerX" secondItem="eJ5-gz-kyj" secondAttribute="centerX" id="JQB-Nj-oFu"/>
+                            <constraint firstItem="Jgw-Ia-AhO" firstAttribute="top" secondItem="TYl-Wn-lB7" secondAttribute="bottom" id="M5S-Nb-9M9"/>
+                            <constraint firstItem="R0u-Ra-p85" firstAttribute="leading" secondItem="eJ5-gz-kyj" secondAttribute="leadingMargin" id="TGb-if-P9Y"/>
+                            <constraint firstItem="R0u-Ra-p85" firstAttribute="top" secondItem="hoE-za-n2N" secondAttribute="bottom" constant="25" id="TnP-au-PQO"/>
+                            <constraint firstItem="R0u-Ra-p85" firstAttribute="trailing" secondItem="eJ5-gz-kyj" secondAttribute="trailingMargin" id="UzJ-zl-sca"/>
+                            <constraint firstItem="hoE-za-n2N" firstAttribute="leading" secondItem="eJ5-gz-kyj" secondAttribute="leadingMargin" id="V7L-KR-wKO"/>
+                            <constraint firstItem="kIm-AT-a1x" firstAttribute="top" secondItem="Jgw-Ia-AhO" secondAttribute="bottom" id="VVP-IS-Lxi"/>
+                            <constraint firstItem="Yks-4w-uYg" firstAttribute="centerX" secondItem="eJ5-gz-kyj" secondAttribute="centerX" id="cJp-Ke-bU4"/>
+                            <constraint firstItem="Yks-4w-uYg" firstAttribute="top" secondItem="wof-fj-iMc" secondAttribute="bottom" constant="8" id="dj3-rc-8QV"/>
+                            <constraint firstItem="wof-fj-iMc" firstAttribute="trailing" secondItem="eJ5-gz-kyj" secondAttribute="trailingMargin" id="hku-t3-KEe"/>
+                            <constraint firstItem="LVa-H1-5B6" firstAttribute="top" secondItem="TYl-Wn-lB7" secondAttribute="bottom" constant="31" id="ye9-Qa-1V4"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="wof-fj-iMc" id="etT-46-aer"/>
@@ -1455,44 +1507,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bkgLR" translatesAutoresizingMaskIntoConstraints="NO" id="ko0-sm-cHV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bkgLR" translatesAutoresizingMaskIntoConstraints="NO" id="ko0-sm-cHV">
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="YN0-BH-h9o">
-                                <rect key="frame" x="73.5" y="48" width="173" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="YN0-BH-h9o">
+                                <rect key="frame" x="73.5" y="48" width="173" height="122"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="E-mail:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLj-tg-9tH">
-                                <rect key="frame" x="16" y="184" width="288" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLj-tg-9tH">
+                                <rect key="frame" x="16" y="184" width="288" height="22.5"/>
                                 <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                 <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="38F-5R-3Lg">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="38F-5R-3Lg">
                                 <rect key="frame" x="16" y="213" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Senha:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIB-pd-BPS">
-                                <rect key="frame" x="16" y="251" width="288" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senha:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIB-pd-BPS">
+                                <rect key="frame" x="16" y="251" width="288" height="22.5"/>
                                 <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                 <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j7o-aM-edT">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j7o-aM-edT">
                                 <rect key="frame" x="16" y="280" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeS-St-d2E" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
-                                <rect key="frame" x="114" y="369" width="90" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeS-St-d2E" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
+                                <rect key="frame" x="115" y="369" width="90" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="9nH-QG-4n5"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="12"/>
                                 <state key="normal" title="ENTRAR"/>
                                 <userDefinedRuntimeAttributes>
@@ -1511,9 +1560,11 @@
                                     <segue destination="14D-6s-HV0" kind="show" identifier="segueEntrar" id="3xH-FV-GWE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bD-te-fZl" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
-                                <rect key="frame" x="115" y="407" width="90" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bD-te-fZl" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
+                                <rect key="frame" x="115" y="404" width="90" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="7bb-Eq-s5Z"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="12"/>
                                 <state key="normal" title="REGISTRAR"/>
                                 <userDefinedRuntimeAttributes>
@@ -1532,9 +1583,8 @@
                                     <segue destination="hev-yN-Trh" kind="show" id="yd0-0T-zCx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPu-1j-eiw" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
-                                <rect key="frame" x="58" y="318" width="205" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPu-1j-eiw" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
+                                <rect key="frame" x="84" y="318" width="153" height="27"/>
                                 <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="12"/>
                                 <state key="normal" title="ESQUECI MINHA SENHA"/>
                                 <userDefinedRuntimeAttributes>
@@ -1556,7 +1606,32 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="NeS-St-d2E" firstAttribute="top" secondItem="WPu-1j-eiw" secondAttribute="bottom" constant="24" id="7Rm-mB-GYT"/>
+                            <constraint firstItem="38F-5R-3Lg" firstAttribute="trailing" secondItem="LSd-Up-fJr" secondAttribute="trailingMargin" id="9Tg-K7-Z0Q"/>
+                            <constraint firstItem="tLj-tg-9tH" firstAttribute="trailing" secondItem="LSd-Up-fJr" secondAttribute="trailingMargin" id="9fY-Cg-6Oh"/>
+                            <constraint firstItem="tLj-tg-9tH" firstAttribute="top" secondItem="YN0-BH-h9o" secondAttribute="bottom" constant="14" id="EpH-Oe-Vd4"/>
+                            <constraint firstItem="NeS-St-d2E" firstAttribute="centerX" secondItem="LSd-Up-fJr" secondAttribute="centerX" id="FgQ-Ks-HzF"/>
+                            <constraint firstItem="wIB-pd-BPS" firstAttribute="leading" secondItem="LSd-Up-fJr" secondAttribute="leadingMargin" id="Fra-7d-nfb"/>
+                            <constraint firstItem="tLj-tg-9tH" firstAttribute="leading" secondItem="LSd-Up-fJr" secondAttribute="leadingMargin" id="IUl-IM-hMu"/>
+                            <constraint firstItem="j7o-aM-edT" firstAttribute="trailing" secondItem="LSd-Up-fJr" secondAttribute="trailingMargin" id="JcW-TK-ruf"/>
+                            <constraint firstItem="j7o-aM-edT" firstAttribute="leading" secondItem="LSd-Up-fJr" secondAttribute="leadingMargin" id="L6o-gV-UVM"/>
+                            <constraint firstItem="7bD-te-fZl" firstAttribute="top" secondItem="NeS-St-d2E" secondAttribute="bottom" constant="8" id="MD2-Jb-pvP"/>
+                            <constraint firstItem="ko0-sm-cHV" firstAttribute="top" secondItem="A0s-jz-TnS" secondAttribute="bottom" id="O8f-Tp-uad"/>
+                            <constraint firstItem="WPu-1j-eiw" firstAttribute="top" secondItem="j7o-aM-edT" secondAttribute="bottom" constant="8" id="OIG-vu-DoD"/>
+                            <constraint firstItem="7bD-te-fZl" firstAttribute="centerX" secondItem="LSd-Up-fJr" secondAttribute="centerX" id="QD1-Yt-dYi"/>
+                            <constraint firstAttribute="trailing" secondItem="ko0-sm-cHV" secondAttribute="trailing" id="STY-9D-r9W"/>
+                            <constraint firstItem="ko0-sm-cHV" firstAttribute="leading" secondItem="LSd-Up-fJr" secondAttribute="leading" id="Sio-u3-m2i"/>
+                            <constraint firstItem="38F-5R-3Lg" firstAttribute="leading" secondItem="LSd-Up-fJr" secondAttribute="leadingMargin" id="aqZ-1v-ZfG"/>
+                            <constraint firstItem="7bD-te-fZl" firstAttribute="centerX" secondItem="LSd-Up-fJr" secondAttribute="centerX" id="cfj-cs-LIr"/>
+                            <constraint firstItem="38F-5R-3Lg" firstAttribute="top" secondItem="tLj-tg-9tH" secondAttribute="bottom" constant="6.5" id="jX7-Of-QRp"/>
                             <constraint firstItem="YN0-BH-h9o" firstAttribute="centerX" secondItem="LSd-Up-fJr" secondAttribute="centerX" id="lEV-zH-sWU"/>
+                            <constraint firstItem="NeS-St-d2E" firstAttribute="centerX" secondItem="LSd-Up-fJr" secondAttribute="centerX" id="rnh-Ae-vfY"/>
+                            <constraint firstItem="wIB-pd-BPS" firstAttribute="trailing" secondItem="LSd-Up-fJr" secondAttribute="trailingMargin" id="scI-cy-loR"/>
+                            <constraint firstItem="boY-1Z-K74" firstAttribute="top" secondItem="ko0-sm-cHV" secondAttribute="bottom" id="w2I-kp-rje"/>
+                            <constraint firstItem="j7o-aM-edT" firstAttribute="top" secondItem="wIB-pd-BPS" secondAttribute="bottom" constant="6.5" id="waN-QZ-w17"/>
+                            <constraint firstItem="YN0-BH-h9o" firstAttribute="top" secondItem="A0s-jz-TnS" secondAttribute="bottom" constant="28" id="wle-pX-Dvn"/>
+                            <constraint firstItem="WPu-1j-eiw" firstAttribute="centerX" secondItem="LSd-Up-fJr" secondAttribute="centerX" id="xt9-cy-U22"/>
+                            <constraint firstItem="wIB-pd-BPS" firstAttribute="top" secondItem="38F-5R-3Lg" secondAttribute="bottom" constant="8" id="yj7-RO-st6"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1637,107 +1712,107 @@
                         <viewControllerLayoutGuide type="bottom" id="vLR-gt-X6c"/>
                     </layoutGuides>
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="BxX-Nw-1xt">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="850"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="940"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cHp-4X-P6X">
-                                <rect key="frame" x="0.0" y="2" width="320" height="735"/>
+                                <rect key="frame" x="0.0" y="2" width="320" height="825"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bkgLR" translatesAutoresizingMaskIntoConstraints="NO" id="qLR-Ez-Arh">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="746"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="825"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CPF:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVD-Qv-bIl">
-                                        <rect key="frame" x="8" y="153" width="304" height="21"/>
+                                        <rect key="frame" x="8" y="243" width="304" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ciP-YI-VtW">
-                                        <rect key="frame" x="8" y="249" width="156" height="30"/>
+                                        <rect key="frame" x="8" y="339" width="156" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Receber Notificação:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uC0-lZ-e3T">
-                                        <rect key="frame" x="8" y="612" width="304" height="21"/>
+                                        <rect key="frame" x="8" y="702" width="304" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Número:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SE8-2N-bvE">
-                                        <rect key="frame" x="8" y="388" width="304" height="21"/>
+                                        <rect key="frame" x="8" y="478" width="304" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Senha:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MxV-Qb-hp8">
-                                        <rect key="frame" x="8" y="220" width="156" height="21"/>
+                                        <rect key="frame" x="8" y="310" width="156" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dados do Cartão de crédito" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVb-oK-Gu0">
-                                        <rect key="frame" x="8" y="287" width="288" height="21"/>
+                                        <rect key="frame" x="8" y="377" width="288" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TnZ-G5-1KU">
-                                        <rect key="frame" x="8" y="484" width="304" height="30"/>
+                                        <rect key="frame" x="8" y="574" width="304" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z86-gj-HXO">
-                                        <rect key="frame" x="176" y="249" width="136" height="30"/>
+                                        <rect key="frame" x="176" y="339" width="136" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMJ-C5-nyJ">
-                                        <rect key="frame" x="8" y="19" width="304" height="21"/>
+                                        <rect key="frame" x="8" y="109" width="304" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="olv-cb-G3o">
-                                        <rect key="frame" x="8" y="48" width="304" height="30"/>
+                                        <rect key="frame" x="8" y="138" width="304" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tipo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdC-zb-OOh">
-                                        <rect key="frame" x="8" y="541" width="105" height="21"/>
+                                        <rect key="frame" x="8" y="631" width="105" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b5q-n5-Khp">
-                                        <rect key="frame" x="8" y="350" width="304" height="30"/>
+                                        <rect key="frame" x="8" y="440" width="304" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hHB-BB-Poc">
-                                        <rect key="frame" x="121" y="524" width="80" height="50"/>
+                                        <rect key="frame" x="121" y="614" width="80" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hn0-LO-Fi7" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="697" width="112" height="30"/>
+                                        <rect key="frame" x="8" y="787" width="112" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="12"/>
                                         <state key="normal" title="SAIR DA CONTA">
@@ -1760,56 +1835,56 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQP-9d-ZfZ">
-                                        <rect key="frame" x="8" y="321" width="304" height="21"/>
+                                        <rect key="frame" x="8" y="411" width="304" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gWt-Xh-0gw">
-                                        <rect key="frame" x="8" y="182" width="304" height="30"/>
+                                        <rect key="frame" x="8" y="272" width="304" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Validade:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0J-3l-AU5">
-                                        <rect key="frame" x="8" y="455" width="304" height="21"/>
+                                        <rect key="frame" x="8" y="545" width="304" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Repita:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnK-n8-LOh">
-                                        <rect key="frame" x="176" y="218" width="136" height="21"/>
+                                        <rect key="frame" x="176" y="308" width="136" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UR8-KW-gaH">
-                                        <rect key="frame" x="8" y="115" width="304" height="30"/>
+                                        <rect key="frame" x="8" y="205" width="304" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="E-mail:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcE-IJ-cbz">
-                                        <rect key="frame" x="8" y="86" width="304" height="21"/>
+                                        <rect key="frame" x="8" y="176" width="304" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Up4-bT-bhJ">
-                                        <rect key="frame" x="8" y="417" width="304" height="30"/>
+                                        <rect key="frame" x="8" y="507" width="304" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2Vt-Gn-PMg">
-                                        <rect key="frame" x="8" y="641" width="120" height="29"/>
+                                        <rect key="frame" x="8" y="731" width="120" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <segments>
                                             <segment title="Sim"/>
@@ -1817,6 +1892,15 @@
                                         </segments>
                                         <color key="tintColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                     </segmentedControl>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person" translatesAutoresizingMaskIntoConstraints="NO" id="pJX-tL-Z9d" customClass="RoundImage" customModule="CoffeeTasters" customModuleProvider="target">
+                                        <rect key="frame" x="116" y="11" width="90" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="46"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -1824,7 +1908,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
-                                <size key="value" width="320" height="735"/>
+                                <size key="value" width="320" height="940"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </scrollView>
@@ -1836,10 +1920,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="850"/>
+                    <size key="freeformSize" width="320" height="940"/>
                     <connections>
                         <outlet property="cpfTextField" destination="gWt-Xh-0gw" id="fak-nR-rUV"/>
                         <outlet property="emailTextField" destination="UR8-KW-gaH" id="sl0-3C-mLk"/>
+                        <outlet property="imagem" destination="pJX-tL-Z9d" id="x3d-33-Tdi"/>
                         <outlet property="nomeCartaoTextField" destination="b5q-n5-Khp" id="t1t-Wh-ZMY"/>
                         <outlet property="nomeTextField" destination="olv-cb-G3o" id="9js-hQ-whS"/>
                         <outlet property="numeroCartaoTextField" destination="Up4-bT-bhJ" id="iea-o4-wQZ"/>
