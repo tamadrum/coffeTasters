@@ -38,8 +38,7 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         usuario.load()
         
-        //imagemUsuario.af_setImage(withURL: URL(string: usuario.perfilImg)!)
-        imagemUsuario.af_setImage(withURL: URL(string: "https://scontent.xx.fbcdn.net/v/t1.0-1/s200x200/260309_109093429183855_4105400_n.jpg?oh=431b0154e83c77097560bba9fa6f29d8&oe=5958F8AE")!)
+        imagemUsuario.af_setImage(withURL: URL(string: usuario.perfilImg)!)
         nomeUsuario.text = usuario.nome
         sobrenomeUsuario.text = usuario.sobrenome
         emailUsuario.text = usuario.email

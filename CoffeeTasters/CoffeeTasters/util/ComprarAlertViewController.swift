@@ -14,7 +14,7 @@ class ComprarAlertViewController {
     
     let controller:UIViewController
     
-    init(controller:UIViewController){
+    init(_ controller:UIViewController){
         self.controller = controller
     }
     

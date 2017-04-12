@@ -23,6 +23,7 @@
 		1614EE461E8E5F8400C44F11 /* FinalizarCompraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1614EE451E8E5F8400C44F11 /* FinalizarCompraViewController.swift */; };
 		1676E9E21E9E3D2F0061C067 /* HeightSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1676E9E11E9E3D2F0061C067 /* HeightSegmentControl.swift */; };
 		1676E9E41E9E5B1F0061C067 /* BorderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1676E9E31E9E5B1F0061C067 /* BorderTextView.swift */; };
+		1676E9E61E9E88610061C067 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1676E9E51E9E88610061C067 /* icon.png */; };
 		1690A1C51E8EB6610039BDC1 /* RoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690A1C41E8EB6610039BDC1 /* RoundImage.swift */; };
 		1690A1C81E8F17980039BDC1 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690A1C71E8F17980039BDC1 /* Usuario.swift */; };
 		1690A1CF1E8F2ABD0039BDC1 /* WheelFlavor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690A1CE1E8F2ABD0039BDC1 /* WheelFlavor.swift */; };
@@ -109,6 +110,7 @@
 		167327881E9C4E1500786B8D /* Merriweather-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-Regular.ttf"; path = "fonts/Merriweather-Regular.ttf"; sourceTree = "<group>"; };
 		1676E9E11E9E3D2F0061C067 /* HeightSegmentControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeightSegmentControl.swift; path = custom/HeightSegmentControl.swift; sourceTree = "<group>"; };
 		1676E9E31E9E5B1F0061C067 /* BorderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BorderTextView.swift; path = custom/BorderTextView.swift; sourceTree = "<group>"; };
+		1676E9E51E9E88610061C067 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = CoffeeTasters/icon.png; sourceTree = "<group>"; };
 		1690A1C41E8EB6610039BDC1 /* RoundImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundImage.swift; path = custom/RoundImage.swift; sourceTree = "<group>"; };
 		1690A1C71E8F17980039BDC1 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Usuario.swift; path = modelo/Usuario.swift; sourceTree = "<group>"; };
 		1690A1CE1E8F2ABD0039BDC1 /* WheelFlavor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WheelFlavor.swift; path = custom/WheelFlavor.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 		16EBC5DA1E8C66CB00A87B2F = {
 			isa = PBXGroup;
 			children = (
+				1676E9E51E9E88610061C067 /* icon.png */,
 				16EBC5E51E8C66CB00A87B2F /* CoffeeTasters */,
 				16EBC5FD1E8C66CB00A87B2F /* CoffeeTastersTests */,
 				16EBC5E41E8C66CB00A87B2F /* Products */,
@@ -465,6 +468,7 @@
 				1F3B7DDA1E9D35BF00CA81C8 /* Merriweather-BoldItalic.ttf in Resources */,
 				16F5B2B31E9BABA600E0D191 /* Anotacoes.txt in Resources */,
 				16E67A3D1E912D44005EE82E /* EULA.txt in Resources */,
+				1676E9E61E9E88610061C067 /* icon.png in Resources */,
 				1F3B7DDF1E9D35D500CA81C8 /* Merriweather-Regular.ttf in Resources */,
 				16EBC61D1E8DC1CE00A87B2F /* Storyboard.storyboard in Resources */,
 				16EBC60C1E8C67AD00A87B2F /* Assets.xcassets in Resources */,

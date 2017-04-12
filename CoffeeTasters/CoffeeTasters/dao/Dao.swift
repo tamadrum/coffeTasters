@@ -40,11 +40,18 @@ class Dao<T> {
         
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
             managedContext = appDelegate.persistentContainer.viewContext
+        } else {
+            print("**************************")
+            print("Não consegui instanciar o contexto do banco de dados")
+            print("**************************")
         }
         
     }
     
     func new() -> T {
+        print("**************************")
+        print("Criado um objeto do tipo \(banco!)")
+        print("**************************")
         return NSEntityDescription.insertNewObject(forEntityName: banco!,
                                                    into: managedContext) as! T
     }
@@ -56,8 +63,13 @@ class Dao<T> {
         
         do {
             retorno = try managedContext.fetch(fetchRequest) as! [T]
+            print("**************************")
+            print("Listando \(banco!) [\(retorno.count)]")
+            print("**************************")
         } catch let error as NSError {
+            print("**************************")
             print("Could not fetch. \(error), \(error.userInfo)")
+            print("**************************")
         }
         return retorno
     }
@@ -74,10 +86,15 @@ class Dao<T> {
         if managedContext.hasChanges {
             do {
                 try managedContext.save()
-            } catch {
-                let nserror = error as NSError
-                fatalError("Impossível salvar... \(nserror), \(nserror.userInfo)")
+            } catch let error as NSError {
+                print("**************************")
+                print("Impossível salvar... \(error), \(error.userInfo)")
+                print("**************************")
             }
+        } else {
+            print("**************************")
+            print("Nada para salvar")
+            print("**************************")
         }
     }
 
@@ -88,7 +105,9 @@ class Dao<T> {
             let count = try managedContext.count(for: fetchRequest)
             return count
         } catch let error as NSError {
+            print("**************************")
             print("Error: \(error.localizedDescription)")
+            print("**************************")
             return 0
         }
     }
@@ -101,29 +120,6 @@ class Dao<T> {
             print("**************************")
             print("inserindo dados iniciais")
             print("**************************")
-            // Inserindo Produtos
-                
-                let prod1:Produto = Dao<Produto>().new()
-                prod1.nome = "Café Pelé"
-                prod1.preco = 10
-                prod1.tipo = "Café"
-                prod1.oferta = true
-                prod1.precoOferta = 9
-                prod1.descricao = "Descrição do Café"
-                
-                let prod2 = Dao<Produto>().new()
-                prod2.nome = "Café Pilão"
-                prod2.preco = 20
-                prod2.tipo = "Café"
-                prod2.oferta = false
-                prod2.descricao = "Descrição do Café"
-                
-                let prod3 = Dao<Produto>().new()
-                prod3.nome = "3 Corações"
-                prod3.preco = 30
-                prod3.tipo = "Café"
-                prod3.oferta = false
-                prod3.descricao = "Descrição do Café"
             
             // Inserindo Pedidos
             
@@ -153,49 +149,19 @@ class Dao<T> {
                 
                 ped1.addToItens(item1)
                 ped1.addToItens(item2)
-                
-                let ped2 = Dao<Pedido>().new()
-                ped2.numero = 202020
-                ped2.status = "Em processamento..."
-                ped2.valorTotal = 100
-                ped2.itens = NSSet()
-                
-                let item3 = Dao<Item>().new()
-                item3.quantidade = 2
-                item3.produto = Dao<Produto>().new()
-                item3.produto?.nome = "Café 3 Corações"
-                item3.produto?.preco = 20
-                item3.produto?.tipo = "Café"
-                item3.produto?.oferta = false
-                item3.produto?.precoOferta = 9
-                item3.produto?.descricao = "Descrição do Café"
-                
-                let item4 = Dao<Item>().new()
-                item4.quantidade = 3
-                item4.produto = Dao<Produto>().new()
-                item4.produto?.nome = "Café Illy"
-                item4.produto?.preco = 50
-                item4.produto?.tipo = "Café"
-                item4.produto?.oferta = false
-                item4.produto?.descricao = "Descrição do Café"
-                
-                ped2.addToItens(item3)
-                ped2.addToItens(item4)
+            
+                save()
             
             // Inserindo Cafés
             
                 var nomes = ["AC CAFÉ", "CARMO ESTATE COFFEE", "DB ESTATE COFFEE", "ECOAGRÍCOLA CAFÉ LTDA",
                              "FAZENDA BELA VISTA", "FAZENDA CAMBARÁ", "FAZENDA CAMOCIM", "FAZENDA CAPOEIRA ESTATE COFFEE", "FAZENDA DO SERTÃO",
-                             "FAZENDA DUTRA", "FAZENDA HELENA", "Café Pelé", "3 Corações", "FAZENDA SERRA DAS TRÊS BARRAS",
-                             "FAZENDINHA DO VOVÔ", "IPANEMA COFFEES", "KALDI CAFÉ GOURMET PREMIUM - FAZENDA HARMONIA", "O'COFFEE BRAZILIAN ESTATES",
-                             "PEREIRA STATE COFFEE", "SANTA ROSA ESTATE COFFEE", "Nespresso" ]
+                             "FAZENDA DUTRA", "FAZENDA HELENA", "Café Pelé", "3 Corações", "FAZENDA SERRA DAS TRÊS BARRAS", "Nespresso" ]
                 
                 nomes.sort()
             
-                let dao = Dao<Cafe>()
-            
                 for i in 1..<nomes.count {
-                    let c = dao.new()
+                    let c = Dao<Cafe>().new()
                     c.nome = nomes[i]
                     c.altitude = 20
                     c.cidade = "três lagoas"
@@ -231,7 +197,7 @@ class Dao<T> {
                     c.longitude = -46.5708517
                 }
                 
-                dao.save()
+                save()
 
             configuracoes.set(true, forKey: "dados_inseridos")
             configuracoes.synchronize()
