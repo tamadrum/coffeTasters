@@ -6,10 +6,6 @@ Safras em Janeiro, Maio e Setembro até 1 ano atrás
 Ordenar lista de cafés descendente por safra e nome
 Última linha da lista de cafés é o addCafé
 
-Buscar Cafés???
-
 Aonde colocar o QRCode agora???
 
-Colocar as fontes no local certo das telas...
-
-Por uma borda na tabela de busca no perfil
+Por os marrons no lugar certo!

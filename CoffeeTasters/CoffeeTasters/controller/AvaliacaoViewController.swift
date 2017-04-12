@@ -43,21 +43,22 @@ class AvaliacaoViewController: UIViewController {
     @IBOutlet weak var rating: RatingView!
     @IBOutlet weak var cafeBlendSegmentControl: UISegmentedControl!
     
-    var cafeAvaliado: Cafe!
+    var cafeAvaliado: Cafe?
     
     override func viewDidLoad() {
-        nomeTextField.text = cafeAvaliado.nome
-        paisTextField.text = cafeAvaliado.pais
-        cidadeTextField.text = cafeAvaliado.cidade
-        estadoTextField.text = cafeAvaliado.estado
-        produtorTextField.text = cafeAvaliado.produtor
-        torradorTextField.text = cafeAvaliado.torrador
-        regiaoTextField.text = cafeAvaliado.regiao
-        tipoTextField.text = cafeAvaliado.tipo
-        safraTextField.text = cafeAvaliado.safra
-        cafeBlendSegmentControl.selectedSegmentIndex = 0
-        
-        
+        if let cafeAvaliado = cafeAvaliado {
+            nomeTextField.text = cafeAvaliado.nome
+            paisTextField.text = cafeAvaliado.pais
+            cidadeTextField.text = cafeAvaliado.cidade
+            estadoTextField.text = cafeAvaliado.estado
+            produtorTextField.text = cafeAvaliado.produtor
+            torradorTextField.text = cafeAvaliado.torrador
+            regiaoTextField.text = cafeAvaliado.regiao
+            tipoTextField.text = cafeAvaliado.tipo
+            safraTextField.text = cafeAvaliado.safra
+            cafeBlendSegmentControl.selectedSegmentIndex = 0
+            
+        }
     }
     
     @IBAction func salvarAvaliacao(_ sender: UIBarButtonItem) {
