@@ -39,4 +39,13 @@ class CafeListViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Storyboard", bundle: nil)
+        let viewDetalhes = storyboard.instantiateViewController(withIdentifier: "detalhesCafe") as! DetalhesCafeController
+        
+        viewDetalhes.cafeAvaliado = cafes[indexPath.row]
+        navigationController?.pushViewController(viewDetalhes, animated: true)
+
+    }
+    
 }

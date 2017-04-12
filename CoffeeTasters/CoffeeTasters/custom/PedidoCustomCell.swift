@@ -15,9 +15,6 @@ class PedidoCustomCell: UITableViewCell {
     @IBOutlet weak var dataPedido: UILabel!
     @IBOutlet weak var imagemStatusPedido: UIImageView!
     @IBOutlet weak var totalPedido: UILabel!
-    
-    
-    @IBAction func comprarNovamente(_ sender: UIButton) {
-    }
+    @IBOutlet weak var comprarNovamente: BorderButton!
     
 }

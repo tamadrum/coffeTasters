@@ -21,6 +21,8 @@
 		1614EE421E8E5F1F00C44F11 /* NotificacoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1614EE411E8E5F1F00C44F11 /* NotificacoesViewController.swift */; };
 		1614EE441E8E5F3800C44F11 /* AvaliacaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1614EE431E8E5F3800C44F11 /* AvaliacaoViewController.swift */; };
 		1614EE461E8E5F8400C44F11 /* FinalizarCompraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1614EE451E8E5F8400C44F11 /* FinalizarCompraViewController.swift */; };
+		1676E9E21E9E3D2F0061C067 /* HeightSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1676E9E11E9E3D2F0061C067 /* HeightSegmentControl.swift */; };
+		1676E9E41E9E5B1F0061C067 /* BorderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1676E9E31E9E5B1F0061C067 /* BorderTextView.swift */; };
 		1690A1C51E8EB6610039BDC1 /* RoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690A1C41E8EB6610039BDC1 /* RoundImage.swift */; };
 		1690A1C81E8F17980039BDC1 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690A1C71E8F17980039BDC1 /* Usuario.swift */; };
 		1690A1CF1E8F2ABD0039BDC1 /* WheelFlavor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690A1CE1E8F2ABD0039BDC1 /* WheelFlavor.swift */; };
@@ -105,6 +107,8 @@
 		167327861E9C4E1500786B8D /* Merriweather-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-Light.ttf"; path = "fonts/Merriweather-Light.ttf"; sourceTree = "<group>"; };
 		167327871E9C4E1500786B8D /* Merriweather-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-LightItalic.ttf"; path = "fonts/Merriweather-LightItalic.ttf"; sourceTree = "<group>"; };
 		167327881E9C4E1500786B8D /* Merriweather-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-Regular.ttf"; path = "fonts/Merriweather-Regular.ttf"; sourceTree = "<group>"; };
+		1676E9E11E9E3D2F0061C067 /* HeightSegmentControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeightSegmentControl.swift; path = custom/HeightSegmentControl.swift; sourceTree = "<group>"; };
+		1676E9E31E9E5B1F0061C067 /* BorderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BorderTextView.swift; path = custom/BorderTextView.swift; sourceTree = "<group>"; };
 		1690A1C41E8EB6610039BDC1 /* RoundImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundImage.swift; path = custom/RoundImage.swift; sourceTree = "<group>"; };
 		1690A1C71E8F17980039BDC1 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Usuario.swift; path = modelo/Usuario.swift; sourceTree = "<group>"; };
 		1690A1CE1E8F2ABD0039BDC1 /* WheelFlavor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WheelFlavor.swift; path = custom/WheelFlavor.swift; sourceTree = "<group>"; };
@@ -324,6 +328,8 @@
 				16E67A5B1E913173005EE82E /* CarrinhoItemCustomCell.swift */,
 				16E67A5D1E913195005EE82E /* NotificacaoCustomCell.swift */,
 				16E67A5F1E913757005EE82E /* BuscaResultCustomCell.swift */,
+				1676E9E11E9E3D2F0061C067 /* HeightSegmentControl.swift */,
+				1676E9E31E9E5B1F0061C067 /* BorderTextView.swift */,
 			);
 			name = custom;
 			sourceTree = "<group>";
@@ -576,6 +582,7 @@
 			files = (
 				1614EE401E8E5F0A00C44F11 /* CarrinhoViewController.swift in Sources */,
 				1614EE301E8E5E3100C44F11 /* EsqueciSenhaViewController.swift in Sources */,
+				1676E9E21E9E3D2F0061C067 /* HeightSegmentControl.swift in Sources */,
 				1614EE3A1E8E5EB600C44F11 /* CafeteriaListViewController.swift in Sources */,
 				16EBC6131E8C792B00A87B2F /* MeusDadosViewController.swift in Sources */,
 				16EBC5EF1E8C66CB00A87B2F /* CoffeeTasters.xcdatamodeld in Sources */,
@@ -594,6 +601,7 @@
 				1690A1D11E8F2AE50039BDC1 /* Dao.swift in Sources */,
 				1614EE361E8E5E8A00C44F11 /* AssinaturasViewController.swift in Sources */,
 				16EBC61F1E8DCE4500A87B2F /* PerfilViewController.swift in Sources */,
+				1676E9E41E9E5B1F0061C067 /* BorderTextView.swift in Sources */,
 				16EBC5E71E8C66CB00A87B2F /* AppDelegate.swift in Sources */,
 				1614EE441E8E5F3800C44F11 /* AvaliacaoViewController.swift in Sources */,
 				16E67A2F1E911A34005EE82E /* CarrinhoDao.swift in Sources */,

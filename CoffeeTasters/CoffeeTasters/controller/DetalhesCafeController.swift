@@ -74,6 +74,6 @@ class DetalhesCafeController: UIViewController {
     }
     
     @IBAction func comprarCafe(_ sender: Any) {
-        
+        print("Comprar café")
     }
 }

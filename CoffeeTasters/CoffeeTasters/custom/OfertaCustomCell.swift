@@ -18,7 +18,7 @@ class OfertaCustomCell: UITableViewCell {
     @IBOutlet weak var valorDesconto: UILabel!
     @IBOutlet weak var imagemLogoCafe: UIImageView!
     
-    @IBAction func Comprar(_ sender: UIButton) {
-    }
+    @IBOutlet weak var comprar: BorderButton!
+
     
 }

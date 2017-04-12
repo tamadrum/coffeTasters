@@ -39,11 +39,17 @@ class OfertasViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.valorCheio.text = "R$ \(produtos[indexPath.row].preco)"
         cell.valorDesconto.text = "R$ \(produtos[indexPath.row].precoOferta)"
         
+        cell.comprar.addTarget(self, action: #selector(comprar), for: .touchUpInside)
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
+    }
+    
+    func comprar () {
+        print("comprar")
     }
     
 }
