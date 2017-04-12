@@ -49,9 +49,6 @@ class Dao<T> {
     }
     
     func new() -> T {
-        print("**************************")
-        print("Criado um objeto do tipo \(banco!)")
-        print("**************************")
         return NSEntityDescription.insertNewObject(forEntityName: banco!,
                                                    into: managedContext) as! T
     }
@@ -63,9 +60,9 @@ class Dao<T> {
         
         do {
             retorno = try managedContext.fetch(fetchRequest) as! [T]
-            print("**************************")
-            print("Listando \(banco!) [\(retorno.count)]")
-            print("**************************")
+//            print("**************************")
+//            print("Listando \(banco!) [\(retorno.count)]")
+//            print("**************************")
         } catch let error as NSError {
             print("**************************")
             print("Could not fetch. \(error), \(error.userInfo)")
@@ -85,6 +82,9 @@ class Dao<T> {
     func save () {
         if managedContext.hasChanges {
             do {
+//                print("**************************")
+//                print("Vou salvar no \(banco!)")
+//                print("**************************")
                 try managedContext.save()
             } catch let error as NSError {
                 print("**************************")
@@ -150,7 +150,11 @@ class Dao<T> {
                 ped1.addToItens(item1)
                 ped1.addToItens(item2)
             
-                save()
+            // Inserindo Carrinho
+            
+                let carrinho = CarrinhoDao().getCarrinho()
+                carrinho.addToItens(item1)
+                carrinho.addToItens(item2)
             
             // Inserindo Cafés
             
@@ -159,9 +163,10 @@ class Dao<T> {
                              "FAZENDA DUTRA", "FAZENDA HELENA", "Café Pelé", "3 Corações", "FAZENDA SERRA DAS TRÊS BARRAS", "Nespresso" ]
                 
                 nomes.sort()
-            
+                var c:Cafe!
+                var flavor:Flavor!
                 for i in 1..<nomes.count {
-                    let c = Dao<Cafe>().new()
+                    c = Dao<Cafe>().new()
                     c.nome = nomes[i]
                     c.altitude = 20
                     c.cidade = "três lagoas"
@@ -174,7 +179,7 @@ class Dao<T> {
                     c.tipo = "Arábico"
                     c.safra = "20/02/2014"
                     
-                    let flavor = Dao<Flavor>().new()
+                    flavor = Dao<Flavor>().new()
                     flavor.amargo = 10
                     flavor.azedo = 1
                     flavor.caramelo = 2
@@ -196,6 +201,22 @@ class Dao<T> {
                     c.latitude = -23.548064
                     c.longitude = -46.5708517
                 }
+            
+            // Inserindo uma avaliacao
+            
+                let avaliacao = Dao<Avaliacao>().new()
+                avaliacao.cafe = c
+                avaliacao.barista = "Jacksson"
+                avaliacao.data = "10/10/2017"
+                avaliacao.dataColheita = "10/10/2017"
+                avaliacao.dataTorra = "10/10/2017"
+                avaliacao.flavor = flavor
+                avaliacao.gostou = Int32(3)
+                avaliacao.localPreparo = "Marco Polo"
+                avaliacao.metodoPreparo = "Prensa"
+                avaliacao.obs = "Gostei muito do café e do lugar"
+                
+            // Salvando tudo o que foi feito
                 
                 save()
 

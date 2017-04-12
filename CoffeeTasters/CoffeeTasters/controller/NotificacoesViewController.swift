@@ -34,6 +34,7 @@ class NotificacoesViewController: UIViewController, UITableViewDelegate, UITable
             response in
             if let JSON = response.result.value {
                 print("JSON: \(JSON)")
+                
 //                let j = JSON as! NSDictionary
                 //let temp = Temperatura(JSON: j as! [String : Any])
                 //print(temp?.condicao!)
