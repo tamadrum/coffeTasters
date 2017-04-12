@@ -571,9 +571,9 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="starCount">
                                         <integer key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="onImage" value="starryStars_on"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="offImage" value="starryStars_off"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="halfImage" value="starryStars_half"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="onImage" value="grao-cheio"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="offImage" value="grao-vazio"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="halfImage" value="grao-meio"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="halfStarsAllowed" value="NO"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="editable" value="NO"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="rating">
@@ -588,9 +588,9 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="starCount">
                                         <integer key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="onImage" value="starryStars_on"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="offImage" value="starryStars_off"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="halfImage" value="starryStars_half"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="onImage" value="grao-cheio"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="offImage" value="grao-vazio"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="halfImage" value="grao-meio"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="halfStarsAllowed" value="NO"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="editable" value="NO"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="rating">
@@ -605,9 +605,9 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="starCount">
                                         <integer key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="onImage" value="starryStars_on"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="offImage" value="starryStars_off"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="halfImage" value="starryStars_half"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="onImage" value="grao-cheio"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="offImage" value="grao-vazio"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="halfImage" value="grao-meio"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="halfStarsAllowed" value="NO"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="editable" value="NO"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="rating">
@@ -648,9 +648,9 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="starCount">
                                         <integer key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="onImage" value="starryStars_on"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="offImage" value="starryStars_off"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="halfImage" value="starryStars_half"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="onImage" value="grao-cheio"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="offImage" value="grao-vazio"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="halfImage" value="grao-meio"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="halfStarsAllowed" value="NO"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="editable" value="NO"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="rating">
@@ -1094,9 +1094,9 @@
                                                     <rect key="frame" x="8" y="119" width="304" height="45"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="image" keyPath="offImage" value="starryStars_off"/>
-                                                        <userDefinedRuntimeAttribute type="image" keyPath="onImage" value="starryStars_on"/>
-                                                        <userDefinedRuntimeAttribute type="image" keyPath="halfImage" value="starryStars_half"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="offImage" value="grao-vazio"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="onImage" value="grao-cheio"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="halfImage" value="grao-meio"/>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="rating">
                                                             <real key="value" value="0.0"/>
                                                         </userDefinedRuntimeAttribute>
@@ -2151,9 +2151,9 @@
                                                         <userDefinedRuntimeAttribute type="number" keyPath="starCount">
                                                             <integer key="value" value="4"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="image" keyPath="onImage" value="starryStars_on"/>
-                                                        <userDefinedRuntimeAttribute type="image" keyPath="offImage" value="starryStars_off"/>
-                                                        <userDefinedRuntimeAttribute type="image" keyPath="halfImage" value="starryStars_half"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="onImage" value="grao-cheio"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="offImage" value="grao-vazio"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="halfImage" value="grao-meio"/>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="rating">
                                                             <real key="value" value="0.0"/>
                                                         </userDefinedRuntimeAttribute>
@@ -2814,9 +2814,9 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="starCount">
                                         <integer key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="onImage" value="starryStars_on"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="offImage" value="starryStars_off"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="halfImage" value="starryStars_half"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="onImage" value="grao-cheio"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="offImage" value="grao-vazio"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="halfImage" value="grao-meio"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="halfStarsAllowed" value="NO"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="editable" value="YES"/>
                                 </userDefinedRuntimeAttributes>
@@ -3069,15 +3069,15 @@
         <image name="floral" width="20" height="20"/>
         <image name="frutasCaroco" width="20" height="20"/>
         <image name="frutasVermelhas" width="20" height="20"/>
+        <image name="grao-cheio" width="23" height="26"/>
+        <image name="grao-meio" width="23" height="26"/>
+        <image name="grao-vazio" width="24" height="26"/>
         <image name="herbal" width="20" height="20"/>
         <image name="home" width="34" height="30"/>
         <image name="logo" width="173" height="122"/>
         <image name="nozes" width="20" height="20"/>
         <image name="person" width="512" height="512"/>
         <image name="salgado" width="20" height="20"/>
-        <image name="starryStars_half" width="35" height="35"/>
-        <image name="starryStars_off" width="35" height="35"/>
-        <image name="starryStars_on" width="35" height="35"/>
         <image name="status-pedidos" width="750" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
