@@ -53,7 +53,6 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
         data.sort(by: {(cafe1, cafe2) -> Bool in
             return cafe1.nome!<cafe2.nome!
         })
-        //data.append("Adicionar um café...")
         
         tableView?.reloadData()
     }
@@ -112,47 +111,61 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(searchActive) {
-            return filtered.count
+            return filtered.count+1
         }
-        return data.count;
+        return data.count+1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celula") as! BuscaResultCustomCell
         
         if(searchActive){
-            cell.textLabel?.text = filtered[indexPath.row].nome
-            cell.detailTextLabel?.text = filtered[indexPath.row].descricao
-            //            cell.imageView?.image = UIImage(named: filtered[indexPath.row].descricao)
+            if ( indexPath.row == filtered.count ) {
+                cell.textLabel?.text = "Adicionar um Café"
+            } else {
+                cell.textLabel?.text = filtered[indexPath.row].nome
+                cell.detailTextLabel?.text = filtered[indexPath.row].descricao
+                //            cell.imageView?.image = UIImage(named: filtered[indexPath.row].descricao)
+            }
         } else {
-            cell.textLabel?.text = data[indexPath.row].nome
-            cell.detailTextLabel?.text = data[indexPath.row].descricao
-            //            cell.imageView?.image = UIImage(named: data[indexPath.row].imagem)
+            if ( indexPath.row == data.count ) {
+                cell.textLabel?.text = "Adicionar um Café"
+            } else {
+                cell.textLabel?.text = data[indexPath.row].nome
+                cell.detailTextLabel?.text = data[indexPath.row].descricao
+                //            cell.imageView?.image = UIImage(named: data[indexPath.row].imagem)
+            }
         }
-        
-        //cell.backgroundColor = .clear
-        
+
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "Storyboard", bundle: nil)
-        let view = storyboard.instantiateViewController(withIdentifier: "detalhesCafe") as! DetalhesCafeController
-        
-        if(searchActive){
-            view.cafeAvaliado = filtered[indexPath.row]
-        } else {
-            view.cafeAvaliado = data[indexPath.row]
-        }
-        
-//        if ( indexPath.row == data.count-1 ) {
-//            view = storyboard.instantiateViewController(withIdentifier: "avaliacao")
-//        }
         
         UIView.animate(withDuration: 0.5, animations: {
             self.tableView.frame.origin.y = -300
         })
         
-        navigationController?.pushViewController(view, animated: true)
+        let storyboard = UIStoryboard(name: "Storyboard", bundle: nil)
+        let viewDetalhes = storyboard.instantiateViewController(withIdentifier: "detalhesCafe") as! DetalhesCafeController
+        let viewAvaliacao = storyboard.instantiateViewController(withIdentifier: "avaliacao") as! AvaliacaoViewController
+        
+        if(searchActive){
+            if ( indexPath.row == filtered.count ) {
+                navigationController?.pushViewController(viewAvaliacao, animated: true)
+            } else {
+                viewDetalhes.cafeAvaliado = filtered[indexPath.row]
+                navigationController?.pushViewController(viewDetalhes, animated: true)
+            }
+        } else {
+            if ( indexPath.row == data.count ) {
+                navigationController?.pushViewController(viewAvaliacao, animated: true)
+            } else {
+                viewDetalhes.cafeAvaliado = data[indexPath.row]
+                navigationController?.pushViewController(viewDetalhes, animated: true)
+            }
+        }
+        
+        
     }
 }

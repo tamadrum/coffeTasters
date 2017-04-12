@@ -43,5 +43,5 @@ class AvaliacaoViewController: UIViewController {
     @IBOutlet weak var rating: RatingView!
     @IBOutlet weak var cafeBlendSegmentControl: UISegmentedControl!
     
-    
+    var cafeAvaliado: Cafe!
 }

@@ -30,6 +30,19 @@ class DetalhesCafeController: UIViewController {
     
     var cafeAvaliado: Cafe!
     
+    override func viewDidLoad() {
+
+    }
+    
+    @IBAction func avaliacaoComCafePopulado() {
+        let storyboard = UIStoryboard(name: "Storyboard", bundle: nil)
+        let view = storyboard.instantiateViewController(withIdentifier: "avaliacao") as! AvaliacaoViewController
+        
+        view.cafeAvaliado = cafeAvaliado
+        
+        navigationController?.pushViewController(view, animated: true)
+    }
+    
     @IBAction func verMapa(_ sender: UIButton) {
         let url = ("https://www.google.com.br/maps/@-23.5837048,-46.5731714,17z?hl=pt-BR").addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
         
