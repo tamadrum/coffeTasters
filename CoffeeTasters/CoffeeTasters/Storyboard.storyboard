@@ -1802,7 +1802,7 @@
         <scene sceneID="LFi-gv-JIr">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="W10-bI-vTf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Perfil" image="Estrela-1" id="BLA-A9-kys"/>
+                    <tabBarItem key="tabBarItem" title="Perfil" image="home" id="BLA-A9-kys"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="m9A-I7-UBu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -3046,7 +3046,6 @@
         <image name="Coado" width="108" height="87"/>
         <image name="Espresso" width="79" height="80"/>
         <image name="Espresso-2" width="30" height="30"/>
-        <image name="Estrela-1" width="30" height="29"/>
         <image name="Grao-2" width="39" height="27"/>
         <image name="Moca" width="86" height="116"/>
         <image name="Novo-1" width="27" height="27"/>
@@ -3068,6 +3067,7 @@
         <image name="frutasCaroco" width="20" height="20"/>
         <image name="frutasVermelhas" width="20" height="20"/>
         <image name="herbal" width="20" height="20"/>
+        <image name="home" width="34" height="30"/>
         <image name="logo" width="173" height="122"/>
         <image name="nozes" width="20" height="20"/>
         <image name="person" width="512" height="512"/>
