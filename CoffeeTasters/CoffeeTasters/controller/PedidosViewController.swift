@@ -41,12 +41,17 @@ class PedidosViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         cell.totalPedido.text = "R$ \(pedidos[indexPath.row].valorTotal)"
         
+        cell.comprarNovamente.addTarget(self, action: #selector(comprarNovamente), for: .touchUpInside)
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 135
+    }
+    
+    func comprarNovamente () {
+        print("comprar novamente")
     }
     
 }

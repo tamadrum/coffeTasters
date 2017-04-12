@@ -8,16 +8,22 @@
 
 import Foundation
 import UIKit
+import Social
 
 class AvaliacoesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var tableView:UITableView?
     var avaliacoes:[Avaliacao] = []
     
+    var nomeToShare: String!
+    var ratingToShare: Float!
+    var imageToShare:UIImage!
+    
     // MARK: Ciclo de vida
     
     override func viewDidLoad() {
-        
+        let dao = Dao<Avaliacao>()
+        avaliacoes = dao.list()
     }
     
     // MARK: Coisas de tabela
@@ -33,9 +39,6 @@ class AvaliacoesViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celula") as! AvaliacaoCustomCell
         
-        cell.nav = self.navigationController
-        
-        cell.imagem = (avaliacoes[indexPath.row].cafe?.imagem as! UIImage)
         cell.comentario.text = avaliacoes[indexPath.row].obs
         cell.flavor.flavorUsuario = avaliacoes[indexPath.row].flavor
         cell.modoPrepado.text = avaliacoes[indexPath.row].metodoPreparo
@@ -43,11 +46,31 @@ class AvaliacoesViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.rating.rating = Float(avaliacoes[indexPath.row].gostou)
         cell.safra.text = avaliacoes[indexPath.row].data
         
+        imageToShare = UIImage.init(view: cell.flavor)
+        nomeToShare = (avaliacoes[indexPath.row].cafe?.nome)!
+        ratingToShare = Float(avaliacoes[indexPath.row].gostou)
+        cell.share.addTarget(self, action: #selector(share), for: .touchUpInside)
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 450
+    }
+    
+    func share() {
+        let usuario = Usuario()
+        usuario.load()
+        let textoParaPublicar = "\(usuario.nome) avaliou um novo café: \n \(nomeToShare) \n Avaliação: \(ratingToShare) \n"
+        
+        let vc = SLComposeViewController(forServiceType:SLServiceTypeFacebook)
+        vc?.setInitialText("Aonde isso vai?")
+        vc?.add(imageToShare)
+        vc?.add(URL(string: "http://www.coffeetasters.com.br/")!)
+        vc?.setInitialText(textoParaPublicar)
+        
+        navigationController?.present(vc!, animated: true, completion: nil)
+        
     }
     
 }

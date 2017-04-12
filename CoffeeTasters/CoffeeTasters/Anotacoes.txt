@@ -11,3 +11,5 @@ Buscar Cafés???
 Aonde colocar o QRCode agora???
 
 Colocar as fontes no local certo das telas...
+
+Por uma borda na tabela de busca no perfil

@@ -56,6 +56,8 @@ class AvaliacaoViewController: UIViewController {
         tipoTextField.text = cafeAvaliado.tipo
         safraTextField.text = cafeAvaliado.safra
         cafeBlendSegmentControl.selectedSegmentIndex = 0
+        
+        
     }
     
     @IBAction func salvarAvaliacao(_ sender: UIBarButtonItem) {
@@ -95,4 +97,6 @@ class AvaliacaoViewController: UIViewController {
             nav.popToRootViewController(animated: true)
         }
     }
+    
+    
 }
