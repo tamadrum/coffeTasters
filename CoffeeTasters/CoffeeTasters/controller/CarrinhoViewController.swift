@@ -14,6 +14,8 @@ class CarrinhoViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var valorTotalCarrinhoLabel: UILabel!
     var carrinho: Carrinho?
     
+    var valorTotal: Double!
+    
     // MARK: Ciclo de vida
     
     override func viewDidLoad() {
@@ -28,7 +30,17 @@ class CarrinhoViewController: UIViewController, UITableViewDelegate, UITableView
         for i in itens {
             total += (i.produto?.preco)! * Double(i.quantidade)
         }
+        valorTotal = total
         valorTotalCarrinhoLabel.text = "R$ \(total)"
+    }
+    
+    // MARK: 
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "telaFinalizar" {
+            let tela = segue.destination as! FinalizarCompraViewController
+            tela.valorTotal = valorTotal
+        }
     }
     
     // MARK: Coisas de tabela
@@ -72,7 +84,5 @@ class CarrinhoViewController: UIViewController, UITableViewDelegate, UITableView
         }
         return tableView.dequeueReusableCell(withIdentifier: "header", for: indexPath)
     }
-    
-    
     
 }

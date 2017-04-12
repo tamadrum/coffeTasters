@@ -294,7 +294,7 @@
                     <navigationItem key="navigationItem" title="Carrinho" id="Asi-2K-ph8">
                         <barButtonItem key="rightBarButtonItem" title="Finalizar" id="UYC-gx-8oR">
                             <connections>
-                                <segue destination="14n-Cl-0Gu" kind="show" id="TS6-ow-ryE"/>
+                                <segue destination="14n-Cl-0Gu" kind="show" identifier="telaFinalizar" id="TS6-ow-ryE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -407,8 +407,20 @@
                         <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" title="Pagamento" id="WiU-f9-IhG">
-                        <barButtonItem key="rightBarButtonItem" title="Confirmar" id="VhS-wj-UMh"/>
+                        <barButtonItem key="rightBarButtonItem" title="Confirmar" id="VhS-wj-UMh">
+                            <connections>
+                                <action selector="confirmarPagamento:" destination="14n-Cl-0Gu" id="0TC-L0-h9g"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="cvv" destination="O9O-8Q-14f" id="h27-Mc-WWG"/>
+                        <outlet property="imagemCartao" destination="5mo-5W-N4e" id="YUT-Fm-6CQ"/>
+                        <outlet property="nomeCartao" destination="GRV-uJ-SgF" id="eq2-jc-7Yc"/>
+                        <outlet property="numeroCartao" destination="PPz-E6-aMS" id="MM6-tT-8IA"/>
+                        <outlet property="validadeCartao" destination="4hP-fV-xqX" id="1H9-xP-RjX"/>
+                        <outlet property="valor" destination="EMc-GJ-MnL" id="VuK-HG-5Wr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S1m-kD-vVV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

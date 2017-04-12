@@ -125,8 +125,8 @@ class Dao<T> {
             
                 let ped1 = Dao<Pedido>().new()
                 ped1.numero = 101010
+                ped1.data = "10/10/2010"
                 ped1.status = "Em processamento..."
-                ped1.valorTotal = 100
                 
                 let item1 = Dao<Item>().new()
                 item1.quantidade = 2
@@ -137,6 +137,8 @@ class Dao<T> {
                 item1.produto?.oferta = true
                 item1.produto?.precoOferta = 9
                 item1.produto?.descricao = "Descrição do Café"
+            
+                ped1.valorTotal += Double(item1.quantidade) * (item1.produto?.preco)!
                 
                 let item2 = Dao<Item>().new()
                 item2.quantidade = 3
@@ -146,6 +148,8 @@ class Dao<T> {
                 item2.produto?.tipo = "Café"
                 item2.produto?.oferta = false
                 item2.produto?.descricao = "Descrição do Café"
+            
+                ped1.valorTotal += Double(item2.quantidade) * (item2.produto?.preco)!
                 
                 ped1.addToItens(item1)
                 ped1.addToItens(item2)
@@ -169,6 +173,7 @@ class Dao<T> {
                     c = Dao<Cafe>().new()
                     c.nome = nomes[i]
                     c.altitude = 20
+                    c.imagem = #imageLiteral(resourceName: "cafe")
                     c.cidade = "três lagoas"
                     c.estado = "MS"
                     c.pais = "Brasil"

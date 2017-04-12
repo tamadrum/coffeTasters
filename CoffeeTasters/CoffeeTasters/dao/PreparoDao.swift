@@ -17,7 +17,7 @@ class PreparoDao: Dao<Preparo> {
         /// Inicio do preparo1
         let preparo1 = new()
         preparo1.nome = "Coado"
-        preparo1.imagem = #imageLiteral(resourceName: "cafe")
+        //preparo1.imagem = #imageLiteral(resourceName: "cafe")
         
         let passo1 = passoDao.new()
         passo1.indice = 1
@@ -50,7 +50,7 @@ class PreparoDao: Dao<Preparo> {
         /// Inicio do preparo2
         let preparo2 = new()
         preparo2.nome = "Prensa Francesa"
-        preparo2.imagem = #imageLiteral(resourceName: "cafe")
+        //preparo2.imagem = #imageLiteral(resourceName: "cafe")
         
         let passo5 = passoDao.new()
         passo5.indice = 1

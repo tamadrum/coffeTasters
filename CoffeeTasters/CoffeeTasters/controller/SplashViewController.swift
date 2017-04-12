@@ -32,11 +32,8 @@ class SplashViewController: UIViewController {
     func timeToMoveOn() {
         let storyboard = UIStoryboard(name: "Storyboard", bundle: nil)
         let view = storyboard.instantiateViewController(withIdentifier: "loginScreen")
-        print(storyboard)
-        print(view)
         
         present(view, animated: false, completion: nil)
-        
     }
     
 }

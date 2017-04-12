@@ -61,7 +61,7 @@ class AvaliacoesViewController: UIViewController, UITableViewDelegate, UITableVi
     func share() {
         let usuario = Usuario()
         usuario.load()
-        let textoParaPublicar = "\(usuario.nome) avaliou um novo café: \n \(nomeToShare) \n Avaliação: \(ratingToShare) \n"
+        let textoParaPublicar = "\(usuario.nome) avaliou um novo café: \n \(nomeToShare!) \n Avaliação: \(ratingToShare!) \n"
         
         let vc = SLComposeViewController(forServiceType:SLServiceTypeFacebook)
         vc?.setInitialText("Aonde isso vai?")

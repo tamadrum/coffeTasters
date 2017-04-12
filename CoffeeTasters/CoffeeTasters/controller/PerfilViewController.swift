@@ -124,7 +124,7 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
             } else {
                 cell.textLabel?.text = filtered[indexPath.row].nome
                 cell.detailTextLabel?.text = filtered[indexPath.row].descricao
-                //            cell.imageView?.image = UIImage(named: filtered[indexPath.row].descricao)
+                cell.imageView?.image = filtered[indexPath.row].imagem as? UIImage
             }
         } else {
             if ( indexPath.row == data.count ) {
@@ -132,7 +132,7 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
             } else {
                 cell.textLabel?.text = data[indexPath.row].nome
                 cell.detailTextLabel?.text = data[indexPath.row].descricao
-                //            cell.imageView?.image = UIImage(named: data[indexPath.row].imagem)
+                cell.imageView?.image = data[indexPath.row].imagem as? UIImage
             }
         }
 

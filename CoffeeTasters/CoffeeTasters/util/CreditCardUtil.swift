@@ -12,17 +12,17 @@ import UIKit
 class CreditCardUtil {
     
     public struct TiposDeCartao {
-        static let CARTEBLANCHE = #imageLiteral(resourceName: "erro.jpg")
-        static let DISCOVER = #imageLiteral(resourceName: "erro.jpg")
-        static let ENROUTE = #imageLiteral(resourceName: "erro.jpg")
+        static let CARTEBLANCHE = #imageLiteral(resourceName: "cafe")
+        static let DISCOVER = #imageLiteral(resourceName: "cafe")
+        static let ENROUTE = #imageLiteral(resourceName: "cafe")
         
-        static let VISA = #imageLiteral(resourceName: "visa.png")
-        static let AMERICANEXPRESS = #imageLiteral(resourceName: "americanexpress.png")
-        static let DINERSCLUB = #imageLiteral(resourceName: "dinersclub.png")
-        static let JCB = #imageLiteral(resourceName: "jcb.png")
-        static let MASTERCARD = #imageLiteral(resourceName: "mastercard.png")
-        static let INVALIDO = #imageLiteral(resourceName: "erro.jpg")
-        static let PEQUENO = #imageLiteral(resourceName: "erro.jpg")
+        static let VISA = #imageLiteral(resourceName: "cafe")
+        static let AMERICANEXPRESS = #imageLiteral(resourceName: "cafe")
+        static let DINERSCLUB = #imageLiteral(resourceName: "cafe")
+        static let JCB = #imageLiteral(resourceName: "cafe")
+        static let MASTERCARD = #imageLiteral(resourceName: "cafe")
+        static let INVALIDO = #imageLiteral(resourceName: "cafe")
+        static let PEQUENO = #imageLiteral(resourceName: "cafe")
     }
     
     /**
