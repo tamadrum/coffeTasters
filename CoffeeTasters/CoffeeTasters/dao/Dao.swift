@@ -195,7 +195,7 @@ class Dao<T> {
                     c = cafeDao.new()
                     c.nome = nomes[i]
                     c.altitude = 20
-                    c.imagem = #imageLiteral(resourceName: "cafe")
+                    //c.imagem = #imageLiteral(resourceName: "cafe")
                     c.cidade = "três lagoas"
                     c.estado = "MS"
                     c.pais = "Brasil"

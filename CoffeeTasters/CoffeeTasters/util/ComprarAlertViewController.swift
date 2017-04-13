@@ -32,17 +32,26 @@ class ComprarAlertViewController {
         
         let saveAction = UIAlertAction(title: "Adicionar", style: .default, handler: {
             alert -> Void in
+
+            let dao = Dao<Cafe>()
+            let cafe = dao.new()
+            cafe.nome = "lalala"
+            dao.save()
             
-            let firstTextField = alertController.textFields![0] as UITextField
             
-            let qtd = Int(firstTextField.text!)!
             
-            let itemDao = Dao<Item>()
-            let item = itemDao.new()
-            item.quantidade = Int32(qtd)
+            
+            
+//            let firstTextField = alertController.textFields![0] as UITextField
+//            
+//            let qtd = Int(firstTextField.text!)!
+//            
+//            let itemDao = Dao<Item>()
+//            let item = itemDao.new()
+//            item.quantidade = Int32(qtd)
 //            item.produto = produto
-            itemDao.save()
-            
+//            itemDao.save()
+//            
 //            let carrinhoDao = CarrinhoDao()
 //            let carrinho = carrinhoDao.getCarrinho()
 //            carrinho.addToItens(item)
