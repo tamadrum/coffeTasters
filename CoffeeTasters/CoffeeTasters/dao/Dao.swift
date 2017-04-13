@@ -82,9 +82,7 @@ class Dao<T> {
     func save () {
         if managedContext.hasChanges {
             do {
-//                print("**************************")
-//                print("Vou salvar no \(banco!)")
-//                print("**************************")
+                print("salvando ctx: \(managedContext!)")
                 try managedContext.save()
             } catch let error as NSError {
                 print("**************************")
@@ -119,58 +117,82 @@ class Dao<T> {
             
             print("**************************")
             print("inserindo dados iniciais")
-            print("**************************")
+            
+            // Inserindo Produtos
+                print("Inserindo produtos")
+                let prodDao = Dao<Produto>()
+            
+                let produto1 = prodDao.new()
+                produto1.nome = "Café Pelé"
+                produto1.preco = 10
+                produto1.tipo = "Café"
+                produto1.oferta = true
+                produto1.precoOferta = 9
+                produto1.descricao = "Descrição do Café"
+            
+                let produto2 = prodDao.new()
+                produto2.nome = "Café Pilão"
+                produto2.preco = 20
+                produto2.tipo = "Café"
+                produto2.oferta = false
+                produto2.descricao = "Descrição do Café"
+            
+                prodDao.save()
+            
+            // Inserindo Itens
+            
+                print("Inserindo Itens")
+                let itemDao = Dao<Item>()
+            
+                let item1 = itemDao.new()
+                item1.quantidade = 2
+                item1.produto = produto1
+            
+                let item2 = itemDao.new()
+                item2.quantidade = 3
+                item2.produto = produto2
+            
+                itemDao.save()
             
             // Inserindo Pedidos
+                print("Inserindo Pedido")
+                let pedDao = Dao<Pedido>()
             
-                let ped1 = Dao<Pedido>().new()
+                let ped1 = pedDao.new()
                 ped1.numero = 101010
                 ped1.data = "10/10/2010"
                 ped1.status = "Em processamento..."
-                
-                let item1 = Dao<Item>().new()
-                item1.quantidade = 2
-                item1.produto = Dao<Produto>().new()
-                item1.produto?.nome = "Café Pelé"
-                item1.produto?.preco = 10
-                item1.produto?.tipo = "Café"
-                item1.produto?.oferta = true
-                item1.produto?.precoOferta = 9
-                item1.produto?.descricao = "Descrição do Café"
-            
                 ped1.valorTotal += Double(item1.quantidade) * (item1.produto?.preco)!
-                
-                let item2 = Dao<Item>().new()
-                item2.quantidade = 3
-                item2.produto = Dao<Produto>().new()
-                item2.produto?.nome = "Café Pilão"
-                item2.produto?.preco = 20
-                item2.produto?.tipo = "Café"
-                item2.produto?.oferta = false
-                item2.produto?.descricao = "Descrição do Café"
-            
                 ped1.valorTotal += Double(item2.quantidade) * (item2.produto?.preco)!
-                
                 ped1.addToItens(item1)
                 ped1.addToItens(item2)
             
+                pedDao.save()
+            
             // Inserindo Carrinho
             
-                let carrinho = CarrinhoDao().getCarrinho()
+                print("inserindo carrinho")
+                let carrinhoDao = CarrinhoDao()
+                let carrinho = carrinhoDao.getCarrinho()
                 carrinho.addToItens(item1)
                 carrinho.addToItens(item2)
+                carrinhoDao.save()
             
             // Inserindo Cafés
             
                 var nomes = ["AC CAFÉ", "CARMO ESTATE COFFEE", "DB ESTATE COFFEE", "ECOAGRÍCOLA CAFÉ LTDA",
                              "FAZENDA BELA VISTA", "FAZENDA CAMBARÁ", "FAZENDA CAMOCIM", "FAZENDA CAPOEIRA ESTATE COFFEE", "FAZENDA DO SERTÃO",
                              "FAZENDA DUTRA", "FAZENDA HELENA", "Café Pelé", "3 Corações", "FAZENDA SERRA DAS TRÊS BARRAS", "Nespresso" ]
+            
+                print("inserindo cafes")
                 
                 nomes.sort()
+            
+                let cafeDao = Dao<Cafe>()
                 var c:Cafe!
                 var flavor:Flavor!
                 for i in 1..<nomes.count {
-                    c = Dao<Cafe>().new()
+                    c = cafeDao.new()
                     c.nome = nomes[i]
                     c.altitude = 20
                     c.imagem = #imageLiteral(resourceName: "cafe")
@@ -206,10 +228,14 @@ class Dao<T> {
                     c.latitude = -23.548064
                     c.longitude = -46.5708517
                 }
+                cafeDao.save()
             
             // Inserindo uma avaliacao
             
-                let avaliacao = Dao<Avaliacao>().new()
+                print("inserindo avaliacao")
+            
+                let avaliaDao = Dao<Avaliacao>()
+                let avaliacao = avaliaDao.new()
                 avaliacao.cafe = c
                 avaliacao.barista = "Jacksson"
                 avaliacao.data = "10/10/2017"
@@ -220,10 +246,9 @@ class Dao<T> {
                 avaliacao.localPreparo = "Marco Polo"
                 avaliacao.metodoPreparo = "Prensa"
                 avaliacao.obs = "Gostei muito do café e do lugar"
-                
-            // Salvando tudo o que foi feito
-                
-                save()
+                avaliaDao.save()
+            
+                print("**************************")
 
             configuracoes.set(true, forKey: "dados_inseridos")
             configuracoes.synchronize()

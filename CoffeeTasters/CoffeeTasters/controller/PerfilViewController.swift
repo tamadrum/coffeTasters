@@ -121,18 +121,18 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if(searchActive){
             if ( indexPath.row == filtered.count ) {
                 cell.textLabel?.text = "Adicionar um Café"
+                cell.imagemLogo?.image = nil
             } else {
-                cell.textLabel?.text = filtered[indexPath.row].nome
-                cell.detailTextLabel?.text = filtered[indexPath.row].descricao
-                cell.imageView?.image = filtered[indexPath.row].imagem as? UIImage
+                cell.nome?.text = filtered[indexPath.row].nome
+                cell.imagemLogo?.image = filtered[indexPath.row].imagem as? UIImage
             }
         } else {
             if ( indexPath.row == data.count ) {
                 cell.textLabel?.text = "Adicionar um Café"
+                cell.imagemLogo?.image = nil
             } else {
-                cell.textLabel?.text = data[indexPath.row].nome
-                cell.detailTextLabel?.text = data[indexPath.row].descricao
-                cell.imageView?.image = data[indexPath.row].imagem as? UIImage
+                cell.nome?.text = data[indexPath.row].nome
+                cell.imagemLogo?.image = data[indexPath.row].imagem as? UIImage
             }
         }
 
@@ -164,7 +164,5 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 navigationController?.pushViewController(viewDetalhes, animated: true)
             }
         }
-        
-        
     }
 }
