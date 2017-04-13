@@ -1220,7 +1220,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Avaliações" id="wpN-x2-Agb">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="8le-S0-mVd">
+                        <barButtonItem key="rightBarButtonItem" title="Avaliar" style="plain" id="8le-S0-mVd">
                             <connections>
                                 <segue destination="ELa-ih-0rX" kind="show" id="nhJ-hT-vis"/>
                             </connections>

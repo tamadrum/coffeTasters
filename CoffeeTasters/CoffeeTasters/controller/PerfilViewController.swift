@@ -40,8 +40,14 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if ( usuario.perfilImg == "FOTO" ) {
             imagemUsuario.image = usuario.imagem
         } else {
-            imagemUsuario.af_setImage(withURL: URL(string: usuario.perfilImg)!)
+            if usuario.perfilImg != "" {
+                imagemUsuario.af_setImage(withURL: URL(string: usuario.perfilImg)!)
+            }
         }
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     override func viewDidLoad() {
@@ -80,6 +86,7 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
         })
         
         searchActive = false;
+        dismissKeyboard()
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -151,6 +158,8 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
         UIView.animate(withDuration: 0.5, animations: {
             self.tableView.frame.origin.y = -300
         })
+        
+        dismissKeyboard()
         
         let storyboard = UIStoryboard(name: "Storyboard", bundle: nil)
         let viewDetalhes = storyboard.instantiateViewController(withIdentifier: "detalhesCafe") as! DetalhesCafeController
