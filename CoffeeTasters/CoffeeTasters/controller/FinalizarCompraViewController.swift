@@ -33,6 +33,10 @@ class FinalizarCompraViewController: UIViewController {
         valor.text = "R$ \(valorTotal!)"
     }
     
+    @IBAction func escrevendoNumeroCartao(_ sender: UITextField) {
+        imagemCartao.image = CreditCardUtil().creditCardType(sender.text!)
+    }
+    
     @IBAction func confirmarPagamento(_ sender: UIBarButtonItem) {
         if ( cvv.text == "" ) {
             let alerta = UIAlertController(title: "Erro...", message: "O código de verificação não pode ser vazio!", preferredStyle: .
