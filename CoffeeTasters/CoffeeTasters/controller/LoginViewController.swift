@@ -117,7 +117,11 @@ class LoginViewController: UIViewController, LoginButtonDelegate, UIWebViewDeleg
                     self.usuario.nome = responseDictionary["first_name"]! as! String
                     self.usuario.sobrenome = responseDictionary["last_name"]! as! String
                     self.usuario.email = responseDictionary["email"]! as! String
-                    self.usuario.perfilImg = m["url"]! as! String
+                    if ( self.usuario.perfilImg == "FOTO" ) {
+                        
+                    } else {
+                        self.usuario.perfilImg = m["url"]! as! String
+                    }
                     
                     self.usuario.save()
                     

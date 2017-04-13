@@ -16,6 +16,7 @@ class Usuario: NSObject, NSCoding {
     var email: String
     var senha: String
     var perfilImg: String
+    var imagem: UIImage?
     var numeroCartao: String
     var nomeCartao: String
     var validadeCartao: String
@@ -29,6 +30,7 @@ class Usuario: NSObject, NSCoding {
         aCoder.encode(email, forKey:"email")
         aCoder.encode(senha, forKey:"senha")
         aCoder.encode(perfilImg, forKey:"perfilImg")
+        aCoder.encode(imagem, forKey:"imagem")
         aCoder.encode(numeroCartao, forKey:"numeroCartao")
         aCoder.encode(nomeCartao, forKey:"nomeCartao")
         aCoder.encode(validadeCartao, forKey:"validadeCartao")
@@ -43,6 +45,7 @@ class Usuario: NSObject, NSCoding {
         email = aDecoder.decodeObject(forKey:"email") as! String
         senha = aDecoder.decodeObject(forKey:"senha") as! String
         perfilImg = aDecoder.decodeObject(forKey:"perfilImg") as! String
+        imagem = aDecoder.decodeObject(forKey:"imagem") as? UIImage
         numeroCartao = aDecoder.decodeObject(forKey:"numeroCartao") as! String
         nomeCartao = aDecoder.decodeObject(forKey:"nomeCartao") as! String
         validadeCartao = aDecoder.decodeObject(forKey:"validadeCartao") as! String
@@ -57,6 +60,7 @@ class Usuario: NSObject, NSCoding {
         email = ""
         senha = ""
         perfilImg = ""
+        imagem = #imageLiteral(resourceName: "person")
         numeroCartao = ""
         nomeCartao = ""
         validadeCartao = ""
@@ -78,6 +82,7 @@ class Usuario: NSObject, NSCoding {
             self.email = usuario.email
             self.senha = usuario.senha
             self.perfilImg = usuario.perfilImg
+            self.imagem = usuario.imagem
             self.numeroCartao = usuario.numeroCartao
             self.nomeCartao = usuario.nomeCartao
             self.validadeCartao = usuario.validadeCartao
