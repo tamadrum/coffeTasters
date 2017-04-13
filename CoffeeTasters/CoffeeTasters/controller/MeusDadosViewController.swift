@@ -41,6 +41,11 @@ class MeusDadosViewController: UIViewController, UIImagePickerControllerDelegate
         
         tipoCartaoImageView.image = CreditCardUtil().creditCardType(numeroCartaoTextField.text!)
         
+        if ( usuario.perfilImg == "FOTO" ) {
+            imagem.image = usuario.imagem
+        } else {
+            imagem.af_setImage(withURL: URL(string: usuario.perfilImg)!)
+        }
         let tapFoto = UITapGestureRecognizer(target: self, action: #selector(selecionaFoto))
         imagem?.addGestureRecognizer(tapFoto)
         imagem.isUserInteractionEnabled = true
@@ -69,6 +74,10 @@ class MeusDadosViewController: UIViewController, UIImagePickerControllerDelegate
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             imagem?.image = image
+            usuario.imagem = image
+            usuario.perfilImg = "FOTO"
+            usuario.save()
+        
             picker.dismiss(animated: true, completion: nil)
         }
     }

@@ -38,7 +38,11 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         usuario.load()
         
-        imagemUsuario.af_setImage(withURL: URL(string: usuario.perfilImg)!)
+        if ( usuario.perfilImg == "FOTO" ) {
+            imagemUsuario.image = usuario.imagem
+        } else {
+            imagemUsuario.af_setImage(withURL: URL(string: usuario.perfilImg)!)
+        }
         nomeUsuario.text = usuario.nome
         sobrenomeUsuario.text = usuario.sobrenome
         emailUsuario.text = usuario.email
