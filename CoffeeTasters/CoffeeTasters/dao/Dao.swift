@@ -82,7 +82,7 @@ class Dao<T> {
     func save () {
         if managedContext.hasChanges {
             do {
-                print("salvando ctx: \(managedContext!)")
+                print("salvando \(banco!) no ctx: \(managedContext!)")
                 try managedContext.save()
             } catch let error as NSError {
                 print("**************************")

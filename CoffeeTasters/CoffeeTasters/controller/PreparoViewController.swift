@@ -24,7 +24,7 @@ class PreparoViewController: UIViewController {
     var timer = Timer()
     var segundos: Int!
     
-    override func viewDidLoad() {
+    override func viewWillAppear(_ animated: Bool) {
         menuModos.removeAllSegments()
         
         for i in 0..<preparos.count {
@@ -37,6 +37,10 @@ class PreparoViewController: UIViewController {
         menuModos.selectedSegmentIndex = 0;
         
         atualizaPasso()
+    }
+    
+    override func viewDidLoad() {
+        
     }
     
     @IBAction func tipoPreparo(_ sender: UISegmentedControl) {

@@ -9,3 +9,6 @@ Aonde colocar o QRCode agora???
 
 Arrumar os banco de dados - cadastrar cafe, avaliacao e carrinho de compras
 
+Travar a tela somente de pé
+
+O contexto está sendo mantido

@@ -44,7 +44,9 @@ class MeusDadosViewController: UIViewController, UIImagePickerControllerDelegate
         if ( usuario.perfilImg == "FOTO" ) {
             imagem.image = usuario.imagem
         } else {
-            imagem.af_setImage(withURL: URL(string: usuario.perfilImg)!)
+            if usuario.perfilImg != "" {
+                imagem.af_setImage(withURL: URL(string: usuario.perfilImg)!)
+            }
         }
         let tapFoto = UITapGestureRecognizer(target: self, action: #selector(selecionaFoto))
         imagem?.addGestureRecognizer(tapFoto)
