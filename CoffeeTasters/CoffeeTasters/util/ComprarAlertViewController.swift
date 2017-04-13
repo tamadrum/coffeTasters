@@ -40,14 +40,14 @@ class ComprarAlertViewController {
             let itemDao = Dao<Item>()
             let item = itemDao.new()
             item.quantidade = Int32(qtd)
-            item.produto = produto
+//            item.produto = produto
             itemDao.save()
             
-            let carrinhoDao = CarrinhoDao()
-            let carrinho = carrinhoDao.getCarrinho()
-            carrinho.addToItens(item)
-            carrinho.valorTotal += produto.preco * Double(qtd)
-            carrinhoDao.save()
+//            let carrinhoDao = CarrinhoDao()
+//            let carrinho = carrinhoDao.getCarrinho()
+//            carrinho.addToItens(item)
+//            carrinho.valorTotal += produto.preco * Double(qtd)
+//            carrinhoDao.save()
         
         })
         
