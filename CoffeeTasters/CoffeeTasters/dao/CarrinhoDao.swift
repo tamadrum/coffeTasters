@@ -20,7 +20,9 @@ class CarrinhoDao: Dao<Carrinho> {
         
         do {
             let result = try managedContext.fetch(fetchRequest)
-            if ( (result.count) > 0 ) {
+            if ( (result.count) <= 0 ) {
+                return new()
+            } else {
                 let carrinho = result[0] as! Carrinho
                 return carrinho
             }
