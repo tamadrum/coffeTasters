@@ -35,14 +35,17 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     // MARK: Ciclo de vida
     
-    override func viewDidLoad() {
+    override func viewWillAppear(_ animated: Bool) {
         usuario.load()
-        
         if ( usuario.perfilImg == "FOTO" ) {
             imagemUsuario.image = usuario.imagem
         } else {
             imagemUsuario.af_setImage(withURL: URL(string: usuario.perfilImg)!)
         }
+    }
+    
+    override func viewDidLoad() {
+        usuario.load()
         nomeUsuario.text = usuario.nome
         sobrenomeUsuario.text = usuario.sobrenome
         emailUsuario.text = usuario.email
