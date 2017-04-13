@@ -71,6 +71,7 @@
 		1F3B7DDD1E9D35CC00CA81C8 /* Merriweather-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 167327861E9C4E1500786B8D /* Merriweather-Light.ttf */; };
 		1F3B7DDE1E9D35D000CA81C8 /* Merriweather-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 167327871E9C4E1500786B8D /* Merriweather-LightItalic.ttf */; };
 		1F3B7DDF1E9D35D500CA81C8 /* Merriweather-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 167327881E9C4E1500786B8D /* Merriweather-Regular.ttf */; };
+		1FAB15401EA004CD00E794A8 /* SafraPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAB153F1EA004CD00E794A8 /* SafraPickerView.swift */; };
 		3DF85D4743E04601298C5E5A /* Pods_CoffeeTastersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81EAE3088C0DF0DAE48DD2D /* Pods_CoffeeTastersTests.framework */; };
 		6A4C5791A0102BEB6F8AD023 /* Pods_CoffeeTasters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDF74E399BC5587736D962D /* Pods_CoffeeTasters.framework */; };
 /* End PBXBuildFile section */
@@ -155,6 +156,7 @@
 		16F5B2B21E9BABA600E0D191 /* Anotacoes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Anotacoes.txt; sourceTree = "<group>"; };
 		16F5B2B41E9BC3F900E0D191 /* AvaliacaoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AvaliacaoDao.swift; path = dao/AvaliacaoDao.swift; sourceTree = "<group>"; };
 		16F5B2B61E9BF4A500E0D191 /* Notificacao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Notificacao.swift; path = modelo/Notificacao.swift; sourceTree = "<group>"; };
+		1FAB153F1EA004CD00E794A8 /* SafraPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafraPickerView.swift; sourceTree = "<group>"; };
 		21A0E0F3977AACBA390F9707 /* Pods-CoffeeTasters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeTasters.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeTasters/Pods-CoffeeTasters.release.xcconfig"; sourceTree = "<group>"; };
 		8CAEFF01AD10F0C0CA53EA4A /* Pods-CoffeeTasters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeTasters.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeTasters/Pods-CoffeeTasters.debug.xcconfig"; sourceTree = "<group>"; };
 		9CDF74E399BC5587736D962D /* Pods_CoffeeTasters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeTasters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -333,6 +335,7 @@
 				16E67A5F1E913757005EE82E /* BuscaResultCustomCell.swift */,
 				1676E9E11E9E3D2F0061C067 /* HeightSegmentControl.swift */,
 				1676E9E31E9E5B1F0061C067 /* BorderTextView.swift */,
+				1FAB153F1EA004CD00E794A8 /* SafraPickerView.swift */,
 			);
 			name = custom;
 			sourceTree = "<group>";
@@ -606,6 +609,7 @@
 				1614EE361E8E5E8A00C44F11 /* AssinaturasViewController.swift in Sources */,
 				16EBC61F1E8DCE4500A87B2F /* PerfilViewController.swift in Sources */,
 				1676E9E41E9E5B1F0061C067 /* BorderTextView.swift in Sources */,
+				1FAB15401EA004CD00E794A8 /* SafraPickerView.swift in Sources */,
 				16EBC5E71E8C66CB00A87B2F /* AppDelegate.swift in Sources */,
 				1614EE441E8E5F3800C44F11 /* AvaliacaoViewController.swift in Sources */,
 				16E67A2F1E911A34005EE82E /* CarrinhoDao.swift in Sources */,
