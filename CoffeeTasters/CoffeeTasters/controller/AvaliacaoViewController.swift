@@ -63,11 +63,18 @@ class AvaliacaoViewController: UIViewController {
             
         }
         
-        initializeDatePicker()
+        
+        let safraPickerView = SafraPickerView()
+        safraPickerView.onDateSelected = { (month: Int, year: Int) in
+            self.safraTextField.text = String(format: "%02d/%d", month, year)
+        }
+        
         initializeInputAccessoryBar()
         
-        safraTextField.inputView = datePicker
+        safraTextField.inputView = safraPickerView
         safraTextField.inputAccessoryView = inputAcessoryBar
+        
+        
         
         
     }
@@ -110,34 +117,16 @@ class AvaliacaoViewController: UIViewController {
         }
     }
     
-    func initializeDatePicker() {
-        datePicker = UIDatePicker()
-        datePicker.datePickerMode = .date
-        datePicker.date = Date()
-        datePicker.addTarget(self, action: #selector(onDateChanged), for: .valueChanged)
-    }
-    
-    func onDateChanged(sender: UIDatePicker) {
-        safraTextField.text = getDateString(from: sender.date);
-    }
-    
-    func getDateString(from date: Date) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        return dateFormatter.string(from: date)
-    }
-    
     
     func initializeInputAccessoryBar() {
         inputAcessoryBar = UIToolbar(frame: CGRect(x: 0, y:0, width: view.frame.width, height: 44))
-        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissDatePicker))
+        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissSafraPicker))
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
         inputAcessoryBar.items = [flexibleSpace, doneButton]
     }
     
-    func dismissDatePicker() {
+    func dismissSafraPicker() {
         safraTextField.resignFirstResponder()
-        safraTextField.text = getDateString(from: datePicker.date)
     }
     
     
