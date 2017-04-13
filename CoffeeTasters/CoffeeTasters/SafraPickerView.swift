@@ -42,9 +42,9 @@ class SafraPickerView: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSourc
         var years: [Int] = []
         if years.count == 0 {
             var year = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!.component(.year, from: NSDate() as Date)
-            for _ in 1...15 {
+            for _ in 1...2 {
                 years.append(year)
-                year += 1
+                year -= 1
             }
         }
         self.years = years
@@ -52,10 +52,16 @@ class SafraPickerView: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSourc
         // population months with localized names
         var months: [String] = []
         var month = 0
-        for _ in 1...12 {
-            months.append(DateFormatter().monthSymbols[month].capitalized)
-            month += 1
-        }
+        
+        month = 0
+        months.append(DateFormatter().monthSymbols[month].capitalized)
+        
+        month = 4
+        months.append(DateFormatter().monthSymbols[month].capitalized)
+        
+        month = 8
+        months.append(DateFormatter().monthSymbols[month].capitalized)
+        
         self.months = months
         
         self.delegate = self
