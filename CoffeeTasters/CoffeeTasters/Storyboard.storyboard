@@ -734,7 +734,7 @@
                         </userDefinedRuntimeAttributes>
                     </scrollView>
                     <navigationItem key="navigationItem" title="Detalhes" id="bya-08-DIl">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="klG-3K-7yW">
+                        <barButtonItem key="rightBarButtonItem" title="Avaliar" id="klG-3K-7yW">
                             <connections>
                                 <action selector="avaliacaoComCafePopulado" destination="Pnt-xa-7jn" id="Z1E-u2-iTp"/>
                             </connections>
