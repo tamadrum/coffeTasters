@@ -45,7 +45,7 @@ class AvaliacaoViewController: UIViewController {
     
     var cafeAvaliado: Cafe?
     
-    var datePicker: UIDatePicker!
+    //Barra de controle para os pickers
     var inputAcessoryBar: UIToolbar!
     var inputAcessoryBarCountry: UIToolbar!
 
@@ -65,7 +65,7 @@ class AvaliacaoViewController: UIViewController {
             
         }
         
-        
+        //Safra Picker
         let safraPickerView = SafraPickerView()
         safraPickerView.onDateSelected = { (month: Int, year: Int) in
             self.safraTextField.text = String(format: "%02d/%d", month, year)
@@ -75,7 +75,8 @@ class AvaliacaoViewController: UIViewController {
         
         safraTextField.inputView = safraPickerView
         safraTextField.inputAccessoryView = inputAcessoryBar
-
+        
+        //País Picker
         let countryPickerView = CountryPickerView()
         countryPickerView.onCountrySelected = { (country: Int) in
             
@@ -87,6 +88,8 @@ class AvaliacaoViewController: UIViewController {
         
         paisTextField.inputView = countryPickerView
         paisTextField.inputAccessoryView = inputAcessoryBarCountry
+        
+        
         
     }
     
@@ -128,7 +131,7 @@ class AvaliacaoViewController: UIViewController {
         }
     }
     
-    
+    //Configuração Safra Picker
     func initializeInputAccessoryBar() {
         inputAcessoryBar = UIToolbar(frame: CGRect(x: 0, y:0, width: view.frame.width, height: 44))
         let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissSafraPicker))
@@ -140,6 +143,7 @@ class AvaliacaoViewController: UIViewController {
         safraTextField.resignFirstResponder()
     }
     
+    //Configuração País Picker
     func initializeInputAccessoryBarCountry() {
         inputAcessoryBarCountry = UIToolbar(frame: CGRect(x: 0, y:0, width: view.frame.width, height: 44))
         let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissCountryPicker))
@@ -150,6 +154,23 @@ class AvaliacaoViewController: UIViewController {
     func dismissCountryPicker() {
         paisTextField.resignFirstResponder()
     }
+    
+    
+    
+    //Habilita ou desabilita o safraTextField
+    @IBAction func toggleSafra(_ sender: Any) {
+        switch cafeBlendSegmentControl.selectedSegmentIndex {
+            case 0:
+                safraTextField.isUserInteractionEnabled = true
+                safraTextField.text = "Selecione"
+            case 1:
+                safraTextField.isUserInteractionEnabled = false
+                safraTextField.text = "Sem safra"
+            default:
+                break
+        }
+    }
+    
     
     
     
