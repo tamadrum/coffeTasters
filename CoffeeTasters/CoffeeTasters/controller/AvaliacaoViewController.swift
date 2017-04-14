@@ -42,12 +42,15 @@ class AvaliacaoViewController: UIViewController {
     @IBOutlet weak var comentariosTextView: UITextView!
     @IBOutlet weak var rating: RatingView!
     @IBOutlet weak var cafeBlendSegmentControl: UISegmentedControl!
+    @IBOutlet weak var buscaCafeButton: UIButton!
     
     var cafeAvaliado: Cafe?
     
     //Barra de controle para os pickers
     var inputAcessoryBar: UIToolbar!
     var inputAcessoryBarCountry: UIToolbar!
+    var inputAcessoryBarCafe: UIToolbar!
+    
 
     
     override func viewDidLoad() {
@@ -88,6 +91,35 @@ class AvaliacaoViewController: UIViewController {
         
         paisTextField.inputView = countryPickerView
         paisTextField.inputAccessoryView = inputAcessoryBarCountry
+        
+        //Café Picker
+        let cafePickerView = CafePickerView()
+        cafePickerView.onCafeSelected = { (cafe: Int) in
+            
+            self.nomeTextField.text = cafePickerView.pickerView(cafePickerView, titleForRow: cafe, forComponent: 0)
+            self.paisTextField.text = cafePickerView.pickerView(cafePickerView, titleForRow: cafe, forComponent: 1)
+            self.cidadeTextField.text = cafePickerView.pickerView(cafePickerView, titleForRow: cafe, forComponent: 2)
+            self.estadoTextField.text = cafePickerView.pickerView(cafePickerView, titleForRow: cafe, forComponent: 3)
+            self.produtorTextField.text = cafePickerView.pickerView(cafePickerView, titleForRow: cafe, forComponent: 4)
+            self.torradorTextField.text = cafePickerView.pickerView(cafePickerView, titleForRow: cafe, forComponent: 5)
+            self.regiaoTextField.text = cafePickerView.pickerView(cafePickerView, titleForRow: cafe, forComponent: 6)
+            self.tipoTextField.text = cafePickerView.pickerView(cafePickerView, titleForRow: cafe, forComponent: 7)
+            self.safraTextField.text = cafePickerView.pickerView(cafePickerView, titleForRow: cafe, forComponent: 8)
+            
+            if Bool(cafePickerView.pickerView(cafePickerView, titleForRow: cafe, forComponent: 9)!) == true {
+                self.cafeBlendSegmentControl.selectedSegmentIndex = 1
+            } else {
+                self.cafeBlendSegmentControl.selectedSegmentIndex = 0
+            }
+            
+        }
+        
+        initializeInputAccessoryBarCafe()
+        
+        nomeTextField.inputView = cafePickerView
+        nomeTextField.inputAccessoryView = inputAcessoryBarCafe
+        
+        
         
     }
     
@@ -153,6 +185,18 @@ class AvaliacaoViewController: UIViewController {
         paisTextField.resignFirstResponder()
     }
     
+    //Configuração Café Picker
+    func initializeInputAccessoryBarCafe() {
+        inputAcessoryBarCafe = UIToolbar(frame: CGRect(x: 0, y:0, width: view.frame.width, height: 44))
+        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissCafePicker))
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+        inputAcessoryBarCafe.items = [flexibleSpace, doneButton]
+    }
+    
+    func dismissCafePicker() {
+        nomeTextField.resignFirstResponder()
+    }
+    
     //Habilita ou desabilita o safraTextField
     @IBAction func toggleSafra(_ sender: Any) {
         switch cafeBlendSegmentControl.selectedSegmentIndex {
@@ -165,6 +209,11 @@ class AvaliacaoViewController: UIViewController {
             default:
                 break
         }
+    }
+    
+    
+    @IBAction func buscaCafe(_ sender: Any) {
+        nomeTextField.becomeFirstResponder()
     }
 
 }
