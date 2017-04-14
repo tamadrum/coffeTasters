@@ -36,7 +36,6 @@
 		16E67A351E911B42005EE82E /* String+toMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A321E911B42005EE82E /* String+toMD5.swift */; };
 		16E67A371E911B7B005EE82E /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A361E911B7B005EE82E /* QRCodeViewController.swift */; };
 		16E67A3D1E912D44005EE82E /* EULA.txt in Resources */ = {isa = PBXBuildFile; fileRef = 16E67A3C1E912D44005EE82E /* EULA.txt */; };
-		16E67A3F1E912E22005EE82E /* PreparoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A3E1E912E22005EE82E /* PreparoDao.swift */; };
 		16E67A4E1E912F92005EE82E /* ComprarAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A4B1E912F92005EE82E /* ComprarAlertViewController.swift */; };
 		16E67A4F1E912F92005EE82E /* CreditCardUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A4C1E912F92005EE82E /* CreditCardUtil.swift */; };
 		16E67A501E912F92005EE82E /* SyncUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A4D1E912F92005EE82E /* SyncUtil.swift */; };
@@ -126,7 +125,6 @@
 		16E67A361E911B7B005EE82E /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QRCodeViewController.swift; path = controller/QRCodeViewController.swift; sourceTree = "<group>"; };
 		16E67A391E912B8F005EE82E /* CoffeeTasters-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoffeeTasters-Bridging-Header.h"; sourceTree = "<group>"; };
 		16E67A3C1E912D44005EE82E /* EULA.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EULA.txt; sourceTree = "<group>"; };
-		16E67A3E1E912E22005EE82E /* PreparoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreparoDao.swift; path = dao/PreparoDao.swift; sourceTree = "<group>"; };
 		16E67A4B1E912F92005EE82E /* ComprarAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ComprarAlertViewController.swift; path = util/ComprarAlertViewController.swift; sourceTree = "<group>"; };
 		16E67A4C1E912F92005EE82E /* CreditCardUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreditCardUtil.swift; path = util/CreditCardUtil.swift; sourceTree = "<group>"; };
 		16E67A4D1E912F92005EE82E /* SyncUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SyncUtil.swift; path = util/SyncUtil.swift; sourceTree = "<group>"; };
@@ -216,7 +214,6 @@
 			children = (
 				1690A1D01E8F2AE50039BDC1 /* Dao.swift */,
 				16E67A2E1E911A34005EE82E /* CarrinhoDao.swift */,
-				16E67A3E1E912E22005EE82E /* PreparoDao.swift */,
 				16F5B2B41E9BC3F900E0D191 /* AvaliacaoDao.swift */,
 			);
 			name = dao;
@@ -630,7 +627,6 @@
 				16E67A5A1E913141005EE82E /* AvaliacaoCustomCell.swift in Sources */,
 				16E67A351E911B42005EE82E /* String+toMD5.swift in Sources */,
 				16E67A541E9130F6005EE82E /* CafeCustomCell.swift in Sources */,
-				16E67A3F1E912E22005EE82E /* PreparoDao.swift in Sources */,
 				1614EE3C1E8E5EE300C44F11 /* AvaliacoesViewController.swift in Sources */,
 				1690A1CF1E8F2ABD0039BDC1 /* WheelFlavor.swift in Sources */,
 				16EBC6111E8C74E000A87B2F /* LoginViewController.swift in Sources */,

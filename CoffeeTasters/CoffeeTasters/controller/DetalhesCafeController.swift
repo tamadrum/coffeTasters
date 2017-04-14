@@ -46,6 +46,8 @@ class DetalhesCafeController: UIViewController {
         notaUmLabel.text = "0"
         rodaSabores.flavorUsuario = cafeAvaliado.flavorTorrador
         
+        title = cafeAvaliado.nome
+        
     }
     
     @IBAction func avaliacaoComCafePopulado() {

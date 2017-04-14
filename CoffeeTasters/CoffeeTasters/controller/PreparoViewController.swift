@@ -19,12 +19,13 @@ class PreparoViewController: UIViewController {
     @IBOutlet weak var menuModos: UISegmentedControl!
     @IBOutlet weak var nomePreparoLabel: UILabel!
     
-    var preparos = PreparoDao().getPreparo()
+    var preparos = Dao<Preparo>().list()
     var indice = 0
     var timer = Timer()
     var segundos: Int!
     
     override func viewWillAppear(_ animated: Bool) {
+        
         menuModos.removeAllSegments()
         
         for i in 0..<preparos.count {
@@ -49,28 +50,29 @@ class PreparoViewController: UIViewController {
     }
     
     func atualizaPasso() {
-        let preparo = preparos[menuModos.selectedSegmentIndex]
-        let passos = preparo.passo?.allObjects as! [Passo]
-        
-        var images:[UIImage] = []
-        for s in passos[indice].imagens! {
-            images.append(s as! UIImage)
+        if ( preparos.count > 0 ) {
+            let preparo = preparos[menuModos.selectedSegmentIndex]
+            let passos = preparo.passo?.allObjects as! [Passo]
+            
+            var images:[UIImage] = []
+            for s in passos[indice].imagens! {
+                images.append(s as! UIImage)
+            }
+            
+            var animatedImage: UIImage!
+            animatedImage = UIImage.animatedImage(with: images, duration: 0.5)
+            imagemPreparo.image = animatedImage
+            
+            descricaoPreparo.text = passos[indice].descricao
+            nomePreparoLabel.text = preparo.nome
+            if ( passos[indice].tempo > 0 ) {
+                viewTemporizador.isHidden = false
+                segundos = Int(passos[indice].tempo)
+                tempo.text = timeString(segundos)
+            } else {
+                viewTemporizador.isHidden = true
+            }
         }
-        
-        var animatedImage: UIImage!
-        animatedImage = UIImage.animatedImage(with: images, duration: 0.5)
-        imagemPreparo.image = animatedImage
-        
-        descricaoPreparo.text = passos[indice].descricao
-        nomePreparoLabel.text = preparo.nome
-        if ( passos[indice].tempo > 0 ) {
-            viewTemporizador.isHidden = false
-            segundos = Int(passos[indice].tempo)
-            tempo.text = timeString(segundos)
-        } else {
-            viewTemporizador.isHidden = true
-        }
-
     }
     
     @IBAction func startTemporizador(_ sender: UIButton) {

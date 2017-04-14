@@ -12,19 +12,19 @@ import UIKit
 class CarrinhoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var valorTotalCarrinhoLabel: UILabel!
-    var carrinho: Carrinho?
+    var carrinho: Carrinho!
     
     var valorTotal: Double!
     
     // MARK: Ciclo de vida
     
-    override func viewDidLoad() {
+    override func viewWillAppear(_ animated: Bool) {
         recarrega()
     }
     
     func recarrega () {
         carrinho = CarrinhoDao().getCarrinho()
-        let itens = carrinho?.itens!.allObjects as! [Item]
+        let itens = carrinho.itens!.allObjects as! [Item]
         
         var total = 0.0
         for i in itens {
