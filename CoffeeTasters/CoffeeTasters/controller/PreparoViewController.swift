@@ -19,12 +19,13 @@ class PreparoViewController: UIViewController {
     @IBOutlet weak var menuModos: UISegmentedControl!
     @IBOutlet weak var nomePreparoLabel: UILabel!
     
-    var preparos = Dao<Preparo>().list()
+    var preparos:[Preparo] = []
     var indice = 0
     var timer = Timer()
     var segundos: Int!
     
     override func viewWillAppear(_ animated: Bool) {
+        preparos = Dao<Preparo>().list()
         if ( preparos.count > 0 ) {
             menuModos.removeAllSegments()
             
@@ -36,13 +37,10 @@ class PreparoViewController: UIViewController {
             menuModos.frame = CGRect(x: menuModos.frame.origin.x,y: menuModos.frame.origin.y, width: menuModos.frame.size.width,height: 50)
             
             menuModos.selectedSegmentIndex = 0;
+            indice = 0
             
             atualizaPasso()
         }
-    }
-    
-    override func viewDidLoad() {
-        
     }
     
     @IBAction func tipoPreparo(_ sender: UISegmentedControl) {
@@ -53,22 +51,27 @@ class PreparoViewController: UIViewController {
     func atualizaPasso() {
         if ( preparos.count > 0 ) {
             let preparo = preparos[menuModos.selectedSegmentIndex]
-            let passos = preparo.passo?.allObjects as! [Passo]
-            
-            var images:[UIImage] = []
-            for s in passos[indice].imagens! {
-                images.append(s as! UIImage)
-            }
-            
-            var animatedImage: UIImage!
-            animatedImage = UIImage.animatedImage(with: images, duration: 0.5)
-            imagemPreparo.image = animatedImage
-            
-            descricaoPreparo.text = passos[indice].descricao
             nomePreparoLabel.text = preparo.nome
-            if ( passos[indice].tempo > 0 ) {
+            
+            let passos = preparo.passo?.allObjects as! [Passo]
+            let passo = passos[indice]
+            
+//            var images:[UIImage] = []
+//            for s in passos[indice].imagens! {
+//                images.append(s as! UIImage)
+//            }
+//            
+//            var animatedImage: UIImage!
+//            animatedImage = UIImage.animatedImage(with: images, duration: 0.5)
+//            imagemPreparo.image = animatedImage
+
+            imagemPreparo.image = passo.imagem as? UIImage
+            
+            descricaoPreparo.text = passo.descricao
+            
+            if ( passo.tempo > 0 ) {
                 viewTemporizador.isHidden = false
-                segundos = Int(passos[indice].tempo)
+                segundos = Int(passo.tempo)
                 tempo.text = timeString(segundos)
             } else {
                 viewTemporizador.isHidden = true
