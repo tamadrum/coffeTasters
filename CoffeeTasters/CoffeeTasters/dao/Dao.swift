@@ -237,65 +237,65 @@ class Dao<T> {
             
             // Inserindo Preparos
             
-//            print("* CoreData - inserindo preparos")
-//            
-//            let imagemDao = Dao<Imagens>()
-//            let imagem = imagemDao.new()
-//            imagem.nome = #imageLiteral(resourceName: "Coado")
-//            imagemDao.save()
-//            
-//            let passoDao = Dao<Passo>()
-//        
-//            let passo1 = passoDao.new()
-//            passo1.indice = 1
-//            passo1.tempo = 0
-//            passo1.addToImagens(NSSet(array:[imagem]))
-//            passo1.descricao = "Moer os grãos"
-//        
-//            let passo2 = passoDao.new()
-//            passo2.indice = 2
-//            passo2.tempo = 0
-//            passo2.addToImagens(NSSet(array:[imagem]))
-//            passo2.descricao = "Colocar o pó no coador"
-//            
-//            let passo3 = passoDao.new()
-//            passo3.indice = 3
-//            passo3.tempo = 0
-//            passo3.addToImagens(NSSet(array:[imagem]))
-//            passo3.descricao = "Jogar agua e esperar"
-//            
-//            let passo4 = passoDao.new()
-//            passo4.indice = 4
-//            passo4.tempo = 3
-//            passo4.addToImagens(NSSet(array:[imagem]))
-//            passo4.descricao = "Colocar na garrafa térmica"
-//            
-//            let passo5 = passoDao.new()
-//            passo5.indice = 1
-//            passo5.tempo = 0
-//            passo5.addToImagens(NSSet(array:[imagem]))
-//            passo5.descricao = "Moer os grãos"
-//            
-//            let passo6 = passoDao.new()
-//            passo6.indice = 2
-//            passo6.tempo = 0
-//            passo6.addToImagens(NSSet(array:[imagem]))
-//            passo6.descricao = "Colocar o pó no coador"
-//            
-//            let passo7 = passoDao.new()
-//            passo7.indice = 3
-//            passo7.tempo = 0
-//            passo7.addToImagens(NSSet(array:[imagem]))
-//            passo7.descricao = "Jogar agua e esperar"
-//            
-//            let passo8 = passoDao.new()
-//            passo8.indice = 4
-//            passo8.tempo = 2
-//            passo8.addToImagens(NSSet(array:[imagem]))
-//            passo8.descricao = "Colocar na garrafa térmica"
-//            
-//            passoDao.save()
-//            
+            print("* CoreData - inserindo preparos")
+            
+            let imagemDao = Dao<Imagens>()
+            let imagem = imagemDao.new()
+            imagem.nome = #imageLiteral(resourceName: "Coado")
+            imagemDao.save()
+            
+            let passoDao = Dao<Passo>()
+        
+            let passo1 = passoDao.new()
+            passo1.indice = 1
+            passo1.tempo = 0
+            passo1.addToImagens(NSSet(array:[imagem]))
+            passo1.descricao = "Moer os grãos"
+        
+            let passo2 = passoDao.new()
+            passo2.indice = 2
+            passo2.tempo = 0
+            passo2.addToImagens(NSSet(array:[imagem]))
+            passo2.descricao = "Colocar o pó no coador"
+            
+            let passo3 = passoDao.new()
+            passo3.indice = 3
+            passo3.tempo = 0
+            passo3.addToImagens(NSSet(array:[imagem]))
+            passo3.descricao = "Jogar agua e esperar"
+            
+            let passo4 = passoDao.new()
+            passo4.indice = 4
+            passo4.tempo = 3
+            passo4.addToImagens(NSSet(array:[imagem]))
+            passo4.descricao = "Colocar na garrafa térmica"
+            
+            let passo5 = passoDao.new()
+            passo5.indice = 1
+            passo5.tempo = 0
+            passo5.addToImagens(NSSet(array:[imagem]))
+            passo5.descricao = "Moer os grãos"
+            
+            let passo6 = passoDao.new()
+            passo6.indice = 2
+            passo6.tempo = 0
+            passo6.addToImagens(NSSet(array:[imagem]))
+            passo6.descricao = "Colocar o pó no coador"
+            
+            let passo7 = passoDao.new()
+            passo7.indice = 3
+            passo7.tempo = 0
+            passo7.addToImagens(NSSet(array:[imagem]))
+            passo7.descricao = "Jogar agua e esperar"
+            
+            let passo8 = passoDao.new()
+            passo8.indice = 4
+            passo8.tempo = 2
+            passo8.addToImagens(NSSet(array:[imagem]))
+            passo8.descricao = "Colocar na garrafa térmica"
+            
+            passoDao.save()
+            
 //            let preparoDao = Dao<Preparo>()
 //            
 //            /// Inicio do preparo1
