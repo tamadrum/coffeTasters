@@ -11,6 +11,8 @@ import UIKit
 
 class FinalizarCompraViewController: UIViewController {
     
+    var inputAcessoryBar: UIToolbar!
+    
     var usuario = Usuario()
     var valorTotal: Double!
     
@@ -31,6 +33,16 @@ class FinalizarCompraViewController: UIViewController {
         validadeCartao.text = usuario.validadeCartao
         imagemCartao.image = CreditCardUtil().creditCardType(usuario.numeroCartao)
         valor.text = "R$ \(valorTotal!)"
+        
+        let validadeCartaoPickerView = ValidadeCartaoPickerView()
+        validadeCartaoPickerView.onDateSelected = { (month: String, year: String) in
+            self.validadeCartao.text = "\(month)/\(year)"
+        }
+        
+        initializeInputAccessoryBar()
+        
+        validadeCartao.inputView = validadeCartaoPickerView
+        validadeCartao.inputAccessoryView = inputAcessoryBar
     }
     
     @IBAction func escrevendoNumeroCartao(_ sender: UITextField) {
@@ -59,6 +71,17 @@ class FinalizarCompraViewController: UIViewController {
             }))
             navigationController?.present(alerta, animated: true, completion: nil)
         }
+    }
+    
+    func initializeInputAccessoryBar() {
+        inputAcessoryBar = UIToolbar(frame: CGRect(x: 0, y:0, width: view.frame.width, height: 44))
+        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissSafraPicker))
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+        inputAcessoryBar.items = [flexibleSpace, doneButton]
+    }
+    
+    func dismissSafraPicker() {
+        validadeCartao.resignFirstResponder()
     }
     
 }

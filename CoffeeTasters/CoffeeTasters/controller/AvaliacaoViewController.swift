@@ -89,8 +89,6 @@ class AvaliacaoViewController: UIViewController {
         paisTextField.inputView = countryPickerView
         paisTextField.inputAccessoryView = inputAcessoryBarCountry
         
-        
-        
     }
     
     @IBAction func salvarAvaliacao(_ sender: UIBarButtonItem) {
@@ -155,8 +153,6 @@ class AvaliacaoViewController: UIViewController {
         paisTextField.resignFirstResponder()
     }
     
-    
-    
     //Habilita ou desabilita o safraTextField
     @IBAction func toggleSafra(_ sender: Any) {
         switch cafeBlendSegmentControl.selectedSegmentIndex {
@@ -170,9 +166,5 @@ class AvaliacaoViewController: UIViewController {
                 break
         }
     }
-    
-    
-    
-    
-    
+
 }

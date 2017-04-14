@@ -21,9 +21,9 @@ class AvaliacoesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     // MARK: Ciclo de vida
     
-    override func viewDidLoad() {
-        let dao = Dao<Avaliacao>()
-        avaliacoes = dao.list()
+    override func viewWillAppear(_ animated: Bool) {
+        avaliacoes = Dao<Avaliacao>().list()
+        tableView?.reloadData()
     }
     
     // MARK: Coisas de tabela
