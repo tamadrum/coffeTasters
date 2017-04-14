@@ -48,7 +48,6 @@ class AvaliacaoViewController: UIViewController {
     //Barra de controle para os pickers
     var inputAcessoryBar: UIToolbar!
     var inputAcessoryBarCountry: UIToolbar!
-
     
     override func viewDidLoad() {
         if let cafeAvaliado = cafeAvaliado {
