@@ -3327,6 +3327,9 @@
                                             <constraint firstAttribute="width" constant="30" id="Orv-wa-rUy"/>
                                         </constraints>
                                         <state key="normal" image="search"/>
+                                        <connections>
+                                            <action selector="buscaCafe:" destination="ELa-ih-0rX" eventType="touchUpInside" id="Gy6-GP-Hrd"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -3602,6 +3605,7 @@
                         <outlet property="amargoSlider" destination="4eJ-4v-wGB" id="q1h-7c-YjV"/>
                         <outlet property="azedoSlider" destination="6bF-RB-bJh" id="8yj-hw-jcy"/>
                         <outlet property="baristaTextField" destination="6F3-qT-nrY" id="vNt-kN-bDf"/>
+                        <outlet property="buscaCafeButton" destination="b3x-eT-KN9" id="bXx-rT-Rwo"/>
                         <outlet property="cafeBlendSegmentControl" destination="jJl-I0-RQn" id="6cq-fT-OZR"/>
                         <outlet property="carameloSlider" destination="5yQ-8M-jsF" id="327-QQ-ScT"/>
                         <outlet property="cereaisSlider" destination="9qf-hT-WKX" id="k1m-SP-gNz"/>

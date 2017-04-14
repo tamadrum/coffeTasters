@@ -73,6 +73,7 @@
 		1F3B7DDF1E9D35D500CA81C8 /* Merriweather-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 167327881E9C4E1500786B8D /* Merriweather-Regular.ttf */; };
 		1FAB15401EA004CD00E794A8 /* SafraPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAB153F1EA004CD00E794A8 /* SafraPickerView.swift */; };
 		1FAB15441EA04A7500E794A8 /* CountryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAB15431EA04A7500E794A8 /* CountryPickerView.swift */; };
+		1FAB15461EA17AF300E794A8 /* CafePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAB15451EA17AF300E794A8 /* CafePickerView.swift */; };
 		3DF85D4743E04601298C5E5A /* Pods_CoffeeTastersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81EAE3088C0DF0DAE48DD2D /* Pods_CoffeeTastersTests.framework */; };
 		6A4C5791A0102BEB6F8AD023 /* Pods_CoffeeTasters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDF74E399BC5587736D962D /* Pods_CoffeeTasters.framework */; };
 /* End PBXBuildFile section */
@@ -159,6 +160,7 @@
 		16F5B2B61E9BF4A500E0D191 /* Notificacao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Notificacao.swift; path = modelo/Notificacao.swift; sourceTree = "<group>"; };
 		1FAB153F1EA004CD00E794A8 /* SafraPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafraPickerView.swift; sourceTree = "<group>"; };
 		1FAB15431EA04A7500E794A8 /* CountryPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryPickerView.swift; sourceTree = "<group>"; };
+		1FAB15451EA17AF300E794A8 /* CafePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CafePickerView.swift; sourceTree = "<group>"; };
 		21A0E0F3977AACBA390F9707 /* Pods-CoffeeTasters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeTasters.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeTasters/Pods-CoffeeTasters.release.xcconfig"; sourceTree = "<group>"; };
 		8CAEFF01AD10F0C0CA53EA4A /* Pods-CoffeeTasters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeTasters.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeTasters/Pods-CoffeeTasters.debug.xcconfig"; sourceTree = "<group>"; };
 		9CDF74E399BC5587736D962D /* Pods_CoffeeTasters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeTasters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -339,6 +341,7 @@
 				1FAB153F1EA004CD00E794A8 /* SafraPickerView.swift */,
 				1FAB15431EA04A7500E794A8 /* CountryPickerView.swift */,
 				16DFD65D1EA166DB00547B6F /* ValidadeCartaoPickerView.swift */,
+				1FAB15451EA17AF300E794A8 /* CafePickerView.swift */,
 			);
 			name = custom;
 			sourceTree = "<group>";
@@ -641,6 +644,7 @@
 				16E67A331E911B42005EE82E /* String+isCPF.swift in Sources */,
 				1690A1C51E8EB6610039BDC1 /* RoundImage.swift in Sources */,
 				16E67A5E1E913195005EE82E /* NotificacaoCustomCell.swift in Sources */,
+				1FAB15461EA17AF300E794A8 /* CafePickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
