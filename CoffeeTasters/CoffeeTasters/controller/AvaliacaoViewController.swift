@@ -47,6 +47,8 @@ class AvaliacaoViewController: UIViewController {
     
     var datePicker: UIDatePicker!
     var inputAcessoryBar: UIToolbar!
+    var inputAcessoryBarCountry: UIToolbar!
+
     
     override func viewDidLoad() {
         if let cafeAvaliado = cafeAvaliado {
@@ -73,9 +75,18 @@ class AvaliacaoViewController: UIViewController {
         
         safraTextField.inputView = safraPickerView
         safraTextField.inputAccessoryView = inputAcessoryBar
+
+        let countryPickerView = CountryPickerView()
+        countryPickerView.onCountrySelected = { (country: Int) in
+            
+            self.paisTextField.text = countryPickerView.pickerView(countryPickerView, titleForRow: country, forComponent: 0)
+            
+        }
+
+        initializeInputAccessoryBarCountry()
         
-        
-        
+        paisTextField.inputView = countryPickerView
+        paisTextField.inputAccessoryView = inputAcessoryBarCountry
         
     }
     
@@ -128,6 +139,18 @@ class AvaliacaoViewController: UIViewController {
     func dismissSafraPicker() {
         safraTextField.resignFirstResponder()
     }
+    
+    func initializeInputAccessoryBarCountry() {
+        inputAcessoryBarCountry = UIToolbar(frame: CGRect(x: 0, y:0, width: view.frame.width, height: 44))
+        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissCountryPicker))
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+        inputAcessoryBarCountry.items = [flexibleSpace, doneButton]
+    }
+    
+    func dismissCountryPicker() {
+        paisTextField.resignFirstResponder()
+    }
+    
     
     
     
