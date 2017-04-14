@@ -54,9 +54,6 @@
         <attribute name="nozes" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="salgado" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
-    <entity name="Imagens" representedClassName="Imagens" syncable="YES" codeGenerationType="class">
-        <attribute name="nome" optional="YES" attributeType="Transformable" syncable="YES"/>
-    </entity>
     <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
         <attribute name="promocao" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="quantidade" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -64,9 +61,9 @@
     </entity>
     <entity name="Passo" representedClassName="Passo" syncable="YES" codeGenerationType="class">
         <attribute name="descricao" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imagem" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="indice" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="tempo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="imagens" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Imagens" syncable="YES"/>
     </entity>
     <entity name="Pedido" representedClassName="Pedido" syncable="YES" codeGenerationType="class">
         <attribute name="data" optional="YES" attributeType="String" syncable="YES"/>
@@ -93,7 +90,6 @@
         <element name="Cafe" positionX="-54" positionY="-9" width="128" height="285"/>
         <element name="Carrinho" positionX="-36" positionY="9" width="128" height="90"/>
         <element name="Flavor" positionX="-18" positionY="27" width="128" height="285"/>
-        <element name="Imagens" positionX="0" positionY="45" width="128" height="60"/>
         <element name="Item" positionX="18" positionY="63" width="128" height="90"/>
         <element name="Passo" positionX="36" positionY="81" width="128" height="105"/>
         <element name="Pedido" positionX="-9" positionY="36" width="128" height="120"/>
