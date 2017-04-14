@@ -13,6 +13,8 @@ import FacebookLogin
 
 class MeusDadosViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    var inputAcessoryBar: UIToolbar!
+    
     @IBOutlet weak var imagem: RoundImage!
     @IBOutlet weak var nomeTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -51,6 +53,16 @@ class MeusDadosViewController: UIViewController, UIImagePickerControllerDelegate
         let tapFoto = UITapGestureRecognizer(target: self, action: #selector(selecionaFoto))
         imagem?.addGestureRecognizer(tapFoto)
         imagem.isUserInteractionEnabled = true
+        
+        let validadeCartaoPickerView = ValidadeCartaoPickerView()
+        validadeCartaoPickerView.onDateSelected = { (month: String, year: String) in
+            self.validadeCartaoTextField.text = "\(month)/\(year)"
+        }
+        
+        initializeInputAccessoryBar()
+        
+        validadeCartaoTextField.inputView = validadeCartaoPickerView
+        validadeCartaoTextField.inputAccessoryView = inputAcessoryBar
         
     }
     
@@ -140,6 +152,17 @@ class MeusDadosViewController: UIViewController, UIImagePickerControllerDelegate
         if let nav = navigationController {
             nav.present(alerta, animated: true, completion: nil)
         }
+    }
+    
+    func initializeInputAccessoryBar() {
+        inputAcessoryBar = UIToolbar(frame: CGRect(x: 0, y:0, width: view.frame.width, height: 44))
+        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissSafraPicker))
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+        inputAcessoryBar.items = [flexibleSpace, doneButton]
+    }
+    
+    func dismissSafraPicker() {
+        validadeCartaoTextField.resignFirstResponder()
     }
     
 }

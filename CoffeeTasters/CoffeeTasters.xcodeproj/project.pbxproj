@@ -30,6 +30,7 @@
 		1690A1D11E8F2AE50039BDC1 /* Dao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690A1D01E8F2AE50039BDC1 /* Dao.swift */; };
 		1690A1D31E8F2D5B0039BDC1 /* DetalhesCafeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690A1D21E8F2D5B0039BDC1 /* DetalhesCafeController.swift */; };
 		1690A1D71E8FE9EC0039BDC1 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690A1D61E8FE9EC0039BDC1 /* RatingView.swift */; };
+		16DFD65E1EA166DC00547B6F /* ValidadeCartaoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DFD65D1EA166DB00547B6F /* ValidadeCartaoPickerView.swift */; };
 		16E67A2F1E911A34005EE82E /* CarrinhoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A2E1E911A34005EE82E /* CarrinhoDao.swift */; };
 		16E67A331E911B42005EE82E /* String+isCPF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A301E911B42005EE82E /* String+isCPF.swift */; };
 		16E67A341E911B42005EE82E /* String+isRG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E67A311E911B42005EE82E /* String+isRG.swift */; };
@@ -118,6 +119,7 @@
 		1690A1D01E8F2AE50039BDC1 /* Dao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dao.swift; path = dao/Dao.swift; sourceTree = "<group>"; };
 		1690A1D21E8F2D5B0039BDC1 /* DetalhesCafeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetalhesCafeController.swift; path = controller/DetalhesCafeController.swift; sourceTree = "<group>"; };
 		1690A1D61E8FE9EC0039BDC1 /* RatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RatingView.swift; path = custom/RatingView.swift; sourceTree = "<group>"; };
+		16DFD65D1EA166DB00547B6F /* ValidadeCartaoPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ValidadeCartaoPickerView.swift; path = custom/ValidadeCartaoPickerView.swift; sourceTree = "<group>"; };
 		16E67A2E1E911A34005EE82E /* CarrinhoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarrinhoDao.swift; path = dao/CarrinhoDao.swift; sourceTree = "<group>"; };
 		16E67A301E911B42005EE82E /* String+isCPF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+isCPF.swift"; path = "extensions/String+isCPF.swift"; sourceTree = "<group>"; };
 		16E67A311E911B42005EE82E /* String+isRG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+isRG.swift"; path = "extensions/String+isRG.swift"; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 				1676E9E31E9E5B1F0061C067 /* BorderTextView.swift */,
 				1FAB153F1EA004CD00E794A8 /* SafraPickerView.swift */,
 				1FAB15431EA04A7500E794A8 /* CountryPickerView.swift */,
+				16DFD65D1EA166DB00547B6F /* ValidadeCartaoPickerView.swift */,
 			);
 			name = custom;
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 				16E67A2F1E911A34005EE82E /* CarrinhoDao.swift in Sources */,
 				16EBC6181E8D095600A87B2F /* BorderButton.swift in Sources */,
 				1614EE461E8E5F8400C44F11 /* FinalizarCompraViewController.swift in Sources */,
+				16DFD65E1EA166DC00547B6F /* ValidadeCartaoPickerView.swift in Sources */,
 				1607E16C1E908790008DF3C9 /* ImageSlider.swift in Sources */,
 				16E67A341E911B42005EE82E /* String+isRG.swift in Sources */,
 				1614EE381E8E5EA500C44F11 /* CafeListViewControler.swift in Sources */,
