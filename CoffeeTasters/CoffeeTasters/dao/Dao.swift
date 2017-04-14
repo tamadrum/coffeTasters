@@ -40,17 +40,18 @@ class Dao<T> {
         
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
             managedContext = appDelegate.persistentContainer.viewContext
-            print("abrindo \(banco!) no ctx: \(managedContext!)")
+            print("* CoreData - abrindo \(banco!) no ctx: \(managedContext!)")
             
         } else {
             print("**************************")
-            print("Não consegui instanciar o contexto do banco de dados")
+            print("* CoreData - Não consegui instanciar o contexto do banco de dados")
             print("**************************")
         }
         
     }
     
     func new() -> T {
+        print("* CoreData - criando \(banco!) no ctx: \(managedContext!)")
         return NSEntityDescription.insertNewObject(forEntityName: banco!,
                                                    into: managedContext) as! T
     }
@@ -60,7 +61,7 @@ class Dao<T> {
             return try managedContext.existingObject(with: id) as! T
         } catch let error as NSError {
             print("**************************")
-            print("Não consegui buscar por id. \(error), \(error.userInfo)")
+            print("* CoreData - Não consegui buscar por id. \(error), \(error.userInfo)")
             print("**************************")
         }
         return T.self as! T
@@ -73,12 +74,10 @@ class Dao<T> {
         
         do {
             retorno = try managedContext.fetch(fetchRequest) as! [T]
-//            print("**************************")
-//            print("Listando \(banco!) [\(retorno.count)]")
-//            print("**************************")
+            print("* CoreData - Listando \(banco!) [\(retorno.count)]")
         } catch let error as NSError {
             print("**************************")
-            print("Could not fetch. \(error), \(error.userInfo)")
+            print("* CoreData - Could not fetch. \(error), \(error.userInfo)")
             print("**************************")
         }
         return retorno
@@ -95,16 +94,16 @@ class Dao<T> {
     func save () {
         if managedContext.hasChanges {
             do {
-                print("salvando \(banco!) no ctx: \(managedContext!)")
+                print("* CoreData - salvando \(banco!) no ctx: \(managedContext!)")
                 try managedContext.save()
             } catch let error as NSError {
                 print("**************************")
-                print("Impossível salvar... \(error), \(error.userInfo)")
+                print("* CoreData - Impossível salvar... \(error), \(error.userInfo)")
                 print("**************************")
             }
         } else {
             print("**************************")
-            print("Nada para salvar")
+            print("* CoreData - Nada para salvar")
             print("**************************")
         }
     }
@@ -117,7 +116,7 @@ class Dao<T> {
             return count
         } catch let error as NSError {
             print("**************************")
-            print("Error: \(error.localizedDescription)")
+            print("* CoreData - Error: \(error.localizedDescription)")
             print("**************************")
             return 0
         }
@@ -129,12 +128,11 @@ class Dao<T> {
         if !dadosInseridos {
             
             print("**************************")
-            print("inserindo dados iniciais")
+            print("* CoreData - inserindo dados iniciais")
             
             // Inserindo Produtos
-                print("Inserindo produtos")
+                print("* CoreData - Inserindo produtos")
                 let prodDao = Dao<Produto>()
-            
                 let produto1 = prodDao.new()
                 produto1.nome = "Café Pelé"
                 produto1.preco = 10
@@ -142,63 +140,41 @@ class Dao<T> {
                 produto1.oferta = true
                 produto1.precoOferta = 9
                 produto1.descricao = "Descrição do Café"
-            
-                let produto2 = prodDao.new()
-                produto2.nome = "Café Pilão"
-                produto2.preco = 20
-                produto2.tipo = "Café"
-                produto2.oferta = false
-                produto2.descricao = "Descrição do Café"
-            
                 prodDao.save()
             
             // Inserindo Itens
             
-                print("Inserindo Itens")
+                print("* CoreData - Inserindo Itens")
                 let itemDao = Dao<Item>()
-            
                 let item1 = itemDao.new()
                 item1.quantidade = 2
                 item1.produto = produto1
-            
-                let item2 = itemDao.new()
-                item2.quantidade = 3
-                item2.produto = produto2
-            
                 itemDao.save()
             
             // Inserindo Pedidos
-                print("Inserindo Pedido")
+                print("* CoreData - Inserindo Pedido")
                 let pedDao = Dao<Pedido>()
-            
                 let ped1 = pedDao.new()
                 ped1.numero = 101010
                 ped1.data = "10/10/2010"
                 ped1.status = "Em processamento..."
                 ped1.valorTotal += Double(item1.quantidade) * (item1.produto?.preco)!
-                ped1.valorTotal += Double(item2.quantidade) * (item2.produto?.preco)!
                 ped1.addToItens(item1)
-                ped1.addToItens(item2)
-            
                 pedDao.save()
             
             // Inserindo Carrinho
             
-                print("inserindo carrinho")
-                let carrinhoDao = CarrinhoDao()
-                let carrinho = carrinhoDao.getCarrinho()
-                carrinho.addToItens(item1)
-                carrinho.addToItens(item2)
-                carrinhoDao.save()
+//                print("inserindo carrinho")
+//                let carrinhoDao = CarrinhoDao()
+//                carrinhoDao.getCarrinho()
+//                carrinhoDao.save()
             
             // Inserindo Cafés
             
+                print("* CoreData - inserindo cafes")
                 var nomes = ["AC CAFÉ", "CARMO ESTATE COFFEE", "DB ESTATE COFFEE", "ECOAGRÍCOLA CAFÉ LTDA",
                              "FAZENDA BELA VISTA", "FAZENDA CAMBARÁ", "FAZENDA CAMOCIM", "FAZENDA CAPOEIRA ESTATE COFFEE", "FAZENDA DO SERTÃO",
                              "FAZENDA DUTRA", "FAZENDA HELENA", "Café Pelé", "3 Corações", "FAZENDA SERRA DAS TRÊS BARRAS", "Nespresso" ]
-            
-                print("inserindo cafes")
-                
                 nomes.sort()
             
                 let cafeDao = Dao<Cafe>()
@@ -245,8 +221,7 @@ class Dao<T> {
             
             // Inserindo uma avaliacao
             
-                print("inserindo avaliacao")
-            
+                print("* CoreData - inserindo avaliacao")
                 let avaliaDao = Dao<Avaliacao>()
                 let avaliacao = avaliaDao.new()
                 avaliacao.cafe = c
@@ -260,6 +235,78 @@ class Dao<T> {
                 avaliacao.metodoPreparo = "Prensa"
                 avaliacao.obs = "Gostei muito do café e do lugar"
                 avaliaDao.save()
+            
+            // Inserindo Preparos
+            
+            print("* CoreData - inserindo preparos")
+            let passoDao = Dao<Passo>()
+            let preparoDao = Dao<Preparo>()
+            
+            /// Inicio do preparo1
+            let preparo1 = preparoDao.new()
+            preparo1.nome = "Coado"
+            preparo1.imagem = #imageLiteral(resourceName: "cafe")
+            
+            let passo1 = passoDao.new()
+            passo1.indice = 1
+            passo1.tempo = 0
+            passo1.addToImagens(NSSet(array:[#imageLiteral(resourceName: "cafe")]))
+            passo1.descricao = "Moer os grãos"
+            preparo1.addToPasso(passo1)
+            
+            let passo2 = passoDao.new()
+            passo2.indice = 2
+            passo2.tempo = 0
+            passo2.addToImagens(NSSet(array:[#imageLiteral(resourceName: "cafe")]))
+            passo2.descricao = "Colocar o pó no coador"
+            preparo1.addToPasso(passo2)
+            
+            let passo3 = passoDao.new()
+            passo3.indice = 3
+            passo3.tempo = 0
+            passo3.addToImagens(NSSet(array:[#imageLiteral(resourceName: "cafe")]))
+            passo3.descricao = "Jogar agua e esperar"
+            preparo1.addToPasso(passo3)
+            
+            let passo4 = passoDao.new()
+            passo4.indice = 4
+            passo4.tempo = 3
+            passo4.addToImagens(NSSet(array:[#imageLiteral(resourceName: "cafe")]))
+            passo4.descricao = "Colocar na garrafa térmica"
+            preparo1.addToPasso(passo4)
+            
+            /// Inicio do preparo2
+            let preparo2 = preparoDao.new()
+            preparo2.nome = "Prensa Francesa"
+            preparo2.imagem = #imageLiteral(resourceName: "cafe")
+            
+            let passo5 = passoDao.new()
+            passo5.indice = 1
+            passo5.tempo = 0
+            passo5.addToImagens(NSSet(array:[#imageLiteral(resourceName: "cafe")]))
+            passo5.descricao = "Moer os grãos"
+            preparo2.addToPasso(passo5)
+            
+            let passo6 = passoDao.new()
+            passo6.indice = 2
+            passo6.tempo = 0
+            passo6.addToImagens(NSSet(array:[#imageLiteral(resourceName: "cafe")]))
+            passo6.descricao = "Colocar o pó no coador"
+            preparo2.addToPasso(passo6)
+            
+            let passo7 = passoDao.new()
+            passo7.indice = 3
+            passo7.tempo = 0
+            passo7.addToImagens(NSSet(array:[#imageLiteral(resourceName: "cafe")]))
+            passo7.descricao = "Jogar agua e esperar"
+            preparo2.addToPasso(passo7)
+            
+            let passo8 = passoDao.new()
+            passo8.indice = 4
+            passo8.tempo = 2
+            passo8.addToImagens(NSSet(array:[#imageLiteral(resourceName: "cafe")]))
+            passo8.descricao = "Colocar na garrafa térmica"
+            preparo2.addToPasso(passo8)
             
                 print("**************************")
 

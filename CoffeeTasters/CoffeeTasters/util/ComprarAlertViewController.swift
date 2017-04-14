@@ -39,10 +39,7 @@ class ComprarAlertViewController {
             
             let qtd = Int32(firstTextField.text!)!
             
-            print("Contexto do produto: \(produto.managedObjectContext!)")
-            
             let itemDao = Dao<Item>()
-            itemDao.reset()
             let item = itemDao.new()
             item.quantidade = qtd
             item.produto = produto

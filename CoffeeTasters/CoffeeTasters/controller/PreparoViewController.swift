@@ -19,7 +19,7 @@ class PreparoViewController: UIViewController {
     @IBOutlet weak var menuModos: UISegmentedControl!
     @IBOutlet weak var nomePreparoLabel: UILabel!
     
-    var preparos = PreparoDao().getPreparo()
+    var preparos = Dao<Preparo>().list()
     var indice = 0
     var timer = Timer()
     var segundos: Int!

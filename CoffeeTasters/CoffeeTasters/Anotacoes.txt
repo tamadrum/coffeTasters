@@ -5,6 +5,4 @@ Safras em Janeiro, Maio e Setembro até 1 ano atrás
 
 Ordenar lista de cafés descendente por safra e nome
 
-Aonde colocar o QRCode agora???
-
 Arrumar os banco de dados - cadastrar cafe, avaliacao e carrinho de compras

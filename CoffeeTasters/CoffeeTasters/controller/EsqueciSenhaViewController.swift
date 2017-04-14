@@ -14,6 +14,7 @@ class EsqueciSenhaViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     
     @IBAction func enviarRecovery(_ sender: UIButton) {
+        print("Recuperar senha")
     }
     
     
