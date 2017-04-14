@@ -25,19 +25,20 @@ class PreparoViewController: UIViewController {
     var segundos: Int!
     
     override func viewWillAppear(_ animated: Bool) {
-        
-        menuModos.removeAllSegments()
-        
-        for i in 0..<preparos.count {
-            let nomeImagem = preparos[i].imagem as! UIImage?
-            menuModos.insertSegment(with: nomeImagem, at: i, animated: true)
+        if ( preparos.count > 0 ) {
+            menuModos.removeAllSegments()
+            
+            for i in 0..<preparos.count {
+                let nomeImagem = preparos[i].imagem as! UIImage?
+                menuModos.insertSegment(with: nomeImagem, at: i, animated: true)
+            }
+            
+            menuModos.frame = CGRect(x: menuModos.frame.origin.x,y: menuModos.frame.origin.y, width: menuModos.frame.size.width,height: 50)
+            
+            menuModos.selectedSegmentIndex = 0;
+            
+            atualizaPasso()
         }
-        
-        menuModos.frame = CGRect(x: menuModos.frame.origin.x,y: menuModos.frame.origin.y, width: menuModos.frame.size.width,height: 50)
-        
-        menuModos.selectedSegmentIndex = 0;
-        
-        atualizaPasso()
     }
     
     override func viewDidLoad() {

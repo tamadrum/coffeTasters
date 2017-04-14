@@ -220,20 +220,20 @@ class Dao<T> {
             
             // Inserindo uma avaliacao
             
-                print("* CoreData - inserindo avaliacao")
-                let avaliaDao = Dao<Avaliacao>()
-                let avaliacao = avaliaDao.new()
-                avaliacao.cafe = c
-                avaliacao.barista = "Jacksson"
-                avaliacao.data = "10/10/2017"
-                avaliacao.dataColheita = "10/10/2017"
-                avaliacao.dataTorra = "10/10/2017"
-                avaliacao.flavor = flavor
-                avaliacao.gostou = Int32(3)
-                avaliacao.localPreparo = "Marco Polo"
-                avaliacao.metodoPreparo = "Prensa"
-                avaliacao.obs = "Gostei muito do café e do lugar"
-                avaliaDao.save()
+//                print("* CoreData - inserindo avaliacao")
+//                let avaliaDao = Dao<Avaliacao>()
+//                let avaliacao = avaliaDao.new()
+//                avaliacao.cafe = c
+//                avaliacao.barista = "Jacksson"
+//                avaliacao.data = "10/10/2017"
+//                avaliacao.dataColheita = "10/10/2017"
+//                avaliacao.dataTorra = "10/10/2017"
+//                avaliacao.flavor = flavor
+//                avaliacao.gostou = Int32(3)
+//                avaliacao.localPreparo = "Marco Polo"
+//                avaliacao.metodoPreparo = "Prensa"
+//                avaliacao.obs = "Gostei muito do café e do lugar"
+//                avaliaDao.save()
             
             // Inserindo Preparos
             
