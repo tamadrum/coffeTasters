@@ -13,24 +13,13 @@ import CoreData
 class CarrinhoDao: Dao<Carrinho> {
     
     func getCarrinho () -> Carrinho {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
-        let entityDescription = NSEntityDescription.entity(forEntityName: banco!, in: managedContext)
-        
-        fetchRequest.entity = entityDescription
-        
-        do {
-            let result = try managedContext.fetch(fetchRequest)
-            if ( (result.count) <= 0 ) {
-                return new()
-            } else {
-                let carrinho = result[0] as! Carrinho
-                return carrinho
-            }
-        } catch {
-            let fetchError = error as NSError
-            print(fetchError)
+        let result = list()
+            
+        if ( (result.count) <= 0 ) {
+            return new()
+        } else {
+            return result[0]
         }
-        return NSEntityDescription.insertNewObject(forEntityName: banco!, into: managedContext) as! Carrinho
     }
     
     func getValorCarrinho() -> Double {
