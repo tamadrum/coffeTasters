@@ -40,6 +40,8 @@ class Dao<T> {
         
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
             managedContext = appDelegate.persistentContainer.viewContext
+            print("abrindo \(banco!) no ctx: \(managedContext!)")
+            
         } else {
             print("**************************")
             print("Não consegui instanciar o contexto do banco de dados")
@@ -51,6 +53,17 @@ class Dao<T> {
     func new() -> T {
         return NSEntityDescription.insertNewObject(forEntityName: banco!,
                                                    into: managedContext) as! T
+    }
+    
+    func getPorID(_ id: NSManagedObjectID) -> T {
+        do {
+            return try managedContext.existingObject(with: id) as! T
+        } catch let error as NSError {
+            print("**************************")
+            print("Não consegui buscar por id. \(error), \(error.userInfo)")
+            print("**************************")
+        }
+        return T.self as! T
     }
     
     func list() -> [T] {

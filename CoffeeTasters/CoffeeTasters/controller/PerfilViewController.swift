@@ -10,8 +10,10 @@ import Foundation
 import UIKit
 import AlamofireImage
 
-class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
+    @IBOutlet weak var buscarCafes: UITextField!
+
     @IBOutlet weak var tableView: UITableView!
     var searchActive : Bool = false
     var data:[Cafe] = []
@@ -31,6 +33,53 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if tabBarController != nil {
             tabBarController?.selectedIndex = 2;
         }
+    }
+    
+    // MARK: Coisas da busca
+    
+    @IBAction func textoMudou(_ sender: UITextField) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.tableView.frame.origin.y = 108
+        })
+        
+        filtered = data.filter({ (cafe) -> Bool in
+            if cafe.nome?.range(of: sender.text!) != nil {
+                return true
+            }
+            else {
+                return false
+            }
+        })
+        
+        if(filtered.count == 0){
+            searchActive = false;
+        } else {
+            searchActive = true;
+        }
+        
+        self.tableView?.reloadData()
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        searchActive = false;
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        searchActive = true;
+    }
+
+    @IBAction func clicouBuscaCafe(_ sender: UITextField) {
+        searchActive = false;
+    }
+    
+    @IBAction func cancelarBuscaCafe(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.tableView.frame.origin.y = -300
+            self.buscarCafes.text = ""
+        })
+        
+        searchActive = false;
+        dismissKeyboard()
     }
     
     // MARK: Ciclo de vida
@@ -67,53 +116,6 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
         })
         
         tableView?.reloadData()
-    }
-    
-    // MARK: Coisas da busca
-    
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        searchActive = true;
-    }
-    
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        searchActive = false;
-    }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        UIView.animate(withDuration: 0.5, animations: {
-            self.tableView.frame.origin.y = -300
-            searchBar.text = ""
-        })
-        
-        searchActive = false;
-        dismissKeyboard()
-    }
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchActive = false;
-    }
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        UIView.animate(withDuration: 0.5, animations: {
-            self.tableView.frame.origin.y = 108
-        })
-        
-        filtered = data.filter({ (cafe) -> Bool in
-            if cafe.nome?.range(of: searchText) != nil {
-                return true
-            }
-            else {
-                return false
-            }
-        })
-        
-        if(filtered.count == 0){
-            searchActive = false;
-        } else {
-            searchActive = true;
-        }
-        
-        self.tableView?.reloadData()
     }
     
     // MARK: Coisas da tabela

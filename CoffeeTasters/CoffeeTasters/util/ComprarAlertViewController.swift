@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import CoreData
+
 
 /// Alerta para mandar comprar o produto
 class ComprarAlertViewController {
@@ -32,31 +34,26 @@ class ComprarAlertViewController {
         
         let saveAction = UIAlertAction(title: "Adicionar", style: .default, handler: {
             alert -> Void in
-
-            let dao = Dao<Cafe>()
-            let cafe = dao.new()
-            cafe.nome = "lalala"
-            dao.save()
             
+            let firstTextField = alertController.textFields![0] as UITextField
             
+            let qtd = Int32(firstTextField.text!)!
             
+            print("Contexto do produto: \(produto.managedObjectContext!)")
             
+            let itemDao = Dao<Item>()
+            itemDao.reset()
+            let item = itemDao.new()
+            item.quantidade = qtd
+            item.produto = produto
+            itemDao.save()
+            print("Consegui salvar o item")
             
-//            let firstTextField = alertController.textFields![0] as UITextField
-//            
-//            let qtd = Int(firstTextField.text!)!
-//            
-//            let itemDao = Dao<Item>()
-//            let item = itemDao.new()
-//            item.quantidade = Int32(qtd)
-//            item.produto = produto
-//            itemDao.save()
-//            
-//            let carrinhoDao = CarrinhoDao()
-//            let carrinho = carrinhoDao.getCarrinho()
-//            carrinho.addToItens(item)
-//            carrinho.valorTotal += produto.preco * Double(qtd)
-//            carrinhoDao.save()
+            let carrinhoDao = CarrinhoDao()
+            let carrinho = carrinhoDao.getCarrinho()
+            carrinho.addToItens(item)
+            carrinho.valorTotal += produto.preco * Double(qtd)
+            carrinhoDao.save()
         
         })
         
