@@ -53,6 +53,8 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
     var inputAcessoryBarCafe: UIToolbar!
     
     let cafePickerView = CafePickerView()
+    let safraPickerView = SafraPickerView()
+    let countryPickerView = CountryPickerView()
     
     override func viewDidLoad() {
         if let cafeAvaliado = cafeAvaliado {
@@ -70,9 +72,10 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
         }
         
         //Safra Picker
-        let safraPickerView = SafraPickerView()
-        safraPickerView.onDateSelected = { (month: Int, year: Int) in
+        self.safraPickerView.onDateSelected = { (month: Int, year: Int) in
             self.safraTextField.text = String(format: "%02d/%d", month, year)
+            
+            
         }
         
         initializeInputAccessoryBar()
@@ -80,11 +83,11 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
         safraTextField.inputView = safraPickerView
         safraTextField.inputAccessoryView = inputAcessoryBar
         
+        
         //País Picker
-        let countryPickerView = CountryPickerView()
-        countryPickerView.onCountrySelected = { (country: Int) in
+        self.countryPickerView.onCountrySelected = { (country: Int) in
             
-            self.paisTextField.text = countryPickerView.pickerView(countryPickerView, titleForRow: country, forComponent: 0)
+            self.paisTextField.text = self.countryPickerView.pickerView(self.countryPickerView, titleForRow: country, forComponent: 0)
             
         }
 
@@ -92,6 +95,7 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
         
         paisTextField.inputView = countryPickerView
         paisTextField.inputAccessoryView = inputAcessoryBarCountry
+        
         
         //Café Picker
         cafePickerView.cafeDelegate = self
@@ -165,24 +169,36 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
     func initializeInputAccessoryBar() {
         inputAcessoryBar = UIToolbar(frame: CGRect(x: 0, y:0, width: view.frame.width, height: 44))
         let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissSafraPicker))
+        let cancelButton = UIBarButtonItem(title: "Cancelar", style: .plain, target: self, action: #selector(cancelSafraPicker))
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
-        inputAcessoryBar.items = [flexibleSpace, doneButton]
+        inputAcessoryBar.items = [cancelButton, flexibleSpace, doneButton]
     }
     
     func dismissSafraPicker() {
+        self.safraPickerView.pickerView(self.safraPickerView, didSelectRow: self.safraPickerView.selectedRow(inComponent: 0), inComponent: 0)
         safraTextField.resignFirstResponder()
+    }
+    func cancelSafraPicker() {
+        safraTextField.resignFirstResponder()
+        safraTextField.text = ""
     }
     
     //Configuração País Picker
     func initializeInputAccessoryBarCountry() {
         inputAcessoryBarCountry = UIToolbar(frame: CGRect(x: 0, y:0, width: view.frame.width, height: 44))
         let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissCountryPicker))
+        let cancelButton = UIBarButtonItem(title: "Cancelar", style: .plain, target: self, action: #selector(cancelPaisPicker))
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
-        inputAcessoryBarCountry.items = [flexibleSpace, doneButton]
+        inputAcessoryBarCountry.items = [cancelButton, flexibleSpace, doneButton]
     }
     
     func dismissCountryPicker() {
+        self.countryPickerView.pickerView(self.countryPickerView, didSelectRow: self.countryPickerView.selectedRow(inComponent: 0), inComponent: 0)
         paisTextField.resignFirstResponder()
+    }
+    func cancelPaisPicker() {
+        paisTextField.resignFirstResponder()
+        paisTextField.text = ""
     }
     
     //Configuração Café Picker
