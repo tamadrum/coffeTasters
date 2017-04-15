@@ -136,16 +136,16 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         if(searchActive){
             if ( indexPath.row == filtered.count ) {
-                cell.textLabel?.text = "Adicionar um Café"
-                cell.imagemLogo?.image = nil
+                cell.nome?.text = "Adicionar um Café"
+                cell.imagemLogo?.image = #imageLiteral(resourceName: "cafe")
             } else {
                 cell.nome?.text = filtered[indexPath.row].nome
                 cell.imagemLogo?.image = filtered[indexPath.row].imagem as? UIImage
             }
         } else {
             if ( indexPath.row == data.count ) {
-                cell.textLabel?.text = "Adicionar um Café"
-                cell.imagemLogo?.image = nil
+                cell.nome?.text = "Adicionar um Café"
+                cell.imagemLogo?.image = #imageLiteral(resourceName: "cafe")
             } else {
                 cell.nome?.text = data[indexPath.row].nome
                 cell.imagemLogo?.image = data[indexPath.row].imagem as? UIImage
