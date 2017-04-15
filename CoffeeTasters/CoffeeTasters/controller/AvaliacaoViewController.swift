@@ -51,7 +51,8 @@ class AvaliacaoViewController: UIViewController {
     var inputAcessoryBarCountry: UIToolbar!
     var inputAcessoryBarCafe: UIToolbar!
     
-
+    let cafePickerView = CafePickerView()
+    
     
     override func viewDidLoad() {
         if let cafeAvaliado = cafeAvaliado {
@@ -93,20 +94,19 @@ class AvaliacaoViewController: UIViewController {
         paisTextField.inputAccessoryView = inputAcessoryBarCountry
         
         //Café Picker
-        let cafePickerView = CafePickerView()
-        cafePickerView.onCafeSelected = { (cafe: Int) in
+        self.cafePickerView.onCafeSelected = { (cafe: Int) in
             
-            self.nomeTextField.text = cafePickerView.pickerView(cafePickerView, titleForRow: cafe, forComponent: 0)
-            self.paisTextField.text = cafePickerView.pickerView(cafePickerView, titleForRow: cafe, forComponent: 1)
-            self.cidadeTextField.text = cafePickerView.pickerView(cafePickerView, titleForRow: cafe, forComponent: 2)
-            self.estadoTextField.text = cafePickerView.pickerView(cafePickerView, titleForRow: cafe, forComponent: 3)
-            self.produtorTextField.text = cafePickerView.pickerView(cafePickerView, titleForRow: cafe, forComponent: 4)
-            self.torradorTextField.text = cafePickerView.pickerView(cafePickerView, titleForRow: cafe, forComponent: 5)
-            self.regiaoTextField.text = cafePickerView.pickerView(cafePickerView, titleForRow: cafe, forComponent: 6)
-            self.tipoTextField.text = cafePickerView.pickerView(cafePickerView, titleForRow: cafe, forComponent: 7)
-            self.safraTextField.text = cafePickerView.pickerView(cafePickerView, titleForRow: cafe, forComponent: 8)
+            self.nomeTextField.text = self.cafePickerView.pickerView(self.cafePickerView, titleForRow: cafe, forComponent: 0)
+            self.paisTextField.text = self.cafePickerView.pickerView(self.cafePickerView, titleForRow: cafe, forComponent: 1)
+            self.cidadeTextField.text = self.cafePickerView.pickerView(self.cafePickerView, titleForRow: cafe, forComponent: 2)
+            self.estadoTextField.text = self.cafePickerView.pickerView(self.cafePickerView, titleForRow: cafe, forComponent: 3)
+            self.produtorTextField.text = self.cafePickerView.pickerView(self.cafePickerView, titleForRow: cafe, forComponent: 4)
+            self.torradorTextField.text = self.cafePickerView.pickerView(self.cafePickerView, titleForRow: cafe, forComponent: 5)
+            self.regiaoTextField.text = self.cafePickerView.pickerView(self.cafePickerView, titleForRow: cafe, forComponent: 6)
+            self.tipoTextField.text = self.cafePickerView.pickerView(self.cafePickerView, titleForRow: cafe, forComponent: 7)
+            self.safraTextField.text = self.cafePickerView.pickerView(self.cafePickerView, titleForRow: cafe, forComponent: 8)
             
-            if Bool(cafePickerView.pickerView(cafePickerView, titleForRow: cafe, forComponent: 9)!) == true {
+            if Bool(self.cafePickerView.pickerView(self.cafePickerView, titleForRow: cafe, forComponent: 9)!) == true {
                 self.cafeBlendSegmentControl.selectedSegmentIndex = 1
             } else {
                 self.cafeBlendSegmentControl.selectedSegmentIndex = 0
@@ -115,9 +115,6 @@ class AvaliacaoViewController: UIViewController {
         }
         
         initializeInputAccessoryBarCafe()
-        
-        nomeTextField.inputView = cafePickerView
-        nomeTextField.inputAccessoryView = inputAcessoryBarCafe
         
         
         
@@ -195,6 +192,10 @@ class AvaliacaoViewController: UIViewController {
     
     func dismissCafePicker() {
         nomeTextField.resignFirstResponder()
+        nomeTextField.inputView = nil
+        nomeTextField.inputAccessoryView = nil
+        nomeTextField.reloadInputViews()
+        
     }
     
     //Habilita ou desabilita o safraTextField
@@ -213,6 +214,9 @@ class AvaliacaoViewController: UIViewController {
     
     
     @IBAction func buscaCafe(_ sender: Any) {
+        nomeTextField.resignFirstResponder()
+        nomeTextField.inputView = cafePickerView
+        nomeTextField.inputAccessoryView = inputAcessoryBarCafe
         nomeTextField.becomeFirstResponder()
     }
 
