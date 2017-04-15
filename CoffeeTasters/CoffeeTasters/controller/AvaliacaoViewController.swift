@@ -189,8 +189,9 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
     func initializeInputAccessoryBarCafe() {
         inputAcessoryBarCafe = UIToolbar(frame: CGRect(x: 0, y:0, width: view.frame.width, height: 44))
         let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissCafePicker))
+        let cancelButton = UIBarButtonItem(title: "Cancelar", style: .plain, target: self, action: #selector(cancelCafePicker))
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
-        inputAcessoryBarCafe.items = [flexibleSpace, doneButton]
+        inputAcessoryBarCafe.items = [cancelButton, flexibleSpace, doneButton]
     }
     
     func dismissCafePicker() {
@@ -198,6 +199,24 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
         nomeTextField.inputView = nil
         nomeTextField.inputAccessoryView = nil
         nomeTextField.reloadInputViews()
+        
+    }
+    func cancelCafePicker() {
+        nomeTextField.resignFirstResponder()
+        nomeTextField.inputView = nil
+        nomeTextField.inputAccessoryView = nil
+        nomeTextField.reloadInputViews()
+        
+        self.nomeTextField.text = ""
+        self.paisTextField.text = ""
+        self.cidadeTextField.text = ""
+        self.estadoTextField.text = ""
+        self.produtorTextField.text = ""
+        self.torradorTextField.text = ""
+        self.regiaoTextField.text = ""
+        self.tipoTextField.text = ""
+        self.safraTextField.text = ""
+        self.cafeBlendSegmentControl.selectedSegmentIndex = 0
         
     }
     
@@ -220,6 +239,9 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
         nomeTextField.inputView = cafePickerView
         nomeTextField.inputAccessoryView = inputAcessoryBarCafe
         nomeTextField.becomeFirstResponder()
+        
+        cafePickerView.pickerView(self.cafePickerView, didSelectRow: 0, inComponent: 0)
+        
     }
     
     func atualizaCafeAvaliado(com: Cafe) {
