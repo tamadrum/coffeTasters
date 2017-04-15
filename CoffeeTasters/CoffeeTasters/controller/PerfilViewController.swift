@@ -126,30 +126,30 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(searchActive) {
-            return filtered.count
+            return filtered.count+1
         }
-        return data.count
+        return data.count+1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celula") as! BuscaResultCustomCell
         
         if(searchActive){
-//            if ( indexPath.row == filtered.count ) {
-//                cell.textLabel?.text = "Adicionar um Café"
-//                cell.imagemLogo?.image = nil
-//            } else {
+            if ( indexPath.row == filtered.count ) {
+                cell.textLabel?.text = "Adicionar um Café"
+                cell.imagemLogo?.image = nil
+            } else {
                 cell.nome?.text = filtered[indexPath.row].nome
                 cell.imagemLogo?.image = filtered[indexPath.row].imagem as? UIImage
-//            }
+            }
         } else {
-//            if ( indexPath.row == data.count ) {
-//                cell.textLabel?.text = "Adicionar um Café"
-//                cell.imagemLogo?.image = nil
-//            } else {
+            if ( indexPath.row == data.count ) {
+                cell.textLabel?.text = "Adicionar um Café"
+                cell.imagemLogo?.image = nil
+            } else {
                 cell.nome?.text = data[indexPath.row].nome
                 cell.imagemLogo?.image = data[indexPath.row].imagem as? UIImage
-//            }
+            }
         }
 
         return cell

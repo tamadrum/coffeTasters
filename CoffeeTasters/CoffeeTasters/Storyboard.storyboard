@@ -1011,6 +1011,9 @@
                                         <state key="normal" title="Cafés">
                                             <color key="titleColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="OwD-p3-CZg" kind="show" id="4cB-eg-1yg"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLd-gp-P8d">
                                         <rect key="frame" x="29" y="244" width="109" height="25"/>
@@ -1019,6 +1022,9 @@
                                         <state key="normal" title="Cafeterias">
                                             <color key="titleColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="Yny-7z-o9j" kind="show" id="fol-Po-eeA"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cafeteria-2" translatesAutoresizingMaskIntoConstraints="NO" id="oDb-cs-Ply">
                                         <rect key="frame" x="29" y="215" width="32" height="29"/>
@@ -1200,7 +1206,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uhS-Ju-ZyB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2381.25" y="-1165.1408450704225"/>
+            <point key="canvasLocation" x="-2381" y="-1160"/>
         </scene>
         <!--Avaliações-->
         <scene sceneID="d2d-KK-ZEn">
