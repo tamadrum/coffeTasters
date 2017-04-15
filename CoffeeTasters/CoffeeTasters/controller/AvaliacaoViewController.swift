@@ -49,13 +49,10 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
     //Barra de controle para os pickers
     var inputAcessoryBar: UIToolbar!
     var inputAcessoryBarCountry: UIToolbar!
-<<<<<<< HEAD
+
     var inputAcessoryBarCafe: UIToolbar!
     
     let cafePickerView = CafePickerView()
-    
-=======
->>>>>>> eb4abac1f82f544ae8ca879c1b49e7147809dede
     
     override func viewDidLoad() {
         if let cafeAvaliado = cafeAvaliado {
@@ -97,13 +94,11 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
         paisTextField.inputAccessoryView = inputAcessoryBarCountry
         
         //Café Picker
-<<<<<<< HEAD
-        self.cafePickerView.onCafeSelected = { (cafe: Int) in
-=======
+
         let cafePickerView = CafePickerView()
         cafePickerView.cafeDelegate = self
         cafePickerView.onCafeSelected = { (cafe: Int) in
->>>>>>> eb4abac1f82f544ae8ca879c1b49e7147809dede
+
             
             self.nomeTextField.text = self.cafePickerView.pickerView(self.cafePickerView, titleForRow: cafe, forComponent: 0)
             self.paisTextField.text = self.cafePickerView.pickerView(self.cafePickerView, titleForRow: cafe, forComponent: 1)
@@ -125,13 +120,8 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
         
         initializeInputAccessoryBarCafe()
         
-<<<<<<< HEAD
-=======
         nomeTextField.inputView = cafePickerView
         nomeTextField.inputAccessoryView = inputAcessoryBar
-        
->>>>>>> eb4abac1f82f544ae8ca879c1b49e7147809dede
-        
         
     }
     
