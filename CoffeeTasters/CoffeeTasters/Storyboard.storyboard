@@ -185,7 +185,7 @@
         <!--Carrinho-->
         <scene sceneID="UNz-7t-u5x">
             <objects>
-                <viewController id="RWT-tz-ppe" customClass="CarrinhoViewController" customModule="CoffeeTasters" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="RWT-tz-ppe" customClass="CarrinhoViewController" customModule="CoffeeTasters" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uQa-KD-SwW"/>
                         <viewControllerLayoutGuide type="bottom" id="kUB-cw-sVP"/>
@@ -194,9 +194,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DrS-V8-GWE">
-                                <rect key="frame" x="0.0" y="102" width="320" height="380"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DrS-V8-GWE">
+                                <rect key="frame" x="0.0" y="102" width="320" height="382"/>
                                 <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="itens" id="r9d-Sb-p7J" customClass="CarrinhoItemCustomCell" customModule="CoffeeTasters" customModuleProvider="target">
@@ -206,28 +205,51 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="001" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0c-X8-Eef">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="001" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0c-X8-Eef">
                                                     <rect key="frame" x="8" y="11" width="54" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="54" id="3Xh-8x-lLd"/>
+                                                        <constraint firstAttribute="height" constant="21" id="j0z-O1-j8C"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="16"/>
                                                     <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzM-Jo-EMR">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzM-Jo-EMR">
                                                     <rect key="frame" x="70" y="11" width="144" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="144" id="H2L-0T-a2i"/>
+                                                        <constraint firstAttribute="height" constant="21" id="t79-X6-NQI"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="16"/>
                                                     <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="R$ 888,88" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvw-xK-15v">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 888,88" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvw-xK-15v">
                                                     <rect key="frame" x="222" y="11" width="90" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="1Sx-mY-OiY"/>
+                                                        <constraint firstAttribute="width" constant="90" id="X4E-cB-6Ca"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="16"/>
                                                     <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Zvw-xK-15v" firstAttribute="top" secondItem="QZA-M4-1S1" secondAttribute="topMargin" constant="3" id="1d2-lf-0iE"/>
+                                                <constraint firstItem="Zvw-xK-15v" firstAttribute="trailing" secondItem="QZA-M4-1S1" secondAttribute="trailingMargin" id="6K9-EM-mYn"/>
+                                                <constraint firstItem="Zvw-xK-15v" firstAttribute="leading" secondItem="kzM-Jo-EMR" secondAttribute="trailing" constant="8" id="9ZR-Wi-fLQ"/>
+                                                <constraint firstItem="kzM-Jo-EMR" firstAttribute="top" secondItem="QZA-M4-1S1" secondAttribute="topMargin" constant="3" id="Odv-H5-tLy"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="kzM-Jo-EMR" secondAttribute="bottom" constant="3.5" id="QOq-Mp-LdV"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Zvw-xK-15v" secondAttribute="bottom" constant="3.5" id="agB-m9-LyN"/>
+                                                <constraint firstItem="z0c-X8-Eef" firstAttribute="leading" secondItem="QZA-M4-1S1" secondAttribute="leadingMargin" id="dyH-fr-DPP"/>
+                                                <constraint firstItem="z0c-X8-Eef" firstAttribute="top" secondItem="QZA-M4-1S1" secondAttribute="topMargin" constant="3" id="eBz-Ni-sV3"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="z0c-X8-Eef" secondAttribute="bottom" constant="3.5" id="ebB-kE-6fI"/>
+                                                <constraint firstItem="kzM-Jo-EMR" firstAttribute="leading" secondItem="z0c-X8-Eef" secondAttribute="trailing" constant="8" id="k5n-em-bR0"/>
+                                                <constraint firstItem="kzM-Jo-EMR" firstAttribute="leading" secondItem="z0c-X8-Eef" secondAttribute="trailing" constant="8" id="lDf-Ly-lMv"/>
+                                                <constraint firstItem="Zvw-xK-15v" firstAttribute="leading" secondItem="kzM-Jo-EMR" secondAttribute="trailing" constant="8" id="w3x-Pb-gjY"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
@@ -242,43 +264,83 @@
                                     <outlet property="delegate" destination="RWT-tz-ppe" id="aPr-8G-DFX"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMd-u8-t1l">
-                                <rect key="frame" x="16" y="490" width="90" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMd-u8-t1l">
+                                <rect key="frame" x="16" y="492" width="90" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Zvq-3S-e2O"/>
+                                    <constraint firstAttribute="width" constant="90" id="ze5-X7-iLP"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                 <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="R$ 8.888,88" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uow-sd-28u">
-                                <rect key="frame" x="183" y="490" width="121" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 8.888,88" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uow-sd-28u">
+                                <rect key="frame" x="183" y="492" width="121" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="2dX-AI-owc"/>
+                                    <constraint firstAttribute="width" constant="121" id="bQP-MH-iyV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="18"/>
                                 <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="QTD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNc-Nh-l0r">
-                                <rect key="frame" x="8" y="73" width="54" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QTD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNc-Nh-l0r">
+                                <rect key="frame" x="8" y="72" width="54" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="FJk-WP-2ac"/>
+                                    <constraint firstAttribute="height" constant="21" id="lk2-gA-420"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                 <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descrição" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksL-rI-nuV">
-                                <rect key="frame" x="70" y="73" width="144" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksL-rI-nuV">
+                                <rect key="frame" x="70" y="72" width="144" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="144" id="JfD-vG-8VF"/>
+                                    <constraint firstAttribute="height" constant="21" id="tVx-qp-xvN"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                 <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Preço" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6be-Qe-gnM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preço" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6be-Qe-gnM">
                                 <rect key="frame" x="222" y="72" width="90" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="4eb-OC-VPc"/>
+                                    <constraint firstAttribute="width" constant="90" id="pME-s9-N97"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                 <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="kUB-cw-sVP" firstAttribute="top" secondItem="uow-sd-28u" secondAttribute="bottom" constant="6" id="1Bf-1E-uJl"/>
+                            <constraint firstItem="6be-Qe-gnM" firstAttribute="leading" secondItem="ksL-rI-nuV" secondAttribute="trailing" constant="8" id="1eg-5n-JCu"/>
+                            <constraint firstItem="ksL-rI-nuV" firstAttribute="leading" secondItem="cNc-Nh-l0r" secondAttribute="trailing" constant="8" id="2Rn-cl-WB3"/>
+                            <constraint firstAttribute="trailing" secondItem="6be-Qe-gnM" secondAttribute="trailing" constant="8" id="8RN-hE-xiY"/>
+                            <constraint firstItem="sMd-u8-t1l" firstAttribute="leading" secondItem="egK-6A-8lC" secondAttribute="leadingMargin" id="BmA-XS-C2U"/>
+                            <constraint firstItem="DrS-V8-GWE" firstAttribute="leading" secondItem="egK-6A-8lC" secondAttribute="leading" id="CRZ-A0-BsC"/>
+                            <constraint firstItem="6be-Qe-gnM" firstAttribute="top" secondItem="uQa-KD-SwW" secondAttribute="bottom" constant="8" id="L6K-RZ-E9P"/>
+                            <constraint firstItem="sMd-u8-t1l" firstAttribute="top" secondItem="DrS-V8-GWE" secondAttribute="bottom" constant="8" id="N2O-hL-cf5"/>
+                            <constraint firstItem="DrS-V8-GWE" firstAttribute="top" secondItem="cNc-Nh-l0r" secondAttribute="bottom" constant="9" id="QV0-IO-xZY"/>
+                            <constraint firstItem="uow-sd-28u" firstAttribute="top" secondItem="DrS-V8-GWE" secondAttribute="bottom" constant="8" id="ROG-M6-fF9"/>
+                            <constraint firstItem="uow-sd-28u" firstAttribute="leading" secondItem="sMd-u8-t1l" secondAttribute="trailing" constant="77" id="RcF-U3-jeh"/>
+                            <constraint firstItem="kUB-cw-sVP" firstAttribute="top" secondItem="sMd-u8-t1l" secondAttribute="bottom" constant="6" id="VAg-cN-CZV"/>
+                            <constraint firstItem="ksL-rI-nuV" firstAttribute="leading" secondItem="cNc-Nh-l0r" secondAttribute="trailing" constant="8" id="WSr-iE-J6f"/>
+                            <constraint firstItem="uow-sd-28u" firstAttribute="top" secondItem="DrS-V8-GWE" secondAttribute="bottom" constant="8" id="YIb-OB-Fpj"/>
+                            <constraint firstAttribute="trailing" secondItem="DrS-V8-GWE" secondAttribute="trailing" id="cOe-ez-d2N"/>
+                            <constraint firstItem="uow-sd-28u" firstAttribute="leading" secondItem="sMd-u8-t1l" secondAttribute="trailing" constant="77" id="e5S-Q9-Zau"/>
+                            <constraint firstItem="cNc-Nh-l0r" firstAttribute="top" secondItem="uQa-KD-SwW" secondAttribute="bottom" constant="8" id="jHh-hB-VmX"/>
+                            <constraint firstItem="6be-Qe-gnM" firstAttribute="leading" secondItem="ksL-rI-nuV" secondAttribute="trailing" constant="8" id="js7-tb-A6b"/>
+                            <constraint firstItem="cNc-Nh-l0r" firstAttribute="leading" secondItem="egK-6A-8lC" secondAttribute="leading" constant="8" id="k80-wC-2w5"/>
+                            <constraint firstItem="DrS-V8-GWE" firstAttribute="top" secondItem="6be-Qe-gnM" secondAttribute="bottom" constant="9" id="sRa-eH-6Ty"/>
+                            <constraint firstItem="uow-sd-28u" firstAttribute="trailing" secondItem="egK-6A-8lC" secondAttribute="trailingMargin" id="wkR-A3-cH6"/>
+                            <constraint firstItem="DrS-V8-GWE" firstAttribute="top" secondItem="ksL-rI-nuV" secondAttribute="bottom" constant="9" id="x9N-cg-Hyk"/>
+                            <constraint firstItem="ksL-rI-nuV" firstAttribute="top" secondItem="uQa-KD-SwW" secondAttribute="bottom" constant="8" id="yVl-JK-bri"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Carrinho" id="Asi-2K-ph8">
                         <barButtonItem key="rightBarButtonItem" title="Finalizar" id="UYC-gx-8oR">
