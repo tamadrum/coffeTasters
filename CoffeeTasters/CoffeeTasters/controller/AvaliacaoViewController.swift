@@ -216,6 +216,17 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
         nomeTextField.inputAccessoryView = nil
         nomeTextField.reloadInputViews()
         
+        self.nomeTextField.isUserInteractionEnabled = false
+        self.paisTextField.isUserInteractionEnabled = false
+        self.cidadeTextField.isUserInteractionEnabled = false
+        self.estadoTextField.isUserInteractionEnabled = false
+        self.produtorTextField.isUserInteractionEnabled = false
+        self.torradorTextField.isUserInteractionEnabled = false
+        self.regiaoTextField.isUserInteractionEnabled = false
+        self.tipoTextField.isUserInteractionEnabled = false
+        self.safraTextField.isUserInteractionEnabled = false
+        self.cafeBlendSegmentControl.isUserInteractionEnabled = false
+        
     }
     func cancelCafePicker() {
         nomeTextField.resignFirstResponder()
@@ -234,6 +245,17 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
         self.safraTextField.text = ""
         self.cafeBlendSegmentControl.selectedSegmentIndex = 0
         
+        self.nomeTextField.isUserInteractionEnabled = true
+        self.paisTextField.isUserInteractionEnabled = true
+        self.cidadeTextField.isUserInteractionEnabled = true
+        self.estadoTextField.isUserInteractionEnabled = true
+        self.produtorTextField.isUserInteractionEnabled = true
+        self.torradorTextField.isUserInteractionEnabled = true
+        self.regiaoTextField.isUserInteractionEnabled = true
+        self.tipoTextField.isUserInteractionEnabled = true
+        self.safraTextField.isUserInteractionEnabled = true
+        self.cafeBlendSegmentControl.isUserInteractionEnabled = true
+        
     }
     
     //Habilita ou desabilita o safraTextField
@@ -251,6 +273,17 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
     }
     
     @IBAction func buscaCafe(_ sender: Any) {
+        self.nomeTextField.isUserInteractionEnabled = true
+        self.paisTextField.isUserInteractionEnabled = true
+        self.cidadeTextField.isUserInteractionEnabled = true
+        self.estadoTextField.isUserInteractionEnabled = true
+        self.produtorTextField.isUserInteractionEnabled = true
+        self.torradorTextField.isUserInteractionEnabled = true
+        self.regiaoTextField.isUserInteractionEnabled = true
+        self.tipoTextField.isUserInteractionEnabled = true
+        self.safraTextField.isUserInteractionEnabled = true
+        self.cafeBlendSegmentControl.isUserInteractionEnabled = true
+        
         nomeTextField.resignFirstResponder()
         nomeTextField.inputView = cafePickerView
         nomeTextField.inputAccessoryView = inputAcessoryBarCafe
