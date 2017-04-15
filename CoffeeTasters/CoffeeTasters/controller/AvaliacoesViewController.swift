@@ -47,8 +47,10 @@ class AvaliacoesViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.safra.text = avaliacoes[indexPath.row].data
         
         imageToShare = UIImage.init(view: cell.flavor)
-        nomeToShare = (avaliacoes[indexPath.row].cafe?.nome)!
         ratingToShare = Float(avaliacoes[indexPath.row].gostou)
+        if let nomeCafe = avaliacoes[indexPath.row].cafe?.nome {
+            nomeToShare = nomeCafe
+        }
         cell.share.addTarget(self, action: #selector(share), for: .touchUpInside)
         
         return cell
