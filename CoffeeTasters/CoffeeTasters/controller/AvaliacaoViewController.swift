@@ -46,6 +46,8 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
     
     var cafeAvaliado: Cafe?
     
+    var criaNovoCafe = true
+    
     //Barra de controle para os pickers
     var inputAcessoryBar: UIToolbar!
     var inputAcessoryBarCountry: UIToolbar!
@@ -74,8 +76,6 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
         //Safra Picker
         self.safraPickerView.onDateSelected = { (month: Int, year: Int) in
             self.safraTextField.text = String(format: "%02d/%d", month, year)
-            
-            
         }
         
         initializeInputAccessoryBar()
@@ -118,6 +118,9 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
                 self.cafeBlendSegmentControl.selectedSegmentIndex = 0
             }
             
+            print("Trocando o criaNovoCafe para false")
+            self.criaNovoCafe = false
+            
         }
         
         initializeInputAccessoryBarCafe()
@@ -128,6 +131,29 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
     }
     
     @IBAction func salvarAvaliacao(_ sender: UIBarButtonItem) {
+        // TODO: Tem que escolher quando vai adicionar o café ou não
+        
+        if ( criaNovoCafe ) {
+            print("Tive que criar um café nessa avaliacao")
+            let cafeDao = Dao<Cafe>()
+            
+            let cafe = cafeDao.new()
+            cafe.nome = nomeTextField.text
+            cafe.pais = paisTextField.text
+            cafe.cidade = cidadeTextField.text
+            cafe.estado = estadoTextField.text
+            cafe.produtor = produtorTextField.text
+            cafe.torrador = torradorTextField.text
+            cafe.regiao = regiaoTextField.text
+            cafe.tipo = tipoTextField.text
+            cafe.safra = safraTextField.text
+            cafe.ehBlend = cafeBlendSegmentControl.selectedSegmentIndex == 0 ? false : true
+            
+            cafeDao.save()
+            
+            cafeAvaliado = cafe
+        }
+        
         let dao = Dao<Avaliacao>()
         
         let avaliacao = dao.new()
@@ -256,6 +282,9 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
         self.tipoTextField.isUserInteractionEnabled = true
         self.safraTextField.isUserInteractionEnabled = true
         self.cafeBlendSegmentControl.isUserInteractionEnabled = true
+        
+        print("Trocando o criaNovoCafe para true")
+        criaNovoCafe = true
         
     }
     
