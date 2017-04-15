@@ -201,6 +201,7 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
         nomeTextField.reloadInputViews()
         
     }
+    
     func cancelCafePicker() {
         nomeTextField.resignFirstResponder()
         nomeTextField.inputView = nil
