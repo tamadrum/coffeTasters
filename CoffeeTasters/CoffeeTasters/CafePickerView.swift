@@ -6,25 +6,11 @@
 //  Copyright © 2017 Tamadrum. All rights reserved.
 //
 
-//
-//  CountryPickerView.swift
-//  CoffeeTasters
-//
-//  Created by Rodrigo Luglio on 13/04/17.
-//  Copyright © 2017 Tamadrum. All rights reserved.
-//
-
-//
-//  SafraPickerView.swift
-//  CoffeeTasters
-//
-//  Created by Rodrigo Luglio on 13/04/17.
-//  Copyright © 2017 Tamadrum. All rights reserved.
-//
-
 import UIKit
 
 class CafePickerView: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    var cafeDelegate:SelectCafeProtocol?
     
     var cafes: [Cafe]!
     //var nomes: [String]!
@@ -115,6 +101,7 @@ class CafePickerView: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource
         }
         
         self.cafe = cafe
+        cafeDelegate?.atualizaCafeAvaliado(com: cafes[selectedRow(inComponent: 0)])
     }
     
     

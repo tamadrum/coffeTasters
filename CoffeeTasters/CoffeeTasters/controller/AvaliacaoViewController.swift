@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class AvaliacaoViewController: UIViewController {
+class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
     
     @IBOutlet weak var nomeTextField: UITextField!
     @IBOutlet weak var paisTextField: UITextField!
@@ -49,12 +49,6 @@ class AvaliacaoViewController: UIViewController {
     //Barra de controle para os pickers
     var inputAcessoryBar: UIToolbar!
     var inputAcessoryBarCountry: UIToolbar!
-<<<<<<< HEAD
-=======
-    var inputAcessoryBarCafe: UIToolbar!
-    
-
->>>>>>> 9dedb9180d9450cdc6beec4b484f8fb2b0620374
     
     override func viewDidLoad() {
         if let cafeAvaliado = cafeAvaliado {
@@ -97,6 +91,7 @@ class AvaliacaoViewController: UIViewController {
         
         //Café Picker
         let cafePickerView = CafePickerView()
+        cafePickerView.cafeDelegate = self
         cafePickerView.onCafeSelected = { (cafe: Int) in
             
             self.nomeTextField.text = cafePickerView.pickerView(cafePickerView, titleForRow: cafe, forComponent: 0)
@@ -120,7 +115,7 @@ class AvaliacaoViewController: UIViewController {
         initializeInputAccessoryBarCafe()
         
         nomeTextField.inputView = cafePickerView
-        nomeTextField.inputAccessoryView = inputAcessoryBarCafe
+        nomeTextField.inputAccessoryView = inputAcessoryBar
         
         
         
@@ -190,10 +185,10 @@ class AvaliacaoViewController: UIViewController {
     
     //Configuração Café Picker
     func initializeInputAccessoryBarCafe() {
-        inputAcessoryBarCafe = UIToolbar(frame: CGRect(x: 0, y:0, width: view.frame.width, height: 44))
+        inputAcessoryBar = UIToolbar(frame: CGRect(x: 0, y:0, width: view.frame.width, height: 44))
         let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissCafePicker))
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
-        inputAcessoryBarCafe.items = [flexibleSpace, doneButton]
+        inputAcessoryBar.items = [flexibleSpace, doneButton]
     }
     
     func dismissCafePicker() {
@@ -214,9 +209,12 @@ class AvaliacaoViewController: UIViewController {
         }
     }
     
-    
     @IBAction func buscaCafe(_ sender: Any) {
         nomeTextField.becomeFirstResponder()
+    }
+    
+    func atualizaCafeAvaliado(com: Cafe) {
+        cafeAvaliado = com
     }
 
 }
