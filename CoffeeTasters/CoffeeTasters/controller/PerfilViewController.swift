@@ -93,14 +93,7 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 imagemUsuario.af_setImage(withURL: URL(string: usuario.perfilImg)!)
             }
         }
-    }
-    
-    func dismissKeyboard() {
-        view.endEditing(true)
-    }
-    
-    override func viewDidLoad() {
-        usuario.load()
+        
         nomeUsuario.text = usuario.nome
         sobrenomeUsuario.text = usuario.sobrenome
         emailUsuario.text = usuario.email
@@ -116,6 +109,10 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
         })
         
         tableView?.reloadData()
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     // MARK: Coisas da tabela

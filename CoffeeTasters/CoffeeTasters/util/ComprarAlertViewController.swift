@@ -44,7 +44,6 @@ class ComprarAlertViewController {
             item.quantidade = qtd
             item.produto = produto
             itemDao.save()
-            print("Consegui salvar o item")
             
             let carrinhoDao = CarrinhoDao()
             let carrinho = carrinhoDao.getCarrinho()

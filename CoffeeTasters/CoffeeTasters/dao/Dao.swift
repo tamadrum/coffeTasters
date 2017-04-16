@@ -55,6 +55,7 @@ class Dao<T> {
     
     func getPorID(_ id: NSManagedObjectID) -> T {
         do {
+            print("* CoreData - pegando por ID: \(id.description) do \(banco!) no ctx: \(managedContext!)")
             return try managedContext.existingObject(with: id) as! T
         } catch let error as NSError {
             print("**************************")
@@ -81,10 +82,12 @@ class Dao<T> {
     }
 
     func delete(_ obj: NSManagedObject) {
+        print("* CoreData - deletando obj do \(banco!) no ctx: \(managedContext!)")
         managedContext.delete(obj)
     }
     
     func reset () {
+        print("* CoreData - resetando o contexto: \(managedContext!)")
         managedContext.reset()
     }
     
@@ -110,6 +113,9 @@ class Dao<T> {
             let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: banco!)
             
             let count = try managedContext.count(for: fetchRequest)
+            
+            print("* CoreData - contagem do \(banco!) no ctx: \(managedContext!) é de \(count)")
+            
             return count
         } catch let error as NSError {
             print("**************************")
@@ -161,10 +167,11 @@ class Dao<T> {
             
             // Inserindo Carrinho
             
-//                print("inserindo carrinho")
-//                let carrinhoDao = CarrinhoDao()
-//                carrinhoDao.getCarrinho()
-//                carrinhoDao.save()
+                print("* CoreData - inserindo carrinho")
+                let carrinhoDao = CarrinhoDao()
+                let carrinho = carrinhoDao.getCarrinho()
+                carrinhoDao.save()
+                print("Carrinho criado com R$ \(carrinho.valorTotal)")
             
             // Inserindo Cafés
             
