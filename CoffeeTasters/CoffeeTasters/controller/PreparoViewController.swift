@@ -54,27 +54,29 @@ class PreparoViewController: UIViewController {
             nomePreparoLabel.text = preparo.nome
             
             let passos = preparo.passo?.allObjects as! [Passo]
-            let passo = passos[indice]
-            
-//            var images:[UIImage] = []
-//            for s in passos[indice].imagens! {
-//                images.append(s as! UIImage)
-//            }
-//            
-//            var animatedImage: UIImage!
-//            animatedImage = UIImage.animatedImage(with: images, duration: 0.5)
-//            imagemPreparo.image = animatedImage
-
-            imagemPreparo.image = passo.imagem as? UIImage
-            
-            descricaoPreparo.text = passo.descricao
-            
-            if ( passo.tempo > 0 ) {
-                viewTemporizador.isHidden = false
-                segundos = Int(passo.tempo)
-                tempo.text = timeString(segundos)
-            } else {
-                viewTemporizador.isHidden = true
+            if passos.count > 0 {
+                let passo = passos[indice]
+                
+                //            var images:[UIImage] = []
+                //            for s in passos[indice].imagens! {
+                //                images.append(s as! UIImage)
+                //            }
+                //
+                //            var animatedImage: UIImage!
+                //            animatedImage = UIImage.animatedImage(with: images, duration: 0.5)
+                //            imagemPreparo.image = animatedImage
+                
+                imagemPreparo.image = passo.imagem as? UIImage
+                
+                descricaoPreparo.text = passo.descricao
+                
+                if ( passo.tempo > 0 ) {
+                    viewTemporizador.isHidden = false
+                    segundos = Int(passo.tempo)
+                    tempo.text = timeString(segundos)
+                } else {
+                    viewTemporizador.isHidden = true
+                }
             }
         }
     }

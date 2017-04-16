@@ -109,6 +109,9 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
         })
         
         tableView?.reloadData()
+        
+        buscarCafes.rightViewMode = .unlessEditing
+        buscarCafes.rightView = UIImageView(image: #imageLiteral(resourceName: "search"))
     }
     
     func dismissKeyboard() {

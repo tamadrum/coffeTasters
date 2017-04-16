@@ -134,7 +134,6 @@ class Dao<T> {
             print("* CoreData - inserindo dados iniciais")
             
             // Inserindo Produtos
-                print("* CoreData - Inserindo produtos")
                 let prodDao = Dao<Produto>()
                 let produto1 = prodDao.new()
                 produto1.nome = "Café Pelé"
@@ -146,8 +145,6 @@ class Dao<T> {
                 prodDao.save()
             
             // Inserindo Itens
-            
-                print("* CoreData - Inserindo Itens")
                 let itemDao = Dao<Item>()
                 let item1 = itemDao.new()
                 item1.quantidade = 2
@@ -155,7 +152,6 @@ class Dao<T> {
                 itemDao.save()
             
             // Inserindo Pedidos
-                print("* CoreData - Inserindo Pedido")
                 let pedDao = Dao<Pedido>()
                 let ped1 = pedDao.new()
                 ped1.numero = 101010
@@ -166,25 +162,23 @@ class Dao<T> {
                 pedDao.save()
             
             // Inserindo Carrinho
-            
-                print("* CoreData - inserindo carrinho")
                 let carrinhoDao = CarrinhoDao()
                 let carrinho = carrinhoDao.getCarrinho()
                 carrinhoDao.save()
                 print("Carrinho criado com R$ \(carrinho.valorTotal)")
             
             // Inserindo Cafés
-            
-                print("* CoreData - inserindo cafes")
                 var nomes = ["AC CAFÉ", "CARMO ESTATE COFFEE", "DB ESTATE COFFEE", "ECOAGRÍCOLA CAFÉ LTDA",
                              "FAZENDA BELA VISTA", "FAZENDA CAMBARÁ", "FAZENDA CAMOCIM", "FAZENDA CAPOEIRA ESTATE COFFEE", "FAZENDA DO SERTÃO",
                              "FAZENDA DUTRA", "FAZENDA HELENA", "Café Pelé", "3 Corações", "FAZENDA SERRA DAS TRÊS BARRAS", "Nespresso" ]
                 nomes.sort()
             
                 let cafeDao = Dao<Cafe>()
+                let flavorDao = Dao<Flavor>()
+            
                 var c:Cafe!
                 var flavor:Flavor!
-                for i in 1..<nomes.count {
+                for i in 0..<nomes.count {
                     c = cafeDao.new()
                     c.nome = nomes[i]
                     c.altitude = 20
@@ -199,7 +193,7 @@ class Dao<T> {
                     c.tipo = "Arábico"
                     c.safra = "20/02/2014"
                     
-                    flavor = Dao<Flavor>().new()
+                    flavor = flavorDao.new()
                     flavor.amargo = 10
                     flavor.azedo = 1
                     flavor.caramelo = 2
@@ -223,26 +217,7 @@ class Dao<T> {
                 }
                 cafeDao.save()
             
-            // Inserindo uma avaliacao
-            
-//                print("* CoreData - inserindo avaliacao")
-//                let avaliaDao = Dao<Avaliacao>()
-//                let avaliacao = avaliaDao.new()
-//                avaliacao.cafe = c
-//                avaliacao.barista = "Jacksson"
-//                avaliacao.data = "10/10/2017"
-//                avaliacao.dataColheita = "10/10/2017"
-//                avaliacao.dataTorra = "10/10/2017"
-//                avaliacao.flavor = flavor
-//                avaliacao.gostou = Int32(3)
-//                avaliacao.localPreparo = "Marco Polo"
-//                avaliacao.metodoPreparo = "Prensa"
-//                avaliacao.obs = "Gostei muito do café e do lugar"
-//                avaliaDao.save()
-            
             // Inserindo Preparos
-            
-            print("* CoreData - inserindo preparos")
             
             let preparoDao = Dao<Preparo>()
             let passoDao = Dao<Passo>()
@@ -271,16 +246,6 @@ class Dao<T> {
             passo4.imagem = #imageLiteral(resourceName: "cafe")
             passo4.descricao = "Colocar na garrafa térmica"
             
-            /// Inicio do preparo1
-            let preparo1 = preparoDao.new()
-            preparo1.nome = "Coado"
-            preparo1.imagem = #imageLiteral(resourceName: "Coado")
-            
-            preparo1.addToPasso(passo1)
-            preparo1.addToPasso(passo2)
-            preparo1.addToPasso(passo3)
-            preparo1.addToPasso(passo4)
-            
             let passo5 = passoDao.new()
             passo5.indice = 1
             passo5.tempo = 0
@@ -305,15 +270,45 @@ class Dao<T> {
             passo8.imagem = #imageLiteral(resourceName: "cafe")
             passo8.descricao = "Colocar na garrafa térmica"
             
-            /// Inicio do preparo2
-            let preparo2 = preparoDao.new()
-            preparo2.nome = "Prensa Francesa"
-            preparo2.imagem = #imageLiteral(resourceName: "Prensa")
+            /// Inicio do preparo
+            let preparo1 = preparoDao.new()
+            preparo1.nome = "Prensa Francesa"
+            preparo1.imagem = #imageLiteral(resourceName: "Prensa-1")
             
-            preparo2.addToPasso(passo5)
-            preparo2.addToPasso(passo6)
-            preparo2.addToPasso(passo7)
-            preparo2.addToPasso(passo8)
+            preparo1.addToPasso(passo5)
+            preparo1.addToPasso(passo6)
+            preparo1.addToPasso(passo7)
+            preparo1.addToPasso(passo8)
+            
+            /// Inicio do preparo
+            let preparo2 = preparoDao.new()
+            preparo2.nome = "Espresso"
+            preparo2.imagem = #imageLiteral(resourceName: "Espresso_1")
+            
+            preparo2.addToPasso(passo1)
+            preparo2.addToPasso(passo2)
+            preparo2.addToPasso(passo3)
+            preparo2.addToPasso(passo4)
+            
+            /// Inicio do preparo
+            let preparo3 = preparoDao.new()
+            preparo3.nome = "Coado"
+            preparo3.imagem = #imageLiteral(resourceName: "Coado-1")
+            
+            /// Inicio do preparo
+            let preparo4 = preparoDao.new()
+            preparo4.nome = "Moca"
+            preparo4.imagem = #imageLiteral(resourceName: "Moca-1")
+            
+            /// Inicio do preparo
+            let preparo5 = preparoDao.new()
+            preparo5.nome = "Aeropress"
+            preparo5.imagem = #imageLiteral(resourceName: "Aeropress-1")
+            
+            /// Inicio do preparo
+            let preparo6 = preparoDao.new()
+            preparo6.nome = "Clever"
+            preparo6.imagem = #imageLiteral(resourceName: "Clever-1")
             
             preparoDao.save()
             
