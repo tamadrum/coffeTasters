@@ -39,7 +39,7 @@ class PedidosViewController: UIViewController, UITableViewDelegate, UITableViewD
         } else {
             cell.imagemStatusPedido.image = #imageLiteral(resourceName: "status-pedidos")
         }
-        cell.totalPedido.text = "R$ \(pedidos[indexPath.row].valorTotal)"
+        cell.totalPedido.text = Formatadores().formatCurrency(value: pedidos[indexPath.row].valorTotal)
         
         cell.comprarNovamente.addTarget(self, action: #selector(comprarNovamente), for: .touchUpInside)
         

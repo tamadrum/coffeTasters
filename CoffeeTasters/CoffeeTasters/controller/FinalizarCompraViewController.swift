@@ -32,7 +32,7 @@ class FinalizarCompraViewController: UIViewController {
         nomeCartao.text = usuario.nomeCartao
         validadeCartao.text = usuario.validadeCartao
         imagemCartao.image = CreditCardUtil().creditCardType(usuario.numeroCartao)
-        valor.text = "R$ \(valorTotal!)"
+        valor.text = Formatadores().formatCurrency(value: valorTotal!)
         
         let validadeCartaoPickerView = ValidadeCartaoPickerView()
         validadeCartaoPickerView.onDateSelected = { (month: String, year: String) in

@@ -21,6 +21,7 @@
 		1614EE421E8E5F1F00C44F11 /* NotificacoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1614EE411E8E5F1F00C44F11 /* NotificacoesViewController.swift */; };
 		1614EE441E8E5F3800C44F11 /* AvaliacaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1614EE431E8E5F3800C44F11 /* AvaliacaoViewController.swift */; };
 		1614EE461E8E5F8400C44F11 /* FinalizarCompraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1614EE451E8E5F8400C44F11 /* FinalizarCompraViewController.swift */; };
+		16201C491EA43D8F00035DB3 /* Formatadores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16201C481EA43D8F00035DB3 /* Formatadores.swift */; };
 		1676E9E21E9E3D2F0061C067 /* HeightSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1676E9E11E9E3D2F0061C067 /* HeightSegmentControl.swift */; };
 		1676E9E41E9E5B1F0061C067 /* BorderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1676E9E31E9E5B1F0061C067 /* BorderTextView.swift */; };
 		1676E9E61E9E88610061C067 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1676E9E51E9E88610061C067 /* icon.png */; };
@@ -104,6 +105,7 @@
 		1614EE411E8E5F1F00C44F11 /* NotificacoesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificacoesViewController.swift; path = controller/NotificacoesViewController.swift; sourceTree = "<group>"; };
 		1614EE431E8E5F3800C44F11 /* AvaliacaoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AvaliacaoViewController.swift; path = controller/AvaliacaoViewController.swift; sourceTree = "<group>"; };
 		1614EE451E8E5F8400C44F11 /* FinalizarCompraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinalizarCompraViewController.swift; path = controller/FinalizarCompraViewController.swift; sourceTree = "<group>"; };
+		16201C481EA43D8F00035DB3 /* Formatadores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Formatadores.swift; path = util/Formatadores.swift; sourceTree = "<group>"; };
 		167327811E9C4E1500786B8D /* Merriweather-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-Black.ttf"; path = "fonts/Merriweather-Black.ttf"; sourceTree = "<group>"; };
 		167327821E9C4E1500786B8D /* Merriweather-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-Bold.ttf"; path = "fonts/Merriweather-Bold.ttf"; sourceTree = "<group>"; };
 		167327831E9C4E1500786B8D /* Merriweather-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-BoldItalic.ttf"; path = "fonts/Merriweather-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				16E67A4B1E912F92005EE82E /* ComprarAlertViewController.swift */,
 				16E67A4C1E912F92005EE82E /* CreditCardUtil.swift */,
 				16E67A4D1E912F92005EE82E /* SyncUtil.swift */,
+				16201C481EA43D8F00035DB3 /* Formatadores.swift */,
 			);
 			name = util;
 			sourceTree = "<group>";
@@ -600,6 +603,7 @@
 				1614EE301E8E5E3100C44F11 /* EsqueciSenhaViewController.swift in Sources */,
 				1676E9E21E9E3D2F0061C067 /* HeightSegmentControl.swift in Sources */,
 				1614EE3A1E8E5EB600C44F11 /* CafeteriaListViewController.swift in Sources */,
+				16201C491EA43D8F00035DB3 /* Formatadores.swift in Sources */,
 				16EBC6131E8C792B00A87B2F /* MeusDadosViewController.swift in Sources */,
 				16EBC5EF1E8C66CB00A87B2F /* CoffeeTasters.xcdatamodeld in Sources */,
 				1690A1D31E8F2D5B0039BDC1 /* DetalhesCafeController.swift in Sources */,

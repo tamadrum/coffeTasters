@@ -32,7 +32,7 @@ class CarrinhoViewController: UIViewController, UITableViewDelegate, UITableView
             total += (i.produto?.preco)! * Double(i.quantidade)
         }
         valorTotal = total
-        valorTotalCarrinhoLabel.text = "R$ \(total)"
+        valorTotalCarrinhoLabel.text = Formatadores().formatCurrency(value: total)
         
         tableView.reloadData()
     }
@@ -80,7 +80,7 @@ class CarrinhoViewController: UIViewController, UITableViewDelegate, UITableView
         cell.descricaoLabel?.text = items[indexPath.row].produto?.nome
             
         cell.qtdLabel?.text = "\(items[indexPath.row].quantidade)"
-        cell.valorUnitarioLabel?.text = "R$ \(valorDoItem)"
+        cell.valorUnitarioLabel?.text = Formatadores().formatCurrency(value: valorDoItem)
             
         return cell
     }

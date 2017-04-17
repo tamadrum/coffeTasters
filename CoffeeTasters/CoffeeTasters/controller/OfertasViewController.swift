@@ -40,8 +40,8 @@ class OfertasViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.nomeProdutoLabel.text = produtos[indexPath.row].nome
         cell.pequenaDescricaoLabel.text = produtos[indexPath.row].descricao
         cell.rating.rating = 3
-        cell.valorCheio.text = "R$ \(produtos[indexPath.row].preco)"
-        cell.valorDesconto.text = "R$ \(produtos[indexPath.row].precoOferta)"
+        cell.valorCheio.text = Formatadores().formatCurrency(value: produtos[indexPath.row].preco)
+        cell.valorDesconto.text = Formatadores().formatCurrency(value: produtos[indexPath.row].precoOferta)
         
         cell.comprar.addTarget(self, action: #selector(comprar), for: .touchUpInside)
         
