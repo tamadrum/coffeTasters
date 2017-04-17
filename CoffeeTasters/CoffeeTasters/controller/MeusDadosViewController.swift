@@ -141,7 +141,10 @@ class MeusDadosViewController: UIViewController, UIImagePickerControllerDelegate
         
             LoginManager().logOut()
             
-            exit(0)
+            let storyboard = UIStoryboard(name: "Storyboard", bundle: nil)
+            let view = storyboard.instantiateViewController(withIdentifier: "loginScreen")
+            
+            self.navigationController?.present(view, animated: true, completion: nil)
             
         })
         alerta.addAction(UIAlertAction(title: "Cancelar", style: .cancel) {
