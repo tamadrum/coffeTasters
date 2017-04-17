@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -544,307 +545,440 @@
         <!--Detalhes-->
         <scene sceneID="0XO-eU-PsX">
             <objects>
-                <viewController storyboardIdentifier="detalhesCafe" id="Pnt-xa-7jn" customClass="DetalhesCafeController" customModule="CoffeeTasters" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detalhesCafe" automaticallyAdjustsScrollViewInsets="NO" id="Pnt-xa-7jn" customClass="DetalhesCafeController" customModule="CoffeeTasters" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="kIX-Dv-F78"/>
-                        <viewControllerLayoutGuide type="bottom" id="96X-5Q-t1T"/>
+                        <viewControllerLayoutGuide type="top" id="FSd-IJ-HKc"/>
+                        <viewControllerLayoutGuide type="bottom" id="uCg-5u-n9K"/>
                     </layoutGuides>
-                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="oiM-Cj-EV8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
+                    <view key="view" contentMode="scaleToFill" id="aAZ-gz-ghH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="920"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cafe" translatesAutoresizingMaskIntoConstraints="NO" id="mBX-Du-evw" customClass="RoundImage" customModule="CoffeeTasters" customModuleProvider="target">
-                                <rect key="frame" x="16" y="33" width="90" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="46"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Torrador:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sof-mX-ObC">
-                                <rect key="frame" x="114" y="24" width="190" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="16"/>
-                                <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome do Torrador" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgH-nG-ddE">
-                                <rect key="frame" x="114" y="54" width="190" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="14"/>
-                                <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Produtor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9X-BG-NtI">
-                                <rect key="frame" x="114" y="83" width="190" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="16"/>
-                                <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome do Produtor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEB-jB-diY">
-                                <rect key="frame" x="114" y="112" width="190" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="14"/>
-                                <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="São Paulo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFQ-Zg-Rf2">
-                                <rect key="frame" x="101" y="141" width="142" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="16"/>
-                                <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BRASIL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbY-nS-hFL">
-                                <rect key="frame" x="16" y="141" width="77" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="16"/>
-                                <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BcN-5N-zJ7">
-                                <rect key="frame" x="227" y="141" width="77" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="16"/>
-                                <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tipo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpG-Bw-K6q">
-                                <rect key="frame" x="16" y="170" width="47" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="16"/>
-                                <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="arábico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PU1-oP-8V2">
-                                <rect key="frame" x="71" y="170" width="57" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="14"/>
-                                <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1050m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wr6-76-wHb">
-                                <rect key="frame" x="251" y="170" width="53" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="14"/>
-                                <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Safra:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fp-Q7-n2z">
-                                <rect key="frame" x="16" y="204" width="50" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="16"/>
-                                <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="25/10/2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPt-at-ilg">
-                                <rect key="frame" x="74" y="204" width="92" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="14"/>
-                                <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Altitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9C-wo-Z2g">
-                                <rect key="frame" x="165" y="170" width="78" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="16"/>
-                                <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQU-W1-bFE" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
-                                <rect key="frame" x="244" y="199" width="60" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Mapa"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="border">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fundoBranco" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="verMapa:" destination="Pnt-xa-7jn" eventType="touchUpInside" id="Mha-vO-uEN"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lee-eZ-7a3" customClass="BorderTextView" customModule="CoffeeTasters" customModuleProvider="target">
-                                <rect key="frame" x="16" y="233" width="288" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="border">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IlD-ut-baY" customClass="RatingView" customModule="CoffeeTasters" customModuleProvider="target">
-                                <rect key="frame" x="16" y="320" width="219" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
-                                        <integer key="value" value="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="onImage" value="grao-cheio"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="offImage" value="grao-vazio"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="halfImage" value="grao-meio"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="halfStarsAllowed" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="editable" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
-                                        <real key="value" value="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ro-wv-Lnq" customClass="RatingView" customModule="CoffeeTasters" customModuleProvider="target">
-                                <rect key="frame" x="16" y="373" width="219" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
-                                        <integer key="value" value="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="onImage" value="grao-cheio"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="offImage" value="grao-vazio"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="halfImage" value="grao-meio"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="halfStarsAllowed" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="editable" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lwF-3L-LZ7" customClass="RatingView" customModule="CoffeeTasters" customModuleProvider="target">
-                                <rect key="frame" x="16" y="426" width="219" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
-                                        <integer key="value" value="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="onImage" value="grao-cheio"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="offImage" value="grao-vazio"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="halfImage" value="grao-meio"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="halfStarsAllowed" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="editable" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eJ6-Cj-rc6" customClass="WheelFlavor" customModule="CoffeeTasters" customModuleProvider="target">
-                                <rect key="frame" x="16" y="532" width="288" height="341"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sIh-AL-SUX" customClass="TPKeyboardAvoidingScrollView">
+                                <rect key="frame" x="0.0" y="20" width="320" height="900"/>
                                 <subviews>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1jr-d2-bTi">
-                                        <rect key="frame" x="159" y="8" width="121" height="29"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <segments>
-                                            <segment title="Torrador"/>
-                                            <segment title="Média"/>
-                                        </segments>
-                                        <color key="tintColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
-                                    </segmentedControl>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="Ypn-Gg-eqp">
-                                        <rect key="frame" x="159" y="305" width="121" height="29"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <segments>
-                                            <segment title="3"/>
-                                            <segment title="2"/>
-                                            <segment title="1"/>
-                                        </segments>
-                                        <color key="tintColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
-                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvM-vB-mqN">
+                                        <rect key="frame" x="227" y="133" width="77" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="77" id="wYw-Ek-dY7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="16"/>
+                                        <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2f-5k-8P9">
+                                        <rect key="frame" x="250" y="430" width="50" height="21"/>
+                                        <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="vGG-It-0Ea"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxl-PV-p1C">
+                                        <rect key="frame" x="262" y="12" width="42" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="42" id="G3d-dJ-d1Y"/>
+                                        </constraints>
+                                        <state key="normal" image="Carrinho-1"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="border">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="fundoBranco" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="comprarCafe:" destination="Pnt-xa-7jn" eventType="touchUpInside" id="4dL-Ot-yvA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="603-Sh-saI" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
+                                        <rect key="frame" x="244" y="191" width="60" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="nV5-4O-4bB"/>
+                                        </constraints>
+                                        <state key="normal" title="Mapa"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="border">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="fundoBranco" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="verMapa:" destination="Pnt-xa-7jn" eventType="touchUpInside" id="TD8-0r-eeL"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BRASIL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZy-4K-1De">
+                                        <rect key="frame" x="16" y="133" width="77" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="77" id="22E-w1-V50"/>
+                                            <constraint firstAttribute="height" constant="21" id="D3u-CS-3kv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="16"/>
+                                        <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="São Paulo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUQ-kh-zUS">
+                                        <rect key="frame" x="101" y="133" width="142" height="21"/>
+                                        <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="16"/>
+                                        <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do Torrador" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKz-hJ-zfX">
+                                        <rect key="frame" x="114" y="46" width="190" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="XCB-B9-j3H"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="14"/>
+                                        <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Torrador:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXF-JE-A5Y">
+                                        <rect key="frame" x="114" y="16" width="190" height="21"/>
+                                        <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="16"/>
+                                        <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ir-ba-G8w" customClass="RatingView" customModule="CoffeeTasters" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="418" width="219" height="45"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="onImage" value="grao-cheio"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="offImage" value="grao-vazio"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="halfImage" value="grao-meio"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="halfStarsAllowed" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="editable" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Safra:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uig-2i-62b">
+                                        <rect key="frame" x="16" y="196" width="50" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="YIN-Wg-8V6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="16"/>
+                                        <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do Produtor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KpG-hg-zMi">
+                                        <rect key="frame" x="114" y="104" width="190" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="wGm-Ke-Yxn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="14"/>
+                                        <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="arábico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hX4-ZT-wPz">
+                                        <rect key="frame" x="71" y="162" width="57" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="57" id="E9u-K0-dOA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="14"/>
+                                        <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ou7-Ya-aY9" customClass="WheelFlavor" customModule="CoffeeTasters" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="524" width="288" height="341"/>
+                                        <subviews>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fnl-lM-axj">
+                                                <rect key="frame" x="145" y="8" width="135" height="29"/>
+                                                <segments>
+                                                    <segment title="Torrador"/>
+                                                    <segment title="Média"/>
+                                                </segments>
+                                                <color key="tintColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                            </segmentedControl>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="0Sv-Wu-c5Q">
+                                                <rect key="frame" x="145" y="305" width="135" height="29"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="135" id="mkY-xa-R7Z"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="3"/>
+                                                    <segment title="2"/>
+                                                    <segment title="1"/>
+                                                </segments>
+                                                <color key="tintColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                            </segmentedControl>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="fnl-lM-axj" firstAttribute="top" secondItem="ou7-Ya-aY9" secondAttribute="top" constant="8" id="5FH-cO-qCg"/>
+                                            <constraint firstAttribute="trailing" secondItem="fnl-lM-axj" secondAttribute="trailing" constant="8" id="6Jh-xF-yDp"/>
+                                            <constraint firstAttribute="trailing" secondItem="0Sv-Wu-c5Q" secondAttribute="trailing" constant="8" id="N1R-EV-HDv"/>
+                                            <constraint firstAttribute="height" constant="341" id="Yvh-qv-5Lp"/>
+                                            <constraint firstAttribute="bottom" secondItem="0Sv-Wu-c5Q" secondAttribute="bottom" constant="8" id="dCQ-BX-DjS"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D24-Cd-2qh">
+                                        <rect key="frame" x="250" y="324" width="50" height="21"/>
+                                        <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="d1p-ub-a88"/>
+                                            <constraint firstAttribute="width" constant="50" id="vcJ-68-tH4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2j2-P1-8Nl">
+                                        <rect key="frame" x="16" y="162" width="47" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="47" id="9ST-gP-gId"/>
+                                            <constraint firstAttribute="height" constant="21" id="QEE-mi-T32"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="16"/>
+                                        <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1050m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0c-rQ-FNR">
+                                        <rect key="frame" x="251" y="162" width="53" height="21"/>
+                                        <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="14"/>
+                                        <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pUx-LB-bMg" customClass="BorderTextView" customModule="CoffeeTasters" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="225" width="288" height="79"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="79" id="QPy-bo-jso"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="border">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cT-yr-M6t">
+                                        <rect key="frame" x="250" y="483" width="50" height="21"/>
+                                        <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Jdu-sH-eBl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mk8-Rf-SVz" customClass="RatingView" customModule="CoffeeTasters" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="312" width="219" height="45"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="onImage" value="grao-cheio"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="offImage" value="grao-vazio"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="halfImage" value="grao-meio"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="halfStarsAllowed" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="editable" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zpd-qK-viL" customClass="RatingView" customModule="CoffeeTasters" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="365" width="219" height="45"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="onImage" value="grao-cheio"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="offImage" value="grao-vazio"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="halfImage" value="grao-meio"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="halfStarsAllowed" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="editable" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cafe" translatesAutoresizingMaskIntoConstraints="NO" id="BMd-HQ-enO" customClass="RoundImage" customModule="CoffeeTasters" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="25" width="90" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="uo6-kR-3Eo"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="46"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Altitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNi-xQ-GRt">
+                                        <rect key="frame" x="165" y="162" width="78" height="21"/>
+                                        <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="16"/>
+                                        <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Produtor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNB-XV-5C8">
+                                        <rect key="frame" x="114" y="75" width="190" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="ULy-6W-Gi7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="16"/>
+                                        <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25/10/2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDI-8a-5fp">
+                                        <rect key="frame" x="74" y="196" width="92" height="21"/>
+                                        <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="14"/>
+                                        <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KzH-Fq-dCG" customClass="RatingView" customModule="CoffeeTasters" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="471" width="219" height="45"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="onImage" value="grao-cheio"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="offImage" value="grao-vazio"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="halfImage" value="grao-meio"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="halfStarsAllowed" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="editable" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kk6-4J-uMa">
+                                        <rect key="frame" x="250" y="377" width="50" height="21"/>
+                                        <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="KAE-QE-Vse"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xBb-hn-HJ5" customClass="RatingView" customModule="CoffeeTasters" customModuleProvider="target">
-                                <rect key="frame" x="16" y="479" width="219" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstItem="D24-Cd-2qh" firstAttribute="leading" secondItem="mk8-Rf-SVz" secondAttribute="trailing" constant="15" id="0ef-VB-ICa"/>
+                                    <constraint firstItem="pUx-LB-bMg" firstAttribute="top" secondItem="KDI-8a-5fp" secondAttribute="bottom" constant="8" symbolic="YES" id="24H-Q3-r7c"/>
+                                    <constraint firstItem="2j2-P1-8Nl" firstAttribute="baseline" secondItem="FNi-xQ-GRt" secondAttribute="baseline" id="3Qu-bU-cY2"/>
+                                    <constraint firstItem="2j2-P1-8Nl" firstAttribute="bottom" secondItem="hX4-ZT-wPz" secondAttribute="bottom" id="3vU-fd-0l0"/>
+                                    <constraint firstItem="D24-Cd-2qh" firstAttribute="trailing" secondItem="kk6-4J-uMa" secondAttribute="trailing" id="5uT-MH-AqB"/>
+                                    <constraint firstItem="GZy-4K-1De" firstAttribute="baseline" secondItem="lUQ-kh-zUS" secondAttribute="baseline" id="7Da-Et-TgI"/>
+                                    <constraint firstItem="6ir-ba-G8w" firstAttribute="leading" secondItem="KzH-Fq-dCG" secondAttribute="leading" id="7Pa-ZO-qLt"/>
+                                    <constraint firstItem="KDI-8a-5fp" firstAttribute="leading" secondItem="uig-2i-62b" secondAttribute="trailing" constant="8" symbolic="YES" id="7Yh-eF-pp6"/>
+                                    <constraint firstItem="jvM-vB-mqN" firstAttribute="trailing" secondItem="T0c-rQ-FNR" secondAttribute="trailing" id="7kO-yF-HH1"/>
+                                    <constraint firstItem="2j2-P1-8Nl" firstAttribute="leading" secondItem="uig-2i-62b" secondAttribute="leading" id="8v9-4s-wkC"/>
+                                    <constraint firstItem="603-Sh-saI" firstAttribute="trailing" secondItem="pUx-LB-bMg" secondAttribute="trailing" id="9ld-90-g3o"/>
+                                    <constraint firstItem="6ir-ba-G8w" firstAttribute="top" secondItem="zpd-qK-viL" secondAttribute="bottom" constant="8" symbolic="YES" id="AIu-Y9-Mp3"/>
+                                    <constraint firstItem="zpd-qK-viL" firstAttribute="trailing" secondItem="6ir-ba-G8w" secondAttribute="trailing" id="AKn-GQ-nhj"/>
+                                    <constraint firstItem="2j2-P1-8Nl" firstAttribute="top" secondItem="hX4-ZT-wPz" secondAttribute="top" id="AYN-nU-4zs"/>
+                                    <constraint firstItem="KzH-Fq-dCG" firstAttribute="centerY" secondItem="9cT-yr-M6t" secondAttribute="centerY" id="Az0-H1-Jns"/>
+                                    <constraint firstItem="ou7-Ya-aY9" firstAttribute="top" secondItem="9cT-yr-M6t" secondAttribute="bottom" constant="20" id="BwV-D4-5zE"/>
+                                    <constraint firstItem="D24-Cd-2qh" firstAttribute="leading" secondItem="kk6-4J-uMa" secondAttribute="leading" id="CRX-xx-G4k"/>
+                                    <constraint firstItem="BMd-HQ-enO" firstAttribute="top" secondItem="sIh-AL-SUX" secondAttribute="top" constant="25" id="CZY-oE-KxA"/>
+                                    <constraint firstItem="zpd-qK-viL" firstAttribute="centerY" secondItem="kk6-4J-uMa" secondAttribute="centerY" id="DnQ-eI-LNl"/>
+                                    <constraint firstItem="BMd-HQ-enO" firstAttribute="leading" secondItem="sIh-AL-SUX" secondAttribute="leading" constant="16" id="Dot-Xb-DBq"/>
+                                    <constraint firstItem="lUQ-kh-zUS" firstAttribute="leading" secondItem="GZy-4K-1De" secondAttribute="trailing" constant="8" symbolic="YES" id="H9L-ft-Bvc"/>
+                                    <constraint firstItem="Bxl-PV-p1C" firstAttribute="top" secondItem="sIh-AL-SUX" secondAttribute="top" constant="12" id="HBg-gV-vtG"/>
+                                    <constraint firstItem="pUx-LB-bMg" firstAttribute="leading" secondItem="mk8-Rf-SVz" secondAttribute="leading" id="HSb-UG-3ge"/>
+                                    <constraint firstItem="xKz-hJ-zfX" firstAttribute="trailing" secondItem="tNB-XV-5C8" secondAttribute="trailing" id="HV6-2R-Qnt"/>
+                                    <constraint firstItem="T0c-rQ-FNR" firstAttribute="leading" secondItem="FNi-xQ-GRt" secondAttribute="trailing" constant="8" symbolic="YES" id="JYp-VX-eLz"/>
+                                    <constraint firstItem="lUQ-kh-zUS" firstAttribute="trailing" secondItem="FNi-xQ-GRt" secondAttribute="trailing" id="Jfw-vs-JqR"/>
+                                    <constraint firstItem="sXF-JE-A5Y" firstAttribute="trailing" secondItem="xKz-hJ-zfX" secondAttribute="trailing" id="KCV-i5-p9g"/>
+                                    <constraint firstItem="sXF-JE-A5Y" firstAttribute="leading" secondItem="BMd-HQ-enO" secondAttribute="trailing" constant="8" symbolic="YES" id="KWQ-D3-fp1"/>
+                                    <constraint firstItem="GZy-4K-1De" firstAttribute="firstBaseline" secondItem="lUQ-kh-zUS" secondAttribute="firstBaseline" id="L0g-KJ-a50"/>
+                                    <constraint firstItem="hX4-ZT-wPz" firstAttribute="baseline" secondItem="T0c-rQ-FNR" secondAttribute="baseline" id="OQr-Xb-7Ld"/>
+                                    <constraint firstItem="KzH-Fq-dCG" firstAttribute="top" secondItem="6ir-ba-G8w" secondAttribute="bottom" constant="8" symbolic="YES" id="OcU-gM-Ih9"/>
+                                    <constraint firstItem="xKz-hJ-zfX" firstAttribute="leading" secondItem="tNB-XV-5C8" secondAttribute="leading" id="QAJ-P3-JUR"/>
+                                    <constraint firstItem="GZy-4K-1De" firstAttribute="top" secondItem="BMd-HQ-enO" secondAttribute="bottom" constant="18" id="QOW-MW-cUp"/>
+                                    <constraint firstItem="603-Sh-saI" firstAttribute="top" secondItem="T0c-rQ-FNR" secondAttribute="bottom" constant="8" symbolic="YES" id="QRF-Jj-ho8"/>
+                                    <constraint firstItem="hX4-ZT-wPz" firstAttribute="leading" secondItem="2j2-P1-8Nl" secondAttribute="trailing" constant="8" symbolic="YES" id="QfB-Zi-xrZ"/>
+                                    <constraint firstItem="uig-2i-62b" firstAttribute="top" secondItem="KDI-8a-5fp" secondAttribute="top" id="SJT-eH-cLy"/>
+                                    <constraint firstItem="tNB-XV-5C8" firstAttribute="trailing" secondItem="KpG-hg-zMi" secondAttribute="trailing" id="T7W-M3-JC5"/>
+                                    <constraint firstItem="D2f-5k-8P9" firstAttribute="top" secondItem="kk6-4J-uMa" secondAttribute="bottom" constant="32" id="TE5-tX-XXW"/>
+                                    <constraint firstItem="kk6-4J-uMa" firstAttribute="top" secondItem="D24-Cd-2qh" secondAttribute="bottom" constant="32" id="Tie-bH-6IR"/>
+                                    <constraint firstItem="ou7-Ya-aY9" firstAttribute="leading" secondItem="sIh-AL-SUX" secondAttribute="leading" constant="16" id="Twd-ge-Ciq"/>
+                                    <constraint firstItem="lUQ-kh-zUS" firstAttribute="firstBaseline" secondItem="jvM-vB-mqN" secondAttribute="firstBaseline" id="UIr-GH-Bbd"/>
+                                    <constraint firstItem="pUx-LB-bMg" firstAttribute="centerX" secondItem="sIh-AL-SUX" secondAttribute="centerX" id="Vo4-VX-gac"/>
+                                    <constraint firstItem="zpd-qK-viL" firstAttribute="leading" secondItem="6ir-ba-G8w" secondAttribute="leading" id="VoY-rB-n5o"/>
+                                    <constraint firstItem="uig-2i-62b" firstAttribute="leading" secondItem="pUx-LB-bMg" secondAttribute="leading" id="X2e-w1-RLL"/>
+                                    <constraint firstItem="mk8-Rf-SVz" firstAttribute="top" secondItem="pUx-LB-bMg" secondAttribute="bottom" constant="8" symbolic="YES" id="Xlv-xu-lH9"/>
+                                    <constraint firstItem="603-Sh-saI" firstAttribute="leading" secondItem="KDI-8a-5fp" secondAttribute="trailing" constant="78" id="Y6R-on-5yp"/>
+                                    <constraint firstItem="pUx-LB-bMg" firstAttribute="trailing" secondItem="ou7-Ya-aY9" secondAttribute="trailing" id="Yg2-2X-wRR"/>
+                                    <constraint firstAttribute="trailing" secondItem="ou7-Ya-aY9" secondAttribute="trailing" constant="16" id="ZBr-Rg-TDK"/>
+                                    <constraint firstItem="KpG-hg-zMi" firstAttribute="top" secondItem="tNB-XV-5C8" secondAttribute="bottom" constant="8" symbolic="YES" id="a7t-Cw-nzb"/>
+                                    <constraint firstItem="tNB-XV-5C8" firstAttribute="leading" secondItem="KpG-hg-zMi" secondAttribute="leading" id="aIg-ni-BDo"/>
+                                    <constraint firstItem="lUQ-kh-zUS" firstAttribute="top" secondItem="KpG-hg-zMi" secondAttribute="bottom" constant="8" symbolic="YES" id="bhN-mL-HSy"/>
+                                    <constraint firstAttribute="trailing" secondItem="lUQ-kh-zUS" secondAttribute="trailing" constant="77" id="c0C-JX-IPD"/>
+                                    <constraint firstItem="T0c-rQ-FNR" firstAttribute="trailing" secondItem="603-Sh-saI" secondAttribute="trailing" id="dUA-Sx-qTM"/>
+                                    <constraint firstItem="KzH-Fq-dCG" firstAttribute="leading" secondItem="ou7-Ya-aY9" secondAttribute="leading" id="ddG-JU-msn"/>
+                                    <constraint firstItem="mk8-Rf-SVz" firstAttribute="centerY" secondItem="D24-Cd-2qh" secondAttribute="centerY" id="e10-wM-KIL"/>
+                                    <constraint firstItem="BMd-HQ-enO" firstAttribute="leading" secondItem="GZy-4K-1De" secondAttribute="leading" id="ePy-nY-tDq"/>
+                                    <constraint firstItem="zpd-qK-viL" firstAttribute="top" secondItem="mk8-Rf-SVz" secondAttribute="bottom" constant="8" symbolic="YES" id="ey2-jA-Kg7"/>
+                                    <constraint firstItem="2j2-P1-8Nl" firstAttribute="firstBaseline" secondItem="FNi-xQ-GRt" secondAttribute="firstBaseline" id="fBG-r0-415"/>
+                                    <constraint firstAttribute="trailing" secondItem="D24-Cd-2qh" secondAttribute="trailing" constant="20" id="hJ3-pC-VpA"/>
+                                    <constraint firstItem="xKz-hJ-zfX" firstAttribute="top" secondItem="Bxl-PV-p1C" secondAttribute="bottom" constant="5" id="hMa-oQ-V28"/>
+                                    <constraint firstItem="kk6-4J-uMa" firstAttribute="trailing" secondItem="D2f-5k-8P9" secondAttribute="trailing" id="iC6-lD-8aP"/>
+                                    <constraint firstItem="D24-Cd-2qh" firstAttribute="top" secondItem="pUx-LB-bMg" secondAttribute="bottom" constant="20" id="iNL-rT-3Xf"/>
+                                    <constraint firstItem="6ir-ba-G8w" firstAttribute="centerY" secondItem="D2f-5k-8P9" secondAttribute="centerY" id="j4h-xE-oxf"/>
+                                    <constraint firstAttribute="bottom" secondItem="ou7-Ya-aY9" secondAttribute="bottom" constant="35" id="k4y-M7-icl"/>
+                                    <constraint firstItem="FNi-xQ-GRt" firstAttribute="leading" secondItem="hX4-ZT-wPz" secondAttribute="trailing" constant="37" id="msq-pf-1iS"/>
+                                    <constraint firstItem="kk6-4J-uMa" firstAttribute="leading" secondItem="D2f-5k-8P9" secondAttribute="leading" id="n3H-iS-Jdn"/>
+                                    <constraint firstItem="pUx-LB-bMg" firstAttribute="top" secondItem="uig-2i-62b" secondAttribute="bottom" constant="8" symbolic="YES" id="n8z-fS-Nvf"/>
+                                    <constraint firstItem="lUQ-kh-zUS" firstAttribute="baseline" secondItem="jvM-vB-mqN" secondAttribute="baseline" id="oQn-bX-OEK"/>
+                                    <constraint firstItem="xKz-hJ-zfX" firstAttribute="top" secondItem="sXF-JE-A5Y" secondAttribute="bottom" constant="9" id="oVe-6Z-ZPd"/>
+                                    <constraint firstItem="mk8-Rf-SVz" firstAttribute="trailing" secondItem="zpd-qK-viL" secondAttribute="trailing" id="ozg-tc-2gL"/>
+                                    <constraint firstItem="6ir-ba-G8w" firstAttribute="trailing" secondItem="KzH-Fq-dCG" secondAttribute="trailing" id="pQ2-6d-zrT"/>
+                                    <constraint firstItem="tNB-XV-5C8" firstAttribute="top" secondItem="xKz-hJ-zfX" secondAttribute="bottom" constant="8" symbolic="YES" id="pdB-vc-xog"/>
+                                    <constraint firstItem="sXF-JE-A5Y" firstAttribute="centerY" secondItem="Bxl-PV-p1C" secondAttribute="centerY" id="q8m-ON-Rf1"/>
+                                    <constraint firstItem="hX4-ZT-wPz" firstAttribute="firstBaseline" secondItem="T0c-rQ-FNR" secondAttribute="firstBaseline" id="qMw-0L-fVB"/>
+                                    <constraint firstItem="sXF-JE-A5Y" firstAttribute="leading" secondItem="xKz-hJ-zfX" secondAttribute="leading" id="qZk-x9-TR3"/>
+                                    <constraint firstItem="D2f-5k-8P9" firstAttribute="leading" secondItem="9cT-yr-M6t" secondAttribute="leading" id="qln-9k-VTv"/>
+                                    <constraint firstItem="GZy-4K-1De" firstAttribute="leading" secondItem="2j2-P1-8Nl" secondAttribute="leading" id="qw0-mE-NLB"/>
+                                    <constraint firstItem="KpG-hg-zMi" firstAttribute="trailing" secondItem="jvM-vB-mqN" secondAttribute="trailing" id="r6M-WB-Lwx"/>
+                                    <constraint firstItem="mk8-Rf-SVz" firstAttribute="leading" secondItem="zpd-qK-viL" secondAttribute="leading" id="reo-ms-pjC"/>
+                                    <constraint firstItem="pUx-LB-bMg" firstAttribute="top" secondItem="603-Sh-saI" secondAttribute="bottom" constant="4" id="uqb-IP-84w"/>
+                                    <constraint firstItem="KDI-8a-5fp" firstAttribute="centerY" secondItem="603-Sh-saI" secondAttribute="centerY" id="v3Q-x2-78i"/>
+                                    <constraint firstItem="2j2-P1-8Nl" firstAttribute="top" secondItem="GZy-4K-1De" secondAttribute="bottom" constant="8" symbolic="YES" id="vO7-S7-0Vv"/>
+                                    <constraint firstItem="ou7-Ya-aY9" firstAttribute="top" secondItem="KzH-Fq-dCG" secondAttribute="bottom" constant="8" symbolic="YES" id="wN3-Eq-kHh"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bxl-PV-p1C" secondAttribute="trailing" constant="16" id="xed-Ps-aBf"/>
+                                    <constraint firstItem="Bxl-PV-p1C" firstAttribute="trailing" secondItem="sXF-JE-A5Y" secondAttribute="trailing" id="zYK-Ku-G3G"/>
+                                    <constraint firstItem="D2f-5k-8P9" firstAttribute="trailing" secondItem="9cT-yr-M6t" secondAttribute="trailing" id="zvI-l4-qyD"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
-                                        <integer key="value" value="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="onImage" value="grao-cheio"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="offImage" value="grao-vazio"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="halfImage" value="grao-meio"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="halfStarsAllowed" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="editable" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
-                                        <real key="value" value="1"/>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                        <size key="value" width="320" height="1000"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Peo-d1-M5r">
-                                <rect key="frame" x="250" y="332" width="50" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTE-Jq-dDC">
-                                <rect key="frame" x="250" y="385" width="50" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GoC-8H-EKs">
-                                <rect key="frame" x="250" y="438" width="50" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nnr-vi-iCt">
-                                <rect key="frame" x="250" y="491" width="50" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2MF-la-LWd">
-                                <rect key="frame" x="262" y="20" width="42" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Carrinho-1"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="border">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fundoBranco" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="comprarCafe:" destination="Pnt-xa-7jn" eventType="touchUpInside" id="M3v-nI-T1A"/>
-                                </connections>
-                            </button>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
-                                <size key="value" width="320" height="1000"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </scrollView>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sIh-AL-SUX" firstAttribute="top" secondItem="FSd-IJ-HKc" secondAttribute="bottom" id="DLU-X3-Woq"/>
+                            <constraint firstItem="sIh-AL-SUX" firstAttribute="leading" secondItem="aAZ-gz-ghH" secondAttribute="leading" id="MSi-H7-aW6"/>
+                            <constraint firstItem="sIh-AL-SUX" firstAttribute="bottom" secondItem="uCg-5u-n9K" secondAttribute="top" id="ZMC-Rg-Eb1"/>
+                            <constraint firstAttribute="trailing" secondItem="sIh-AL-SUX" secondAttribute="trailing" id="zxF-4k-Cxx"/>
+                        </constraints>
+                    </view>
                     <navigationItem key="navigationItem" title="Detalhes" id="bya-08-DIl">
                         <barButtonItem key="rightBarButtonItem" title="Avaliar" id="klG-3K-7yW">
                             <connections>
@@ -853,24 +987,24 @@
                         </barButtonItem>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="1000"/>
+                    <size key="freeformSize" width="320" height="920"/>
                     <connections>
-                        <outlet property="alturaLabel" destination="Wr6-76-wHb" id="Yg4-4N-Hf4"/>
-                        <outlet property="avaliacoesAntigasSegmentControl" destination="Ypn-Gg-eqp" id="pPg-5y-4ne"/>
-                        <outlet property="cidadeLabel" destination="BFQ-Zg-Rf2" id="jBA-KB-fYZ"/>
-                        <outlet property="comentarioTextView" destination="lee-eZ-7a3" id="L9B-Jv-wRB"/>
-                        <outlet property="estadoLabel" destination="BcN-5N-zJ7" id="igO-Zj-2Rj"/>
-                        <outlet property="notaDoisLabel" destination="GoC-8H-EKs" id="mSE-HL-Yp4"/>
-                        <outlet property="notaQuatroLabel" destination="Peo-d1-M5r" id="etj-5x-mhk"/>
-                        <outlet property="notaTresLabel" destination="QTE-Jq-dDC" id="rZg-EH-JpY"/>
-                        <outlet property="notaUmLabel" destination="Nnr-vi-iCt" id="JqG-tO-kb2"/>
-                        <outlet property="paisLabel" destination="rbY-nS-hFL" id="TkS-9z-mcA"/>
-                        <outlet property="produtorLabel" destination="CEB-jB-diY" id="dId-9b-zwH"/>
-                        <outlet property="rodaSabores" destination="eJ6-Cj-rc6" id="xrR-ww-JU6"/>
-                        <outlet property="safraLabel" destination="QPt-at-ilg" id="MBU-XL-Q4D"/>
-                        <outlet property="tipoCafeLabel" destination="PU1-oP-8V2" id="AMm-kt-J43"/>
-                        <outlet property="torradorLabel" destination="rgH-nG-ddE" id="bsv-gR-jae"/>
-                        <outlet property="torradorMediaSegmentControl" destination="1jr-d2-bTi" id="ClB-jr-f8A"/>
+                        <outlet property="alturaLabel" destination="T0c-rQ-FNR" id="XfU-Tp-Ybs"/>
+                        <outlet property="avaliacoesAntigasSegmentControl" destination="0Sv-Wu-c5Q" id="Qf4-XU-6ay"/>
+                        <outlet property="cidadeLabel" destination="lUQ-kh-zUS" id="mH4-Pb-9l3"/>
+                        <outlet property="comentarioTextView" destination="pUx-LB-bMg" id="24F-lN-GFW"/>
+                        <outlet property="estadoLabel" destination="jvM-vB-mqN" id="cpo-6d-y99"/>
+                        <outlet property="notaDoisLabel" destination="D2f-5k-8P9" id="VMG-Ce-OgQ"/>
+                        <outlet property="notaQuatroLabel" destination="D24-Cd-2qh" id="9dr-CM-vKK"/>
+                        <outlet property="notaTresLabel" destination="kk6-4J-uMa" id="iTg-DK-NKe"/>
+                        <outlet property="notaUmLabel" destination="9cT-yr-M6t" id="rBQ-CQ-uNd"/>
+                        <outlet property="paisLabel" destination="GZy-4K-1De" id="uCO-Fi-yyl"/>
+                        <outlet property="produtorLabel" destination="KpG-hg-zMi" id="a05-vF-s4b"/>
+                        <outlet property="rodaSabores" destination="ou7-Ya-aY9" id="cJ0-Xy-l9C"/>
+                        <outlet property="safraLabel" destination="KDI-8a-5fp" id="xKi-e8-BfA"/>
+                        <outlet property="tipoCafeLabel" destination="hX4-ZT-wPz" id="J6d-jP-rlT"/>
+                        <outlet property="torradorLabel" destination="xKz-hJ-zfX" id="hKA-pi-MXU"/>
+                        <outlet property="torradorMediaSegmentControl" destination="fnl-lM-axj" id="k5R-Gc-kZO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NSJ-Jw-Deq" userLabel="First Responder" sceneMemberID="firstResponder"/>
