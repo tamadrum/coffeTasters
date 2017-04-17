@@ -22,15 +22,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashImg" translatesAutoresizingMaskIntoConstraints="NO" id="HfI-jQ-v1g">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="jcI-iV-Yib">
                                 <rect key="frame" x="73.5" y="223" width="173" height="122"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.75429433584213257" green="0.55812245607376099" blue="0.071776129305362701" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="HfI-jQ-v1g" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="GHf-dk-1wB"/>
+                            <constraint firstItem="HfI-jQ-v1g" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="20" id="GHf-dk-1wB"/>
                             <constraint firstItem="jcI-iV-Yib" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="bfg-Kg-w33"/>
                             <constraint firstItem="jcI-iV-Yib" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="jUX-h2-9tE"/>
                             <constraint firstItem="HfI-jQ-v1g" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="k2E-Qf-HvS"/>
