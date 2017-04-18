@@ -44,6 +44,8 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
     @IBOutlet weak var cafeBlendSegmentControl: UISegmentedControl!
     @IBOutlet weak var buscaCafeButton: UIButton!
     
+    var listaTextoModoPreparo = ["Prensa", "Espresso", "Coado", "Moca", "Aeropress", "Clever"]
+    
     var cafeAvaliado: Cafe?
     
     var criaNovoCafe = true
@@ -70,6 +72,9 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
             tipoTextField.text = cafeAvaliado.tipo
             safraTextField.text = cafeAvaliado.safra
             cafeBlendSegmentControl.selectedSegmentIndex = 0
+            
+            print("Trocando o criaNovoCafe para false")
+            criaNovoCafe = false
             
         }
         
@@ -181,7 +186,7 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
         avaliacao.flavor?.nozes = Int32(nozesSlider.value)
         avaliacao.gostou = Int32(rating.rating)
         avaliacao.localPreparo = localPreparoTextField.text
-        avaliacao.metodoPreparo = "\(metodoPreparoSegmentControl.selectedSegmentIndex)"
+        avaliacao.metodoPreparo = listaTextoModoPreparo[metodoPreparoSegmentControl.selectedSegmentIndex]
         avaliacao.obs = comentariosTextView.text
         
         dao.save()
