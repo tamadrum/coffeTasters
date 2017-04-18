@@ -59,6 +59,9 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
     let countryPickerView = CountryPickerView()
     
     override func viewDidLoad() {
+        
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        
         if let cafeAvaliado = cafeAvaliado {
             nomeTextField.text = cafeAvaliado.nome
             paisTextField.text = cafeAvaliado.pais

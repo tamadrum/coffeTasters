@@ -57,8 +57,10 @@ class AvaliacoesViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 450
+        return 470
     }
+    
+    //TODO: Impedir a seleção da celula
     
     func share() {
         let usuario = Usuario()
