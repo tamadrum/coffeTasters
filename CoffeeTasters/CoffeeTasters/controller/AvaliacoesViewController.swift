@@ -39,6 +39,8 @@ class AvaliacoesViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celula") as! AvaliacaoCustomCell
         
+        cell.selectionStyle = .none
+        
         cell.comentario.text = avaliacoes[indexPath.row].obs
         cell.flavor.flavorUsuario = avaliacoes[indexPath.row].flavor
         cell.modoPrepado.text = avaliacoes[indexPath.row].metodoPreparo
