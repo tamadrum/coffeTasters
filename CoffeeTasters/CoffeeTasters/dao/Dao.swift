@@ -221,102 +221,136 @@ class Dao<T> {
             
             let preparoDao = Dao<Preparo>()
             let passoDao = Dao<Passo>()
-        
-            let passo1 = passoDao.new()
-            passo1.indice = 1
-            passo1.tempo = 0
-            passo1.imagem = #imageLiteral(resourceName: "cafe")
-            passo1.descricao = "Moer os grãos"
-        
-            let passo2 = passoDao.new()
-            passo2.indice = 2
-            passo2.tempo = 0
-            passo2.imagem = #imageLiteral(resourceName: "cafe")
-            passo2.descricao = "Colocar o pó no coador"
             
-            let passo3 = passoDao.new()
-            passo3.indice = 3
-            passo3.tempo = 0
-            passo3.imagem = #imageLiteral(resourceName: "cafe")
-            passo3.descricao = "Jogar agua e esperar"
+            let materiaisPrensaFrancesa = ["café em grão",
+                "Balança",
+                "Água filtrada",
+                "moedor",
+                "chaleira",
+                "prensa francesa",
+                "colher"]
+            let prensaFrancesa = ["Pese 6g de café para cada 100mL de bebida",
+            "moa o café (moagem grossa)",
+            "Aqueça a água até que comece a ferver",
+            "Escalde o frasco",
+            "Coloque, nesta ordem, o café moído e a água quente",
+            "Mexa, coloque a tampa e deixe em infusão por 3-5 minutos",
+            "abaixe o êmbolo lentamente para não revolver o pó"]
+
+            let materiaisEspresso = ["café em grão",
+                "Moedor",
+                "Água filtrada",
+                "máquina de expresso",
+                "porta filtro",
+                "tamper",
+                "balança digital",
+                "xícaras aquecidas"]
+            let espresso = ["Pese de 5-7g de café por dose de bebida",
+            "Moa o café (moagem fina)",
+            "Coloque o café moído no porta-filtro",
+            "prense o pó no porta-filtro de modo uniforme utilizando o tamper",
+            "prenda corretamente o porta-filtro na máquina",
+            "Escalde a xícara",
+            "Inicie a extração, contando o tempo após a primeira gota",
+            "Extraia por 25 segundos (30 mL de bebida)"]
             
-            let passo4 = passoDao.new()
-            passo4.indice = 4
-            passo4.tempo = 3
-            passo4.imagem = #imageLiteral(resourceName: "cafe")
-            passo4.descricao = "Colocar na garrafa térmica"
+            let materiaisCoadoCleverChemex = ["café em grão",
+                "Balança",
+                "Água filtrada",
+                "moedor",
+                "chaleira",
+                "porta filtro",
+                "filtro de papel",
+                "jarra para preparo"]
+            let coadoCleverChemex = ["Pese 15g de café para cada 200mL de bebida",
+                "Moa o café (moagem fina)",
+                "Aqueça a água até que comece a ferver",
+                "Escalde o frasco e o papel de filtro",
+                "coloque o pó no filtro",
+                "umedeça o pó com um pouco de água e espere 30 segundos",
+                "Se for preparar por clever, derrame o restante da água e deixe em infusão por 3-5 minutos",
+                "libere a válvula do clever e espere coar todo líquido",
+                "Se for preparar por coado/chemex, derrame o restante da água em movimentos circulares",
+                "espere coar todo líquido"]
+
+            let materiaisAeropress = ["café em grão",
+                "balança",
+                "Moedor",
+                "água filtrada",
+                "chaleira",
+                "aeropress",
+                "filtro aeropress",
+                "colher",
+                "funil"]
+            let aeropress = ["Pese 18g de café para cada 200mL de bebida",
+                "Moa o café (moagem média)",
+                "Aqueça a água até que comece a ferver",
+                "Escalde o frasco e o filtro",
+                "Coloque, nesta ordem, o café moído e a água quente",
+                "Mexa e deixe em infusão por 1 minuto",
+                "Coloque a tampa e abaixe o êmbolo lentamente"]
             
-            let passo5 = passoDao.new()
-            passo5.indice = 1
-            passo5.tempo = 0
-            passo5.imagem = #imageLiteral(resourceName: "cafe")
-            passo5.descricao = "Moer os grãos"
+            let materiaisMoka = ["café em grão",
+                "balança",
+                "moedor",
+                "Agua filtrada",
+                "fogão"]
+            let moka = ["moa café suficiente para encher o porta-pó (moagem média)",
+            "Coloque água filtrada na base da moka o suficiente para encher até a base da válvula de segurança",
+            "Coloque o suficiente de café moído para encher o porta-pó, sem compactá-lo",
+            "Feche corretamente o conjunto da moka",
+            "Aqueça em fogo baixo com a tampa levantada.",
+            "apague o fogo e abaixar a tampa quando o café começar a verter na parte de cima",
+            "sirva quando cessar de verter café pela parte de cima."]
+
+            let passosPrensaFrancesa = preparaPassos(passoDao, passos: prensaFrancesa)
+            preparaPreparo(preparoDao, passos: passosPrensaFrancesa, imagem: #imageLiteral(resourceName: "Prensa-1"), nome: "Prensa Francesa")
             
-            let passo6 = passoDao.new()
-            passo6.indice = 2
-            passo6.tempo = 0
-            passo6.imagem = #imageLiteral(resourceName: "cafe")
-            passo6.descricao = "Colocar o pó no coador"
+            let passosEspresso = preparaPassos(passoDao, passos: espresso)
+            preparaPreparo(preparoDao, passos: passosEspresso, imagem: #imageLiteral(resourceName: "Espresso_1"), nome: "Espresso")
             
-            let passo7 = passoDao.new()
-            passo7.indice = 3
-            passo7.tempo = 0
-            passo7.imagem = #imageLiteral(resourceName: "cafe")
-            passo7.descricao = "Jogar agua e esperar"
+            let passosCoadoCleverChemex = preparaPassos(passoDao, passos: coadoCleverChemex)
+            preparaPreparo(preparoDao, passos: passosCoadoCleverChemex, imagem: #imageLiteral(resourceName: "Coado-1"), nome: "Coado/Clever/Chenex")
             
-            let passo8 = passoDao.new()
-            passo8.indice = 4
-            passo8.tempo = 2
-            passo8.imagem = #imageLiteral(resourceName: "cafe")
-            passo8.descricao = "Colocar na garrafa térmica"
+            let passosMoka = preparaPassos(passoDao, passos: moka)
+            preparaPreparo(preparoDao, passos: passosMoka, imagem: #imageLiteral(resourceName: "Moca-1"), nome: "Moka")
             
-            /// Inicio do preparo
-            let preparo1 = preparoDao.new()
-            preparo1.nome = "Prensa Francesa"
-            preparo1.imagem = #imageLiteral(resourceName: "Prensa-1")
-            
-            preparo1.addToPasso(passo5)
-            preparo1.addToPasso(passo6)
-            preparo1.addToPasso(passo7)
-            preparo1.addToPasso(passo8)
-            
-            /// Inicio do preparo
-            let preparo2 = preparoDao.new()
-            preparo2.nome = "Espresso"
-            preparo2.imagem = #imageLiteral(resourceName: "Espresso_1")
-            
-            preparo2.addToPasso(passo1)
-            preparo2.addToPasso(passo2)
-            preparo2.addToPasso(passo3)
-            preparo2.addToPasso(passo4)
-            
-            /// Inicio do preparo
-            let preparo3 = preparoDao.new()
-            preparo3.nome = "Coado"
-            preparo3.imagem = #imageLiteral(resourceName: "Coado-1")
-            
-            /// Inicio do preparo
-            let preparo4 = preparoDao.new()
-            preparo4.nome = "Moca"
-            preparo4.imagem = #imageLiteral(resourceName: "Moca-1")
-            
-            /// Inicio do preparo
-            let preparo5 = preparoDao.new()
-            preparo5.nome = "Aeropress"
-            preparo5.imagem = #imageLiteral(resourceName: "Aeropress-1")
-            
-            /// Inicio do preparo
-            let preparo6 = preparoDao.new()
-            preparo6.nome = "Clever"
-            preparo6.imagem = #imageLiteral(resourceName: "Clever-1")
-            
-            preparoDao.save()
+            let passosAeropress = preparaPassos(passoDao, passos: aeropress)
+            preparaPreparo(preparoDao, passos: passosAeropress, imagem: #imageLiteral(resourceName: "Aeropress-1"), nome: "Aeropress")
             
                 print("**************************")
 
             configuracoes.set(true, forKey: "dados_inseridos")
             configuracoes.synchronize()
         }
+    }
+    
+    func preparaPassos(_ dao: Dao<Passo>, passos:[String]) -> [Passo] {
+        var retorno:[Passo] = []
+        
+        for i in 0..<passos.count {
+            let passo = dao.new()
+            passo.indice = i+1
+            passo.tempo = 0
+            passo.imagem = #imageLiteral(resourceName: "cafe")
+            passo.descricao = passos[i]
+        
+            retorno.append(passo)
+        }
+        
+        return retorno
+    }
+    
+    func preparaPreparo(_ dao: Dao<Preparo>, passos:[Passo], imagem: UIImage, nome: String) {
+        let preparo = dao.new()
+        preparo.nome = nome
+        preparo.imagem = imagem
+        
+        for passo in passos {
+            preparo.addToPasso(passo)
+        }
+        
+        dao.save()
     }
     
 }
