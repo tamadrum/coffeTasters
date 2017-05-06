@@ -80,7 +80,7 @@ class WheelFlavor: UIView {
                 desenhaImagem(#imageLiteral(resourceName: "nozes"), context: context, centro:centro, raio:(raio+20), angulo:348.75), // nozes
             ]
             
-            desenhaRoda(context: context, centro:centro, raio:raio)
+            //desenhaRoda(context: context, centro:centro, raio:raio)
             //desenhaLinhas(context: context, centro: centro, raio: raio)
             //desenhaCirculosPequenos(context: context, centro: centro, raio: raio)
 
