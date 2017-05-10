@@ -222,13 +222,7 @@ class Dao<T> {
             let preparoDao = Dao<Preparo>()
             let passoDao = Dao<Passo>()
             
-            let materiaisPrensaFrancesa = ["café em grão",
-                "Balança",
-                "Água filtrada",
-                "moedor",
-                "chaleira",
-                "prensa francesa",
-                "colher"]
+            let materiaisPrensaFrancesa = #imageLiteral(resourceName: "ingredientesPrensaFrancesa")
             let prensaFrancesa = ["Pese 6g de café para cada 100mL de bebida",
             "moa o café (moagem grossa)",
             "Aqueça a água até que comece a ferver",
@@ -237,14 +231,7 @@ class Dao<T> {
             "Mexa, coloque a tampa e deixe em infusão por 3-5 minutos",
             "abaixe o êmbolo lentamente para não revolver o pó"]
 
-            let materiaisEspresso = ["café em grão",
-                "Moedor",
-                "Água filtrada",
-                "máquina de expresso",
-                "porta filtro",
-                "tamper",
-                "balança digital",
-                "xícaras aquecidas"]
+            let materiaisEspresso = #imageLiteral(resourceName: "ingredientesEspresso")
             let espresso = ["Pese de 5-7g de café por dose de bebida",
             "Moa o café (moagem fina)",
             "Coloque o café moído no porta-filtro",
@@ -254,14 +241,7 @@ class Dao<T> {
             "Inicie a extração, contando o tempo após a primeira gota",
             "Extraia por 25 segundos (30 mL de bebida)"]
             
-            let materiaisCoadoCleverChemex = ["café em grão",
-                "Balança",
-                "Água filtrada",
-                "moedor",
-                "chaleira",
-                "porta filtro",
-                "filtro de papel",
-                "jarra para preparo"]
+            let materiaisCoadoCleverChemex = #imageLiteral(resourceName: "ingredientesClever")
             let coadoCleverChemex = ["Pese 15g de café para cada 200mL de bebida",
                 "Moa o café (moagem fina)",
                 "Aqueça a água até que comece a ferver",
@@ -273,15 +253,7 @@ class Dao<T> {
                 "Se for preparar por coado/chemex, derrame o restante da água em movimentos circulares",
                 "espere coar todo líquido"]
 
-            let materiaisAeropress = ["café em grão",
-                "balança",
-                "Moedor",
-                "água filtrada",
-                "chaleira",
-                "aeropress",
-                "filtro aeropress",
-                "colher",
-                "funil"]
+            let materiaisAeropress = #imageLiteral(resourceName: "ingredientesAeropress")
             let aeropress = ["Pese 18g de café para cada 200mL de bebida",
                 "Moa o café (moagem média)",
                 "Aqueça a água até que comece a ferver",
@@ -290,11 +262,7 @@ class Dao<T> {
                 "Mexa e deixe em infusão por 1 minuto",
                 "Coloque a tampa e abaixe o êmbolo lentamente"]
             
-            let materiaisMoka = ["café em grão",
-                "balança",
-                "moedor",
-                "Agua filtrada",
-                "fogão"]
+            let materiaisMoka = #imageLiteral(resourceName: "ingredientesMoka")
             let moka = ["moa café suficiente para encher o porta-pó (moagem média)",
             "Coloque água filtrada na base da moka o suficiente para encher até a base da válvula de segurança",
             "Coloque o suficiente de café moído para encher o porta-pó, sem compactá-lo",
@@ -303,19 +271,19 @@ class Dao<T> {
             "apague o fogo e abaixar a tampa quando o café começar a verter na parte de cima",
             "sirva quando cessar de verter café pela parte de cima."]
 
-            let passosPrensaFrancesa = preparaPassos(passoDao, passos: prensaFrancesa)
+            let passosPrensaFrancesa = preparaPassos(passoDao, passos: prensaFrancesa, imagem: materiaisPrensaFrancesa)
             preparaPreparo(preparoDao, passos: passosPrensaFrancesa, imagem: #imageLiteral(resourceName: "Prensa-1"), nome: "Prensa Francesa")
             
-            let passosEspresso = preparaPassos(passoDao, passos: espresso)
+            let passosEspresso = preparaPassos(passoDao, passos: espresso, imagem: materiaisEspresso)
             preparaPreparo(preparoDao, passos: passosEspresso, imagem: #imageLiteral(resourceName: "Espresso_1"), nome: "Espresso")
             
-            let passosCoadoCleverChemex = preparaPassos(passoDao, passos: coadoCleverChemex)
+            let passosCoadoCleverChemex = preparaPassos(passoDao, passos: coadoCleverChemex, imagem: materiaisCoadoCleverChemex)
             preparaPreparo(preparoDao, passos: passosCoadoCleverChemex, imagem: #imageLiteral(resourceName: "Coado-1"), nome: "Coado/Clever/Chenex")
             
-            let passosMoka = preparaPassos(passoDao, passos: moka)
+            let passosMoka = preparaPassos(passoDao, passos: moka, imagem: materiaisMoka)
             preparaPreparo(preparoDao, passos: passosMoka, imagem: #imageLiteral(resourceName: "Moca-1"), nome: "Moka")
             
-            let passosAeropress = preparaPassos(passoDao, passos: aeropress)
+            let passosAeropress = preparaPassos(passoDao, passos: aeropress, imagem: materiaisAeropress)
             preparaPreparo(preparoDao, passos: passosAeropress, imagem: #imageLiteral(resourceName: "Aeropress-1"), nome: "Aeropress")
             
                 print("**************************")
@@ -325,14 +293,14 @@ class Dao<T> {
         }
     }
     
-    func preparaPassos(_ dao: Dao<Passo>, passos:[String]) -> [Passo] {
+    func preparaPassos(_ dao: Dao<Passo>, passos:[String], imagem: UIImage) -> [Passo] {
         var retorno:[Passo] = []
         
         for i in 0..<passos.count {
             let passo = dao.new()
             passo.indice = i+1
             passo.tempo = 0
-            passo.imagem = #imageLiteral(resourceName: "cafe")
+            passo.imagem = imagem
             passo.descricao = passos[i]
         
             retorno.append(passo)
