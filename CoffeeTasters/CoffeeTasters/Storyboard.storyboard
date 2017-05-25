@@ -1213,10 +1213,10 @@
                                 <rect key="frame" x="0.0" y="143" width="320" height="128"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" translatesAutoresizingMaskIntoConstraints="NO" id="KwE-CF-m16" customClass="RoundImage" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="28" width="90" height="90"/>
+                                        <rect key="frame" x="9" y="23" width="100" height="100"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="90" id="SDV-us-hZG"/>
-                                            <constraint firstAttribute="width" constant="90" id="iwg-3Z-ONJ"/>
+                                            <constraint firstAttribute="width" constant="100" id="Cb3-1y-PSd"/>
+                                            <constraint firstAttribute="height" constant="100" id="DrW-ke-Qpf"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1225,13 +1225,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="ettore.tamadrum@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hfd-5I-6K2">
-                                        <rect key="frame" x="122" y="101" width="190" height="12"/>
+                                        <rect key="frame" x="119" y="111" width="193" height="12"/>
                                         <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="10"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Luglio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4WO-at-ab2">
-                                        <rect key="frame" x="122" y="71" width="190" height="30"/>
+                                        <rect key="frame" x="119" y="71" width="190" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="190" id="kXO-0o-rgH"/>
                                         </constraints>
@@ -1239,10 +1239,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Ettore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sda-q0-OfW">
-                                        <rect key="frame" x="122" y="33" width="190" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="190" id="wna-dI-QGI"/>
-                                        </constraints>
+                                        <rect key="frame" x="119" y="33" width="193" height="30"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="24"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1251,13 +1248,13 @@
                                 <constraints>
                                     <constraint firstItem="Sda-q0-OfW" firstAttribute="leading" secondItem="Hfd-5I-6K2" secondAttribute="leading" id="S66-aq-KUz"/>
                                     <constraint firstItem="Sda-q0-OfW" firstAttribute="leading" secondItem="4WO-at-ab2" secondAttribute="leading" id="WLS-7q-VT0"/>
-                                    <constraint firstItem="KwE-CF-m16" firstAttribute="bottom" secondItem="Hfd-5I-6K2" secondAttribute="bottom" constant="5" id="fM8-Gh-axa"/>
-                                    <constraint firstItem="Sda-q0-OfW" firstAttribute="leading" secondItem="KwE-CF-m16" secondAttribute="trailing" constant="8" symbolic="YES" id="ho7-8w-aKv"/>
+                                    <constraint firstItem="KwE-CF-m16" firstAttribute="bottom" secondItem="Hfd-5I-6K2" secondAttribute="bottom" id="fM8-Gh-axa"/>
+                                    <constraint firstItem="Sda-q0-OfW" firstAttribute="leading" secondItem="KwE-CF-m16" secondAttribute="trailing" constant="10" id="ho7-8w-aKv"/>
                                     <constraint firstItem="Sda-q0-OfW" firstAttribute="trailing" secondItem="7ZU-Kh-VdM" secondAttribute="trailingMargin" id="mij-RY-eUh"/>
-                                    <constraint firstItem="KwE-CF-m16" firstAttribute="leading" secondItem="7ZU-Kh-VdM" secondAttribute="leading" constant="24" id="oYz-dz-905"/>
+                                    <constraint firstItem="KwE-CF-m16" firstAttribute="leading" secondItem="7ZU-Kh-VdM" secondAttribute="leading" constant="9" id="oYz-dz-905"/>
                                     <constraint firstAttribute="height" constant="128" id="oce-j0-rB3"/>
                                     <constraint firstItem="4WO-at-ab2" firstAttribute="top" secondItem="Sda-q0-OfW" secondAttribute="bottom" constant="8" symbolic="YES" id="qnw-Pe-2xy"/>
-                                    <constraint firstItem="KwE-CF-m16" firstAttribute="top" secondItem="7ZU-Kh-VdM" secondAttribute="top" constant="28" id="vJG-HG-i9i"/>
+                                    <constraint firstItem="KwE-CF-m16" firstAttribute="top" secondItem="7ZU-Kh-VdM" secondAttribute="top" constant="23" id="vJG-HG-i9i"/>
                                     <constraint firstItem="Sda-q0-OfW" firstAttribute="top" secondItem="7ZU-Kh-VdM" secondAttribute="top" constant="33" id="wVy-WU-wpy"/>
                                     <constraint firstItem="Sda-q0-OfW" firstAttribute="trailing" secondItem="Hfd-5I-6K2" secondAttribute="trailing" id="zHL-tI-ruA"/>
                                 </constraints>
