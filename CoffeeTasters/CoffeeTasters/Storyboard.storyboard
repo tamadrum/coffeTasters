@@ -6,15 +6,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="Merriweather-Bold.ttf">
             <string>Merriweather-Bold</string>
-        </array>
-        <array key="Merriweather-Light.ttf">
-            <string>Merriweather-Light</string>
         </array>
         <array key="Merriweather-Regular.ttf">
             <string>Merriweather</string>
@@ -1205,51 +1203,70 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KoQ-A0-RHt">
-                                <rect key="frame" x="0.0" y="108" width="320" height="16"/>
+                                <rect key="frame" x="0.0" y="108" width="320" height="36"/>
                                 <color key="backgroundColor" red="0.2781490683555603" green="0.14739993214607239" blue="0.081067316234111786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="16" id="uiN-Ah-bSm"/>
+                                    <constraint firstAttribute="height" constant="36" id="uiN-Ah-bSm"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" translatesAutoresizingMaskIntoConstraints="NO" id="ClA-UF-JgY" customClass="RoundImage" customModule="CoffeeTasters" customModuleProvider="target">
-                                <rect key="frame" x="16" y="115" width="90" height="90"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ZU-Kh-VdM">
+                                <rect key="frame" x="0.0" y="143" width="320" height="128"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" translatesAutoresizingMaskIntoConstraints="NO" id="KwE-CF-m16" customClass="RoundImage" customModule="CoffeeTasters" customModuleProvider="target">
+                                        <rect key="frame" x="24" y="28" width="90" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="90" id="SDV-us-hZG"/>
+                                            <constraint firstAttribute="width" constant="90" id="iwg-3Z-ONJ"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="45"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="ettore.tamadrum@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hfd-5I-6K2">
+                                        <rect key="frame" x="122" y="101" width="190" height="12"/>
+                                        <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="10"/>
+                                        <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Luglio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4WO-at-ab2">
+                                        <rect key="frame" x="122" y="71" width="190" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="190" id="kXO-0o-rgH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="24"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Ettore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sda-q0-OfW">
+                                        <rect key="frame" x="122" y="33" width="190" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="190" id="wna-dI-QGI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="24"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="g1x-9R-0be"/>
-                                    <constraint firstAttribute="height" constant="90" id="nEA-lb-ZB9"/>
+                                    <constraint firstItem="Sda-q0-OfW" firstAttribute="leading" secondItem="Hfd-5I-6K2" secondAttribute="leading" id="S66-aq-KUz"/>
+                                    <constraint firstItem="Sda-q0-OfW" firstAttribute="leading" secondItem="4WO-at-ab2" secondAttribute="leading" id="WLS-7q-VT0"/>
+                                    <constraint firstItem="KwE-CF-m16" firstAttribute="bottom" secondItem="Hfd-5I-6K2" secondAttribute="bottom" constant="5" id="fM8-Gh-axa"/>
+                                    <constraint firstItem="Sda-q0-OfW" firstAttribute="leading" secondItem="KwE-CF-m16" secondAttribute="trailing" constant="8" symbolic="YES" id="ho7-8w-aKv"/>
+                                    <constraint firstItem="Sda-q0-OfW" firstAttribute="trailing" secondItem="7ZU-Kh-VdM" secondAttribute="trailingMargin" id="mij-RY-eUh"/>
+                                    <constraint firstItem="KwE-CF-m16" firstAttribute="leading" secondItem="7ZU-Kh-VdM" secondAttribute="leading" constant="24" id="oYz-dz-905"/>
+                                    <constraint firstAttribute="height" constant="128" id="oce-j0-rB3"/>
+                                    <constraint firstItem="4WO-at-ab2" firstAttribute="top" secondItem="Sda-q0-OfW" secondAttribute="bottom" constant="8" symbolic="YES" id="qnw-Pe-2xy"/>
+                                    <constraint firstItem="KwE-CF-m16" firstAttribute="top" secondItem="7ZU-Kh-VdM" secondAttribute="top" constant="28" id="vJG-HG-i9i"/>
+                                    <constraint firstItem="Sda-q0-OfW" firstAttribute="top" secondItem="7ZU-Kh-VdM" secondAttribute="top" constant="33" id="wVy-WU-wpy"/>
+                                    <constraint firstItem="Sda-q0-OfW" firstAttribute="trailing" secondItem="Hfd-5I-6K2" secondAttribute="trailing" id="zHL-tI-ruA"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="45"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ettore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5i-VH-utc">
-                                <rect key="frame" x="114" y="126" width="131" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="131" id="UZH-db-tvR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="24"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Luglio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGC-Vn-0aC">
-                                <rect key="frame" x="114" y="158" width="131" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="131" id="PX3-Ll-y1k"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="24"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ettore.tamadrum@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qy0-Hc-dz5">
-                                <rect key="frame" x="114" y="190" width="190" height="12"/>
-                                <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="10"/>
-                                <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ejY-bi-PiO">
-                                <rect key="frame" x="253" y="115" width="59" height="44"/>
+                                <rect key="frame" x="215" y="115" width="97" height="58"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="Ehc-3I-nCK"/>
-                                    <constraint firstAttribute="width" constant="59" id="Fpk-RC-0Lc"/>
+                                    <constraint firstAttribute="height" constant="58" id="Ehc-3I-nCK"/>
+                                    <constraint firstAttribute="width" constant="97" id="Fpk-RC-0Lc"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="buscar café" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dWc-Sp-p17">
@@ -1318,130 +1335,258 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mnG-jz-yRs">
-                                <rect key="frame" x="126" y="210" width="194" height="309"/>
+                                <rect key="frame" x="126" y="288" width="194" height="231"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9m2-Wf-acZ">
-                                        <rect key="frame" x="29" y="37" width="109" height="34"/>
-                                        <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="17"/>
-                                        <state key="normal" title="Avaliações">
-                                            <color key="titleColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="irParaAvaliacoes:" destination="eot-f5-Bbz" eventType="touchUpInside" id="Swf-qn-FTZ"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="33" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K24-il-blV">
-                                        <rect key="frame" x="29" y="60" width="70" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="30"/>
-                                        <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FK9-sS-cKp">
-                                        <rect key="frame" x="29" y="269" width="70" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="30"/>
-                                        <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Espresso-1" translatesAutoresizingMaskIntoConstraints="NO" id="Y9K-4Q-4hv">
-                                        <rect key="frame" x="29" y="110" width="32" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFg-Ky-cyN">
-                                        <rect key="frame" x="29" y="165" width="70" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="30"/>
-                                        <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Grao-1" translatesAutoresizingMaskIntoConstraints="NO" id="sLC-l3-jVL">
-                                        <rect key="frame" x="29" y="10" width="32" height="27"/>
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="rcB-eH-K8E">
+                                        <rect key="frame" x="0.0" y="8" width="186" height="69"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9m2-Wf-acZ">
+                                                <rect key="frame" x="71" y="35" width="115" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="9m2-Wf-acZ" secondAttribute="height" multiplier="115:34" id="PGg-bM-aV1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="17"/>
+                                                <state key="normal" title="Avaliações">
+                                                    <color key="titleColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="irParaAvaliacoes:" destination="eot-f5-Bbz" eventType="touchUpInside" id="Swf-qn-FTZ"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="33" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K24-il-blV">
+                                                <rect key="frame" x="8" y="6" width="63" height="55"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="K24-il-blV" secondAttribute="height" multiplier="63:55" id="Lwn-QY-rNe"/>
+                                                    <constraint firstAttribute="width" constant="63" id="SgW-8k-f23"/>
+                                                    <constraint firstAttribute="height" constant="55" id="pJE-tg-krs"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="36"/>
+                                                <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Grao-1" translatesAutoresizingMaskIntoConstraints="NO" id="sLC-l3-jVL">
+                                                <rect key="frame" x="71" y="0.0" width="36" height="35"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="sLC-l3-jVL" secondAttribute="height" multiplier="13:9" constant="-14.555555555555557" id="Bh6-gP-eze"/>
+                                                    <constraint firstAttribute="height" constant="35" id="FYy-tm-C74"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="32" id="11h-LI-MhL"/>
-                                            <constraint firstAttribute="height" constant="27" id="ZfQ-I6-YZa"/>
+                                            <constraint firstItem="sLC-l3-jVL" firstAttribute="leading" secondItem="K24-il-blV" secondAttribute="trailing" id="0AW-Sr-UpV"/>
+                                            <constraint firstItem="9m2-Wf-acZ" firstAttribute="top" secondItem="sLC-l3-jVL" secondAttribute="bottom" id="BWk-50-eMc"/>
+                                            <constraint firstAttribute="bottom" secondItem="K24-il-blV" secondAttribute="bottom" constant="8" id="OXn-b8-ZGd"/>
+                                            <constraint firstItem="K24-il-blV" firstAttribute="top" secondItem="rcB-eH-K8E" secondAttribute="top" constant="6" id="OzR-5g-0Fy"/>
+                                            <constraint firstAttribute="trailing" secondItem="9m2-Wf-acZ" secondAttribute="trailing" id="Y1h-0J-9au"/>
+                                            <constraint firstItem="9m2-Wf-acZ" firstAttribute="leading" secondItem="K24-il-blV" secondAttribute="trailing" id="bMJ-hp-tyM"/>
+                                            <constraint firstAttribute="bottom" secondItem="9m2-Wf-acZ" secondAttribute="bottom" id="cHa-hC-6i2"/>
+                                            <constraint firstItem="sLC-l3-jVL" firstAttribute="top" secondItem="rcB-eH-K8E" secondAttribute="top" id="cKm-no-AtH"/>
+                                            <constraint firstItem="K24-il-blV" firstAttribute="leading" secondItem="rcB-eH-K8E" secondAttribute="leading" constant="8" id="ga7-rk-DLi"/>
                                         </constraints>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTO-vi-9sz">
-                                        <rect key="frame" x="29" y="140" width="109" height="25"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="17"/>
-                                        <state key="normal" title="Cafés">
-                                            <color key="titleColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="OwD-p3-CZg" kind="show" id="4cB-eg-1yg"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLd-gp-P8d">
-                                        <rect key="frame" x="29" y="244" width="109" height="25"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="17"/>
-                                        <state key="normal" title="Cafeterias">
-                                            <color key="titleColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="Yny-7z-o9j" kind="show" id="fol-Po-eeA"/>
-                                        </connections>
-                                    </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cafeteria-1" translatesAutoresizingMaskIntoConstraints="NO" id="oDb-cs-Ply">
-                                        <rect key="frame" x="29" y="215" width="32" height="29"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </imageView>
+                                    </view>
+                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="rNv-bB-eLm">
+                                        <rect key="frame" x="0.0" y="156" width="186" height="69"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FK9-sS-cKp">
+                                                <rect key="frame" x="8" y="4" width="63" height="55"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="FK9-sS-cKp" secondAttribute="height" multiplier="63:55" id="G1h-y1-fgi"/>
+                                                    <constraint firstAttribute="height" constant="55" id="VYe-CR-5sa"/>
+                                                    <constraint firstAttribute="width" constant="63" id="h3s-4J-K9G"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="36"/>
+                                                <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLd-gp-P8d">
+                                                <rect key="frame" x="79" y="35" width="107" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="SLd-gp-P8d" secondAttribute="height" multiplier="107:34" id="RGe-ZY-UNZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="17"/>
+                                                <state key="normal" title="Cafeterias">
+                                                    <color key="titleColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="Yny-7z-o9j" kind="show" id="fol-Po-eeA"/>
+                                                </connections>
+                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Cafeteria-1" translatesAutoresizingMaskIntoConstraints="NO" id="oDb-cs-Ply">
+                                                <rect key="frame" x="75" y="4" width="34" height="29"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="oDb-cs-Ply" secondAttribute="height" multiplier="37:29" constant="-3" id="dib-J1-skK"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="oDb-cs-Ply" firstAttribute="top" secondItem="rNv-bB-eLm" secondAttribute="top" constant="4" id="6cQ-hY-0l5"/>
+                                            <constraint firstAttribute="bottom" secondItem="SLd-gp-P8d" secondAttribute="bottom" id="EiR-0w-xyq"/>
+                                            <constraint firstItem="SLd-gp-P8d" firstAttribute="top" secondItem="oDb-cs-Ply" secondAttribute="bottom" constant="2" id="TlN-IL-k7I"/>
+                                            <constraint firstAttribute="bottom" secondItem="FK9-sS-cKp" secondAttribute="bottom" constant="10" id="UNm-9p-o3H"/>
+                                            <constraint firstItem="FK9-sS-cKp" firstAttribute="leading" secondItem="rNv-bB-eLm" secondAttribute="leading" constant="8" id="iKq-hn-0I5"/>
+                                            <constraint firstItem="FK9-sS-cKp" firstAttribute="top" secondItem="rNv-bB-eLm" secondAttribute="top" constant="4" id="jms-ve-yKj"/>
+                                            <constraint firstItem="SLd-gp-P8d" firstAttribute="leading" secondItem="FK9-sS-cKp" secondAttribute="trailing" constant="8" id="oZr-Je-mQz"/>
+                                            <constraint firstAttribute="width" secondItem="rNv-bB-eLm" secondAttribute="height" multiplier="62:23" id="vA9-3c-fWf"/>
+                                            <constraint firstAttribute="trailing" secondItem="SLd-gp-P8d" secondAttribute="trailing" id="yOw-0Z-UQr"/>
+                                            <constraint firstItem="oDb-cs-Ply" firstAttribute="leading" secondItem="FK9-sS-cKp" secondAttribute="trailing" constant="4" id="yXp-Y8-1g7"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="mYj-cY-xPV">
+                                        <rect key="frame" x="0.0" y="81" width="186" height="70"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Espresso-1" translatesAutoresizingMaskIntoConstraints="NO" id="Y9K-4Q-4hv">
+                                                <rect key="frame" x="71" y="0.0" width="34" height="37"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Y9K-4Q-4hv" secondAttribute="height" multiplier="1:1" constant="-3" id="VVw-pO-fCf"/>
+                                                    <constraint firstAttribute="height" constant="37" id="slt-zp-BXZ"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFg-Ky-cyN">
+                                                <rect key="frame" x="8" y="7" width="63" height="55"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="IXm-cT-rNZ"/>
+                                                    <constraint firstAttribute="width" constant="63" id="niU-Gr-0TU"/>
+                                                    <constraint firstAttribute="width" secondItem="SFg-Ky-cyN" secondAttribute="height" multiplier="63:55" id="uuF-sO-Kit"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="36"/>
+                                                <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTO-vi-9sz">
+                                                <rect key="frame" x="71" y="35" width="115" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="hTO-vi-9sz" secondAttribute="height" multiplier="115:34" id="sZB-eW-O9q"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="17"/>
+                                                <state key="normal" title="Cafés">
+                                                    <color key="titleColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="OwD-p3-CZg" kind="show" id="4cB-eg-1yg"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="hTO-vi-9sz" firstAttribute="leading" secondItem="SFg-Ky-cyN" secondAttribute="trailing" id="9KU-ZH-r9d"/>
+                                            <constraint firstItem="SFg-Ky-cyN" firstAttribute="leading" secondItem="mYj-cY-xPV" secondAttribute="leading" constant="8" id="B6M-bQ-FVp"/>
+                                            <constraint firstAttribute="bottom" secondItem="SFg-Ky-cyN" secondAttribute="bottom" constant="8" id="L0v-Oz-0Br"/>
+                                            <constraint firstItem="hTO-vi-9sz" firstAttribute="top" secondItem="Y9K-4Q-4hv" secondAttribute="bottom" constant="-2" id="cQ0-8o-CjK"/>
+                                            <constraint firstAttribute="width" secondItem="mYj-cY-xPV" secondAttribute="height" multiplier="93:35" id="glV-nI-3CV"/>
+                                            <constraint firstItem="Y9K-4Q-4hv" firstAttribute="leading" secondItem="SFg-Ky-cyN" secondAttribute="trailing" id="iel-k2-VGU"/>
+                                            <constraint firstItem="SFg-Ky-cyN" firstAttribute="top" secondItem="mYj-cY-xPV" secondAttribute="top" constant="7" id="lok-K4-8Xu"/>
+                                            <constraint firstAttribute="bottom" secondItem="hTO-vi-9sz" secondAttribute="bottom" constant="1" id="p9Z-el-uZd"/>
+                                            <constraint firstItem="Y9K-4Q-4hv" firstAttribute="top" secondItem="mYj-cY-xPV" secondAttribute="top" id="uJL-wq-Y4x"/>
+                                            <constraint firstAttribute="trailing" secondItem="hTO-vi-9sz" secondAttribute="trailing" id="y5V-6K-vQE"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="9m2-Wf-acZ" secondAttribute="trailing" constant="56" id="8jI-ay-jVo"/>
-                                    <constraint firstItem="9m2-Wf-acZ" firstAttribute="top" secondItem="sLC-l3-jVL" secondAttribute="bottom" id="Fm1-l1-cBC"/>
-                                    <constraint firstItem="9m2-Wf-acZ" firstAttribute="top" secondItem="sLC-l3-jVL" secondAttribute="bottom" id="OSL-WI-t5a"/>
-                                    <constraint firstItem="9m2-Wf-acZ" firstAttribute="leading" secondItem="mnG-jz-yRs" secondAttribute="leading" constant="29" id="eER-f0-kYi"/>
-                                    <constraint firstAttribute="trailing" secondItem="sLC-l3-jVL" secondAttribute="trailing" constant="133" id="kD6-Mb-bjz"/>
-                                    <constraint firstItem="sLC-l3-jVL" firstAttribute="top" secondItem="mnG-jz-yRs" secondAttribute="top" constant="10" id="kkG-GW-fmV"/>
-                                    <constraint firstItem="sLC-l3-jVL" firstAttribute="leading" secondItem="mnG-jz-yRs" secondAttribute="leading" constant="29" id="sta-ou-EQo"/>
+                                    <constraint firstItem="mYj-cY-xPV" firstAttribute="leading" secondItem="mnG-jz-yRs" secondAttribute="leading" id="7j4-Xu-ESP"/>
+                                    <constraint firstItem="rNv-bB-eLm" firstAttribute="leading" secondItem="mnG-jz-yRs" secondAttribute="leading" id="9SY-Y5-FTR"/>
+                                    <constraint firstAttribute="trailing" secondItem="rcB-eH-K8E" secondAttribute="trailing" constant="8" id="9bG-Tg-VOu"/>
+                                    <constraint firstItem="rcB-eH-K8E" firstAttribute="leading" secondItem="mnG-jz-yRs" secondAttribute="leading" id="QXh-mj-3Pk"/>
+                                    <constraint firstItem="rNv-bB-eLm" firstAttribute="top" secondItem="mYj-cY-xPV" secondAttribute="bottom" constant="5" id="RbJ-9n-7VP"/>
+                                    <constraint firstItem="mYj-cY-xPV" firstAttribute="top" secondItem="rcB-eH-K8E" secondAttribute="bottom" constant="4" id="TGh-w0-8Bv"/>
+                                    <constraint firstAttribute="trailing" secondItem="mYj-cY-xPV" secondAttribute="trailing" constant="8" id="a6z-V4-iSU"/>
+                                    <constraint firstAttribute="trailing" secondItem="rNv-bB-eLm" secondAttribute="trailing" constant="8" id="qN2-Ly-kan"/>
+                                    <constraint firstItem="rcB-eH-K8E" firstAttribute="top" secondItem="mnG-jz-yRs" secondAttribute="top" constant="8" id="yaY-IL-Ibg"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g88-7o-jEE">
-                                <rect key="frame" x="0.0" y="210" width="118" height="309"/>
+                            <view contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="g88-7o-jEE">
+                                <rect key="frame" x="0.0" y="288" width="118" height="231"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G02-Z2-uEa">
-                                        <rect key="frame" x="8" y="89" width="90" height="29"/>
-                                        <fontDescription key="fontDescription" name="Merriweather-Light" family="Merriweather" pointSize="13"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G02-Z2-uEa" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="67" width="102" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="G02-Z2-uEa" secondAttribute="height" multiplier="102:29" id="Nxz-7X-pb9"/>
+                                            <constraint firstAttribute="height" constant="29" id="bbH-zd-fL3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="13"/>
                                         <state key="normal" title="OFERTAS">
                                             <color key="titleColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.2781490683555603" green="0.14739993214607239" blue="0.081067316234111786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="border">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="zeR-kJ-2cx" kind="show" id="hY3-om-1Ln"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikQ-jL-veO">
-                                        <rect key="frame" x="8" y="138" width="90" height="29"/>
-                                        <fontDescription key="fontDescription" name="Merriweather-Light" family="Merriweather" pointSize="13"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikQ-jL-veO" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="116" width="102" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="29" id="0OQ-cg-ciS"/>
+                                            <constraint firstAttribute="width" secondItem="ikQ-jL-veO" secondAttribute="height" multiplier="102:29" id="91M-in-5eq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="13"/>
                                         <state key="normal" title="PEDIDOS">
                                             <color key="titleColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.2781490683555603" green="0.14739993214607239" blue="0.081067316234111786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="border">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="9bu-aB-6Gj" kind="show" id="nK1-hV-fky"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7R-8V-4DK">
-                                        <rect key="frame" x="8" y="40" width="90" height="29"/>
-                                        <fontDescription key="fontDescription" name="Merriweather-Light" family="Merriweather" pointSize="13"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7R-8V-4DK" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="18" width="102" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="ieA-Zz-8Vk"/>
+                                            <constraint firstAttribute="height" constant="29" id="rGR-SH-TSF"/>
+                                            <constraint firstAttribute="width" secondItem="a7R-8V-4DK" secondAttribute="height" multiplier="102:29" id="z6R-vA-16W"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="13"/>
                                         <state key="normal" title="MEUS DADOS">
                                             <color key="titleColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.2781490683555603" green="0.14739993214607239" blue="0.081067316234111786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="border">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="Rfe-3f-bW3" kind="show" id="eI1-oD-0Rw"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLf-rg-o6y">
-                                        <rect key="frame" x="8" y="187" width="102" height="29"/>
-                                        <fontDescription key="fontDescription" name="Merriweather-Light" family="Merriweather" pointSize="13"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLf-rg-o6y" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="165" width="102" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="29" id="1tP-Nh-Qzj"/>
+                                            <constraint firstAttribute="width" secondItem="ZLf-rg-o6y" secondAttribute="height" multiplier="102:29" id="2dr-Gc-CWc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="13"/>
                                         <state key="normal" title="ASSINATURAS">
                                             <color key="titleColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.2781490683555603" green="0.14739993214607239" blue="0.081067316234111786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="border">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="FiE-q3-BWU" kind="show" id="1AX-ps-uLB"/>
                                         </connections>
@@ -1449,52 +1594,61 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="G02-Z2-uEa" secondAttribute="trailing" constant="20" id="3ga-NE-Z5h"/>
-                                    <constraint firstItem="ZLf-rg-o6y" firstAttribute="top" secondItem="ikQ-jL-veO" secondAttribute="bottom" constant="20" id="4Qh-8O-Txy"/>
-                                    <constraint firstAttribute="trailing" secondItem="a7R-8V-4DK" secondAttribute="trailing" constant="20" id="ASJ-Pu-UPb"/>
-                                    <constraint firstItem="ikQ-jL-veO" firstAttribute="top" secondItem="G02-Z2-uEa" secondAttribute="bottom" constant="20" id="Qcm-y6-362"/>
                                     <constraint firstItem="ikQ-jL-veO" firstAttribute="top" secondItem="G02-Z2-uEa" secondAttribute="bottom" constant="20" id="Rtr-Oa-87y"/>
                                     <constraint firstAttribute="trailing" secondItem="ZLf-rg-o6y" secondAttribute="trailing" constant="8" id="UaU-Gm-rtS"/>
+                                    <constraint firstItem="ZLf-rg-o6y" firstAttribute="leading" secondItem="g88-7o-jEE" secondAttribute="leading" constant="8" id="b4X-yh-47m"/>
                                     <constraint firstItem="G02-Z2-uEa" firstAttribute="top" secondItem="a7R-8V-4DK" secondAttribute="bottom" constant="20" id="dm2-0z-9bL"/>
                                     <constraint firstItem="G02-Z2-uEa" firstAttribute="leading" secondItem="g88-7o-jEE" secondAttribute="leading" constant="8" id="gce-i7-IFx"/>
+                                    <constraint firstItem="a7R-8V-4DK" firstAttribute="top" secondItem="g88-7o-jEE" secondAttribute="top" constant="18" id="lex-bc-n8A"/>
                                     <constraint firstItem="ZLf-rg-o6y" firstAttribute="top" secondItem="ikQ-jL-veO" secondAttribute="bottom" constant="20" id="lnu-Qy-420"/>
+                                    <constraint firstAttribute="trailing" secondItem="G02-Z2-uEa" secondAttribute="trailing" constant="8" id="m5l-zE-2aZ"/>
                                     <constraint firstItem="ikQ-jL-veO" firstAttribute="leading" secondItem="g88-7o-jEE" secondAttribute="leading" constant="8" id="oGw-RS-qra"/>
-                                    <constraint firstItem="a7R-8V-4DK" firstAttribute="top" secondItem="g88-7o-jEE" secondAttribute="top" constant="40" id="psc-op-foF"/>
-                                    <constraint firstItem="ZLf-rg-o6y" firstAttribute="leading" secondItem="g88-7o-jEE" secondAttribute="leading" constant="8" id="yMK-Fx-sLw"/>
-                                    <constraint firstAttribute="trailing" secondItem="ikQ-jL-veO" secondAttribute="trailing" constant="20" id="ygD-Ok-4X5"/>
-                                    <constraint firstItem="G02-Z2-uEa" firstAttribute="top" secondItem="a7R-8V-4DK" secondAttribute="bottom" constant="20" id="ykO-W5-ram"/>
+                                    <constraint firstAttribute="trailing" secondItem="a7R-8V-4DK" secondAttribute="trailing" constant="8" id="pPA-rj-2vc"/>
+                                    <constraint firstAttribute="trailing" secondItem="ikQ-jL-veO" secondAttribute="trailing" constant="8" id="vpW-k5-eVw"/>
                                     <constraint firstItem="a7R-8V-4DK" firstAttribute="leading" secondItem="g88-7o-jEE" secondAttribute="leading" constant="8" id="zbP-23-EFY"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" alpha="0.84999999999999998" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GcZ-pT-Ox7">
-                                <rect key="frame" x="16" y="-225" width="288" height="175"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" alpha="0.84999999999999998" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GcZ-pT-Ox7">
+                                <rect key="frame" x="0.0" y="-225" width="320" height="175"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="501-g0-B8H"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="celula" id="FnP-AJ-esU" customClass="BuscaResultCustomCell" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="288" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FnP-AJ-esU" id="Epd-eY-gkF">
-                                            <rect key="frame" x="0.0" y="0.0" width="288" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cafe" translatesAutoresizingMaskIntoConstraints="NO" id="92v-IU-9JG" customClass="RoundImage" customModule="CoffeeTasters" customModuleProvider="target">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cafe" translatesAutoresizingMaskIntoConstraints="NO" id="92v-IU-9JG" customClass="RoundImage" customModule="CoffeeTasters" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="r4M-Tg-SoX"/>
+                                                    </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="14"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0e-db-fAU">
-                                                    <rect key="frame" x="46" y="11" width="234" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0e-db-fAU">
+                                                    <rect key="frame" x="46" y="11" width="266" height="21"/>
                                                     <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                                     <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="92v-IU-9JG" firstAttribute="top" secondItem="Epd-eY-gkF" secondAttribute="topMargin" id="KTg-Tv-Keg"/>
+                                                <constraint firstItem="w0e-db-fAU" firstAttribute="trailing" secondItem="Epd-eY-gkF" secondAttribute="trailingMargin" id="UnT-5d-NR7"/>
+                                                <constraint firstItem="w0e-db-fAU" firstAttribute="leading" secondItem="92v-IU-9JG" secondAttribute="trailing" constant="8" symbolic="YES" id="YCK-lh-Pbu"/>
+                                                <constraint firstItem="w0e-db-fAU" firstAttribute="top" secondItem="Epd-eY-gkF" secondAttribute="topMargin" constant="3" id="irB-UV-w0A"/>
+                                                <constraint firstItem="92v-IU-9JG" firstAttribute="leading" secondItem="Epd-eY-gkF" secondAttribute="leadingMargin" id="jwA-sD-oCd"/>
+                                                <constraint firstItem="w0e-db-fAU" firstAttribute="centerY" secondItem="Epd-eY-gkF" secondAttribute="centerY" id="rob-II-YbT"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="92v-IU-9JG" secondAttribute="bottom" constant="-2.5" id="vO0-gu-CAX"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
@@ -1517,49 +1671,42 @@
                         <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="g88-7o-jEE" firstAttribute="leading" secondItem="egN-SH-lKx" secondAttribute="leading" id="4H1-6U-bpV"/>
-                            <constraint firstItem="ClA-UF-JgY" firstAttribute="top" secondItem="dWc-Sp-p17" secondAttribute="bottom" constant="13" id="53E-a9-YHM"/>
-                            <constraint firstItem="Qy0-Hc-dz5" firstAttribute="top" secondItem="xGC-Vn-0aC" secondAttribute="bottom" constant="2" id="5O8-ol-jq4"/>
-                            <constraint firstItem="xGC-Vn-0aC" firstAttribute="top" secondItem="B5i-VH-utc" secondAttribute="bottom" constant="2" id="7kV-LP-CQY"/>
-                            <constraint firstItem="ClA-UF-JgY" firstAttribute="leading" secondItem="egN-SH-lKx" secondAttribute="leadingMargin" id="7xv-qP-onB"/>
+                            <constraint firstItem="g88-7o-jEE" firstAttribute="top" secondItem="7ZU-Kh-VdM" secondAttribute="bottom" constant="17" id="9nq-3n-3m7"/>
+                            <constraint firstItem="7ZU-Kh-VdM" firstAttribute="top" secondItem="QvU-Rj-zeU" secondAttribute="bottom" constant="41" id="BOv-zT-GBg"/>
                             <constraint firstItem="UuS-d1-qa9" firstAttribute="leading" secondItem="dWc-Sp-p17" secondAttribute="trailing" constant="8" id="DCQ-ZD-tt3"/>
-                            <constraint firstItem="Qy0-Hc-dz5" firstAttribute="leading" secondItem="ClA-UF-JgY" secondAttribute="trailing" constant="8" id="DN8-Gj-yCM"/>
                             <constraint firstItem="dWc-Sp-p17" firstAttribute="top" secondItem="Cb3-g0-Nfs" secondAttribute="bottom" constant="8" id="DWT-yv-nBO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xGC-Vn-0aC" secondAttribute="trailing" constant="59" id="EO0-eK-3XA"/>
-                            <constraint firstItem="xGC-Vn-0aC" firstAttribute="top" secondItem="B5i-VH-utc" secondAttribute="bottom" constant="2" id="Ie8-bN-vkz"/>
-                            <constraint firstAttribute="trailing" secondItem="mnG-jz-yRs" secondAttribute="trailing" id="KVX-Uq-xEz"/>
-                            <constraint firstItem="g88-7o-jEE" firstAttribute="top" secondItem="Cb3-g0-Nfs" secondAttribute="bottom" constant="146" id="MJe-62-6bt"/>
-                            <constraint firstItem="ejY-bi-PiO" firstAttribute="leading" secondItem="B5i-VH-utc" secondAttribute="trailing" constant="8" id="NMU-4S-sHI"/>
+                            <constraint firstItem="mnG-jz-yRs" firstAttribute="top" secondItem="7ZU-Kh-VdM" secondAttribute="bottom" constant="17" id="JrD-ZH-gKw"/>
+                            <constraint firstAttribute="trailing" secondItem="mnG-jz-yRs" secondAttribute="trailing" id="Ndk-ET-S8E"/>
                             <constraint firstAttribute="trailing" secondItem="KoQ-A0-RHt" secondAttribute="trailing" id="UGl-at-sHa"/>
-                            <constraint firstItem="gTb-oH-teu" firstAttribute="top" secondItem="mnG-jz-yRs" secondAttribute="bottom" id="V6u-rK-CCP"/>
                             <constraint firstItem="QvU-Rj-zeU" firstAttribute="top" secondItem="Cb3-g0-Nfs" secondAttribute="bottom" constant="8" id="Wik-m8-qsu"/>
                             <constraint firstItem="KoQ-A0-RHt" firstAttribute="top" secondItem="QvU-Rj-zeU" secondAttribute="bottom" constant="6" id="alr-zl-uFE"/>
                             <constraint firstItem="QvU-Rj-zeU" firstAttribute="trailing" secondItem="egN-SH-lKx" secondAttribute="trailingMargin" id="cLU-sy-RjS"/>
                             <constraint firstItem="UuS-d1-qa9" firstAttribute="top" secondItem="Cb3-g0-Nfs" secondAttribute="bottom" constant="8" id="cPF-Zn-QgW"/>
+                            <constraint firstAttribute="trailing" secondItem="7ZU-Kh-VdM" secondAttribute="trailing" id="cYY-K2-NFr"/>
+                            <constraint firstItem="7ZU-Kh-VdM" firstAttribute="leading" secondItem="egN-SH-lKx" secondAttribute="leading" id="emg-uJ-Pfw"/>
                             <constraint firstAttribute="trailing" secondItem="ejY-bi-PiO" secondAttribute="trailing" constant="8" id="hjA-Gm-Eki"/>
-                            <constraint firstItem="Qy0-Hc-dz5" firstAttribute="top" secondItem="xGC-Vn-0aC" secondAttribute="bottom" constant="2" id="iGe-qh-cpz"/>
-                            <constraint firstItem="Qy0-Hc-dz5" firstAttribute="trailing" secondItem="egN-SH-lKx" secondAttribute="trailingMargin" id="jaw-HX-mWZ"/>
+                            <constraint firstItem="GcZ-pT-Ox7" firstAttribute="leading" secondItem="egN-SH-lKx" secondAttribute="leading" id="hxL-8T-rlz"/>
                             <constraint firstItem="QvU-Rj-zeU" firstAttribute="leading" secondItem="UuS-d1-qa9" secondAttribute="trailing" constant="8" id="kQN-IU-U7I"/>
+                            <constraint firstItem="mnG-jz-yRs" firstAttribute="leading" secondItem="g88-7o-jEE" secondAttribute="trailing" constant="8" symbolic="YES" id="oLo-t3-hy9"/>
                             <constraint firstItem="KoQ-A0-RHt" firstAttribute="leading" secondItem="egN-SH-lKx" secondAttribute="leading" id="p6A-8D-w1g"/>
-                            <constraint firstItem="B5i-VH-utc" firstAttribute="top" secondItem="KoQ-A0-RHt" secondAttribute="bottom" constant="2" id="rkj-n7-tIi"/>
+                            <constraint firstItem="Cb3-g0-Nfs" firstAttribute="top" secondItem="GcZ-pT-Ox7" secondAttribute="bottom" constant="114" id="r9D-su-ddV"/>
                             <constraint firstItem="dWc-Sp-p17" firstAttribute="leading" secondItem="egN-SH-lKx" secondAttribute="leadingMargin" id="sPd-BP-GU0"/>
                             <constraint firstItem="ejY-bi-PiO" firstAttribute="top" secondItem="QvU-Rj-zeU" secondAttribute="bottom" constant="13" id="u7k-2d-zfg"/>
-                            <constraint firstItem="xGC-Vn-0aC" firstAttribute="top" secondItem="B5i-VH-utc" secondAttribute="bottom" constant="2" id="w57-gQ-qK0"/>
-                            <constraint firstItem="gTb-oH-teu" firstAttribute="top" secondItem="g88-7o-jEE" secondAttribute="bottom" id="xHS-qV-bwX"/>
-                            <constraint firstItem="mnG-jz-yRs" firstAttribute="top" secondItem="Cb3-g0-Nfs" secondAttribute="bottom" constant="146" id="xml-Aj-pSh"/>
-                            <constraint firstItem="xGC-Vn-0aC" firstAttribute="leading" secondItem="ClA-UF-JgY" secondAttribute="trailing" constant="8" id="ye8-ht-PX2"/>
-                            <constraint firstItem="B5i-VH-utc" firstAttribute="leading" secondItem="ClA-UF-JgY" secondAttribute="trailing" constant="8" id="ylI-mk-A2H"/>
+                            <constraint firstItem="gTb-oH-teu" firstAttribute="top" secondItem="mnG-jz-yRs" secondAttribute="bottom" id="uoq-Mg-1AA"/>
+                            <constraint firstAttribute="trailing" secondItem="GcZ-pT-Ox7" secondAttribute="trailing" id="w7l-jM-C1V"/>
+                            <constraint firstItem="gTb-oH-teu" firstAttribute="top" secondItem="g88-7o-jEE" secondAttribute="bottom" id="z1e-u6-2EM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Perfil" id="V01-Ku-qdy"/>
                     <connections>
                         <outlet property="buscarCafes" destination="dWc-Sp-p17" id="hW7-eT-MJg"/>
-                        <outlet property="emailUsuario" destination="Qy0-Hc-dz5" id="hoj-En-Uxu"/>
-                        <outlet property="imagemUsuario" destination="ClA-UF-JgY" id="SvW-0r-BI3"/>
-                        <outlet property="nomeUsuario" destination="B5i-VH-utc" id="o7G-Dh-gFH"/>
+                        <outlet property="emailUsuario" destination="Hfd-5I-6K2" id="F8O-iv-Hfm"/>
+                        <outlet property="imagemUsuario" destination="KwE-CF-m16" id="HGG-tr-G9q"/>
+                        <outlet property="nomeUsuario" destination="Sda-q0-OfW" id="QNE-yd-56T"/>
                         <outlet property="qtdAvaliacoes" destination="K24-il-blV" id="IPd-k4-lu6"/>
                         <outlet property="qtdCafes" destination="SFg-Ky-cyN" id="kcG-hF-xw1"/>
                         <outlet property="qtdCafeterias" destination="FK9-sS-cKp" id="PK6-OM-a4m"/>
-                        <outlet property="sobrenomeUsuario" destination="xGC-Vn-0aC" id="q6J-WH-DG3"/>
+                        <outlet property="sobrenomeUsuario" destination="4WO-at-ab2" id="VyB-uG-m4G"/>
                         <outlet property="tableView" destination="GcZ-pT-Ox7" id="mEw-bi-EE6"/>
                     </connections>
                 </viewController>
