@@ -31,9 +31,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bkg-Iniciais" translatesAutoresizingMaskIntoConstraints="NO" id="BQo-GI-i2Y">
-                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                            </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kMW-zG-Pcw" customClass="HeightSegmentControl" customModule="CoffeeTasters" customModuleProvider="target">
                                 <rect key="frame" x="16" y="72" width="288" height="51"/>
                                 <constraints>
@@ -92,7 +89,7 @@
                                 <state key="normal" title="&gt;&gt;&gt;"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="border">
                                         <real key="value" value="1"/>
@@ -172,7 +169,7 @@
                                 <state key="normal" title="&lt;&lt;&lt;"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="border">
                                         <real key="value" value="1"/>
@@ -200,7 +197,6 @@
                             <constraint firstItem="ELS-Dv-Fdw" firstAttribute="top" secondItem="c8e-nD-4ot" secondAttribute="bottom" constant="8" id="45j-hJ-En3"/>
                             <constraint firstItem="4b5-h0-qUX" firstAttribute="trailing" secondItem="I3E-Gh-qPw" secondAttribute="trailingMargin" id="5Aq-Dc-9do"/>
                             <constraint firstItem="4b5-h0-qUX" firstAttribute="leading" secondItem="I3E-Gh-qPw" secondAttribute="leadingMargin" id="AOz-FE-KIZ"/>
-                            <constraint firstItem="BQo-GI-i2Y" firstAttribute="leading" secondItem="I3E-Gh-qPw" secondAttribute="leading" id="EJB-J6-G2r"/>
                             <constraint firstItem="ELS-Dv-Fdw" firstAttribute="top" secondItem="c8e-nD-4ot" secondAttribute="bottom" constant="8" id="ENd-tG-3Er"/>
                             <constraint firstItem="omR-Dz-oyJ" firstAttribute="leading" secondItem="I3E-Gh-qPw" secondAttribute="leadingMargin" id="H1e-R3-knr"/>
                             <constraint firstItem="c8e-nD-4ot" firstAttribute="trailing" secondItem="I3E-Gh-qPw" secondAttribute="trailingMargin" id="HF2-hb-brA"/>
@@ -213,17 +209,14 @@
                             <constraint firstItem="4b5-h0-qUX" firstAttribute="top" secondItem="kMW-zG-Pcw" secondAttribute="bottom" constant="20" id="RmO-Cs-lY7"/>
                             <constraint firstItem="r4z-wc-EIV" firstAttribute="leading" secondItem="I3E-Gh-qPw" secondAttribute="leadingMargin" id="VRU-Pn-XSr"/>
                             <constraint firstItem="r4z-wc-EIV" firstAttribute="top" secondItem="4b5-h0-qUX" secondAttribute="bottom" constant="12" id="Vdo-a0-Tde"/>
-                            <constraint firstAttribute="trailing" secondItem="BQo-GI-i2Y" secondAttribute="trailing" id="XlZ-Pe-kmO"/>
                             <constraint firstItem="c8e-nD-4ot" firstAttribute="top" secondItem="r4z-wc-EIV" secondAttribute="bottom" constant="8" id="Xrx-D8-G2E"/>
                             <constraint firstItem="ELS-Dv-Fdw" firstAttribute="leading" secondItem="omR-Dz-oyJ" secondAttribute="trailing" constant="28" id="Zx7-o6-j61"/>
                             <constraint firstItem="FsX-ai-imA" firstAttribute="top" secondItem="omR-Dz-oyJ" secondAttribute="bottom" constant="40" id="b6I-dV-7Vz"/>
-                            <constraint firstItem="BQo-GI-i2Y" firstAttribute="top" secondItem="FNp-n8-Jp8" secondAttribute="bottom" id="cJ1-Jk-80e"/>
                             <constraint firstItem="kMW-zG-Pcw" firstAttribute="top" secondItem="FNp-n8-Jp8" secondAttribute="bottom" constant="8" id="gCL-z9-OEY"/>
                             <constraint firstItem="c8e-nD-4ot" firstAttribute="top" secondItem="r4z-wc-EIV" secondAttribute="bottom" constant="8" id="hDq-v0-Tp1"/>
                             <constraint firstItem="omR-Dz-oyJ" firstAttribute="top" secondItem="c8e-nD-4ot" secondAttribute="bottom" constant="37" id="iTp-Ed-9xl"/>
                             <constraint firstItem="FsX-ai-imA" firstAttribute="top" secondItem="ELS-Dv-Fdw" secondAttribute="bottom" constant="11" id="lac-I8-c9t"/>
                             <constraint firstItem="va7-oS-wGZ" firstAttribute="top" secondItem="c8e-nD-4ot" secondAttribute="bottom" constant="37" id="p36-ko-Fg9"/>
-                            <constraint firstItem="FsX-ai-imA" firstAttribute="top" secondItem="BQo-GI-i2Y" secondAttribute="bottom" id="yMC-Xd-3cu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Preparo" id="bv2-wI-LOy"/>

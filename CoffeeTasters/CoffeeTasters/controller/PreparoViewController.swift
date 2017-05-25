@@ -31,7 +31,7 @@ class PreparoViewController: UIViewController {
             
             for i in 0..<preparos.count {
                 let nomeImagem = preparos[i].imagem as! UIImage?
-                menuModos.insertSegment(with: nomeImagem, at: i, animated: true)
+                menuModos.insertSegment(with: nomeImagem, at: i, animated: false)
             }
             
             menuModos.frame = CGRect(x: menuModos.frame.origin.x,y: menuModos.frame.origin.y, width: menuModos.frame.size.width,height: 50)
