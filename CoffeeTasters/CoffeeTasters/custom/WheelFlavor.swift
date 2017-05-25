@@ -15,7 +15,7 @@ class WheelFlavor: UIView {
     
     /// Mostra alerta de opcao clicada
     var mostraAlerta: Bool = false
-    var sabores = ["doce", "azedo", "floral", "especiarias", "salgado", "frutas vermelhas", "cítricos", "frutas com caroço", "chocolate", "caramelo", "defumado", "amargo", "herbal", "encorpado", "cereais", "nozes"]
+    var sabores = ["doce", "acido", "floral", "especiarias", "salgado", "frutas vermelhas", "cítricos", "frutas com caroço", "chocolate", "caramelo", "defumado", "amargo", "herbal", "encorpado", "cereais", "nozes"]
     var indiceSabores: Int = 0
     
     /// **flavorTorrador** é a variavel que conterá a roda de sabores que o torrador fez para o café
@@ -30,7 +30,7 @@ class WheelFlavor: UIView {
     /// Array de cores para a roda dos sabores
     let cores = [
         WheelFlavor.hexStringToUIColor(hex: "BD183D"), // doce
-        WheelFlavor.hexStringToUIColor(hex: "F4CE01"), // azedo
+        WheelFlavor.hexStringToUIColor(hex: "F4CE01"), // acido
         WheelFlavor.hexStringToUIColor(hex: "EA6164"), // floral
         WheelFlavor.hexStringToUIColor(hex: "75833A"), // especiarias
         WheelFlavor.hexStringToUIColor(hex: "008AC0"), // salgado
@@ -63,7 +63,7 @@ class WheelFlavor: UIView {
             
             images = [
                 desenhaImagem(#imageLiteral(resourceName: "doce"), context: context, centro:centro, raio:(raio+20), angulo:11.25), // doce
-                desenhaImagem(#imageLiteral(resourceName: "acido"), context: context, centro:centro, raio:(raio+20), angulo:33.75), // azedo
+                desenhaImagem(#imageLiteral(resourceName: "acido"), context: context, centro:centro, raio:(raio+20), angulo:33.75), // acido
                 desenhaImagem(#imageLiteral(resourceName: "floral"), context: context, centro:centro, raio:(raio+20), angulo:56.25), // floral
                 desenhaImagem(#imageLiteral(resourceName: "especiarias"), context: context, centro:centro, raio:(raio+20), angulo:78.75), // especiarias
                 desenhaImagem(#imageLiteral(resourceName: "salgado"), context: context, centro:centro, raio:(raio+20), angulo:101.25), // salgado
@@ -286,7 +286,7 @@ class WheelFlavor: UIView {
             if let cgImage = imagem.cgImage {
                 let ponto = getCoordenadas(centro: novoCentro, raio: novoRaio, angulo: angulo)
                 
-                let rect = CGRect(x: ponto.x - CGFloat(cgImage.width/2), y: ponto.y - CGFloat(cgImage.height), width: CGFloat(cgImage.width), height: CGFloat(cgImage.height))
+                let rect = CGRect(x: ponto.x - CGFloat((cgImage.width/(5/2))/2), y: ponto.y - CGFloat(cgImage.height/(5/2)), width: CGFloat(cgImage.width/(5/2)), height: CGFloat(cgImage.height/(5/2)))
                 
                 imagem.draw(in: rect)
                 //context.draw(cgImage, in: rect)
