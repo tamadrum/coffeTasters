@@ -1401,7 +1401,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLd-gp-P8d">
-                                                <rect key="frame" x="79" y="35" width="107" height="34"/>
+                                                <rect key="frame" x="75" y="35" width="107" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="SLd-gp-P8d" secondAttribute="height" multiplier="107:34" id="RGe-ZY-UNZ"/>
                                                 </constraints>
@@ -1414,7 +1414,7 @@
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Cafeteria-1" translatesAutoresizingMaskIntoConstraints="NO" id="oDb-cs-Ply">
-                                                <rect key="frame" x="75" y="4" width="34" height="29"/>
+                                                <rect key="frame" x="75" y="4" width="31" height="26.5"/>
                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="oDb-cs-Ply" secondAttribute="height" multiplier="37:29" constant="-3" id="dib-J1-skK"/>
@@ -1425,13 +1425,13 @@
                                         <constraints>
                                             <constraint firstItem="oDb-cs-Ply" firstAttribute="top" secondItem="rNv-bB-eLm" secondAttribute="top" constant="4" id="6cQ-hY-0l5"/>
                                             <constraint firstAttribute="bottom" secondItem="SLd-gp-P8d" secondAttribute="bottom" id="EiR-0w-xyq"/>
-                                            <constraint firstItem="SLd-gp-P8d" firstAttribute="top" secondItem="oDb-cs-Ply" secondAttribute="bottom" constant="2" id="TlN-IL-k7I"/>
+                                            <constraint firstItem="SLd-gp-P8d" firstAttribute="top" secondItem="oDb-cs-Ply" secondAttribute="bottom" constant="4.5" id="TlN-IL-k7I"/>
                                             <constraint firstAttribute="bottom" secondItem="FK9-sS-cKp" secondAttribute="bottom" constant="10" id="UNm-9p-o3H"/>
                                             <constraint firstItem="FK9-sS-cKp" firstAttribute="leading" secondItem="rNv-bB-eLm" secondAttribute="leading" constant="8" id="iKq-hn-0I5"/>
                                             <constraint firstItem="FK9-sS-cKp" firstAttribute="top" secondItem="rNv-bB-eLm" secondAttribute="top" constant="4" id="jms-ve-yKj"/>
-                                            <constraint firstItem="SLd-gp-P8d" firstAttribute="leading" secondItem="FK9-sS-cKp" secondAttribute="trailing" constant="8" id="oZr-Je-mQz"/>
+                                            <constraint firstItem="SLd-gp-P8d" firstAttribute="leading" secondItem="FK9-sS-cKp" secondAttribute="trailing" constant="4" id="oZr-Je-mQz"/>
                                             <constraint firstAttribute="width" secondItem="rNv-bB-eLm" secondAttribute="height" multiplier="62:23" id="vA9-3c-fWf"/>
-                                            <constraint firstAttribute="trailing" secondItem="SLd-gp-P8d" secondAttribute="trailing" id="yOw-0Z-UQr"/>
+                                            <constraint firstAttribute="trailing" secondItem="SLd-gp-P8d" secondAttribute="trailing" constant="4" id="yOw-0Z-UQr"/>
                                             <constraint firstItem="oDb-cs-Ply" firstAttribute="leading" secondItem="FK9-sS-cKp" secondAttribute="trailing" constant="4" id="yXp-Y8-1g7"/>
                                         </constraints>
                                     </view>
