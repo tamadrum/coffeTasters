@@ -21,6 +21,7 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     let usuario = Usuario()
     
+
     @IBOutlet weak var qtdAvaliacoes: UILabel!
     @IBOutlet weak var qtdCafes: UILabel!
     @IBOutlet weak var qtdCafeterias: UILabel!
