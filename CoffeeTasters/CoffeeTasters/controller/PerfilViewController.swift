@@ -64,6 +64,7 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
         searchActive = false;
     }
     
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         searchActive = true;
     }
@@ -71,6 +72,7 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBAction func clicouBuscaCafe(_ sender: UITextField) {
         searchActive = false;
     }
+    
     
     @IBAction func cancelarBuscaCafe(_ sender: UIButton) {
         UIView.animate(withDuration: 0.5, animations: {
