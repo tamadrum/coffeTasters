@@ -21,7 +21,6 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     let usuario = Usuario()
     
-
     @IBOutlet weak var qtdAvaliacoes: UILabel!
     @IBOutlet weak var qtdCafes: UILabel!
     @IBOutlet weak var qtdCafeterias: UILabel!
@@ -44,7 +43,7 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
         })
         
         filtered = data.filter({ (cafe) -> Bool in
-            if cafe.nome?.range(of: sender.text!) != nil {
+            if cafe.nome?.lowercased().range(of: (sender.text?.lowercased())!) != nil {
                 return true
             }
             else {
@@ -53,7 +52,7 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
         })
         
         if(filtered.count == 0){
-            searchActive = false;
+            searchActive = true;
         } else {
             searchActive = true;
         }
@@ -171,18 +170,20 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let viewAvaliacao = storyboard.instantiateViewController(withIdentifier: "avaliacao") as! AvaliacaoViewController
         
         if(searchActive){
-            if ( indexPath.row == filtered.count ) {
-                navigationController?.pushViewController(viewAvaliacao, animated: true)
-            } else {
+            print("filtered - \(indexPath.row) - \(filtered.count)")
+            if ( indexPath.row < filtered.count ) {
                 viewDetalhes.cafeAvaliado = filtered[indexPath.row]
                 navigationController?.pushViewController(viewDetalhes, animated: true)
+            } else {
+                navigationController?.pushViewController(viewAvaliacao, animated: true)
             }
         } else {
-            if ( indexPath.row == data.count ) {
-                navigationController?.pushViewController(viewAvaliacao, animated: true)
-            } else {
-                viewDetalhes.cafeAvaliado = data[indexPath.row]
+            print("data - \(indexPath.row) - \(filtered.count)")
+            if ( indexPath.row < filtered.count ) {
+                viewDetalhes.cafeAvaliado = filtered[indexPath.row]
                 navigationController?.pushViewController(viewDetalhes, animated: true)
+            } else {
+                navigationController?.pushViewController(viewAvaliacao, animated: true)
             }
         }
     }
