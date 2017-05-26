@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Social
 
 class AvaliacaoCustomCell: UITableViewCell {
     
@@ -17,6 +18,24 @@ class AvaliacaoCustomCell: UITableViewCell {
     @IBOutlet weak var rating: RatingView!
     @IBOutlet weak var flavor: WheelFlavor!
     @IBOutlet weak var nomeCafe: UILabel!
-    @IBOutlet weak var share: BorderButton!
+    
+    var nav: UINavigationController?
+    
+    @IBAction func share(){
+        let usuario = Usuario()
+        usuario.load()
+        
+        let imageToShare = UIImage.init(view: flavor)
+        
+        let textoParaPublicar = "\(usuario.nome) avaliou um novo café: \(nomeCafe.text!) \n Avaliação: \(rating.rating)/4.0 \n"
+        
+        let vc = SLComposeViewController(forServiceType:SLServiceTypeFacebook)
+        vc?.setInitialText("Aonde isso vai?")
+        vc?.add(imageToShare)
+        vc?.add(URL(string: "http://www.coffeetasters.com.br/")!)
+        vc?.setInitialText(textoParaPublicar)
+        
+        nav?.present(vc!, animated: true, completion: nil)
+    }
     
 }

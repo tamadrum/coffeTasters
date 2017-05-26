@@ -1878,6 +1878,9 @@
                                                             <color key="value" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="share" destination="uih-er-SbA" eventType="touchUpInside" id="bFh-rC-S5f"/>
+                                                    </connections>
                                                 </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JQ3-Qm-Adp" customClass="WheelFlavor" customModule="CoffeeTasters" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="172" width="304" height="304"/>
@@ -1932,7 +1935,6 @@
                                             <outlet property="nomeCafe" destination="dCE-ec-j98" id="mSS-aV-ZKj"/>
                                             <outlet property="rating" destination="o40-cz-rA1" id="6FI-Zg-5Aw"/>
                                             <outlet property="safra" destination="rS6-a9-8oL" id="rXw-aZ-wzo"/>
-                                            <outlet property="share" destination="yJc-Zt-85l" id="HOR-da-nli"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
