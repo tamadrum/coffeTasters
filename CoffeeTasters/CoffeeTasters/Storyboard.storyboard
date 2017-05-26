@@ -1280,81 +1280,6 @@
                                     <constraint firstItem="Sda-q0-OfW" firstAttribute="trailing" secondItem="Hfd-5I-6K2" secondAttribute="trailing" id="zHL-tI-ruA"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ejY-bi-PiO">
-                                <rect key="frame" x="215" y="51" width="97" height="58"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="58" id="Ehc-3I-nCK"/>
-                                    <constraint firstAttribute="width" constant="97" id="Fpk-RC-0Lc"/>
-                                </constraints>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="buscar café" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dWc-Sp-p17">
-                                <rect key="frame" x="16" y="8" width="172" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="4BS-sl-rdL"/>
-                                    <constraint firstAttribute="width" constant="172" id="m2U-JT-t0O"/>
-                                </constraints>
-                                <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="clicouBuscaCafe:" destination="eot-f5-Bbz" eventType="touchUpInside" id="Et7-PP-c6i"/>
-                                    <action selector="textoMudou:" destination="eot-f5-Bbz" eventType="editingChanged" id="Ufk-zx-KbB"/>
-                                    <outlet property="delegate" destination="eot-f5-Bbz" id="HAc-Mg-Cih"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UuS-d1-qa9" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
-                                <rect key="frame" x="196" y="8" width="70" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="IXK-tb-y6i"/>
-                                    <constraint firstAttribute="width" constant="70" id="JEe-3r-qGK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="12"/>
-                                <state key="normal" title="Cancelar"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="border">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fundoBranco" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="cancelarBuscaCafe:" destination="eot-f5-Bbz" eventType="touchUpInside" id="hgn-cz-vJQ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QvU-Rj-zeU" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
-                                <rect key="frame" x="274" y="8" width="30" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="bpe-QP-ZyM"/>
-                                    <constraint firstAttribute="height" constant="30" id="mjU-DQ-Mkn"/>
-                                </constraints>
-                                <color key="tintColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" image="qrcode">
-                                    <color key="titleColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="border">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fundoBranco" value="NO"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="buscarCafePorQRCode:" destination="eot-f5-Bbz" eventType="touchUpInside" id="kRc-lr-EdI"/>
-                                    <segue destination="nNU-OZ-tgR" kind="show" id="8kt-iw-Nfl"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mnG-jz-yRs">
                                 <rect key="frame" x="137" y="207" width="183" height="248"/>
                                 <subviews>
@@ -1639,6 +1564,13 @@
                                     <constraint firstItem="a7R-8V-4DK" firstAttribute="leading" secondItem="g88-7o-jEE" secondAttribute="leading" constant="18" id="zbP-23-EFY"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ejY-bi-PiO">
+                                <rect key="frame" x="215" y="51" width="97" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="Ehc-3I-nCK"/>
+                                    <constraint firstAttribute="width" constant="97" id="Fpk-RC-0Lc"/>
+                                </constraints>
+                            </imageView>
                             <tableView clipsSubviews="YES" alpha="0.84999999999999998" contentMode="scaleAspectFill" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GcZ-pT-Ox7">
                                 <rect key="frame" x="0.0" y="-319" width="320" height="205"/>
                                 <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1698,19 +1630,95 @@
                                     <outlet property="delegate" destination="eot-f5-Bbz" id="Y5E-J5-G6Z"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rR8-nv-Vtm">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="buscar café" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dWc-Sp-p17">
+                                <rect key="frame" x="16" y="8" width="172" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4BS-sl-rdL"/>
+                                    <constraint firstAttribute="width" constant="172" id="m2U-JT-t0O"/>
+                                </constraints>
+                                <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="clicouBuscaCafe:" destination="eot-f5-Bbz" eventType="touchUpInside" id="Et7-PP-c6i"/>
+                                    <action selector="textoMudou:" destination="eot-f5-Bbz" eventType="editingChanged" id="Ufk-zx-KbB"/>
+                                    <outlet property="delegate" destination="eot-f5-Bbz" id="HAc-Mg-Cih"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UuS-d1-qa9" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
+                                <rect key="frame" x="196" y="8" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="IXK-tb-y6i"/>
+                                    <constraint firstAttribute="width" constant="70" id="JEe-3r-qGK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="12"/>
+                                <state key="normal" title="Cancelar"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="border">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fundoBranco" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="cancelarBuscaCafe:" destination="eot-f5-Bbz" eventType="touchUpInside" id="hgn-cz-vJQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QvU-Rj-zeU" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
+                                <rect key="frame" x="274" y="8" width="30" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="bpe-QP-ZyM"/>
+                                    <constraint firstAttribute="height" constant="30" id="mjU-DQ-Mkn"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" image="qrcode">
+                                    <color key="titleColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="border">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fundoBranco" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buscarCafePorQRCode:" destination="eot-f5-Bbz" eventType="touchUpInside" id="kRc-lr-EdI"/>
+                                    <segue destination="nNU-OZ-tgR" kind="show" id="8kt-iw-Nfl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="KoQ-A0-RHt" firstAttribute="top" secondItem="rR8-nv-Vtm" secondAttribute="bottom" id="1ZC-EB-rey"/>
                             <constraint firstItem="mnG-jz-yRs" firstAttribute="top" secondItem="7ZU-Kh-VdM" secondAttribute="bottom" id="3K7-qz-P81"/>
                             <constraint firstItem="7ZU-Kh-VdM" firstAttribute="top" secondItem="QvU-Rj-zeU" secondAttribute="bottom" constant="41" id="BOv-zT-GBg"/>
                             <constraint firstItem="gTb-oH-teu" firstAttribute="top" secondItem="mnG-jz-yRs" secondAttribute="bottom" id="Bbw-mk-RgT"/>
                             <constraint firstItem="UuS-d1-qa9" firstAttribute="leading" secondItem="dWc-Sp-p17" secondAttribute="trailing" constant="8" id="DCQ-ZD-tt3"/>
                             <constraint firstItem="dWc-Sp-p17" firstAttribute="top" secondItem="Cb3-g0-Nfs" secondAttribute="bottom" constant="8" id="DWT-yv-nBO"/>
                             <constraint firstItem="g88-7o-jEE" firstAttribute="top" secondItem="7ZU-Kh-VdM" secondAttribute="bottom" id="IU5-8b-oOh"/>
+                            <constraint firstItem="rR8-nv-Vtm" firstAttribute="top" secondItem="Cb3-g0-Nfs" secondAttribute="bottom" id="JVW-2r-OY6"/>
                             <constraint firstAttribute="trailing" secondItem="mnG-jz-yRs" secondAttribute="trailing" id="QSD-Oo-dPT"/>
                             <constraint firstAttribute="trailing" secondItem="KoQ-A0-RHt" secondAttribute="trailing" id="UGl-at-sHa"/>
+                            <constraint firstItem="rR8-nv-Vtm" firstAttribute="leading" secondItem="egN-SH-lKx" secondAttribute="leading" id="VWp-Yh-hVK"/>
                             <constraint firstItem="QvU-Rj-zeU" firstAttribute="top" secondItem="Cb3-g0-Nfs" secondAttribute="bottom" constant="8" id="Wik-m8-qsu"/>
+                            <constraint firstAttribute="trailing" secondItem="rR8-nv-Vtm" secondAttribute="trailing" id="Z0o-QK-rbu"/>
                             <constraint firstItem="KoQ-A0-RHt" firstAttribute="top" secondItem="QvU-Rj-zeU" secondAttribute="bottom" constant="6" id="alr-zl-uFE"/>
                             <constraint firstItem="QvU-Rj-zeU" firstAttribute="trailing" secondItem="egN-SH-lKx" secondAttribute="trailingMargin" id="cLU-sy-RjS"/>
                             <constraint firstItem="UuS-d1-qa9" firstAttribute="top" secondItem="Cb3-g0-Nfs" secondAttribute="bottom" constant="8" id="cPF-Zn-QgW"/>
@@ -1721,6 +1729,7 @@
                             <constraint firstAttribute="trailing" secondItem="ejY-bi-PiO" secondAttribute="trailing" constant="8" id="hjA-Gm-Eki"/>
                             <constraint firstItem="GcZ-pT-Ox7" firstAttribute="leading" secondItem="egN-SH-lKx" secondAttribute="leading" id="hxL-8T-rlz"/>
                             <constraint firstItem="QvU-Rj-zeU" firstAttribute="leading" secondItem="UuS-d1-qa9" secondAttribute="trailing" constant="8" id="kQN-IU-U7I"/>
+                            <constraint firstItem="rR8-nv-Vtm" firstAttribute="centerX" secondItem="egN-SH-lKx" secondAttribute="centerX" id="oM9-1X-8Im"/>
                             <constraint firstItem="KoQ-A0-RHt" firstAttribute="leading" secondItem="egN-SH-lKx" secondAttribute="leading" id="p6A-8D-w1g"/>
                             <constraint firstItem="dWc-Sp-p17" firstAttribute="leading" secondItem="egN-SH-lKx" secondAttribute="leadingMargin" id="sPd-BP-GU0"/>
                             <constraint firstItem="ejY-bi-PiO" firstAttribute="top" secondItem="QvU-Rj-zeU" secondAttribute="bottom" constant="13" id="u7k-2d-zfg"/>
