@@ -1271,6 +1271,7 @@
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="buscar café" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dWc-Sp-p17">
                                 <rect key="frame" x="16" y="8" width="172" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="4BS-sl-rdL"/>
                                     <constraint firstAttribute="width" constant="172" id="m2U-JT-t0O"/>
@@ -1527,7 +1528,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikQ-jL-veO" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
                                         <rect key="frame" x="18" y="116" width="102" height="29"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="29" id="0OQ-cg-ciS"/>
                                             <constraint firstAttribute="width" secondItem="ikQ-jL-veO" secondAttribute="height" multiplier="102:29" id="91M-in-5eq"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="102" id="JnX-i0-Irj"/>
                                             <constraint firstAttribute="width" constant="102" id="TK0-nN-4Pe"/>
@@ -1625,7 +1625,7 @@
                                 <rect key="frame" x="0.0" y="-319" width="320" height="205"/>
                                 <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="GcZ-pT-Ox7" secondAttribute="height" multiplier="64:41" id="v6H-xS-Pfd"/>
+                                    <constraint firstAttribute="height" constant="205" id="IoQ-bS-vQU"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="celula" id="FnP-AJ-esU" customClass="BuscaResultCustomCell" customModule="CoffeeTasters" customModuleProvider="target">
@@ -1697,13 +1697,13 @@
                             <constraint firstItem="QvU-Rj-zeU" firstAttribute="trailing" secondItem="egN-SH-lKx" secondAttribute="trailingMargin" id="cLU-sy-RjS"/>
                             <constraint firstItem="UuS-d1-qa9" firstAttribute="top" secondItem="Cb3-g0-Nfs" secondAttribute="bottom" constant="8" id="cPF-Zn-QgW"/>
                             <constraint firstAttribute="trailing" secondItem="7ZU-Kh-VdM" secondAttribute="trailing" id="cYY-K2-NFr"/>
+                            <constraint firstItem="GcZ-pT-Ox7" firstAttribute="top" secondItem="egN-SH-lKx" secondAttribute="top" constant="-319" id="drt-KX-iYj"/>
                             <constraint firstItem="g88-7o-jEE" firstAttribute="leading" secondItem="egN-SH-lKx" secondAttribute="leading" id="emB-Jp-vx0"/>
                             <constraint firstItem="7ZU-Kh-VdM" firstAttribute="leading" secondItem="egN-SH-lKx" secondAttribute="leading" id="emg-uJ-Pfw"/>
                             <constraint firstAttribute="trailing" secondItem="ejY-bi-PiO" secondAttribute="trailing" constant="8" id="hjA-Gm-Eki"/>
                             <constraint firstItem="GcZ-pT-Ox7" firstAttribute="leading" secondItem="egN-SH-lKx" secondAttribute="leading" id="hxL-8T-rlz"/>
                             <constraint firstItem="QvU-Rj-zeU" firstAttribute="leading" secondItem="UuS-d1-qa9" secondAttribute="trailing" constant="8" id="kQN-IU-U7I"/>
                             <constraint firstItem="KoQ-A0-RHt" firstAttribute="leading" secondItem="egN-SH-lKx" secondAttribute="leading" id="p6A-8D-w1g"/>
-                            <constraint firstItem="Cb3-g0-Nfs" firstAttribute="top" secondItem="GcZ-pT-Ox7" secondAttribute="bottom" constant="114" id="r9D-su-ddV"/>
                             <constraint firstItem="dWc-Sp-p17" firstAttribute="leading" secondItem="egN-SH-lKx" secondAttribute="leadingMargin" id="sPd-BP-GU0"/>
                             <constraint firstItem="ejY-bi-PiO" firstAttribute="top" secondItem="QvU-Rj-zeU" secondAttribute="bottom" constant="13" id="u7k-2d-zfg"/>
                             <constraint firstItem="mnG-jz-yRs" firstAttribute="leading" secondItem="g88-7o-jEE" secondAttribute="trailing" id="vq6-BF-cgS"/>

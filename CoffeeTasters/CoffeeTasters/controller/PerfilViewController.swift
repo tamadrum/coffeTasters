@@ -40,7 +40,7 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBAction func textoMudou(_ sender: UITextField) {
         UIView.animate(withDuration: 0.5, animations: {
-            self.tableView.frame.origin.y = 108
+            self.tableView.frame.origin.y = 50
         })
         
         filtered = data.filter({ (cafe) -> Bool in
