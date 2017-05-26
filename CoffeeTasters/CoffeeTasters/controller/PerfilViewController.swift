@@ -13,11 +13,16 @@ import AlamofireImage
 class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
     @IBOutlet weak var buscarCafes: UITextField!
+    @IBOutlet weak var cabecalhoBuscaView: UIView!
 
     @IBOutlet weak var tableView: UITableView!
     var searchActive : Bool = false
     var data:[Cafe] = []
     var filtered:[Cafe] = []
+    
+    var tamanhoTabelaBusca:CGFloat = 0
+    var alturaCabecalho:CGFloat = 110
+    let alturaFixaNavigationBar:CGFloat = 64
     
     let usuario = Usuario()
     
@@ -39,7 +44,7 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBAction func textoMudou(_ sender: UITextField) {
         UIView.animate(withDuration: 0.5, animations: {
-            self.tableView.frame.origin.y = 50
+            self.tableView.frame.origin.y = self.alturaCabecalho
         })
         
         filtered = data.filter({ (cafe) -> Bool in
@@ -57,6 +62,7 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
             searchActive = true;
         }
         
+        print("Vou carregar os dados na tabela")
         self.tableView?.reloadData()
     }
     
@@ -76,7 +82,7 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBAction func cancelarBuscaCafe(_ sender: UIButton) {
         UIView.animate(withDuration: 0.5, animations: {
-            self.tableView.frame.origin.y = -300
+            self.tableView.frame.origin.y = -(self.tamanhoTabelaBusca+self.alturaCabecalho)
             self.buscarCafes.text = ""
         })
         
@@ -110,10 +116,26 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
             return cafe1.nome!<cafe2.nome!
         })
         
+        alturaCabecalho = cabecalhoBuscaView.frame.height + alturaFixaNavigationBar
+        
         tableView?.reloadData()
+    
+        NotificationCenter.default.addObserver(self, selector: #selector(mostraTeclado(notification:)),
+                    name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         
         buscarCafes.rightViewMode = .unlessEditing
         buscarCafes.rightView = UIImageView(image: #imageLiteral(resourceName: "search"))
+    }
+    
+    func mostraTeclado(notification: Notification) {
+        
+        let info = notification.userInfo!
+        let keyboardFrame:CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        
+        tamanhoTabelaBusca = CGFloat(self.view.frame.height - keyboardFrame.height - alturaCabecalho)
+        
+        self.tableView.reloadData()
+        self.tableView.frame = CGRect(x: tableView.frame.origin.x, y: tableView.frame.origin.y, width: tableView.frame.size.width, height: tamanhoTabelaBusca);
     }
     
     func dismissKeyboard() {
@@ -160,7 +182,7 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         UIView.animate(withDuration: 0.5, animations: {
-            self.tableView.frame.origin.y = -300
+            self.tableView.frame.origin.y = -(self.tamanhoTabelaBusca+self.alturaFixaNavigationBar)
         })
         
         dismissKeyboard()
