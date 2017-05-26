@@ -11,7 +11,7 @@ import Foundation
 extension UIImage{
     convenience init(view: UIView) {
         
-        UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.isOpaque, 0.0)
+        UIGraphicsBeginImageContextWithOptions(view.bounds.size, true, 0.0)
         view.drawHierarchy(in: view.bounds, afterScreenUpdates: false)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()

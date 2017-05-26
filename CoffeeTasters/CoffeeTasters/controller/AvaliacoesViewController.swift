@@ -8,16 +8,11 @@
 
 import Foundation
 import UIKit
-import Social
 
 class AvaliacoesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var tableView:UITableView?
     var avaliacoes:[Avaliacao] = []
-    
-    var nomeToShare: String!
-    var ratingToShare: Float!
-    var imageToShare:UIImage!
     
     // MARK: Ciclo de vida
     
@@ -41,6 +36,8 @@ class AvaliacoesViewController: UIViewController, UITableViewDelegate, UITableVi
         
         cell.selectionStyle = .none
         
+        cell.nav = self.navigationController
+        
         cell.comentario.text = avaliacoes[indexPath.row].obs
         cell.flavor.flavorUsuario = avaliacoes[indexPath.row].flavor
         cell.modoPrepado.text = avaliacoes[indexPath.row].metodoPreparo
@@ -48,35 +45,11 @@ class AvaliacoesViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.rating.rating = Float(avaliacoes[indexPath.row].gostou)
         cell.safra.text = avaliacoes[indexPath.row].data
         
-        imageToShare = UIImage.init(view: cell.flavor)
-        ratingToShare = Float(avaliacoes[indexPath.row].gostou)
-        if let nomeCafe = avaliacoes[indexPath.row].cafe?.nome {
-            nomeToShare = nomeCafe
-        }
-        cell.share.addTarget(self, action: #selector(share), for: .touchUpInside)
-        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 470
-    }
-    
-    //TODO: Impedir a seleção da celula
-    
-    func share() {
-        let usuario = Usuario()
-        usuario.load()
-        let textoParaPublicar = "\(usuario.nome) avaliou um novo café: \(nomeToShare!) \n Avaliação: \(ratingToShare!)/4.0 \n"
-        
-        let vc = SLComposeViewController(forServiceType:SLServiceTypeFacebook)
-        vc?.setInitialText("Aonde isso vai?")
-        vc?.add(imageToShare)
-        vc?.add(URL(string: "http://www.coffeetasters.com.br/")!)
-        vc?.setInitialText(textoParaPublicar)
-        
-        navigationController?.present(vc!, animated: true, completion: nil)
-        
     }
     
 }
