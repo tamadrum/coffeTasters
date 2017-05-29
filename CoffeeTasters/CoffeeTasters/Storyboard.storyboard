@@ -1771,11 +1771,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="celula" rowHeight="470" id="uih-er-SbA" customClass="AvaliacaoCustomCell" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="470"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="header" rowHeight="180" id="uih-er-SbA" customClass="AvaliacaoCustomCell" customModule="CoffeeTasters" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uih-er-SbA" id="GJn-Kd-9C5">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="469.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="179.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o40-cz-rA1" customClass="RatingView" customModule="CoffeeTasters" customModuleProvider="target">
@@ -1882,19 +1882,10 @@
                                                         <action selector="share" destination="uih-er-SbA" eventType="touchUpInside" id="bFh-rC-S5f"/>
                                                     </connections>
                                                 </button>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JQ3-Qm-Adp" customClass="WheelFlavor" customModule="CoffeeTasters" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="172" width="304" height="304"/>
-                                                    <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="304" id="6pp-mT-Vp3"/>
-                                                        <constraint firstAttribute="width" constant="304" id="s44-eP-932"/>
-                                                    </constraints>
-                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="pNj-XO-CG4" firstAttribute="leading" secondItem="9fX-oK-AgM" secondAttribute="trailing" constant="8" id="0zS-si-DY8"/>
                                                 <constraint firstItem="dCE-ec-j98" firstAttribute="top" secondItem="GJn-Kd-9C5" secondAttribute="topMargin" id="1bd-SU-GSZ"/>
-                                                <constraint firstItem="JQ3-Qm-Adp" firstAttribute="leading" secondItem="GJn-Kd-9C5" secondAttribute="leadingMargin" id="3Q4-q4-hwV"/>
                                                 <constraint firstItem="yJc-Zt-85l" firstAttribute="top" secondItem="GJn-Kd-9C5" secondAttribute="top" constant="4" id="6UH-w6-zkP"/>
                                                 <constraint firstItem="usu-dA-UkR" firstAttribute="trailing" secondItem="GJn-Kd-9C5" secondAttribute="trailingMargin" id="70k-kJ-lhR"/>
                                                 <constraint firstItem="pNj-XO-CG4" firstAttribute="leading" secondItem="9fX-oK-AgM" secondAttribute="trailing" constant="8" id="88y-LA-uUS"/>
@@ -1902,7 +1893,6 @@
                                                 <constraint firstAttribute="trailing" secondItem="yJc-Zt-85l" secondAttribute="trailing" constant="8" id="9aE-nq-0Ez"/>
                                                 <constraint firstItem="usu-dA-UkR" firstAttribute="top" secondItem="pNj-XO-CG4" secondAttribute="bottom" constant="8" id="Eai-sa-PSb"/>
                                                 <constraint firstItem="o40-cz-rA1" firstAttribute="top" secondItem="usu-dA-UkR" secondAttribute="bottom" constant="8" id="HH0-7G-y3F"/>
-                                                <constraint firstItem="JQ3-Qm-Adp" firstAttribute="top" secondItem="o40-cz-rA1" secondAttribute="bottom" constant="8" id="Hx9-OW-dl4"/>
                                                 <constraint firstItem="9fX-oK-AgM" firstAttribute="leading" secondItem="yyX-vn-SVb" secondAttribute="trailing" constant="2" id="JRY-Wb-sIY"/>
                                                 <constraint firstItem="yyX-vn-SVb" firstAttribute="leading" secondItem="GJn-Kd-9C5" secondAttribute="leadingMargin" id="LTy-Ch-Zeq"/>
                                                 <constraint firstItem="9fX-oK-AgM" firstAttribute="top" secondItem="dCE-ec-j98" secondAttribute="bottom" constant="8" id="OFO-yQ-LE1"/>
@@ -1922,19 +1912,35 @@
                                                 <constraint firstItem="rS6-a9-8oL" firstAttribute="top" secondItem="yJc-Zt-85l" secondAttribute="bottom" constant="4" id="sxy-n1-LAS"/>
                                                 <constraint firstItem="o40-cz-rA1" firstAttribute="leading" secondItem="GJn-Kd-9C5" secondAttribute="leadingMargin" id="wNl-fP-X7i"/>
                                                 <constraint firstItem="usu-dA-UkR" firstAttribute="top" secondItem="rS6-a9-8oL" secondAttribute="bottom" constant="10.5" id="yKt-2O-6kc"/>
-                                                <constraint firstItem="JQ3-Qm-Adp" firstAttribute="trailing" secondItem="GJn-Kd-9C5" secondAttribute="trailingMargin" id="yVk-f0-HlY"/>
-                                                <constraint firstItem="JQ3-Qm-Adp" firstAttribute="top" secondItem="o40-cz-rA1" secondAttribute="bottom" constant="8" id="ywY-BO-Xkm"/>
                                                 <constraint firstItem="9fX-oK-AgM" firstAttribute="leading" secondItem="yyX-vn-SVb" secondAttribute="trailing" constant="2" id="z96-Kb-b3N"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <outlet property="comentario" destination="usu-dA-UkR" id="LsW-8V-Yyx"/>
-                                            <outlet property="flavor" destination="JQ3-Qm-Adp" id="1jT-cx-uhy"/>
                                             <outlet property="modoPrepado" destination="9fX-oK-AgM" id="ggp-sJ-nml"/>
                                             <outlet property="nomeCafe" destination="dCE-ec-j98" id="mSS-aV-ZKj"/>
                                             <outlet property="rating" destination="o40-cz-rA1" id="6FI-Zg-5Aw"/>
                                             <outlet property="safra" destination="rS6-a9-8oL" id="rXw-aZ-wzo"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="details" rowHeight="300" id="MUn-z0-tF5" customClass="AvaliacaoDetailsCell" customModule="CoffeeTasters" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="208" width="320" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MUn-z0-tF5" id="Rfn-ez-rlZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="299.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o6Z-dJ-8Ze" customClass="WheelFlavor" customModule="CoffeeTasters" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="304" height="292"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="flavor" destination="o6Z-dJ-8Ze" id="xxd-El-zLV"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
