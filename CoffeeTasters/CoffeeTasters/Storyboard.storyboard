@@ -1447,7 +1447,7 @@
                                             <constraint firstAttribute="width" secondItem="G02-Z2-uEa" secondAttribute="height" multiplier="102:29" id="bxJ-nu-rFV"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="102" id="fOH-x7-QpJ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="13"/>
+                                        <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="11"/>
                                         <state key="normal" title="OFERTAS">
                                             <color key="titleColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -1473,7 +1473,7 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="102" id="JnX-i0-Irj"/>
                                             <constraint firstAttribute="width" constant="102" id="TK0-nN-4Pe"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="13"/>
+                                        <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="11"/>
                                         <state key="normal" title="PEDIDOS">
                                             <color key="titleColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -1499,7 +1499,7 @@
                                             <constraint firstAttribute="height" constant="29" id="rGR-SH-TSF"/>
                                             <constraint firstAttribute="width" secondItem="a7R-8V-4DK" secondAttribute="height" multiplier="102:29" id="z6R-vA-16W"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="13"/>
+                                        <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="11"/>
                                         <state key="normal" title="MEUS DADOS">
                                             <color key="titleColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -1526,7 +1526,7 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="102" id="Fis-h7-coR"/>
                                             <constraint firstAttribute="width" secondItem="ZLf-rg-o6y" secondAttribute="height" multiplier="102:29" id="sM2-35-4VE"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="13"/>
+                                        <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="11"/>
                                         <state key="normal" title="ASSINATURAS">
                                             <color key="titleColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
