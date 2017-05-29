@@ -84,8 +84,8 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
         }
         
         //Safra Picker
-        self.safraPickerView.onDateSelected = { (month: Int, year: Int) in
-            self.safraTextField.text = String(format: "%02d/%d", month, year)
+        self.safraPickerView.onSafraSelected = { (safra: Int) in
+            self.safraTextField.text = self.safraPickerView.pickerView(self.safraPickerView, titleForRow: safra, forComponent: 0)
         }
         
         initializeInputAccessoryBar()

@@ -10,27 +10,23 @@ import UIKit
 
 class SafraPickerView: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    var months: [String]!
-    var years: [Int]!
+    var safras: [String]!
     
-    var month: Int = 0 {
+    var safra: Int = 0 {
+    
         didSet {
-            selectRow(month-1, inComponent: 0, animated: false)
+        
+            selectRow(safra, inComponent: 0, animated: false)
         }
     }
-    
-    var year: Int = 0 {
-        didSet {
-            selectRow(years.index(of: year)!, inComponent: 1, animated: true)
-        }
-    }
-    
-    var onDateSelected: ((_ month: Int, _ year: Int) -> Void)?
+
+    var onSafraSelected: ((_ safra: Int) -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.commonSetup()
     }
+
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -38,51 +34,111 @@ class SafraPickerView: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSourc
     }
     
     func commonSetup() {
-        // population years
-        var years: [Int] = []
-        if years.count == 0 {
-            var year = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!.component(.year, from: NSDate() as Date)
-            for _ in 1...2 {
-                years.append(year)
-                year -= 1
-            }
+
+        //population safras
+        var safras:[String] = []
+        var months = [0,4,8]
+        //var years: [Int] = [0,1]
+        
+        let currentMonth = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!.component(.month, from: NSDate() as Date) as Int
+        let currentYear = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!.component(.year, from: NSDate() as Date) as Int
+
+        if currentMonth >= 9 {
+
+            if safras.count == 0 {
+            
+                for x in 0...2 {
+                    
+                    safras.append("\(DateFormatter().monthSymbols[months[x]].capitalized) " + "\(currentYear - 1)")
+                    
+                    
+                }
+                
+                for x in 0...2 {
+                    
+                    safras.append("\(DateFormatter().monthSymbols[months[x]].capitalized) " + "\(currentYear)")
+                    
+                    
+                    }
+                }
+            
         }
-        self.years = years
         
-        // population months with localized names
-        var months: [String] = []
-        var month = 0
+        if currentMonth < 9 && currentMonth >= 5 {
+            
+            if safras.count == 0 {
+                    
+                for x in 1...2 {
+                    
+                    safras.append("\(DateFormatter().monthSymbols[months[x]].capitalized) " + "\(currentYear - 2)")
+                    
+                    
+                }
+                
+                for x in 0...2 {
+                    
+                    safras.append("\(DateFormatter().monthSymbols[months[x]].capitalized) " + "\(currentYear - 1)")
+                    
+                    
+                }
+                
+                for x in 0...1 {
+                        
+                        safras.append("\(DateFormatter().monthSymbols[months[x]].capitalized) " + "\(currentYear)")
+                        
+                        
+                }
+                    
+                
+                
+                
+            }
+            
+        }
         
-        month = 0
-        months.append(DateFormatter().monthSymbols[month].capitalized)
-        
-        month = 4
-        months.append(DateFormatter().monthSymbols[month].capitalized)
-        
-        month = 8
-        months.append(DateFormatter().monthSymbols[month].capitalized)
-        
-        self.months = months
+        if currentMonth < 5 {
+                
+            if safras.count == 0 {
+                
+                for x in 1...2 {
+                    
+                    safras.append("\(DateFormatter().monthSymbols[months[x]].capitalized) " + "\(currentYear - 2)")
+                    
+                    
+                }
+                for x in 0...2 {
+                    
+                    safras.append("\(DateFormatter().monthSymbols[months[x]].capitalized) " + "\(currentYear - 1)")
+                    
+                    
+                }
+                
+                safras.append("\(DateFormatter().monthSymbols[months[0]].capitalized) " + "\(currentYear)")
+                        
+                        
+            }
+                    
+        }
+
+            
+        self.safras = safras
         
         self.delegate = self
         self.dataSource = self
         
-        let currentMonth = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!.component(.month, from: NSDate() as Date)
-        self.selectRow(currentMonth - 1, inComponent: 0, animated: false)
+    
     }
     
     // Mark: UIPicker Delegate / Data Source
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 2
+        return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch component {
         case 0:
-            return months[row]
-        case 1:
-            return "\(years[row])"
+            return safras[row]
         default:
             return nil
         }
@@ -91,23 +147,19 @@ class SafraPickerView: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSourc
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch component {
         case 0:
-            return months.count
-        case 1:
-            return years.count
+            return safras.count
         default:
             return 0
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let month = self.selectedRow(inComponent: 0)+1
-        let year = years[self.selectedRow(inComponent: 1)]
-        if let block = onDateSelected {
-            block(month, year)
+        let safra = self.selectedRow(inComponent: 0)
+        if let block = onSafraSelected {
+            block(safra)
         }
         
-        self.month = month
-        self.year = year
+        self.safra = safra
     }
     
 }
