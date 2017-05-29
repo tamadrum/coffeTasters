@@ -68,12 +68,7 @@ class SafraPickerView: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSourc
             
             if safras.count == 0 {
                     
-                for x in 1...2 {
-                    
-                    safras.append("\(DateFormatter().monthSymbols[months[x]].capitalized) " + "\(currentYear - 2)")
-                    
-                    
-                }
+                safras.append("\(DateFormatter().monthSymbols[months[2]].capitalized) " + "\(currentYear - 2)")
                 
                 for x in 0...2 {
                     
