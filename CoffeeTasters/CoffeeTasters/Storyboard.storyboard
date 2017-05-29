@@ -444,9 +444,6 @@
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="gDk-JZ-qU5">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bkg-Iniciais" translatesAutoresizingMaskIntoConstraints="NO" id="T9p-56-CrB">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 8.888,88" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5j-mF-LcE">
                                         <rect key="frame" x="16" y="317.5" width="288" height="22.5"/>
                                         <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="18"/>
@@ -543,6 +540,9 @@
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bkg-Iniciais" translatesAutoresizingMaskIntoConstraints="NO" id="T9p-56-CrB">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -1097,6 +1097,7 @@
                         <outlet property="cidadeLabel" destination="lUQ-kh-zUS" id="mH4-Pb-9l3"/>
                         <outlet property="comentarioTextView" destination="pUx-LB-bMg" id="24F-lN-GFW"/>
                         <outlet property="estadoLabel" destination="jvM-vB-mqN" id="cpo-6d-y99"/>
+                        <outlet property="metodoSegmentControl" destination="fZC-f7-doo" id="APm-HG-jJF"/>
                         <outlet property="notaDoisLabel" destination="D2f-5k-8P9" id="VMG-Ce-OgQ"/>
                         <outlet property="notaQuatroLabel" destination="D24-Cd-2qh" id="9dr-CM-vKK"/>
                         <outlet property="notaTresLabel" destination="kk6-4J-uMa" id="iTg-DK-NKe"/>
@@ -4509,6 +4510,7 @@
                         <outlet property="herbalSlider" destination="6s0-rm-F9b" id="CgW-gv-E8C"/>
                         <outlet property="localPreparoTextField" destination="B9B-9W-Tm1" id="RVF-hr-4SH"/>
                         <outlet property="metodoPreparoSegmentControl" destination="oB5-o1-ts1" id="0Jn-Of-Nht"/>
+                        <outlet property="metodoSegmentControl" destination="3El-aN-RQI" id="eb4-0m-ntB"/>
                         <outlet property="nomeTextField" destination="bj9-uq-Gav" id="ilJ-qa-MOg"/>
                         <outlet property="nozesSlider" destination="mGS-si-3FP" id="be2-De-4vt"/>
                         <outlet property="paisTextField" destination="7Ni-BS-Nnh" id="BPb-3B-nd4"/>

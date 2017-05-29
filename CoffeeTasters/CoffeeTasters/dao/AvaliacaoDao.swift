@@ -34,5 +34,44 @@ class AvaliacaoDao: Dao<Avaliacao> {
         }
         return retorno
     }
+
+//    func getListaNomesCafes () -> [String] {
+//        var retorno:[String] = []
+//        
+//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: banco!)
+//        fetchRequest.propertiesToFetch = ["cafe.nome"]
+//        fetchRequest.returnsDistinctResults = true
+//        fetchRequest.resultType = NSFetchRequestResultType.dictionaryResultType
+//        
+//        do {
+//            let results = try managedContext.fetch(fetchRequest)
+//            
+//            let resultsDict = results as! [[String: String]]
+//            
+//            for r in resultsDict {
+//                retorno.append(r["cafe.nome"]!)
+//            }
+//            
+//        } catch let error as NSError {
+//            print("Could not fetch. \(error), \(error.userInfo)")
+//        }
+//        return retorno
+//    }
     
-}
+    
+    func getListaCafes () -> [Cafe] {
+        
+        let avaliacoes = self.list()
+        
+        //var cafe = Dao<Cafe>()
+        var retorno: [Cafe] = []
+        
+        for c in avaliacoes {
+        
+            retorno.append(c.cafe!)
+        
+        }
+        return retorno
+    }
+
+ }
