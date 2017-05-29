@@ -61,14 +61,13 @@ class AvaliacaoDao: Dao<Avaliacao> {
     
     func getListaCafes () -> [Cafe] {
         
+        var retorno:[Cafe] = []
+        
         let avaliacoes = self.list()
         
-        //var cafe = Dao<Cafe>()
-        var retorno: [Cafe] = []
+        for a in avaliacoes {
         
-        for c in avaliacoes {
-        
-            retorno.append(c.cafe!)
+            retorno.append(a.cafe!)
         
         }
         return retorno

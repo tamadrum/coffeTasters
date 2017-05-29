@@ -21,6 +21,7 @@ class CafeListViewController: UIViewController, UITableViewDelegate, UITableView
 //        cafes = daoCafes.list()
         let dao = AvaliacaoDao()
         cafes = dao.getListaCafes()
+        
     }
     
     // MARK: Coisas de tabela
