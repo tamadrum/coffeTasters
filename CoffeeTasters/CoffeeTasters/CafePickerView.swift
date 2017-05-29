@@ -80,6 +80,8 @@ class CafePickerView: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource
             return cafes[row].safra
         case 9:
             return String(cafes[row].ehBlend)
+        case 10:
+            return String(cafes[row].metodo)
         default:
             return nil
         }

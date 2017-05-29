@@ -108,9 +108,9 @@ class PerfilViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         qtdCafeterias.text = "\(AvaliacaoDao().getListaCafeterias().count)"
         qtdAvaliacoes.text = "\(AvaliacaoDao().count())"
+        qtdCafes.text = "\(AvaliacaoDao().getListaCafes().count)"
         
         data = Dao<Cafe>().list()
-        qtdCafes.text = "\(data.count)"
         
         data.sort(by: {(cafe1, cafe2) -> Bool in
             return cafe1.nome!<cafe2.nome!

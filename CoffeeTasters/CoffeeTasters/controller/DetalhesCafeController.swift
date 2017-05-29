@@ -19,6 +19,7 @@ class DetalhesCafeController: UIViewController {
     @IBOutlet weak var tipoCafeLabel: UILabel!
     @IBOutlet weak var alturaLabel: UILabel!
     @IBOutlet weak var safraLabel: UILabel!
+    @IBOutlet weak var metodoSegmentControl: UISegmentedControl!
     @IBOutlet weak var comentarioTextView: UITextView!
     @IBOutlet weak var notaQuatroLabel: UILabel!
     @IBOutlet weak var notaTresLabel: UILabel!
@@ -39,6 +40,13 @@ class DetalhesCafeController: UIViewController {
         tipoCafeLabel.text = cafeAvaliado.tipo
         alturaLabel.text = "\(cafeAvaliado.altitude)m"
         safraLabel.text = cafeAvaliado.safra
+        
+        if Bool(cafeAvaliado.metodo) == true {
+            self.metodoSegmentControl.selectedSegmentIndex = 1
+        } else {
+            self.metodoSegmentControl.selectedSegmentIndex = 0
+        }
+        
         comentarioTextView.text = cafeAvaliado.descricao
         notaQuatroLabel.text = "10"
         notaTresLabel.text = "20"

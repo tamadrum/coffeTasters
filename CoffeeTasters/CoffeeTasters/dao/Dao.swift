@@ -80,6 +80,23 @@ class Dao<T> {
         }
         return retorno
     }
+    
+    func listDistinct() -> [T] {
+        var retorno:[T] = []
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: banco!)
+        fetchRequest.returnsDistinctResults = true
+        
+        do {
+            retorno = try managedContext.fetch(fetchRequest) as! [T]
+            print("* CoreData - Listando \(banco!) [\(retorno.count)]")
+        } catch let error as NSError {
+            print("**************************")
+            print("* CoreData - Could not fetch. \(error), \(error.userInfo)")
+            print("**************************")
+        }
+        return retorno
+    }
 
     func delete(_ obj: NSManagedObject) {
         print("* CoreData - deletando obj do \(banco!) no ctx: \(managedContext!)")

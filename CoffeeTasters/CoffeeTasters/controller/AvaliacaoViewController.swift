@@ -22,6 +22,7 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
     @IBOutlet weak var safraTextField: UITextField!
     @IBOutlet weak var localPreparoTextField: UITextField!
     @IBOutlet weak var baristaTextField: UITextField!
+    @IBOutlet weak var metodoSegmentControl: UISegmentedControl!
     @IBOutlet weak var metodoPreparoSegmentControl: UISegmentedControl!
     @IBOutlet weak var doceSlider: UISlider!
     @IBOutlet weak var azedoSlider: UISlider!
@@ -75,6 +76,7 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
             tipoTextField.text = cafeAvaliado.tipo
             safraTextField.text = cafeAvaliado.safra
             cafeBlendSegmentControl.selectedSegmentIndex = 0
+            metodoSegmentControl.selectedSegmentIndex = 0
             
             print("Trocando o criaNovoCafe para false")
             criaNovoCafe = false
@@ -82,8 +84,8 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
         }
         
         //Safra Picker
-        self.safraPickerView.onDateSelected = { (month: Int, year: Int) in
-            self.safraTextField.text = String(format: "%02d/%d", month, year)
+        self.safraPickerView.onSafraSelected = { (safra: Int) in
+            self.safraTextField.text = self.safraPickerView.pickerView(self.safraPickerView, titleForRow: safra, forComponent: 0)
         }
         
         initializeInputAccessoryBar()
@@ -125,6 +127,11 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
             } else {
                 self.cafeBlendSegmentControl.selectedSegmentIndex = 0
             }
+            if Bool(self.cafePickerView.pickerView(self.cafePickerView, titleForRow: cafe, forComponent: 10)!) == true {
+                self.metodoSegmentControl.selectedSegmentIndex = 1
+            } else {
+                self.metodoSegmentControl.selectedSegmentIndex = 0
+            }
             
             print("Trocando o criaNovoCafe para false")
             self.criaNovoCafe = false
@@ -156,6 +163,7 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
             cafe.tipo = tipoTextField.text
             cafe.safra = safraTextField.text
             cafe.ehBlend = cafeBlendSegmentControl.selectedSegmentIndex == 0 ? false : true
+            cafe.metodo = metodoSegmentControl.selectedSegmentIndex == 0 ? false : true
             
             cafeDao.save()
             
@@ -280,6 +288,7 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
         self.tipoTextField.isUserInteractionEnabled = false
         self.safraTextField.isUserInteractionEnabled = false
         self.cafeBlendSegmentControl.isUserInteractionEnabled = false
+        self.metodoSegmentControl.isUserInteractionEnabled = false
         
     }
     
@@ -299,6 +308,7 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
         self.tipoTextField.text = ""
         self.safraTextField.text = ""
         self.cafeBlendSegmentControl.selectedSegmentIndex = 0
+        self.metodoSegmentControl.selectedSegmentIndex = 0
         
         self.nomeTextField.isUserInteractionEnabled = true
         self.paisTextField.isUserInteractionEnabled = true
@@ -310,6 +320,7 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
         self.tipoTextField.isUserInteractionEnabled = true
         self.safraTextField.isUserInteractionEnabled = true
         self.cafeBlendSegmentControl.isUserInteractionEnabled = true
+        self.metodoSegmentControl.isUserInteractionEnabled = true
         
         print("Trocando o criaNovoCafe para true")
         criaNovoCafe = true
@@ -341,6 +352,7 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
         self.tipoTextField.isUserInteractionEnabled = true
         self.safraTextField.isUserInteractionEnabled = true
         self.cafeBlendSegmentControl.isUserInteractionEnabled = true
+        self.metodoSegmentControl.isUserInteractionEnabled = true
         
         nomeTextField.resignFirstResponder()
         nomeTextField.inputView = cafePickerView

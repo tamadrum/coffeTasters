@@ -12,12 +12,16 @@ import UIKit
 class CafeListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var cafes:[Cafe] = []
+//    var nomesCafes:[String] = []
     
     // MARK: Ciclo de vida
     
     override func viewDidLoad() {
-        let dao = Dao<Cafe>()
-        cafes = dao.list()
+//        let daoCafes = Dao<Cafe>()
+//        cafes = daoCafes.list()
+        let dao = AvaliacaoDao()
+        cafes = dao.getListaCafes()
+        
     }
     
     // MARK: Coisas de tabela
