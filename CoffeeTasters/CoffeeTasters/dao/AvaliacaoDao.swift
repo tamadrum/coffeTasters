@@ -70,7 +70,10 @@ class AvaliacaoDao: Dao<Avaliacao> {
             retorno.append(a.cafe!)
         
         }
-        return retorno
+        
+        let cafes = Array(Set(retorno))
+        
+        return cafes as [Cafe]
     }
 
  }
