@@ -170,6 +170,7 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
         avaliacao.data = "20/10/2017"
         avaliacao.dataColheita = "10/10/2017"
         avaliacao.dataTorra = "12/10/2017"
+        
         avaliacao.flavor = Dao<Flavor>().new()
         avaliacao.flavor?.doce = Int32(doceSlider.value)
         avaliacao.flavor?.azedo = Int32(azedoSlider.value)
@@ -187,10 +188,29 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
         avaliacao.flavor?.encorpado = Int32(encorpadoSlider.value)
         avaliacao.flavor?.cereais = Int32(cereaisSlider.value)
         avaliacao.flavor?.nozes = Int32(nozesSlider.value)
+        
         avaliacao.gostou = Int32(rating.rating)
         avaliacao.localPreparo = localPreparoTextField.text
         avaliacao.metodoPreparo = listaTextoModoPreparo[metodoPreparoSegmentControl.selectedSegmentIndex]
         avaliacao.obs = comentariosTextView.text
+        
+        avaliacao.flavorMedia = Dao<Flavor>().new()
+        avaliacao.flavorMedia?.doce = Int32(5)
+        avaliacao.flavorMedia?.azedo = Int32(7)
+        avaliacao.flavorMedia?.floral = Int32(9)
+        avaliacao.flavorMedia?.especiarias = Int32(3)
+        avaliacao.flavorMedia?.salgado = Int32(1)
+        avaliacao.flavorMedia?.frutasVermelhas = Int32(8)
+        avaliacao.flavorMedia?.frutasCitricas = Int32(6)
+        avaliacao.flavorMedia?.frutasCaroco = Int32(4)
+        avaliacao.flavorMedia?.chocolate = Int32(2)
+        avaliacao.flavorMedia?.caramelo = Int32(8)
+        avaliacao.flavorMedia?.defumado = Int32(5)
+        avaliacao.flavorMedia?.amargo = Int32(1)
+        avaliacao.flavorMedia?.herbal = Int32(3)
+        avaliacao.flavorMedia?.encorpado = Int32(9)
+        avaliacao.flavorMedia?.cereais = Int32(1)
+        avaliacao.flavorMedia?.nozes = Int32(8)
         
         dao.save()
         
