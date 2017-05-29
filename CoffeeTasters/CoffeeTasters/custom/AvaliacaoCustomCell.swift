@@ -20,22 +20,39 @@ class AvaliacaoCustomCell: UITableViewCell {
     
     var flavor: WheelFlavor!
     var nav: UINavigationController?
+    var vc: UIViewController?
     
     @IBAction func share(){
         let usuario = Usuario()
         usuario.load()
         
-        //let imageToShare = UIImage.init(view: flavor)
-        
         let textoParaPublicar = "\(usuario.nome) avaliou um novo café: \(nomeCafe.text!) \n Avaliação: \(rating.rating)/4.0 \n"
         
         let vc = SLComposeViewController(forServiceType:SLServiceTypeFacebook)
         vc?.setInitialText("Aonde isso vai?")
-        //vc?.add(imageToShare)
+
+        let imageToShare = UIImage.init(view: flavor)
+        vc?.add(imageToShare)
+        
         vc?.add(URL(string: "http://www.coffeetasters.com.br/")!)
         vc?.setInitialText(textoParaPublicar)
         
         nav?.present(vc!, animated: true, completion: nil)
+
+//        
+//        
+//        let photo = Photo(image: imageToShare, userGenerated: true)
+//        let content = PhotoShareContent(photos: [photo])
+//        
+//        let shareDialog = ShareDialog(content: content)
+//        shareDialog.mode = .native
+//        shareDialog.failsOnInvalidData = true
+//        shareDialog.completion = { result in
+//            // Handle share results
+//        }
+//        
+//        try? shareDialog.show()
+        
     }
     
 }

@@ -778,7 +778,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ou7-Ya-aY9" customClass="WheelFlavor" customModule="CoffeeTasters" customModuleProvider="target">
                                         <rect key="frame" x="16" y="567" width="288" height="341"/>
                                         <subviews>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fnl-lM-axj">
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="fnl-lM-axj">
                                                 <rect key="frame" x="145" y="8" width="135" height="29"/>
                                                 <segments>
                                                     <segment title="Torrador"/>
@@ -971,7 +971,7 @@
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fZC-f7-doo">
                                         <rect key="frame" x="81" y="190" width="223" height="29"/>
                                         <segments>
-                                            <segment title="Natural"/>
+                                            <segment title="Natural" enabled="NO"/>
                                             <segment title="Descascado"/>
                                         </segments>
                                         <color key="tintColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
