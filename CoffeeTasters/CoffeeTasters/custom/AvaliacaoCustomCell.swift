@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Social
+import FacebookShare
 
 class AvaliacaoCustomCell: UITableViewCell {
     
@@ -18,7 +19,7 @@ class AvaliacaoCustomCell: UITableViewCell {
     @IBOutlet weak var rating: RatingView!
     @IBOutlet weak var nomeCafe: UILabel!
     
-    var flavor: WheelFlavor!
+    var flavor: Flavor?
     var nav: UINavigationController?
     var vc: UIViewController?
     
@@ -28,30 +29,33 @@ class AvaliacaoCustomCell: UITableViewCell {
         
         let textoParaPublicar = "\(usuario.nome) avaliou um novo café: \(nomeCafe.text!) \n Avaliação: \(rating.rating)/4.0 \n"
         
-        let vc = SLComposeViewController(forServiceType:SLServiceTypeFacebook)
-        vc?.setInitialText("Aonde isso vai?")
-
-        let imageToShare = UIImage.init(view: flavor)
-        vc?.add(imageToShare)
+        let view = WheelFlavor(frame: CGRect(x: 0, y:0, width:300, height: 300))
+        view.flavorUsuario = flavor
         
-        vc?.add(URL(string: "http://www.coffeetasters.com.br/")!)
-        vc?.setInitialText(textoParaPublicar)
+        UIGraphicsBeginImageContextWithOptions(view.bounds.size, true, 0.0)
+        view.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
         
-        nav?.present(vc!, animated: true, completion: nil)
+//        let vc = SLComposeViewController(forServiceType:SLServiceTypeFacebook)
+//        vc?.add(image)
+//        vc?.add(URL(string: "http://www.coffeetasters.com.br/")!)
+//        vc?.setInitialText(textoParaPublicar)
+//        nav?.present(vc!, animated: true, completion: nil)
 
-//        
-//        
-//        let photo = Photo(image: imageToShare, userGenerated: true)
-//        let content = PhotoShareContent(photos: [photo])
-//        
-//        let shareDialog = ShareDialog(content: content)
-//        shareDialog.mode = .native
-//        shareDialog.failsOnInvalidData = true
-//        shareDialog.completion = { result in
-//            // Handle share results
-//        }
-//        
-//        try? shareDialog.show()
+  
+        
+        let photo = Photo(image: image!, userGenerated: true)
+        let content = PhotoShareContent(photos: [photo])
+        
+        let shareDialog = ShareDialog(content: content)
+        shareDialog.mode = .native
+        shareDialog.failsOnInvalidData = true
+        shareDialog.completion = { result in
+            // Handle share results
+        }
+        
+        try? shareDialog.show()
         
     }
     

@@ -51,6 +51,7 @@ class WheelFlavor: UIView {
     
     override func draw(_ rect: CGRect) {
         let centro = CGPoint(x: self.bounds.width/2, y: self.bounds.height/2)
+        
         raio = Int(centro.y/2)
         if ( centro.x > centro.y ) {
             raio = Int(centro.x/2)
@@ -58,6 +59,10 @@ class WheelFlavor: UIView {
         self.isUserInteractionEnabled = true
     
         if let context = UIGraphicsGetCurrentContext() {
+            context.setFillColor(UIColor.white.cgColor)
+            context.addRect(CGRect(x: 0, y:0, width: bounds.width, height: bounds.height))
+            context.fillPath()
+            
             context.setLineWidth(CGFloat(0.5))
             context.setStrokeColor(UIColor.black.cgColor)
             

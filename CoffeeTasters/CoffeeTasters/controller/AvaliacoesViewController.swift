@@ -44,8 +44,7 @@ class AvaliacoesViewController: Acordeao {
             cell.selectionStyle = .none
             
             cell.nav = self.navigationController
-            cell.flavor = WheelFlavor()
-            cell.flavor.flavorUsuario = avaliacao.flavor
+            cell.flavor = avaliacao.flavor
             cell.vc = self
             
             cell.comentario.text = avaliacao.obs

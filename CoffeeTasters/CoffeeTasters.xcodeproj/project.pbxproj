@@ -63,7 +63,6 @@
 		16EBC6181E8D095600A87B2F /* BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EBC6171E8D095600A87B2F /* BorderButton.swift */; };
 		16EBC61D1E8DC1CE00A87B2F /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16EBC61C1E8DC1CE00A87B2F /* Storyboard.storyboard */; };
 		16EBC61F1E8DCE4500A87B2F /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EBC61E1E8DCE4500A87B2F /* PerfilViewController.swift */; };
-		16F5B2B11E9BA1F800E0D191 /* View2Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F5B2B01E9BA1F800E0D191 /* View2Image.swift */; };
 		16F5B2B31E9BABA600E0D191 /* Anotacoes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 16F5B2B21E9BABA600E0D191 /* Anotacoes.txt */; };
 		16F5B2B51E9BC3F900E0D191 /* AvaliacaoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F5B2B41E9BC3F900E0D191 /* AvaliacaoDao.swift */; };
 		16F5B2B71E9BF4A500E0D191 /* Notificacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F5B2B61E9BF4A500E0D191 /* Notificacao.swift */; };
@@ -162,7 +161,6 @@
 		16EBC6171E8D095600A87B2F /* BorderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BorderButton.swift; path = custom/BorderButton.swift; sourceTree = "<group>"; };
 		16EBC61C1E8DC1CE00A87B2F /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		16EBC61E1E8DCE4500A87B2F /* PerfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PerfilViewController.swift; path = controller/PerfilViewController.swift; sourceTree = "<group>"; };
-		16F5B2B01E9BA1F800E0D191 /* View2Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = View2Image.swift; path = extensions/View2Image.swift; sourceTree = "<group>"; };
 		16F5B2B21E9BABA600E0D191 /* Anotacoes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Anotacoes.txt; sourceTree = "<group>"; };
 		16F5B2B41E9BC3F900E0D191 /* AvaliacaoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AvaliacaoDao.swift; path = dao/AvaliacaoDao.swift; sourceTree = "<group>"; };
 		16F5B2B61E9BF4A500E0D191 /* Notificacao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Notificacao.swift; path = modelo/Notificacao.swift; sourceTree = "<group>"; };
@@ -364,7 +362,6 @@
 				16E67A301E911B42005EE82E /* String+isCPF.swift */,
 				16E67A311E911B42005EE82E /* String+isRG.swift */,
 				16E67A321E911B42005EE82E /* String+toMD5.swift */,
-				16F5B2B01E9BA1F800E0D191 /* View2Image.swift */,
 			);
 			name = extensions;
 			sourceTree = "<group>";
@@ -619,7 +616,6 @@
 				16E67A501E912F92005EE82E /* SyncUtil.swift in Sources */,
 				16BE94921EDB930E0097B764 /* AvaliacaoDetailsCell.swift in Sources */,
 				1690A1D71E8FE9EC0039BDC1 /* RatingView.swift in Sources */,
-				16F5B2B11E9BA1F800E0D191 /* View2Image.swift in Sources */,
 				16E67A581E913122005EE82E /* PedidoCustomCell.swift in Sources */,
 				16E67A4F1E912F92005EE82E /* CreditCardUtil.swift in Sources */,
 				1614EE2E1E8E5E1C00C44F11 /* CadastroViewController.swift in Sources */,

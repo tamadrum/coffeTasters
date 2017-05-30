@@ -81,7 +81,7 @@ class CafePickerView: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource
         case 9:
             return String(cafes[row].ehBlend)
         case 10:
-            return String(cafes[row].metodo)
+            return String(describing: cafes[row].method)
         default:
             return nil
         }
