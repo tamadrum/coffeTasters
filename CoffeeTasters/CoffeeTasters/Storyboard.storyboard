@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4xS-dw-w2H">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4xS-dw-w2H">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -444,6 +444,9 @@
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="gDk-JZ-qU5">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bkg-Iniciais" translatesAutoresizingMaskIntoConstraints="NO" id="T9p-56-CrB">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 8.888,88" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5j-mF-LcE">
                                         <rect key="frame" x="16" y="317.5" width="288" height="22.5"/>
                                         <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="18"/>
@@ -540,9 +543,6 @@
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bkg-Iniciais" translatesAutoresizingMaskIntoConstraints="NO" id="T9p-56-CrB">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -1943,6 +1943,7 @@
                                                     <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="o6Z-dJ-8Ze" secondAttribute="bottom" constant="8" id="7yj-BR-zkZ"/>
                                                 <constraint firstItem="o6Z-dJ-8Ze" firstAttribute="leading" secondItem="Rfn-ez-rlZ" secondAttribute="leading" constant="8" id="Da5-wn-WYW"/>
@@ -3635,14 +3636,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="JUH-3e-Ygn" customClass="ImageSlider" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="6" y="1053.5" width="308" height="31"/>
+                                        <rect key="frame" x="6" y="1098.5" width="308" height="40"/>
                                         <color key="minimumTrackTintColor" red="0.2781490683555603" green="0.14739993214607239" blue="0.081067316234111786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="image" keyPath="image" value="frutasVermelhas"/>
                                         </userDefinedRuntimeAttributes>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Especiarias:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VG6-oV-VIP">
-                                        <rect key="frame" x="8" y="913.5" width="304" height="19"/>
+                                        <rect key="frame" x="8" y="940.5" width="304" height="19"/>
                                         <color key="tintColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="15"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -3676,21 +3677,21 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="hDM-o0-Bik" customClass="ImageSlider" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="6" y="753.5" width="308" height="31"/>
+                                        <rect key="frame" x="6" y="753.5" width="308" height="40"/>
                                         <color key="minimumTrackTintColor" red="0.2781490683555603" green="0.14739993214607239" blue="0.081067316234111786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="image" keyPath="image" value="doce"/>
                                         </userDefinedRuntimeAttributes>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="9qf-hT-WKX" customClass="ImageSlider" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="6" y="1593.5" width="308" height="31"/>
+                                        <rect key="frame" x="6" y="1719.5" width="308" height="40"/>
                                         <color key="minimumTrackTintColor" red="0.2781490683555603" green="0.14739993214607239" blue="0.081067316234111786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="image" keyPath="image" value="cereais"/>
                                         </userDefinedRuntimeAttributes>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="JUI-8P-jRD" customClass="ImageSlider" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="6" y="873.5" width="308" height="31"/>
+                                        <rect key="frame" x="6" y="891.5" width="308" height="40"/>
                                         <color key="minimumTrackTintColor" red="0.2781490683555603" green="0.14739993214607239" blue="0.081067316234111786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="image" keyPath="image" value="floral"/>
@@ -3706,14 +3707,14 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Defumado:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyy-0H-2aK">
-                                        <rect key="frame" x="8" y="1333.5" width="304" height="19"/>
+                                        <rect key="frame" x="8" y="1423.5" width="304" height="19"/>
                                         <color key="tintColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="15"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cereais:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMy-hc-jtf">
-                                        <rect key="frame" x="8" y="1573.5" width="304" height="19"/>
+                                        <rect key="frame" x="8" y="1699.5" width="304" height="19"/>
                                         <color key="tintColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="15"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -3730,7 +3731,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OLp-VN-hCp" customClass="BorderTextView" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="1734" width="304" height="100"/>
+                                        <rect key="frame" x="8" y="1878" width="304" height="100"/>
                                         <color key="tintColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="u0c-bn-G3i"/>
@@ -3763,7 +3764,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caramelo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ak-CC-s0U">
-                                        <rect key="frame" x="8" y="1273.5" width="304" height="19"/>
+                                        <rect key="frame" x="8" y="1354.5" width="304" height="19"/>
                                         <color key="tintColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="15"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -3780,7 +3781,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="5a5-yr-vIc" customClass="ImageSlider" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="6" y="1533.5" width="308" height="31"/>
+                                        <rect key="frame" x="6" y="1650.5" width="308" height="40"/>
                                         <color key="minimumTrackTintColor" red="0.2781490683555603" green="0.14739993214607239" blue="0.081067316234111786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="image" keyPath="image" value="encorpado"/>
@@ -3796,14 +3797,14 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Herbal:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rr0-Kd-C9l">
-                                        <rect key="frame" x="8" y="1453.5" width="304" height="19"/>
+                                        <rect key="frame" x="8" y="1561.5" width="304" height="19"/>
                                         <color key="tintColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="15"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="mGS-si-3FP" customClass="ImageSlider" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="6" y="1653.5" width="308" height="31"/>
+                                        <rect key="frame" x="6" y="1788.5" width="308" height="40"/>
                                         <color key="minimumTrackTintColor" red="0.2781490683555603" green="0.14739993214607239" blue="0.081067316234111786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="image" keyPath="image" value="nozes"/>
@@ -3878,21 +3879,21 @@
                                         </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Salgado:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0Z-EE-jrd">
-                                        <rect key="frame" x="8" y="973.5" width="304" height="19"/>
+                                        <rect key="frame" x="8" y="1009.5" width="304" height="19"/>
                                         <color key="tintColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="15"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frutas Cítricas:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lmi-nv-nzK">
-                                        <rect key="frame" x="8" y="1093.5" width="304" height="19"/>
+                                        <rect key="frame" x="8" y="1147.5" width="304" height="19"/>
                                         <color key="tintColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="15"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Floral:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYS-hS-R3X">
-                                        <rect key="frame" x="8" y="853.5" width="304" height="19"/>
+                                        <rect key="frame" x="8" y="871.5" width="304" height="19"/>
                                         <color key="tintColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="15"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -3908,14 +3909,14 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Jux-oK-Y4x" customClass="ImageSlider" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="6" y="933.5" width="308" height="31"/>
+                                        <rect key="frame" x="6" y="960.5" width="308" height="40"/>
                                         <color key="minimumTrackTintColor" red="0.2781490683555603" green="0.14739993214607239" blue="0.081067316234111786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="image" keyPath="image" value="especiarias"/>
                                         </userDefinedRuntimeAttributes>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="4eJ-4v-wGB" customClass="ImageSlider" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="6" y="1413.5" width="308" height="31"/>
+                                        <rect key="frame" x="6" y="1512.5" width="308" height="40"/>
                                         <color key="minimumTrackTintColor" red="0.2781490683555603" green="0.14739993214607239" blue="0.081067316234111786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="image" keyPath="image" value="amargo"/>
@@ -3931,35 +3932,35 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encorpado:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKD-eK-DTL">
-                                        <rect key="frame" x="8" y="1513.5" width="304" height="19"/>
+                                        <rect key="frame" x="8" y="1630.5" width="304" height="19"/>
                                         <color key="tintColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="15"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Uch-5l-J8D" customClass="ImageSlider" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="6" y="1173.5" width="308" height="31"/>
+                                        <rect key="frame" x="6" y="1236.5" width="308" height="40"/>
                                         <color key="minimumTrackTintColor" red="0.2781490683555603" green="0.14739993214607239" blue="0.081067316234111786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="image" keyPath="image" value="frutasCaroco"/>
                                         </userDefinedRuntimeAttributes>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amargo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCC-9Y-xp0">
-                                        <rect key="frame" x="8" y="1393.5" width="304" height="19"/>
+                                        <rect key="frame" x="8" y="1492.5" width="304" height="19"/>
                                         <color key="tintColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="15"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="5yQ-8M-jsF" customClass="ImageSlider" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="6" y="1293.5" width="308" height="31"/>
+                                        <rect key="frame" x="6" y="1374.5" width="308" height="40"/>
                                         <color key="minimumTrackTintColor" red="0.2781490683555603" green="0.14739993214607239" blue="0.081067316234111786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="image" keyPath="image" value="caramelo"/>
                                         </userDefinedRuntimeAttributes>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chocolate:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9AW-DV-ziN">
-                                        <rect key="frame" x="8" y="1213.5" width="304" height="19"/>
+                                        <rect key="frame" x="8" y="1285.5" width="304" height="19"/>
                                         <color key="tintColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="15"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -3975,21 +3976,21 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="dD5-vt-Rs0" customClass="ImageSlider" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="6" y="1353.5" width="308" height="31"/>
+                                        <rect key="frame" x="6" y="1443.5" width="308" height="40"/>
                                         <color key="minimumTrackTintColor" red="0.2781490683555603" green="0.14739993214607239" blue="0.081067316234111786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="image" keyPath="image" value="defumado"/>
                                         </userDefinedRuntimeAttributes>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nozes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofm-nr-Q2S">
-                                        <rect key="frame" x="8" y="1633.5" width="304" height="19"/>
+                                        <rect key="frame" x="8" y="1768.5" width="304" height="19"/>
                                         <color key="tintColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="15"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="6bF-RB-bJh" customClass="ImageSlider" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="6" y="813.5" width="308" height="31"/>
+                                        <rect key="frame" x="6" y="822.5" width="308" height="40"/>
                                         <color key="minimumTrackTintColor" red="0.2781490683555603" green="0.14739993214607239" blue="0.081067316234111786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="image" keyPath="image" value="acido"/>
@@ -4040,7 +4041,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Azedo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4s-tD-mE7">
-                                        <rect key="frame" x="8" y="793.5" width="304" height="19"/>
+                                        <rect key="frame" x="8" y="802.5" width="304" height="19"/>
                                         <color key="tintColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="15"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -4057,7 +4058,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="J3B-NW-KM6" customClass="ImageSlider" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="6" y="1233.5" width="308" height="31"/>
+                                        <rect key="frame" x="6" y="1305.5" width="308" height="40"/>
                                         <color key="minimumTrackTintColor" red="0.2781490683555603" green="0.14739993214607239" blue="0.081067316234111786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="image" keyPath="image" value="chocolate"/>
@@ -4093,14 +4094,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="HIF-6s-bRt" customClass="ImageSlider" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="6" y="1113.5" width="308" height="31"/>
+                                        <rect key="frame" x="6" y="1167.5" width="308" height="40"/>
                                         <color key="minimumTrackTintColor" red="0.2781490683555603" green="0.14739993214607239" blue="0.081067316234111786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="image" keyPath="image" value="citrico"/>
                                         </userDefinedRuntimeAttributes>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frutas Vermelhas:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gC-Ud-gGP">
-                                        <rect key="frame" x="8" y="1033.5" width="304" height="19"/>
+                                        <rect key="frame" x="8" y="1078.5" width="304" height="19"/>
                                         <color key="tintColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="15"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -4147,28 +4148,28 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frutas com Caroço:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJK-rb-N93">
-                                        <rect key="frame" x="8" y="1153.5" width="304" height="19"/>
+                                        <rect key="frame" x="8" y="1216.5" width="304" height="19"/>
                                         <color key="tintColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="15"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="LIB-Nz-Izh" customClass="ImageSlider" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="6" y="993.5" width="308" height="31"/>
+                                        <rect key="frame" x="6" y="1029.5" width="308" height="40"/>
                                         <color key="minimumTrackTintColor" red="0.2781490683555603" green="0.14739993214607239" blue="0.081067316234111786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="image" keyPath="image" value="salgado"/>
                                         </userDefinedRuntimeAttributes>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="6s0-rm-F9b" customClass="ImageSlider" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="6" y="1473.5" width="308" height="31"/>
+                                        <rect key="frame" x="6" y="1581.5" width="308" height="40"/>
                                         <color key="minimumTrackTintColor" red="0.2781490683555603" green="0.14739993214607239" blue="0.081067316234111786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="image" keyPath="image" value="herbal"/>
                                         </userDefinedRuntimeAttributes>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comentários:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdj-YT-JAM">
-                                        <rect key="frame" x="8" y="1703.5" width="304" height="22.5"/>
+                                        <rect key="frame" x="8" y="1847.5" width="304" height="22.5"/>
                                         <color key="tintColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
