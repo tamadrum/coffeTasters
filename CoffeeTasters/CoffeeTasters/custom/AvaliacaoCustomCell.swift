@@ -45,32 +45,19 @@ class AvaliacaoCustomCell: UITableViewCell {
 
   
         
-//        let photo = Photo(image: image!, userGenerated: true)
-//        let content = PhotoShareContent(photos: [photo])
-//        
-//        let shareDialog = ShareDialog(content: content)
-//        shareDialog.mode = .native
-//        shareDialog.failsOnInvalidData = true
-//        shareDialog.completion = { result in
-//            // Handle share results
-//        }
-//        
-//
-//        try? shareDialog.show()
+        let photo = Photo(image: image!, userGenerated: true)
+        let content = PhotoShareContent(photos: [photo])
         
+        let shareDialog = ShareDialog(content: content)
+        shareDialog.mode = .native
+        shareDialog.failsOnInvalidData = true
+        shareDialog.completion = { result in
+            // Handle share results
+        }
         
 
-        
-        
-        let vc = UIActivityViewController(activityItems: [textoParaPublicar, image!, URL(string: "http://www.coffeetasters.com.br/")!], applicationActivities: [])
-        nav?.present(vc, animated: true)
-        
-        
-        
-        
-        
-        
-        
+        try? shareDialog.show()
+
     }
     
 }
