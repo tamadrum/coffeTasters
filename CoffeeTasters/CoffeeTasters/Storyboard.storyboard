@@ -265,7 +265,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DrS-V8-GWE">
-                                <rect key="frame" x="0.0" y="106" width="320" height="378"/>
+                                <rect key="frame" x="0.0" y="102" width="320" height="382"/>
                                 <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="itens" id="r9d-Sb-p7J" customClass="CarrinhoItemCustomCell" customModule="CoffeeTasters" customModuleProvider="target">
@@ -355,7 +355,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QTD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNc-Nh-l0r">
-                                <rect key="frame" x="8" y="76" width="54" height="21"/>
+                                <rect key="frame" x="8" y="72" width="54" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="54" id="FJk-WP-2ac"/>
                                     <constraint firstAttribute="height" constant="21" id="lk2-gA-420"/>
@@ -365,7 +365,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksL-rI-nuV">
-                                <rect key="frame" x="70" y="76" width="144" height="21"/>
+                                <rect key="frame" x="70" y="72" width="144" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="144" id="JfD-vG-8VF"/>
                                     <constraint firstAttribute="height" constant="21" id="tVx-qp-xvN"/>
@@ -375,7 +375,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preço" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6be-Qe-gnM">
-                                <rect key="frame" x="222" y="76" width="90" height="21"/>
+                                <rect key="frame" x="222" y="72" width="90" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="4eb-OC-VPc"/>
                                     <constraint firstAttribute="width" constant="90" id="pME-s9-N97"/>
@@ -1703,7 +1703,6 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="fundoBranco" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="buscarCafePorQRCode:" destination="eot-f5-Bbz" eventType="touchUpInside" id="kRc-lr-EdI"/>
                                     <segue destination="nNU-OZ-tgR" kind="show" id="8kt-iw-Nfl"/>
                                 </connections>
                             </button>

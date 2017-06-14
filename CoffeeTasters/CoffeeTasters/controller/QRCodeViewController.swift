@@ -94,12 +94,23 @@ class QRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
 //                messageLabel.text = metadataObj.stringValue
                 print("QRCODE \(metadataObj.stringValue)")
                 
-                var data:[Cafe] = Dao<Cafe>().list()
-                
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "detalhesCafe") as! DetalhesCafeController
-                vc.cafeAvaliado = data[0]
-                self.navigationController?.pushViewController(vc, animated: true)
+//                var data:[Cafe] = Dao<Cafe>().list()
+//
+//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                let vc = storyboard.instantiateViewController(withIdentifier: "detalhesCafe") as! DetalhesCafeController
+//                vc.cafeAvaliado = data[0]
+//                self.navigationController?.pushViewController(vc, animated: true)
+                let alerta = UIAlertController(title: "Conteudo do QR Code", message: metadataObj.stringValue, preferredStyle: .actionSheet)
+                let ok = UIAlertAction(title: "OK", style: .default, handler: {
+                    alert-> Void in
+                    if let nav = self.navigationController{
+                        nav.popViewController(animated: true)
+                    }
+                })
+                alerta.addAction(ok)
+                if let nav = navigationController {
+                    nav.present(alerta, animated: true)
+                }
             }
         }
     }
