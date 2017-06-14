@@ -27,6 +27,8 @@ class WheelFlavor: UIView {
     // Rects referente a onde as imagens se encontram em ordem
     var images:[CGRect] = []
     
+    var textoParaPublicar: String?
+    
     /// Array de cores para a roda dos sabores
     let cores = [
         WheelFlavor.hexStringToUIColor(hex: "BD183D"), // doce
@@ -102,6 +104,11 @@ class WheelFlavor: UIView {
             }
             
             mostraAlerta(context: context, centro: centro)
+            
+            if let textoParaPublicar = textoParaPublicar {
+                escreveTextoBold(texto: "Coffee Tasters", origem: CGPoint(x: 0, y: 10))
+                escreveTexto(texto: textoParaPublicar, origem: CGPoint(x: 0, y:310))
+            }
         }
     }
     
@@ -252,26 +259,38 @@ class WheelFlavor: UIView {
      - Parameter angulo: O angulo para onde ele aponta
      
      */
-    func escreveTexto(texto: String, centro: CGPoint, raio: Int, angulo: Double){
+    func escreveTexto(texto: String, origem: CGPoint){
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineBreakMode = .byTruncatingTail
         paragraphStyle.alignment = .center;
         
-        let font = UIFont(name: "Helvetica-Bold", size:9.0)
-        let novoCentro = CGPoint(x: centro.x-20, y: centro.y-5)
-        let novoRaio = raio + 25
-        let origem = getCoordenadas(centro: novoCentro, raio: novoRaio, angulo: angulo)
-
-        let attributes:[String:Any] = [NSFontAttributeName: font!, NSForegroundColorAttributeName: UIColor.black, NSParagraphStyleAttributeName: paragraphStyle]
+        let font = UIFont(name: "Merriweather", size:12.0)
+        
+        let attributes:[String:Any] = [NSFontAttributeName: font!, NSForegroundColorAttributeName: UIColor.brown, NSParagraphStyleAttributeName: paragraphStyle]
         
         let myString: NSString = texto as NSString
         let size = myString.size(attributes: attributes)
         
-        let textRect = CGRect(x: origem.x, y: origem.y, width: size.width, height: size.height);
+        let textRect = CGRect(x: origem.x, y: origem.y, width: self.bounds.width, height: size.height);
         
         myString.draw(in: textRect, withAttributes: attributes)
     }
-    
+    func escreveTextoBold(texto: String, origem: CGPoint){
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineBreakMode = .byTruncatingTail
+        paragraphStyle.alignment = .center;
+        
+        let font = UIFont(name: "Merriweather-Bold", size:15.0)
+        
+        let attributes:[String:Any] = [NSFontAttributeName: font!, NSForegroundColorAttributeName: UIColor.brown, NSParagraphStyleAttributeName: paragraphStyle]
+        
+        let myString: NSString = texto as NSString
+        let size = myString.size(attributes: attributes)
+        
+        let textRect = CGRect(x: origem.x, y: origem.y, width: self.bounds.width, height: size.height);
+        
+        myString.draw(in: textRect, withAttributes: attributes)
+    }
     /**
      Escreve o texto na tela referente ao sabor
      

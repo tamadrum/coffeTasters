@@ -27,10 +27,11 @@ class AvaliacaoCustomCell: UITableViewCell {
         let usuario = Usuario()
         usuario.load()
         
-        let textoParaPublicar = "\(usuario.nome) avaliou um novo café: \(nomeCafe.text!) \n Avaliação: \(rating.rating)/4.0 \n"
+        let textoParaPublicar = "\(usuario.nome) avaliou \(nomeCafe.text!) \n Avaliação: \(rating.rating)/4.0 \n"
         
-        let view = WheelFlavor(frame: CGRect(x: 0, y:0, width:300, height: 300))
+        let view = WheelFlavor(frame: CGRect(x: 0, y:0, width:300, height: 350))
         view.flavorUsuario = flavor
+        view.textoParaPublicar = textoParaPublicar
         
         UIGraphicsBeginImageContextWithOptions(view.bounds.size, true, 0.0)
         view.layer.render(in: UIGraphicsGetCurrentContext()!)
@@ -45,19 +46,22 @@ class AvaliacaoCustomCell: UITableViewCell {
 
   
         
-        let photo = Photo(image: image!, userGenerated: true)
-        let content = PhotoShareContent(photos: [photo])
+//       let photo = Photo(image: image!, userGenerated: true)
+//        let content = PhotoShareContent(photos: [photo])
         
-        let shareDialog = ShareDialog(content: content)
-        shareDialog.mode = .native
-        shareDialog.failsOnInvalidData = true
-        shareDialog.completion = { result in
-            // Handle share results
-        }
+//        let shareDialog = ShareDialog(content: content)
+//        shareDialog.mode = .native
+//        shareDialog.failsOnInvalidData = true
+//        shareDialog.completion = { result in
+//            // Handle share results
+//        }
+//
+//
+//        try? shareDialog.show()
         
-
-        try? shareDialog.show()
-
+        let activityViewController = UIActivityViewController(activityItems: [image!], applicationActivities: nil)
+        nav?.present(activityViewController,animated: true,completion: nil)
+        
     }
     
 }
