@@ -62,7 +62,7 @@ class AvaliacaoCustomCell: UITableViewCell {
 
         
         
-        let vc = UIActivityViewController(activityItems: [textoParaPublicar, image!], applicationActivities: [])
+        let vc = UIActivityViewController(activityItems: [textoParaPublicar, image!, URL(string: "http://www.coffeetasters.com.br/")!], applicationActivities: [])
         nav?.present(vc, animated: true)
         
         
