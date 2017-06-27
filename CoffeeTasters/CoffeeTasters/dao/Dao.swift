@@ -184,55 +184,183 @@ class Dao<T> {
                 carrinhoDao.save()
                 print("Carrinho criado com R$ \(carrinho.valorTotal)")
             
-            // Inserindo Cafés
-                var nomes = ["AC CAFÉ", "CARMO ESTATE COFFEE", "DB ESTATE COFFEE", "ECOAGRÍCOLA CAFÉ LTDA",
-                             "FAZENDA BELA VISTA", "FAZENDA CAMBARÁ", "FAZENDA CAMOCIM", "FAZENDA CAPOEIRA ESTATE COFFEE", "FAZENDA DO SERTÃO",
-                             "FAZENDA DUTRA", "FAZENDA HELENA", "Café Pelé", "3 Corações", "FAZENDA SERRA DAS TRÊS BARRAS", "Nespresso" ]
-                nomes.sort()
+          // Inserindo Cafés
+
+            let cafeDao = Dao<Cafe>()
+            let flavorDao = Dao<Flavor>()
             
-                let cafeDao = Dao<Cafe>()
-                let flavorDao = Dao<Flavor>()
+            let flavor = flavorDao.new()
+            flavor.amargo = 10
+            flavor.azedo = 1
+            flavor.caramelo = 2
+            flavor.cereais = 3
+            flavor.chocolate = 4
+            flavor.defumado = 5
+            flavor.doce = 6
+            flavor.encorpado = 7
+            flavor.especiarias = 8
+            flavor.floral = 9
+            flavor.frutasCaroco = 10
+            flavor.frutasCitricas = 1
+            flavor.frutasVermelhas = 2
+            flavor.herbal = 3
+            flavor.nozes = 4
+            flavor.salgado = 5
             
-                var c:Cafe!
-                var flavor:Flavor!
-                for i in 0..<nomes.count {
-                    c = cafeDao.new()
-                    c.nome = nomes[i]
-                    c.altitude = 20
-                    //c.imagem = #imageLiteral(resourceName: "cafe")
-                    c.cidade = "três lagoas"
-                    c.estado = "MS"
-                    c.pais = "Brasil"
-                    c.descricao = "Um café bom..."
-                    c.produtor = "Asdrubal"
-                    c.torrador = "Epaminondas"
-                    c.regiao = "montanhosa"
-                    c.tipo = "Arábico"
-                    c.safra = "20/02/2014"
-                    
-                    flavor = flavorDao.new()
-                    flavor.amargo = 10
-                    flavor.azedo = 1
-                    flavor.caramelo = 2
-                    flavor.cereais = 3
-                    flavor.chocolate = 4
-                    flavor.defumado = 5
-                    flavor.doce = 6
-                    flavor.encorpado = 7
-                    flavor.especiarias = 8
-                    flavor.floral = 9
-                    flavor.frutasCaroco = 10
-                    flavor.frutasCitricas = 1
-                    flavor.frutasVermelhas = 2
-                    flavor.herbal = 3
-                    flavor.nozes = 4
-                    flavor.salgado = 5
-                    
-                    c.flavorTorrador = flavor
-                    c.latitude = -23.548064
-                    c.longitude = -46.5708517
-                }
-                cafeDao.save()
+            let cafe1 = cafeDao.new()
+            cafe1.nome = "Catuaí Vermelho Sítio Alto Ouro"
+            cafe1.pais = "Brasil"
+            cafe1.estado = "es"
+            cafe1.produtor = "Dorvanil D'Agostine da Silva"
+            cafe1.tipo = "arabica catuai vermelho"
+            cafe1.torrador = "Raposeiras"
+            cafe1.regiao = "Vargem Alta"
+            cafe1.latitude = -20.547778
+            cafe1.longitude = -41.010833
+            cafe1.altitude = 1200
+            //cafe1.processo = "descascado"
+            cafe1.ehBlend = false
+            cafe1.safra = "2016/17"
+            cafe1.metodo = false // coffeLab
+            cafe1.flavorTorrador = flavor
+            
+            let cafe2 = cafeDao.new()
+            cafe2.nome = "Bourbon Amarelo (Carmo 13) - Fazenda Santa Inês"
+            cafe2.pais = "Brasil"
+            cafe2.estado = "mg"
+            cafe2.produtor = "Francisco Pereira"
+            cafe2.tipo = "arabica boubon amarelo"
+            cafe2.torrador = "Raposeiras"
+            cafe2.regiao = "carmo de minas"
+            cafe2.latitude = -22.091389
+            cafe2.longitude = -45.169056
+            cafe2.altitude = 950
+            //cafe2.processo = natural
+            cafe2.ehBlend = false
+            cafe2.safra = "2016/17"
+            cafe2.metodo = false // coffeLab
+            cafe2.flavorTorrador = flavor
+            
+            let cafe3 = cafeDao.new()
+            cafe3.nome = "785 - Sítio Rancho Dantas"
+            cafe3.pais = "Brasil"
+            cafe3.estado = "es"
+            cafe3.produtor = "Joselino Meneguete"
+            cafe3.tipo = "arabica"
+            cafe3.torrador = "Raposeiras"
+            cafe3.regiao = "Brejetuba"
+            cafe3.latitude = -20.909444
+            cafe3.longitude = -41.040833
+            cafe3.altitude = 950
+            //cafe1.processo = "descascado"
+            cafe3.ehBlend = false
+            cafe3.safra = "2016/17"
+            cafe3.metodo = false // coffeLab
+            cafe3.flavorTorrador = flavor
+            
+            let cafe4 = cafeDao.new()
+            cafe4.nome = "FAF-Cartola-Micro lote"
+            cafe4.pais = "Brasil"
+            cafe4.estado = "sp"
+            cafe4.produtor = "Fazenda Ambiental Fortaleza"
+            cafe4.tipo = "arabica"
+            cafe4.torrador = "Isso e Caffe"
+            cafe4.regiao = "mococa"
+            cafe4.latitude = 0
+            cafe4.longitude = 0
+            cafe4.altitude = 645
+            //cafe4.processo =
+            cafe4.ehBlend = false
+            //cafe4.safra
+            cafe4.metodo = false // Mirante 9 de Julho
+            cafe4.flavorTorrador = flavor
+            
+            let cafe5 = cafeDao.new()
+            cafe5.nome = "FAF-Icatu-Micro lote"
+            cafe5.pais = "Brasil"
+            cafe5.estado = "sp"
+            cafe5.produtor = "Fazenda Ambiental Fortaleza"
+            cafe5.tipo = "arabica"
+            cafe5.torrador = "Isso e Caffe"
+            cafe5.regiao = "mococa"
+            //cafe5.latitude
+            //cafe5.longitude
+            cafe5.altitude = 646
+            //cafe5.processo
+            cafe5.ehBlend = false
+            //cafe5.safra =
+            cafe5.metodo = false // Mirante 9 de Julho
+            cafe5.flavorTorrador = flavor
+            
+            let cafe6 = cafeDao.new()
+            cafe6.nome = "FAF-Cobatã-Micro lote"
+            cafe6.pais = "Brasil"
+            cafe6.estado = "sp"
+            cafe6.produtor = "Fazenda Ambiental Fortaleza"
+            cafe6.tipo = "arabica"
+            cafe6.torrador = "Isso e Caffe"
+            cafe6.regiao = "mococa"
+            //cafe6.latitude
+            //cafe6.longitude
+            cafe6.altitude = 647
+            //cafe6.processo
+            cafe6.ehBlend = false
+            //cafe6.safra
+            cafe6.metodo = false // Mirante 9 de Julho
+            cafe6.flavorTorrador = flavor
+            
+            let cafe7 = cafeDao.new()
+            cafe7.nome = "Orfeu Blend Suave"
+            cafe7.pais = "brasil"
+            cafe7.estado = "sp"
+            cafe7.produtor = "FAZENDA RAINHA"
+            cafe7.tipo = "arabica Boubon amarelo"
+            cafe7.torrador = "Orfeu"
+            cafe7.regiao = "São Sebastião da Grama"
+            //cafe7.latitude
+            //cafe7.longitude
+            cafe7.altitude = 1400
+            //cafe7.processo = "descascado"
+            cafe7.ehBlend = false
+            //cafe7.safra
+            cafe7.metodo = false //
+            cafe7.flavorTorrador = flavor
+            
+            let cafe8 = cafeDao.new()
+            cafe8.nome = "CAFÉ SANTA RITA - SALADA DE FRUTAS"
+            cafe8.pais = "Brasil"
+            cafe8.estado = "mg"
+            cafe8.produtor = "arabica Catuaí Vermelho"
+            //cafe8.tipo
+            cafe8.torrador = "Espera Feliz"
+            //cafe8.regiao
+            //cafe8.latitude
+            //cafe8.longitude
+            cafe8.altitude = 1050
+            //cafe8.processo = natural
+            cafe8.ehBlend = false
+            cafe8.safra = "2016/17"
+            cafe8.metodo = false
+            cafe8.flavorTorrador = flavor
+            
+            let cafe9 = cafeDao.new()
+            cafe9.nome = "Ninho da Águia"
+            cafe9.pais = "Brasil"
+            cafe9.estado = "mg"
+            cafe9.produtor = "Clayton Barossa Monteiro"
+            cafe9.tipo = "arabica catuai vermelho"
+            cafe9.torrador = "ninho da Aguia"
+            cafe9.regiao = "Serra do Caparaó"
+            //cafe9.latitude
+            //cafe9.longitude
+            cafe9.altitude = 1250
+            //cafe9.processo = "natural"
+            cafe9.ehBlend = false
+            cafe9.safra = "2016/17"
+            cafe9.metodo = false
+            cafe9.flavorTorrador = flavor
+            
+            cafeDao.save()
             
             // Inserindo Preparos
             
