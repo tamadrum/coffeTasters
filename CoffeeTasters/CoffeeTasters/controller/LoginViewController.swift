@@ -49,7 +49,10 @@ class LoginViewController: UIViewController, LoginButtonDelegate, UIWebViewDeleg
             let height:NSLayoutConstraint = NSLayoutConstraint(item: alerta.view, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: self.view.frame.height * 0.8)
             alerta.view.addConstraint(height);
 
-            let web = UIWebView(frame: CGRect(x:12.0, y:45.0, width:240.0, height:self.view.frame.height * 0.65))
+            
+            
+            let web = UIWebView(frame: CGRect(x:12.0, y:45.0, width:240.0, height:self.view.frame.height * 0.8 - 110))
+            
             web.delegate = self
             
             var text = ""
