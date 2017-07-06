@@ -44,9 +44,12 @@ class LoginViewController: UIViewController, LoginButtonDelegate, UIWebViewDeleg
         
         if !usuario.viuEULA{
             
-            let alerta = UIAlertController(title: "EULA", message: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", preferredStyle: .alert)
+            let alerta = UIAlertController(title: "EULA", message: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", preferredStyle: .alert)
             
-            let web = UIWebView(frame: CGRect(x:12.0, y:45.0, width:240.0, height:300.0))
+            let height:NSLayoutConstraint = NSLayoutConstraint(item: alerta.view, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: self.view.frame.height * 0.8)
+            alerta.view.addConstraint(height);
+
+            let web = UIWebView(frame: CGRect(x:12.0, y:45.0, width:240.0, height:self.view.frame.height * 0.65))
             web.delegate = self
             
             var text = ""
@@ -61,7 +64,6 @@ class LoginViewController: UIViewController, LoginButtonDelegate, UIWebViewDeleg
             }
             
             web.loadHTMLString(text, baseURL: nil)
-            
             alerta.view.addSubview(web)
             
             let ok = UIAlertAction(title: "OK", style: .default, handler: {(alert: UIAlertAction!) in
