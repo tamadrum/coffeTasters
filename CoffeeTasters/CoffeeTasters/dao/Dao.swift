@@ -210,6 +210,7 @@ class Dao<T> {
             let cafe1 = cafeDao.new()
             cafe1.nome = "Catuaí Vermelho Sítio Alto Ouro"
             cafe1.pais = "Brasil"
+            cafe1.cidade = "Guarapari"
             cafe1.estado = "es"
             cafe1.produtor = "Dorvanil D'Agostine da Silva"
             cafe1.tipo = "arabica catuai vermelho"
@@ -227,6 +228,7 @@ class Dao<T> {
             let cafe2 = cafeDao.new()
             cafe2.nome = "Bourbon Amarelo (Carmo 13) - Fazenda Santa Inês"
             cafe2.pais = "Brasil"
+            cafe2.cidade = "."
             cafe2.estado = "mg"
             cafe2.produtor = "Francisco Pereira"
             cafe2.tipo = "arabica boubon amarelo"
@@ -244,6 +246,7 @@ class Dao<T> {
             let cafe3 = cafeDao.new()
             cafe3.nome = "785 - Sítio Rancho Dantas"
             cafe3.pais = "Brasil"
+            cafe3.cidade = "."
             cafe3.estado = "es"
             cafe3.produtor = "Joselino Meneguete"
             cafe3.tipo = "arabica"
@@ -261,6 +264,7 @@ class Dao<T> {
             let cafe4 = cafeDao.new()
             cafe4.nome = "FAF-Cartola-Micro lote"
             cafe4.pais = "Brasil"
+            cafe4.cidade = "."
             cafe4.estado = "sp"
             cafe4.produtor = "Fazenda Ambiental Fortaleza"
             cafe4.tipo = "arabica"
@@ -278,6 +282,7 @@ class Dao<T> {
             let cafe5 = cafeDao.new()
             cafe5.nome = "FAF-Icatu-Micro lote"
             cafe5.pais = "Brasil"
+            cafe5.cidade = "."
             cafe5.estado = "sp"
             cafe5.produtor = "Fazenda Ambiental Fortaleza"
             cafe5.tipo = "arabica"
@@ -295,6 +300,7 @@ class Dao<T> {
             let cafe6 = cafeDao.new()
             cafe6.nome = "FAF-Cobatã-Micro lote"
             cafe6.pais = "Brasil"
+            cafe6.cidade = "."
             cafe6.estado = "sp"
             cafe6.produtor = "Fazenda Ambiental Fortaleza"
             cafe6.tipo = "arabica"
@@ -312,6 +318,7 @@ class Dao<T> {
             let cafe7 = cafeDao.new()
             cafe7.nome = "Orfeu Blend Suave"
             cafe7.pais = "brasil"
+            cafe7.cidade = "."
             cafe7.estado = "sp"
             cafe7.produtor = "FAZENDA RAINHA"
             cafe7.tipo = "arabica Boubon amarelo"
@@ -329,6 +336,7 @@ class Dao<T> {
             let cafe8 = cafeDao.new()
             cafe8.nome = "CAFÉ SANTA RITA - SALADA DE FRUTAS"
             cafe8.pais = "Brasil"
+            cafe8.cidade = "."
             cafe8.estado = "mg"
             cafe8.produtor = "arabica Catuaí Vermelho"
             //cafe8.tipo
@@ -346,6 +354,7 @@ class Dao<T> {
             let cafe9 = cafeDao.new()
             cafe9.nome = "Ninho da Águia"
             cafe9.pais = "Brasil"
+            cafe9.cidade = "."
             cafe9.estado = "mg"
             cafe9.produtor = "Clayton Barossa Monteiro"
             cafe9.tipo = "arabica catuai vermelho"

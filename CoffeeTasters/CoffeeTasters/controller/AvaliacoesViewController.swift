@@ -33,6 +33,7 @@ class AvaliacoesViewController: Acordeao {
         self.tableView?.reloadData()
     }
     
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let (parent, isParentCell, actualPosition) = self.findParent(indexPath.row)
         
