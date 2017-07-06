@@ -45,6 +45,8 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
     @IBOutlet weak var cafeBlendSegmentControl: UISegmentedControl!
     @IBOutlet weak var buscaCafeButton: UIButton!
     
+    var delegate:UpdateAvaliacoesProtocol?
+    
     var listaTextoModoPreparo = ["Prensa", "Espresso", "Coado", "Moca", "Aeropress", "Clever"]
     
     var cafeAvaliado: Cafe?
@@ -170,6 +172,46 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
             cafeAvaliado = cafe
         }
         
+        let daoFlavor = Dao<Flavor>()
+        
+        let meuFlavor = daoFlavor.new()
+        meuFlavor.doce = Int32(doceSlider.value)
+        meuFlavor.azedo = Int32(azedoSlider.value)
+        meuFlavor.floral = Int32(floralSlider.value)
+        meuFlavor.especiarias = Int32(especiariasSlider.value)
+        meuFlavor.salgado = Int32(salgadoSlider.value)
+        meuFlavor.frutasVermelhas = Int32(frutasVermelhasSlider.value)
+        meuFlavor.frutasCitricas = Int32(frutasCitricasSlider.value)
+        meuFlavor.frutasCaroco = Int32(frutasCarocoSlider.value)
+        meuFlavor.chocolate = Int32(chocolateSlider.value)
+        meuFlavor.caramelo = Int32(carameloSlider.value)
+        meuFlavor.defumado = Int32(defumadoSlider.value)
+        meuFlavor.amargo = Int32(amargoSlider.value)
+        meuFlavor.herbal = Int32(herbalSlider.value)
+        meuFlavor.encorpado = Int32(encorpadoSlider.value)
+        meuFlavor.cereais = Int32(cereaisSlider.value)
+        meuFlavor.nozes = Int32(nozesSlider.value)
+        
+        let flavorMedia = daoFlavor.new()
+        flavorMedia.doce = Int32(5)
+        flavorMedia.azedo = Int32(7)
+        flavorMedia.floral = Int32(9)
+        flavorMedia.especiarias = Int32(3)
+        flavorMedia.salgado = Int32(1)
+        flavorMedia.frutasVermelhas = Int32(8)
+        flavorMedia.frutasCitricas = Int32(6)
+        flavorMedia.frutasCaroco = Int32(4)
+        flavorMedia.chocolate = Int32(2)
+        flavorMedia.caramelo = Int32(8)
+        flavorMedia.defumado = Int32(5)
+        flavorMedia.amargo = Int32(1)
+        flavorMedia.herbal = Int32(3)
+        flavorMedia.encorpado = Int32(9)
+        flavorMedia.cereais = Int32(1)
+        flavorMedia.nozes = Int32(8)
+
+        daoFlavor.save()
+
         let dao = Dao<Avaliacao>()
         
         let avaliacao = dao.new()
@@ -179,50 +221,18 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
         avaliacao.dataColheita = "10/10/2017"
         avaliacao.dataTorra = "12/10/2017"
         
-        avaliacao.flavor = Dao<Flavor>().new()
-        avaliacao.flavor?.doce = Int32(doceSlider.value)
-        avaliacao.flavor?.azedo = Int32(azedoSlider.value)
-        avaliacao.flavor?.floral = Int32(floralSlider.value)
-        avaliacao.flavor?.especiarias = Int32(especiariasSlider.value)
-        avaliacao.flavor?.salgado = Int32(salgadoSlider.value)
-        avaliacao.flavor?.frutasVermelhas = Int32(frutasVermelhasSlider.value)
-        avaliacao.flavor?.frutasCitricas = Int32(frutasCitricasSlider.value)
-        avaliacao.flavor?.frutasCaroco = Int32(frutasCarocoSlider.value)
-        avaliacao.flavor?.chocolate = Int32(chocolateSlider.value)
-        avaliacao.flavor?.caramelo = Int32(carameloSlider.value)
-        avaliacao.flavor?.defumado = Int32(defumadoSlider.value)
-        avaliacao.flavor?.amargo = Int32(amargoSlider.value)
-        avaliacao.flavor?.herbal = Int32(herbalSlider.value)
-        avaliacao.flavor?.encorpado = Int32(encorpadoSlider.value)
-        avaliacao.flavor?.cereais = Int32(cereaisSlider.value)
-        avaliacao.flavor?.nozes = Int32(nozesSlider.value)
+        avaliacao.flavor = meuFlavor
+        avaliacao.flavorMedia = flavorMedia
         
         avaliacao.gostou = Int32(rating.rating)
         avaliacao.localPreparo = localPreparoTextField.text
         avaliacao.metodoPreparo = listaTextoModoPreparo[metodoPreparoSegmentControl.selectedSegmentIndex]
         avaliacao.obs = comentariosTextView.text
         
-        avaliacao.flavorMedia = Dao<Flavor>().new()
-        avaliacao.flavorMedia?.doce = Int32(5)
-        avaliacao.flavorMedia?.azedo = Int32(7)
-        avaliacao.flavorMedia?.floral = Int32(9)
-        avaliacao.flavorMedia?.especiarias = Int32(3)
-        avaliacao.flavorMedia?.salgado = Int32(1)
-        avaliacao.flavorMedia?.frutasVermelhas = Int32(8)
-        avaliacao.flavorMedia?.frutasCitricas = Int32(6)
-        avaliacao.flavorMedia?.frutasCaroco = Int32(4)
-        avaliacao.flavorMedia?.chocolate = Int32(2)
-        avaliacao.flavorMedia?.caramelo = Int32(8)
-        avaliacao.flavorMedia?.defumado = Int32(5)
-        avaliacao.flavorMedia?.amargo = Int32(1)
-        avaliacao.flavorMedia?.herbal = Int32(3)
-        avaliacao.flavorMedia?.encorpado = Int32(9)
-        avaliacao.flavorMedia?.cereais = Int32(1)
-        avaliacao.flavorMedia?.nozes = Int32(8)
-        
         dao.save()
         
         if let nav = navigationController {
+            delegate?.atualizarListaProtocol()
             nav.popToRootViewController(animated: true)
         }
     }

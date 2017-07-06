@@ -63,6 +63,7 @@
 		16EBC6181E8D095600A87B2F /* BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EBC6171E8D095600A87B2F /* BorderButton.swift */; };
 		16EBC61D1E8DC1CE00A87B2F /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16EBC61C1E8DC1CE00A87B2F /* Storyboard.storyboard */; };
 		16EBC61F1E8DCE4500A87B2F /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EBC61E1E8DCE4500A87B2F /* PerfilViewController.swift */; };
+		16F0657F1F0E644300B010EE /* UpdateAvaliacoesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F0657E1F0E644300B010EE /* UpdateAvaliacoesProtocol.swift */; };
 		16F5B2B31E9BABA600E0D191 /* Anotacoes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 16F5B2B21E9BABA600E0D191 /* Anotacoes.txt */; };
 		16F5B2B51E9BC3F900E0D191 /* AvaliacaoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F5B2B41E9BC3F900E0D191 /* AvaliacaoDao.swift */; };
 		16F5B2B71E9BF4A500E0D191 /* Notificacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F5B2B61E9BF4A500E0D191 /* Notificacao.swift */; };
@@ -161,6 +162,7 @@
 		16EBC6171E8D095600A87B2F /* BorderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BorderButton.swift; path = custom/BorderButton.swift; sourceTree = "<group>"; };
 		16EBC61C1E8DC1CE00A87B2F /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		16EBC61E1E8DCE4500A87B2F /* PerfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PerfilViewController.swift; path = controller/PerfilViewController.swift; sourceTree = "<group>"; };
+		16F0657E1F0E644300B010EE /* UpdateAvaliacoesProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateAvaliacoesProtocol.swift; sourceTree = "<group>"; };
 		16F5B2B21E9BABA600E0D191 /* Anotacoes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Anotacoes.txt; sourceTree = "<group>"; };
 		16F5B2B41E9BC3F900E0D191 /* AvaliacaoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AvaliacaoDao.swift; path = dao/AvaliacaoDao.swift; sourceTree = "<group>"; };
 		16F5B2B61E9BF4A500E0D191 /* Notificacao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Notificacao.swift; path = modelo/Notificacao.swift; sourceTree = "<group>"; };
@@ -354,6 +356,7 @@
 				1FAB15451EA17AF300E794A8 /* CafePickerView.swift */,
 				16DFD65F1EA1986E00547B6F /* SelectCafeProtocol.swift */,
 				16BE94911EDB930E0097B764 /* AvaliacaoDetailsCell.swift */,
+				16F0657E1F0E644300B010EE /* UpdateAvaliacoesProtocol.swift */,
 			);
 			name = custom;
 			sourceTree = "<group>";
@@ -639,6 +642,7 @@
 				16EBC5E71E8C66CB00A87B2F /* AppDelegate.swift in Sources */,
 				1614EE441E8E5F3800C44F11 /* AvaliacaoViewController.swift in Sources */,
 				16E67A2F1E911A34005EE82E /* CarrinhoDao.swift in Sources */,
+				16F0657F1F0E644300B010EE /* UpdateAvaliacoesProtocol.swift in Sources */,
 				16EBC6181E8D095600A87B2F /* BorderButton.swift in Sources */,
 				1614EE461E8E5F8400C44F11 /* FinalizarCompraViewController.swift in Sources */,
 				16DFD65E1EA166DC00547B6F /* ValidadeCartaoPickerView.swift in Sources */,

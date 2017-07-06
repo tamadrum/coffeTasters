@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class AvaliacoesViewController: Acordeao {
+class AvaliacoesViewController: Acordeao, UpdateAvaliacoesProtocol {
 
     @IBOutlet var tableView:UITableView?
 
@@ -33,19 +33,24 @@ class AvaliacoesViewController: Acordeao {
         self.tableView?.reloadData()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "addAvaliacao") {
+            let view = segue.destination as! AvaliacaoViewController
+            view.delegate = self
+        }
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let (parent, isParentCell, actualPosition) = self.findParent(indexPath.row)
         
+        let avaliacao = self.dataSource[parent].item as! Avaliacao
+        
         if isParentCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: parentCellIdentifier , for: indexPath) as! AvaliacaoCustomCell
-            
-            let avaliacao = self.dataSource[parent].item as! Avaliacao
             
             cell.selectionStyle = .none
             
             cell.nav = self.navigationController
-            cell.flavor = avaliacao.flavor
             cell.vc = self
             
             cell.comentario.text = avaliacao.obs
@@ -58,15 +63,29 @@ class AvaliacoesViewController: Acordeao {
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: childCellIdentifier, for: indexPath) as! AvaliacaoDetailsCell
             
-            let avaliacao = self.dataSource[parent].item as! Avaliacao
-            
             cell.flavor.flavorUsuario = avaliacao.flavor
-            
+            cell.flavor.setNeedsDisplay()
             return cell
         }
     }
     
-    
+    func atualizarListaProtocol() {
+        var items = Array<Parent>()
+        
+        for l in Dao<Avaliacao>().list() {
+            items.append(Parent(state: .collapsed, item: l))
+        }
+        
+        self.parentCellIdentifier = "header"
+        self.childCellIdentifier = "details"
+        self.heightParent = 180
+        self.heightChild = 300
+        self.dataSource = items
+        self.numberOfCellsExpanded = .one
+        self.total = self.dataSource.count
+        
+        self.tableView?.reloadData()
+    }
     
 //    var avaliacoes:[Avaliacao] = []
 //    

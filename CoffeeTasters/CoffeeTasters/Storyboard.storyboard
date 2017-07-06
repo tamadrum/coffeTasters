@@ -639,7 +639,7 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="980"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvM-vB-mqN">
-                                        <rect key="frame" x="227" y="236" width="47" height="20"/>
+                                        <rect key="frame" x="227" y="235" width="47" height="19"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="47" id="u76-xV-KIg"/>
                                         </constraints>
@@ -648,7 +648,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2f-5k-8P9">
-                                        <rect key="frame" x="250" y="475" width="50" height="21"/>
+                                        <rect key="frame" x="250" y="473" width="50" height="21"/>
                                         <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="vGG-It-0Ea"/>
@@ -658,7 +658,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxl-PV-p1C">
-                                        <rect key="frame" x="262" y="12" width="42" height="29"/>
+                                        <rect key="frame" x="262" y="12" width="42" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="42" id="G3d-dJ-d1Y"/>
                                         </constraints>
@@ -680,7 +680,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="603-Sh-saI">
-                                        <rect key="frame" x="283" y="228" width="21" height="30"/>
+                                        <rect key="frame" x="283" y="227" width="21" height="30"/>
                                         <state key="normal" image="pin"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -699,7 +699,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BRASIL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZy-4K-1De">
-                                        <rect key="frame" x="16" y="235" width="77" height="21"/>
+                                        <rect key="frame" x="16" y="233" width="77" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="77" id="22E-w1-V50"/>
                                             <constraint firstAttribute="height" constant="21" id="D3u-CS-3kv"/>
@@ -709,7 +709,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="São Paulo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUQ-kh-zUS">
-                                        <rect key="frame" x="101" y="236" width="118" height="20"/>
+                                        <rect key="frame" x="101" y="235" width="118" height="19"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="118" id="Foe-xu-P9v"/>
                                         </constraints>
@@ -718,7 +718,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do Torrador" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKz-hJ-zfX">
-                                        <rect key="frame" x="114" y="46" width="190" height="21"/>
+                                        <rect key="frame" x="114" y="47" width="190" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="XCB-B9-j3H"/>
                                         </constraints>
@@ -727,13 +727,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Torrador:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXF-JE-A5Y">
-                                        <rect key="frame" x="114" y="16" width="190" height="21"/>
+                                        <rect key="frame" x="114" y="16" width="190" height="22"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="16"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ir-ba-G8w" customClass="RatingView" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="463" width="219" height="45"/>
+                                        <rect key="frame" x="16" y="461" width="219" height="45"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="starCount">
                                                 <integer key="value" value="4"/>
@@ -748,7 +748,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Safra:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uig-2i-62b">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Safra:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uig-2i-62b">
                                         <rect key="frame" x="16" y="161" width="50" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="YIN-Wg-8V6"/>
@@ -758,7 +758,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do Produtor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KpG-hg-zMi">
-                                        <rect key="frame" x="114" y="104" width="190" height="21"/>
+                                        <rect key="frame" x="114" y="105" width="190" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="wGm-Ke-Yxn"/>
                                         </constraints>
@@ -767,7 +767,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="arábico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hX4-ZT-wPz">
-                                        <rect key="frame" x="68" y="131" width="57" height="17.5"/>
+                                        <rect key="frame" x="68" y="132" width="57" height="16.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="57" id="E9u-K0-dOA"/>
                                         </constraints>
@@ -776,7 +776,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ou7-Ya-aY9" customClass="WheelFlavor" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="569" width="288" height="341"/>
+                                        <rect key="frame" x="16" y="567" width="288" height="341"/>
                                         <subviews>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="fnl-lM-axj">
                                                 <rect key="frame" x="145" y="8" width="135" height="29"/>
@@ -815,7 +815,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D24-Cd-2qh">
-                                        <rect key="frame" x="250" y="369" width="50" height="21"/>
+                                        <rect key="frame" x="250" y="367" width="50" height="21"/>
                                         <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="d1p-ub-a88"/>
@@ -836,13 +836,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1050m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0c-rQ-FNR">
-                                        <rect key="frame" x="212.5" y="132.5" width="46.5" height="17.5"/>
+                                        <rect key="frame" x="198" y="133.5" width="43.5" height="16.5"/>
                                         <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="14"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pUx-LB-bMg" customClass="BorderTextView" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="270" width="288" height="79"/>
+                                        <rect key="frame" x="16" y="268" width="288" height="79"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="79" id="QPy-bo-jso"/>
                                         </constraints>
@@ -862,7 +862,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cT-yr-M6t">
-                                        <rect key="frame" x="250" y="528" width="50" height="21"/>
+                                        <rect key="frame" x="250" y="526" width="50" height="21"/>
                                         <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="Jdu-sH-eBl"/>
@@ -872,7 +872,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mk8-Rf-SVz" customClass="RatingView" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="357" width="219" height="45"/>
+                                        <rect key="frame" x="16" y="355" width="219" height="45"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="starCount">
                                                 <integer key="value" value="4"/>
@@ -888,7 +888,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zpd-qK-viL" customClass="RatingView" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="410" width="219" height="45"/>
+                                        <rect key="frame" x="16" y="408" width="219" height="45"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="starCount">
                                                 <integer key="value" value="4"/>
@@ -916,13 +916,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Altitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNi-xQ-GRt">
-                                        <rect key="frame" x="135" y="130" width="73.5" height="20"/>
+                                        <rect key="frame" x="135" y="131" width="59" height="19"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="16"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Produtor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNB-XV-5C8">
-                                        <rect key="frame" x="114" y="75" width="190" height="21"/>
+                                        <rect key="frame" x="114" y="76" width="190" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="ULy-6W-Gi7"/>
                                         </constraints>
@@ -931,13 +931,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25/10/2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDI-8a-5fp">
-                                        <rect key="frame" x="74" y="161" width="75" height="17.5"/>
+                                        <rect key="frame" x="74" y="161" width="72" height="16.5"/>
                                         <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="14"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KzH-Fq-dCG" customClass="RatingView" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="516" width="219" height="45"/>
+                                        <rect key="frame" x="16" y="514" width="219" height="45"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="starCount">
                                                 <integer key="value" value="4"/>
@@ -953,7 +953,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kk6-4J-uMa">
-                                        <rect key="frame" x="250" y="422" width="50" height="21"/>
+                                        <rect key="frame" x="250" y="420" width="50" height="21"/>
                                         <color key="backgroundColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="KAE-QE-Vse"/>
@@ -962,14 +962,14 @@
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Método:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEC-qQ-Awe">
-                                        <rect key="frame" x="16" y="195" width="64.5" height="19"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Método:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEC-qQ-Awe">
+                                        <rect key="frame" x="16" y="195" width="56.5" height="19"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="15"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fZC-f7-doo">
-                                        <rect key="frame" x="89" y="191" width="215" height="29"/>
+                                        <rect key="frame" x="81" y="190" width="223" height="29"/>
                                         <segments>
                                             <segment title="Natural" enabled="NO"/>
                                             <segment title="Descascado"/>
@@ -1259,7 +1259,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Luglio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4WO-at-ab2">
-                                        <rect key="frame" x="129" y="71" width="190" height="30"/>
+                                        <rect key="frame" x="129" y="69" width="190" height="28"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="190" id="kXO-0o-rgH"/>
                                         </constraints>
@@ -1267,7 +1267,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Ettore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sda-q0-OfW">
-                                        <rect key="frame" x="129" y="33" width="193" height="30"/>
+                                        <rect key="frame" x="129" y="33" width="193" height="28"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="24"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1974,7 +1974,7 @@
                         <barButtonItem key="rightBarButtonItem" image="Novo-1" style="plain" id="8le-S0-mVd">
                             <color key="tintColor" red="1" green="0.92268454320000004" blue="0.77028677420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <segue destination="ELa-ih-0rX" kind="show" id="nhJ-hT-vis"/>
+                                <segue destination="ELa-ih-0rX" kind="show" identifier="addAvaliacao" id="nhJ-hT-vis"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -2155,31 +2155,31 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j09-1y-X2E">
-                                                <rect key="frame" x="16" y="164" width="288" height="22.5"/>
+                                                <rect key="frame" x="16" y="164" width="288" height="21"/>
                                                 <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                                 <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJ7-yV-Cj7">
-                                                <rect key="frame" x="16" y="232.5" width="288" height="22.5"/>
+                                                <rect key="frame" x="16" y="231" width="288" height="21"/>
                                                 <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                                 <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senha:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cA-BP-lRZ">
-                                                <rect key="frame" x="16" y="301" width="288" height="22.5"/>
+                                                <rect key="frame" x="16" y="298" width="288" height="21"/>
                                                 <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                                 <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repita a senha:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isU-lC-qRb">
-                                                <rect key="frame" x="16" y="369.5" width="288" height="22.5"/>
+                                                <rect key="frame" x="16" y="365" width="288" height="21"/>
                                                 <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                                 <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIK-bw-4mz" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
-                                                <rect key="frame" x="115" y="490" width="90" height="30"/>
+                                                <rect key="frame" x="115" y="484" width="90" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="90" id="qfP-65-kXf"/>
                                                     <constraint firstAttribute="height" constant="30" id="wxU-nT-9p7"/>
@@ -2203,7 +2203,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9K-SS-beJ" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
-                                                <rect key="frame" x="115" y="452" width="90" height="30"/>
+                                                <rect key="frame" x="115" y="446" width="90" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="L4n-kq-IHG"/>
                                                     <constraint firstAttribute="width" constant="90" id="TxX-nR-PNv"/>
@@ -2227,25 +2227,25 @@
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MTk-KU-eRj">
-                                                <rect key="frame" x="16" y="194.5" width="288" height="30"/>
+                                                <rect key="frame" x="16" y="193" width="288" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xLP-LS-R6c">
-                                                <rect key="frame" x="16" y="263" width="288" height="30"/>
+                                                <rect key="frame" x="16" y="260" width="288" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JDW-ss-lSQ">
-                                                <rect key="frame" x="16" y="331.5" width="288" height="30"/>
+                                                <rect key="frame" x="16" y="327" width="288" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XAE-Wb-wcr">
-                                                <rect key="frame" x="16" y="400" width="288" height="30"/>
+                                                <rect key="frame" x="16" y="394" width="288" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -2363,19 +2363,19 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIl-vz-CCx">
-                                                <rect key="frame" x="8" y="313" width="304" height="22.5"/>
+                                                <rect key="frame" x="8" y="313" width="304" height="21"/>
                                                 <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                                 <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O1R-5u-0Ig">
-                                                <rect key="frame" x="8" y="343.5" width="304" height="30"/>
+                                                <rect key="frame" x="8" y="342" width="304" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jE-DS-G8H" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
-                                                <rect key="frame" x="115" y="396.5" width="90" height="27"/>
+                                                <rect key="frame" x="115" y="395" width="90" height="26"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="90" id="Lfd-a9-gGf"/>
                                                 </constraints>
@@ -2398,7 +2398,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOZ-kD-p3t" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
-                                                <rect key="frame" x="115" y="431.5" width="90" height="27"/>
+                                                <rect key="frame" x="115" y="429" width="90" height="26"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="90" id="Qh9-dY-bWS"/>
                                                 </constraints>
@@ -2507,31 +2507,31 @@
                                         <rect key="frame" x="74" y="48" width="173" height="122"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5Q-wD-v72">
-                                        <rect key="frame" x="16" y="184" width="288" height="22.5"/>
+                                        <rect key="frame" x="16" y="184" width="288" height="21"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J0p-GA-cIj">
-                                        <rect key="frame" x="16" y="214.5" width="288" height="30"/>
+                                        <rect key="frame" x="16" y="213" width="288" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senha:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTr-Fu-Z83">
-                                        <rect key="frame" x="16" y="252.5" width="288" height="22.5"/>
+                                        <rect key="frame" x="16" y="251" width="288" height="21"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v4q-AS-2UD">
-                                        <rect key="frame" x="16" y="283" width="288" height="30"/>
+                                        <rect key="frame" x="16" y="280" width="288" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7z-Mr-GLs" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="115" y="368" width="90" height="30"/>
+                                        <rect key="frame" x="115" y="364" width="90" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="Kkf-OZ-9Hg"/>
                                             <constraint firstAttribute="height" constant="30" id="oof-mV-yUp"/>
@@ -2555,7 +2555,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDV-t4-cfH" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="115" y="406" width="90" height="30"/>
+                                        <rect key="frame" x="115" y="402" width="90" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="LcD-B0-llZ"/>
                                             <constraint firstAttribute="height" constant="30" id="QO4-SX-0fT"/>
@@ -2579,7 +2579,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfg-It-so8" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="84" y="317" width="153" height="27"/>
+                                        <rect key="frame" x="91.5" y="314" width="138" height="26"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="12"/>
                                         <state key="normal" title="ESQUECI MINHA SENHA"/>
                                         <userDefinedRuntimeAttributes>
@@ -2747,13 +2747,13 @@
                                         <rect key="frame" x="0.0" y="32" width="320" height="876"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPF:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVD-Qv-bIl">
-                                        <rect key="frame" x="8" y="300.5" width="304" height="22.5"/>
+                                        <rect key="frame" x="8" y="297.5" width="304" height="21"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ciP-YI-VtW">
-                                        <rect key="frame" x="8" y="390.5" width="150" height="30"/>
+                                        <rect key="frame" x="8" y="384.5" width="150" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="W4q-U8-13d"/>
                                             <constraint firstAttribute="height" constant="30" id="kit-13-4xj"/>
@@ -2763,19 +2763,19 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receber Notificações:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uC0-lZ-e3T">
-                                        <rect key="frame" x="8" y="707" width="304" height="22.5"/>
+                                        <rect key="frame" x="8" y="695" width="304" height="21"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SE8-2N-bvE">
-                                        <rect key="frame" x="8" y="521" width="304" height="22.5"/>
+                                        <rect key="frame" x="8" y="512" width="304" height="21"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senha:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MxV-Qb-hp8">
-                                        <rect key="frame" x="8" y="363" width="150" height="22.5"/>
+                                        <rect key="frame" x="8" y="358.5" width="150" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="1jX-CX-pjp"/>
                                         </constraints>
@@ -2784,19 +2784,19 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dados do Cartão de crédito" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVb-oK-Gu0">
-                                        <rect key="frame" x="8" y="431" width="304" height="22.5"/>
+                                        <rect key="frame" x="8" y="425" width="304" height="21"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TnZ-G5-1KU">
-                                        <rect key="frame" x="8" y="611" width="304" height="30"/>
+                                        <rect key="frame" x="8" y="599" width="304" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z86-gj-HXO">
-                                        <rect key="frame" x="162" y="391" width="150" height="30"/>
+                                        <rect key="frame" x="162" y="385" width="150" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="Z5m-Nz-Ulo"/>
                                             <constraint firstAttribute="height" constant="30" id="vVh-HF-5uN"/>
@@ -2806,38 +2806,38 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMJ-C5-nyJ">
-                                        <rect key="frame" x="8" y="175" width="304" height="22.5"/>
+                                        <rect key="frame" x="8" y="175" width="304" height="21"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="olv-cb-G3o">
-                                        <rect key="frame" x="8" y="203" width="304" height="30"/>
+                                        <rect key="frame" x="8" y="201.5" width="304" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdC-zb-OOh">
-                                        <rect key="frame" x="8" y="666" width="48" height="22.5"/>
+                                        <rect key="frame" x="8" y="654" width="40.5" height="21"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b5q-n5-Khp">
-                                        <rect key="frame" x="8" y="486" width="304" height="30"/>
+                                        <rect key="frame" x="8" y="477" width="304" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hHB-BB-Poc">
-                                        <rect key="frame" x="76" y="649" width="64" height="40"/>
+                                        <rect key="frame" x="68.5" y="637" width="64" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="64" id="guG-GE-RB7"/>
                                             <constraint firstAttribute="height" constant="40" id="zWk-JP-yxh"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hn0-LO-Fi7" customClass="BorderButton" customModule="CoffeeTasters" customModuleProvider="target">
-                                        <rect key="frame" x="95" y="796.5" width="130" height="30"/>
+                                        <rect key="frame" x="95" y="783" width="130" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="130" id="DRg-Mb-DJH"/>
                                             <constraint firstAttribute="height" constant="30" id="OKr-k9-wgv"/>
@@ -2863,25 +2863,25 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQP-9d-ZfZ">
-                                        <rect key="frame" x="8" y="458.5" width="304" height="22.5"/>
+                                        <rect key="frame" x="8" y="451" width="304" height="21"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gWt-Xh-0gw">
-                                        <rect key="frame" x="8" y="328" width="304" height="30"/>
+                                        <rect key="frame" x="8" y="323.5" width="304" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Validade:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0J-3l-AU5">
-                                        <rect key="frame" x="8" y="583.5" width="304" height="22.5"/>
+                                        <rect key="frame" x="8" y="573" width="304" height="21"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repita:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnK-n8-LOh">
-                                        <rect key="frame" x="162" y="363" width="150" height="23"/>
+                                        <rect key="frame" x="162" y="358.5" width="150" height="21.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="7Cn-4D-rZk"/>
                                         </constraints>
@@ -2890,13 +2890,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UR8-KW-gaH">
-                                        <rect key="frame" x="8" y="265.5" width="304" height="30"/>
+                                        <rect key="frame" x="8" y="262.5" width="304" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Up4-bT-bhJ">
-                                        <rect key="frame" x="8" y="548.5" width="304" height="30"/>
+                                        <rect key="frame" x="8" y="538" width="304" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -2905,7 +2905,7 @@
                                         </connections>
                                     </textField>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2Vt-Gn-PMg">
-                                        <rect key="frame" x="8" y="737" width="79" height="29"/>
+                                        <rect key="frame" x="8" y="723.5" width="79" height="29"/>
                                         <segments>
                                             <segment title="Sim"/>
                                             <segment title="Não"/>
@@ -2925,7 +2925,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcE-IJ-cbz">
-                                        <rect key="frame" x="8" y="238" width="304" height="22.5"/>
+                                        <rect key="frame" x="8" y="236.5" width="304" height="21"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="18"/>
                                         <color key="textColor" red="0.26274509800000001" green="0.1529411765" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
