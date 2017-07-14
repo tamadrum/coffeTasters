@@ -46,6 +46,7 @@ class DetalhesCafeController: UIViewController {
         } else {
             self.metodoSegmentControl.selectedSegmentIndex = 0
         }
+        metodoSegmentControl.isUserInteractionEnabled = false
         
         comentarioTextView.text = cafeAvaliado.descricao
         notaQuatroLabel.text = "10"
