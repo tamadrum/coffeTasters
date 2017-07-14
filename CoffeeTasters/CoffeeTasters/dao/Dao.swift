@@ -384,6 +384,7 @@ class Dao<T> {
             "Coloque, nesta ordem, o café moído e a água quente",
             "Mexa, coloque a tampa e deixe em infusão por 3-5 minutos",
             "abaixe o êmbolo lentamente para não revolver o pó"]
+            let temposPrensaFrancesa = [0, 0, 0, 0, 0, 300, 0]
 
             let materiaisEspresso = #imageLiteral(resourceName: "ingredientesEspresso")
             let espresso = ["Pese de 5-7g de café por dose de bebida",
@@ -394,6 +395,7 @@ class Dao<T> {
             "Escalde a xícara",
             "Inicie a extração, contando o tempo após a primeira gota",
             "Extraia por 25 segundos (30 mL de bebida)"]
+            let temposEspresso = [0, 0, 0, 0, 0, 0, 0, 25]
             
             let materiaisCoadoCleverChemex = #imageLiteral(resourceName: "ingredientesClever")
             let coadoCleverChemex = ["Pese 15g de café para cada 200mL de bebida",
@@ -406,6 +408,7 @@ class Dao<T> {
                 "libere a válvula do clever e espere coar todo líquido",
                 "Se for preparar por coado/chemex, derrame o restante da água em movimentos circulares",
                 "espere coar todo líquido"]
+            let temposCoadoCleverChemex = [0, 0, 0, 0, 0, 30, 300, 0, 0, 0]
 
             let materiaisAeropress = #imageLiteral(resourceName: "ingredientesAeropress")
             let aeropress = ["Pese 18g de café para cada 200mL de bebida",
@@ -415,6 +418,7 @@ class Dao<T> {
                 "Coloque, nesta ordem, o café moído e a água quente",
                 "Mexa e deixe em infusão por 1 minuto",
                 "Coloque a tampa e abaixe o êmbolo lentamente"]
+            let temposAeropress = [0, 0, 0, 0, 0, 60, 0]
             
             let materiaisMoka = #imageLiteral(resourceName: "ingredientesMoka")
             let moka = ["moa café suficiente para encher o porta-pó (moagem média)",
@@ -424,20 +428,21 @@ class Dao<T> {
             "Aqueça em fogo baixo com a tampa levantada.",
             "apague o fogo e abaixar a tampa quando o café começar a verter na parte de cima",
             "sirva quando cessar de verter café pela parte de cima."]
+            let temposMoka = [0, 0, 0, 0, 0, 0, 0]
 
-            let passosPrensaFrancesa = preparaPassos(passoDao, passos: prensaFrancesa, imagem: materiaisPrensaFrancesa)
+            let passosPrensaFrancesa = preparaPassos(passoDao, passos: prensaFrancesa, imagem: materiaisPrensaFrancesa, tempos:temposPrensaFrancesa)
             preparaPreparo(preparoDao, passos: passosPrensaFrancesa, imagem: #imageLiteral(resourceName: "Prensa-1"), nome: "Prensa Francesa")
             
-            let passosEspresso = preparaPassos(passoDao, passos: espresso, imagem: materiaisEspresso)
+            let passosEspresso = preparaPassos(passoDao, passos: espresso, imagem: materiaisEspresso, tempos: temposEspresso)
             preparaPreparo(preparoDao, passos: passosEspresso, imagem: #imageLiteral(resourceName: "Espresso_1"), nome: "Espresso")
             
-            let passosCoadoCleverChemex = preparaPassos(passoDao, passos: coadoCleverChemex, imagem: materiaisCoadoCleverChemex)
+            let passosCoadoCleverChemex = preparaPassos(passoDao, passos: coadoCleverChemex, imagem: materiaisCoadoCleverChemex, tempos:temposCoadoCleverChemex)
             preparaPreparo(preparoDao, passos: passosCoadoCleverChemex, imagem: #imageLiteral(resourceName: "Coado-1"), nome: "Coado/Clever/Chenex")
             
-            let passosMoka = preparaPassos(passoDao, passos: moka, imagem: materiaisMoka)
+            let passosMoka = preparaPassos(passoDao, passos: moka, imagem: materiaisMoka, tempos:temposMoka)
             preparaPreparo(preparoDao, passos: passosMoka, imagem: #imageLiteral(resourceName: "Moca-1"), nome: "Moka")
             
-            let passosAeropress = preparaPassos(passoDao, passos: aeropress, imagem: materiaisAeropress)
+            let passosAeropress = preparaPassos(passoDao, passos: aeropress, imagem: materiaisAeropress , tempos:temposAeropress)
             preparaPreparo(preparoDao, passos: passosAeropress, imagem: #imageLiteral(resourceName: "Aeropress-1"), nome: "Aeropress")
             
                 print("**************************")
@@ -447,13 +452,13 @@ class Dao<T> {
         }
     }
     
-    func preparaPassos(_ dao: Dao<Passo>, passos:[String], imagem: UIImage) -> [Passo] {
+    func preparaPassos(_ dao: Dao<Passo>, passos:[String], imagem: UIImage, tempos:[Int]) -> [Passo] {
         var retorno:[Passo] = []
         
         for i in 0..<passos.count {
             let passo = dao.new()
             passo.indice = i+1
-            passo.tempo = 0
+            passo.tempo = Int32(tempos[i])
             passo.imagem = imagem
             passo.descricao = passos[i]
         
