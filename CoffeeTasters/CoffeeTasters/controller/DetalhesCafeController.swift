@@ -86,7 +86,9 @@ class DetalhesCafeController: UIViewController {
     }
     
     @IBAction func verMapa(_ sender: UIButton) {
-        let url = ("https://www.google.com.br/maps/@-23.5837048,-46.5731714,17z?hl=pt-BR").addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+        let stringUrl = "https://www.google.com.br/maps/@\(cafeAvaliado.latitude),\(cafeAvaliado.longitude),17z?hl=pt-BR"
+        print(stringUrl)
+        let url = (stringUrl).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
         
         if !UIApplication.shared.canOpenURL(URL(string: url)!) {
             print("Não posso abrir... :-(")
