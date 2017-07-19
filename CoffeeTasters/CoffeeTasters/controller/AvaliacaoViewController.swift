@@ -296,7 +296,7 @@ class AvaliacaoViewController: UIViewController, SelectCafeProtocol {
         self.torradorTextField.isUserInteractionEnabled = false
         self.regiaoTextField.isUserInteractionEnabled = false
         self.tipoTextField.isUserInteractionEnabled = false
-        self.safraTextField.isUserInteractionEnabled = false
+        self.safraTextField.isUserInteractionEnabled = true
         self.cafeBlendSegmentControl.isUserInteractionEnabled = false
         self.metodoSegmentControl.isUserInteractionEnabled = false
         
