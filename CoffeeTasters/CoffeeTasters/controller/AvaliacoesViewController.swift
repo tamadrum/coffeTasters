@@ -41,7 +41,7 @@ class AvaliacoesViewController: Acordeao, UpdateAvaliacoesProtocol {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let (parent, isParentCell, actualPosition) = self.findParent(indexPath.row)
+        let (parent, isParentCell, _) = self.findParent(indexPath.row)
         
         let avaliacao = self.dataSource[parent].item as! Avaliacao
         

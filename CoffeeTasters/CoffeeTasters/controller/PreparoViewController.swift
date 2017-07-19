@@ -90,8 +90,15 @@ class PreparoViewController: UIViewController {
         if ( segundos > 0 ) {
             segundos = segundos - 1
         } else {
+            print("primeiraVez")
             let systemSoundID: SystemSoundID = 1025
-            AudioServicesPlaySystemSound (systemSoundID)
+            AudioServicesPlaySystemSoundWithCompletion(systemSoundID) {
+                AudioServicesPlaySystemSoundWithCompletion(systemSoundID) {
+                    AudioServicesPlaySystemSoundWithCompletion(systemSoundID) {
+                        // :-)
+                    }
+                }
+            }
             timer.invalidate()
         }
         tempo.text = timeString(segundos)
@@ -103,8 +110,9 @@ class PreparoViewController: UIViewController {
     
     @IBAction func proximo(_ sender: UIButton) {
         indice += 1
-        if indice >= (preparos[menuModos.selectedSegmentIndex].passo?.count)! {
-            indice = 0
+        let limite = (preparos[menuModos.selectedSegmentIndex].passo?.count)!
+        if indice >= limite {
+            indice = limite-1
         }
         timer.invalidate()
         atualizaPasso()
@@ -113,7 +121,7 @@ class PreparoViewController: UIViewController {
     @IBAction func anterior(_ sender: Any) {
         indice -= 1
         if indice < 0 {
-            indice = (preparos[menuModos.selectedSegmentIndex].passo?.count)! - 1
+            indice = 0
         }
         timer.invalidate()
         atualizaPasso()
