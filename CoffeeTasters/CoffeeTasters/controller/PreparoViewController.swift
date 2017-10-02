@@ -53,7 +53,7 @@ class PreparoViewController: UIViewController {
             let preparo = preparos[menuModos.selectedSegmentIndex]
             nomePreparoLabel.text = preparo.nome
             
-            let passos = preparo.passo?.allObjects as! [Passo]
+            let passos = preparo.passo?.array as! [Passo]
             if passos.count > 0 {
                 let passo = passos[indice]
                 
@@ -70,6 +70,8 @@ class PreparoViewController: UIViewController {
                 
                 descricaoPreparo.text = passo.descricao
                 
+                print("Index = \(indice)")
+                
                 if ( passo.tempo > 0 ) {
                     viewTemporizador.isHidden = false
                     segundos = Int(passo.tempo)
@@ -82,7 +84,12 @@ class PreparoViewController: UIViewController {
     }
     
     @IBAction func startTemporizador(_ sender: UIButton) {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
+        if timer.isValid {
+            return
+        } else {
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
+            print("iniciou o timer")
+        }
         
     }
     

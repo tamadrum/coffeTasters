@@ -377,13 +377,13 @@ class Dao<T> {
             let passoDao = Dao<Passo>()
             
             let materiaisPrensaFrancesa = #imageLiteral(resourceName: "ingredientesPrensaFrancesa")
-            let prensaFrancesa = ["Pese 6g de café para cada 100mL de bebida",
-            "moa o café (moagem grossa)",
-            "Aqueça a água até que comece a ferver",
-            "Escalde o frasco",
-            "Coloque, nesta ordem, o café moído e a água quente",
-            "Mexa, coloque a tampa e deixe em infusão por 3-5 minutos",
-            "abaixe o êmbolo lentamente para não revolver o pó"]
+            let prensaFrancesa = ["1 Pese 6g de café para cada 100mL de bebida",
+            "2 moa o café (moagem grossa)",
+            "3 Aqueça a água até que comece a ferver",
+            "4 Escalde o frasco",
+            "5 Coloque, nesta ordem, o café moído e a água quente",
+            "6 Mexa, coloque a tampa e deixe em infusão por 3-5 minutos",
+            "7 abaixe o êmbolo lentamente para não revolver o pó"]
             let temposPrensaFrancesa = [0, 0, 0, 0, 0, 300, 0]
 
             let materiaisEspresso = #imageLiteral(resourceName: "ingredientesEspresso")
@@ -457,12 +457,13 @@ class Dao<T> {
         
         for i in 0..<passos.count {
             let passo = dao.new()
-            passo.indice = i+1
+            passo.indice = Int32(i)
             passo.tempo = Int32(tempos[i])
             passo.imagem = imagem
             passo.descricao = passos[i]
         
-            retorno.append(passo)
+            retorno.insert(passo, at: i)
+            //print("Inseriu \(passo) na posição \(i)")
         }
         
         return retorno
@@ -475,6 +476,7 @@ class Dao<T> {
         
         for passo in passos {
             preparo.addToPasso(passo)
+            print("Inseriu passo \(passo)")
         }
         
         dao.save()

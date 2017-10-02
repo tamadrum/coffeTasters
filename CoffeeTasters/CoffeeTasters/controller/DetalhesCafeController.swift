@@ -53,7 +53,20 @@ class DetalhesCafeController: UIViewController {
         notaTresLabel.text = "20"
         notaDoisLabel.text = "30"
         notaUmLabel.text = "0"
-        rodaSabores.flavorUsuario = cafeAvaliado.flavorTorrador
+        
+        let avaliacoes = Dao<Avaliacao>().list()
+        
+        for a in avaliacoes {
+            
+            if a.cafe?.nome == cafeAvaliado.nome {
+                
+                rodaSabores.flavorUsuario = a.flavor
+                
+            }
+            
+        }
+        
+        //rodaSabores.flavorUsuario = cafeAvaliado.flavorTorrador
 //        rodaSabores.flavorTorrador = Dao<Flavor>().new()
 //        
 //        rodaSabores.flavorTorrador?.amargo = 8
@@ -159,6 +172,21 @@ class DetalhesCafeController: UIViewController {
     }
     
     @IBAction func mostraUltimasAvaliacoes(_ sender: UISegmentedControl) {
+        
+//        let usuario = Usuario()
+//        usuario.load()
+        let avaliacoes = Dao<Avaliacao>().list()
+        
+        for a in avaliacoes {
+            
+            if a.cafe?.nome == cafeAvaliado.nome {
+            
+                rodaSabores.flavorUsuario = a.flavor
+                
+            }
+            
+        }
+        
     }
     
 }

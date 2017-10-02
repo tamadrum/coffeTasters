@@ -57,7 +57,7 @@ class AvaliacoesViewController: Acordeao, UpdateAvaliacoesProtocol {
             cell.modoPrepado.text = avaliacao.metodoPreparo
             cell.nomeCafe.text = avaliacao.cafe?.nome
             cell.rating.rating = Float(avaliacao.gostou)
-            cell.safra.text = avaliacao.data
+            cell.safra.text = avaliacao.cafe?.safra
             cell.flavor = avaliacao.flavor
                     
             return cell
